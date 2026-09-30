@@ -69,7 +69,9 @@ export function HomeHero() {
               >
                 <span
                   className={
-                    i === 2 ? 'anim-line-up block italic' : 'anim-line-up block'
+                    i === 2
+                      ? 'anim-line-up block italic text-black dark:text-white'
+                      : 'anim-line-up block text-black dark:text-white'
                   }
                   style={delay(0.25 + i * 0.12)}
                 >
