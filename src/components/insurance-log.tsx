@@ -23,8 +23,8 @@ type RoomState = {
   photos: Record<PhotoSlotKey, Slot>;
 };
 
-const emptyRoom = (): RoomState => ({
-  id: crypto.randomUUID(),
+const emptyRoom = (id: string): RoomState => ({
+  id,
   name: "",
   note: "",
   photos: { wide: null, close: null, wet: null },
@@ -106,9 +106,10 @@ function PhotoSlot({
 
 export function InsuranceLog() {
   const [cover, setCover] = React.useState({ owner: "", address: "", insurer: "", claimNumber: "", lossDate: "" });
-  const [rooms, setRooms] = React.useState<RoomState[]>(() => [emptyRoom()]);
+  const [rooms, setRooms] = React.useState<RoomState[]>(() => [emptyRoom("room-1")]);
   const [status, setStatus] = React.useState<Status>({ kind: "idle" });
   const latest = React.useRef(rooms);
+  const roomCount = React.useRef(1);
 
   React.useEffect(() => {
     latest.current = rooms;
@@ -141,6 +142,12 @@ export function InsuranceLog() {
     const previous = room.photos[key];
     if (previous) URL.revokeObjectURL(previous.previewUrl);
     updateRoom(room.id, { photos: { ...room.photos, [key]: null } });
+  }
+
+  function addRoom() {
+    roomCount.current += 1;
+    const id = `room-${roomCount.current}`;
+    setRooms((prev) => [...prev, emptyRoom(id)]);
   }
 
   function removeRoom(room: RoomState) {
@@ -285,7 +292,7 @@ export function InsuranceLog() {
           ))}
         </ol>
 
-        <Button type="button" variant="outline" size="lg" className="mt-10" onClick={() => setRooms((p) => [...p, emptyRoom()])}>
+        <Button type="button" variant="outline" size="lg" className="mt-10" onClick={addRoom}>
           <Plus aria-hidden />
           Add another room
         </Button>

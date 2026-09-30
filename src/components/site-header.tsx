@@ -10,7 +10,7 @@ import { ScrollProgressLine } from '@/components/motion';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { ctaHref, emergencyHref, nav, site } from '@/lib/site';
+import { ctaHref, nav, site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
@@ -47,7 +47,7 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-10">
+          <ul className="flex items-center gap-6 xl:gap-10">
             {nav.map((item, i) => {
               const active = pathname.startsWith(item.href);
               return (
@@ -59,7 +59,7 @@ export function SiteHeader() {
                       'group relative flex items-baseline gap-2 py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em]',
                     )}
                   >
-                    <span className="text-[0.6rem] text-muted-foreground transition-colors group-hover:text-accent-ink">
+                    <span className="hidden text-[0.6rem] text-muted-foreground transition-colors group-hover:text-accent-ink xl:inline">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     {item.label}
@@ -86,7 +86,7 @@ export function SiteHeader() {
           >
             {site.phone.display}
           </a>
-          <ThemeToggle className="hidden sm:inline-flex" />
+          <ThemeToggle className="hidden sm:inline-flex cursor-pointer" />
           <Button
             asChild
             variant="accent"

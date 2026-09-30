@@ -3,6 +3,7 @@ import { ImageReveal, Parallax, Reveal } from '@/components/motion';
 import { Photo } from '@/components/photo';
 import { img } from '@/lib/images';
 import Image from 'next/image';
+import { SiteLogo } from '../site-logo';
 
 const plank = img(
   '/images/projects/bathrooms/freestanding-tub-window.jpg',
@@ -51,13 +52,7 @@ export function HomeManifesto() {
               >
                 How we work
               </p>
-              <Image
-                src={'/images/logo/elite-restorations-logo.png'}
-                alt="Manifesto"
-                width={300}
-                height={300}
-                className="w-full mt-6"
-              />
+              <SiteLogo />
               {/* <p aria-hidden className="font-display mt-6 text-[7rem] leading-none text-accent-ink/80">
                 &sect;
               </p> */}

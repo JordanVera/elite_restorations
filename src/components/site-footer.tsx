@@ -1,9 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
-import { nav, site } from "@/lib/site";
-import { serviceGroups, servicesInGroup } from "@/lib/services";
+import { nav, site } from '@/lib/site';
+import { serviceGroups, servicesInGroup } from '@/lib/services';
+import { SiteLogo } from './site-logo';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -13,7 +14,9 @@ export function SiteFooter() {
       <div className="gutter mx-auto max-w-[120rem] pt-20 pb-10 md:pt-28">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <p className="eyebrow text-muted-foreground">Start a conversation</p>
+            <p className="eyebrow text-muted-foreground">
+              Start a conversation
+            </p>
             <a
               href={site.phone.href}
               className="t-xl mt-6 inline-block transition-colors hover:text-accent-ink"
@@ -21,8 +24,8 @@ export function SiteFooter() {
               {site.phone.display}
             </a>
             <p className="mt-6 measure text-muted-foreground">
-              Call, email or send a request. Estimates for remodeling and restoration across
-              Greater Houston.
+              Call, email or send a request. Estimates for remodeling and
+              restoration across Greater Houston.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
               <a
@@ -65,7 +68,10 @@ export function SiteFooter() {
               <ul className="mt-5 space-y-3 text-sm">
                 {nav.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="transition-colors hover:text-accent-ink">
+                    <Link
+                      href={item.href}
+                      className="transition-colors hover:text-accent-ink"
+                    >
                       {item.label}
                     </Link>
                   </li>
@@ -77,14 +83,8 @@ export function SiteFooter() {
 
         <div className="mt-20 grid gap-10 border-t border-border pt-10 md:grid-cols-12">
           <div className="md:col-span-4">
-            <div className="inline-block bg-[#f4efe4] p-3">
-              <Image
-                src="/images/logo/elite-restorations-logo.png"
-                alt="Elite Restorations logo: red roofline above the word ELITE and a red RESTORATIONS banner"
-                width={113}
-                height={51}
-                className="h-auto w-[113px]"
-              />
+            <div className="inline-block p-3">
+              <SiteLogo />
             </div>
           </div>
           <div className="text-sm text-muted-foreground md:col-span-4">
@@ -120,7 +120,8 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col justify-between gap-3 text-xs text-muted-foreground sm:flex-row">
           <p>
-            &copy; {year} {site.name}. Family owned and operated in Houston since {site.founded}.
+            &copy; {year} {site.name}. Family owned and operated in Houston
+            since {site.founded}.
           </p>
         </div>
       </div>

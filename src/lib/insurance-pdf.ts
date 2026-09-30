@@ -47,7 +47,7 @@ const RULE = { r: 0.8, g: 0.78, b: 0.74 };
 
 /** Standard PDF fonts only encode Latin-1 style text, so anything else becomes "?". */
 function safe(text: string) {
-  return text.replace(/[^\n\x20-\x7E\u00A0-\u00FF\u2018\u2019\u201C\u201D\u2013\u2014\u2022\u2026]/g, "?");
+  return text.replace(/[^\n\x20-\x7E\u00A0-\u00FF\u2018\u2019\u201C\u201D\u2013\u2014\u2022\u2026]/gu, "?");
 }
 
 function wrap(text: string, font: PDFFont, size: number, width: number) {
