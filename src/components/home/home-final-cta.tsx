@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight, Phone } from "lucide-react";
 
 import { RoofLinework } from "@/components/home/roof-linework";
@@ -117,7 +118,14 @@ export function HomeFinalCta() {
                 ))}
               </dl>
               <p className="mt-6 max-w-[34ch] text-sm text-[#efe9dd]/65">
-                Roof or water emergency? Call. Do not wait on a form.
+                Roof or water emergency? Call, then{" "}
+                <Link
+                  href="/emergency"
+                  className="underline underline-offset-[0.4em] transition-colors hover:text-[#f2665d]"
+                >
+                  tell us what happened
+                </Link>
+                .
               </p>
             </Reveal>
           </div>

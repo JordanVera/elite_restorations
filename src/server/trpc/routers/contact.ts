@@ -2,13 +2,14 @@ import "server-only";
 
 import { TRPCError } from "@trpc/server";
 
-import { inquirySchema } from "@/lib/inquiry-schema";
-import { deliverInquiry } from "@/server/delivery";
+import { leadSchema } from "@/lib/inquiry-schema";
+import { deliverLead } from "@/server/delivery";
+import { resolveLead } from "@/server/leads/resolve";
 import { isRateLimited } from "@/server/rate-limit";
 import { publicProcedure, router } from "@/server/trpc/init";
 
 export const contactRouter = router({
-  submit: publicProcedure.input(inquirySchema).mutation(async ({ input, ctx }) => {
+  submit: publicProcedure.input(leadSchema).mutation(async ({ input, ctx }) => {
     if (isRateLimited(`inquiry:${ctx.ip}`)) {
       throw new TRPCError({
         code: "TOO_MANY_REQUESTS",
@@ -16,9 +17,12 @@ export const contactRouter = router({
       });
     }
 
-    const result = await deliverInquiry(input);
+    const lead = await resolveLead(input);
+    const result = await deliverLead(lead);
 
-    if (result.status === "delivered") return { delivered: true as const };
+    if (result.status === "delivered") {
+      return { delivered: true as const, photosSaved: lead.photos.length, photosMissing: lead.photosMissing };
+    }
 
     throw new TRPCError({
       code: "SERVICE_UNAVAILABLE",

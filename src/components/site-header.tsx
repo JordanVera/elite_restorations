@@ -10,7 +10,7 @@ import { ScrollProgressLine } from '@/components/motion';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { ctaHref, nav, site } from '@/lib/site';
+import { ctaHref, emergencyHref, nav, site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
@@ -55,7 +55,9 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? 'page' : undefined}
-                    className="group relative flex items-baseline gap-2 py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em]"
+                    className={cn(
+                      'group relative flex items-baseline gap-2 py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em]',
+                    )}
                   >
                     <span className="text-[0.6rem] text-muted-foreground transition-colors group-hover:text-accent-ink">
                       {String(i + 1).padStart(2, '0')}

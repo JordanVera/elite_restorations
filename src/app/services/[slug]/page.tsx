@@ -13,7 +13,7 @@ import { processSteps } from "@/lib/process";
 import { projectsForService } from "@/lib/projects";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 import { getService, services } from "@/lib/services";
-import { site } from "@/lib/site";
+import { emergencyHref, site } from "@/lib/site";
 
 type Params = { slug: string };
 
@@ -56,7 +56,7 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
         ]}
       >
         {service.emergency && (
-          <Reveal delay={0.5} className="mt-10">
+          <Reveal delay={0.5} className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-5">
             <a
               href={site.phone.href}
               className="group inline-flex items-center gap-4 border border-accent-ink px-5 py-4 transition-colors hover:bg-accent hover:text-white"
@@ -66,6 +66,20 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                 Active leak or storm damage? Call {site.phone.display}
               </span>
             </a>
+            <Link
+              href={emergencyHref}
+              className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              Request help online
+              <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
+            <Link
+              href="/insurance-log"
+              className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              Insurance photo log
+              <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
           </Reveal>
         )}
       </PageHero>
@@ -232,9 +246,14 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       )}
 
       <CtaBand
-        title={`Planning ${service.name.toLowerCase()}?`}
-        body="Share a few details and we will follow up to schedule a walkthrough."
+        title={service.emergency ? "Water coming in or a roof open?" : `Planning ${service.name.toLowerCase()}?`}
+        body={
+          service.emergency
+            ? "Call first if you can. Otherwise tell us what happened and we will call you back."
+            : "Share a few details and we will follow up to schedule a walkthrough."
+        }
         service={service.slug}
+        emergency={service.emergency}
       />
 
       <JsonLd

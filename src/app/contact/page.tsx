@@ -15,7 +15,11 @@ export const metadata: Metadata = pageMetadata({
   path: "/contact",
 });
 
-type SearchParams = Promise<{ service?: string | string[]; note?: string | string[] }>;
+type SearchParams = Promise<{
+  service?: string | string[];
+  note?: string | string[];
+  path?: string | string[];
+}>;
 
 const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value);
 
@@ -23,13 +27,14 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
   const params = await searchParams;
   const service = first(params.service);
   const note = first(params.note)?.slice(0, 500);
+  const path = first(params.path);
 
   return (
     <>
       <PageHero
         eyebrow="Contact"
         title={["Start a conversation."]}
-        lede="Call, email or send a request. If water is coming in or a roof is open to the weather, please call rather than use the form."
+        lede="Call, email or send a request. If water is coming in or a roof is open to the weather, call first, then tell us what happened."
         crumbs={[{ name: "Contact", path: "/contact" }]}
       />
 
@@ -90,12 +95,13 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
 
           <Reveal className="lg:col-span-7" delay={0.1}>
             <p className="eyebrow text-accent-ink">Request an estimate</p>
-            <h2 className="font-display t-md mt-4 max-w-[20ch]">Tell us about the project.</h2>
+            <h2 className="font-display t-md mt-4 max-w-[20ch]">Tell us what you need.</h2>
             <div className="relative mt-10">
               <LeadForm
-                key={`${service ?? ""}|${note ?? ""}`}
+                key={`${service ?? ""}|${note ?? ""}|${path ?? ""}`}
                 defaultService={isKnownService(service) ? service : undefined}
                 defaultMessage={note}
+                defaultPath={path}
               />
             </div>
           </Reveal>

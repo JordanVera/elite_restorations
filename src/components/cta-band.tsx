@@ -3,20 +3,26 @@ import { ArrowUpRight, Phone } from "lucide-react";
 
 import { Reveal } from "@/components/motion";
 import { Button } from "@/components/ui/button";
-import { ctaHref, site } from "@/lib/site";
+import { ctaHref, emergencyHref, site } from "@/lib/site";
 
 type CtaBandProps = {
   title?: string;
   body?: string;
   service?: string;
+  emergency?: boolean;
 };
 
 export function CtaBand({
   title = "Ready to talk it through?",
   body = "Tell us what you have in mind, or what went wrong. We will take it from there.",
   service,
+  emergency,
 }: CtaBandProps) {
-  const href = service ? `${ctaHref}?service=${encodeURIComponent(service)}` : ctaHref;
+  const href = emergency
+    ? emergencyHref
+    : service
+      ? `${ctaHref}?service=${encodeURIComponent(service)}`
+      : ctaHref;
   return (
     <section
       aria-label="Request an estimate"
@@ -30,7 +36,7 @@ export function CtaBand({
         <Reveal delay={0.15} className="flex flex-col items-start gap-6 md:items-end">
           <Button asChild size="xl" variant="accent">
             <Link href={href}>
-              Request an estimate
+              {emergency ? "Request emergency help" : "Request an estimate"}
               <ArrowUpRight className="arrow" aria-hidden />
             </Link>
           </Button>

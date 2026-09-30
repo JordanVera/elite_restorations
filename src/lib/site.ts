@@ -62,6 +62,8 @@ export const nav = [
   { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/emergency', label: 'Emergency' },
 ] as const;
 
 export const ctaHref = '/contact';
+export const emergencyHref = '/emergency';

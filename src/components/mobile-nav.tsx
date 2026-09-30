@@ -9,7 +9,7 @@ import { ArrowUpRight, Phone, X } from "lucide-react";
 import { SiteLogo } from "@/components/site-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { ctaHref, nav, site } from "@/lib/site";
+import { ctaHref, emergencyHref, nav, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function MobileNav({ className }: { className?: string }) {
@@ -77,7 +77,8 @@ export function MobileNav({ className }: { className?: string }) {
                       <span
                         className={cn(
                           "t-lg transition-transform duration-500 ease-out-expo group-hover:translate-x-2",
-                          active && "italic text-accent-ink",
+                          (active || item.href === emergencyHref) && "text-accent-ink",
+                          active && "italic",
                         )}
                       >
                         {item.label}
