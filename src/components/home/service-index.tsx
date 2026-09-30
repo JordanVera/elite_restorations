@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import Link from "next/link";
-import { AnimatePresence, motion } from "motion/react";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import * as React from 'react';
+import Link from 'next/link';
+import { AnimatePresence, motion } from 'motion/react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
-import { Photo } from "@/components/photo";
-import { Reveal, SplitLines } from "@/components/motion";
-import type { Img } from "@/lib/images";
-import { cn } from "@/lib/utils";
+import { Photo } from '@/components/photo';
+import { Reveal, SplitLines } from '@/components/motion';
+import type { Img } from '@/lib/images';
+import { cn } from '@/lib/utils';
 
 export type IndexService = {
   slug: string;
@@ -39,7 +39,7 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
               id="services-heading"
               className="t-xl mt-6"
               lines={[
-                "Fifteen trades.",
+                'Fifteen trades.',
                 <span key="b">
                   One <em className="text-accent-ink">team.</em>
                 </span>,
@@ -49,8 +49,9 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
           <div className="flex items-end lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.15}>
               <p className="text-muted-foreground">
-                Planned remodels and unplanned emergencies use the same skills. That is why we do
-                both. Pick a service to see how we approach it.
+                Planned remodels and unplanned emergencies use the same skills.
+                That is why we do both. Pick a service to see how we approach
+                it.
               </p>
             </Reveal>
           </div>
@@ -61,7 +62,10 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
             {services.map((service, i) => {
               const isActive = service.slug === activeSlug;
               return (
-                <li key={service.slug} className="border-t border-border last:border-b">
+                <li
+                  key={service.slug}
+                  className="border-t border-border last:border-b"
+                >
                   <Link
                     href={`/services/${service.slug}`}
                     data-active={isActive}
@@ -70,16 +74,20 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
                     className="group grid grid-cols-[2.25rem_1fr_auto] items-center gap-x-4 py-5 transition-opacity duration-500 md:grid-cols-[3.5rem_1fr_auto] md:py-6 lg:opacity-40 lg:data-[active=true]:opacity-100"
                   >
                     <span className="eyebrow text-muted-foreground">
-                      {String(i + 1).padStart(2, "0")}
+                      {String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="flex items-center gap-5">
                       <span className="relative block size-14 shrink-0 overflow-hidden lg:hidden">
-                        <Photo image={service.image} sizes="56px" quality={60} />
+                        <Photo
+                          image={service.image}
+                          sizes="56px"
+                          quality={60}
+                        />
                       </span>
                       <span
                         className={cn(
-                          "t-lg transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3",
-                          isActive && "lg:translate-x-3",
+                          't-lg transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3',
+                          isActive && 'lg:translate-x-3',
                         )}
                       >
                         {service.name}
@@ -112,12 +120,18 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
                   <motion.div
                     key={active.slug}
                     className="absolute inset-0"
-                    initial={{ clipPath: "inset(0% 0% 100% 0%)", scale: 1.08 }}
-                    animate={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
-                    exit={{ opacity: 0.99, transition: { delay: 0.9, duration: 0.01 } }}
+                    initial={{ clipPath: 'inset(0% 0% 100% 0%)', scale: 1.08 }}
+                    animate={{ clipPath: 'inset(0% 0% 0% 0%)', scale: 1 }}
+                    exit={{
+                      opacity: 0.99,
+                      transition: { delay: 0.9, duration: 0.01 },
+                    }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <Photo image={active.image} sizes="(min-width: 1024px) 36vw, 100vw" />
+                    <Photo
+                      image={active.image}
+                      sizes="(min-width: 1024px) 36vw, 100vw"
+                    />
                     <div
                       aria-hidden
                       className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
@@ -128,8 +142,13 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
                   {active.group}
                 </p>
               </div>
-              <div className="mt-6 flex items-start justify-between gap-8" aria-live="polite">
-                <p className="max-w-[34ch] text-muted-foreground">{active.summary}</p>
+              <div
+                className="mt-6 flex items-start justify-between gap-8"
+                aria-live="polite"
+              >
+                <p className="max-w-[34ch] text-muted-foreground">
+                  {active.summary}
+                </p>
                 <Link
                   href={`/services/${active.slug}`}
                   className="eyebrow inline-flex shrink-0 items-center gap-2 border-b border-foreground/40 pb-1.5 transition-colors hover:border-accent-ink hover:text-accent-ink"

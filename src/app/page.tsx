@@ -57,7 +57,7 @@ export default function HomePage() {
     <>
       <HomeHero />
       <HomeManifesto />
-      <FeaturedTrack projects={featured} />
+      {/* <FeaturedTrack projects={featured} /> */}
       <ServiceIndex services={indexServices} />
       <HomeProcess />
       {/* <TestimonialStage testimonials={testimonials} background={testimonialBackground} /> */}
