@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Dialog } from "radix-ui";
-import { ArrowUpRight, Phone, X } from "lucide-react";
+import * as React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Dialog } from 'radix-ui';
+import { ArrowUpRight, Phone, X } from 'lucide-react';
 
-import { SiteLogo } from "@/components/site-logo";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
-import { ctaHref, emergencyHref, nav, site } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { SiteLogo } from '@/components/site-logo';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { Button } from '@/components/ui/button';
+import { ctaHref, emergencyHref, nav, site } from '@/lib/site';
+import { cn } from '@/lib/utils';
 
 export function MobileNav({ className }: { className?: string }) {
   const pathname = usePathname();
@@ -18,12 +18,15 @@ export function MobileNav({ className }: { className?: string }) {
   const open = openOn === pathname;
 
   return (
-    <Dialog.Root open={open} onOpenChange={(next) => setOpenOn(next ? pathname : null)}>
+    <Dialog.Root
+      open={open}
+      onOpenChange={(next) => setOpenOn(next ? pathname : null)}
+    >
       <Dialog.Trigger asChild>
         <button
           type="button"
           className={cn(
-            "group inline-flex h-11 items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em]",
+            'group inline-flex h-11 items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em]',
             className,
           )}
         >
@@ -56,10 +59,16 @@ export function MobileNav({ className }: { className?: string }) {
             </Dialog.Close>
           </div>
 
-          <nav aria-label="Primary" className="gutter flex flex-1 flex-col justify-center py-8">
+          <nav
+            aria-label="Primary"
+            className="gutter flex flex-1 flex-col justify-center py-8"
+          >
             <ul className="flex flex-col">
-              {[{ href: "/", label: "Home" }, ...nav].map((item, i) => {
-                const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              {[{ href: '/', label: 'Home' }, ...nav].map((item, i) => {
+                const active =
+                  item.href === '/'
+                    ? pathname === '/'
+                    : pathname.startsWith(item.href);
                 return (
                   <li
                     key={item.href}
@@ -68,22 +77,44 @@ export function MobileNav({ className }: { className?: string }) {
                   >
                     <Link
                       href={item.href}
-                      aria-current={active ? "page" : undefined}
+                      aria-current={active ? 'page' : undefined}
                       className="group flex items-baseline gap-5 py-5"
                     >
                       <span className="eyebrow w-8 text-muted-foreground">
-                        {String(i + 1).padStart(2, "0")}
+                        {String(i + 1).padStart(2, '0')}
                       </span>
                       <span
                         className={cn(
-                          "t-lg transition-transform duration-500 ease-out-expo group-hover:translate-x-2",
-                          (active || item.href === emergencyHref) && "text-accent-ink",
-                          active && "italic",
+                          't-lg transition-transform duration-500 ease-out-expo group-hover:translate-x-2',
+                          (active || item.href === emergencyHref) &&
+                            'text-accent-ink',
+                          active && 'italic',
                         )}
                       >
                         {item.label}
                       </span>
                     </Link>
+                    {'children' in item && item.children ? (
+                      <ul className="flex flex-col gap-1 pb-5 pl-[3.25rem]">
+                        {item.children.map((child) => {
+                          const childActive = pathname.startsWith(child.href);
+                          return (
+                            <li key={child.href}>
+                              <Link
+                                href={child.href}
+                                aria-current={childActive ? 'page' : undefined}
+                                className={cn(
+                                  'inline-flex py-1.5 text-[0.72rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-accent-ink',
+                                  childActive && 'text-accent-ink',
+                                )}
+                              >
+                                {child.label}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    ) : null}
                   </li>
                 );
               })}

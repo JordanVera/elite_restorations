@@ -74,6 +74,20 @@ export function SiteFooter() {
                     >
                       {item.label}
                     </Link>
+                    {item.children ? (
+                      <ul className="mt-2 space-y-2 border-l border-border pl-3">
+                        {item.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              className="text-muted-foreground transition-colors hover:text-accent-ink"
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </li>
                 ))}
               </ul>
