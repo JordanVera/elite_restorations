@@ -5,7 +5,18 @@ import { absoluteUrl } from "@/lib/seo";
 import { services } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", "/services", "/projects", "/about", "/contact", "/emergency", "/insurance-log"];
+  const staticRoutes = [
+    "/",
+    "/services",
+    "/projects",
+    "/resources",
+    "/resources/homeowners",
+    "/resources/realtors",
+    "/about",
+    "/contact",
+    "/emergency",
+    "/insurance-log",
+  ];
   return [
     ...staticRoutes.map((path) => ({
       url: absoluteUrl(path),

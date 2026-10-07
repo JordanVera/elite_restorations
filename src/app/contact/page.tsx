@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-import { Clock, Mail, MapPin } from "lucide-react";
+import type { Metadata } from 'next';
+import { Clock, Mail, MapPin } from 'lucide-react';
 
-import { LeadForm } from "@/components/lead-form";
-import { Reveal } from "@/components/motion";
-import { PageHero } from "@/components/page-hero";
-import { isKnownService } from "@/lib/inquiry";
-import { pageMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { LeadForm } from '@/components/lead-form';
+import { Reveal } from '@/components/motion';
+import { PageHero } from '@/components/page-hero';
+import { isKnownService } from '@/lib/inquiry';
+import { pageMetadata } from '@/lib/seo';
+import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact",
+  title: 'Contact',
   description:
-    "Call, email or send a request to Elite Restorations for remodeling and restoration estimates across Greater Houston.",
-  path: "/contact",
+    'Call, email or send a request to Elite Restorations for remodeling and restoration estimates across Greater Houston.',
+  path: '/contact',
 });
 
 type SearchParams = Promise<{
@@ -21,9 +21,14 @@ type SearchParams = Promise<{
   path?: string | string[];
 }>;
 
-const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value);
+const first = (value: string | string[] | undefined) =>
+  Array.isArray(value) ? value[0] : value;
 
-export default async function ContactPage({ searchParams }: { searchParams: SearchParams }) {
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
   const params = await searchParams;
   const service = first(params.service);
   const note = first(params.note)?.slice(0, 500);
@@ -33,14 +38,17 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
     <>
       <PageHero
         eyebrow="Contact"
-        title={["Start a conversation."]}
+        title={['Start a conversation.']}
         lede="Call, email or send a request. If water is coming in or a roof is open to the weather, call first, then tell us what happened."
-        crumbs={[{ name: "Contact", path: "/contact" }]}
+        crumbs={[{ name: 'Contact', path: '/contact' }]}
       />
 
-      <section aria-label="Contact details and request form" className="py-16 md:py-24">
+      <section
+        aria-label="Contact details and request form"
+        className="py-16 md:py-24"
+      >
         <div className="gutter mx-auto grid max-w-[120rem] gap-16 lg:grid-cols-12 lg:gap-24">
-          <Reveal className="lg:col-span-5">
+          <Reveal className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start">
             <p className="eyebrow text-accent-ink">Talk to us</p>
             <a
               href={site.phone.href}
@@ -86,7 +94,8 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
                   <span className="sr-only">Service area</span>
                 </dt>
                 <dd className="max-w-[38ch] leading-relaxed text-muted-foreground">
-                  Serving Greater Houston, including {site.serviceArea.slice(0, 8).join(", ")} and surrounding
+                  Serving Greater Houston, including{' '}
+                  {site.serviceArea.slice(0, 8).join(', ')} and surrounding
                   communities.
                 </dd>
               </div>
@@ -95,10 +104,12 @@ export default async function ContactPage({ searchParams }: { searchParams: Sear
 
           <Reveal className="lg:col-span-7" delay={0.1}>
             <p className="eyebrow text-accent-ink">Request an estimate</p>
-            <h2 className="font-display t-md mt-4 max-w-[20ch]">Tell us what you need.</h2>
+            <h2 className="font-display t-md mt-4 max-w-[20ch]">
+              Tell us what you need.
+            </h2>
             <div className="relative mt-10">
               <LeadForm
-                key={`${service ?? ""}|${note ?? ""}|${path ?? ""}`}
+                key={`${service ?? ''}|${note ?? ''}|${path ?? ''}`}
                 defaultService={isKnownService(service) ? service : undefined}
                 defaultMessage={note}
                 defaultPath={path}

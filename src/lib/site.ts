@@ -60,6 +60,7 @@ export const site = {
 export const nav = [
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
+  { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/emergency', label: 'Emergency' },
