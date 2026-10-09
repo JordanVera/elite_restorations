@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { SiteLogo } from '../site-logo';
 
 const plank = img(
-  '/images/projects/bathrooms/freestanding-tub-window.jpg',
+  '/images/projects/bathrooms/charcoal-bath-patterned-shower.jpg',
   'Bathroom remodel',
 );
 const tile = img(
-  '/images/projects/bathrooms/matte-black-tub-and-shower.jpg',
+  '/images/projects/bathrooms/freestanding-tub-window.jpg',
   'Matte black tub and shower',
 );
 
@@ -52,7 +52,9 @@ export function HomeManifesto() {
               >
                 How we work
               </p>
-              <SiteLogo />
+              <div className="mt-6">
+                <SiteLogo className="h-24" />
+              </div>
               {/* <p aria-hidden className="font-display mt-6 text-[7rem] leading-none text-accent-ink/80">
                 &sect;
               </p> */}

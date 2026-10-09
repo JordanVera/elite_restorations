@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { motion } from "motion/react";
+import * as React from 'react';
+import { motion } from 'motion/react';
 
 const navigation = { count: 0 };
 

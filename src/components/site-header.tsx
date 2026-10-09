@@ -11,7 +11,8 @@ import { ScrollProgressLine } from '@/components/motion';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { ctaHref, nav, site, type NavItem } from '@/lib/site';
+import { serviceGroups, servicesInGroup } from '@/lib/services';
+import { ctaHref, nav, type NavItem } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
@@ -34,9 +35,11 @@ export function SiteHeader() {
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-500',
-        scrolled
-          ? 'border-b border-border bg-background/92 backdrop-blur-md'
-          : 'border-b border-transparent bg-transparent',
+        menuValue
+          ? 'border-b border-border bg-background'
+          : scrolled
+            ? 'border-b border-border bg-background/92 backdrop-blur-md'
+            : 'border-b border-transparent bg-transparent',
       )}
     >
       <div className="gutter mx-auto flex h-20 max-w-[120rem] items-center justify-between gap-6">
@@ -68,12 +71,12 @@ export function SiteHeader() {
         </NavigationMenu.Root>
 
         <div className="flex items-center gap-4">
-          <a
+          {/* <a
             href={site.phone.href}
-            className="hidden text-[0.8rem] tracking-wide text-muted-foreground transition-colors hover:text-foreground xl:block"
+            className="hidden text-[0.8rem] tracking-wide text-black dark:text-white transition-colors hover:text-foreground xl:block"
           >
             {site.phone.display}
-          </a>
+          </a> */}
           <ThemeToggle className="hidden sm:inline-flex cursor-pointer" />
           <Button
             asChild
@@ -104,6 +107,10 @@ function NavEntry({
   pathname: string;
 }) {
   const active = pathname.startsWith(item.href);
+
+  if (item.href === '/services') {
+    return <ServicesNav index={index} pathname={pathname} />;
+  }
 
   if (!item.children?.length) {
     return (
@@ -161,9 +168,74 @@ function NavEntry({
   );
 }
 
+function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
+  const active = pathname.startsWith('/services');
+
+  return (
+    <NavigationMenu.Item value="/services">
+      <NavigationMenu.Trigger className="group relative flex items-baseline gap-2 py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] after:absolute after:inset-x-0 after:top-full after:h-8 after:content-['']">
+        <NavIndex index={index} />
+        Services
+        <ChevronDown
+          aria-hidden
+          className="size-3 translate-y-px transition-transform duration-500 ease-out-expo group-data-[state=open]:rotate-180"
+        />
+        <NavUnderline active={active} openAware />
+      </NavigationMenu.Trigger>
+      <NavigationMenu.Content className="fixed inset-x-0 top-20 z-50">
+        <div className="border-b border-border bg-background shadow-[0_28px_50px_-32px_rgba(22,19,15,0.7)]">
+          <div className="gutter mx-auto max-w-[120rem] py-8">
+            <div className="flex items-center justify-between gap-6">
+              <p className="eyebrow text-muted-foreground">All services</p>
+              <NavigationMenu.Link asChild>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-accent-ink"
+                >
+                  View the full list
+                  <ArrowUpRight className="size-3.5" aria-hidden />
+                </Link>
+              </NavigationMenu.Link>
+            </div>
+            <div className="mt-7 grid grid-cols-4 gap-x-10 gap-y-8">
+              {serviceGroups.map((group) => (
+                <div key={group}>
+                  <p className="eyebrow text-accent-ink">{group}</p>
+                  <ul className="mt-4">
+                    {servicesInGroup(group).map((service) => {
+                      const href = `/services/${service.slug}`;
+                      const current = pathname === href;
+                      return (
+                        <li key={service.slug}>
+                          <NavigationMenu.Link asChild active={current}>
+                            <Link
+                              href={href}
+                              aria-current={current ? 'page' : undefined}
+                              className={cn(
+                                'block py-1.5 text-sm leading-snug transition-colors hover:text-accent-ink',
+                                current && 'text-accent-ink',
+                              )}
+                            >
+                              {service.name}
+                            </Link>
+                          </NavigationMenu.Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </NavigationMenu.Content>
+    </NavigationMenu.Item>
+  );
+}
+
 function NavIndex({ index }: { index: number }) {
   return (
-    <span className="hidden text-[0.6rem] text-muted-foreground transition-colors group-hover:text-accent-ink group-data-[state=open]:text-accent-ink xl:inline">
+    <span className="hidden text-[0.6rem] text-accent-ink transition-colors group-hover:text-accent-ink group-data-[state=open]:text-accent-ink xl:inline">
       {String(index + 1).padStart(2, '0')}
     </span>
   );
