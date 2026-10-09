@@ -8,9 +8,9 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Insurance Photo Log for Water & Storm Damage",
+  title: "Insurance Claim Packet for Water & Storm Damage",
   description:
-    "Document water and storm damage room by room: wide shots, close-ups and wet materials. Download a PDF to hand your insurance adjuster. Free from Elite Restorations in Houston.",
+    "A first-night checklist for an active leak or an open roof, then a room-by-room claim packet your adjuster can take. Free from Elite Restorations in Houston.",
   path: "/insurance-log",
   image: "/images/services/water-damage-restoration.jpg",
 });
@@ -19,12 +19,12 @@ export default function InsuranceLogPage() {
   return (
     <>
       <PageHero
-        eyebrow="Insurance photo log"
+        eyebrow="Claim packet"
         title={["Document the damage,", "room by room."]}
-        lede="A checklist for the photos your insurer will ask for. Add them here, then download one PDF to hand to your adjuster."
+        lede="A first-night list for an active leak or an open roof, then one PDF an adjuster can take. The photos continue into a recovery request."
         crumbs={[
           { name: "Emergency", path: "/emergency" },
-          { name: "Insurance photo log", path: "/insurance-log" },
+          { name: "Claim packet", path: "/insurance-log" },
         ]}
       >
         <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm">
