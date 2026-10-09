@@ -12,10 +12,17 @@ import { Photo } from '@/components/photo';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
 import { absoluteUrl, pageMetadata } from '@/lib/seo';
-import { getService, services, type Service } from '@/lib/services';
+import {
+  getService,
+  servicePath,
+  services,
+  type Service,
+} from '@/lib/services';
 import { emergencyHref, site } from '@/lib/site';
 
 type Params = { slug: string };
+
+export const dynamicParams = false;
 
 const galleryShift: Record<string, number> = {
   'tile-flooring': 3,
@@ -53,10 +60,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
+  const path = servicePath(service.slug);
   return pageMetadata({
     title: `${service.name} in Houston, TX`,
     description: service.metaDescription,
-    path: `/services/${service.slug}`,
+    path,
     image: service.image.src,
   });
 }
@@ -78,7 +86,7 @@ export default async function ServicePage({
     }));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { overlap, localPhoto, masonry } = photographsFor(service);
-  const path = `/services/${service.slug}`;
+  const path = servicePath(service.slug);
 
   return (
     <>
@@ -389,7 +397,7 @@ export default async function ServicePage({
               {related.map((r) => (
                 <li key={r.slug}>
                   <Link
-                    href={`/services/${r.slug}`}
+                    href={servicePath(r.slug)}
                     className="group inline-flex items-center gap-2 font-display text-3xl transition-colors hover:text-accent-ink"
                   >
                     {r.name}

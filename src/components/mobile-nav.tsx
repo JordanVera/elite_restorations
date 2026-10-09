@@ -9,7 +9,12 @@ import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { serviceGroups, servicesInGroup } from '@/lib/services';
+import {
+  isServicePagePath,
+  serviceGroups,
+  servicePath,
+  servicesInGroup,
+} from '@/lib/services';
 import { ctaHref, emergencyHref, nav, site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -73,7 +78,10 @@ export function MobileNav({ className }: { className?: string }) {
                 const active =
                   item.href === '/'
                     ? pathname === '/'
-                    : pathname.startsWith(item.href);
+                    : item.href === '/services'
+                      ? pathname.startsWith('/services') ||
+                        isServicePagePath(pathname)
+                      : pathname.startsWith(item.href);
                 return (
                   <li
                     key={item.href}
@@ -131,13 +139,15 @@ export function MobileNav({ className }: { className?: string }) {
                             <p className="eyebrow text-accent-ink">{group}</p>
                             <ul className="mt-2">
                               {servicesInGroup(group).map((service) => {
-                                const href = `/services/${service.slug}`;
+                                const href = servicePath(service.slug);
                                 const current = pathname === href;
                                 return (
                                   <li key={service.slug}>
                                     <Link
                                       href={href}
-                                      aria-current={current ? 'page' : undefined}
+                                      aria-current={
+                                        current ? 'page' : undefined
+                                      }
                                       className={cn(
                                         'block py-1.5 text-sm transition-colors hover:text-accent-ink',
                                         current && 'text-accent-ink',

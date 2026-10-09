@@ -11,7 +11,12 @@ import { ScrollProgressLine } from '@/components/motion';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { serviceGroups, servicesInGroup } from '@/lib/services';
+import {
+  isServicePagePath,
+  serviceGroups,
+  servicePath,
+  servicesInGroup,
+} from '@/lib/services';
 import { ctaHref, nav, type NavItem } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -169,7 +174,8 @@ function NavEntry({
 }
 
 function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
-  const active = pathname.startsWith('/services');
+  const active =
+    pathname.startsWith('/services') || isServicePagePath(pathname);
 
   return (
     <NavigationMenu.Item value="/services">
@@ -203,7 +209,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
                   <p className="eyebrow text-accent-ink">{group}</p>
                   <ul className="mt-4">
                     {servicesInGroup(group).map((service) => {
-                      const href = `/services/${service.slug}`;
+                      const href = servicePath(service.slug);
                       const current = pathname === href;
                       return (
                         <li key={service.slug}>

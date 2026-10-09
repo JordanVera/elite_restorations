@@ -1,11 +1,10 @@
+'use client';
+
 import { Reveal, SplitLines } from '@/components/motion';
 import { Photo } from '@/components/photo';
-import {
-  StickyScroll,
-  type StickyScrollItem,
-} from '@/components/ui/sticky-scroll-reveal';
-import { img } from '@/lib/images';
-import { processSteps } from '@/lib/process';
+import { Tabs, type TabItem } from '@/components/ui/tabs';
+import { img, type Img } from '@/lib/images';
+import { processSteps, type ProcessStep } from '@/lib/process';
 
 const visuals = [
   img(
@@ -34,20 +33,44 @@ const visuals = [
   ),
 ];
 
+function ProcessCard({ step, image }: { step: ProcessStep; image: Img }) {
+  return (
+    <article className="grid overflow-hidden border border-border bg-surface shadow-[0_28px_70px_-40px_rgba(0,0,0,0.7)] lg:grid-cols-12">
+      <div className="relative aspect-[5/4] lg:col-span-5 lg:aspect-auto lg:min-h-80">
+        <Photo image={image} sizes="(min-width: 1024px) 38vw, 92vw" />
+      </div>
+      <div className="flex flex-col justify-center px-6 py-8 sm:px-10 lg:col-span-7 lg:px-14 lg:py-12">
+        <p className="eyebrow text-accent-ink">Step {step.index}</p>
+        <h3 className="font-display mt-3 text-[clamp(2.5rem,4vw,4.25rem)] leading-[0.95] tracking-[-0.03em]">
+          {step.title}
+        </h3>
+        <p className="mt-5 max-w-[34ch] font-display text-[clamp(1.25rem,1.8vw,1.7rem)] leading-snug text-foreground/90">
+          {step.lead}
+        </p>
+        <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">{step.body}</p>
+      </div>
+    </article>
+  );
+}
+
 export function HomeProcess() {
-  const items: StickyScrollItem[] = processSteps.map((step, i) => ({
-    eyebrow: step.index,
-    title: step.title,
-    lead: step.lead,
-    body: step.body,
-    visual: <Photo image={visuals[i]} sizes="(min-width: 1024px) 45vw, 92vw" />,
+  const tabs: TabItem[] = processSteps.map((step, index) => ({
+    value: step.index,
+    title: (
+      <span className="flex min-w-0 flex-col items-start gap-2">
+        <span className="eyebrow text-muted-foreground transition-colors group-data-[active]:text-accent-ink">
+          {step.index}
+        </span>
+        <span className="font-display text-[clamp(1.15rem,1.55vw,1.85rem)] leading-none whitespace-nowrap text-muted-foreground transition-colors group-hover:text-foreground group-data-[active]:text-foreground">
+          {step.title}
+        </span>
+      </span>
+    ),
+    content: <ProcessCard step={step} image={visuals[index]} />,
   }));
 
   return (
-    <section
-      aria-labelledby="process-heading"
-      className="relative py-28 md:py-40"
-    >
+    <section aria-labelledby="process-heading" className="relative py-28 md:py-40">
       <div className="gutter mx-auto max-w-[120rem]">
         <div className="grid gap-y-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
@@ -77,9 +100,12 @@ export function HomeProcess() {
           </div>
         </div>
 
-        <div className="mt-16 md:mt-24">
-          <StickyScroll items={items} />
-        </div>
+        <Tabs
+          tabs={tabs}
+          className="mt-14 md:mt-20"
+          containerClassName="grid grid-cols-2 gap-x-4 sm:grid-cols-3 lg:grid-cols-6"
+          tabClassName="border-b border-border px-1 pt-2 pb-4"
+        />
       </div>
     </section>
   );
