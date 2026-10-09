@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import { MissingRoom } from "@/components/not-found/missing-room";
+import { MissingRoom } from '@/components/not-found/missing-room';
 
 export const metadata: Metadata = {
-  title: "Page not found",
+  title: 'Page not found',
   robots: { index: false },
 };
 
