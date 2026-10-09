@@ -48,7 +48,7 @@ const rooms: readonly {
   },
   {
     id: 'kitchen',
-    href: '/services/kitchen-remodeling',
+    href: '/kitchen-remodeling',
     index: '02',
     name: 'Kitchen',
     hint: 'Kitchen remodeling',
@@ -56,7 +56,7 @@ const rooms: readonly {
   },
   {
     id: 'bath',
-    href: '/services/bathroom-remodeling',
+    href: '/bathroom-remodeling',
     index: '03',
     name: 'Bath',
     hint: 'Bathroom remodeling',

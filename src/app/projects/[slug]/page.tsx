@@ -9,7 +9,7 @@ import { PageHero } from "@/components/page-hero";
 import { Photo } from "@/components/photo";
 import { getProject, projects } from "@/lib/projects";
 import { pageMetadata } from "@/lib/seo";
-import { getService } from "@/lib/services";
+import { getService, servicePath } from "@/lib/services";
 
 type Params = { slug: string };
 
@@ -98,7 +98,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                   {linkedServices.map((s) => (
                     <li key={s.slug}>
                       <Link
-                        href={`/services/${s.slug}`}
+                        href={servicePath(s.slug)}
                         className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                       >
                         {s.name}

@@ -197,7 +197,7 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
                   {active.summary}
                 </p>
                 <Link
-                  href={`/services/${active.slug}`}
+                  href={`/${active.slug}`}
                   className="eyebrow inline-flex shrink-0 items-center gap-2 border-b border-foreground/40 pb-1.5 transition-colors hover:border-accent-ink hover:text-accent-ink"
                 >
                   Explore
@@ -235,7 +235,7 @@ function ServiceRow({
 }) {
   return (
     <Link
-      href={`/services/${service.slug}`}
+      href={`/${service.slug}`}
       data-active={active}
       onMouseEnter={() => onActivate(service.slug)}
       onFocus={() => onActivate(service.slug)}

@@ -1311,6 +1311,16 @@ export function getService(slug: string) {
   return servicesBySlug.get(slug);
 }
 
+/** Canonical path for an individual service page (no `/services` prefix). */
+export function servicePath(slug: string) {
+  return `/${slug}`;
+}
+
+export function isServicePagePath(pathname: string) {
+  const slug = pathname.replace(/^\//, '').split('/')[0];
+  return slug.length > 0 && servicesBySlug.has(slug);
+}
+
 export function servicesInGroup(group: ServiceGroup) {
   return services.filter((s) => s.group === group);
 }

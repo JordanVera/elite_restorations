@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
-import { services } from '@/lib/services';
+import { servicePath, services } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: path === '/' ? 1 : 0.8,
     })),
     ...services.map((s) => ({
-      url: absoluteUrl(`/services/${s.slug}`),
+      url: absoluteUrl(servicePath(s.slug)),
       priority: 0.7,
     })),
     ...projects.map((p) => ({

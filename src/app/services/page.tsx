@@ -10,6 +10,7 @@ import { pageMetadata } from '@/lib/seo';
 import {
   serviceGroupBlurbs,
   serviceGroups,
+  servicePath,
   services,
   servicesInGroup,
 } from '@/lib/services';
@@ -61,7 +62,7 @@ export default function ServicesPage() {
                   return (
                     <li key={service.slug} className="border-b border-border">
                       <Link
-                        href={`/services/${service.slug}`}
+                        href={servicePath(service.slug)}
                         className="group grid items-center gap-6 py-8 sm:grid-cols-[3rem_1fr_minmax(0,14rem)] md:py-10"
                       >
                         <span className="eyebrow text-muted-foreground">

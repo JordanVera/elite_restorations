@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { nav, site } from '@/lib/site';
-import { serviceGroups, servicesInGroup } from '@/lib/services';
+import {
+  serviceGroups,
+  servicePath,
+  servicesInGroup,
+} from '@/lib/services';
 import { SiteLogo } from './site-logo';
 
 export function SiteFooter() {
@@ -53,7 +57,7 @@ export function SiteFooter() {
                   {servicesInGroup(group).map((service) => (
                     <li key={service.slug}>
                       <Link
-                        href={`/services/${service.slug}`}
+                        href={servicePath(service.slug)}
                         className="transition-colors hover:text-accent-ink"
                       >
                         {service.name}
