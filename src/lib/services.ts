@@ -373,161 +373,6 @@ export const services: Service[] = [
     },
   },
   {
-    slug: 'carpentry',
-    name: 'Carpentry',
-    group: 'Interiors',
-    tagline: 'The structure and trim that make a room feel finished.',
-    summary:
-      'Framing, trim, built-ins, stairs and millwork, from repairs to custom pieces.',
-    metaDescription:
-      'Carpentry in Houston, TX: finish trim, built-ins, stairs and millwork, matched to older Heights and West University profiles or built new for the room.',
-    intro: [
-      'Good carpentry is what makes a remodel feel finished: square framing, tight joints, and trim that belongs to the house. It is also the built-ins, stairs and millwork people notice.',
-      'We handle structural framing and finish carpentry, including shelving, stair work and wall paneling sized to the room you have.',
-    ],
-    includes: [
-      'Framing and door or window openings',
-      'Trim, molding and paneling',
-      'Built-ins, shelving and closets',
-      'Cabinet installation and modification',
-      'Stairs and railings',
-      'Repairs to existing woodwork',
-    ],
-    faqs: [
-      {
-        q: 'Do you build custom built-ins and shelving?',
-        a: 'Yes. We build and install shelving, closets and built-ins sized to the wall, including the awkward alcoves common in older Houston houses.',
-      },
-      {
-        q: 'Can you match trim in an older home?',
-        a: 'In Heights, West University and Bellaire houses we can usually match profiles and proportions, or blend new trim so it reads as part of the room.',
-      },
-      {
-        q: 'Can you add built-ins to a room that was never designed for them?',
-        a: 'Yes. Alcoves in older Heights and West University houses, and plain walls in newer Memorial or Woodlands rooms, are both places we size shelving, closets and paneling to the wall that is there. Wood is acclimated in the house before it is cut.',
-      },
-      {
-        q: 'Do you do carpentry as part of a kitchen or bath remodel?',
-        a: 'Yes. Framing, soffits, cabinet modifications and finish trim are often the carpentry inside a larger remodel, handled by the same team.',
-      },
-    ],
-    related: [
-      'kitchen-remodeling',
-      'bathroom-remodeling',
-      'painting-drywall-repair',
-    ],
-    image: img(
-      '/images/services/carpentry.jpg',
-      'Staircase with geometric wall millwork in a custom-finished home',
-    ),
-    local: {
-      heading: 'Trim that belongs to the house.',
-      body: [
-        "Houston's older neighborhoods still have casing, stairs and panel profiles worth keeping. Newer houses in Memorial, Katy and The Woodlands often need the opposite: millwork that gives a plain room a point of view.",
-        'We match what should stay and build what the room is missing. Material is acclimated in the house before it is cut, so new trim sits with the old instead of fighting it.',
-      ],
-      conditions: [
-        {
-          title: 'Older profiles',
-          body: 'Heights, Rice Village and West University trim is often worth matching. We look at the existing profile before we recommend new.',
-        },
-        {
-          title: 'Built-ins and stairs',
-          body: 'Shelving, closets, stair treads and railings are sized to the opening, whether the house is a bungalow or a two-story.',
-        },
-        {
-          title: 'Structure you do not see',
-          body: 'Opening a wall in a 1940s bungalow is different from framing in a 2000s two-story. We inspect before we cut.',
-        },
-      ],
-      neighborhoods: [
-        'The Heights',
-        'West University',
-        'Bellaire',
-        'Rice Village',
-        'Memorial',
-        'River Oaks',
-        'Upper Kirby',
-        'The Woodlands',
-      ],
-    },
-  },
-  {
-    slug: 'tile-fireplaces',
-    name: 'Tile Fireplaces',
-    group: 'Interiors',
-    tagline: 'A hearth that anchors the room.',
-    summary:
-      'Tile and stone fireplace surrounds, new or refreshed, set with heat-appropriate materials.',
-    metaDescription:
-      'Tile fireplace installation in Houston, TX: heat-rated surrounds, retiling and sealing for living rooms that anchor the Houston house through the year.',
-    intro: [
-      'In Houston a fireplace is usually the anchor of the room, not the heat source. A linear marble wall or a herringbone surround still has to be built with materials rated for the firebox.',
-      'We install new surrounds and retile existing ones in living rooms from Memorial to The Woodlands, using appropriate tile, mortar and grout, then seal for protection.',
-    ],
-    includes: [
-      'New tile fireplace installation',
-      'Remodeling and updating existing surrounds',
-      'Repair and retiling',
-      'Heat-resistant tile and fire-safe mortar',
-      'Grouting and sealing',
-    ],
-    faqs: [
-      {
-        q: 'Can you update an old brick or tile fireplace?',
-        a: 'Yes. We review the existing surround and recommend whether to retile, resurface or rebuild. A lot of Houston living rooms have a brick box that no longer matches the house.',
-      },
-      {
-        q: 'What tile is suitable around a fireplace?',
-        a: 'Heat-resistant tile set with fire-safe mortar. We help you choose materials that look right and are appropriate next to the firebox, even if the fireplace is used only a few nights a year.',
-      },
-      {
-        q: 'Can the fireplace be mostly a design piece?',
-        a: 'Yes. Many Houston hearths are the visual center of the room and are lit only occasionally. The tile and mortar next to the opening are still specified for heat.',
-      },
-      {
-        q: 'Can the surround be part of a larger living-room remodel?',
-        a: 'Yes. Mantels, paneling and built-in shelving often travel with the tile, and our carpentry team handles that finish work.',
-      },
-    ],
-    related: ['backsplash', 'tile-flooring', 'carpentry'],
-    image: img(
-      '/images/services/tile-fireplaces.jpg',
-      'Linear marble fireplace wall in a modern living room',
-    ),
-    local: {
-      heading: 'The wall the living room is built around.',
-      body: [
-        'In Houston the fireplace is usually the anchor of the living room: the wall you see from the kitchen and the sofa. Updating it is a finish project, whether the surround is linear marble, herringbone tile or a stone great-room hearth.',
-        'We still build it for fire. Heat-rated tile and mortar, a sound substrate, and a mantel or panel detail sized to the room, from a Memorial great room to a smaller West University living room.',
-      ],
-      conditions: [
-        {
-          title: 'A finish, not just masonry',
-          body: 'The surround is the wall people see. Mantel, paneling and tile are planned together so the hearth belongs to the room.',
-        },
-        {
-          title: 'Scale of the wall',
-          body: 'Two-story rooms in The Woodlands and Katy can swallow a small surround. We size the tile field to the volume.',
-        },
-        {
-          title: 'Older brick boxes',
-          body: 'Inside-the-Loop houses often have a brick fireplace that can be retiled once we see what is behind the face.',
-        },
-      ],
-      neighborhoods: [
-        'Memorial',
-        'River Oaks',
-        'The Woodlands',
-        'Katy',
-        'Cinco Ranch',
-        'Sugar Land',
-        'West University',
-        'Bellaire',
-      ],
-    },
-  },
-  {
     slug: 'wood-flooring',
     name: 'Wood Flooring',
     group: 'Floors',
@@ -831,6 +676,162 @@ export const services: Service[] = [
       ],
     },
   },
+  {
+    slug: 'carpentry',
+    name: 'Carpentry',
+    group: 'Interiors',
+    tagline: 'The structure and trim that make a room feel finished.',
+    summary:
+      'Framing, trim, built-ins, stairs and millwork, from repairs to custom pieces.',
+    metaDescription:
+      'Carpentry in Houston, TX: finish trim, built-ins, stairs and millwork, matched to older Heights and West University profiles or built new for the room.',
+    intro: [
+      'Good carpentry is what makes a remodel feel finished: square framing, tight joints, and trim that belongs to the house. It is also the built-ins, stairs and millwork people notice.',
+      'We handle structural framing and finish carpentry, including shelving, stair work and wall paneling sized to the room you have.',
+    ],
+    includes: [
+      'Framing and door or window openings',
+      'Trim, molding and paneling',
+      'Built-ins, shelving and closets',
+      'Cabinet installation and modification',
+      'Stairs and railings',
+      'Repairs to existing woodwork',
+    ],
+    faqs: [
+      {
+        q: 'Do you build custom built-ins and shelving?',
+        a: 'Yes. We build and install shelving, closets and built-ins sized to the wall, including the awkward alcoves common in older Houston houses.',
+      },
+      {
+        q: 'Can you match trim in an older home?',
+        a: 'In Heights, West University and Bellaire houses we can usually match profiles and proportions, or blend new trim so it reads as part of the room.',
+      },
+      {
+        q: 'Can you add built-ins to a room that was never designed for them?',
+        a: 'Yes. Alcoves in older Heights and West University houses, and plain walls in newer Memorial or Woodlands rooms, are both places we size shelving, closets and paneling to the wall that is there. Wood is acclimated in the house before it is cut.',
+      },
+      {
+        q: 'Do you do carpentry as part of a kitchen or bath remodel?',
+        a: 'Yes. Framing, soffits, cabinet modifications and finish trim are often the carpentry inside a larger remodel, handled by the same team.',
+      },
+    ],
+    related: [
+      'kitchen-remodeling',
+      'bathroom-remodeling',
+      'painting-drywall-repair',
+    ],
+    image: img(
+      '/images/services/carpentry.jpg',
+      'Staircase with geometric wall millwork in a custom-finished home',
+    ),
+    local: {
+      heading: 'Trim that belongs to the house.',
+      body: [
+        "Houston's older neighborhoods still have casing, stairs and panel profiles worth keeping. Newer houses in Memorial, Katy and The Woodlands often need the opposite: millwork that gives a plain room a point of view.",
+        'We match what should stay and build what the room is missing. Material is acclimated in the house before it is cut, so new trim sits with the old instead of fighting it.',
+      ],
+      conditions: [
+        {
+          title: 'Older profiles',
+          body: 'Heights, Rice Village and West University trim is often worth matching. We look at the existing profile before we recommend new.',
+        },
+        {
+          title: 'Built-ins and stairs',
+          body: 'Shelving, closets, stair treads and railings are sized to the opening, whether the house is a bungalow or a two-story.',
+        },
+        {
+          title: 'Structure you do not see',
+          body: 'Opening a wall in a 1940s bungalow is different from framing in a 2000s two-story. We inspect before we cut.',
+        },
+      ],
+      neighborhoods: [
+        'The Heights',
+        'West University',
+        'Bellaire',
+        'Rice Village',
+        'Memorial',
+        'River Oaks',
+        'Upper Kirby',
+        'The Woodlands',
+      ],
+    },
+  },
+  {
+    slug: 'tile-fireplaces',
+    name: 'Tile Fireplaces',
+    group: 'Interiors',
+    tagline: 'A hearth that anchors the room.',
+    summary:
+      'Tile and stone fireplace surrounds, new or refreshed, set with heat-appropriate materials.',
+    metaDescription:
+      'Tile fireplace installation in Houston, TX: heat-rated surrounds, retiling and sealing for living rooms that anchor the Houston house through the year.',
+    intro: [
+      'In Houston a fireplace is usually the anchor of the room, not the heat source. A linear marble wall or a herringbone surround still has to be built with materials rated for the firebox.',
+      'We install new surrounds and retile existing ones in living rooms from Memorial to The Woodlands, using appropriate tile, mortar and grout, then seal for protection.',
+    ],
+    includes: [
+      'New tile fireplace installation',
+      'Remodeling and updating existing surrounds',
+      'Repair and retiling',
+      'Heat-resistant tile and fire-safe mortar',
+      'Grouting and sealing',
+    ],
+    faqs: [
+      {
+        q: 'Can you update an old brick or tile fireplace?',
+        a: 'Yes. We review the existing surround and recommend whether to retile, resurface or rebuild. A lot of Houston living rooms have a brick box that no longer matches the house.',
+      },
+      {
+        q: 'What tile is suitable around a fireplace?',
+        a: 'Heat-resistant tile set with fire-safe mortar. We help you choose materials that look right and are appropriate next to the firebox, even if the fireplace is used only a few nights a year.',
+      },
+      {
+        q: 'Can the fireplace be mostly a design piece?',
+        a: 'Yes. Many Houston hearths are the visual center of the room and are lit only occasionally. The tile and mortar next to the opening are still specified for heat.',
+      },
+      {
+        q: 'Can the surround be part of a larger living-room remodel?',
+        a: 'Yes. Mantels, paneling and built-in shelving often travel with the tile, and our carpentry team handles that finish work.',
+      },
+    ],
+    related: ['backsplash', 'tile-flooring', 'carpentry'],
+    image: img(
+      '/images/services/tile-fireplaces.jpg',
+      'Linear marble fireplace wall in a modern living room',
+    ),
+    local: {
+      heading: 'The wall the living room is built around.',
+      body: [
+        'In Houston the fireplace is usually the anchor of the living room: the wall you see from the kitchen and the sofa. Updating it is a finish project, whether the surround is linear marble, herringbone tile or a stone great-room hearth.',
+        'We still build it for fire. Heat-rated tile and mortar, a sound substrate, and a mantel or panel detail sized to the room, from a Memorial great room to a smaller West University living room.',
+      ],
+      conditions: [
+        {
+          title: 'A finish, not just masonry',
+          body: 'The surround is the wall people see. Mantel, paneling and tile are planned together so the hearth belongs to the room.',
+        },
+        {
+          title: 'Scale of the wall',
+          body: 'Two-story rooms in The Woodlands and Katy can swallow a small surround. We size the tile field to the volume.',
+        },
+        {
+          title: 'Older brick boxes',
+          body: 'Inside-the-Loop houses often have a brick fireplace that can be retiled once we see what is behind the face.',
+        },
+      ],
+      neighborhoods: [
+        'Memorial',
+        'River Oaks',
+        'The Woodlands',
+        'Katy',
+        'Cinco Ranch',
+        'Sugar Land',
+        'West University',
+        'Bellaire',
+      ],
+    },
+  },
+
   {
     slug: 'roof-replacement',
     name: 'Roof Replacement',

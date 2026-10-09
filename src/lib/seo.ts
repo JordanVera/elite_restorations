@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { site } from "@/lib/site";
+import { googleReviews } from "@/lib/testimonials";
 
 type PageMetaInput = {
   title: string;
@@ -59,6 +60,13 @@ export function localBusinessSchema() {
       },
     ],
     sameAs: site.social.map((s) => s.href),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: String(googleReviews.score),
+      reviewCount: String(googleReviews.count),
+      bestRating: "5",
+      worstRating: "1",
+    },
   };
 }
 
