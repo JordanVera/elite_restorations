@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/resources/homeowners',
     '/resources/realtors',
     '/about',
+    '/testimonials',
     '/contact',
     '/emergency',
     '/insurance-log',

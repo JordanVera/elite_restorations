@@ -90,6 +90,14 @@ export function SiteFooter() {
                     ) : null}
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href="/testimonials"
+                    className="transition-colors hover:text-accent-ink"
+                  >
+                    Reviews
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>

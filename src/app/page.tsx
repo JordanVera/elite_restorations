@@ -8,15 +8,13 @@ import { HomeFinalCta } from '@/components/home/home-final-cta';
 import { HomeHero } from '@/components/home/home-hero';
 import { HomeManifesto } from '@/components/home/home-manifesto';
 import { HomeProcess } from '@/components/home/home-process';
+import { HomeTestimonials } from '@/components/home/home-testimonials';
 import {
   ServiceIndex,
   type IndexService,
 } from '@/components/home/service-index';
-import { TestimonialStage } from '@/components/home/testimonial-stage';
-import { img } from '@/lib/images';
 import { projects } from '@/lib/projects';
 import { services } from '@/lib/services';
-import { testimonials } from '@/lib/testimonials';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -26,11 +24,6 @@ export const metadata: Metadata = pageMetadata({
   path: '/',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
 });
-
-const testimonialBackground = img(
-  '/images/projects/kitchens/vaulted-open-plan.jpg',
-  'Open-plan kitchen beneath a vaulted ceiling',
-);
 
 export default function HomePage() {
   const featured: TrackProject[] = projects
@@ -60,7 +53,7 @@ export default function HomePage() {
       {/* <FeaturedTrack projects={featured} /> */}
       <ServiceIndex services={indexServices} />
       <HomeProcess />
-      {/* <TestimonialStage testimonials={testimonials} background={testimonialBackground} /> */}
+      <HomeTestimonials />
       <HomeFinalCta />
     </>
   );

@@ -37,6 +37,14 @@
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-scroll: scroll var(--animation-duration, 45s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 
   @keyframes spotlight {
     0% {
