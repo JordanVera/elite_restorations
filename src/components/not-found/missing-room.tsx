@@ -26,6 +26,8 @@ const Y_BATH = 520;
 const WIDTH_FT = 42;
 const DEPTH_FT = 36;
 
+const drawEase = [0.65, 0, 0.35, 1] as const;
+
 type Box = { x: number; y: number; w: number; h: number };
 
 const rooms: readonly {
@@ -197,8 +199,10 @@ const cloud = revisionCloud(
 
 function Ink({
   d,
+  delay = 0,
   width = 3.5,
   cap = 'square',
+  reduce,
   className,
 }: {
   d: string;
@@ -209,7 +213,7 @@ function Ink({
   className?: string;
 }) {
   return (
-    <path
+    <motion.path
       d={d}
       fill="none"
       stroke="currentColor"
@@ -217,6 +221,13 @@ function Ink({
       strokeLinecap={cap}
       strokeLinejoin="miter"
       className={className}
+      initial={{ pathLength: reduce ? 1 : 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{
+        duration: reduce ? 0 : 1.35,
+        delay: reduce ? 0 : delay,
+        ease: drawEase,
+      }}
     />
   );
 }

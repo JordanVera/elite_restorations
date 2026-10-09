@@ -12,16 +12,16 @@ export function HomeHero() {
       <div className="kitchen-copy gutter">
         <p className="kitchen-eyebrow">
           <span />
-          Remodeling · Greater Houston
+          Remodeling & restoration · Greater Houston
         </p>
         <h1 id="hero-heading">
-          Exceptional spaces.
+          Houston remodeling.
           <br />
           <em>Beautifully lived in.</em>
         </h1>
         <p className="kitchen-description">
-          Custom kitchens. Considered details. Craftsmanship you can feel. We
-          bring your vision of home to life.
+          We remodel kitchens and bathrooms across Greater Houston. When water
+          or a storm hits, we restore the house too.
         </p>
         <div className="kitchen-actions">
           <Link className="kitchen-primary" href={ctaHref}>
@@ -41,7 +41,7 @@ export function HomeHero() {
         <p className="kitchen-materials">
           SPACES MADE FOR LIVING
           <br />
-          <small>Custom kitchens · Thoughtfully crafted</small>
+          <small>Kitchens, baths, and roofs</small>
         </p>
         <a href="#manifesto" aria-label="Scroll to our approach">
           <ArrowDown size={18} />

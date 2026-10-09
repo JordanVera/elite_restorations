@@ -7,18 +7,18 @@ import { SiteLogo } from '../site-logo';
 
 const plank = img(
   '/images/projects/bathrooms/charcoal-bath-patterned-shower.jpg',
-  'Bathroom remodel',
+  'Bathroom remodel with a patterned tile shower and marble floor',
 );
 const tile = img(
   '/images/projects/bathrooms/freestanding-tub-window.jpg',
-  'Matte black tub and shower',
+  'Freestanding tub, marble walls, and a glass shower in a bathroom remodel',
 );
 
 const principles = [
   {
     n: 'i.',
     title: 'Restore first.',
-    body: 'If it can be saved, we save it. Dry the structure, repair the roof, keep what is sound. Replacement is the last answer, not the first.',
+    body: 'If it can be saved, we save it. After water damage, we dry the structure, repair the roof, and keep what is sound. Replacement is the last answer, not the first.',
     offset: 'lg:mt-0',
   },
   {
@@ -30,7 +30,7 @@ const principles = [
   {
     n: 'iii.',
     title: 'Remodel with intent.',
-    body: 'Every material, every seam, every trim line is a decision. We help you make them, then we build them cleanly.',
+    body: 'A kitchen, a bath, a floor. Every material, every seam, every trim line is a decision. We help you make them, then we build them cleanly.',
     offset: 'lg:mt-10',
   },
 ];
@@ -46,12 +46,7 @@ export function HomeManifesto() {
         <div className="grid gap-y-16 lg:grid-cols-12">
           <div className="lg:col-span-2">
             <Reveal>
-              <p
-                id="manifesto-heading"
-                className="eyebrow text-muted-foreground"
-              >
-                How we work
-              </p>
+              <p className="eyebrow text-muted-foreground">How we work</p>
               <div className="mt-6">
                 <SiteLogo className="h-24" />
               </div>
@@ -63,13 +58,15 @@ export function HomeManifesto() {
 
           <div className="relative lg:col-span-9 lg:col-start-4">
             <ScrollWords
-              className="relative z-30 t-lg text-[clamp(2rem,4.9vw,4.9rem)]! leading-[1.04]!"
+              as="h2"
+              id="manifesto-heading"
+              className="relative z-30 t-lg font-normal text-[clamp(2rem,4.9vw,4.9rem)]! leading-[1.04]!"
               segments={[
                 {
-                  text: 'Some jobs start with a storm. Others start with a stubborn cabinet and a good idea. Either way, the same family shows up. We',
+                  text: 'Some jobs in Houston start with storm damage or a leaking roof. Others start with a kitchen that no longer works. Either way, the same family shows up. We',
                 },
                 { text: 'restore', emphasis: true },
-                { text: 'what should stay,' },
+                { text: 'what should stay,', },
                 { text: 'rebuild', emphasis: true },
                 { text: 'what cannot, and' },
                 { text: 'remodel', emphasis: true },
@@ -101,7 +98,7 @@ export function HomeManifesto() {
               </Parallax>
             </ImageReveal>
             <p className="eyebrow mt-4 text-muted-foreground">
-              Detail, matte black tub and shower
+              Freestanding tub and marble shower
             </p>
           </div>
 

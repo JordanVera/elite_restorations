@@ -30,8 +30,18 @@ function Word({
   );
 }
 
-export function ScrollWords({ segments, className }: { segments: Segment[]; className?: string }) {
-  const ref = React.useRef<HTMLParagraphElement>(null);
+export function ScrollWords({
+  segments,
+  className,
+  as: Tag = "p",
+  id,
+}: {
+  segments: Segment[];
+  className?: string;
+  as?: "p" | "h2";
+  id?: string;
+}) {
+  const ref = React.useRef<HTMLParagraphElement | HTMLHeadingElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 82%", "end 52%"] });
 
@@ -44,18 +54,18 @@ export function ScrollWords({ segments, className }: { segments: Segment[]; clas
 
   if (reduce) {
     return (
-      <p ref={ref} className={className}>
+      <Tag ref={ref as React.Ref<HTMLHeadingElement>} id={id} className={className}>
         {segments.map((s, i) => (
           <span key={i} className={cn(s.emphasis && "italic text-accent-ink")}>
             {s.text}{" "}
           </span>
         ))}
-      </p>
+      </Tag>
     );
   }
 
   return (
-    <p ref={ref} className={className}>
+    <Tag ref={ref as React.Ref<HTMLHeadingElement>} id={id} className={className}>
       {words.map(({ word, emphasis }, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
@@ -65,6 +75,6 @@ export function ScrollWords({ segments, className }: { segments: Segment[]; clas
           </Word>
         );
       })}
-    </p>
+    </Tag>
   );
 }
