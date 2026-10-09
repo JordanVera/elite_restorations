@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import { MissingSheet } from '@/components/not-found/missing-sheet';
+import { MissingRoom } from "@/components/not-found/missing-room";
 
 export const metadata: Metadata = {
-  title: 'Page not found',
+  title: "Page not found",
   robots: { index: false },
 };
 
 export default function NotFound() {
-  return <MissingSheet />;
+  return <MissingRoom />;
 }

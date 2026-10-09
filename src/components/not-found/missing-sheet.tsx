@@ -36,7 +36,7 @@ const openings: readonly Opening[] = [
     schedule: 'Kitchen remodeling',
     href: '/services/kitchen-remodeling',
     swing: 'bl',
-    className: 'col-start-4 col-span-5 row-start-1 row-span-3',
+    className: 'col-start-4 col-span-5 row-start-3 row-span-3',
   },
   {
     id: 'bath',
@@ -65,7 +65,7 @@ const openings: readonly Opening[] = [
     note: 'Not on the drawings',
     schedule: 'This page is not on the drawings',
     href: null,
-    className: 'col-start-4 col-span-5 row-start-4 row-span-2',
+    className: 'col-start-4 col-span-5 row-start-1 row-span-2',
   },
   {
     id: 'study',
@@ -165,7 +165,7 @@ function DoorSwing({ corner, delay }: { corner: 'bl' | 'br'; delay: number }) {
       viewBox="0 0 64 64"
       aria-hidden
       className={cn(
-        'room-swing pointer-events-none absolute size-16 text-foreground/40 md:size-24',
+        'room-swing pointer-events-none absolute hidden size-14 text-foreground/40 sm:block md:size-24',
         corner === 'br' ? 'right-0 bottom-0 -scale-x-100' : 'bottom-0 left-0',
       )}
     >
@@ -196,8 +196,8 @@ function RoomLabel({
   return (
     <span
       className={cn(
-        'relative z-10 flex gap-3',
-        compact ? 'items-baseline' : 'flex-col',
+        'relative z-10 flex gap-1 sm:gap-3',
+        compact ? 'flex-col sm:flex-row sm:items-baseline' : 'flex-col',
       )}
     >
       <span className="eyebrow text-muted-foreground" aria-hidden>
@@ -207,12 +207,12 @@ function RoomLabel({
         <span
           className={cn(
             'room-name font-display block leading-none transition-colors duration-500',
-            compact ? 'text-xl md:text-2xl' : 'text-2xl md:text-[1.85rem]',
+            compact ? 'text-lg sm:text-xl md:text-2xl' : 'text-xl sm:text-2xl md:text-[1.85rem]',
           )}
         >
           {opening.name}
         </span>
-        <span className="mt-1 block text-[0.68rem] tracking-wide text-muted-foreground uppercase">
+        <span className="mt-1 hidden text-[0.62rem] tracking-[0.12em] text-muted-foreground uppercase sm:block sm:text-[0.68rem] sm:tracking-wide">
           {opening.note}
         </span>
       </span>
@@ -225,7 +225,7 @@ function OmitRoom({ opening }: { opening: Opening }) {
     <div
       data-room={opening.id}
       className={cn(
-        'relative flex h-full flex-col items-center justify-center overflow-hidden bg-background px-3 text-center',
+        'relative flex h-full flex-col items-center justify-center overflow-hidden bg-background px-2 text-center sm:px-3',
         opening.className,
       )}
       style={{
@@ -235,12 +235,14 @@ function OmitRoom({ opening }: { opening: Opening }) {
     >
       <span
         aria-hidden
-        className="omit-frame pointer-events-none absolute inset-2 border border-dashed border-accent md:inset-3"
+        className="omit-frame pointer-events-none absolute inset-1.5 border border-dashed border-accent sm:inset-2 md:inset-3"
       />
-      <span className="font-display text-[clamp(2.8rem,5vw,4.75rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_var(--accent)]">
+      <span className="font-display text-[clamp(1.8rem,6vw,4.75rem)] leading-none text-transparent [-webkit-text-stroke:1.5px_var(--accent)]">
         404
       </span>
-      <span className="eyebrow mt-3 text-accent-ink">Not on the drawings</span>
+      <span className="eyebrow mt-2 max-w-[12ch] text-balance leading-normal text-accent-ink sm:mt-3">
+        Not on the drawings
+      </span>
     </div>
   );
 }
@@ -254,7 +256,7 @@ function PlanRoom({ opening, index }: { opening: Opening; index: number }) {
       data-room={opening.id}
       aria-label={`${opening.name}, ${opening.schedule}`}
       className={cn(
-        'group relative flex h-full overflow-hidden bg-background p-3 text-foreground transition-colors duration-500 md:p-4',
+        'group relative flex h-full min-w-0 overflow-hidden bg-background p-2 text-foreground transition-colors duration-500 sm:p-3 md:p-4',
         opening.compact
           ? 'items-center justify-between gap-4'
           : 'flex-col justify-between',
@@ -285,7 +287,7 @@ function TitleBlock() {
     {
       label: 'Revision',
       value: '1 — Omitted',
-      detail: `Since ${site.founded}`,
+      detail: 'Not in the set',
     },
   ];
 
@@ -383,18 +385,18 @@ export function MissingSheet() {
           </div>
         </div>
 
-        <div className="mt-14 md:mt-20">
+        <div className="mt-10 md:mt-14">
           <div className="mb-4 flex items-end justify-between gap-6">
             <p className="eyebrow text-muted-foreground">
-              Floor plan · Greater Houston
+              Floor plan
             </p>
             <NorthMark />
           </div>
 
-          <div className="overflow-x-auto pb-1">
-            <div className="min-w-[44rem]">
-              <nav aria-label="Floor plan" className="bg-foreground p-[7px]">
-                <div className="grid h-[32rem] grid-cols-12 grid-rows-6 gap-[6px] bg-foreground md:h-[40rem]">
+          <div className="pb-1">
+            <div>
+              <nav aria-label="Floor plan" className="bg-foreground p-1 sm:p-[7px]">
+                <div className="grid h-[22rem] grid-cols-12 grid-rows-6 gap-1 bg-foreground sm:h-[32rem] sm:gap-[6px] md:h-[40rem]">
                   {openings.map((opening, index) => (
                     <PlanRoom
                       key={opening.id}
@@ -416,10 +418,6 @@ export function MissingSheet() {
               </div>
             </div>
           </div>
-          <p className="eyebrow mt-3 text-muted-foreground lg:hidden">
-            Slide to read the plan
-          </p>
-
           <TitleBlock />
         </div>
 
@@ -436,20 +434,23 @@ export function MissingSheet() {
                     href={opening.href}
                     data-room={opening.id}
                     aria-label={`${opening.name}, ${opening.schedule}`}
-                    className="grid grid-cols-[3.5rem_1fr_auto] items-baseline gap-x-4 py-4 transition-colors duration-500 md:grid-cols-[5rem_10rem_1fr_auto] md:py-5"
+                    className="grid grid-cols-[3.5rem_1fr_auto] items-center gap-x-4 py-4 transition-colors duration-500 md:grid-cols-[5rem_10rem_1fr_auto] md:items-baseline md:py-5"
                   >
-                    <span className="eyebrow text-muted-foreground" aria-hidden>
+                    <span
+                      className="eyebrow row-span-2 text-muted-foreground md:row-span-1"
+                      aria-hidden
+                    >
                       {opening.mark}
                     </span>
                     <span className="room-name font-display text-2xl leading-none transition-colors duration-500 md:text-3xl">
                       {opening.name}
                     </span>
-                    <span className="hidden text-muted-foreground md:block">
+                    <span className="col-start-2 text-sm text-muted-foreground md:col-start-3 md:row-start-1 md:self-center">
                       {opening.schedule}
                     </span>
                     <ArrowUpRight
                       aria-hidden
-                      className="room-arrow size-4 opacity-40 transition-all duration-500"
+                      className="room-arrow row-span-2 size-4 self-center opacity-40 transition-all duration-500 md:row-span-1"
                     />
                   </Link>
                 ) : (
