@@ -603,7 +603,7 @@ export function MissingRoom() {
         x >= L && x <= R && y >= T && y <= B ? spot : 'In the margin';
     },
     [],
-  );
+);
 
   const onPointerLeave = React.useCallback(() => {
     if (readoutRef.current) readoutRef.current.textContent = 'Cross the sheet';
