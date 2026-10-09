@@ -1,0 +1,31 @@
+.kitchen-hero{position:relative;isolation:isolate;min-height:760px;height:100svh;max-height:1300px;overflow:hidden;background:#171717;color:#fff}
+.kitchen-slideshow,.kitchen-slide,.kitchen-slide-image,.kitchen-shade{position:absolute;inset:0}
+.kitchen-slideshow{overflow:hidden;background:url('/images/projects/kitchens/brass-dome-waterfall-island.jpg') 58% 50%/cover}
+.kitchen-slide{opacity:0;animation:kitchen-crossfade 36s linear infinite}
+.kitchen-slide-image{animation:kitchen-pan 36s linear infinite;will-change:transform}
+.kitchen-slide-0,.kitchen-slide-0 .kitchen-slide-image{animation-delay:-1.8s}
+.kitchen-slide-1,.kitchen-slide-1 .kitchen-slide-image{animation-delay:-25.8s}
+.kitchen-slide-2,.kitchen-slide-2 .kitchen-slide-image{animation-delay:-13.8s}
+.kitchen-slide-1 .kitchen-slide-image{transform-origin:65% 40%}
+.kitchen-slide-2 .kitchen-slide-image{transform-origin:35% 60%}
+.kitchen-slideshow[data-paused=true] .kitchen-slide,.kitchen-slideshow[data-paused=true] .kitchen-slide-image{animation-play-state:paused}
+@keyframes kitchen-crossfade{0%{opacity:0}5%,33.333%{opacity:1}38.333%,100%{opacity:0}}
+@keyframes kitchen-pan{0%{transform:scale(1.025) translate3d(-.5%,0,0)}38.333%{transform:scale(1.12) translate3d(.6%,-.5%,0)}100%{transform:scale(1.12) translate3d(.6%,-.5%,0)}}
+.kitchen-shade{pointer-events:none;background:linear-gradient(90deg,rgba(10,10,10,.78),rgba(10,10,10,.48) 38%,rgba(10,10,10,.08) 75%),linear-gradient(0deg,rgba(10,10,10,.68),transparent 32%)}
+.kitchen-copy{position:relative;z-index:2;padding-top:clamp(210px,28vh,360px);max-width:120rem;margin:auto;pointer-events:none}
+.kitchen-eyebrow{display:flex;align-items:center;gap:16px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#ededed;margin-bottom:28px}
+.kitchen-eyebrow span{width:32px;height:2px;background:var(--accent)}
+.kitchen-copy h1{font-family:var(--font-serif,Georgia),serif;font-size:clamp(48px,5.5vw,92px);font-weight:400;line-height:1.06;letter-spacing:-.045em;max-width:850px;text-wrap:balance}
+.kitchen-copy h1 em{font-weight:400;color:#fff}
+.kitchen-description{max-width:355px;font-size:15px;line-height:1.8;color:#e0e0e0;margin-top:28px}
+.kitchen-actions{display:flex;align-items:center;gap:28px;margin-top:34px;pointer-events:auto}
+.kitchen-primary,.kitchen-secondary{display:inline-flex;align-items:center;gap:22px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s}
+.kitchen-primary{padding:20px 24px;background:var(--accent);color:#fff}.kitchen-primary:hover{background:var(--accent-ink)}
+.kitchen-secondary{border-bottom:1px solid #ffffff70;padding:12px 0}.kitchen-secondary:hover{border-color:var(--accent)}
+.kitchen-footer{position:absolute;bottom:30px;left:0;right:0;display:flex;align-items:flex-end;justify-content:space-between;z-index:2;font-size:9px;letter-spacing:.16em;text-transform:uppercase;line-height:2.1;color:#ededed;pointer-events:none}
+.kitchen-footer span{padding:0 10px;color:var(--accent)}.kitchen-footer small{font-size:9px;letter-spacing:.06em;color:#ccc}.kitchen-materials{margin-left:auto;margin-right:36px}.kitchen-footer a{pointer-events:auto;border:1px solid #ffffff50;border-radius:50%;padding:15px;transition:background .2s}.kitchen-footer a:hover{background:var(--accent);border-color:var(--accent)}
+.kitchen-motion{position:absolute;z-index:3;right:4vw;top:130px;display:flex;align-items:center;gap:8px;color:#fff;background:#17171770;border:1px solid #ffffff50;padding:10px 14px;border-radius:30px;font-size:10px;backdrop-filter:blur(12px);cursor:pointer}
+.kitchen-hero a:focus-visible,.kitchen-motion:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+@media(max-width:767px){.kitchen-hero{min-height:780px;max-height:1100px}.kitchen-copy{padding-top:245px}.kitchen-shade{background:linear-gradient(90deg,#0a0a0abf,#0a0a0a35),linear-gradient(0deg,#0a0a0adb,transparent 85%)}.kitchen-copy h1{font-size:clamp(43px,9vw,64px)}.kitchen-description{max-width:290px;font-size:14px}.kitchen-actions{gap:20px;flex-wrap:wrap}.kitchen-primary{padding:18px}.kitchen-materials{display:none}.kitchen-motion{top:110px;right:20px}.kitchen-footer{bottom:22px}}
+@media(prefers-reduced-motion:no-preference){.kitchen-copy{animation:kitchen-reveal 1.1s ease-out both}@keyframes kitchen-reveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}}
+@media(prefers-reduced-motion:reduce){.kitchen-slide,.kitchen-slide-image{animation:none;will-change:auto}.kitchen-slide{display:none}.kitchen-slide-0{display:block;opacity:1}.kitchen-motion{display:none}}

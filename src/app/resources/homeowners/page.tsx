@@ -67,12 +67,16 @@ export default function HomeownersResourcesPage() {
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>
             <p className="eyebrow text-accent-ink">Project library</p>
-            <h2 id="library-heading" className="font-display t-lg mt-4 max-w-[16ch]">
-              See how the work actually goes.
+            <h2
+              id="library-heading"
+              className="font-display t-lg mt-4 max-w-[16ch]"
+            >
+              See how the work <span className="italic">actually</span> goes.
             </h2>
             <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-              Choose a category, then a project type. Each film is a step in the sequence, and
-              every clip on this page is a placeholder until real job footage is cut in.
+              Choose a category, then a project type. Each film is a step in the
+              sequence, and every clip on this page is a placeholder until real
+              job footage is cut in.
             </p>
           </Reveal>
           <Suspense
@@ -82,7 +86,10 @@ export default function HomeownersResourcesPage() {
               </p>
             }
           >
-            <VideoPortal basePath="/resources/homeowners" audience="homeowner" />
+            <VideoPortal
+              basePath="/resources/homeowners"
+              audience="homeowner"
+            />
           </Suspense>
         </div>
       </section>
@@ -94,7 +101,10 @@ export default function HomeownersResourcesPage() {
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>
             <p className="eyebrow text-muted-foreground">How we work</p>
-            <h2 id="process-heading" className="font-display t-lg mt-4 max-w-[14ch]">
+            <h2
+              id="process-heading"
+              className="font-display t-lg mt-4 max-w-[14ch]"
+            >
               Four steps. Then the walkthrough.
             </h2>
           </Reveal>
@@ -103,7 +113,9 @@ export default function HomeownersResourcesPage() {
               <li key={step.index} className="bg-background p-8 md:p-10">
                 <p className="eyebrow text-accent-ink">{step.index}</p>
                 <h3 className="font-display mt-6 text-3xl">{step.title}</h3>
-                <p className="mt-4 leading-relaxed text-muted-foreground">{step.body}</p>
+                <p className="mt-4 leading-relaxed text-muted-foreground">
+                  {step.body}
+                </p>
               </li>
             ))}
           </ol>

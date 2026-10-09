@@ -69,14 +69,14 @@ export type NavItem = NavLink & {
 export const nav: readonly NavItem[] = [
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
-  {
-    href: '/resources',
-    label: 'Resources',
-    children: [
-      { href: '/resources/homeowners', label: 'Homeowners' },
-      { href: '/resources/realtors', label: 'Realtors' },
-    ],
-  },
+  // {
+  //   href: '/resources',
+  //   label: 'Resources',
+  //   children: [
+  //     { href: '/resources/homeowners', label: 'Homeowners' },
+  //     { href: '/resources/realtors', label: 'Realtors' },
+  //   ],
+  // },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/emergency', label: 'Emergency' },
