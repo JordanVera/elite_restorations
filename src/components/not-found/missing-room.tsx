@@ -1,14 +1,13 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
+import * as React from 'react';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { motion, useReducedMotion } from 'motion/react';
 
-import { SplitLines } from "@/components/motion";
-import { Button } from "@/components/ui/button";
-import { site } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { Button } from '@/components/ui/button';
+import { site } from '@/lib/site';
+import { cn } from '@/lib/utils';
 
 const VB_W = 1000;
 const VB_H = 980;
@@ -27,8 +26,6 @@ const Y_BATH = 520;
 const WIDTH_FT = 42;
 const DEPTH_FT = 36;
 
-const drawEase = [0.65, 0, 0.35, 1] as const;
-
 type Box = { x: number; y: number; w: number; h: number };
 
 const rooms: readonly {
@@ -40,43 +37,43 @@ const rooms: readonly {
   box: Box;
 }[] = [
   {
-    id: "living",
-    href: "/",
-    index: "01",
-    name: "Living",
-    hint: "Back home",
+    id: 'living',
+    href: '/',
+    index: '01',
+    name: 'Living',
+    hint: 'Back home',
     box: { x: L, y: T, w: VX - L, h: Y_LIVING - T },
   },
   {
-    id: "kitchen",
-    href: "/services/kitchen-remodeling",
-    index: "02",
-    name: "Kitchen",
-    hint: "Kitchen remodeling",
+    id: 'kitchen',
+    href: '/services/kitchen-remodeling',
+    index: '02',
+    name: 'Kitchen',
+    hint: 'Kitchen remodeling',
     box: { x: VX, y: T, w: R - VX, h: Y_KITCHEN - T },
   },
   {
-    id: "bath",
-    href: "/services/bathroom-remodeling",
-    index: "03",
-    name: "Bath",
-    hint: "Bathroom remodeling",
+    id: 'bath',
+    href: '/services/bathroom-remodeling',
+    index: '03',
+    name: 'Bath',
+    hint: 'Bathroom remodeling',
     box: { x: VX, y: Y_KITCHEN, w: R - VX, h: Y_BATH - Y_KITCHEN },
   },
   {
-    id: "gallery",
-    href: "/projects",
-    index: "04",
-    name: "Gallery",
-    hint: "Finished work",
+    id: 'gallery',
+    href: '/projects',
+    index: '04',
+    name: 'Gallery',
+    hint: 'Finished work',
     box: { x: VX, y: Y_BATH, w: R - VX, h: B - Y_BATH },
   },
   {
-    id: "entry",
-    href: "/contact",
-    index: "05",
-    name: "Entry",
-    hint: "Request a visit",
+    id: 'entry',
+    href: '/contact',
+    index: '05',
+    name: 'Entry',
+    hint: 'Request a visit',
     box: { x: L, y: Y_VOID, w: VX - L, h: B - Y_VOID },
   },
 ];
@@ -151,7 +148,7 @@ const exterior = [
   `M 150 ${B} H ${L}`,
   `M ${L} ${B} V 540`,
   `M ${L} 400 V ${T}`,
-].join(" ");
+].join(' ');
 
 const interior = [
   `M ${VX} ${T} V 140`,
@@ -164,20 +161,20 @@ const interior = [
   `M 780 ${Y_KITCHEN} H ${R}`,
   `M ${VX} ${Y_BATH} H 640`,
   `M 760 ${Y_BATH} H ${R}`,
-].join(" ");
+].join(' ');
 
 const windows = [
   horizontalWindow(640, 820, T),
   verticalWindow(400, 540, L),
   verticalWindow(620, 760, R),
-].join(" ");
+].join(' ');
 
 const jambs = [
   `M ${VX - 8} 140 H ${VX + 8}`,
   `M ${VX - 8} 210 H ${VX + 8}`,
   `M 190 ${Y_VOID - 8} V ${Y_VOID + 8}`,
   `M 330 ${Y_VOID - 8} V ${Y_VOID + 8}`,
-].join(" ");
+].join(' ');
 
 const doors = [
   `M 280 ${Y_LIVING} A 110 110 0 0 0 170 ${Y_LIVING - 110}`,
@@ -188,27 +185,31 @@ const doors = [
   `M 660 ${Y_KITCHEN} V ${Y_KITCHEN + 120}`,
   `M 760 ${Y_BATH} A 120 120 0 0 1 640 ${Y_BATH + 120}`,
   `M 640 ${Y_BATH} V ${Y_BATH + 120}`,
-].join(" ");
+].join(' ');
 
-const cloud = revisionCloud(voidBox.x + 22, voidBox.y + 22, voidBox.w - 44, voidBox.h - 44, 30);
+const cloud = revisionCloud(
+  voidBox.x + 22,
+  voidBox.y + 22,
+  voidBox.w - 44,
+  voidBox.h - 44,
+  30,
+);
 
 function Ink({
   d,
-  delay = 0,
   width = 3.5,
-  cap = "square",
-  reduce,
+  cap = 'square',
   className,
 }: {
   d: string;
   delay?: number;
   width?: number;
-  cap?: "square" | "butt" | "round";
-  reduce: boolean | null;
+  cap?: 'square' | 'butt' | 'round';
+  reduce?: boolean | null;
   className?: string;
 }) {
   return (
-    <motion.path
+    <path
       d={d}
       fill="none"
       stroke="currentColor"
@@ -216,13 +217,6 @@ function Ink({
       strokeLinecap={cap}
       strokeLinejoin="miter"
       className={className}
-      initial={{ pathLength: reduce ? 1 : 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{
-        duration: reduce ? 0 : 1.35,
-        delay: reduce ? 0 : delay,
-        ease: drawEase,
-      }}
     />
   );
 }
@@ -261,7 +255,14 @@ function FloorPlan({
             patternUnits="userSpaceOnUse"
             patternTransform="rotate(42)"
           >
-            <line x1="0" y1="0" x2="0" y2="9" stroke="var(--accent)" strokeWidth="1.35" />
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="9"
+              stroke="var(--accent)"
+              strokeWidth="1.35"
+            />
           </pattern>
         </defs>
 
@@ -283,10 +284,37 @@ function FloorPlan({
         />
 
         <Ink d={exterior} width={8} reduce={reduce} />
-        <Ink d={interior} delay={0.16} width={4} reduce={reduce} className="text-foreground/85" />
-        <Ink d={windows} delay={0.42} width={1.4} cap="butt" reduce={reduce} className="text-foreground/70" />
-        <Ink d={jambs} delay={0.42} width={1.4} cap="butt" reduce={reduce} className="text-foreground/70" />
-        <Ink d={doors} delay={0.5} width={1.35} cap="butt" reduce={reduce} className="text-foreground/55" />
+        <Ink
+          d={interior}
+          delay={0.16}
+          width={4}
+          reduce={reduce}
+          className="text-foreground/85"
+        />
+        <Ink
+          d={windows}
+          delay={0.42}
+          width={1.4}
+          cap="butt"
+          reduce={reduce}
+          className="text-foreground/70"
+        />
+        <Ink
+          d={jambs}
+          delay={0.42}
+          width={1.4}
+          cap="butt"
+          reduce={reduce}
+          className="text-foreground/70"
+        />
+        <Ink
+          d={doors}
+          delay={0.5}
+          width={1.35}
+          cap="butt"
+          reduce={reduce}
+          className="text-foreground/55"
+        />
 
         <motion.g
           fill="none"
@@ -374,9 +402,21 @@ function FloorPlan({
           strokeDasharray="7 6"
           opacity="0.85"
         />
-        <Ink d={cloud} delay={0.9} width={1.7} cap="round" reduce={reduce} className="text-accent" />
+        <Ink
+          d={cloud}
+          delay={0.9}
+          width={1.7}
+          cap="round"
+          reduce={reduce}
+          className="text-accent"
+        />
         <g className="text-accent" transform="translate(486 232)">
-          <path d="M 11 0 L 22 26 H 0 Z" fill="none" stroke="currentColor" strokeWidth="1.4" />
+          <path
+            d="M 11 0 L 22 26 H 0 Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+          />
           <text
             x="11"
             y="21"
@@ -391,7 +431,10 @@ function FloorPlan({
         </g>
       </svg>
 
-      <nav aria-label="Rooms still on the plans" className="absolute inset-0 z-10">
+      <nav
+        aria-label="Rooms still on the plans"
+        className="absolute inset-0 z-10"
+      >
         {rooms.map((room) => (
           <Link
             key={room.id}
@@ -424,13 +467,19 @@ function FloorPlan({
         style={boxStyle(voidBox)}
         className="pointer-events-none absolute z-30 flex flex-col items-center justify-center px-3 text-center"
       >
-        <p className="eyebrow text-[0.58rem] text-accent sm:text-[0.68rem]">Unbuilt</p>
+        <p className="eyebrow text-[0.58rem] text-accent sm:text-[0.68rem]">
+          Unbuilt
+        </p>
         <p className="font-display text-[clamp(3.1rem,7vw,6.4rem)] leading-[0.8] tracking-[-0.045em]">
           404
         </p>
         <motion.div
           className="mt-2 border-2 border-accent p-[3px] text-accent sm:mt-4"
-          initial={reduce ? { opacity: 1, scale: 1, rotate: -12 } : { opacity: 0, scale: 1.5, rotate: -28 }}
+          initial={
+            reduce
+              ? { opacity: 1, scale: 1, rotate: -12 }
+              : { opacity: 0, scale: 1.5, rotate: -28 }
+          }
           animate={{ opacity: 1, scale: 1, rotate: -12 }}
           transition={{
             duration: reduce ? 0 : 0.32,
@@ -451,7 +500,11 @@ function FloorPlan({
   );
 }
 
-function SheetMeta({ readoutRef }: { readoutRef: React.RefObject<HTMLSpanElement | null> }) {
+function SheetMeta({
+  readoutRef,
+}: {
+  readoutRef: React.RefObject<HTMLSpanElement | null>;
+}) {
   return (
     <div className="border-t border-foreground/15 bg-surface">
       <dl className="grid sm:grid-cols-3">
@@ -460,21 +513,27 @@ function SheetMeta({ readoutRef }: { readoutRef: React.RefObject<HTMLSpanElement
           <dd className="mt-1.5 font-display text-xl leading-none tracking-tight sm:text-2xl">
             {site.name}
           </dd>
-          <dd className="mt-1.5 text-xs text-muted-foreground">Since {site.founded}</dd>
+          <dd className="mt-1.5 text-xs text-muted-foreground">
+            Since {site.founded}
+          </dd>
         </div>
         <div className="border-t border-foreground/15 px-3 py-3 sm:border-t-0 sm:border-x sm:px-4">
           <dt className="eyebrow text-muted-foreground">Project</dt>
           <dd className="mt-1.5 font-display text-xl leading-none tracking-tight sm:text-2xl">
             Unbuilt room
           </dd>
-          <dd className="mt-1.5 text-xs text-muted-foreground">{site.locality}</dd>
+          <dd className="mt-1.5 text-xs text-muted-foreground">
+            {site.locality}
+          </dd>
         </div>
         <div className="border-t border-foreground/15 px-3 py-3 sm:border-t-0 sm:px-4">
           <dt className="eyebrow text-muted-foreground">Sheet</dt>
           <dd className="mt-1.5 font-display text-4xl leading-none tracking-tight text-accent">
             A-404
           </dd>
-          <dd className="mt-1.5 text-xs text-muted-foreground">Rev 1 — room omitted</dd>
+          <dd className="mt-1.5 text-xs text-muted-foreground">
+            Rev 1 — room omitted
+          </dd>
         </div>
       </dl>
       <div className="flex items-baseline justify-between gap-4 border-t border-foreground/15 px-3 py-2.5 sm:px-4">
@@ -492,7 +551,7 @@ function SheetMeta({ readoutRef }: { readoutRef: React.RefObject<HTMLSpanElement
 
 function Crop({ className }: { className: string }) {
   return (
-    <span aria-hidden className={cn("absolute size-3.5", className)}>
+    <span aria-hidden className={cn('absolute size-3.5', className)}>
       <span className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-foreground/50" />
       <span className="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-foreground/50" />
     </span>
@@ -501,51 +560,60 @@ function Crop({ className }: { className: string }) {
 
 export function MissingRoom() {
   const reduce = useReducedMotion();
-  const hatchId = React.useId().replace(/:/g, "");
+  const hatchId = React.useId().replace(/:/g, '');
   const planRef = React.useRef<HTMLDivElement>(null);
   const readoutRef = React.useRef<HTMLSpanElement>(null);
 
-  const onPointerMove = React.useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    const el = readoutRef.current;
-    const plan = planRef.current;
-    if (!el || !plan) return;
+  const onPointerMove = React.useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      const el = readoutRef.current;
+      const plan = planRef.current;
+      if (!el || !plan) return;
 
-    const rect = plan.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * VB_W;
-    const y = ((event.clientY - rect.top) / rect.height) * VB_H;
-    const feetX = ((x - L) / (R - L)) * WIDTH_FT;
-    const feetY = ((y - T) / (B - T)) * DEPTH_FT;
-    const spot = `${formatFeet(feetX)}  ×  ${formatFeet(feetY)}`;
+      const rect = plan.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * VB_W;
+      const y = ((event.clientY - rect.top) / rect.height) * VB_H;
+      const feetX = ((x - L) / (R - L)) * WIDTH_FT;
+      const feetY = ((y - T) / (B - T)) * DEPTH_FT;
+      const spot = `${formatFeet(feetX)}  ×  ${formatFeet(feetY)}`;
 
-    if (contains(voidBox, x, y)) {
-      el.textContent = `Unbuilt  ·  ${spot}`;
-      return;
-    }
+      if (contains(voidBox, x, y)) {
+        el.textContent = `Unbuilt  ·  ${spot}`;
+        return;
+      }
 
-    const room = rooms.find((item) => contains(item.box, x, y));
-    if (room) {
-      el.textContent = `${room.index}  ${room.name}  ·  ${spot}`;
-      return;
-    }
+      const room = rooms.find((item) => contains(item.box, x, y));
+      if (room) {
+        el.textContent = `${room.index}  ${room.name}  ·  ${spot}`;
+        return;
+      }
 
-    el.textContent = x >= L && x <= R && y >= T && y <= B ? spot : "In the margin";
-  }, []);
+      el.textContent =
+        x >= L && x <= R && y >= T && y <= B ? spot : 'In the margin';
+    },
+    [],
+  );
 
   const onPointerLeave = React.useCallback(() => {
-    if (readoutRef.current) readoutRef.current.textContent = "Cross the sheet";
+    if (readoutRef.current) readoutRef.current.textContent = 'Cross the sheet';
   }, []);
 
   return (
-    <section aria-labelledby="missing-heading" className="relative overflow-x-clip pt-24 pb-16 sm:pt-28 sm:pb-24">
+    <section
+      aria-labelledby="missing-heading"
+      className="relative overflow-x-clip pt-24 pb-16 sm:pt-28 sm:pb-24"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           backgroundImage:
-            "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
-          backgroundSize: "4.5rem 4.5rem",
-          maskImage: "radial-gradient(ellipse at center, black 15%, transparent 72%)",
-          WebkitMaskImage: "radial-gradient(ellipse at center, black 15%, transparent 72%)",
+            'linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)',
+          backgroundSize: '4.5rem 4.5rem',
+          maskImage:
+            'radial-gradient(ellipse at center, black 15%, transparent 72%)',
+          WebkitMaskImage:
+            'radial-gradient(ellipse at center, black 15%, transparent 72%)',
         }}
       />
 
@@ -557,17 +625,22 @@ export function MissingRoom() {
 
         <div className="mt-8 grid items-start gap-12 lg:mt-12 lg:grid-cols-12 lg:gap-x-10">
           <div className="lg:col-span-5 lg:pt-6">
-            <SplitLines
-              as="h1"
-              id="missing-heading"
-              immediate
-              stagger={0.08}
-              lines={["This room", <em key="drawn">was never drawn.</em>]}
-              className="font-display t-lg"
-            />
+            <h1 id="missing-heading" className="font-display t-lg">
+              <span className="block overflow-hidden">
+                <span className="anim-line-up block">This room</span>
+              </span>
+              <span className="block overflow-hidden">
+                <span
+                  className="anim-line-up block"
+                  style={{ ['--d' as string]: '0.08s' }}
+                >
+                  <em>was never drawn.</em>
+                </span>
+              </span>
+            </h1>
             <p className="mt-6 max-w-[36ch] text-lg leading-relaxed text-muted-foreground">
-              The address is not on the set. It might be an old link, or a space we never built.
-              The rest of the house is open.
+              The address is not on the set. It might be an old link, or a space
+              we never built. The rest of the house is open.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Button asChild variant="accent" size="lg">
@@ -590,9 +663,10 @@ export function MissingRoom() {
               </a>
             </div>
             <p className="sr-only">
-              Interactive floor plan. Living returns home. Kitchen and Bath open those remodeling
-              services. Gallery opens finished projects. Entry opens the contact page. The hatched
-              room marked 404 was never drawn.
+              Interactive floor plan. Living returns home. Kitchen and Bath open
+              those remodeling services. Gallery opens finished projects. Entry
+              opens the contact page. The hatched room marked 404 was never
+              drawn.
             </p>
           </div>
 
