@@ -5,9 +5,9 @@ import { useState } from 'react';
 import { Pause, Play } from 'lucide-react';
 
 const slides = [
-  { src: 'vaulted-waterfall-island.jpg', position: '60% 50%' },
-  { src: 'crystal-pendants-marble-island.jpg', position: '55% 50%' },
-  { src: 'lantern-pendants-beamed-kitchen.jpg', position: '55% 50%' },
+  { src: 'kitchens/vaulted-waterfall-island.jpg', position: '60% 50%' },
+  { src: 'kitchens/crystal-pendants-marble-island.jpg', position: '55% 50%' },
+  { src: 'fireplaces/linear-marble-wall.jpg', position: '55% 50%' },
   // { src: 'brass-dome-waterfall-island.jpg', position: '58% 50%' },
 ];
 
@@ -24,7 +24,7 @@ export function KitchenSlideshow() {
           <div className={`kitchen-slide kitchen-slide-${i}`} key={slide.src}>
             <div className="kitchen-slide-image">
               <Image
-                src={`/images/projects/kitchens/${slide.src}`}
+                src={`/images/projects/${slide.src}`}
                 alt=""
                 fill
                 sizes="100vw"
