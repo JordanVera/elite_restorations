@@ -13,14 +13,16 @@ export type ChromaticImageProps = {
   alt: string;
   children?: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   backgroundColor?: string;
   zoom?: number;
   displacement?: number;
   chromaticShift?: number;
   tilt?: number;
-  /** Pointer in component space (x right, y up) captured before this instance mounts. */
-  seedPointer?: { current: { x: number; y: number } };
 };
+
+// Browsers only keep a handful of WebGL contexts. A photo grid shares one.
+let releaseActiveContext: (() => void) | null = null;
 
 const VERTEX_SHADER = `
 attribute vec2 aPosition;
@@ -120,20 +122,60 @@ export function ChromaticImage({
   children,
   className,
   backgroundColor = '#111111',
+  style,
   zoom = 0.2,
   displacement = 0.05,
   chromaticShift = 0.01,
   tilt = 0.3,
-  seedPointer,
 }: ChromaticImageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const pointerRef = useRef({ x: 0.5, y: 0.5 });
+  const [active, setActive] = useState(false);
   const [ready, setReady] = useState(false);
+  const [canvasEpoch, setCanvasEpoch] = useState(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const remember = (event: PointerEvent) => {
+      const bounds = container.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return;
+      pointerRef.current = {
+        x: (event.clientX - bounds.left) / bounds.width,
+        y: 1 - (event.clientY - bounds.top) / bounds.height,
+      };
+    };
+    const onEnter = (event: PointerEvent) => {
+      remember(event);
+      setActive(true);
+    };
+    const onLeave = () => {
+      setActive(false);
+      setReady(false);
+      // A lost WebGL context cannot be recreated on the same canvas.
+      setCanvasEpoch((epoch) => epoch + 1);
+    };
+
+    container.addEventListener('pointerenter', onEnter);
+    container.addEventListener('pointermove', remember);
+    container.addEventListener('pointerleave', onLeave);
+    return () => {
+      container.removeEventListener('pointerenter', onEnter);
+      container.removeEventListener('pointermove', remember);
+      container.removeEventListener('pointerleave', onLeave);
+    };
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
     const canvas = canvasRef.current;
-    if (!container || !canvas) return;
+    const source = imageRef.current;
+    if (!active || !container || !canvas || !source) return;
+
+    if (releaseActiveContext) releaseActiveContext();
 
     setReady(false);
     const gl = canvas.getContext('webgl', {
@@ -141,7 +183,7 @@ export function ChromaticImage({
       antialias: false,
       premultipliedAlpha: false,
     });
-    if (!gl) return;
+    if (!gl || gl.isContextLost()) return;
 
     const vertex = createShader(gl, gl.VERTEX_SHADER, VERTEX_SHADER);
     const fragment = createShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
@@ -194,10 +236,13 @@ export function ChromaticImage({
     gl.clearColor(red, green, blue, 1);
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
 
-    const pointer = { x: 0.5, y: 0.5 };
-    const pointerTarget = { x: 0.5, y: 0.5 };
+    const pointer = {
+      x: pointerRef.current.x,
+      y: pointerRef.current.y,
+    };
+    const pointerTarget = { ...pointer };
     let progress = 0;
-    let progressTarget = 0;
+    let progressTarget = 1;
     let imageLoaded = false;
     let disposed = false;
     let frame = 0;
@@ -206,15 +251,6 @@ export function ChromaticImage({
     const reduceMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
-
-    const seed = seedPointer?.current;
-    if (seed) {
-      pointer.x = seed.x;
-      pointer.y = seed.y;
-      pointerTarget.x = seed.x;
-      pointerTarget.y = seed.y;
-      if (container.matches(':hover')) progressTarget = 1;
-    }
 
     const resize = () => {
       const width = canvas.clientWidth;
@@ -281,35 +317,35 @@ export function ChromaticImage({
       requestRender();
     };
 
-    const image = new Image();
-    try {
-      const url = new URL(src, window.location.href);
-      if (url.origin !== window.location.origin)
-        image.crossOrigin = 'anonymous';
-    } catch {
-      image.crossOrigin = 'anonymous';
-    }
-    image.onload = () => {
-      if (disposed) return;
-      gl.bindTexture(gl.TEXTURE_2D, texture);
-      gl.texImage2D(
-        gl.TEXTURE_2D,
-        0,
-        gl.RGBA,
-        gl.RGBA,
-        gl.UNSIGNED_BYTE,
-        image,
-      );
+    const upload = () => {
+      if (disposed || !source.naturalWidth) return;
+      try {
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texImage2D(
+          gl.TEXTURE_2D,
+          0,
+          gl.RGBA,
+          gl.RGBA,
+          gl.UNSIGNED_BYTE,
+          source,
+        );
+      } catch {
+        setReady(false);
+        return;
+      }
       gl.uniform1f(
         uniforms.imageAspect,
-        image.naturalWidth / image.naturalHeight,
+        source.naturalWidth / source.naturalHeight,
       );
       imageLoaded = true;
       setReady(true);
       requestRender();
     };
-    image.onerror = () => setReady(false);
-    image.src = src;
+    if (source.complete && source.naturalWidth > 0) upload();
+    else {
+      source.addEventListener('load', upload);
+      source.addEventListener('error', () => setReady(false), { once: true });
+    }
 
     const resizeObserver = new ResizeObserver(() => {
       resize();
@@ -324,10 +360,12 @@ export function ChromaticImage({
     resize();
     requestRender();
 
-    return () => {
+    const release = () => {
+      if (disposed) return;
       disposed = true;
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
+      source.removeEventListener('load', upload);
       container.removeEventListener('pointerenter', updatePointer);
       container.removeEventListener('pointermove', updatePointer);
       container.removeEventListener('pointerleave', resetPointer);
@@ -338,12 +376,17 @@ export function ChromaticImage({
       gl.deleteShader(vertex);
       gl.deleteShader(fragment);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
+      if (releaseActiveContext === release) releaseActiveContext = null;
     };
+
+    releaseActiveContext = release;
+
+    return release;
   }, [
+    active,
     backgroundColor,
     displacement,
     chromaticShift,
-    seedPointer,
     src,
     tilt,
     zoom,
@@ -352,6 +395,7 @@ export function ChromaticImage({
   return (
     <div
       ref={containerRef}
+      style={style}
       className={cn(
         'relative isolate overflow-hidden bg-neutral-100 dark:bg-neutral-900',
         className,
@@ -359,14 +403,19 @@ export function ChromaticImage({
     >
       {/* eslint-disable-next-line @next/next/no-img-element -- shader samples the image file directly */}
       <img
+        ref={imageRef}
         src={src}
         alt={alt}
+        draggable={false}
+        decoding="async"
+        loading="lazy"
         className={cn(
           'absolute inset-0 size-full object-cover transition-opacity duration-300',
           ready ? 'opacity-0' : 'opacity-100',
         )}
       />
       <canvas
+        key={canvasEpoch}
         ref={canvasRef}
         aria-hidden="true"
         className={cn(

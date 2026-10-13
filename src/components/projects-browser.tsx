@@ -1,10 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { useReducedMotion } from 'motion/react';
 import { useTheme } from 'next-themes';
 
-import { Photo } from '@/components/photo';
 import { Button } from '@/components/ui/button';
 import { ChromaticImage } from '@/components/ui/chromatic-image';
 import type { Img } from '@/lib/images';
@@ -28,11 +26,7 @@ export function ProjectsBrowser({
 }) {
   const [active, setActive] = React.useState(ALL);
   const [visibleCount, setVisibleCount] = React.useState(BATCH);
-  const [liveId, setLiveId] = React.useState<string | null>(null);
-  const reduceMotion = useReducedMotion();
   const { resolvedTheme } = useTheme();
-  const pointer = React.useRef({ x: 0.5, y: 0.5 });
-  const hideTimer = React.useRef<number | undefined>(undefined);
   const visible =
     active === ALL ? photos : photos.filter((p) => p.category === active);
   const displayed = visible.slice(0, visibleCount);
@@ -45,32 +39,7 @@ export function ProjectsBrowser({
 
   React.useEffect(() => {
     setVisibleCount(BATCH);
-    setLiveId(null);
   }, [active]);
-
-  React.useEffect(() => () => window.clearTimeout(hideTimer.current), []);
-
-  const rememberPointer = (event: React.PointerEvent<HTMLDivElement>) => {
-    const bounds = event.currentTarget.getBoundingClientRect();
-    if (!bounds.width || !bounds.height) return;
-    pointer.current = {
-      x: (event.clientX - bounds.left) / bounds.width,
-      y: 1 - (event.clientY - bounds.top) / bounds.height,
-    };
-  };
-
-  const activate = (id: string) => {
-    if (reduceMotion) return;
-    window.clearTimeout(hideTimer.current);
-    setLiveId((current) => (current === id ? current : id));
-  };
-
-  const deactivate = (id: string) => {
-    window.clearTimeout(hideTimer.current);
-    hideTimer.current = window.setTimeout(() => {
-      setLiveId((current) => (current === id ? null : current));
-    }, 520);
-  };
 
   return (
     <div>
@@ -128,35 +97,19 @@ export function ProjectsBrowser({
             className="anim-fade-up mb-2 break-inside-avoid"
             style={{ ['--d' as string]: `${Math.min(i, 12) * 0.04}s` }}
           >
-            <div
-              className="relative"
-              onPointerEnter={(event) => {
-                rememberPointer(event);
-                activate(photo.id);
+            <ChromaticImage
+              src={photo.image.src}
+              alt={photo.image.alt}
+              zoom={0.45}
+              displacement={0.14}
+              chromaticShift={0.04}
+              tilt={0.6}
+              backgroundColor={resolvedTheme === 'dark' ? '#0a0a0b' : '#ece6da'}
+              className="w-full bg-background dark:bg-background"
+              style={{
+                aspectRatio: `${photo.image.width} / ${photo.image.height}`,
               }}
-              onPointerMove={(event) => {
-                rememberPointer(event);
-                activate(photo.id);
-              }}
-              onPointerLeave={() => deactivate(photo.id)}
-            >
-              <Photo
-                image={photo.image}
-                intrinsic
-                sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 31vw, (min-width: 640px) 46vw, 94vw"
-              />
-              {liveId === photo.id ? (
-                <ChromaticImage
-                  src={photo.image.src}
-                  alt={photo.image.alt}
-                  seedPointer={pointer}
-                  backgroundColor={
-                    resolvedTheme === 'dark' ? '#0a0a0b' : '#ece6da'
-                  }
-                  className="absolute inset-0 size-full bg-transparent dark:bg-transparent"
-                />
-              ) : null}
-            </div>
+            />
           </li>
         ))}
       </ul>
