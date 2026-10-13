@@ -3,11 +3,45 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   turbopack: { root: path.resolve(__dirname) },
+  agentRules: false,
+  trailingSlash: false,
+  // Own the slash redirect so legacy paths can jump straight to the new address.
+  skipTrailingSlashRedirect: true,
   async redirects() {
     return [
       {
+        source: '/portfolio',
+        destination: '/projects',
+        permanent: true,
+      },
+      {
+        source: '/portfolio/',
+        destination: '/projects',
+        permanent: true,
+      },
+      {
+        source: '/water-restoration',
+        destination: '/water-damage-restoration',
+        permanent: true,
+      },
+      {
+        source: '/water-restoration/',
+        destination: '/water-damage-restoration',
+        permanent: true,
+      },
+      {
         source: '/services/:slug',
         destination: '/:slug',
+        permanent: true,
+      },
+      {
+        source: '/services/:slug/',
+        destination: '/:slug',
+        permanent: true,
+      },
+      {
+        source: '/:path+/',
+        destination: '/:path+',
         permanent: true,
       },
     ];

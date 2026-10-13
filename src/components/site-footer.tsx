@@ -3,11 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { nav, site } from '@/lib/site';
-import {
-  serviceGroups,
-  servicePath,
-  servicesInGroup,
-} from '@/lib/services';
+import { serviceGroups, servicePath, servicesInGroup } from '@/lib/services';
 import { SiteLogo } from './site-logo';
 
 export function SiteFooter() {
@@ -100,6 +96,14 @@ export function SiteFooter() {
                     className="transition-colors hover:text-accent-ink"
                   >
                     Reviews
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="transition-colors hover:text-accent-ink"
+                  >
+                    Blog
                   </Link>
                 </li>
               </ul>
