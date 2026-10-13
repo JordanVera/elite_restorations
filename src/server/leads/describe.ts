@@ -6,8 +6,13 @@ import type { DeliverableLead } from "@/server/leads/types";
 const label = (list: readonly { value: string; label: string }[], value: string) =>
   list.find((o) => o.value === value)?.label ?? value;
 
+type DescribeOptions = {
+  /** When set, photo URLs are omitted and a short attachment note is used instead. */
+  photosAttached?: number;
+};
+
 /** Plain-text summary of a lead, used for webhook consumers and the future Jobber request. */
-export function describeLead(lead: DeliverableLead): string {
+export function describeLead(lead: DeliverableLead, options?: DescribeOptions): string {
   const lines: string[] = [];
 
   if (lead.path === "remodel") {
@@ -24,7 +29,9 @@ export function describeLead(lead: DeliverableLead): string {
 
   if (lead.message) lines.push("", lead.message);
 
-  if (lead.photos.length > 0) {
+  if (options?.photosAttached && options.photosAttached > 0) {
+    lines.push("", `${options.photosAttached} photo(s) attached to this email.`);
+  } else if (lead.photos.length > 0) {
     lines.push("", "Photos:", ...lead.photos.map((p) => p.url));
   }
   if (lead.photosMissing > 0) {

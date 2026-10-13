@@ -523,19 +523,14 @@ export function LeadForm({
             {...aria('name')}
           />
         </Field>
-        <Field
-          id="phone"
-          label="Phone"
-          optional={!recovery}
-          error={errors.phone}
-        >
+        <Field id="phone" label="Phone" error={errors.phone}>
           <Input
             id="phone"
             name="phone"
             type="tel"
             autoComplete="tel"
             inputMode="tel"
-            required={recovery}
+            required
             value={values.phone}
             onChange={onText('phone')}
             {...aria('phone')}
@@ -617,7 +612,13 @@ export function LeadForm({
             {callbackPromise}
           </p>
         )}
-        <Button type="submit" variant="accent" size="xl" disabled={submitting}>
+        <Button
+          type="submit"
+          variant="accent"
+          size="xl"
+          disabled={submitting}
+          className="cursor-pointer"
+        >
           {submitting ? (
             <>
               {status.kind === 'submitting' ? status.step : 'Sending'}
