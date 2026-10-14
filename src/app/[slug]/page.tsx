@@ -3,12 +3,14 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, ArrowUpRight, Check, Phone } from 'lucide-react';
 
+import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
+import { articlePath, articles, getArticle } from '@/lib/articles';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
 import { absoluteUrl, pageMetadata } from '@/lib/seo';
@@ -49,7 +51,10 @@ function photographsFor(service: Service) {
 }
 
 export function generateStaticParams(): Params[] {
-  return services.map((s) => ({ slug: s.slug }));
+  return [
+    ...services.map((s) => ({ slug: s.slug })),
+    ...articles.map((article) => ({ slug: article.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -58,6 +63,15 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const article = getArticle(slug);
+  if (article) {
+    return pageMetadata({
+      title: article.title,
+      description: article.description,
+      path: articlePath(article.slug),
+      image: article.image,
+    });
+  }
   const service = getService(slug);
   if (!service) return {};
   const path = servicePath(service.slug);
@@ -75,6 +89,9 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
+  const article = getArticle(slug);
+  if (article) return <ArticleView article={article} />;
+
   const service = getService(slug);
   if (!service) notFound();
 

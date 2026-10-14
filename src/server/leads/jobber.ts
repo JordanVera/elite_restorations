@@ -15,8 +15,8 @@ import type { DeliverableLead } from "@/server/leads/types";
  *   2. For recovery leads, add `property` (the service address) to that client.
  *   3. Create a request titled `request.title` whose notes are `request.details`.
  *
- * Photo links in `request.details` expire (see PHOTO_LINK_TTL_MS in photos.ts),
- * so the sync should copy the images into Jobber rather than rely on the links.
+ * Photo links in `request.details` are public Blob URLs. The sync should copy
+ * the images into Jobber rather than rely on those links staying available.
  */
 export type JobberIntake = {
   client: { firstName: string; lastName: string; email: string; phone: string };

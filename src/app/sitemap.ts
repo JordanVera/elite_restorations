@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 
+import { articlePath, articles } from '@/lib/articles';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
 import { servicePath, services } from '@/lib/services';
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/emergency',
     '/insurance-log',
+    '/blog',
   ];
   return [
     ...staticRoutes.map((path) => ({
@@ -30,6 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projects.map((p) => ({
       url: absoluteUrl(`/projects/${p.slug}`),
       priority: 0.6,
+    })),
+    ...articles.map((article) => ({
+      url: absoluteUrl(articlePath(article.slug)),
+      priority: 0.5,
     })),
   ];
 }

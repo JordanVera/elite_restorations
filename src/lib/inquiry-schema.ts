@@ -23,14 +23,6 @@ const shared = {
   website: z.string().max(0).optional().default(""),
 };
 
-const optionalPhone = z
-  .string()
-  .trim()
-  .max(30, "That phone number is too long.")
-  .refine((v) => v === "" || phoneDigits(v) >= 10, "Please enter a 10-digit phone number.")
-  .optional()
-  .default("");
-
 const requiredPhone = z
   .string()
   .trim()
@@ -40,7 +32,7 @@ const requiredPhone = z
 export const remodelSchema = z.object({
   ...shared,
   path: z.literal("remodel"),
-  phone: optionalPhone,
+  phone: requiredPhone,
   room: z.enum(values(rooms), "Please choose the space."),
   staying: z.string().trim().max(300, "Please keep this under 300 characters.").optional().default(""),
   timeline: z.enum(values(timelines), "Please choose a timeline."),
