@@ -1,0 +1,246 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model SavedPreset {
+  id        String   @id @default(cuid())
+  name      String
+  settings  Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model OpportunityRun {
+  id                 String   @id @default(cuid())
+  name               String
+  origin             String
+  status             String
+  settings           Json
+  chicagoStart       String
+  chicagoEnd         String
+  stageCounts        Json
+  estimatedCostCents Int      @default(0)
+  reservedCostCents  Int      @default(0)
+  recordedCostCents  Int      @default(0)
+  spendCapCents      Int
+  shortfallNote      String?
+  partial            Boolean  @default(false)
+  workflowRunId      String?
+  reviewToken        String?
+  error              String?
+  createdBy          String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  listings     Listing[]
+  tasks        GenerationTask[]
+  reservations SpendReservation[]
+  usage        UsageRecord[]
+  artifacts    ReportArtifact[]
+}
+
+model Listing {
+  id                 String    @id @default(cuid())
+  runId              String
+  run                OpportunityRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  provider           String
+  providerId         String?
+  sourceUrl          String?
+  attribution        String?
+  retrievedAt        DateTime?
+  usageRestrictions  String?
+  mlsId              String?
+  addressLine        String
+  unit               String?
+  city               String
+  state              String
+  postalCode         String
+  dedupeKey          String
+  status             String
+  closedDate         String?
+  saleDateVerified   Boolean   @default(false)
+  priceBasis         String
+  exactSalePrice     Int?
+  askingPrice        Int?
+  priceRangeLow      Int?
+  priceRangeHigh     Int?
+  estimatedValue     Int?
+  yearBuilt          Int?
+  sqft               Int?
+  bedrooms           Int?
+  bathrooms          Float?
+  propertyType       String
+  description        String?
+  exclusionReason    String?
+  reviewReason       String?
+  opportunityScore   Float?
+  scoreBreakdown     Json?
+  scoreExplanation   String?
+  selected           Boolean   @default(false)
+  rank               Int?
+  duplicateOfId      String?
+  createdAt          DateTime  @default(now())
+
+  photos    Photo[]
+  rooms     Room[]
+  conflicts ListingConflict[]
+
+  @@unique([runId, dedupeKey])
+  @@index([runId, status])
+}
+
+model ListingConflict {
+  id        String  @id @default(cuid())
+  listingId String
+  listing   Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  field     String
+  leftValue String
+  rightValue String
+  note      String
+}
+
+model Photo {
+  id               String   @id @default(cuid())
+  listingId        String
+  listing          Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  sourcePhotoId    String?
+  blobPath         String?
+  publicPath       String?
+  sourceUrl        String?
+  contentHash      String?
+  mimeType         String?
+  classification   String   @default("unclassified")
+  roomId           String?
+  representative   Boolean  @default(false)
+  attribution      String?
+  fetchedAt        DateTime?
+  createdAt        DateTime @default(now())
+
+  @@index([listingId])
+  @@index([contentHash])
+}
+
+model Room {
+  id                    String   @id @default(cuid())
+  listingId             String
+  listing               Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  roomType              String
+  label                 String
+  representativePhotoId String?
+  decision              String?
+  outdatedScore         Float?
+  updatedScore          Float?
+  confidence            Float?
+  explanation           String?
+  observations          Json?
+  includeInConcepts     Boolean  @default(false)
+  staffOverride         Boolean  @default(false)
+  createdAt             DateTime @default(now())
+
+  assessments Assessment[]
+  concepts    Concept[]
+  tasks       GenerationTask[]
+
+  @@index([listingId])
+}
+
+model Assessment {
+  id            String   @id @default(cuid())
+  roomId        String?
+  room          Room?    @relation(fields: [roomId], references: [id], onDelete: SetNull)
+  photoId       String?
+  cacheKey      String   @unique
+  payload       Json
+  model         String
+  promptVersion String
+  createdAt     DateTime @default(now())
+}
+
+model GenerationTask {
+  id              String   @id @default(cuid())
+  runId           String
+  run             OpportunityRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  roomId          String
+  room            Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  tier            String
+  idempotencyKey  String   @unique
+  status          String
+  attempt         Int      @default(0)
+  reservationId   String?
+  providerRequestId String?
+  error           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([runId, status])
+}
+
+model Concept {
+  id           String   @id @default(cuid())
+  roomId       String
+  room         Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  tier         String
+  cacheKey     String   @unique
+  blobPath     String?
+  prompt       String
+  scopeSummary Json
+  checkStatus  String
+  checkNotes   String?
+  model        String
+  createdAt    DateTime @default(now())
+
+  @@unique([roomId, tier])
+}
+
+model UsageRecord {
+  id              String   @id @default(cuid())
+  runId           String
+  run             OpportunityRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  kind            String
+  estimatedCents  Int?
+  recordedCents   Int?
+  inputTokens     Int?
+  outputTokens    Int?
+  detail          Json?
+  createdAt       DateTime @default(now())
+}
+
+model SpendReservation {
+  id          String   @id @default(cuid())
+  runId       String
+  run         OpportunityRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  amountCents Int
+  status      String
+  taskKey     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([runId, status])
+}
+
+model PriceBookItem {
+  id                 String  @id @default(cuid())
+  roomType           String
+  tier               String
+  label              String
+  lowCents           Int?
+  highCents          Int?
+  assumptions        String
+  siteVisitRequired  Boolean @default(true)
+
+  @@unique([roomType, tier])
+}
+
+model ReportArtifact {
+  id        String   @id @default(cuid())
+  runId     String
+  run       OpportunityRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  kind      String
+  blobPath  String?
+  createdAt DateTime @default(now())
+}

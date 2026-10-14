@@ -27,3 +27,7 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated Prisma client
+/src/generated
+/.swc

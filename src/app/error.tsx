@@ -1,10 +1,14 @@
 "use client";
 
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
 
 export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
   return (
+    <>
+    <SiteHeader />
     <section className="gutter mx-auto flex min-h-[80dvh] max-w-[120rem] flex-col justify-center pt-32">
       <p className="eyebrow text-accent-ink">Something went wrong</p>
       <h1 className="font-display t-xl mt-6 max-w-[16ch]">That did not load.</h1>
@@ -21,5 +25,7 @@ export default function ErrorPage({ reset }: { error: Error & { digest?: string 
         </Button>
       </div>
     </section>
+    <SiteFooter />
+    </>
   );
 }

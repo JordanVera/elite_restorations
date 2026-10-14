@@ -5,6 +5,7 @@ import superjson from "superjson";
 
 export type Context = {
   ip: string;
+  host: string;
 };
 
 export function clientIp(req: Request) {
@@ -13,7 +14,7 @@ export function clientIp(req: Request) {
 }
 
 export function createContext(req: Request): Context {
-  return { ip: clientIp(req) };
+  return { ip: clientIp(req), host: req.headers.get("host") ?? "" };
 }
 
 const t = initTRPC.context<Context>().create({ transformer: superjson });
