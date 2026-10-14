@@ -62,14 +62,14 @@ function escapeHtml(value: string): string {
 }
 
 const C = {
-  void: "#050506",
-  panel: "#101012",
-  inset: "#18181b",
-  line: "#2a2a30",
-  ink: "#f4efe4",
-  muted: "#9a9388",
-  accent: "#e23b34",
-  accentDeep: "#c0302b",
+  page: "#ece6da",
+  panel: "#f7f4ee",
+  inset: "#e3dccd",
+  line: "#d5ccbc",
+  ink: "#16130f",
+  muted: "#5c5548",
+  accent: "#c0302b",
+  accentDeep: "#a72620",
 } as const;
 
 export function buildInquiryHtml(
@@ -113,7 +113,7 @@ export function buildInquiryHtml(
         <td colspan="2" style="padding:18px 0 0;">
           <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid ${C.line};">
             <tr>
-              <td bgcolor="${C.void}" style="background:${C.void};padding:16px 18px;font-family:Arial,Helvetica,sans-serif;">
+              <td bgcolor="${C.inset}" style="background:${C.inset};padding:16px 18px;font-family:Arial,Helvetica,sans-serif;">
                 <p style="margin:0 0 6px;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:${C.accent};">${options.photosAttached} photo${options.photosAttached === 1 ? "" : "s"} attached</p>
                 <p style="margin:0;font-size:13px;line-height:1.5;color:${C.muted};">${escapeHtml(options.photoFilenames.join("  ·  "))}</p>
               </td>
@@ -133,20 +133,20 @@ export function buildInquiryHtml(
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="supported-color-schemes" content="dark" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
 </head>
-<body bgcolor="${C.void}" style="margin:0;padding:0;background:${C.void};color:${C.ink};color-scheme:dark;">
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" bgcolor="${C.void}" style="background:${C.void};">
+<body bgcolor="${C.page}" style="margin:0;padding:0;background:${C.page};color:${C.ink};color-scheme:light;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" bgcolor="${C.page}" style="background:${C.page};">
     <tr>
       <td align="center" style="padding:36px 14px;">
         <table role="presentation" cellpadding="0" cellspacing="0" width="100%" bgcolor="${C.panel}" style="max-width:600px;background:${C.panel};border:1px solid ${C.line};">
           <tr>
-            <td bgcolor="${C.void}" style="background:${C.void};padding:0;">
+            <td bgcolor="${C.panel}" style="background:${C.panel};padding:0;">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
                   <td width="5" bgcolor="${C.accentDeep}" style="background:${C.accentDeep};font-size:0;line-height:0;">&nbsp;</td>
-                  <td bgcolor="${C.void}" style="background:${C.void};padding:32px 32px 26px;text-align:center;">
+                  <td bgcolor="${C.panel}" style="background:${C.panel};padding:32px 32px 26px;text-align:center;">
                     <img src="cid:elite-logo" width="168" alt="${escapeHtml(site.name)}" style="display:block;margin:0 auto;border:0;outline:none;text-decoration:none;max-width:168px;height:auto;" />
                     <div style="height:2px;line-height:2px;font-size:0;background:${C.accentDeep};margin:22px auto 0;width:72px;">&nbsp;</div>
                   </td>
@@ -171,7 +171,7 @@ export function buildInquiryHtml(
             </td>
           </tr>
           <tr>
-            <td bgcolor="${C.void}" style="background:${C.void};padding:18px 32px 22px;border-top:1px solid ${C.line};">
+            <td bgcolor="${C.inset}" style="background:${C.inset};padding:18px 32px 22px;border-top:1px solid ${C.line};">
               <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:${C.muted};">
                 Reply to reach <span style="color:${C.ink};">${escapeHtml(lead.name)}</span>
                 at <a href="mailto:${escapeHtml(lead.email)}" style="color:${C.accent};text-decoration:none;">${escapeHtml(lead.email)}</a>.

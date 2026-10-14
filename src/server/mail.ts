@@ -36,6 +36,13 @@ function inquiryRecipient(): string {
   return process.env.INQUIRY_EMAIL_TO?.trim() || site.email;
 }
 
+function inquiryCopy(
+  name: 'INQUIRY_EMAIL_CC' | 'INQUIRY_EMAIL_BCC',
+  fallback: string,
+): string {
+  return process.env[name]?.trim() || fallback;
+}
+
 function photoFilename(index: number): string {
   return `elite-photo-${String(index + 1).padStart(2, '0')}.jpg`;
 }
@@ -52,7 +59,7 @@ function asAttachment(filename: string, content: Buffer): Mail.Attachment {
 async function loadLogoAttachment(): Promise<Mail.Attachment> {
   const logoPath = path.join(
     process.cwd(),
-    'public/images/logo/logo-white.png',
+    'public/images/logo/logo-black.png',
   );
   const content = await readFile(logoPath);
   return {
@@ -134,6 +141,8 @@ export async function sendInquiryEmail(
     await transport.sendMail({
       from: `"${fromName}" <${config.user}>`,
       to: inquiryRecipient(),
+      cc: inquiryCopy('INQUIRY_EMAIL_CC', 'george@eliterestorations.com'),
+      bcc: inquiryCopy('INQUIRY_EMAIL_BCC', 'jordanvera@eliterestorations.com'),
       replyTo: `"${lead.name}" <${lead.email}>`,
       subject: inquirySubject(lead, reference),
       messageId: inquiryMessageId(reference),
