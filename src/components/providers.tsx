@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { ThemeProvider } from "next-themes";
-import { MotionConfig } from "motion/react";
+import * as React from 'react';
+import { ThemeProvider } from 'next-themes';
+import { MotionConfig } from 'motion/react';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="dark"
+      defaultTheme="light"
       enableSystem={false}
       disableTransitionOnChange
       storageKey="elite-theme"

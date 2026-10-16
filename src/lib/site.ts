@@ -22,8 +22,8 @@ export const site = {
       href: 'https://www.facebook.com/Elite-Restorations-Inc-208965145793039/',
     },
     {
-      label: 'Yelp',
-      href: 'https://www.yelp.com/biz/elite-restorations-houston',
+      label: 'BBB',
+      href: 'https://www.bbb.org/us/tx/houston/profile/general-contractor/elite-restorations-0915-58002706',
     },
   ],
   serviceArea: [
