@@ -17,7 +17,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     () => false,
   );
   const [ready, setReady] = React.useState(false);
-  const isDark = !mounted || resolvedTheme !== 'light';
+  const isDark = mounted && resolvedTheme === 'dark';
 
   React.useEffect(() => {
     const id = requestAnimationFrame(() => setReady(true));
