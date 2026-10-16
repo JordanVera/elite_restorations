@@ -39,15 +39,14 @@ function photographsFor(service: Service) {
   const rotated =
     shift === 0 ? all : [...all.slice(shift), ...all.slice(0, shift)];
   const rest = rotated.filter((item) => item.image.src !== service.image.src);
-  const overlap = rest[0];
-  const localPhoto = rest.find((item) => item !== overlap);
+  const localPhoto = rest[0];
   const used = new Set(
-    [service.image.src, overlap?.image.src, localPhoto?.image.src].filter(
-      (src): src is string => Boolean(src),
+    [service.image.src, localPhoto?.image.src].filter((src): src is string =>
+      Boolean(src),
     ),
   );
   const masonry = rest.filter((item) => !used.has(item.image.src)).slice(0, 6);
-  return { overlap, localPhoto, masonry };
+  return { localPhoto, masonry };
 }
 
 export function generateStaticParams(): Params[] {
@@ -102,7 +101,7 @@ export default async function ServicePage({
       body: `${step.lead} ${step.body}`,
     }));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
-  const { overlap, localPhoto, masonry } = photographsFor(service);
+  const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
 
   return (
@@ -152,37 +151,16 @@ export default async function ServicePage({
       </PageHero>
 
       <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
-        <div className="relative">
-          <ImageReveal
-            immediate
-            className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
-          >
-            <Photo
-              image={service.image}
-              sizes="(min-width: 1920px) 1800px, 96vw"
-              priority
-            />
-          </ImageReveal>
-          {overlap && (
-            <Link
-              href={`/projects/${overlap.project.slug}`}
-              className="absolute bottom-3 right-3 w-[38%] sm:bottom-5 sm:right-5 sm:w-[26%] md:bottom-8 md:right-8 md:w-[17%]"
-            >
-              <div className="border-4 border-background bg-background">
-                <ImageReveal
-                  immediate
-                  delay={0.12}
-                  className="relative aspect-[3/4]"
-                >
-                  <Photo
-                    image={overlap.image}
-                    sizes="(min-width: 768px) 18vw, 40vw"
-                  />
-                </ImageReveal>
-              </div>
-            </Link>
-          )}
-        </div>
+        <ImageReveal
+          immediate
+          className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
+        >
+          <Photo
+            image={service.image}
+            sizes="(min-width: 1920px) 1800px, 96vw"
+            priority
+          />
+        </ImageReveal>
       </div>
 
       <section aria-labelledby="scope-heading" className="py-20 md:py-28">
