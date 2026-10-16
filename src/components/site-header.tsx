@@ -26,6 +26,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = React.useState(false);
   const [hidden, setHidden] = React.useState(false);
   const [menuValue, setMenuValue] = React.useState('');
+  const overHomeHero = pathname === '/' && !scrolled && !menuValue;
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -39,12 +40,13 @@ export function SiteHeader() {
       animate={{ y: hidden && !menuValue ? '-100%' : '0%' }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-500',
+        'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,color] duration-500',
         menuValue
           ? 'border-b border-border bg-background'
           : scrolled
             ? 'border-b border-border bg-background/92 backdrop-blur-md'
             : 'border-b border-transparent bg-transparent',
+        overHomeHero && 'text-white dark:text-foreground',
       )}
     >
       <div className="gutter mx-auto flex h-20 max-w-[120rem] items-center justify-between gap-6">
@@ -53,7 +55,7 @@ export function SiteHeader() {
           aria-label="Elite Restorations, home"
           className="shrink-0"
         >
-          <SiteLogo />
+          <SiteLogo tone={overHomeHero ? 'light' : 'theme'} />
         </Link>
 
         <NavigationMenu.Root
