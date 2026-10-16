@@ -110,34 +110,39 @@ export async function sendInquiryEmail(
   const config = smtpConfig();
   if (!config) return false;
 
-  const reference = inquiryReference();
-  const fromName = process.env.SMTP_FROM_NAME?.trim() || site.name;
-
-  const [
-    { attachments: photoAttachments, filenames: photoFilenames },
-    logoAttachment,
-  ] = await Promise.all([loadPhotoAttachments(lead), loadLogoAttachment()]);
-
-  const photosAttached = photoAttachments.length;
-  const summary = describeLead(lead, {
-    photosAttached: photosAttached || undefined,
-  });
-  const html = buildInquiryHtml(lead, reference, {
-    photosAttached,
-    photoFilenames,
-  });
-
-  const transport = nodemailer.createTransport({
-    host: config.host,
-    port: config.port,
-    secure: config.port === 465,
-    auth: {
-      user: config.user,
-      pass: config.pass,
-    },
-  });
-
   try {
+    const reference = inquiryReference();
+    const fromName = process.env.SMTP_FROM_NAME?.trim() || site.name;
+
+    const [
+      { attachments: photoAttachments, filenames: photoFilenames },
+      logoAttachment,
+    ] = await Promise.all([
+      loadPhotoAttachments(lead),
+      loadLogoAttachment().catch((error) => {
+        console.error('[mail] logo unavailable; sending without it', error);
+        return null;
+      }),
+    ]);
+
+    const summary = describeLead(lead, {
+      photosAttached: photoAttachments.length || undefined,
+    });
+    const html = buildInquiryHtml(lead, reference, {
+      photosAttached: photoAttachments.length,
+      photoFilenames,
+    });
+
+    const transport = nodemailer.createTransport({
+      host: config.host,
+      port: config.port,
+      secure: config.port === 465,
+      auth: {
+        user: config.user,
+        pass: config.pass,
+      },
+    });
+
     await transport.sendMail({
       from: `"${fromName}" <${config.user}>`,
       to: inquiryRecipient(),
@@ -151,8 +156,12 @@ export async function sendInquiryEmail(
       },
       text: `${summary}\n\nReference: ${reference}\n\n—\n${lead.name}\n${lead.email}\n${lead.phone}`,
       html,
-      attachments: [logoAttachment, ...photoAttachments],
+      attachments: [
+        ...(logoAttachment ? [logoAttachment] : []),
+        ...photoAttachments,
+      ],
     });
+
     return true;
   } catch (error) {
     console.error('[mail] inquiry send failed', error);
