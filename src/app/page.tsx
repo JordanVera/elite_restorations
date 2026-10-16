@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 
-import {
-  FeaturedTrack,
-  type TrackProject,
-} from '@/components/home/featured-track';
+import { type TrackProject } from '@/components/home/featured-track';
 import { HomeFinalCta } from '@/components/home/home-final-cta';
 import { HomeHero } from '@/components/home/home-hero';
 import { HomeManifesto } from '@/components/home/home-manifesto';
