@@ -2,7 +2,16 @@ import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 
-export function SiteLogo({ className }: { className?: string }) {
+export function SiteLogo({
+  className,
+  tone = 'theme',
+}: {
+  className?: string;
+  /** `light` forces the white mark, used over the dark homepage hero. */
+  tone?: 'theme' | 'light';
+}) {
+  const lightMark = tone === 'light';
+
   return (
     <>
       <Image
@@ -12,7 +21,8 @@ export function SiteLogo({ className }: { className?: string }) {
         height={102}
         priority
         className={cn(
-          'h-11 w-auto block dark:hidden', // Show in light theme only
+          'h-11 w-auto dark:hidden',
+          lightMark ? 'hidden' : 'block',
           className,
         )}
       />
@@ -23,7 +33,8 @@ export function SiteLogo({ className }: { className?: string }) {
         height={102}
         priority
         className={cn(
-          'h-11 w-auto hidden dark:block', // Show in dark theme only
+          'h-11 w-auto',
+          lightMark ? 'block' : 'hidden dark:block',
           className,
         )}
       />
