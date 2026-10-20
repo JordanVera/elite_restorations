@@ -8,8 +8,8 @@ const family = img(
   'The Rodriguez family at a graduation ceremony',
 );
 const harley = img(
-  '/images/about/george_and_harltley.webp',
-  'George Rodriguez with Harley',
+  '/images/about/george_and_mayor.png',
+  'George Rodriguez with Mayor Sylvester Turner',
 );
 const softball = img(
   '/images/about/george_softball.jpeg',
@@ -18,7 +18,10 @@ const softball = img(
 
 export function AboutHero() {
   return (
-    <section aria-labelledby="about-heading" className="pt-24 pb-16 sm:pt-28 md:pb-24">
+    <section
+      aria-labelledby="about-heading"
+      className="pt-24 pb-16 sm:pt-28 md:pb-24"
+    >
       <div className="gutter mx-auto max-w-[120rem]">
         <div className="border-b border-border pb-4">
           <Breadcrumbs items={[{ name: 'About', path: '/about' }]} />
@@ -37,8 +40,8 @@ export function AboutHero() {
             <Reveal delay={0.2}>
               <p className="mt-8 max-w-[36ch] text-lg leading-relaxed text-muted-foreground">
                 Elite Restorations is family-owned and operated in Houston. The
-                people who plan your project are the same people who pick up
-                the phone.
+                people who plan your project are the same people who pick up the
+                phone.
               </p>
             </Reveal>
           </div>
