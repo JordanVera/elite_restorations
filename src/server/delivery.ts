@@ -1,7 +1,7 @@
 import "server-only";
 
 import { describeLead } from "@/server/leads/describe";
-import { isSmtpConfigured, sendInquiryEmail } from "@/server/mail";
+import { sendInquiryEmail } from "@/server/mail";
 import type { DeliverableLead } from "@/server/leads/types";
 
 export type DeliveryResult = { status: "delivered" } | { status: "not-configured" } | { status: "failed" };
@@ -32,24 +32,23 @@ async function deliverViaWebhook(lead: DeliverableLead): Promise<boolean> {
 }
 
 /**
- * Delivery is opt-in via SMTP and/or INQUIRY_WEBHOOK_URL. Until at least one is
- * set, leads are validated but not sent anywhere.
+ * Production sends through the GoDaddy email gateway. Local development uses
+ * SMTP. INQUIRY_WEBHOOK_URL is an optional extra copy.
  */
 export async function deliverLead(lead: DeliverableLead): Promise<DeliveryResult> {
-  const useSmtp = isSmtpConfigured();
   const useWebhook = isWebhookConfigured();
 
-  if (!useSmtp && !useWebhook) {
-    return { status: "not-configured" };
-  }
-
-  const results = await Promise.all([
-    useSmtp ? sendInquiryEmail(lead) : Promise.resolve(false),
+  const [email, webhookSent] = await Promise.all([
+    sendInquiryEmail(lead),
     useWebhook ? deliverViaWebhook(lead) : Promise.resolve(false),
   ]);
 
-  if (results.some(Boolean)) {
+  if (email.status === "sent" || webhookSent) {
     return { status: "delivered" };
+  }
+
+  if (email.status === "unconfigured" && !useWebhook) {
+    return { status: "not-configured" };
   }
 
   return { status: "failed" };
