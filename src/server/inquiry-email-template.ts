@@ -72,6 +72,10 @@ const C = {
   accentDeep: "#a72620",
 } as const;
 
+function logoUrl(): string {
+  return new URL('/images/logo/logo-main.png', site.url).href;
+}
+
 export function buildInquiryHtml(
   lead: DeliverableLead,
   reference: string,
@@ -147,7 +151,7 @@ export function buildInquiryHtml(
                 <tr>
                   <td width="5" bgcolor="${C.accentDeep}" style="background:${C.accentDeep};font-size:0;line-height:0;">&nbsp;</td>
                   <td bgcolor="${C.panel}" style="background:${C.panel};padding:32px 32px 26px;text-align:center;">
-                    <img src="cid:elite-logo" width="168" alt="${escapeHtml(site.name)}" style="display:block;margin:0 auto;border:0;outline:none;text-decoration:none;max-width:168px;height:auto;" />
+                    <img src="${escapeHtml(logoUrl())}" width="168" alt="${escapeHtml(site.name)}" style="display:block;margin:0 auto;border:0;outline:none;text-decoration:none;max-width:168px;height:auto;" />
                     <div style="height:2px;line-height:2px;font-size:0;background:${C.accentDeep};margin:22px auto 0;width:72px;">&nbsp;</div>
                   </td>
                 </tr>
