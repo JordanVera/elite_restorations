@@ -55,7 +55,7 @@ export function SiteHeader() {
           aria-label="Elite Restorations, home"
           className="shrink-0"
         >
-          <SiteLogo tone={overHomeHero ? 'light' : 'theme'} />
+          <SiteLogo />
         </Link>
 
         <NavigationMenu.Root
