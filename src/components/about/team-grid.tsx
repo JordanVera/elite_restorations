@@ -17,7 +17,7 @@ const team: {
     role: 'Owner',
     body: 'Started in construction at 17, working beside his father, and took over the company when his father retired. His son, George III, now works alongside him.',
     photo: img(
-      '/images/about/george_softball_2.webp',
+      '/images/about/george_and_harltley.webp',
       'George Rodriguez with a teammate at a softball field',
     ),
     tall: true,
@@ -26,19 +26,28 @@ const team: {
     name: 'Michael Hanson',
     role: 'Lead Estimator',
     body: 'Walks the job, measures, and puts together the scope, cost and timeline so clients understand the project before it begins.',
-    photo: img('/images/about/michael_hanson.webp', 'Michael Hanson, lead estimator'),
+    photo: img(
+      '/images/about/michael_hanson.webp',
+      'Michael Hanson, lead estimator',
+    ),
   },
   {
     name: 'Daniela',
     role: 'Office Operator Manager',
     body: 'Handles client support, scheduling, documentation and coordination with the crews.',
-    photo: img('/images/about/daniela.webp', 'Daniela, office operator manager'),
+    photo: img(
+      '/images/about/daniela.webp',
+      'Daniela, office operator manager',
+    ),
   },
   {
     name: 'Norma',
     role: 'Office Operator Project Manager',
     body: "Organizes project timelines and communication, and schedules every installation around the team's capacity and your expectations.",
-    photo: img('/images/about/norma.webp', 'Norma, office operator project manager'),
+    photo: img(
+      '/images/about/norma.webp',
+      'Norma, office operator project manager',
+    ),
     imageClassName: 'object-[center_22%]',
   },
 ];
@@ -53,8 +62,8 @@ export function TeamGrid() {
             Who you will talk to.
           </h2>
           <p className="mt-6 max-w-[38ch] text-lg leading-relaxed text-muted-foreground">
-            A small office and experienced crews, so your project has a name
-            and a number attached to it from the first call to the final
+            A small office and experienced crews, so your project has a name and
+            a number attached to it from the first call to the final
             walkthrough.
           </p>
         </Reveal>
