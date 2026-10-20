@@ -59,7 +59,7 @@ function asAttachment(filename: string, content: Buffer): Mail.Attachment {
 async function loadLogoAttachment(): Promise<Mail.Attachment> {
   const logoPath = path.join(
     process.cwd(),
-    'public/images/logo/logo-black.png',
+    'public/images/logo/logo-main.png',
   );
   const content = await readFile(logoPath);
   return {

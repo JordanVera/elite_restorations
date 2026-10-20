@@ -66,7 +66,7 @@ export function HomeManifesto() {
                   text: 'Some jobs in Houston start with storm damage or a leaking roof. Others start with a kitchen that no longer works. Either way, the same family shows up. We',
                 },
                 { text: 'restore', emphasis: true },
-                { text: 'what should stay,', },
+                { text: 'what should stay,' },
                 { text: 'rebuild', emphasis: true },
                 { text: 'what cannot, and' },
                 { text: 'remodel', emphasis: true },
@@ -76,7 +76,7 @@ export function HomeManifesto() {
               ]}
             />
 
-            <div className="pointer-events-none absolute -right-4 -top-24 z-10 hidden w-44 lg:block xl:-right-16 xl:w-56">
+            {/* <div className="pointer-events-none absolute -right-4 -top-24 z-10 hidden w-44 lg:block xl:-right-16 xl:w-56">
               <ImageReveal from="top" className="aspect-[3/4]">
                 <Parallax offset={40} className="size-full">
                   <div className="relative size-full">
@@ -84,7 +84,7 @@ export function HomeManifesto() {
                   </div>
                 </Parallax>
               </ImageReveal>
-            </div>
+            </div> */}
           </div>
         </div>
 
