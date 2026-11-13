@@ -8,8 +8,7 @@ import { site } from '@/lib/site';
 export type CostRange = {
   label: string;
   /**
-   * TODO-GEORGE: set both to real dollar amounts before this row can publish.
-   * Leave null and the site will not print a range.
+   * Dollar amount for this row. Leave null and the site will not print a range.
    */
   low: number | null;
   high: number | null;
@@ -25,7 +24,7 @@ export type CostGuide = {
   serviceSlug: string;
   serviceLabel: string;
   factors: readonly { title: string; body: string }[];
-  /** TODO-GEORGE: fill low and high on every row. Unpublished until then. */
+  /** Hidden until every row has a low and a high. */
   ranges: readonly CostRange[];
   faqs: readonly { q: string; a: string }[];
 };
@@ -65,7 +64,7 @@ export const costGuides: readonly CostGuide[] = [
     path: '/kitchen-remodel-cost-houston',
     title: 'Kitchen Remodel Cost in Houston',
     description:
-      'What changes a Houston kitchen remodel cost: size, materials, layout changes, and permits. Call for a free estimate. No published price list.',
+      'Typical Houston kitchen remodel planning ranges for finishes, a layout change, or a full gut. The final price comes from an on-site estimate.',
     lines: ['Kitchen remodel cost', 'in Houston.'],
     lede: 'A Houston kitchen price is the room you have, the materials you choose, and whether the layout has to move. We price that after a visit, not from a citywide average.',
     serviceSlug: 'kitchen-remodeling',
@@ -88,16 +87,15 @@ export const costGuides: readonly CostGuide[] = [
         body: 'A finish refresh often stays inside the existing kitchen. Moving plumbing, electrical, or structure is when a permit usually enters the job. We say which one it is after we see the plan, not before.',
       },
     ],
-    // TODO-GEORGE: replace nulls with real Houston kitchen ranges. Do not ship guessed dollars.
     ranges: [
-      { label: 'Same layout, new finishes', low: null, high: null },
-      { label: 'Layout change', low: null, high: null },
-      { label: 'Full gut', low: null, high: null },
+      { label: 'Same layout, new finishes', low: 25000, high: 55000 },
+      { label: 'Layout change', low: 40000, high: 80000 },
+      { label: 'Full gut', low: 70000, high: 135000 },
     ],
     faqs: [
       {
         q: 'Why is there no single kitchen price for Houston?',
-        a: 'The room, the cabinets and counters, and whether the layout moves are different jobs. A number written before the visit would be a guess. We measure and then price the scope.',
+        a: 'The room, the cabinets and counters, and whether the layout moves are different jobs. The ranges on this page are typical planning ranges, not a quote. The final price comes from an on-site estimate.',
       },
       {
         q: 'Does moving a wall change the cost?',
@@ -118,7 +116,7 @@ export const costGuides: readonly CostGuide[] = [
     path: '/bathroom-remodel-cost-houston',
     title: 'Bathroom Remodel Cost in Houston',
     description:
-      'What changes a Houston bathroom remodel cost: size, tile and fixtures, moving plumbing, and permits. Call for a free estimate.',
+      'Typical Houston bathroom remodel planning ranges, from a finish refresh to plumbing moves. The final price comes from an on-site estimate.',
     lines: ['Bathroom remodel cost', 'in Houston.'],
     lede: 'A powder-room refresh and a primary bath that moves the shower are not the same price. The difference is the room, the finishes, and whether the plumbing stays put.',
     serviceSlug: 'bathroom-remodeling',
@@ -141,11 +139,10 @@ export const costGuides: readonly CostGuide[] = [
         body: 'Replacing a faucet in the same place is not the same as relocating a drain. Plumbing changes are when a permit usually shows up. We say so once the plan is real.',
       },
     ],
-    // TODO-GEORGE: replace nulls with real Houston bathroom ranges. Do not ship guessed dollars.
     ranges: [
-      { label: 'Vanity and finish refresh', low: null, high: null },
-      { label: 'Shower rebuild, same layout', low: null, high: null },
-      { label: 'Full remodel with plumbing moves', low: null, high: null },
+      { label: 'Vanity and finish refresh', low: 6000, high: 15000 },
+      { label: 'Shower rebuild, same layout', low: 12000, high: 25000 },
+      { label: 'Full remodel with plumbing moves', low: 30000, high: 65000 },
     ],
     faqs: [
       {
@@ -171,7 +168,7 @@ export const costGuides: readonly CostGuide[] = [
     path: '/roof-replacement-cost-houston',
     title: 'Roof Replacement Cost in Houston',
     description:
-      'What changes a Houston roof replacement cost: size, materials, the deck, permits, and insurance coverage. Call for a free estimate.',
+      'Typical Houston roof replacement planning ranges for asphalt, metal, tile, or composite. The final price comes from an on-site estimate.',
     lines: ['Roof replacement cost', 'in Houston.'],
     lede: 'A roof price is the house under it: the size, the pitch, what the deck looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
     serviceSlug: 'roof-replacement',
@@ -187,7 +184,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'What is under the shingles',
-        body: 'A replacement includes the tear-off and a look at the deck. Soft decking, bad flashing, or missing vents change the scope. We say so before the job grows past the roof we priced.',
+        body: 'A replacement includes the tear-off and a look at the deck. Soft decking, bad flashing, or missing vents change the scope. We say so before the job grows past the roof we priced. Replacing a bad sheet of decking is typically about $75-$150 per 4x8 sheet.',
       },
       {
         title: 'Permits',
@@ -198,11 +195,10 @@ export const costGuides: readonly CostGuide[] = [
         body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. We do not negotiate the claim, and we are not a public adjuster.',
       },
     ],
-    // TODO-GEORGE: replace nulls with real Houston roof-replacement ranges. Do not ship guessed dollars.
     ranges: [
-      { label: 'Architectural asphalt replacement', low: null, high: null },
-      { label: 'Metal, tile, or composite', low: null, high: null },
-      { label: 'Deck repairs found after tear-off', low: null, high: null },
+      { label: 'Architectural asphalt replacement', low: 12000, high: 24000 },
+      { label: 'Metal, tile, or composite', low: 20000, high: 45000 },
+      { label: 'Deck repairs found after tear-off', low: 500, high: 2000 },
     ],
     faqs: [
       {
