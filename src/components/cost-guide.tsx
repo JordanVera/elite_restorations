@@ -136,6 +136,32 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
         </div>
       </section>
 
+      {guide.related.length > 0 && (
+        <section
+          aria-labelledby="cost-related-heading"
+          className="border-t border-border py-16 md:py-20"
+        >
+          <div className="gutter mx-auto max-w-[120rem]">
+            <h2 id="cost-related-heading" className="eyebrow text-muted-foreground">
+              Related guides
+            </h2>
+            <ul className="mt-6 max-w-2xl space-y-3">
+              {guide.related.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                  >
+                    {link.label}
+                    <ArrowUpRight className="size-4" aria-hidden />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <CtaBand
         title={`Planning ${guide.serviceLabel.toLowerCase()}?`}
         body={`Call ${site.phone.display} for a free estimate. We price the scope after we see the house.`}

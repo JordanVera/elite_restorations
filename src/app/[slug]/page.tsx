@@ -170,7 +170,8 @@ export default async function ServicePage({
     <>
       <PageHero
         eyebrow={service.group}
-        title={[service.name]}
+        // "Houston {service}" stays distinct from the city-page H1, "{service} in {city}, TX".
+        title={['Houston', service.name]}
         lede={service.tagline}
         crumbs={[
           { name: 'Services', path: '/services' },
@@ -283,19 +284,22 @@ export default async function ServicePage({
               </div>
             )}
             {service.links && service.links.length > 0 && (
-              <ul className="mt-8 space-y-3">
-                {service.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
-                    >
-                      {link.label}
-                      <ArrowUpRight className="size-4" aria-hidden />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-10">
+                <p className="eyebrow text-muted-foreground">Related guides</p>
+                <ul className="mt-4 space-y-3">
+                  {service.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                      >
+                        {link.label}
+                        <ArrowUpRight className="size-4" aria-hidden />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </Reveal>
         </div>
