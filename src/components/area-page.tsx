@@ -16,7 +16,7 @@ export function AreaPageView({ page }: { page: AreaPage }) {
     <>
       <PageHero
         eyebrow="Near the office"
-        title={[page.name, 'TX']}
+        title={[`${page.name},`, 'TX']}
         lede={page.lede}
         crumbs={[
           { name: 'Services', path: '/services' },
@@ -145,24 +145,7 @@ export function AreaPageView({ page }: { page: AreaPage }) {
             '@type': 'Place',
             name: `${page.name}, Texas`,
           },
-          mainEntity: {
-            '@type': 'HomeAndConstructionBusiness',
-            '@id': `${site.url}/#business`,
-            name: site.name,
-            telephone: site.phone.e164,
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: site.address.streetAddress,
-              addressLocality: site.address.addressLocality,
-              addressRegion: site.address.addressRegion,
-              postalCode: site.address.postalCode,
-              addressCountry: site.address.addressCountry,
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: `${page.name}, Texas`,
-            },
-          },
+          mainEntity: { '@id': `${site.url}/#business` },
         }}
       />
     </>

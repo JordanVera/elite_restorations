@@ -12,11 +12,13 @@ function Word({
   progress,
   range,
   emphasis,
+  trailingSpace,
 }: {
   children: string;
   progress: MotionValue<number>;
   range: [number, number];
   emphasis?: boolean;
+  trailingSpace?: boolean;
 }) {
   const fill = useTransform(progress, range, [0, 1]);
   return (
@@ -27,11 +29,12 @@ function Word({
         ["--ink" as string]: emphasis ? "var(--accent-ink)" : "var(--foreground)",
       }}
       className={cn(
-        "mr-[0.22em] inline-block text-[color-mix(in_srgb,var(--ink)_calc(var(--w)*100%),var(--muted-foreground))]",
+        "relative mr-[0.22em] inline-block text-[color-mix(in_srgb,var(--ink)_calc(var(--w)*100%),var(--muted-foreground))]",
         emphasis && "italic",
       )}
     >
       {children}
+      {trailingSpace ? <span className="sr-only"> </span> : null}
     </motion.span>
   );
 }
@@ -76,7 +79,13 @@ export function ScrollWords({
         const start = i / words.length;
         const end = start + 1 / words.length;
         return (
-          <Word key={`${word}-${i}`} progress={scrollYProgress} range={[start, end]} emphasis={emphasis}>
+          <Word
+            key={`${word}-${i}`}
+            progress={scrollYProgress}
+            range={[start, end]}
+            emphasis={emphasis}
+            trailingSpace={i < words.length - 1}
+          >
             {word}
           </Word>
         );

@@ -100,6 +100,7 @@ export function SplitLines({
             }}
           >
             {line}
+            {i < lines.length - 1 ? " " : null}
           </motion.span>
         </span>
       ))}
