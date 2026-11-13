@@ -19,7 +19,7 @@ const portals = [
     href: '/resources/homeowners',
     eyebrow: 'Homeowners',
     title: 'Research the project.',
-    body: 'See how a shower, kitchen, or whole-home remodel proceeds, then ask for an estimate.',
+    body: 'How a remodel is sequenced, from the first visit through the walkthrough, then how to ask for an estimate.',
   },
   {
     index: '02',

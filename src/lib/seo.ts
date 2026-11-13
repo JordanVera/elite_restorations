@@ -20,6 +20,15 @@ export function absoluteUrl(path: string) {
   return new URL(path, site.url).toString();
 }
 
+/** True when `lead` plus the business name fits the 60-character title. */
+export function titleFits(lead: string) {
+  const text = lead.replace(/\s+/g, " ").trim();
+  if (text.includes("Elite Restorations")) {
+    return documentTitle(text) === text;
+  }
+  return documentTitle(text) === `${text}${BRAND_SUFFIX}`;
+}
+
 /** Document title, 60 characters or fewer, with the business name. */
 export function documentTitle(lead: string) {
   const text = lead.replace(/\s+/g, " ").trim();

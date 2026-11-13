@@ -8,6 +8,7 @@ import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { VideoPortal } from '@/components/resources/video-portal';
 import { Button } from '@/components/ui/button';
+import { hasRealVideos } from '@/lib/resource-videos';
 import { pageMetadata } from '@/lib/seo';
 import { ctaHref } from '@/lib/site';
 
@@ -63,35 +64,37 @@ export default function HomeownersResourcesPage() {
         </Reveal>
       </PageHero>
 
-      <section aria-labelledby="library-heading" className="py-20 md:py-28">
-        <div className="gutter mx-auto max-w-[120rem]">
-          <Reveal>
-            <p className="eyebrow text-accent-ink">Project library</p>
-            <h2
-              id="library-heading"
-              className="font-display t-lg mt-4 max-w-[16ch]"
-            >
-              See how the work <span className="italic">actually</span> goes.
-            </h2>
-            <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-              Choose a category, then a project type. Each step is the sequence
-              our crews follow on that kind of work.
-            </p>
-          </Reveal>
-          <Suspense
-            fallback={
-              <p className="mt-12 text-muted-foreground" aria-live="polite">
-                Loading project library…
+      {hasRealVideos() ? (
+        <section aria-labelledby="library-heading" className="py-20 md:py-28">
+          <div className="gutter mx-auto max-w-[120rem]">
+            <Reveal>
+              <p className="eyebrow text-accent-ink">Project library</p>
+              <h2
+                id="library-heading"
+                className="font-display t-lg mt-4 max-w-[16ch]"
+              >
+                See how the work <span className="italic">actually</span> goes.
+              </h2>
+              <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
+                Choose a category, then a project type. Each step is the sequence
+                our crews follow on that kind of work.
               </p>
-            }
-          >
-            <VideoPortal
-              basePath="/resources/homeowners"
-              audience="homeowner"
-            />
-          </Suspense>
-        </div>
-      </section>
+            </Reveal>
+            <Suspense
+              fallback={
+                <p className="mt-12 text-muted-foreground" aria-live="polite">
+                  Loading project library…
+                </p>
+              }
+            >
+              <VideoPortal
+                basePath="/resources/homeowners"
+                audience="homeowner"
+              />
+            </Suspense>
+          </div>
+        </section>
+      ) : null}
 
       <section
         aria-labelledby="process-heading"

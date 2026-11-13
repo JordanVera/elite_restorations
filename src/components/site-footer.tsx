@@ -107,6 +107,16 @@ export function SiteFooter() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy" className={linkClass}>
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className={linkClass}>
+                  Terms
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -158,10 +168,20 @@ export function SiteFooter() {
               ))}
             </ul>
           </div>
-          <p className="text-xs leading-relaxed text-muted-foreground lg:text-right">
-            &copy; {year} {site.name}. Family owned and operated in Houston
-            since {site.founded}. Serving Greater Houston, Texas.
-          </p>
+          <div className="text-xs leading-relaxed text-muted-foreground lg:text-right">
+            <p>
+              &copy; {year} {site.name}. Family owned and operated in Houston
+              since {site.founded}. Serving Greater Houston, Texas.
+            </p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2 lg:justify-end">
+              <Link href="/privacy" className={linkClass}>
+                Privacy
+              </Link>
+              <Link href="/terms" className={linkClass}>
+                Terms
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -3,14 +3,17 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, ArrowUpRight, Check, Phone } from 'lucide-react';
 
+import { AreasWeServe } from '@/components/areas-we-serve';
 import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
+import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
 import { absoluteUrl, localTitle, pageMetadata } from '@/lib/seo';
@@ -53,6 +56,7 @@ export function generateStaticParams(): Params[] {
   return [
     ...services.map((s) => ({ slug: s.slug })),
     ...articles.map((article) => ({ slug: article.slug })),
+    ...localLandings.map((page) => ({ slug: page.slug })),
   ];
 }
 
@@ -62,6 +66,16 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const landing = getLocalLanding(slug);
+  if (landing) {
+    const service = getService(landing.serviceSlug);
+    return pageMetadata({
+      title: landing.title,
+      description: landing.description,
+      path: landing.path,
+      image: service?.image.src,
+    });
+  }
   const article = getArticle(slug);
   if (article) {
     return pageMetadata({
@@ -88,6 +102,9 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
+  const landing = getLocalLanding(slug);
+  if (landing) return <LocalLandingView landing={landing} />;
+
   const article = getArticle(slug);
   if (article) return <ArticleView article={article} />;
 
@@ -425,6 +442,8 @@ export default async function ServicePage({
           </div>
         </section>
       )}
+
+      <AreasWeServe serviceSlug={service.slug} />
 
       <CtaBand
         title={

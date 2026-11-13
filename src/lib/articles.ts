@@ -42,7 +42,7 @@ export const articles: Article[] = [
       'Tell us what happened, or what you want the room to do. We will help you separate repair from remodel before anyone prices the work.',
     related: [
       'how-to-prevent-water-damage-in-your-home',
-      'top-5-benefits-of-remodeling-your-kitchen-in-2025',
+      'kitchen-remodel-benefits',
     ],
     sections: [
       {
@@ -339,7 +339,7 @@ export const articles: Article[] = [
       'Send photos or have us walk it. We install wood, tile, vinyl, and laminate, and we will say if a repair is enough.',
     related: [
       'bathroom-upgrades-that-boost-your-homes-resale-value',
-      'top-5-benefits-of-remodeling-your-kitchen-in-2025',
+      'kitchen-remodel-benefits',
     ],
     sections: [
       {
@@ -395,7 +395,7 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: 'top-5-benefits-of-remodeling-your-kitchen-in-2025',
+    slug: 'kitchen-remodel-benefits',
     title: 'Five reasons a kitchen remodel is worth doing',
     metaTitle: 'Kitchen Remodel Reasons, Houston',
     crumb: 'Kitchen remodel',

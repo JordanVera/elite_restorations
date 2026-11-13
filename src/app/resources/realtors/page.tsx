@@ -8,6 +8,7 @@ import { PageHero } from '@/components/page-hero';
 import { PartnerForm } from '@/components/resources/partner-form';
 import { VideoPortal } from '@/components/resources/video-portal';
 import { Button } from '@/components/ui/button';
+import { hasRealVideos } from '@/lib/resource-videos';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -56,7 +57,7 @@ export default function RealtorsResourcesPage() {
       <PageHero
         eyebrow="For realtors"
         title={['A partner for', 'the work you refer.']}
-        lede="The same project steps your clients can read, and a direct way to send a flip or an introduction."
+        lede="Refer a flip or an introduction. One crew, a direct line, and a form that reaches the office."
         crumbs={[
           { name: 'Resources', path: '/resources' },
           { name: 'Realtors', path: '/resources/realtors' },
@@ -72,29 +73,31 @@ export default function RealtorsResourcesPage() {
         </Reveal>
       </PageHero>
 
-      <section aria-labelledby="library-heading" className="py-20 md:py-28">
-        <div className="gutter mx-auto max-w-[120rem]">
-          <Reveal>
-            <p className="eyebrow text-accent-ink">Project library</p>
-            <h2 id="library-heading" className="font-display t-lg mt-4 max-w-[18ch]">
-              Show a client the sequence.
-            </h2>
-            <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-              The same step-by-step sequences homeowners see, so you can walk a client through
-              the work.
-            </p>
-          </Reveal>
-          <Suspense
-            fallback={
-              <p className="mt-12 text-muted-foreground" aria-live="polite">
-                Loading project library…
+      {hasRealVideos() ? (
+        <section aria-labelledby="library-heading" className="py-20 md:py-28">
+          <div className="gutter mx-auto max-w-[120rem]">
+            <Reveal>
+              <p className="eyebrow text-accent-ink">Project library</p>
+              <h2 id="library-heading" className="font-display t-lg mt-4 max-w-[18ch]">
+                Show a client the sequence.
+              </h2>
+              <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
+                The same step-by-step sequences homeowners see, so you can walk a client through
+                the work.
               </p>
-            }
-          >
-            <VideoPortal basePath="/resources/realtors" audience="realtor" />
-          </Suspense>
-        </div>
-      </section>
+            </Reveal>
+            <Suspense
+              fallback={
+                <p className="mt-12 text-muted-foreground" aria-live="polite">
+                  Loading project library…
+                </p>
+              }
+            >
+              <VideoPortal basePath="/resources/realtors" audience="realtor" />
+            </Suspense>
+          </div>
+        </section>
+      ) : null}
 
       <section
         aria-labelledby="benefits-heading"

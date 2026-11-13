@@ -5,6 +5,7 @@ import { TRPCClientError } from '@trpc/client';
 import { ArrowUpRight, Loader2, Mail, Phone } from 'lucide-react';
 
 import { Field } from '@/components/form-fields';
+import { FormConsent } from '@/components/form-consent';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -240,7 +241,8 @@ export function PartnerForm() {
           </div>
         )}
       </div>
-      <div>
+      <div className="space-y-5">
+        <FormConsent />
         <Button type="submit" variant="accent" size="lg" disabled={submitting}>
           {submitting ? (
             <>

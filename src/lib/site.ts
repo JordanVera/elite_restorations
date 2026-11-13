@@ -1,3 +1,10 @@
+/**
+ * Live Facebook page. The slug is spelled eliterestorartions on purpose.
+ * Do not swap it for a numeric page id.
+ */
+export const facebookUrl =
+  'https://www.facebook.com/eliterestorartions' as const;
+
 export const site = {
   name: 'Elite Restorations',
   tagline: 'Remodeling and restoration for Greater Houston',
@@ -28,7 +35,7 @@ export const site = {
     { days: 'Sunday', time: 'Closed' },
   ],
   sameAs: [
-    'https://www.facebook.com/eliterestorartions',
+    facebookUrl,
     'https://www.instagram.com/elite_restorations_/',
     'https://www.tiktok.com/@eliterestorationstx',
     'https://www.youtube.com/@eliterestorationstx',
@@ -38,7 +45,7 @@ export const site = {
   social: [
     {
       label: 'Facebook',
-      href: 'https://www.facebook.com/eliterestorartions',
+      href: facebookUrl,
     },
     {
       label: 'Instagram',
@@ -110,14 +117,14 @@ export type NavItem = NavLink & {
 export const nav: readonly NavItem[] = [
   { href: '/services', label: 'Services' },
   { href: '/projects', label: 'Projects' },
-  // {
-  //   href: '/resources',
-  //   label: 'Resources',
-  //   children: [
-  //     { href: '/resources/homeowners', label: 'Homeowners' },
-  //     { href: '/resources/realtors', label: 'Realtors' },
-  //   ],
-  // },
+  {
+    href: '/resources',
+    label: 'Resources',
+    children: [
+      { href: '/resources/homeowners', label: 'Homeowners' },
+      { href: '/resources/realtors', label: 'Realtors' },
+    ],
+  },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/emergency', label: 'Emergency' },
