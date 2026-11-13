@@ -81,7 +81,7 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
           <Reveal>
             <p className="eyebrow text-accent-ink">Ranges</p>
             <h2 id="cost-ranges-heading" className="font-display t-lg mt-4">
-              {publishRanges ? 'Ranges for this scope.' : 'Call for a free estimate.'}
+              {publishRanges ? 'Typical planning ranges.' : 'Call for a free estimate.'}
             </h2>
           </Reveal>
           {publishRanges ? (
@@ -115,8 +115,9 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
             </div>
           )}
           <p className="measure mt-8 text-sm leading-relaxed text-muted-foreground">
-            We do not publish a citywide price list. The number comes from the
-            house, after a visit.
+            {publishRanges
+              ? 'These are typical planning ranges, not quotes. The final price comes from an on-site estimate.'
+              : 'We do not publish a citywide price list. The number comes from the house, after a visit.'}
           </p>
         </div>
       </section>
