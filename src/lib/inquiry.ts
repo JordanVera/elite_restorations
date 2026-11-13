@@ -1,104 +1,77 @@
-import { services } from "@/lib/services";
 import { site } from "@/lib/site";
 
-export const NOT_SURE = "not-sure";
-
-export const inquiryServiceOptions = [
-  ...services.map((s) => ({ value: s.slug, label: s.name, group: s.group as string })),
-  { value: NOT_SURE, label: "Not sure yet", group: "Other" },
-];
-
-export const quickPicks = [
-  { value: "kitchen-remodeling", label: "Kitchen" },
-  { value: "bathroom-remodeling", label: "Bathroom" },
-  { value: "wood-flooring", label: "Floors" },
-  { value: "roofing", label: "Roof" },
-  { value: "water-damage-restoration", label: "Water damage" },
-  { value: NOT_SURE, label: "Something else" },
+export const leadServices = [
+  { value: "roof-repair", label: "Roof repair or replacement" },
+  { value: "storm-hail", label: "Storm or hail damage" },
+  { value: "water-damage", label: "Water damage" },
+  { value: "fire-damage", label: "Fire damage" },
+  { value: "kitchen-remodel", label: "Kitchen remodel" },
+  { value: "bathroom-remodel", label: "Bathroom remodel" },
+  { value: "other", label: "Other" },
 ] as const;
 
-export function isKnownService(value: string | undefined): value is string {
-  return !!value && inquiryServiceOptions.some((o) => o.value === value);
-}
+export type LeadService = (typeof leadServices)[number]["value"];
 
-export const leadPaths = ["remodel", "recovery"] as const;
-export type LeadPath = (typeof leadPaths)[number];
-
-export function isLeadPath(value: string | undefined): value is LeadPath {
-  return !!value && (leadPaths as readonly string[]).includes(value);
-}
-
-export const rooms = [
-  { value: "kitchen", label: "Kitchen" },
-  { value: "bathroom", label: "Bathroom" },
-  { value: "floors", label: "Floors" },
-  { value: "exterior", label: "Siding or exterior" },
-  { value: "several", label: "More than one space" },
-  { value: "other", label: "Something else" },
-] as const;
-export type Room = (typeof rooms)[number]["value"];
-
-export const timelines = [
-  { value: "asap", label: "As soon as possible" },
-  { value: "1-3-months", label: "In the next 1 to 3 months" },
-  { value: "this-year", label: "Sometime this year" },
-  { value: "exploring", label: "Just exploring" },
-] as const;
-export type Timeline = (typeof timelines)[number]["value"];
-
-export const incidents = [
-  { value: "storm-roof", label: "Storm or roof damage" },
-  { value: "leak", label: "Leak or burst pipe" },
-  { value: "flood", label: "Flooding or standing water" },
-  { value: "other", label: "Something else" },
-] as const;
-export type Incident = (typeof incidents)[number]["value"];
-
-export const yesNo = [
-  { value: "yes", label: "Yes" },
-  { value: "no", label: "No" },
-] as const;
-
-export const insurerAnswers = [
+export const claimAnswers = [
   { value: "yes", label: "Yes" },
   { value: "no", label: "No" },
   { value: "not-sure", label: "Not sure" },
 ] as const;
 
-const recoveryServices: Record<string, Incident | ""> = {
-  "roofing-emergency-tarp-repair": "storm-roof",
-  "roof-replacement": "storm-roof",
-  roofing: "storm-roof",
-  "water-damage-restoration": "",
-  "insurance-claims": "",
-};
+export type ClaimAnswer = (typeof claimAnswers)[number]["value"];
 
-const roomByService: Record<string, Room> = {
-  "kitchen-remodeling": "kitchen",
-  backsplash: "kitchen",
-  countertops: "kitchen",
-  "bathroom-remodeling": "bathroom",
-  "wood-flooring": "floors",
-  "tile-flooring": "floors",
-  "vinyl-flooring": "floors",
-  "laminate-flooring": "floors",
-  siding: "exterior",
-  "patios-decks": "exterior",
+export const contactMethods = [
+  { value: "phone", label: "Phone call" },
+  { value: "text", label: "Text message" },
+  { value: "email", label: "Email" },
+] as const;
+
+export type ContactMethod = (typeof contactMethods)[number]["value"];
+
+/** Service-page and city-page slugs that should preselect the short lead list. */
+const slugToService: Record<string, LeadService> = {
+  "kitchen-remodeling": "kitchen-remodel",
+  backsplash: "kitchen-remodel",
+  countertops: "kitchen-remodel",
+  "bathroom-remodeling": "bathroom-remodel",
+  roofing: "roof-repair",
+  "roof-replacement": "roof-repair",
+  "roofing-emergency-tarp-repair": "storm-hail",
+  "water-damage-restoration": "water-damage",
+  "wood-flooring": "other",
+  "tile-flooring": "other",
+  "vinyl-flooring": "other",
+  "laminate-flooring": "other",
   carpentry: "other",
   "tile-fireplaces": "other",
+  siding: "other",
+  "patios-decks": "other",
   "painting-drywall-repair": "other",
+  "not-sure": "other",
 };
 
-export function pathForService(service: string | undefined): LeadPath {
-  return service && service in recoveryServices ? "recovery" : "remodel";
+export function serviceForSlug(value: string | undefined): LeadService | "" {
+  if (!value) return "";
+  if (leadServices.some((item) => item.value === value)) return value as LeadService;
+  return slugToService[value] ?? "";
 }
 
-export function roomForService(service: string | undefined): Room | "" {
-  return (service && roomByService[service]) || "";
+export function optionLabel(
+  list: readonly { value: string; label: string }[],
+  value: string,
+) {
+  return list.find((item) => item.value === value)?.label ?? value;
 }
 
-export function incidentForService(service: string | undefined): Incident | "" {
-  return (service && recoveryServices[service]) || "";
+export const urgentServices: readonly LeadService[] = [
+  "roof-repair",
+  "storm-hail",
+  "water-damage",
+  "fire-damage",
+];
+
+export function isUrgentService(value: string): boolean {
+  return (urgentServices as readonly string[]).includes(value);
 }
 
 const [officeHours] = site.hours;

@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { TRPCClientError } from '@trpc/client';
-import { ArrowUpRight, Loader2, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Loader2, Mail, Phone } from 'lucide-react';
 
 import { FormConsent } from '@/components/form-consent';
 import { ChoiceGroup, Field } from '@/components/form-fields';
@@ -13,18 +13,19 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
   callbackPromise,
-  incidentForService,
-  incidents,
-  insurerAnswers,
-  isLeadPath,
-  pathForService,
-  roomForService,
-  rooms,
-  timelines,
-  yesNo,
-  type LeadPath,
+  claimAnswers,
+  contactMethods,
+  isUrgentService,
+  leadServices,
+  optionLabel,
+  serviceForSlug,
+  type ClaimAnswer,
+  type ContactMethod,
 } from '@/lib/inquiry';
 import { leadSchema, type LeadInput } from '@/lib/inquiry-schema';
+import { trackLeadConversion } from '@/lib/lead-analytics';
+import { readLeadSource } from '@/lib/lead-source';
+import { submitTiming } from '@/lib/lead-timing';
 import { uploadLeadPhoto } from '@/lib/photos-client';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
@@ -35,119 +36,159 @@ type Values = {
   name: string;
   email: string;
   phone: string;
+  address: string;
+  service: string;
+  claim: string;
+  carrier: string;
+  contactMethod: string;
+  company: string;
   message: string;
   website: string;
-  room: string;
-  staying: string;
-  timeline: string;
-  incident: string;
-  waterActive: string;
-  insurer: string;
-  address: string;
 };
 
-type FieldErrors = Partial<Record<keyof Values | 'photos', string>>;
+type FieldKey = keyof Values;
+type FieldErrors = Partial<Record<FieldKey | 'photos', string>>;
+
+type ErrorReason = 'unavailable' | 'rate-limited' | 'failed' | 'too-fast' | 'expired';
 
 type Status =
   | { kind: 'idle' }
   | { kind: 'submitting'; step: string }
-  | { kind: 'sent'; path: LeadPath; photosTotal: number; photosSaved: number }
-  | { kind: 'error'; reason: 'unavailable' | 'rate-limited' | 'failed' };
+  | {
+      kind: 'sent';
+      photosTotal: number;
+      photosSaved: number;
+      service: string;
+      claim: string;
+    }
+  | { kind: 'error'; reason: ErrorReason };
 
 export type LeadPhotoSeed = { blob: Blob; name: string };
 
 type LeadFormProps = {
+  intent?: 'estimate' | 'partner';
+  idPrefix?: string;
+  density?: 'comfortable' | 'compact';
+  showPhotos?: boolean;
+  submitLabel?: string;
   defaultService?: string;
   defaultMessage?: string;
-  defaultPath?: string;
   defaultName?: string;
   defaultAddress?: string;
-  defaultIncident?: string;
-  defaultWaterActive?: string;
-  /** Photo blobs already on this page. The form makes its own preview URLs. */
+  defaultClaim?: string;
+  defaultCarrier?: string;
+  defaultContact?: string;
   initialPhotos?: LeadPhotoSeed[];
-  /** Hides the path choice and fixes the form to one path. */
-  lockPath?: LeadPath;
 };
 
-const pathChoices: { value: LeadPath; title: string; body: string }[] = [
-  {
-    value: 'remodel',
-    title: 'Plan a remodel',
-    body: 'Kitchens, baths, floors, siding and finish work.',
+const errorCopy: Record<ErrorReason, { title: string; body: string }> = {
+  unavailable: {
+    title: 'Online requests are not available yet.',
+    body: 'Nothing was sent. Your details are still in the form. Call us and we will take it from here.',
   },
-  {
-    value: 'recovery',
-    title: 'Water or storm damage',
-    body: 'Leaks, flooding, roof and storm repairs.',
+  'rate-limited': {
+    title: 'Too many attempts.',
+    body: 'Please wait a few minutes, or call us and we will take it from here.',
   },
-];
+  failed: {
+    title: 'We could not send your request.',
+    body: 'Nothing was sent. Your details are still in the form. Call us and we will take it from here.',
+  },
+  'too-fast': {
+    title: 'Please take a moment and send it again.',
+    body: 'Nothing was sent. Your details are still in the form. You can also call us.',
+  },
+  expired: {
+    title: 'This page has been open a while.',
+    body: 'Refresh the page and send it again, or call us. Your details are still in the form.',
+  },
+};
+
+const selectClass =
+  'h-12 w-full appearance-none rounded-none border-0 border-b border-input bg-transparent py-2 pr-8 text-base outline-none transition-colors focus-visible:border-accent-ink disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-accent-ink';
+
+function asClaim(value: string | undefined): ClaimAnswer | '' {
+  return value === 'yes' || value === 'no' || value === 'not-sure' ? value : '';
+}
+
+function asContact(value: string | undefined): ContactMethod | '' {
+  return value === 'phone' || value === 'text' || value === 'email' ? value : '';
+}
+
+function described(id: string, invalid: boolean, required?: boolean) {
+  return {
+    'aria-invalid': invalid ? (true as const) : undefined,
+    'aria-describedby': invalid ? `${id}-error` : undefined,
+    'aria-required': required ? (true as const) : undefined,
+  };
+}
 
 function buildCandidate(
-  path: LeadPath,
-  v: Values,
+  intent: 'estimate' | 'partner',
+  values: Values,
   photos: string[],
+  startedAt: number,
+  trap: string,
 ): LeadInput {
   const shared = {
-    name: v.name,
-    email: v.email,
-    phone: v.phone,
-    message: v.message,
-    website: v.website,
+    name: values.name,
+    email: values.email,
+    phone: values.phone,
+    message: values.message,
+    website: trap,
     photos,
+    startedAt,
+    ...readLeadSource(),
   };
-  if (path === 'remodel') {
+  if (intent === 'partner') {
     return {
       ...shared,
-      path,
-      room: v.room,
-      staying: v.staying,
-      timeline: v.timeline,
+      path: 'partner',
+      company: values.company,
+      contactMethod: values.contactMethod,
     } as LeadInput;
   }
   return {
     ...shared,
-    path,
-    incident: v.incident,
-    waterActive: v.waterActive,
-    insurer: v.insurer,
-    address: v.address,
+    path: 'estimate',
+    address: values.address,
+    service: values.service,
+    claim: values.claim,
+    carrier: values.claim === 'no' ? '' : values.carrier,
+    contactMethod: values.contactMethod,
   } as LeadInput;
 }
 
-const labelOf = (
-  list: readonly { value: string; label: string }[],
-  value: string,
-) => list.find((o) => o.value === value)?.label;
-
 export function LeadForm({
+  intent = 'estimate',
+  idPrefix = 'lead',
+  density = 'comfortable',
+  showPhotos,
+  submitLabel,
   defaultService,
   defaultMessage,
-  defaultPath,
-  lockPath,
   defaultName,
   defaultAddress,
-  defaultIncident,
-  defaultWaterActive,
+  defaultClaim,
+  defaultCarrier,
+  defaultContact,
   initialPhotos,
 }: LeadFormProps) {
-  const [path, setPath] = React.useState<LeadPath>(
-    lockPath ??
-      (isLeadPath(defaultPath) ? defaultPath : pathForService(defaultService)),
-  );
+  const photosEnabled = showPhotos ?? intent === 'estimate';
+  const partner = intent === 'partner';
+  const fid = (name: string) => `${idPrefix}-${name}`;
   const [values, setValues] = React.useState<Values>({
     name: defaultName ?? '',
     email: '',
     phone: '',
+    address: defaultAddress ?? '',
+    service: serviceForSlug(defaultService),
+    claim: asClaim(defaultClaim),
+    carrier: defaultCarrier ?? '',
+    contactMethod: asContact(defaultContact),
+    company: '',
     message: defaultMessage ?? '',
     website: '',
-    room: roomForService(defaultService),
-    staying: '',
-    timeline: '',
-    incident: defaultIncident || incidentForService(defaultService),
-    waterActive: defaultWaterActive ?? '',
-    insurer: '',
-    address: defaultAddress ?? '',
   });
   const [photos, setPhotos] = React.useState<PickedPhoto[]>(() =>
     (initialPhotos ?? []).map((photo) => ({
@@ -157,39 +198,36 @@ export function LeadForm({
       name: photo.name,
     })),
   );
+  const [photosOpen, setPhotosOpen] = React.useState(
+    () => (initialPhotos?.length ?? 0) > 0,
+  );
   const [errors, setErrors] = React.useState<FieldErrors>({});
   const [status, setStatus] = React.useState<Status>({ kind: 'idle' });
   const statusRef = React.useRef<HTMLDivElement>(null);
   const formRef = React.useRef<HTMLFormElement>(null);
+  const honeypotRef = React.useRef<HTMLInputElement>(null);
+  const startedAt = React.useRef(0);
   const uploaded = React.useRef(new Map<string, string>());
 
-  const set = (field: keyof Values) => (value: string) => {
+  React.useEffect(() => {
+    startedAt.current = Date.now();
+  }, []);
+
+  const set = (field: FieldKey) => (value: string) => {
     setValues((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => (prev[field] ? { ...prev, [field]: undefined } : prev));
   };
 
   const onText =
-    (field: keyof Values) =>
-    (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    (field: FieldKey) =>
+    (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       set(field)(event.target.value);
 
-  const aria = (field: keyof Values) => ({
-    'aria-invalid': errors[field] ? true : undefined,
-    'aria-describedby': errors[field] ? `${field}-error` : undefined,
-  });
-
-  function choosePath(next: LeadPath) {
-    if (next === path) return;
-    setPath(next);
-    setErrors({});
-  }
-
   function focusFirstError(next: FieldErrors) {
-    const fields =
-      formRef.current?.querySelectorAll<HTMLElement>('[data-field]') ?? [];
+    const fields = formRef.current?.querySelectorAll<HTMLElement>('[data-field]') ?? [];
     for (const field of fields) {
       if (next[field.dataset.field as keyof FieldErrors]) {
-        field.querySelector<HTMLElement>('input, textarea, button')?.focus();
+        field.querySelector<HTMLElement>('input, textarea, select, button')?.focus();
         return;
       }
     }
@@ -199,12 +237,23 @@ export function LeadForm({
     event.preventDefault();
     if (status.kind === 'submitting') return;
 
-    const check = leadSchema.safeParse(buildCandidate(path, values, []));
+    const trap = (honeypotRef.current?.value || values.website).trim();
+    const check = leadSchema.safeParse(
+      buildCandidate(intent, values, [], startedAt.current, trap),
+    );
     if (!check.success) {
       const next: FieldErrors = {};
       for (const issue of check.error.issues) {
         const key = issue.path[0] as keyof FieldErrors | undefined;
-        if (key && key !== 'photos' && !next[key]) next[key] = issue.message;
+        if (key && key !== 'photos' && key !== 'website' && !next[key]) next[key] = issue.message;
+      }
+      if (
+        intent === 'estimate' &&
+        values.contactMethod === 'email' &&
+        values.email.trim().length === 0 &&
+        !next.email
+      ) {
+        next.email = 'Enter an email address, or choose phone or text.';
       }
       setErrors(next);
       setStatus({ kind: 'idle' });
@@ -212,96 +261,124 @@ export function LeadForm({
       return;
     }
 
+    const timing = submitTiming(startedAt.current);
+    if (timing !== 'ok') {
+      setErrors({});
+      setStatus({ kind: 'error', reason: timing === 'expired' ? 'expired' : 'too-fast' });
+      requestAnimationFrame(() => statusRef.current?.focus());
+      return;
+    }
+
     setErrors({});
 
     try {
-      for (const [index, photo] of photos.entries()) {
-        if (uploaded.current.has(photo.id)) continue;
-        setStatus({
-          kind: 'submitting',
-          step: `Uploading photo ${index + 1} of ${photos.length}`,
-        });
-        const result = await uploadLeadPhoto(photo.blob);
-        if (!result.ok) {
-          if (result.reason === 'not-configured') break;
-          continue;
+      if (!trap) {
+        for (const [index, photo] of photos.entries()) {
+          if (uploaded.current.has(photo.id)) continue;
+          setStatus({
+            kind: 'submitting',
+            step: `Uploading photo ${index + 1} of ${photos.length}`,
+          });
+          const result = await uploadLeadPhoto(photo.blob);
+          if (!result.ok) {
+            if (result.reason === 'not-configured') break;
+            continue;
+          }
+          uploaded.current.set(photo.id, result.pathname);
         }
-        uploaded.current.set(photo.id, result.pathname);
       }
 
       setStatus({ kind: 'submitting', step: 'Sending' });
-      const pathnames = photos.flatMap((p) => uploaded.current.get(p.id) ?? []);
-      const parsed = leadSchema.parse(buildCandidate(path, values, pathnames));
+      const pathnames = trap
+        ? []
+        : photos.flatMap((photo) => uploaded.current.get(photo.id) ?? []);
+      const parsed = leadSchema.parse(
+        buildCandidate(intent, values, pathnames, startedAt.current, trap),
+      );
       const response = await trpc.contact.submit.mutate(parsed);
+      if (!trap) {
+        trackLeadConversion({
+          intent,
+          service: intent === 'estimate' ? values.service : undefined,
+        });
+      }
       setStatus({
         kind: 'sent',
-        path,
-        photosTotal: photos.length,
+        photosTotal: trap ? 0 : photos.length,
         photosSaved: response.photosSaved,
+        service: values.service,
+        claim: values.claim,
       });
       requestAnimationFrame(() => statusRef.current?.focus());
     } catch (error) {
-      const code =
-        error instanceof TRPCClientError
-          ? (error as TRPCClientError<AppRouter>).data?.code
-          : undefined;
-      const reason =
+      const trpcError =
+        error instanceof TRPCClientError ? (error as TRPCClientError<AppRouter>) : null;
+      const code = trpcError?.data?.code;
+      const message = trpcError?.message ?? '';
+      const reason: ErrorReason =
         code === 'SERVICE_UNAVAILABLE'
           ? 'unavailable'
           : code === 'TOO_MANY_REQUESTS'
             ? 'rate-limited'
-            : 'failed';
+            : code === 'PRECONDITION_FAILED' && message === 'expired'
+              ? 'expired'
+              : code === 'PRECONDITION_FAILED'
+                ? 'too-fast'
+                : 'failed';
       setStatus({ kind: 'error', reason });
       requestAnimationFrame(() => statusRef.current?.focus());
     }
   }
 
   const mailto = React.useMemo(() => {
-    const lines =
-      path === 'recovery'
-        ? [
-            `What happened: ${labelOf(incidents, values.incident) ?? ''}`,
-            `Water still coming in: ${labelOf(yesNo, values.waterActive) ?? ''}`,
-            `Insurance claim: ${labelOf(insurerAnswers, values.insurer) ?? ''}`,
-            `Address: ${values.address}`,
-          ]
-        : [
-            `Space: ${labelOf(rooms, values.room) ?? ''}`,
-            `Timeline: ${labelOf(timelines, values.timeline) ?? ''}`,
-            `Staying: ${values.staying}`,
-          ];
+    const lines = partner
+      ? [`Company: ${values.company}`, `Preferred contact: ${optionLabel(contactMethods, values.contactMethod)}`]
+      : [
+          `Service: ${optionLabel(leadServices, values.service)}`,
+          `Insurance claim: ${optionLabel(claimAnswers, values.claim)}`,
+          values.carrier ? `Insurance carrier: ${values.carrier}` : '',
+          `Address or ZIP: ${values.address}`,
+          `Preferred contact: ${optionLabel(contactMethods, values.contactMethod)}`,
+        ];
     const body = [
       values.message,
       '',
-      ...lines,
+      ...lines.filter(Boolean),
       '',
       `Name: ${values.name}`,
       `Phone: ${values.phone}`,
-    ].join('\n');
-    const subject =
-      path === 'recovery'
-        ? 'Water or storm damage request'
-        : 'Remodel estimate request';
+      `Email: ${values.email}`,
+    ]
+      .join('\n')
+      .slice(0, 1500);
+    const subject = partner
+      ? 'Partner referral'
+      : `Estimate request: ${optionLabel(leadServices, values.service) || 'new lead'}`;
     return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [path, values]);
+  }, [partner, values]);
 
   if (status.kind === 'sent') {
-    const { path: sentPath, photosTotal, photosSaved } = status;
+    const { photosTotal, photosSaved, service, claim } = status;
+    const showLog = claim === 'yes' || isUrgentService(service);
     return (
       <div
         ref={statusRef}
         tabIndex={-1}
         role="status"
-        className="border border-border p-8 outline-none"
+        className="border border-border p-6 outline-none sm:p-8"
       >
-        <p className="font-display text-4xl">
-          {sentPath === 'recovery' ? 'Request received.' : 'Thank you.'}
-        </p>
+        <p className="font-display text-4xl">Request received.</p>
         <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">
-          {sentPath === 'recovery'
-            ? callbackPromise
-            : 'Your request has been sent. We will follow up using the contact details you provided.'}
+          We have your note. If you need us sooner, call{' '}
+          <a
+            href={site.phone.href}
+            className="text-foreground underline underline-offset-[0.4em] hover:text-accent-ink"
+          >
+            {site.phone.display}
+          </a>
+          .
         </p>
+        <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">{callbackPromise}</p>
         {photosTotal > 0 && photosSaved < photosTotal && (
           <p className="mt-4 max-w-[48ch] leading-relaxed">
             {photosSaved === 0
@@ -316,288 +393,299 @@ export function LeadForm({
             and we will add them to your request.
           </p>
         )}
-        {sentPath === 'recovery' && (
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
-            <a
-              href={site.phone.href}
-              className="inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
-            >
-              <Phone className="size-4" aria-hidden />
-              Water still coming in? Call {site.phone.display}
-            </a>
-            <Link
-              href="/insurance-log"
-              className="inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
-            >
-              Start your insurance photo log
-              <ArrowUpRight className="size-4" aria-hidden />
-            </Link>
-          </div>
+        {showLog && (
+          <Link
+            href="/insurance-log"
+            className="mt-8 inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
+          >
+            Start your insurance photo log
+            <ArrowUpRight className="size-4" aria-hidden />
+          </Link>
         )}
       </div>
     );
   }
 
   const submitting = status.kind === 'submitting';
-  const recovery = path === 'recovery';
+  const stack = density === 'compact' ? 'space-y-6' : 'space-y-8';
+  const askCarrier = values.claim === 'yes' || values.claim === 'not-sure';
+  const buttonLabel = submitLabel ?? (partner ? 'Become a partner' : 'Send request');
 
   return (
-    <form ref={formRef} onSubmit={onSubmit} noValidate className="space-y-10">
-      {!lockPath && (
-        <fieldset disabled={submitting}>
-          <legend className="eyebrow text-muted-foreground">
-            What do you need?
-          </legend>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            {pathChoices.map((choice) => (
-              <label key={choice.value} className="cursor-pointer">
-                <input
-                  type="radio"
-                  name="path"
-                  value={choice.value}
-                  checked={path === choice.value}
-                  onChange={() => choosePath(choice.value)}
-                  className="peer sr-only"
-                />
-                <span className="block h-full border border-input p-5 transition-colors duration-300 hover:border-foreground peer-checked:border-accent peer-checked:bg-accent/10 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent-ink">
-                  <span className="font-display block text-2xl">
-                    {choice.title}
-                  </span>
-                  <span className="mt-2 block text-sm text-muted-foreground">
-                    {choice.body}
-                  </span>
-                </span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
-      )}
-
-      {recovery ? (
-        <div className="space-y-10">
-          <ChoiceGroup
-            name="waterActive"
-            legend="Is water still coming in?"
-            options={yesNo}
-            value={values.waterActive}
-            onChange={set('waterActive')}
-            error={errors.waterActive}
-            disabled={submitting}
-          />
-
-          {values.waterActive === 'yes' && (
-            <div role="alert" className="border border-accent-ink p-6">
-              <p className="font-display text-2xl">Call us now.</p>
-              <p className="mt-2 max-w-[46ch] leading-relaxed text-muted-foreground">
-                A phone call is the fastest way to get help. If it is safe, shut
-                off the water at the main valve. You can finish this request
-                afterward.
-              </p>
-              <a
-                href={site.phone.href}
-                className="mt-4 inline-flex items-center gap-3 text-2xl transition-colors hover:text-accent-ink"
-              >
-                <Phone className="size-5 text-accent-ink" aria-hidden />
-                {site.phone.display}
-              </a>
-            </div>
-          )}
-
-          <ChoiceGroup
-            name="incident"
-            legend="What happened?"
-            options={incidents}
-            value={values.incident}
-            onChange={set('incident')}
-            error={errors.incident}
-            disabled={submitting}
-          />
-          <ChoiceGroup
-            name="insurer"
-            legend="Is an insurance company involved?"
-            options={insurerAnswers}
-            value={values.insurer}
-            onChange={set('insurer')}
-            error={errors.insurer}
-            disabled={submitting}
-          />
-          <Field id="address" label="Property address" error={errors.address}>
-            <Input
-              id="address"
-              name="address"
-              autoComplete="street-address"
-              required
-              value={values.address}
-              onChange={onText('address')}
-              {...aria('address')}
-            />
-          </Field>
-        </div>
-      ) : (
-        <div className="space-y-10">
-          <ChoiceGroup
-            name="room"
-            legend="Which space?"
-            options={rooms}
-            value={values.room}
-            onChange={set('room')}
-            error={errors.room}
-            disabled={submitting}
-          />
-          <ChoiceGroup
-            name="timeline"
-            legend="When would you like to start?"
-            options={timelines}
-            value={values.timeline}
-            onChange={set('timeline')}
-            error={errors.timeline}
-            disabled={submitting}
-          />
-          <Field
-            id="staying"
-            label="What is staying?"
-            optional
-            error={errors.staying}
-          >
-            <Input
-              id="staying"
-              name="staying"
-              placeholder="Cabinets, flooring, the layout…"
-              value={values.staying}
-              onChange={onText('staying')}
-              {...aria('staying')}
-            />
-          </Field>
-        </div>
-      )}
-
-      <Field
-        id="message"
-        label={
-          recovery
-            ? 'Anything else we should know'
-            : 'Tell us about the project'
-        }
-        optional={recovery}
-        error={errors.message}
-      >
-        <Textarea
-          id="message"
-          name="message"
-          rows={recovery ? 3 : 5}
-          required={!recovery}
-          value={values.message}
-          onChange={onText('message')}
-          {...aria('message')}
-        />
-      </Field>
-
-      <div data-field="photos">
-        <p className="eyebrow text-muted-foreground">
-          Photos{' '}
-          <span className="normal-case tracking-normal opacity-70">
-            (optional)
-          </span>
+    <form
+      ref={formRef}
+      onSubmit={onSubmit}
+      noValidate
+      aria-label={partner ? 'Partner request' : 'Estimate request'}
+      aria-busy={submitting}
+      className={cn('relative', stack)}
+    >
+      <noscript>
+        <p className="text-sm leading-relaxed">
+          This form needs JavaScript. Call{' '}
+          <a href={site.phone.href} className="underline underline-offset-[0.4em]">
+            {site.phone.display}
+          </a>
+          .
         </p>
-        <p className="mb-4 mt-2 max-w-[52ch] text-sm text-muted-foreground">
-          {recovery
-            ? 'Take a few before anything is cleaned up: the damage, the wet materials, and the room.'
-            : 'A few photos of the space help us prepare for the walkthrough.'}
-        </p>
-        <PhotoPicker
-          id="photos"
-          photos={photos}
-          setPhotos={setPhotos}
-          disabled={submitting}
-        />
-      </div>
+      </noscript>
 
-      <div className="grid gap-8 sm:grid-cols-2">
-        <Field id="name" label="Name" error={errors.name}>
+      <div className="grid gap-6 sm:grid-cols-2">
+        <Field id={fid('name')} field="name" label="Name" error={errors.name}>
           <Input
-            id="name"
+            id={fid('name')}
             name="name"
             autoComplete="name"
             required
+            disabled={submitting}
             value={values.name}
             onChange={onText('name')}
-            {...aria('name')}
+            {...described(fid('name'), Boolean(errors.name), true)}
           />
         </Field>
-        <Field id="phone" label="Phone" error={errors.phone}>
+        <Field id={fid('phone')} field="phone" label="Phone" error={errors.phone}>
           <Input
-            id="phone"
+            id={fid('phone')}
             name="phone"
             type="tel"
             autoComplete="tel"
             inputMode="tel"
             required
+            disabled={submitting}
             value={values.phone}
             onChange={onText('phone')}
-            {...aria('phone')}
+            {...described(fid('phone'), Boolean(errors.phone), true)}
           />
         </Field>
       </div>
-      <Field id="email" label="Email" error={errors.email}>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          inputMode="email"
+
+      <div className="grid gap-6 sm:grid-cols-2">
+        <Field
+          id={fid('email')}
+          field="email"
+          label="Email"
+          optional={!partner}
+          error={errors.email}
+        >
+          <Input
+            id={fid('email')}
+            name="email"
+            type="email"
+            autoComplete="email"
+            inputMode="email"
+            required={partner}
+            disabled={submitting}
+            value={values.email}
+            onChange={onText('email')}
+            {...described(fid('email'), Boolean(errors.email), partner)}
+          />
+        </Field>
+        {partner ? (
+          <Field id={fid('company')} field="company" label="Company or brokerage" error={errors.company}>
+            <Input
+              id={fid('company')}
+              name="organization"
+              autoComplete="organization"
+              required
+              disabled={submitting}
+              value={values.company}
+              onChange={onText('company')}
+              {...described(fid('company'), Boolean(errors.company), true)}
+            />
+          </Field>
+        ) : (
+          <Field id={fid('address')} field="address" label="Address or ZIP" error={errors.address}>
+            <Input
+              id={fid('address')}
+              name="street-address"
+              autoComplete="street-address"
+              required
+              disabled={submitting}
+              placeholder="Street address or ZIP"
+              value={values.address}
+              onChange={onText('address')}
+              {...described(fid('address'), Boolean(errors.address), true)}
+            />
+          </Field>
+        )}
+      </div>
+
+      {!partner && (
+        <Field id={fid('service')} field="service" label="Service" error={errors.service}>
+          <div className="relative">
+            <select
+              id={fid('service')}
+              name="service"
+              required
+              disabled={submitting}
+              value={values.service}
+              onChange={onText('service')}
+              className={selectClass}
+              {...described(fid('service'), Boolean(errors.service), true)}
+            >
+              <option value="">Choose a service</option>
+              {leadServices.map((service) => (
+                <option key={service.value} value={service.value}>
+                  {service.label}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              className="pointer-events-none absolute right-0 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+              aria-hidden
+            />
+          </div>
+        </Field>
+      )}
+
+      {!partner && isUrgentService(values.service) && (
+        <p className="max-w-[52ch] text-sm leading-relaxed">
+          If water is still coming in or the roof is open, call{' '}
+          <a
+            href={site.phone.href}
+            className="underline underline-offset-[0.4em] hover:text-accent-ink"
+          >
+            {site.phone.display}
+          </a>{' '}
+          first. You can finish this request after you call.
+        </p>
+      )}
+
+      {!partner && (
+        <ChoiceGroup
+          name={fid('claim')}
+          field="claim"
+          legend="Is this an insurance claim?"
+          options={claimAnswers}
+          value={values.claim}
+          onChange={set('claim')}
+          error={errors.claim}
+          disabled={submitting}
           required
-          value={values.email}
-          onChange={onText('email')}
-          {...aria('email')}
+        />
+      )}
+
+      {!partner && askCarrier && (
+        <Field
+          id={fid('carrier')}
+          field="carrier"
+          label="Insurance carrier"
+          optional
+          error={errors.carrier}
+        >
+          <Input
+            id={fid('carrier')}
+            name="carrier"
+            autoComplete="off"
+            disabled={submitting}
+            value={values.carrier}
+            onChange={onText('carrier')}
+            {...described(fid('carrier'), Boolean(errors.carrier))}
+          />
+        </Field>
+      )}
+
+      <ChoiceGroup
+        name={fid('contact')}
+        field="contactMethod"
+        legend="Preferred contact"
+        options={contactMethods}
+        value={values.contactMethod}
+        onChange={set('contactMethod')}
+        error={errors.contactMethod}
+        disabled={submitting}
+        required
+      />
+
+      <Field
+        id={fid('message')}
+        field="message"
+        label="Message"
+        optional={!partner}
+        error={errors.message}
+      >
+        <Textarea
+          id={fid('message')}
+          name="message"
+          rows={density === 'compact' ? 3 : 4}
+          required={partner}
+          disabled={submitting}
+          value={values.message}
+          onChange={onText('message')}
+          {...described(fid('message'), Boolean(errors.message), partner)}
         />
       </Field>
 
+      {photosEnabled && (
+        <div data-field="photos">
+          <button
+            type="button"
+            className="text-sm underline underline-offset-[0.4em] hover:text-accent-ink"
+            aria-expanded={photosOpen}
+            aria-controls={fid('photos-panel')}
+            onClick={() => setPhotosOpen((open) => !open)}
+          >
+            {photos.length > 0
+              ? `Photos attached (${photos.length})`
+              : photosOpen
+                ? 'Hide photos'
+                : 'Add photos (optional)'}
+          </button>
+          <div id={fid('photos-panel')} hidden={!photosOpen} className="mt-4">
+            <p className="mb-4 max-w-[52ch] text-sm text-muted-foreground">
+              A few photos of the damage or the room help us prepare. Up to 6.
+            </p>
+            <PhotoPicker
+              id={fid('photos')}
+              photos={photos}
+              setPhotos={setPhotos}
+              disabled={submitting}
+            />
+          </div>
+        </div>
+      )}
+
       <div
-        aria-hidden
-        className="absolute -left-[9999px] h-0 w-0 overflow-hidden"
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-0 -z-10 h-0 w-0 overflow-hidden"
       >
-        <label htmlFor="website">Leave this field empty</label>
+        <label htmlFor={fid('hp')}>Leave this field empty</label>
         <input
-          id="website"
-          name="website"
+          ref={honeypotRef}
+          id={fid('hp')}
+          name="hp_field"
           type="text"
           tabIndex={-1}
           autoComplete="off"
+          data-lpignore="true"
+          data-1p-ignore="true"
+          className="h-px w-px border-0 p-0"
           value={values.website}
           onChange={onText('website')}
         />
       </div>
 
-      <div
-        ref={statusRef}
-        tabIndex={-1}
-        role="status"
-        aria-live="polite"
-        className="outline-none"
-      >
+      <div ref={statusRef} tabIndex={-1} role="status" aria-live="polite" className="outline-none">
+        {submitting && (
+          <p className="sr-only">{status.kind === 'submitting' ? status.step : 'Sending'}</p>
+        )}
         {status.kind === 'error' && (
           <div role="alert" className="border border-accent-ink p-6">
-            <p className="font-display text-2xl">
-              {status.reason === 'unavailable' &&
-                'Online requests are not available yet.'}
-              {status.reason === 'rate-limited' && 'Too many attempts.'}
-              {status.reason === 'failed' && 'We could not send your request.'}
-            </p>
+            <p className="font-display text-2xl">{errorCopy[status.reason].title}</p>
             <p className="mt-3 max-w-[52ch] leading-relaxed text-muted-foreground">
-              Nothing was sent. Your details are still in the form. Please call
-              or email us and we will help you directly.
+              {errorCopy[status.reason].body}
             </p>
-            <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+            <div className="mt-5 flex flex-col items-start gap-4">
               <a
                 href={site.phone.href}
-                className="inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
+                className="inline-flex items-center gap-3 font-display text-3xl leading-none transition-colors hover:text-accent-ink"
               >
-                <Phone className="size-4" aria-hidden />
+                <Phone className="size-5 text-accent-ink" aria-hidden />
                 {site.phone.display}
               </a>
               <a
                 href={mailto}
-                className="inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
+                className="inline-flex items-center gap-2 text-sm underline underline-offset-[0.5em] hover:text-accent-ink"
               >
                 <Mail className="size-4" aria-hidden />
                 Email us this message
@@ -607,32 +695,37 @@ export function LeadForm({
         )}
       </div>
 
-      <div className={cn('space-y-5', recovery && 'pt-2')}>
-        {recovery && (
-          <p className="max-w-[52ch] text-sm leading-relaxed text-muted-foreground">
-            {callbackPromise}
-          </p>
-        )}
+      <div className="space-y-5">
+        <p className="max-w-[52ch] text-sm leading-relaxed text-muted-foreground">{callbackPromise}</p>
         <FormConsent />
-        <Button
-          type="submit"
-          variant="accent"
-          size="xl"
-          disabled={submitting}
-          className="cursor-pointer"
-        >
-          {submitting ? (
-            <>
-              {status.kind === 'submitting' ? status.step : 'Sending'}
-              <Loader2 className="animate-spin" aria-hidden />
-            </>
-          ) : (
-            <>
-              {recovery ? 'Request a call back' : 'Send request'}
-              <ArrowUpRight className="arrow" aria-hidden />
-            </>
-          )}
-        </Button>
+        <div className="flex flex-col items-start gap-4">
+          <Button
+            type="submit"
+            variant="accent"
+            size={density === 'compact' ? 'lg' : 'xl'}
+            disabled={submitting}
+            className="w-full cursor-pointer sm:w-auto"
+          >
+            {submitting ? (
+              <>
+                {status.kind === 'submitting' ? status.step : 'Sending'}
+                <Loader2 className="animate-spin" aria-hidden />
+              </>
+            ) : (
+              <>
+                {buttonLabel}
+                <ArrowUpRight className="arrow" aria-hidden />
+              </>
+            )}
+          </Button>
+          <a
+            href={site.phone.href}
+            className="inline-flex items-center gap-2 text-sm underline underline-offset-[0.4em] hover:text-accent-ink"
+          >
+            <Phone className="size-4" aria-hidden />
+            Prefer to call? {site.phone.display}
+          </a>
+        </div>
       </div>
     </form>
   );

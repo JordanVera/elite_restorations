@@ -1,19 +1,18 @@
 import Link from "next/link";
-import { ArrowUpRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
+import { LeadForm } from "@/components/lead-form";
 import { RoofLinework } from "@/components/home/roof-linework";
-import { Magnetic, Reveal, SplitLines } from "@/components/motion";
+import { Reveal, SplitLines } from "@/components/motion";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import { MovingBorderButton } from "@/components/ui/moving-border";
 import { Spotlight } from "@/components/ui/spotlight";
-import { quickPicks } from "@/lib/inquiry";
 import { site } from "@/lib/site";
 
 export function HomeFinalCta() {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="relative isolate overflow-hidden bg-[#0a0a0b] py-32 text-[#efe9dd] md:py-48"
+      className="relative isolate overflow-hidden bg-[#0a0a0b] py-24 text-[#efe9dd] md:py-36"
     >
       <BackgroundBeams className="-z-10 text-[#efe9dd]" />
       <Spotlight className="-top-40 left-0 md:-left-32 md:-top-20" fill="#d93e39" />
@@ -40,64 +39,14 @@ export function HomeFinalCta() {
         />
 
         <div className="mt-20 grid gap-y-16 lg:grid-cols-12">
-          <form
-            action="/contact"
-            method="get"
-            className="lg:col-span-7"
-            aria-label="Start an estimate request"
-          >
-            <fieldset>
-              <legend className="eyebrow text-[#efe9dd]/70">What is it about?</legend>
-              <div className="mt-5 flex flex-wrap gap-3">
-                {quickPicks.map((pick, i) => (
-                  <label key={pick.value} className="cursor-pointer">
-                    <input
-                      type="radio"
-                      name="service"
-                      value={pick.value}
-                      defaultChecked={i === 0}
-                      className="peer sr-only"
-                    />
-                    <span className="inline-flex h-11 items-center border border-[#efe9dd]/30 px-5 text-[0.72rem] font-medium uppercase tracking-[0.18em] transition-colors duration-300 hover:border-[#efe9dd] peer-checked:border-[#f2665d] peer-checked:bg-[#d93e39] peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#f2665d]">
-                      {pick.label}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <div className="mt-12">
-              <label htmlFor="cta-note" className="eyebrow text-[#efe9dd]/70">
-                In a sentence
-              </label>
-              <input
-                id="cta-note"
-                name="note"
-                type="text"
-                maxLength={160}
-                autoComplete="off"
-                placeholder="The roof leaked in last night's storm."
-                className="mt-3 h-16 w-full border-0 border-b border-[#efe9dd]/40 bg-transparent font-display text-[clamp(1.5rem,3vw,2.5rem)] text-[#efe9dd] outline-none transition-colors placeholder:text-[#efe9dd]/35 focus-visible:border-[#f2665d]"
-              />
-            </div>
-
-            <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-6">
-              <Magnetic>
-                <MovingBorderButton
-                  as="button"
-                  type="submit"
-                  containerClassName="h-16 w-72"
-                  className="gap-3 bg-[#0a0a0b] text-[0.78rem] font-medium uppercase tracking-[0.2em] text-[#efe9dd] group-hover/mb:bg-[#1b1b1d]"
-                >
-                  Continue to estimate
-                  <ArrowUpRight className="size-4" aria-hidden />
-                </MovingBorderButton>
-              </Magnetic>
-              <p className="max-w-[24ch] text-sm text-[#efe9dd]/65">
-                You can review and adjust everything on the next page.
-              </p>
-            </div>
-          </form>
+          <div className="dark text-[#efe9dd] lg:col-span-7">
+            <LeadForm
+              idPrefix="home"
+              density="compact"
+              showPhotos={false}
+              submitLabel="Request an estimate"
+            />
+          </div>
 
           <div className="lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.1}>

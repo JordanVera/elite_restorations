@@ -4,7 +4,6 @@ import { Clock, Mail, MapPin } from 'lucide-react';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { isKnownService } from '@/lib/inquiry';
 import { pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -18,7 +17,6 @@ export const metadata: Metadata = pageMetadata({
 type SearchParams = Promise<{
   service?: string | string[];
   note?: string | string[];
-  path?: string | string[];
 }>;
 
 const first = (value: string | string[] | undefined) =>
@@ -32,7 +30,6 @@ export default async function ContactPage({
   const params = await searchParams;
   const service = first(params.service);
   const note = first(params.note)?.slice(0, 500);
-  const path = first(params.path);
 
   return (
     <>
@@ -123,10 +120,9 @@ export default async function ContactPage({
             </h2>
             <div className="relative mt-10">
               <LeadForm
-                key={`${service ?? ''}|${note ?? ''}|${path ?? ''}`}
-                defaultService={isKnownService(service) ? service : undefined}
+                key={`${service ?? ''}|${note ?? ''}`}
+                defaultService={service}
                 defaultMessage={note}
-                defaultPath={path}
               />
             </div>
           </Reveal>

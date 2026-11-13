@@ -25,15 +25,23 @@ async function deliverViaWebhook(lead: DeliverableLead): Promise<boolean> {
       }),
       signal: AbortSignal.timeout(8000),
     });
-    return response.ok;
-  } catch {
+    if (!response.ok) {
+      console.error("[leads] inquiry webhook rejected the lead", response.status);
+      return false;
+    }
+    return true;
+  } catch (error) {
+    console.error(
+      "[leads] inquiry webhook failed",
+      error instanceof Error ? error.message : "unknown error",
+    );
     return false;
   }
 }
 
 /**
- * Production sends through the GoDaddy email gateway. Local development uses
- * SMTP. INQUIRY_WEBHOOK_URL is an optional extra copy.
+ * Vercel delivers through SMTP. The GoDaddy gateway is not used there.
+ * INQUIRY_WEBHOOK_URL is an optional extra copy.
  */
 export async function deliverLead(lead: DeliverableLead): Promise<DeliveryResult> {
   const useWebhook = isWebhookConfigured();

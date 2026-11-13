@@ -113,7 +113,11 @@ export default function EmergencyPage() {
               Tell us what happened.
             </h2>
             <div className="relative mt-10">
-              <LeadForm lockPath="recovery" />
+              <LeadForm
+                idPrefix="emergency"
+                defaultService="storm-hail"
+                submitLabel="Request a call back"
+              />
             </div>
           </Reveal>
         </div>

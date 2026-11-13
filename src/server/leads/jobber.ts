@@ -1,5 +1,6 @@
 import "server-only";
 
+import { leadServices, optionLabel } from "@/lib/inquiry";
 import { describeLead } from "@/server/leads/describe";
 import type { DeliverableLead } from "@/server/leads/types";
 
@@ -12,7 +13,7 @@ import type { DeliverableLead } from "@/server/leads/types";
  *
  * Planned sequence once credentials exist:
  *   1. Find a client by email or phone, otherwise create one from `client`.
- *   2. For recovery leads, add `property` (the service address) to that client.
+ *   2. When the lead includes an address, add `property` to that client.
  *   3. Create a request titled `request.title` whose notes are `request.details`.
  *
  * Photo links in `request.details` are public Blob URLs. The sync should copy
@@ -30,14 +31,12 @@ export function toJobberIntake(lead: DeliverableLead): JobberIntake {
   const [firstName = "", ...rest] = lead.name.split(/\s+/);
   return {
     client: { firstName, lastName: rest.join(" "), email: lead.email, phone: lead.phone },
-    property: lead.path === "recovery" ? { street: lead.address } : null,
+    property: lead.path === "estimate" ? { street: lead.address } : null,
     request: {
       title:
-        lead.path === "recovery"
-          ? "Website request: water or storm damage"
-          : lead.path === "partner"
-            ? "Website request: partner referral"
-            : "Website request: remodel",
+        lead.path === "partner"
+          ? "Website request: partner referral"
+          : `Website request: ${optionLabel(leadServices, lead.service)}`,
       details: describeLead(lead),
       photoUrls: lead.photos.map((p) => p.url),
     },
