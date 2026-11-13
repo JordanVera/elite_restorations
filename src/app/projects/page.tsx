@@ -10,9 +10,9 @@ import { projectCategories, projects } from '@/lib/projects';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Projects',
+  title: 'Houston Remodeling Project Photos',
   description:
-    'Kitchens, bathrooms, floors, details and exterior work from Elite Restorations across Greater Houston, plus a look at storm and water recovery.',
+    'Kitchens, bathrooms, floors, roofs and storm recovery by Elite Restorations in Houston. Photographs from projects across the area.',
   path: '/projects',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
 });

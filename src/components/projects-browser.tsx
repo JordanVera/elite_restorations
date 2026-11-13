@@ -37,9 +37,10 @@ export function ProjectsBrowser({
     return map;
   }, [photos]);
 
-  React.useEffect(() => {
+  const selectCategory = (category: string) => {
+    setActive(category);
     setVisibleCount(BATCH);
-  }, [active]);
+  };
 
   return (
     <div>
@@ -55,7 +56,7 @@ export function ProjectsBrowser({
               key={category}
               type="button"
               aria-pressed={selected}
-              onClick={() => setActive(category)}
+              onClick={() => selectCategory(category)}
               className={cn(
                 'group relative py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] transition-colors',
                 selected

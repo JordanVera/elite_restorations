@@ -6,32 +6,21 @@ import { CtaBand } from "@/components/cta-band";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { ReviewCard } from "@/components/ui/infinite-review-cards";
-import { pageMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
+import { localBusinessSchema, pageMetadata } from "@/lib/seo";
 import { googleReviews, testimonials } from "@/lib/testimonials";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Reviews",
-  description: `Five-star Google reviews for Elite Restorations in Houston. ${googleReviews.score} stars across ${googleReviews.count} reviews.`,
+  title: "Houston Remodeling Reviews",
+  description: `Google reviews for Elite Restorations in Houston: ${googleReviews.score} stars across ${googleReviews.count} reviews.`,
   path: "/testimonials",
+  image: "/images/projects/kitchens/coffered-ceiling-island.jpg",
 });
 
 export default function TestimonialsPage() {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "HomeAndConstructionBusiness",
-          name: site.name,
-          url: site.url,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: String(googleReviews.score),
-            reviewCount: String(googleReviews.count),
-            bestRating: "5",
-            worstRating: "1",
-          },
+        data={localBusinessSchema({
           review: testimonials.map((item) => ({
             "@type": "Review",
             author: { "@type": "Person", name: item.author },
@@ -43,7 +32,7 @@ export default function TestimonialsPage() {
             },
             publisher: { "@type": "Organization", name: "Google" },
           })),
-        }}
+        })}
       />
       <PageHero
         eyebrow="Reviews"

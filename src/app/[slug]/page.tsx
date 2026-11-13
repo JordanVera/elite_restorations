@@ -13,7 +13,7 @@ import { Photo } from '@/components/photo';
 import { articlePath, articles, getArticle } from '@/lib/articles';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
-import { absoluteUrl, pageMetadata } from '@/lib/seo';
+import { absoluteUrl, localTitle, pageMetadata } from '@/lib/seo';
 import {
   getService,
   servicePath,
@@ -65,7 +65,7 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (article) {
     return pageMetadata({
-      title: article.title,
+      title: article.metaTitle,
       description: article.description,
       path: articlePath(article.slug),
       image: article.image,
@@ -75,7 +75,7 @@ export async function generateMetadata({
   if (!service) return {};
   const path = servicePath(service.slug);
   return pageMetadata({
-    title: `${service.name} in Houston, TX`,
+    title: localTitle(service.metaTitle ?? service.name),
     description: service.metaDescription,
     path,
     image: service.image.src,
@@ -115,6 +115,9 @@ export default async function ServicePage({
           { name: service.name, path },
         ]}
       >
+        <p className="mt-8 text-[0.72rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          Serving Houston since {site.founded}
+        </p>
         {service.emergency && (
           <Reveal
             delay={0.5}
@@ -214,6 +217,21 @@ export default async function ServicePage({
                   {service.materials.items.join(' · ')}
                 </p>
               </div>
+            )}
+            {service.links && service.links.length > 0 && (
+              <ul className="mt-8 space-y-3">
+                {service.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                    >
+                      {link.label}
+                      <ArrowUpRight className="size-4" aria-hidden />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             )}
           </Reveal>
         </div>
@@ -416,8 +434,8 @@ export default async function ServicePage({
         }
         body={
           service.emergency
-            ? 'Call first if you can. Otherwise tell us what happened and we will call you back.'
-            : 'Share a few details and we will follow up to schedule a walkthrough.'
+            ? `Serving Houston since ${site.founded}. Call ${site.phone.display} if water is coming in or the roof is open.`
+            : `Serving Houston since ${site.founded}. Call ${site.phone.display} for a free estimate.`
         }
         service={service.slug}
         emergency={service.emergency}

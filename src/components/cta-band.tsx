@@ -36,7 +36,7 @@ export function CtaBand({
         <Reveal delay={0.15} className="flex flex-col items-start gap-6 md:items-end">
           <Button asChild size="xl" variant="accent">
             <Link href={href}>
-              {emergency ? "Request emergency help" : "Request an estimate"}
+              {emergency ? "Request emergency help" : "Request a free estimate"}
               <ArrowUpRight className="arrow" aria-hidden />
             </Link>
           </Button>

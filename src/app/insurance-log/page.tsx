@@ -8,9 +8,9 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Insurance Claim Packet for Water & Storm Damage",
+  title: "Insurance Claim Help in Houston",
   description:
-    "A first-night checklist for an active leak or an open roof, then a room-by-room claim packet your adjuster can take. Free from Elite Restorations in Houston.",
+    "First-night checklist for a leak or an open roof, then a room-by-room claim packet. Free from Elite Restorations in Houston.",
   path: "/insurance-log",
   image: "/images/services/water-damage-restoration.jpg",
 });
@@ -40,6 +40,13 @@ export default function InsuranceLogPage() {
             className="inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             Request help online
+            <ArrowUpRight className="size-4" aria-hidden />
+          </Link>
+          <Link
+            href="/insurance-claims"
+            className="inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+          >
+            Insurance claims help
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
         </div>

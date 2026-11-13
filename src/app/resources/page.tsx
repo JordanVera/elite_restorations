@@ -7,9 +7,9 @@ import { PageHero } from '@/components/page-hero';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Resources',
+  title: 'Houston Remodeling Resources',
   description:
-    'Project walkthroughs for homeowners planning a remodel, and a partner portal for realtors who refer work to Elite Restorations.',
+    'Project walkthroughs for Houston homeowners planning a remodel, and a partner portal for realtors who refer work to Elite Restorations.',
   path: '/resources',
 });
 

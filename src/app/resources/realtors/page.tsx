@@ -12,9 +12,9 @@ import { Button } from '@/components/ui/button';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Realtor resources',
+  title: 'Realtor Partners in Houston, TX',
   description:
-    'Partner benefits, referral tiers, and project walkthroughs for realtors and investors who refer remodeling work to Elite Restorations.',
+    'Partner benefits and project walkthroughs for Houston realtors and investors who refer remodeling work to Elite Restorations.',
   path: '/resources/realtors',
 });
 

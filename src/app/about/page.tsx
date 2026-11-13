@@ -11,9 +11,9 @@ import { CtaBand } from '@/components/cta-band';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'About',
+  title: 'About Our Houston Remodeling Team',
   description:
-    'Elite Restorations is a family-owned remodeling and restoration company serving Greater Houston since 1993. Meet the people who answer the phone and do the work.',
+    'Family-owned remodeling and restoration in Houston since 1993. Meet the people at Elite Restorations who answer the phone and do the work.',
   path: '/about',
   image: '/images/about/george_family.jpeg',
 });

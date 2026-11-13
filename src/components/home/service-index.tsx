@@ -19,10 +19,21 @@ export type IndexService = {
   emergency?: boolean;
 };
 
+export type CoreLink = {
+  href: string;
+  label: string;
+};
+
 const PREVIEW_COUNT = 6;
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
 
-export function ServiceIndex({ services }: { services: IndexService[] }) {
+export function ServiceIndex({
+  services,
+  coreLinks = [],
+}: {
+  services: IndexService[];
+  coreLinks?: CoreLink[];
+}) {
   const [activeSlug, setActiveSlug] = React.useState(services[0].slug);
   const [expanded, setExpanded] = React.useState(false);
   const reduceMotion = useReducedMotion();
@@ -56,7 +67,7 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
               id="services-heading"
               className="t-xl mt-6"
               lines={[
-                'Fifteen trades.',
+                'Seventeen trades.',
                 <span key="b">
                   One <em className="text-accent-ink">team.</em>
                 </span>,
@@ -73,6 +84,21 @@ export function ServiceIndex({ services }: { services: IndexService[] }) {
             </Reveal>
           </div>
         </div>
+
+        {coreLinks.length > 0 && (
+          <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+            {coreLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div className="mt-20 grid gap-x-16 lg:grid-cols-12">
           <ul id={listId} className="lg:col-span-7">

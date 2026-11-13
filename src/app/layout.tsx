@@ -5,7 +5,7 @@ import { Providers } from '@/components/providers';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { JsonLd } from '@/components/json-ld';
-import { localBusinessSchema } from '@/lib/seo';
+import { documentTitle, localBusinessSchema } from '@/lib/seo';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -25,23 +25,37 @@ const body = Geist({
   display: 'swap',
 });
 
+const defaultTitle = documentTitle('Remodeling & Roofing in Houston, TX');
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Elite Restorations | Remodeling & Restoration in Houston, TX',
+    default: defaultTitle,
     template: '%s | Elite Restorations',
   },
   description: site.description,
   applicationName: site.name,
-  alternates: { canonical: '/' },
+  alternates: { canonical: site.url },
   openGraph: {
     type: 'website',
     siteName: site.name,
     locale: 'en_US',
-    title: 'Elite Restorations | Remodeling & Restoration in Houston, TX',
+    url: site.url,
+    title: defaultTitle,
     description: site.description,
+    images: [
+      {
+        url: '/images/projects/kitchens/coffered-ceiling-island.jpg',
+        alt: 'Houston kitchen remodel by Elite Restorations',
+      },
+    ],
   },
-  twitter: { card: 'summary_large_image' },
+  twitter: {
+    card: 'summary_large_image',
+    title: defaultTitle,
+    description: site.description,
+    images: ['/images/projects/kitchens/coffered-ceiling-island.jpg'],
+  },
 };
 
 export const viewport: Viewport = {

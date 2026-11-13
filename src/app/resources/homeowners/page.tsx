@@ -12,9 +12,9 @@ import { pageMetadata } from '@/lib/seo';
 import { ctaHref } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Homeowner resources',
+  title: 'Homeowner Remodel Help in Houston',
   description:
-    'Watch how Elite Restorations sequences bathroom, kitchen, and whole-home remodels, then request a free estimate in Greater Houston.',
+    'Watch how Elite Restorations sequences bathroom, kitchen, and whole-home remodels, then request a free estimate in Houston.',
   path: '/resources/homeowners',
 });
 

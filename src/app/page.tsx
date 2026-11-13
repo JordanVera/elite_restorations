@@ -15,9 +15,9 @@ import { services } from '@/lib/services';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Elite Restorations | Remodeling & Restoration in Houston, TX',
+  title: 'Remodeling & Roofing in Houston, TX',
   description:
-    'Family-owned remodeling and restoration contractor serving Greater Houston since 1993. From emergency roof and water-damage response to kitchens, baths and floors.',
+    'Family-owned remodeling, restoration and roofing in Houston since 1993. Kitchens, baths, roofs and water damage. Call (713) 909-0034.',
   path: '/',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
 });
@@ -34,6 +34,14 @@ export default function HomePage() {
       count: p.gallery.length,
     }));
 
+  const coreLinks = [
+    { href: '/kitchen-remodeling', label: 'Kitchen remodeling' },
+    { href: '/bathroom-remodeling', label: 'Bathroom remodeling' },
+    { href: '/roofing', label: 'Roofing' },
+    { href: '/water-damage-restoration', label: 'Restoration' },
+    { href: '/insurance-claims', label: 'Insurance claims help' },
+  ];
+
   const indexServices: IndexService[] = services.map((s) => ({
     slug: s.slug,
     name: s.name,
@@ -48,7 +56,7 @@ export default function HomePage() {
       <HomeHero />
       <HomeManifesto />
       {/* <FeaturedTrack projects={featured} /> */}
-      <ServiceIndex services={indexServices} />
+      <ServiceIndex services={indexServices} coreLinks={coreLinks} />
       <HomeProcess />
       <HomeTestimonials />
       <HomeFinalCta />

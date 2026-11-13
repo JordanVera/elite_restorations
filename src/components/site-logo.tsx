@@ -9,6 +9,7 @@ export function SiteLogo({ className }: { className?: string }) {
       alt="Elite Restorations"
       width={743}
       height={336}
+      sizes="220px"
       priority
       className={cn('h-11 w-auto', className)}
     />
