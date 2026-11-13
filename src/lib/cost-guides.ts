@@ -1,9 +1,19 @@
 import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
+import type { GuideSection } from '@/lib/guides/types';
+import {
+  bathroomCostFaqs,
+  bathroomCostSections,
+  kitchenCostFaqs,
+  kitchenCostSections,
+  roofCostFaqs,
+  roofCostSections,
+} from '@/lib/guides/cost-copy';
 import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
 import { site } from '@/lib/site';
+import { wordCount } from '@/lib/words';
 
 export type CostRange = {
   label: string;
@@ -28,6 +38,7 @@ export type CostGuide = {
   ranges: readonly CostRange[];
   faqs: readonly { q: string; a: string }[];
   related: readonly { href: string; label: string }[];
+  sections: readonly GuideSection[];
 };
 
 export function rangesArePublishable(ranges: readonly CostRange[]) {
@@ -110,7 +121,9 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a number for my kitchen?',
         a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
       },
+      ...kitchenCostFaqs,
     ],
+    sections: kitchenCostSections,
     related: [
       { href: '/kitchen-remodeling', label: 'Houston kitchen remodeling' },
       { href: '/kitchen-remodeling-houston-tx', label: 'Kitchen remodeling in Houston' },
@@ -173,7 +186,9 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a price?',
         a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
       },
+      ...bathroomCostFaqs,
     ],
+    sections: bathroomCostSections,
     related: [
       { href: '/bathroom-remodeling', label: 'Houston bathroom remodeling' },
       { href: '/bathroom-remodeling-houston-tx', label: 'Bathroom remodeling in Houston' },
@@ -239,7 +254,9 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a roof estimate?',
         a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
       },
+      ...roofCostFaqs,
     ],
+    sections: roofCostSections,
     related: [
       { href: '/roof-replacement', label: 'Houston roof replacement' },
       { href: '/roof-replacement-houston-tx', label: 'Roof replacement in Houston' },
@@ -261,6 +278,36 @@ export function getCostGuide(slug: string) {
 
 export function estimateHref(serviceSlug: string) {
   return `/contact?service=${encodeURIComponent(serviceSlug)}`;
+}
+
+function costGuideWords(guide: CostGuide) {
+  return wordCount([
+    guide.lede,
+    ...guide.factors.flatMap((factor) => [factor.title, factor.body]),
+    ...guide.ranges.flatMap((range) => [range.label, String(range.low), String(range.high)]),
+    'These are typical planning ranges, not quotes. The final price comes from an on-site estimate.',
+    ...guide.sections.flatMap((section) => [
+      section.eyebrow,
+      section.heading,
+      ...section.paragraphs,
+      ...(section.points ?? []).flatMap((point) => [point.title, point.body]),
+    ]),
+    ...guide.faqs.flatMap((faq) => [faq.q, faq.a]),
+  ]);
+}
+
+const costDepthErrors: string[] = [];
+for (const guide of costGuides) {
+  const words = costGuideWords(guide);
+  if (words < 1500 || words > 1900) {
+    costDepthErrors.push(`Cost guide ${guide.slug} is ${words} words`);
+  }
+  if (guide.faqs.length < 6 || guide.faqs.length > 10) {
+    costDepthErrors.push(`Cost guide ${guide.slug} has ${guide.faqs.length} FAQs`);
+  }
+}
+if (costDepthErrors.length > 0) {
+  throw new Error(costDepthErrors.join('\n'));
 }
 
 for (const guide of costGuides) {

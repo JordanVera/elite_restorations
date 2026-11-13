@@ -3,6 +3,7 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
+import { ProseSections } from '@/components/prose-sections';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import {
@@ -121,6 +122,8 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
           </p>
         </div>
       </section>
+
+      <ProseSections sections={guide.sections} />
 
       <section aria-labelledby="cost-faq-heading" className="border-t border-border py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
