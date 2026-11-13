@@ -13,7 +13,7 @@ const team: {
   imageClassName?: string;
 }[] = [
   {
-    name: 'George Rodriguez',
+    name: 'George Rodriguez Jr.',
     role: 'Owner',
     body: 'Started in construction at 17, working beside his father, and took over the company when his father retired. His son, George III, now works alongside him.',
     photo: img(

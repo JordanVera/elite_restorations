@@ -18,12 +18,18 @@ function Word({
   range: [number, number];
   emphasis?: boolean;
 }) {
-  const opacity = useTransform(progress, range, [0.16, 1]);
+  const fill = useTransform(progress, range, [0, 1]);
   return (
     <motion.span
       data-reveal
-      style={{ opacity }}
-      className={cn("mr-[0.22em] inline-block", emphasis && "italic text-accent-ink")}
+      style={{
+        ["--w" as string]: fill,
+        ["--ink" as string]: emphasis ? "var(--accent-ink)" : "var(--foreground)",
+      }}
+      className={cn(
+        "mr-[0.22em] inline-block text-[color-mix(in_srgb,var(--ink)_calc(var(--w)*100%),var(--muted-foreground))]",
+        emphasis && "italic",
+      )}
     >
       {children}
     </motion.span>

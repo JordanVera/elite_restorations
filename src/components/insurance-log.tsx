@@ -142,7 +142,7 @@ function PhotoSlot({
             <button
               type="button"
               onClick={onClear}
-              className="absolute right-2 top-2 inline-flex size-8 items-center justify-center bg-background/90 transition-colors hover:bg-accent hover:text-white"
+              className="absolute right-2 top-2 inline-flex size-11 items-center justify-center bg-background/90 transition-colors hover:bg-accent hover:text-white"
             >
               <X className="size-4" aria-hidden />
               <span className="sr-only">
@@ -400,7 +400,7 @@ export function InsuranceLog() {
 
   return (
     <div className="space-y-20">
-      {/* <section
+      <section
         id="first-night"
         aria-labelledby="first-night-title"
         className="max-w-lg scroll-mt-28"
@@ -484,7 +484,7 @@ export function InsuranceLog() {
             </ol>
           </>
         )}
-      </section> */}
+      </section>
 
       <section aria-labelledby="log-property">
         <p className="eyebrow text-accent-ink">Step 1</p>

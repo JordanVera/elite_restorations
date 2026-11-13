@@ -50,10 +50,10 @@ export function FamilyEssay() {
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <Reveal>
               <p className="measure">
-                George Rodriguez began working in construction at 17, alongside
-                his father. Years of hands-on work and mentorship followed, and
-                when his father retired, George took over the company and kept
-                it going.
+                George Rodriguez Jr. began working in construction at 17,
+                alongside his father. Years of hands-on work and mentorship
+                followed, and when his father retired, George took over the
+                company and kept it going.
               </p>
             </Reveal>
             <Reveal delay={0.08}>

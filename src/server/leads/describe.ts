@@ -18,13 +18,15 @@ export function describeLead(lead: DeliverableLead, options?: DescribeOptions): 
   if (lead.path === "remodel") {
     lines.push(`Remodel: ${label(rooms, lead.room)}`, `Timeline: ${label(timelines, lead.timeline)}`);
     if (lead.staying) lines.push(`Staying: ${lead.staying}`);
-  } else {
+  } else if (lead.path === "recovery") {
     lines.push(
       `Recovery: ${label(incidents, lead.incident)}`,
       `Water still coming in: ${lead.waterActive === "yes" ? "Yes" : "No"}`,
       `Insurance claim: ${label(insurerAnswers, lead.insurer)}`,
       `Address: ${lead.address}`,
     );
+  } else {
+    lines.push(`Partner referral: ${lead.company}`);
   }
 
   if (lead.message) lines.push("", lead.message);

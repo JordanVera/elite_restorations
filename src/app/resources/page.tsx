@@ -9,7 +9,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling Resources',
   description:
-    'Project walkthroughs for Houston homeowners planning a remodel, and a partner portal for realtors who refer work to Elite Restorations.',
+    'Step-by-step remodel sequences for Houston homeowners, and a page for realtors who refer work to Elite Restorations.',
   path: '/resources',
 });
 
@@ -19,14 +19,14 @@ const portals = [
     href: '/resources/homeowners',
     eyebrow: 'Homeowners',
     title: 'Research the project.',
-    body: 'Watch how a shower, kitchen, or whole-home remodel actually proceeds, then ask for an estimate.',
+    body: 'See how a shower, kitchen, or whole-home remodel proceeds, then ask for an estimate.',
   },
   {
     index: '02',
     href: '/resources/realtors',
     eyebrow: 'Realtors',
     title: 'Refer the work.',
-    body: 'The same project library, plus partner benefits, referral tiers, and a way to send a project.',
+    body: 'The same project steps, plus a direct way to send a flip or an introduction.',
   },
 ];
 

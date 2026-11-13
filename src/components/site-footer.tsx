@@ -26,7 +26,7 @@ export function SiteFooter() {
             </p>
             <a
               href={site.phone.href}
-              className="font-display mt-4 inline-block text-[clamp(2.4rem,4.5vw,3.75rem)] leading-none tracking-[-0.03em] transition-colors hover:text-accent-ink"
+              className="font-display mt-4 inline-block text-[clamp(1.7rem,8vw,3.75rem)] leading-none tracking-[-0.03em] transition-colors hover:text-accent-ink"
             >
               {site.phone.display}
             </a>

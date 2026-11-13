@@ -16,7 +16,12 @@ export function inquiryReference(): string {
 }
 
 export function inquirySubject(lead: DeliverableLead, reference: string): string {
-  const kind = lead.path === "recovery" ? "Storm / water damage" : "Remodel estimate";
+  const kind =
+    lead.path === "recovery"
+      ? "Storm / water damage"
+      : lead.path === "partner"
+        ? "Partner referral"
+        : "Remodel estimate";
   return `[${site.name}] ${kind} · ${lead.name} · ${reference}`;
 }
 
@@ -40,13 +45,15 @@ function detailRows(lead: DeliverableLead): DetailRow[] {
       { label: "Timeline", value: label(timelines, lead.timeline) },
     );
     if (lead.staying) rows.push({ label: "Staying in home", value: lead.staying });
-  } else {
+  } else if (lead.path === "recovery") {
     rows.push(
       { label: "What happened", value: label(incidents, lead.incident) },
       { label: "Water still active", value: lead.waterActive === "yes" ? "Yes" : "No" },
       { label: "Insurance claim", value: label(insurerAnswers, lead.insurer) },
       { label: "Property", value: lead.address },
     );
+  } else {
+    rows.push({ label: "Company", value: lead.company });
   }
 
   return rows;
@@ -81,7 +88,12 @@ export function buildInquiryHtml(
   reference: string,
   options: { photosAttached: number; photoFilenames: string[] },
 ): string {
-  const pathTitle = lead.path === "recovery" ? "Water or storm damage" : "Remodel request";
+  const pathTitle =
+    lead.path === "recovery"
+      ? "Water or storm damage"
+      : lead.path === "partner"
+        ? "Partner referral"
+        : "Remodel request";
   const rows = detailRows(lead);
 
   const details = rows

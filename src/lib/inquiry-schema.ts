@@ -54,7 +54,23 @@ export const recoverySchema = z.object({
   message: z.string().trim().max(2000, "Please keep this under 2,000 characters.").optional().default(""),
 });
 
-export const leadSchema = z.discriminatedUnion("path", [remodelSchema, recoverySchema]);
+export const partnerSchema = z.object({
+  ...shared,
+  path: z.literal("partner"),
+  phone: requiredPhone,
+  company: z
+    .string()
+    .trim()
+    .min(2, "Please enter your company or brokerage.")
+    .max(120, "That company name is too long."),
+  message: z
+    .string()
+    .trim()
+    .min(10, "Please tell us a little more, at least a sentence.")
+    .max(2000, "Please keep this under 2,000 characters."),
+});
+
+export const leadSchema = z.discriminatedUnion("path", [remodelSchema, recoverySchema, partnerSchema]);
 
 export type LeadInput = z.input<typeof leadSchema>;
 export type Lead = z.output<typeof leadSchema>;

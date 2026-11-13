@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import { type TrackProject } from '@/components/home/featured-track';
 import { HomeFinalCta } from '@/components/home/home-final-cta';
 import { HomeHero } from '@/components/home/home-hero';
 import { HomeManifesto } from '@/components/home/home-manifesto';
@@ -10,7 +9,6 @@ import {
   ServiceIndex,
   type IndexService,
 } from '@/components/home/service-index';
-import { projects } from '@/lib/projects';
 import { services } from '@/lib/services';
 import { pageMetadata } from '@/lib/seo';
 
@@ -23,17 +21,6 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function HomePage() {
-  const featured: TrackProject[] = projects
-    .filter((p) => p.featured)
-    .map((p) => ({
-      slug: p.slug,
-      title: p.title,
-      category: p.category,
-      tagline: p.tagline,
-      cover: p.cover,
-      count: p.gallery.length,
-    }));
-
   const coreLinks = [
     { href: '/kitchen-remodeling', label: 'Kitchen remodeling' },
     { href: '/bathroom-remodeling', label: 'Bathroom remodeling' },
@@ -55,7 +42,6 @@ export default function HomePage() {
     <>
       <HomeHero />
       <HomeManifesto />
-      {/* <FeaturedTrack projects={featured} /> */}
       <ServiceIndex services={indexServices} coreLinks={coreLinks} />
       <HomeProcess />
       <HomeTestimonials />

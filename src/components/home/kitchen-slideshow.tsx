@@ -28,9 +28,8 @@ export function KitchenSlideshow() {
                 alt=""
                 fill
                 sizes="100vw"
-                quality={85}
+                quality={75}
                 priority={i === 0}
-                loading={i === 0 ? undefined : 'eager'}
                 style={{ objectFit: 'cover', objectPosition: slide.position }}
               />
             </div>

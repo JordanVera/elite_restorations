@@ -161,7 +161,7 @@ export const services: Service[] = [
       },
       {
         q: 'What is the difference between a refresh and a full remodel?',
-        a: 'A refresh might be a new vanity, mirror and light. A full remodel moves the shower or tub, retile the room and changes the layout. We scope it to the bathroom you have, from a West University powder room to a Memorial primary.',
+        a: 'A refresh might be a new vanity, mirror and light. A full remodel moves the shower or tub, retiles the room and changes the layout. We scope it to the bathroom you have, from a West University powder room to a Memorial primary.',
       },
       {
         q: 'Do you help choose fixtures and tile?',
