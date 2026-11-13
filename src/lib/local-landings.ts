@@ -31,6 +31,7 @@ const shortNames: Record<string, readonly string[]> = {
   'roof-replacement': ['Roof Replacement'],
   'roofing-emergency-tarp-repair': ['Emergency Roof Repair', 'Roof Emergency'],
   siding: ['Siding'],
+  'patios-decks': ['Patios & Decks'],
   'water-damage-restoration': ['Water Damage Restoration', 'Water Damage Help'],
   'insurance-claims': ['Insurance Claims Help', 'Claim Help'],
   'painting-drywall-repair': ['Painting & Drywall Repair', 'Painting & Drywall'],
@@ -341,6 +342,32 @@ const angles: Record<string, readonly Angle[]> = {
         'A tarp stops more water from entering. Wet insulation and drywall are a separate drying job, and we handle that restoration as well.',
       onSite: 'We say which work is the temporary cover and which work is the permanent roof.',
       blurb: 'Emergency tarping until the permanent roof repair can be scheduled.',
+    },
+  ],
+  'patios-decks': [
+    {
+      focus: 'whether the framing, ledger, and footings can stay or need to come out',
+      before:
+        'Sound structure can take new decking and rails. Rotted posts, a soft ledger, or a failing footing come out before the surface goes back.',
+      onSite:
+        'We look at how the deck meets the house, the slope of the yard, and the door the new work has to reach.',
+      blurb: 'New decks and rebuilds, after a look at the framing and the ledger.',
+    },
+    {
+      focus: 'a patio, a deck, or a cover, sized to the yard and the door it meets',
+      before:
+        'A ground-level patio and an elevated deck are different structures. The cover, when there is one, is planned so rain sheds away from the wall.',
+      onSite:
+        'We measure the house side and talk through wood or composite before materials are ordered.',
+      blurb: 'Patios, decks, and covers scoped from the yard and the back door.',
+    },
+    {
+      focus: 'rails, stairs, and how the new work meets the siding and the door',
+      before:
+        'Those pieces are what make the outdoor room feel finished, and they are part of the same project as the surface.',
+      onSite:
+        'Houston sun and rain are part of the material conversation. We say what each option asks of you before anything is ordered.',
+      blurb: 'Rails, stairs, and a surface chosen for Houston sun and rain.',
     },
   ],
   siding: [

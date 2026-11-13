@@ -18,13 +18,18 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Westchase: {
     setting:
-      'Westchase sits on the west side of Houston, with townhomes and single-family houses, many of them built from the 1970s through the 1990s.',
-    clause: 'townhomes and single-family houses on the west side',
+      'Westchase sits on the west side of Houston, with townhomes and single-family houses, many of them built from the 1970s through the 1990s. Our office at 511 Crestwater Ct is in 77082, in this part of town.',
+    clause: 'townhomes and single-family houses around the 77082 office',
   },
   Alief: {
     setting:
-      'Alief is a southwest Houston community of ranch houses and two-story homes, usually on slabs, where kitchens and baths have often been updated one piece at a time.',
-    clause: 'ranch houses and two-story homes, usually on slabs',
+      'Alief is a southwest Houston community of ranch houses and two-story homes, usually on slabs, where kitchens and baths have often been updated one piece at a time. It sits just south of our office ZIP, 77082.',
+    clause: 'ranch houses and two-story homes just south of the office',
+  },
+  'Energy Corridor': {
+    setting:
+      'The Energy Corridor is the west Houston district along Interstate 10, beside our office in 77082. It mixes single-family houses, townhomes, and apartments with the offices the corridor is named for.',
+    clause: 'houses and townhomes along Interstate 10, beside the 77082 office',
   },
   Katy: {
     setting:

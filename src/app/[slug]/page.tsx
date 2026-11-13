@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, ArrowUpRight, Check, Phone } from 'lucide-react';
 
+import { AreaPageView } from '@/components/area-page';
 import { AreasWeServe } from '@/components/areas-we-serve';
 import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
@@ -12,6 +13,7 @@ import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
+import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
@@ -41,12 +43,11 @@ function photographsFor(service: Service) {
   const shift = count === 0 ? 0 : (galleryShift[service.slug] ?? 0) % count;
   const rotated =
     shift === 0 ? all : [...all.slice(shift), ...all.slice(0, shift)];
-  const rest = rotated.filter((item) => item.image.src !== service.image.src);
+  const heroSrc = service.image?.src;
+  const rest = rotated.filter((item) => item.image.src !== heroSrc);
   const localPhoto = rest[0];
   const used = new Set(
-    [service.image.src, localPhoto?.image.src].filter((src): src is string =>
-      Boolean(src),
-    ),
+    [heroSrc, localPhoto?.image.src].filter((src): src is string => Boolean(src)),
   );
   const masonry = rest.filter((item) => !used.has(item.image.src)).slice(0, 6);
   return { localPhoto, masonry };
@@ -57,6 +58,7 @@ export function generateStaticParams(): Params[] {
     ...services.map((s) => ({ slug: s.slug })),
     ...articles.map((article) => ({ slug: article.slug })),
     ...localLandings.map((page) => ({ slug: page.slug })),
+    ...areaPages.map((page) => ({ slug: page.slug })),
   ];
 }
 
@@ -73,7 +75,15 @@ export async function generateMetadata({
       title: landing.title,
       description: landing.description,
       path: landing.path,
-      image: service?.image.src,
+      image: service?.image?.src,
+    });
+  }
+  const area = getAreaPage(slug);
+  if (area) {
+    return pageMetadata({
+      title: area.title,
+      description: area.description,
+      path: area.path,
     });
   }
   const article = getArticle(slug);
@@ -92,7 +102,7 @@ export async function generateMetadata({
     title: localTitle(service.metaTitle ?? service.name),
     description: service.metaDescription,
     path,
-    image: service.image.src,
+    image: service.image?.src,
   });
 }
 
@@ -104,6 +114,9 @@ export default async function ServicePage({
   const { slug } = await params;
   const landing = getLocalLanding(slug);
   if (landing) return <LocalLandingView landing={landing} />;
+
+  const area = getAreaPage(slug);
+  if (area) return <AreaPageView page={area} />;
 
   const article = getArticle(slug);
   if (article) return <ArticleView article={article} />;
@@ -170,18 +183,20 @@ export default async function ServicePage({
         )}
       </PageHero>
 
-      <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
-        <ImageReveal
-          immediate
-          className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
-        >
-          <Photo
-            image={service.image}
-            sizes="(min-width: 1920px) 1800px, 96vw"
-            priority
-          />
-        </ImageReveal>
-      </div>
+      {service.image && (
+        <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
+          <ImageReveal
+            immediate
+            className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
+          >
+            <Photo
+              image={service.image}
+              sizes="(min-width: 1920px) 1800px, 96vw"
+              priority
+            />
+          </ImageReveal>
+        </div>
+      )}
 
       <section aria-labelledby="scope-heading" className="py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-14 lg:grid-cols-12 lg:gap-20">
@@ -468,7 +483,7 @@ export default async function ServicePage({
           serviceType: service.name,
           description: service.metaDescription,
           url: absoluteUrl(path),
-          image: absoluteUrl(service.image.src),
+          ...(service.image ? { image: absoluteUrl(service.image.src) } : {}),
           provider: { '@id': `${site.url}/#business` },
           areaServed: [
             { '@type': 'AdministrativeArea', name: 'Greater Houston, Texas' },

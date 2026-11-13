@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 
+import { areaPages } from '@/lib/area-pages';
 import { articlePath, articles } from '@/lib/articles';
 import { localLandings } from '@/lib/local-landings';
 import { projects } from '@/lib/projects';
@@ -43,6 +44,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localLandings.map((page) => ({
       url: absoluteUrl(page.path),
       priority: 0.5,
+    })),
+    ...areaPages.map((page) => ({
+      url: absoluteUrl(page.path),
+      priority: 0.6,
     })),
   ];
 }

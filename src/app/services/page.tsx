@@ -6,6 +6,7 @@ import { CtaBand } from '@/components/cta-band';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
+import { areaPages } from '@/lib/area-pages';
 import { pageMetadata } from '@/lib/seo';
 import {
   serviceGroupBlurbs,
@@ -87,13 +88,21 @@ export default function ServicesPage() {
                             {service.summary}
                           </span>
                         </span>
-                        <ImageReveal className="relative hidden aspect-[4/3] sm:block">
-                          <Photo
-                            image={service.image}
-                            sizes="14rem"
-                            className="transition-transform duration-[1200ms] ease-out-expo group-hover:scale-105"
-                          />
-                        </ImageReveal>
+                        {service.image ? (
+                          <ImageReveal className="relative hidden aspect-[4/3] sm:block">
+                            <Photo
+                              image={service.image}
+                              sizes="14rem"
+                              className="transition-transform duration-[1200ms] ease-out-expo group-hover:scale-105"
+                            />
+                          </ImageReveal>
+                        ) : (
+                          <div className="relative hidden aspect-[4/3] items-end border border-border bg-surface p-4 sm:flex">
+                            <p className="font-display text-2xl leading-none">
+                              {service.name}
+                            </p>
+                          </div>
+                        )}
                       </Link>
                     </li>
                   );
@@ -103,6 +112,37 @@ export default function ServicesPage() {
           </section>
         );
       })}
+
+      <section
+        id="areas"
+        aria-labelledby="services-areas-heading"
+        className="scroll-mt-28 border-b border-border py-20 md:py-28"
+      >
+        <div className="gutter mx-auto max-w-[120rem]">
+          <p className="eyebrow text-accent-ink">77082</p>
+          <h2 id="services-areas-heading" className="font-display t-lg mt-4 max-w-[14ch]">
+            Areas we serve
+          </h2>
+          <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
+            The office is at 511 Crestwater Ct, Houston, TX 77082. Westchase,
+            Alief, and the Energy Corridor are the neighborhoods beside it.
+            Each service page lists the wider Houston area.
+          </p>
+          <ul className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
+            {areaPages.map((area) => (
+              <li key={area.slug}>
+                <Link
+                  href={area.path}
+                  className="group inline-flex items-center gap-2 font-display text-4xl transition-colors hover:text-accent-ink"
+                >
+                  {area.name}
+                  <ArrowUpRight className="size-5 text-accent-ink" aria-hidden />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <CtaBand
         title="Not sure which one you need?"

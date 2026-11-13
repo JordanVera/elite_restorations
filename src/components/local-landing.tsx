@@ -48,7 +48,11 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
 
   const path = landing.path;
   const serviceHref = servicePath(service.slug);
-  const photos = landingPhotos(service.slug, service.image.src, landing.photoShift);
+  const photos = landingPhotos(
+    service.slug,
+    service.image?.src ?? '',
+    landing.photoShift,
+  );
   const nearby = nearbyLandings(landing);
   const related = relatedCityLandings(landing);
   const estimateHref = service.emergency
@@ -101,18 +105,20 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         )}
       </PageHero>
 
-      <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
-        <ImageReveal
-          immediate
-          className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
-        >
-          <Photo
-            image={service.image}
-            sizes="(min-width: 1920px) 1800px, 96vw"
-            priority
-          />
-        </ImageReveal>
-      </div>
+      {service.image && (
+        <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
+          <ImageReveal
+            immediate
+            className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
+          >
+            <Photo
+              image={service.image}
+              sizes="(min-width: 1920px) 1800px, 96vw"
+              priority
+            />
+          </ImageReveal>
+        </div>
+      )}
 
       <section aria-labelledby="local-scope-heading" className="py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-14 lg:grid-cols-12 lg:gap-20">
@@ -319,7 +325,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
           serviceType: service.name,
           description: landing.description,
           url: absoluteUrl(path),
-          image: absoluteUrl(service.image.src),
+          ...(service.image ? { image: absoluteUrl(service.image.src) } : {}),
           areaServed: {
             '@type': 'Place',
             name: `${area.name}, Texas`,

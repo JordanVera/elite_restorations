@@ -1,7 +1,9 @@
 import Link from 'next/link';
 
+import { areaPages } from '@/lib/area-pages';
 import { landingsForService } from '@/lib/local-landings';
 import { getService } from '@/lib/services';
+import { site } from '@/lib/site';
 
 export function AreasWeServe({ serviceSlug }: { serviceSlug: string }) {
   const service = getService(serviceSlug);
@@ -20,9 +22,23 @@ export function AreasWeServe({ serviceSlug }: { serviceSlug: string }) {
           Areas we serve
         </h2>
         <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-          {service.name} is scheduled from our Houston office. Choose a
-          community to read how this work is scoped there.
+          {service.name} is scheduled from our Houston office at{' '}
+          {site.address.streetAddress}, {site.address.postalCode}. The closest
+          neighborhoods have their own pages. Every community below has a page
+          for this service.
         </p>
+        <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+          {areaPages.map((area) => (
+            <li key={area.slug}>
+              <Link
+                href={area.path}
+                className="font-display text-3xl transition-colors hover:text-accent-ink"
+              >
+                {area.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
         <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
           {pages.map((page) => (
             <li key={page.slug}>
