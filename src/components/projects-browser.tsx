@@ -1,10 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { useTheme } from 'next-themes';
 
+import { Photo } from '@/components/photo';
+import { ProjectGallery, ProjectPhotoButton } from '@/components/project-gallery';
 import { Button } from '@/components/ui/button';
-import { ChromaticImage } from '@/components/ui/chromatic-image';
 import type { Img } from '@/lib/images';
 import { cn } from '@/lib/utils';
 
@@ -26,9 +26,14 @@ export function ProjectsBrowser({
 }) {
   const [active, setActive] = React.useState(ALL);
   const [visibleCount, setVisibleCount] = React.useState(BATCH);
-  const { resolvedTheme } = useTheme();
-  const visible =
-    active === ALL ? photos : photos.filter((p) => p.category === active);
+  const visible = React.useMemo(
+    () => (active === ALL ? photos : photos.filter((p) => p.category === active)),
+    [active, photos],
+  );
+  const galleryImages = React.useMemo(
+    () => visible.map((photo) => photo.image),
+    [visible],
+  );
   const displayed = visible.slice(0, visibleCount);
   const hasMore = visibleCount < visible.length;
   const counts = React.useMemo(() => {
@@ -43,94 +48,90 @@ export function ProjectsBrowser({
   };
 
   return (
-    <div>
-      <div
-        role="group"
-        aria-label="Filter photos by category"
-        className="flex flex-wrap gap-x-8 gap-y-3 border-b border-border pb-6"
-      >
-        {[ALL, ...categories].map((category) => {
-          const selected = category === active;
-          return (
-            <button
-              key={category}
-              type="button"
-              aria-pressed={selected}
-              onClick={() => selectCategory(category)}
-              className={cn(
-                'group relative py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] transition-colors',
-                selected
-                  ? 'text-foreground'
-                  : 'text-muted-foreground hover:text-foreground',
-              )}
-            >
-              {category}
-              <sup className="ml-1.5 text-[0.6rem] text-accent-ink">
-                {counts.get(category) ?? 0}
-              </sup>
-              <span
-                aria-hidden
+    <ProjectGallery images={galleryImages}>
+      <div>
+        <div
+          role="group"
+          aria-label="Filter photos by category"
+          className="flex flex-wrap gap-x-8 gap-y-3 border-b border-border pb-6"
+        >
+          {[ALL, ...categories].map((category) => {
+            const selected = category === active;
+            return (
+              <button
+                key={category}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => selectCategory(category)}
                 className={cn(
-                  'absolute inset-x-0 -bottom-px h-px origin-left bg-accent-ink transition-transform duration-500 ease-out-expo',
+                  'group relative py-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] transition-colors',
                   selected
-                    ? 'scale-x-100'
-                    : 'scale-x-0 group-hover:scale-x-100',
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground',
                 )}
-              />
-            </button>
-          );
-        })}
-      </div>
-
-      <p className="sr-only" role="status" aria-live="polite">
-        Showing {displayed.length} of {visible.length}{' '}
-        {visible.length === 1 ? 'photo' : 'photos'}
-        {active === ALL ? '' : ` in ${active}`}
-      </p>
-
-      <ul
-        key={active}
-        className="mt-10 gap-2 sm:columns-2 lg:columns-3 xl:columns-4"
-      >
-        {displayed.map((photo, i) => (
-          <li
-            key={photo.id}
-            className="anim-fade-up mb-2 break-inside-avoid"
-            style={{ ['--d' as string]: `${Math.min(i, 12) * 0.04}s` }}
-          >
-            <ChromaticImage
-              src={photo.image.src}
-              alt={photo.image.alt}
-              zoom={0.45}
-              displacement={0.14}
-              chromaticShift={0.04}
-              tilt={0.6}
-              backgroundColor={resolvedTheme === 'dark' ? '#0a0a0b' : '#ece6da'}
-              className="w-full bg-background dark:bg-background"
-              style={{
-                aspectRatio: `${photo.image.width} / ${photo.image.height}`,
-              }}
-            />
-          </li>
-        ))}
-      </ul>
-
-      {hasMore && (
-        <div className="mt-14 flex flex-col items-center gap-3">
-          <Button
-            type="button"
-            variant="outline"
-            size="lg"
-            onClick={() => setVisibleCount((n) => n + BATCH)}
-          >
-            Load more
-          </Button>
-          <p className="text-[0.72rem] uppercase tracking-[0.18em] text-muted-foreground">
-            {visible.length - visibleCount} more{' '}
-            {visible.length - visibleCount === 1 ? 'photo' : 'photos'}
-          </p>
+              >
+                {category}
+                <sup className="ml-1.5 text-[0.6rem] text-accent-ink">
+                  {counts.get(category) ?? 0}
+                </sup>
+                <span
+                  aria-hidden
+                  className={cn(
+                    'absolute inset-x-0 -bottom-px h-px origin-left bg-accent-ink transition-transform duration-500 ease-out-expo',
+                    selected
+                      ? 'scale-x-100'
+                      : 'scale-x-0 group-hover:scale-x-100',
+                  )}
+                />
+              </button>
+            );
+          })}
         </div>
-      )}
-    </div>
+
+        <p className="sr-only" role="status" aria-live="polite">
+          Showing {displayed.length} of {visible.length}{' '}
+          {visible.length === 1 ? 'photo' : 'photos'}
+          {active === ALL ? '' : ` in ${active}`}
+        </p>
+
+        <ul
+          key={active}
+          className="mt-10 gap-2 sm:columns-2 lg:columns-3 xl:columns-4"
+        >
+          {displayed.map((photo, i) => (
+            <li
+              key={photo.id}
+              className="anim-fade-up mb-2 break-inside-avoid"
+              style={{ ['--d' as string]: `${Math.min(i, 12) * 0.04}s` }}
+            >
+              <ProjectPhotoButton index={i} alt={photo.image.alt}>
+                <Photo
+                  image={photo.image}
+                  intrinsic
+                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 96vw"
+                />
+              </ProjectPhotoButton>
+            </li>
+          ))}
+        </ul>
+
+        {hasMore && (
+          <div className="mt-14 flex flex-col items-center gap-3">
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              onClick={() => setVisibleCount((n) => n + BATCH)}
+            >
+              Load more
+            </Button>
+            <p className="text-[0.72rem] uppercase tracking-[0.18em] text-muted-foreground">
+              {visible.length - visibleCount} more{' '}
+              {visible.length - visibleCount === 1 ? 'photo' : 'photos'}
+            </p>
+          </div>
+        )}
+      </div>
+    </ProjectGallery>
   );
 }
