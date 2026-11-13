@@ -94,6 +94,12 @@ export const services: Service[] = [
       },
     ],
     related: ['countertops', 'backsplash', 'wood-flooring', 'carpentry'],
+    links: [
+      {
+        href: '/kitchen-remodel-cost-houston',
+        label: 'What changes a kitchen remodel cost',
+      },
+    ],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
       'Houston kitchen remodel with a coffered ceiling, marble island and pendant lighting',
@@ -174,6 +180,12 @@ export const services: Service[] = [
       'carpentry',
       'water-damage-restoration',
       'countertops',
+    ],
+    links: [
+      {
+        href: '/bathroom-remodel-cost-houston',
+        label: 'What changes a bathroom remodel cost',
+      },
     ],
     image: img(
       '/images/services/bathroom-remodeling.jpg',
@@ -1007,6 +1019,12 @@ export const services: Service[] = [
       'roofing-emergency-tarp-repair',
       'siding',
       'water-damage-restoration',
+    ],
+    links: [
+      {
+        href: '/roof-replacement-cost-houston',
+        label: 'What changes a roof replacement cost',
+      },
     ],
     image: img(
       '/images/services/roof-replacement.webp',

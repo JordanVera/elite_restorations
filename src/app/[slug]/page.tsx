@@ -7,6 +7,7 @@ import { AreaPageView } from '@/components/area-page';
 import { AreasWeServe } from '@/components/areas-we-serve';
 import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
+import { CostGuideView } from '@/components/cost-guide';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
@@ -15,6 +16,7 @@ import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
@@ -59,6 +61,7 @@ export function generateStaticParams(): Params[] {
     ...articles.map((article) => ({ slug: article.slug })),
     ...localLandings.map((page) => ({ slug: page.slug })),
     ...areaPages.map((page) => ({ slug: page.slug })),
+    ...costGuides.map((guide) => ({ slug: guide.slug })),
   ];
 }
 
@@ -84,6 +87,16 @@ export async function generateMetadata({
       title: area.title,
       description: area.description,
       path: area.path,
+    });
+  }
+  const guide = getCostGuide(slug);
+  if (guide) {
+    const service = getService(guide.serviceSlug);
+    return pageMetadata({
+      title: guide.title,
+      description: guide.description,
+      path: guide.path,
+      image: service?.image?.src,
     });
   }
   const article = getArticle(slug);
@@ -120,6 +133,9 @@ export default async function ServicePage({
 
   const article = getArticle(slug);
   if (article) return <ArticleView article={article} />;
+
+  const guide = getCostGuide(slug);
+  if (guide) return <CostGuideView guide={guide} />;
 
   const service = getService(slug);
   if (!service) notFound();
