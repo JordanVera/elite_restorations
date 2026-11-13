@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { addressForJobber, buildClientInput, buildRequestInput, phoneLast10, splitName, WEBSITE_SOURCE, type EstimateForJobber } from "./map";
-import { codeChallenge, createOAuthHandoff, keysMatch, readOAuthHandoff, signOAuthHandoff, statesMatch } from "./oauth-state";
+import { addressForJobber, buildClientInput, buildContactClientInput, buildInboundRequestInput, buildRequestInput, formatUsPhone, phoneLast10, splitName, splitPhoneExtension, WEBSITE_SOURCE, type EstimateForJobber } from "./map";
+import { anyKeyMatches, codeChallenge, createOAuthHandoff, keysMatch, readOAuthHandoff, signOAuthHandoff, statesMatch } from "./oauth-state";
 
 const lead: EstimateForJobber = {
   name: "Ada Stone",
@@ -56,6 +56,41 @@ describe("Jobber lead mapping", () => {
   it("matches a phone on the last 10 digits", () => {
     assert.equal(phoneLast10("+1 (713) 555-0100"), "7135550100");
     assert.equal(phoneLast10("555-0100"), "");
+    assert.equal(formatUsPhone("17135550100"), "(713) 555-0100");
+    assert.deepEqual(splitPhoneExtension("+1 (713) 555-0148 x12"), { phone: "+1 (713) 555-0148", extension: "12" });
+  });
+
+  it("omits a property when an inbound lead has no address", () => {
+    const input = buildContactClientInput({
+      name: "(713) 555-0148",
+      email: "",
+      phone: "(713) 555-0148",
+      address: "",
+      smsAllowed: true,
+    });
+    assert.equal(input.properties, undefined);
+    assert.equal(input.emails, undefined);
+    assert.equal(input.firstName, "(713)");
+    assert.equal(input.lastName, "555-0148");
+  });
+
+  it("puts Source on an inbound request without the website service enums", () => {
+    const input = buildInboundRequestInput({
+      clientId: "client-1",
+      propertyId: "property-1",
+      title: "Google Voice text",
+      sourceLabel: "Google Voice text",
+      notes: [{ label: "Message", answerText: "The roof is leaking." }],
+    });
+    assert.equal(input.title, "Google Voice text");
+    assert.equal(input.propertyId, "property-1");
+    assert.equal("source" in input, false);
+    const items = input.requestDetails.form.sections[0].items;
+    assert.deepEqual(
+      items.map((item) => item.label),
+      ["Message", "Source"],
+    );
+    assert.equal(items.find((item) => item.label === "Source")?.answerText, "Google Voice text");
   });
 });
 
@@ -72,6 +107,9 @@ describe("Jobber OAuth state", () => {
     assert.equal(statesMatch(handoff.state, "different"), false);
     assert.equal(keysMatch("owner-key", "owner-key"), true);
     assert.equal(keysMatch("owner-key", "other-key"), false);
+    assert.equal(anyKeyMatches("owner-key", ["", "other-key", "owner-key"]), true);
+    assert.equal(anyKeyMatches("owner-key", []), false);
+    assert.equal(anyKeyMatches("", [""]), false);
   });
 
   it("builds an S256 challenge from the verifier", () => {

@@ -41,29 +41,106 @@ export function phoneLast10(value: string): string {
   return digits.length >= 10 ? digits.slice(-10) : "";
 }
 
-export function buildClientInput(lead: EstimateForJobber) {
-  const { firstName, lastName } = splitName(lead.name);
-  const input: Record<string, unknown> = {
+/** (713) 555-0100. Empty when the value does not have 10 digits. */
+export function formatUsPhone(value: string): string {
+  const digits = phoneLast10(value);
+  if (!digits) return "";
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
+/** Pull a trailing extension off a phone so the last 10 digits stay the subscriber number. */
+export function splitPhoneExtension(value: string): { phone: string; extension: string } {
+  const trimmed = value.trim();
+  const match = trimmed.match(/^(.*?)(?:\s*(?:ext\.?|extension|x)\s*(\d{1,8}))$/i);
+  if (!match?.[1] || !match[2]) return { phone: trimmed, extension: "" };
+  return { phone: match[1].trim(), extension: match[2] };
+}
+
+export type JobberContact = {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  smsAllowed: boolean;
+};
+
+export function buildContactClientInput(contact: JobberContact) {
+  const { firstName, lastName } = splitName(contact.name);
+  const input: {
+    firstName: string;
+    lastName: string;
+    isCompany: false;
+    phones?: { number: string; description: "MAIN"; primary: true; smsAllowed: boolean }[];
+    emails?: { address: string; description: "MAIN"; primary: true }[];
+    properties?: { address: JobberAddress }[];
+  } = {
     firstName,
     lastName,
     isCompany: false,
-    phones: [
+  };
+  if (contact.phone.trim()) {
+    input.phones = [
       {
-        number: lead.phone.trim(),
+        number: contact.phone.trim(),
         description: "MAIN",
         primary: true,
-        smsAllowed: lead.contactMethod === "text",
+        smsAllowed: contact.smsAllowed,
       },
-    ],
-    properties: [{ address: addressForJobber(lead.address) }],
-  };
-  if (lead.email.trim()) {
-    input.emails = [{ address: lead.email.trim(), description: "MAIN", primary: true }];
+    ];
+  }
+  if (contact.email.trim()) {
+    input.emails = [{ address: contact.email.trim(), description: "MAIN", primary: true }];
+  }
+  if (contact.address.trim()) {
+    input.properties = [{ address: addressForJobber(contact.address) }];
   }
   return input;
 }
 
-type FormItem = { label: string; answerText: string };
+export function buildClientInput(lead: EstimateForJobber) {
+  return buildContactClientInput({
+    name: lead.name,
+    email: lead.email,
+    phone: lead.phone,
+    address: lead.address,
+    smsAllowed: lead.contactMethod === "text",
+  });
+}
+
+export type FormItem = { label: string; answerText: string };
+
+export type JobberIngestLead = {
+  /** Used as-is. When empty, the formatted phone is the name. */
+  name?: string;
+  email?: string;
+  phone?: string;
+  /** Street, ZIP, or city. Omitted from the client when blank. */
+  address?: string;
+  smsAllowed?: boolean;
+  sourceLabel: string;
+  title: string;
+  notes: FormItem[];
+};
+
+/** requestCreate has no source argument. The source is a form answer, same as the website form. */
+export function buildRequestEnvelope(args: {
+  clientId: string;
+  propertyId?: string;
+  title: string;
+  sectionLabel: string;
+  items: FormItem[];
+}) {
+  return {
+    clientId: args.clientId,
+    ...(args.propertyId ? { propertyId: args.propertyId } : {}),
+    title: args.title,
+    requestDetails: {
+      form: {
+        sections: [{ label: args.sectionLabel, items: args.items }],
+      },
+    },
+  };
+}
 
 export function buildRequestInput(lead: EstimateForJobber, clientId: string, propertyId?: string) {
   const items: FormItem[] = [
@@ -76,14 +153,30 @@ export function buildRequestInput(lead: EstimateForJobber, clientId: string, pro
   items.push({ label: "Preferred contact", answerText: optionLabel(contactMethods, lead.contactMethod) });
   if (lead.pageUrl.trim()) items.push({ label: "Page", answerText: lead.pageUrl.trim() });
 
-  return {
+  return buildRequestEnvelope({
     clientId,
-    ...(propertyId ? { propertyId } : {}),
+    propertyId,
     title: `${WEBSITE_SOURCE} · ${optionLabel(leadServices, lead.service)}`,
-    requestDetails: {
-      form: {
-        sections: [{ label: WEBSITE_SOURCE, items }],
-      },
-    },
-  };
+    sectionLabel: WEBSITE_SOURCE,
+    items,
+  });
+}
+
+/** Inbound leads do not use the website service, claim, or contact-method enums. */
+export function buildInboundRequestInput(args: {
+  clientId: string;
+  propertyId?: string;
+  title: string;
+  sourceLabel: string;
+  notes: FormItem[];
+}) {
+  const items = args.notes.filter((item) => item.label !== "Source" && item.answerText.trim());
+  items.push({ label: "Source", answerText: args.sourceLabel });
+  return buildRequestEnvelope({
+    clientId: args.clientId,
+    propertyId: args.propertyId,
+    title: args.title,
+    sectionLabel: args.sourceLabel,
+    items,
+  });
 }

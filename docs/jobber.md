@@ -33,7 +33,11 @@ Access tokens last about 60 minutes. The site refreshes them and always stores t
 
 ## What lands in Jobber
 
-For each estimate, the site searches existing clients by email and then by phone. A match reuses that client. Otherwise it creates one with the name, email, phone, and the address or ZIP from the form.
+For each estimate, the site searches existing clients by the customer's email and then by phone. A match reuses that client. Otherwise it creates one with the name, email, phone, and the address or ZIP from the form.
+
+Office numbers and office mailboxes are not used for that match. The numbers are 713-909-0034, 281-748-0227, 713-909-0032, 713-909-4031, and 505-532-2516. The mailboxes are admin@eliterestorations.com, george@eliterestorations.com, and george@texaselitegroup.com. If a form has only those, the site creates a new client instead of attaching the lead to the existing office client. A real phone matches on the last 10 digits. A non-office email matches exactly.
+
+Google Voice and Local Services leads use the same client match. See `docs/leads-ingest.md`.
 
 It then creates a request titled `Website estimate form · ` plus the service. The request form includes the service, message, insurance claim answer, carrier when they gave one, preferred contact, the page URL, and the source `Website estimate form`. Jobber's `requestCreate` input has no source field. The Request record's own source is assigned by Jobber (the app name). The words "Website estimate form" are the request title and a form answer.
 

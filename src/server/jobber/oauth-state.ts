@@ -57,3 +57,13 @@ export function readOAuthHandoff(value: string, secret: string, now = Date.now()
 export function statesMatch(provided: string, expected: string): boolean {
   return keysMatch(provided, expected);
 }
+
+/** True when the provided key matches any non-empty expected key. Every key is compared. */
+export function anyKeyMatches(provided: string, expected: readonly string[]): boolean {
+  let matched = false;
+  for (const key of expected) {
+    if (!key) continue;
+    if (keysMatch(provided, key)) matched = true;
+  }
+  return matched;
+}
