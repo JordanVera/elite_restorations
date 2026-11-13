@@ -1,35 +1,10 @@
-import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { Reveal, SplitLines } from '@/components/motion';
 import { InfiniteReviewCards } from '@/components/ui/infinite-review-cards';
-import {
-  googleReviews,
-  testimonials,
-  type Testimonial,
-} from '@/lib/testimonials';
-
-const featuredAuthors = [
-  'Catricia Roberson',
-  'Patrick Polomsky',
-  'Shronda Allen',
-  'Amy Davidson',
-  'Wanda Tezeno',
-  'John Wilson',
-];
-
-function byAuthor(names: readonly string[]) {
-  return names
-    .map((name) => testimonials.find((item) => item.author === name))
-    .filter((item): item is Testimonial => Boolean(item));
-}
+import { googleReviewSummary, homepageReviews } from '@/lib/published-reviews';
 
 export function HomeTestimonials() {
-  const lead = byAuthor(featuredAuthors);
-  const rest = testimonials.filter(
-    (item) => !featuredAuthors.includes(item.author),
-  );
-
   return (
     <section
       aria-labelledby="reviews-heading"
@@ -45,34 +20,38 @@ export function HomeTestimonials() {
               as="h2"
               id="reviews-heading"
               className="t-xl mt-6"
-              lines={[<span key="b">{googleReviews.count} reviews.</span>]}
+              lines={[
+                <span key="score">{googleReviewSummary.score} stars.</span>,
+              ]}
             />
           </div>
           <div className="flex flex-col items-start gap-6 lg:col-span-4 lg:col-start-9 lg:items-end">
             <Reveal delay={0.12}>
-              <p className="max-w-[28ch] text-muted-foreground lg:text-right">
-                Five-star notes from homeowners on Google.
+              <p className="max-w-[32ch] text-muted-foreground lg:text-right">
+                {googleReviewSummary.score} stars from {googleReviewSummary.count}{' '}
+                Google reviews, read {googleReviewSummary.readOn}.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <Link
-                href="/testimonials"
+              <a
+                href={googleReviewSummary.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.2em]"
               >
-                Read every review
+                See them on Google
                 <ArrowUpRight
                   className="size-4 transition-transform duration-500 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   aria-hidden
                 />
-              </Link>
+              </a>
             </Reveal>
           </div>
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col gap-4 md:mt-20">
-        <InfiniteReviewCards items={lead} direction="left" speed="slow" />
-        <InfiniteReviewCards items={rest} direction="right" speed="normal" />
+      <div className="mt-16 md:mt-20">
+        <InfiniteReviewCards items={homepageReviews} direction="left" speed="slow" />
       </div>
     </section>
   );

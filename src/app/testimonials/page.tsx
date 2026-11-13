@@ -3,10 +3,9 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { CtaBand } from "@/components/cta-band";
-import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
 import { ReviewCard } from "@/components/ui/infinite-review-cards";
-import { localBusinessSchema, pageMetadata } from "@/lib/seo";
+import { pageMetadata } from "@/lib/seo";
 import { googleReviews, testimonials } from "@/lib/testimonials";
 
 export const metadata: Metadata = pageMetadata({
@@ -19,21 +18,6 @@ export const metadata: Metadata = pageMetadata({
 export default function TestimonialsPage() {
   return (
     <>
-      <JsonLd
-        data={localBusinessSchema({
-          review: testimonials.map((item) => ({
-            "@type": "Review",
-            author: { "@type": "Person", name: item.author },
-            reviewBody: item.quote,
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: String(item.rating),
-              bestRating: "5",
-            },
-            publisher: { "@type": "Organization", name: "Google" },
-          })),
-        })}
-      />
       <PageHero
         eyebrow="Reviews"
         headingId="reviews-page-heading"

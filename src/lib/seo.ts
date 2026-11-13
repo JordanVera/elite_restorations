@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { site } from "@/lib/site";
-import { googleReviews } from "@/lib/testimonials";
 
 const TITLE_MAX = 60;
 const DESCRIPTION_MAX = 155;
@@ -146,13 +145,6 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
       },
     ],
     sameAs: [...site.sameAs],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(googleReviews.score),
-      reviewCount: String(googleReviews.count),
-      bestRating: "5",
-      worstRating: "1",
-    },
     ...extra,
   };
 }

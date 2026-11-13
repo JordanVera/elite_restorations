@@ -99,6 +99,10 @@ export const services: Service[] = [
         href: '/kitchen-remodel-cost-houston',
         label: 'What changes a kitchen remodel cost',
       },
+      {
+        href: '/kitchen-remodel-case-study',
+        label: 'A kitchen remodel, in a customer\'s words',
+      },
     ],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
@@ -1390,6 +1394,10 @@ export const services: Service[] = [
         href: '/water-damage-insurance-claims-in-texas',
         label: 'Water-damage claim checklist',
       },
+      {
+        href: '/water-heater-flood',
+        label: 'Water heater flood: drying and a rebuild',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1479,6 +1487,10 @@ export const services: Service[] = [
       {
         href: '/frozen-and-burst-pipes-in-houston',
         label: 'Frozen or burst pipe: what to do first',
+      },
+      {
+        href: '/water-heater-flood',
+        label: 'Water heater flood: drying and a rebuild',
       },
     ],
     image: img(

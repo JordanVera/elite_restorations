@@ -7,7 +7,9 @@ import { AreaPageView } from '@/components/area-page';
 import { AreasWeServe } from '@/components/areas-we-serve';
 import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
+import { CaseStudyView } from '@/components/case-study';
 import { CostGuideView } from '@/components/cost-guide';
+import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
@@ -16,6 +18,7 @@ import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
@@ -62,6 +65,7 @@ export function generateStaticParams(): Params[] {
     ...localLandings.map((page) => ({ slug: page.slug })),
     ...areaPages.map((page) => ({ slug: page.slug })),
     ...costGuides.map((guide) => ({ slug: guide.slug })),
+    ...caseStudies.map((study) => ({ slug: study.slug })),
   ];
 }
 
@@ -97,6 +101,15 @@ export async function generateMetadata({
       description: guide.description,
       path: guide.path,
       image: service?.image?.src,
+    });
+  }
+  const study = getCaseStudy(slug);
+  if (study) {
+    return pageMetadata({
+      title: study.metaTitle,
+      description: study.description,
+      path: study.path,
+      image: study.examplePhotos[0]?.image.src,
     });
   }
   const article = getArticle(slug);
@@ -136,6 +149,9 @@ export default async function ServicePage({
 
   const guide = getCostGuide(slug);
   if (guide) return <CostGuideView guide={guide} />;
+
+  const study = getCaseStudy(slug);
+  if (study) return <CaseStudyView study={study} />;
 
   const service = getService(slug);
   if (!service) notFound();
@@ -473,6 +489,8 @@ export default async function ServicePage({
           </div>
         </section>
       )}
+
+      <ServiceReviews serviceSlug={service.slug} />
 
       <AreasWeServe serviceSlug={service.slug} />
 
