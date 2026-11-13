@@ -98,6 +98,11 @@ export function SiteFooter() {
                 </li>
               ))}
               <li>
+                <Link href="/restoration" className={linkClass}>
+                  Houston restoration services
+                </Link>
+              </li>
+              <li>
                 <Link href="/testimonials" className={linkClass}>
                   Reviews
                 </Link>

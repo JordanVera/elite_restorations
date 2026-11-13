@@ -28,8 +28,9 @@ export function absoluteUrl(path: string) {
 }
 
 /**
- * These service pages name the trade. Their `-houston-tx` pages name Houston,
- * so the two document titles stay different.
+ * These service pages pass a finished title lead. Several lead with "Houston"
+ * in a different word order from the "{service} in Houston" city page, so the
+ * two document titles stay different.
  */
 const serviceLedTitleSlugs = new Set([
   "kitchen-remodeling",
@@ -48,6 +49,7 @@ const serviceLedTitleSlugs = new Set([
   "siding",
   "patios-decks",
   "painting-drywall-repair",
+  "water-damage-restoration",
   "insurance-claims",
 ]);
 

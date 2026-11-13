@@ -9,7 +9,7 @@ export const site = {
   name: 'Elite Restorations',
   tagline: 'Remodeling and restoration for Greater Houston',
   description:
-    'Family-owned remodeling, restoration and roofing contractor in Houston since 1993. Kitchens, baths, roofs, siding and water-damage recovery.',
+    'Family-owned Houston restoration and remodeling company since 1993. Water, storm, and fire damage, insurance claims help, kitchens, baths, and roofs.',
   url: 'https://eliterestorations.com',
   founded: 1993,
   phone: {

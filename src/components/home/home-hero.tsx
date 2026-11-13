@@ -21,7 +21,8 @@ export function HomeHero() {
         </h1>
         <p className="kitchen-description">
           We remodel kitchens and bathrooms across Greater Houston. When water
-          or a storm hits, we restore the house too.
+          or a storm hits, start with our{' '}
+          <Link href="/restoration">Houston restoration services</Link>.
         </p>
         <div className="kitchen-actions">
           <Link className="kitchen-primary" href={ctaHref}>

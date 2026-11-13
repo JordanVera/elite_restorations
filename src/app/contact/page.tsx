@@ -8,9 +8,9 @@ import { pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact a Houston Remodeler',
+  title: 'Contact Houston Restoration',
   description:
-    'Call (713) 909-0034 or visit Elite Restorations at 511 Crestwater Ct, Houston, TX 77082. Free estimates for remodeling, roofing and restoration.',
+    'Call (713) 909-0034 for Houston restoration or remodeling. Visit 511 Crestwater Ct, Houston, TX 77082, or request an estimate.',
   path: '/contact',
 });
 

@@ -17,9 +17,9 @@ import {
 } from '@/lib/services';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Houston Remodeling Services',
+  title: 'Houston Remodeling & Restoration',
   description:
-    'Kitchen and bathroom remodeling, roofing, water and storm restoration, and insurance-claim help in Houston, plus flooring, siding and carpentry.',
+    'Houston restoration and remodeling: water and storm damage, kitchens, baths, roofs, and flooring. Call (713) 909-0034.',
   path: '/services',
   image: '/images/services/kitchen-remodeling.jpg',
 });
@@ -32,7 +32,15 @@ export default function ServicesPage() {
         title={['Services in Houston.']}
         lede="Kitchens, bathrooms, roofing, water and storm restoration, and insurance-claim documentation. Family owned since 1993."
         crumbs={[{ name: 'Services', path: '/services' }]}
-      />
+      >
+        <Link
+          href="/restoration"
+          className="mt-8 inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+        >
+          Houston restoration services
+          <ArrowUpRight className="size-4" aria-hidden />
+        </Link>
+      </PageHero>
 
       {serviceGroups.map((group) => {
         const items = servicesInGroup(group);
