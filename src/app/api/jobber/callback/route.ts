@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 import { jobberClientSecret } from "@/server/jobber/config";
 import { OAUTH_COOKIE, readOAuthHandoff, statesMatch } from "@/server/jobber/oauth-state";
-import { exchangeJobberCode } from "@/server/jobber/tokens";
+import { exchangeJobberCode, isJobberTokenStoreError } from "@/server/jobber/tokens";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -44,7 +44,10 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     const message = error instanceof Error ? error.message : "unknown error";
     console.error("[jobber] connect failed", message.replace(/eyJ[\w.-]+/g, "[redacted]").slice(0, 200));
-    return page("Jobber did not connect.", "The approval was received, but the token exchange failed. Start the connect link again.", 502);
+    const body = isJobberTokenStoreError(error)
+      ? "Jobber approved the connection, but the website couldn't save it. Start the connect link again."
+      : "The approval was received, but the token exchange failed. Start the connect link again.";
+    return page("Jobber did not connect.", body, 502);
   }
 
   return page("Jobber is connected.", "Estimate forms can now create a client and a request. You can close this tab.", 200);

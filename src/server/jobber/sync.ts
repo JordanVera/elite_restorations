@@ -4,6 +4,7 @@ import type { DeliverableLead } from "@/server/leads/types";
 import { jobberCredentialsReady } from "@/server/jobber/config";
 import { assertNoUserErrors, jobberGraphql } from "@/server/jobber/graphql";
 import { addressForJobber, buildClientInput, buildRequestInput, phoneLast10, type EstimateForJobber } from "@/server/jobber/map";
+import { JOBBER_TOKEN_STORE_MISSING } from "@/server/jobber/tokens";
 
 export type JobberSyncResult =
   | { status: "created" }
@@ -156,7 +157,7 @@ export async function syncEstimateToJobber(lead: DeliverableLead): Promise<Jobbe
     const message = safeError(error);
     if (
       message === "Jobber is not connected." ||
-      message === "Jobber token store is not configured." ||
+      message === JOBBER_TOKEN_STORE_MISSING ||
       message === "Jobber credentials are not configured."
     ) {
       console.info("[jobber]", message);
