@@ -1,11 +1,14 @@
 /**
  * Project video library for the homeowner and realtor portals.
  *
- * To swap placeholder footage:
- * 1. Change `placeholderVideo` to update every step that does not set its own `video`.
- * 2. Or set `video` on a single step. Use `kind: "youtube"` with a video id in `src`,
+ * Sample footage is never shown. The Big Buck Bunny stand-in below is only a
+ * reminder of the slot. Resource pages hide the video library until a step
+ * sets its own `video` with `placeholder: false` and a real source.
+ *
+ * To publish a clip:
+ * 1. Set `video` on that step. Use `kind: "youtube"` with a video id in `src`,
  *    or `kind: "file"` with a direct MP4/WebM URL.
- * 3. Set `placeholder: false` once the clip is real footage so the badge hides.
+ * 2. Set `placeholder: false` only when the clip is real project footage.
  */
 
 export const PLACEHOLDER_LABEL = 'Placeholder – replace with real footage';
@@ -18,12 +21,25 @@ export type VideoSource = {
   placeholder?: boolean;
 };
 
-/** Shared stand-in. Big Buck Bunny (Blender Foundation, CC BY) until real job footage is ready. */
+/** Sample clip. Never embedded. Big Buck Bunny (Blender Foundation, CC BY). */
 export const placeholderVideo: VideoSource = {
   kind: 'youtube',
   src: 'aqz-KE-bpKQ',
   placeholder: true,
 };
+
+const BLOCKED_SAMPLE_IDS = new Set(['aqz-ke-bpkq']);
+
+export function isSampleClip(video: VideoSource) {
+  const src = video.src.trim().toLowerCase();
+  if (video.placeholder !== false) return true;
+  if (BLOCKED_SAMPLE_IDS.has(src)) return true;
+  return (
+    src.includes('big-buck-bunny') ||
+    src.includes('bigbuckbunny') ||
+    src.includes('aqz-ke-bpkq')
+  );
+}
 
 export type MicroStep = {
   title: string;
@@ -494,12 +510,25 @@ export const videoCategories: VideoCategory[] = [
   },
 ];
 
-export function stepVideo(step: MicroStep): VideoSource {
-  return step.video ?? placeholderVideo;
+/** A clip that is safe to show. Sample and placeholder footage returns undefined. */
+export function stepVideo(step: MicroStep): VideoSource | undefined {
+  const video = step.video;
+  if (!video || isSampleClip(video)) return undefined;
+  return video;
 }
 
 export function isPlaceholderClip(step: MicroStep) {
-  return stepVideo(step).placeholder !== false;
+  return !stepVideo(step);
+}
+
+export function hasRealVideos(
+  categories: readonly VideoCategory[] = videoCategories,
+) {
+  return categories.some((category) =>
+    category.projects.some((project) =>
+      project.steps.some((step) => stepVideo(step)),
+    ),
+  );
 }
 
 export function getCategory(slug: string) {

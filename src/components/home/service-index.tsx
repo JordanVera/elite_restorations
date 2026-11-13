@@ -15,7 +15,7 @@ export type IndexService = {
   name: string;
   group: string;
   summary: string;
-  image: Img;
+  image?: Img;
   emergency?: boolean;
 };
 
@@ -67,7 +67,7 @@ export function ServiceIndex({
               id="services-heading"
               className="t-xl mt-6"
               lines={[
-                'Seventeen trades.',
+                'Eighteen trades.',
                 <span key="b">
                   One <em className="text-accent-ink">team.</em>
                 </span>,
@@ -201,10 +201,16 @@ export function ServiceIndex({
                     }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <Photo
-                      image={active.image}
-                      sizes="(min-width: 1024px) 36vw, 100vw"
-                    />
+                    {active.image ? (
+                      <Photo
+                        image={active.image}
+                        sizes="(min-width: 1024px) 36vw, 100vw"
+                      />
+                    ) : (
+                      <div className="flex h-full items-end bg-foreground p-8 text-background">
+                        <p className="font-display text-5xl leading-none">{active.name}</p>
+                      </div>
+                    )}
                     <div
                       aria-hidden
                       className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
@@ -271,8 +277,10 @@ function ServiceRow({
         {String(index + 1).padStart(2, '0')}
       </span>
       <span className="flex min-w-0 items-center gap-5">
-        <span className="relative block size-14 shrink-0 overflow-hidden lg:hidden">
-          <Photo image={service.image} sizes="56px" quality={60} />
+        <span className="relative block size-14 shrink-0 overflow-hidden bg-surface lg:hidden">
+          {service.image ? (
+            <Photo image={service.image} sizes="56px" quality={60} />
+          ) : null}
         </span>
         <span
           className={cn(

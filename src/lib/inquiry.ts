@@ -83,6 +83,7 @@ const roomByService: Record<string, Room> = {
   "vinyl-flooring": "floors",
   "laminate-flooring": "floors",
   siding: "exterior",
+  "patios-decks": "exterior",
   carpentry: "other",
   "tile-fireplaces": "other",
   "painting-drywall-repair": "other",

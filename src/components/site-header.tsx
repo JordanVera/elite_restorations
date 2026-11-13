@@ -11,6 +11,7 @@ import { ScrollProgressLine } from '@/components/motion';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { isLocalLandingPath } from '@/lib/local-paths';
 import {
   isServicePagePath,
   serviceGroups,
@@ -179,7 +180,9 @@ function NavEntry({
 
 function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
   const active =
-    pathname.startsWith('/services') || isServicePagePath(pathname);
+    pathname.startsWith('/services') ||
+    isServicePagePath(pathname) ||
+    isLocalLandingPath(pathname);
 
   return (
     <NavigationMenu.Item value="/services">

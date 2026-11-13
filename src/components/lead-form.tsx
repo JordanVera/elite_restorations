@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { TRPCClientError } from '@trpc/client';
 import { ArrowUpRight, Loader2, Mail, Phone } from 'lucide-react';
 
+import { FormConsent } from '@/components/form-consent';
 import { ChoiceGroup, Field } from '@/components/form-fields';
 import { PhotoPicker, type PickedPhoto } from '@/components/photo-picker';
 import { Button } from '@/components/ui/button';
@@ -612,6 +613,7 @@ export function LeadForm({
             {callbackPromise}
           </p>
         )}
+        <FormConsent />
         <Button
           type="submit"
           variant="accent"

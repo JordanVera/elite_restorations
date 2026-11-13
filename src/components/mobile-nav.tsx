@@ -9,6 +9,7 @@ import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { isLocalLandingPath } from '@/lib/local-paths';
 import {
   isServicePagePath,
   serviceGroups,
@@ -80,7 +81,8 @@ export function MobileNav({ className }: { className?: string }) {
                     ? pathname === '/'
                     : item.href === '/services'
                       ? pathname.startsWith('/services') ||
-                        isServicePagePath(pathname)
+                        isServicePagePath(pathname) ||
+                        isLocalLandingPath(pathname)
                       : pathname.startsWith(item.href);
                 return (
                   <li

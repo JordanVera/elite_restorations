@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { site } from "@/lib/site";
-import { googleReviews } from "@/lib/testimonials";
 
 const TITLE_MAX = 60;
 const DESCRIPTION_MAX = 155;
@@ -18,6 +17,15 @@ type PageMetaInput = {
 /** Absolute URL on https://eliterestorations.com. */
 export function absoluteUrl(path: string) {
   return new URL(path, site.url).toString();
+}
+
+/** True when `lead` plus the business name fits the 60-character title. */
+export function titleFits(lead: string) {
+  const text = lead.replace(/\s+/g, " ").trim();
+  if (text.includes("Elite Restorations")) {
+    return documentTitle(text) === text;
+  }
+  return documentTitle(text) === `${text}${BRAND_SUFFIX}`;
 }
 
 /** Document title, 60 characters or fewer, with the business name. */
@@ -137,13 +145,6 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
       },
     ],
     sameAs: [...site.sameAs],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(googleReviews.score),
-      reviewCount: String(googleReviews.count),
-      bestRating: "5",
-      worstRating: "1",
-    },
     ...extra,
   };
 }

@@ -28,7 +28,8 @@ export type Service = {
   process?: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
   related: string[];
-  image: Img;
+  /** Omitted when the site has no real job photo for this service yet. */
+  image?: Img;
   emergency?: boolean;
   links?: { href: string; label: string }[];
   local: ServiceLocal;
@@ -47,7 +48,7 @@ export const serviceGroupBlurbs: Record<ServiceGroup, string> = {
   Floors:
     'Wood, tile, vinyl and laminate, installed over a properly prepared subfloor.',
   'Roof & exterior':
-    'What keeps the weather out, from a single repair to a complete replacement.',
+    'What keeps the weather out: roofs, siding, and the decks and patios beside the house.',
   Recovery:
     'Paint and drywall that finish a remodel, recovery after water or a storm, and documentation for an insurance claim.',
 };
@@ -93,6 +94,16 @@ export const services: Service[] = [
       },
     ],
     related: ['countertops', 'backsplash', 'wood-flooring', 'carpentry'],
+    links: [
+      {
+        href: '/kitchen-remodel-cost-houston',
+        label: 'What changes a kitchen remodel cost',
+      },
+      {
+        href: '/kitchen-remodel-case-study',
+        label: 'A kitchen remodel, in a customer\'s words',
+      },
+    ],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
       'Houston kitchen remodel with a coffered ceiling, marble island and pendant lighting',
@@ -173,6 +184,12 @@ export const services: Service[] = [
       'carpentry',
       'water-damage-restoration',
       'countertops',
+    ],
+    links: [
+      {
+        href: '/bathroom-remodel-cost-houston',
+        label: 'What changes a bathroom remodel cost',
+      },
     ],
     image: img(
       '/images/services/bathroom-remodeling.jpg',
@@ -1007,6 +1024,12 @@ export const services: Service[] = [
       'siding',
       'water-damage-restoration',
     ],
+    links: [
+      {
+        href: '/roof-replacement-cost-houston',
+        label: 'What changes a roof replacement cost',
+      },
+    ],
     image: img(
       '/images/services/roof-replacement.webp',
       'Finished roof on a brick home in Houston',
@@ -1180,7 +1203,7 @@ export const services: Service[] = [
         a: 'Yes. We photograph the damage and the completed repair. Your insurer decides coverage.',
       },
     ],
-    related: ['roof-replacement', 'roofing-emergency-tarp-repair', 'carpentry'],
+    related: ['patios-decks', 'roof-replacement', 'roofing-emergency-tarp-repair', 'carpentry'],
     image: img(
       '/images/services/siding.jpg',
       'Board-and-batten siding on a Houston home',
@@ -1214,6 +1237,78 @@ export const services: Service[] = [
         'Sugar Land',
         'Memorial',
         'Spring Branch',
+      ],
+    },
+  },
+  {
+    slug: 'patios-decks',
+    name: 'Patios & Decks',
+    group: 'Roof & exterior',
+    tagline: 'The outdoor room the house opens onto.',
+    summary:
+      'Decks, patios, and patio covers, built or rebuilt after a look at the framing, the ledger, and how the yard meets the house.',
+    metaDescription:
+      'Patios and decks in Houston, TX: new decks, rebuilds, patios, and covers, scoped from the framing and the yard you have. Call (713) 909-0034.',
+    intro: [
+      'A deck or a patio is the room outside the back door. We build new ones and rebuild ones that have worn out, starting with what is actually holding them up.',
+      'Houston sun and rain decide the materials and the drainage. A cover, the rails, and the stairs are planned with the surface, so water sheds away from the house and the walk down is solid.',
+    ],
+    includes: [
+      'New decks',
+      'Deck rebuilds, down to the framing that is still sound',
+      'Patios',
+      'Patio covers',
+      'Rails, stairs, and gates',
+      'A check of the ledger, footings, and posts before new boards go down',
+    ],
+    faqs: [
+      {
+        q: 'Can you repair a deck instead of replacing it?',
+        a: 'Sometimes. We look at the framing, the ledger where the deck meets the house, and the footings first. Sound structure can take new decking and rails. Rotted structure comes out.',
+      },
+      {
+        q: 'Do you build patio covers?',
+        a: 'Yes. Posts, beams, and the roof are set so water sheds away from the wall. The cover is planned with the patio or deck under it, not added as an afterthought.',
+      },
+      {
+        q: 'Wood or a composite board?',
+        a: 'It depends on the look you want and how much upkeep you want in Houston sun and rain. We talk through that before anything is ordered.',
+      },
+      {
+        q: 'Can the deck be part of a larger exterior project?',
+        a: 'Often, yes. Siding, the door the deck meets, and the rails are easier to detail when the same crew is already on the house.',
+      },
+    ],
+    related: ['siding', 'carpentry', 'roofing'],
+    local: {
+      heading: 'Outside the back door.',
+      body: [
+        'The useful question is what the yard and the door are asking for: a ground-level patio, an elevated deck, or a cover that keeps the rain off the part you use.',
+        'We measure the house side, the slope, and what is already there. A rebuild starts by opening up the framing. A new patio starts from the grade and the door it has to meet.',
+      ],
+      conditions: [
+        {
+          title: 'What is still sound',
+          body: 'Ledger, posts, and footings are inspected before new decking goes down. What can stay, stays. What cannot is replaced.',
+        },
+        {
+          title: 'Rain and sun',
+          body: 'The surface, the gaps, and a cover are chosen for Houston weather, so water leaves the house instead of sitting against it.',
+        },
+        {
+          title: 'How it meets the house',
+          body: 'The door, the siding, the stairs, and the rails are detailed together so the outdoor room belongs to the elevation.',
+        },
+      ],
+      neighborhoods: [
+        'Westchase',
+        'Energy Corridor',
+        'Alief',
+        'Memorial',
+        'Katy',
+        'Sugar Land',
+        'The Woodlands',
+        'Cinco Ranch',
       ],
     },
   },
@@ -1289,6 +1384,20 @@ export const services: Service[] = [
       'roofing',
       'roofing-emergency-tarp-repair',
       'insurance-claims',
+    ],
+    links: [
+      {
+        href: '/frozen-and-burst-pipes-in-houston',
+        label: 'Frozen or burst pipe: what to do first',
+      },
+      {
+        href: '/water-damage-insurance-claims-in-texas',
+        label: 'Water-damage claim checklist',
+      },
+      {
+        href: '/water-heater-flood',
+        label: 'Water heater flood: drying and a rebuild',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1371,6 +1480,18 @@ export const services: Service[] = [
     ],
     links: [
       { href: '/insurance-log', label: 'Open the free insurance photo log' },
+      {
+        href: '/water-damage-insurance-claims-in-texas',
+        label: 'Water-damage claim checklist',
+      },
+      {
+        href: '/frozen-and-burst-pipes-in-houston',
+        label: 'Frozen or burst pipe: what to do first',
+      },
+      {
+        href: '/water-heater-flood',
+        label: 'Water heater flood: drying and a rebuild',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',

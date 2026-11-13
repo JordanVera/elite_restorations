@@ -48,6 +48,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/privacy-policy',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy/',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/top-5-benefits-of-remodeling-your-kitchen-in-2025',
+        destination: '/kitchen-remodel-benefits',
+        permanent: true,
+      },
+      {
+        source: '/top-5-benefits-of-remodeling-your-kitchen-in-2025/',
+        destination: '/kitchen-remodel-benefits',
+        permanent: true,
+      },
+      {
         source: '/:path+/',
         destination: '/:path+',
         permanent: true,

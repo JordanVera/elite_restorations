@@ -1,0 +1,257 @@
+import { getArticle } from '@/lib/articles';
+import { getAreaPage } from '@/lib/area-pages';
+import { parseLocalLandingSlug } from '@/lib/local-paths';
+import { titleFits } from '@/lib/seo';
+import { getService, servicePath } from '@/lib/services';
+import { site } from '@/lib/site';
+
+export type CostRange = {
+  label: string;
+  /**
+   * TODO-GEORGE: set both to real dollar amounts before this row can publish.
+   * Leave null and the site will not print a range.
+   */
+  low: number | null;
+  high: number | null;
+};
+
+export type CostGuide = {
+  slug: string;
+  path: string;
+  title: string;
+  description: string;
+  lines: readonly string[];
+  lede: string;
+  serviceSlug: string;
+  serviceLabel: string;
+  factors: readonly { title: string; body: string }[];
+  /** TODO-GEORGE: fill low and high on every row. Unpublished until then. */
+  ranges: readonly CostRange[];
+  faqs: readonly { q: string; a: string }[];
+};
+
+export function rangesArePublishable(ranges: readonly CostRange[]) {
+  return (
+    ranges.length > 0 &&
+    ranges.every(
+      (range) =>
+        typeof range.low === 'number' &&
+        typeof range.high === 'number' &&
+        Number.isFinite(range.low) &&
+        Number.isFinite(range.high) &&
+        range.low > 0 &&
+        range.high >= range.low,
+    )
+  );
+}
+
+export function formatPublishedRange(range: CostRange) {
+  if (!rangesArePublishable([range]) || range.low === null || range.high === null) {
+    return null;
+  }
+  const money = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  });
+  return `${money.format(range.low)} to ${money.format(range.high)}`;
+}
+
+const phone = site.phone.display;
+
+export const costGuides: readonly CostGuide[] = [
+  {
+    slug: 'kitchen-remodel-cost-houston',
+    path: '/kitchen-remodel-cost-houston',
+    title: 'Kitchen Remodel Cost in Houston',
+    description:
+      'What changes a Houston kitchen remodel cost: size, materials, layout changes, and permits. Call for a free estimate. No published price list.',
+    lines: ['Kitchen remodel cost', 'in Houston.'],
+    lede: 'A Houston kitchen price is the room you have, the materials you choose, and whether the layout has to move. We price that after a visit, not from a citywide average.',
+    serviceSlug: 'kitchen-remodeling',
+    serviceLabel: 'Kitchen remodeling',
+    factors: [
+      {
+        title: 'Size',
+        body: 'A galley and a room that opens to the rest of the house are different amounts of cabinet, counter, and floor. The square footage is the start. The number of runs, the island, and the appliances change it from there.',
+      },
+      {
+        title: 'Materials',
+        body: 'Painted cabinets and a quartz counter are a different scope from a custom box and a stone that needs more care. Hardware, the backsplash, and the lighting travel with that choice.',
+      },
+      {
+        title: 'Layout changes',
+        body: 'Keeping the sink and the range where they are is a smaller job than moving a wall, a drain, or the path through the room. Older Houston houses are often out of square, so the layout is measured before anyone promises a wall can move.',
+      },
+      {
+        title: 'Permits',
+        body: 'A finish refresh often stays inside the existing kitchen. Moving plumbing, electrical, or structure is when a permit usually enters the job. We say which one it is after we see the plan, not before.',
+      },
+    ],
+    // TODO-GEORGE: replace nulls with real Houston kitchen ranges. Do not ship guessed dollars.
+    ranges: [
+      { label: 'Same layout, new finishes', low: null, high: null },
+      { label: 'Layout change', low: null, high: null },
+      { label: 'Full gut', low: null, high: null },
+    ],
+    faqs: [
+      {
+        q: 'Why is there no single kitchen price for Houston?',
+        a: 'The room, the cabinets and counters, and whether the layout moves are different jobs. A number written before the visit would be a guess. We measure and then price the scope.',
+      },
+      {
+        q: 'Does moving a wall change the cost?',
+        a: 'It can. Structure, plumbing, and electrical are extra work, and they are also when a permit is more likely. We inspect before we say a wall can move.',
+      },
+      {
+        q: 'When do you need a permit for a kitchen?',
+        a: 'Often when plumbing, electrical, or structure changes. A finish update that leaves those in place may not. We tell you which case the plan is after we see it.',
+      },
+      {
+        q: 'How do I get a number for my kitchen?',
+        a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
+      },
+    ],
+  },
+  {
+    slug: 'bathroom-remodel-cost-houston',
+    path: '/bathroom-remodel-cost-houston',
+    title: 'Bathroom Remodel Cost in Houston',
+    description:
+      'What changes a Houston bathroom remodel cost: size, tile and fixtures, moving plumbing, and permits. Call for a free estimate.',
+    lines: ['Bathroom remodel cost', 'in Houston.'],
+    lede: 'A powder-room refresh and a primary bath that moves the shower are not the same price. The difference is the room, the finishes, and whether the plumbing stays put.',
+    serviceSlug: 'bathroom-remodeling',
+    serviceLabel: 'Bathroom remodeling',
+    factors: [
+      {
+        title: 'Size',
+        body: 'A small powder room and a primary bath are different amounts of tile, glass, and fixture. The square footage matters less than what the room has to do.',
+      },
+      {
+        title: 'Materials',
+        body: 'A new vanity, mirror, and light is a different scope from a full tile shower, a tub, and a stone that has to be waterproofed behind the finish you see.',
+      },
+      {
+        title: 'Layout changes',
+        body: 'Leaving the drain where it is costs less than moving the shower, the tub, or the vanity. In older houses the plumbing and the structure decide what can move. We check that before we promise a new layout.',
+      },
+      {
+        title: 'Permits',
+        body: 'Replacing a faucet in the same place is not the same as relocating a drain. Plumbing changes are when a permit usually shows up. We say so once the plan is real.',
+      },
+    ],
+    // TODO-GEORGE: replace nulls with real Houston bathroom ranges. Do not ship guessed dollars.
+    ranges: [
+      { label: 'Vanity and finish refresh', low: null, high: null },
+      { label: 'Shower rebuild, same layout', low: null, high: null },
+      { label: 'Full remodel with plumbing moves', low: null, high: null },
+    ],
+    faqs: [
+      {
+        q: 'Why can two bathroom remodels cost so differently?',
+        a: 'A new vanity in the same footprint is not a new shower in a new place. Tile, glass, waterproofing, and moved plumbing are the usual reasons the scope grows.',
+      },
+      {
+        q: 'Is waterproofing part of the price?',
+        a: 'Yes, when the shower or the wet wall is in the job. It goes in before the finish tile. It is part of that scope, not a line you can skip and keep the same result.',
+      },
+      {
+        q: 'Do bathroom remodels need a permit in Houston?',
+        a: 'Often when the plumbing moves. A refresh that keeps the drains and the electrical in place may not. We tell you which one applies after we see the bathroom.',
+      },
+      {
+        q: 'How do I get a price?',
+        a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
+      },
+    ],
+  },
+  {
+    slug: 'roof-replacement-cost-houston',
+    path: '/roof-replacement-cost-houston',
+    title: 'Roof Replacement Cost in Houston',
+    description:
+      'What changes a Houston roof replacement cost: size, materials, the deck, permits, and insurance coverage. Call for a free estimate.',
+    lines: ['Roof replacement cost', 'in Houston.'],
+    lede: 'A roof price is the house under it: the size, the pitch, what the deck looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
+    serviceSlug: 'roof-replacement',
+    serviceLabel: 'Roof replacement',
+    factors: [
+      {
+        title: 'Size and shape',
+        body: 'Squares of roof are the start. Stories, pitch, valleys, and the number of penetrations change how long the crew is up there and how the flashing has to be detailed.',
+      },
+      {
+        title: 'Materials',
+        body: 'Architectural asphalt is common. Metal, tile, and composite are different weights and different installs. The structure has to be able to carry the one you want. We compare that on the house, not from a single product.',
+      },
+      {
+        title: 'What is under the shingles',
+        body: 'A replacement includes the tear-off and a look at the deck. Soft decking, bad flashing, or missing vents change the scope. We say so before the job grows past the roof we priced.',
+      },
+      {
+        title: 'Permits',
+        body: 'A full replacement in Houston is typically permitted. The permit is part of planning the job. It is not a surprise we add after the roof is on.',
+      },
+      {
+        title: 'Insurance coverage',
+        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. We do not negotiate the claim, and we are not a public adjuster.',
+      },
+    ],
+    // TODO-GEORGE: replace nulls with real Houston roof-replacement ranges. Do not ship guessed dollars.
+    ranges: [
+      { label: 'Architectural asphalt replacement', low: null, high: null },
+      { label: 'Metal, tile, or composite', low: null, high: null },
+      { label: 'Deck repairs found after tear-off', low: null, high: null },
+    ],
+    faqs: [
+      {
+        q: 'Why is there no single roof price per square?',
+        a: 'Pitch, stories, valleys, the deck under the shingles, and the material all change the job. A per-square number written before the inspection would leave those out.',
+      },
+      {
+        q: 'Does insurance set the cost of the roof?',
+        a: 'No. Your insurer decides what the policy pays. The cost of the roof is the scope of the roof. We can document the conditions. We do not decide coverage and we do not negotiate the claim.',
+      },
+      {
+        q: 'What if the deck is damaged?',
+        a: 'We find that after the old roofing comes off. Soft decking is extra work. We tell you before we expand the job past the roof that was priced.',
+      },
+      {
+        q: 'How do I get a roof estimate?',
+        a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
+      },
+    ],
+  },
+];
+
+const bySlug = new Map(costGuides.map((guide) => [guide.slug, guide]));
+
+export function getCostGuide(slug: string) {
+  return bySlug.get(slug);
+}
+
+export function estimateHref(serviceSlug: string) {
+  return `/contact?service=${encodeURIComponent(serviceSlug)}`;
+}
+
+for (const guide of costGuides) {
+  if (!titleFits(guide.title)) {
+    throw new Error(`Cost guide title does not fit: ${guide.title}`);
+  }
+  if (guide.description.length > 155) {
+    throw new Error(`Cost guide description too long: ${guide.slug}`);
+  }
+  if (
+    getService(guide.slug) ||
+    getArticle(guide.slug) ||
+    getAreaPage(guide.slug) ||
+    parseLocalLandingSlug(guide.slug)
+  ) {
+    throw new Error(`Cost guide slug collides: ${guide.slug}`);
+  }
+  if (!getService(guide.serviceSlug)) {
+    throw new Error(`Cost guide service missing: ${guide.serviceSlug}`);
+  }
+  servicePath(guide.serviceSlug);
+}

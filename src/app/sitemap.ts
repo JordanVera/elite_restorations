@@ -1,6 +1,10 @@
 import type { MetadataRoute } from 'next';
 
+import { areaPages } from '@/lib/area-pages';
+import { caseStudies } from '@/lib/case-studies';
+import { costGuides } from '@/lib/cost-guides';
 import { articlePath, articles } from '@/lib/articles';
+import { localLandings } from '@/lib/local-landings';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
 import { servicePath, services } from '@/lib/services';
@@ -36,6 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articles.map((article) => ({
       url: absoluteUrl(articlePath(article.slug)),
       priority: 0.5,
+    })),
+    { url: absoluteUrl('/privacy'), priority: 0.3 },
+    { url: absoluteUrl('/terms'), priority: 0.3 },
+    ...localLandings.map((page) => ({
+      url: absoluteUrl(page.path),
+      priority: 0.5,
+    })),
+    ...areaPages.map((page) => ({
+      url: absoluteUrl(page.path),
+      priority: 0.6,
+    })),
+    ...costGuides.map((guide) => ({
+      url: absoluteUrl(guide.path),
+      priority: 0.6,
+    })),
+    ...caseStudies.map((study) => ({
+      url: absoluteUrl(study.path),
+      priority: 0.6,
     })),
   ];
 }

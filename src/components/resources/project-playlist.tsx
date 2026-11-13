@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
-  isPlaceholderClip,
   stepVideo,
   type ProjectType,
   type VideoCategory,
@@ -31,8 +30,7 @@ export function ProjectPlaylist({
   const buttonRefs = React.useRef<Array<HTMLButtonElement | null>>([]);
   const steps = project.steps;
   const step = steps[index] ?? steps[0];
-  const video = stepVideo(step);
-  const placeholder = isPlaceholderClip(step);
+  const video = step ? stepVideo(step) : undefined;
   const total = steps.length;
 
   function selectStep(next: number, focus = false) {
@@ -105,7 +103,7 @@ export function ProjectPlaylist({
         </ol>
 
         <div>
-          {!placeholder && (
+          {video && (
             <div className="relative border border-border bg-surface">
               {video.kind === 'youtube' ? (
                 <iframe
@@ -130,7 +128,7 @@ export function ProjectPlaylist({
             </div>
           )}
 
-          <p className={cn('text-lg leading-relaxed', !placeholder && 'mt-6')}>{step.description}</p>
+          <p className={cn('text-lg leading-relaxed', video && 'mt-6')}>{step.description}</p>
           <p className="eyebrow mt-4 text-muted-foreground" aria-live="polite">
             Step {index + 1} of {total}
           </p>
