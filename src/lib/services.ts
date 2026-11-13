@@ -1,4 +1,8 @@
+import { serviceGuides } from '@/lib/guides/index';
+import type { ServiceGuide } from '@/lib/guides/types';
 import { img, type Img } from '@/lib/images';
+import { processSteps } from '@/lib/process';
+import { wordCount } from '@/lib/words';
 
 export type ServiceGroup =
   | 'Interiors'
@@ -33,6 +37,7 @@ export type Service = {
   emergency?: boolean;
   links?: { href: string; label: string }[];
   local: ServiceLocal;
+  guide: ServiceGuide;
 };
 
 export const serviceGroups: ServiceGroup[] = [
@@ -53,7 +58,7 @@ export const serviceGroupBlurbs: Record<ServiceGroup, string> = {
     'Paint and drywall that finish a remodel, recovery after water or a storm, and documentation for an insurance claim.',
 };
 
-export const services: Service[] = [
+const serviceInputs: Omit<Service, 'guide'>[] = [
   {
     slug: 'kitchen-remodeling',
     name: 'Kitchen Remodeling',
@@ -1651,6 +1656,80 @@ export const services: Service[] = [
     },
   },
 ];
+
+export const services: Service[] = serviceInputs.map((service) => {
+  const guide = serviceGuides[service.slug];
+  if (!guide) throw new Error(`Missing service guide: ${service.slug}`);
+  return { ...service, guide };
+});
+
+const priorityServiceSlugs = new Set([
+  'kitchen-remodeling',
+  'bathroom-remodeling',
+  'roofing',
+  'roof-replacement',
+  'water-damage-restoration',
+]);
+
+function serviceMainWords(service: Service) {
+  const steps =
+    service.process ??
+    service.guide.process ??
+    processSteps.map((step) => ({ title: step.title, body: `${step.lead} ${step.body}` }));
+  return wordCount([
+    service.tagline,
+    ...service.intro,
+    ...service.includes,
+    service.materials?.label,
+    ...(service.materials?.items ?? []),
+    service.local.heading,
+    ...service.local.body,
+    ...service.local.conditions.flatMap((condition) => [condition.title, condition.body]),
+    ...service.local.neighborhoods,
+    ...steps.flatMap((step) => [step.title, step.body]),
+    ...service.guide.sections.flatMap((section) => [
+      section.eyebrow,
+      section.heading,
+      ...section.paragraphs,
+      ...(section.points ?? []).flatMap((point) => [point.title, point.body]),
+    ]),
+    ...service.faqs.flatMap((faq) => [faq.q, faq.a]),
+    ...service.guide.faqs.flatMap((faq) => [faq.q, faq.a]),
+  ]);
+}
+
+const serviceDepthErrors: string[] = [];
+for (const service of services) {
+  const words = serviceMainWords(service);
+  const faqs = service.faqs.length + service.guide.faqs.length;
+  if (words < 1500 || words > 2200) {
+    serviceDepthErrors.push(`${service.slug} main content is ${words} words`);
+  }
+  if (faqs < 6 || faqs > 10) {
+    serviceDepthErrors.push(`${service.slug} has ${faqs} FAQs`);
+  }
+  const blob = [
+    service.tagline,
+    ...service.intro,
+    ...service.guide.sections.flatMap((section) => section.paragraphs),
+    ...service.guide.faqs.map((faq) => faq.a),
+  ].join('\n');
+  if (/\bGAF\b|\bIICRC\b/.test(blob)) {
+    serviceDepthErrors.push(`${service.slug} mentions a banned name`);
+  }
+}
+
+const rankedServices = [...services].sort(
+  (a, b) => serviceMainWords(b) - serviceMainWords(a),
+);
+for (const slug of priorityServiceSlugs) {
+  if (!rankedServices.slice(0, 5).some((service) => service.slug === slug)) {
+    serviceDepthErrors.push(`${slug} is not among the five longest service pages`);
+  }
+}
+if (serviceDepthErrors.length > 0) {
+  throw new Error(serviceDepthErrors.join('\n'));
+}
 
 export const servicesBySlug = new Map(services.map((s) => [s.slug, s]));
 

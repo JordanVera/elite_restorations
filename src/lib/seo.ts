@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { site } from "@/lib/site";
+import { employeeRefs, personSchemaNodes } from "@/lib/team";
 
 const TITLE_MAX = 60;
 const DESCRIPTION_MAX = 155;
@@ -190,7 +191,17 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
       },
     ],
     sameAs: [...site.sameAs],
+    employee: employeeRefs(),
     ...extra,
+  };
+}
+
+/** Organization plus the people on the about page, linked by @id. */
+export function siteSchemaGraph() {
+  const { "@context": context, ...businessNode } = localBusinessSchema();
+  return {
+    "@context": context,
+    "@graph": [businessNode, ...personSchemaNodes()],
   };
 }
 

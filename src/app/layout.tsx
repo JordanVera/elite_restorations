@@ -5,7 +5,7 @@ import { Providers } from '@/components/providers';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { JsonLd } from '@/components/json-ld';
-import { documentTitle, localBusinessSchema } from '@/lib/seo';
+import { documentTitle, siteSchemaGraph } from '@/lib/seo';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -95,7 +95,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
         </Providers>
-        <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={siteSchemaGraph()} />
       </body>
     </html>
   );

@@ -12,6 +12,7 @@ import { CostGuideView } from '@/components/cost-guide';
 import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
+import { ProseSections } from '@/components/prose-sections';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
@@ -158,10 +159,12 @@ export default async function ServicePage({
 
   const steps =
     service.process ??
+    service.guide.process ??
     processSteps.map((step) => ({
       title: step.title,
       body: `${step.lead} ${step.body}`,
     }));
+  const faqs = [...service.faqs, ...service.guide.faqs];
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
@@ -399,6 +402,8 @@ export default async function ServicePage({
         </div>
       </section>
 
+      <ProseSections sections={service.guide.sections} />
+
       {masonry.length > 0 && (
         <section aria-labelledby="projects-heading" className="py-20 md:py-28">
           <div className="gutter mx-auto max-w-[120rem]">
@@ -446,7 +451,7 @@ export default async function ServicePage({
         </section>
       )}
 
-      {service.faqs.length > 0 && (
+      {faqs.length > 0 && (
         <section
           aria-labelledby="faq-heading"
           className="border-t border-border py-20 md:py-28"
@@ -459,7 +464,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="lg:col-span-8">
-              <Faq items={service.faqs} />
+              <Faq items={faqs} />
             </div>
           </div>
         </section>
