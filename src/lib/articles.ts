@@ -36,7 +36,7 @@ export const articles: Article[] = [
     description:
       'How to tell a restoration from a remodel, when a Houston house needs both, and what to settle before work starts.',
     lede: 'A dated kitchen and a water-damaged kitchen are different problems. One is a choice to change the room. The other is the house asking to be put back.',
-    image: '/images/services/kitchen-remodeling.jpg',
+    image: '/images/projects/kitchens/white-island-pendant-lights.webp',
     service: 'kitchen-remodeling',
     ctaTitle: 'Not sure which job this is?',
     ctaBody:
@@ -113,7 +113,7 @@ export const articles: Article[] = [
     description:
       'Practical checks for supply lines, roofs, and wet rooms that keep a Houston house from a water-damage restoration.',
     lede: 'Most of the water jobs we see started as something small: a supply line, a pan, a flashing detail, a clogged gutter. The expensive part is how long it sat.',
-    image: '/images/services/water-damage-restoration.jpg',
+    image: '/images/projects/restoration/storm-tarp-on-roof.webp',
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: 'Already finding water?',
@@ -272,7 +272,7 @@ export const articles: Article[] = [
     description:
       'Bathroom upgrades Houston buyers actually notice: sound waterproofing, honest finishes, light, ventilation, and floors that can take water.',
     lede: 'Buyers read a bathroom quickly. They are looking for leaks, tired fixtures, and a room that feels cared for. The upgrades that help a sale are the ones that remove those doubts.',
-    image: '/images/services/bathroom-remodeling.jpg',
+    image: '/images/projects/bathrooms/frameless-glass-shower.webp',
     service: 'bathroom-remodeling',
     ctaTitle: 'Planning a bath before a sale?',
     ctaBody:
@@ -404,7 +404,7 @@ export const articles: Article[] = [
     description:
       'What a Houston kitchen remodel should actually change: how you cook, where things live, light, tired appliances, and a finish level that fits the house.',
     lede: 'A kitchen remodel is worth it when the room works better every day, not only when it photographs well.',
-    image: '/images/services/kitchen-remodeling.jpg',
+    image: '/images/projects/kitchens/white-island-pendant-lights.webp',
     service: 'kitchen-remodeling',
     ctaTitle: 'Thinking about the kitchen?',
     ctaBody:
@@ -474,7 +474,7 @@ export const articles: Article[] = [
     description:
       'What to do first when a Houston pipe freezes or bursts: shut off the water, open faucets, photograph the damage, and when to call for drying.',
     lede: 'A hard freeze is uncommon in Houston, and that is why the pipes that fail are usually the ones nobody looked at: an attic line, an exterior wall, or a hose bib. If water is already out, stop it before you do anything else.',
-    image: '/images/services/water-damage-restoration.jpg',
+    image: '/images/projects/restoration/storm-tarp-on-roof.webp',
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: 'Water still coming in?',
@@ -576,7 +576,7 @@ export const articles: Article[] = [
     description:
       'A Texas homeowner checklist after water damage: document the loss, call your insurer, limit further damage, and meet the adjuster.',
     lede: 'A claim is a conversation with your insurer about your policy. The useful part, on the day of the loss, is a clear record and a dry house. Those are separate jobs.',
-    image: '/images/services/water-damage-restoration.jpg',
+    image: '/images/projects/restoration/storm-tarp-on-roof.webp',
     service: 'insurance-claims',
     ctaTitle: 'Need the damage written down?',
     ctaBody:

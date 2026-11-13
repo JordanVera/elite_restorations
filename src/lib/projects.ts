@@ -33,18 +33,68 @@ export const projectCategories: ProjectCategory[] = [
 const altOverrides: Record<string, string> = {
   'kitchens/coffered-ceiling-island.jpg':
     'Houston kitchen remodel with a coffered ceiling, twin marble islands and pendant lighting',
+  'kitchens/white-island-pendant-lights.webp':
+    'Custom white kitchen with island, cooktop, and glass pendant lights, Houston remodel by Elite Restorations',
+  'kitchens/white-island-wall-ovens.webp':
+    'White kitchen island and stacked wall ovens with a mosaic backsplash, Houston remodel by Elite Restorations',
+  'kitchens/cream-kitchen-granite-island.webp':
+    'Cream kitchen with granite counters, a double wall oven, and a mosaic backsplash, Houston remodel by Elite Restorations',
+  'kitchens/wet-bar-prep-sink.webp':
+    'Kitchen wet bar with a prep sink, beverage cooler, and granite counter, Houston remodel by Elite Restorations',
+  'kitchens/pro-range-arched-alcove.webp':
+    'Professional gas range and hood in an arched stone-tile alcove, Houston kitchen remodel by Elite Restorations',
+  'kitchens/cream-hood-brick-backsplash.webp':
+    'Cream custom hood over a gas range with a brick-tile backsplash, Houston kitchen remodel by Elite Restorations',
   'bathrooms/white-vanity-oval-mirrors.webp':
     'Houston bathroom remodel with a white double vanity, marble wall and oval mirrors',
+  'bathrooms/frameless-glass-shower.webp':
+    'Frameless glass shower with mosaic tile beside a soaking tub, Houston bathroom remodel by Elite Restorations',
+  'bathrooms/jetted-tub-mosaic.webp':
+    'Jetted soaking tub set in a mosaic tile deck, Houston bathroom remodel by Elite Restorations',
+  'bathrooms/travertine-bronze-shower.webp':
+    'Travertine shower with an oil-rubbed bronze showerhead and hand shower, Houston bathroom remodel by Elite Restorations',
+  'bathrooms/marble-shower-niche.webp':
+    'Marble-look shower with a framed niche and chrome fixtures, Houston bathroom remodel by Elite Restorations',
+  'bathrooms/dark-wood-vanity.webp':
+    'Dark wood bathroom vanity with a granite top and oil-rubbed bronze faucet, Houston remodel by Elite Restorations',
   'flooring/dark-floors-french-doors.jpg':
     'Dark wood-look plank floor in a Houston home, running toward black-framed French doors',
+  'flooring/wood-look-plank-hall.webp':
+    'Wood-look plank floor running through a kitchen and hallway, Houston flooring by Elite Restorations',
+  'flooring/wood-look-plank-detail.webp':
+    'Wood-look plank flooring in a staggered layout, Houston floor installation by Elite Restorations',
+  'flooring/polished-porcelain-tile.webp':
+    'Polished brown porcelain tile floor in an open room, Houston tile flooring by Elite Restorations',
   'roofing/brick-house-missing-shingles.webp':
     'Roofer repairing shingles on a brick Houston home',
   'roofing/roofer-ladder-underlayment.webp':
     'Roofer on a ladder installing underlayment on a Houston roof',
   'roofing/tarp-aerial-full-roof.jpg':
     'Aerial view of an emergency tarp covering a Houston roof',
+  'roofing/white-lap-siding-shingles.webp':
+    'New gray shingles over white lap siding on a one-story house, Houston roof by Elite Restorations',
+  'roofing/white-two-story-shingles.webp':
+    'White two-story house with a new gray shingle roof, Houston roofing by Elite Restorations',
+  'roofing/architectural-shingles-vents.webp':
+    'Architectural gray shingles with roof vents and a pipe flashing, Houston roof replacement by Elite Restorations',
+  'roofing/finished-shingles-brick-home.webp':
+    'Finished architectural shingle roof on a brick house, Houston roof replacement by Elite Restorations',
+  'patios/slate-patio.webp':
+    'Multicolor slate patio beside a brick house, Houston patio by Elite Restorations',
+  'patios/dark-composite-deck-screen.webp':
+    'Dark composite deck screen beside a backyard pool, Houston deck by Elite Restorations',
+  'patios/cedar-pergola-string-lights.webp':
+    'Cedar pergola with ceiling fans and string lights over a poolside patio, Houston remodel by Elite Restorations',
+  'patios/stained-pergola-pool.webp':
+    'Stained wood pergola beside a backyard pool, Houston patio cover by Elite Restorations',
+  'patios/pergola-before.webp':
+    'Unfinished cedar pergola framing beside a brick house, Houston project by Elite Restorations',
+  'patios/pergola-after.webp':
+    'Stained pergola with ceiling fans and a light beside a brick house, Houston patio cover by Elite Restorations',
   'restoration/air-movers-drying.jpg':
     'Air movers drying a water-damaged room in a Houston home',
+  'restoration/storm-tarp-on-roof.webp':
+    'Blue storm tarp covering an open section of roof on a Houston house, storm repair by Elite Restorations',
 };
 
 const projectSeoNames: Record<string, string> = {
@@ -62,6 +112,11 @@ const projectSeoNames: Record<string, string> = {
   'roofs-read-from-above': 'Roofing Project Photos',
   'storm-and-water-response': 'Storm and Water Repair',
   'exteriors-renewed': 'Siding Project',
+  'white-kitchens-islands-ranges': 'White Kitchen Remodel',
+  'glass-showers-and-soaking-tubs': 'Glass Shower Remodel',
+  'shingle-roofs-finished': 'Shingle Roof Project',
+  'white-lap-siding': 'Lap Siding Project',
+  'patios-decks-and-pergolas': 'Patio and Pergola',
 };
 
 export function projectSeoName(slug: string) {
@@ -82,6 +137,23 @@ const kitchens = (files: string[]) =>
   gallery('kitchens', 'Kitchen remodel', files);
 const baths = (files: string[]) =>
   gallery('bathrooms', 'Bathroom remodel', files);
+
+const whiteKitchens = kitchens([
+  'white-island-pendant-lights.webp',
+  'white-island-wall-ovens.webp',
+  'cream-kitchen-granite-island.webp',
+  'wet-bar-prep-sink.webp',
+  'pro-range-arched-alcove.webp',
+  'cream-hood-brick-backsplash.webp',
+]);
+
+const glassBaths = baths([
+  'frameless-glass-shower.webp',
+  'jetted-tub-mosaic.webp',
+  'travertine-bronze-shower.webp',
+  'marble-shower-niche.webp',
+  'dark-wood-vanity.webp',
+]);
 
 const coffered = kitchens([
   'coffered-ceiling-island.jpg',
@@ -159,6 +231,9 @@ const quietBaths = baths([
 ]);
 
 const floors = gallery('flooring', 'Flooring', [
+  'wood-look-plank-hall.webp',
+  'wood-look-plank-detail.webp',
+  'polished-porcelain-tile.webp',
   'dark-floors-french-doors.jpg',
   'encaustic-style-tile.jpg',
   'light-plank-empty-room.jpg',
@@ -197,6 +272,27 @@ const millwork = gallery('carpentry', 'Carpentry', [
   'exposed-beams-open-plan.jpg',
 ]);
 
+const newRoofs = gallery('roofing', 'Roofing', [
+  'finished-shingles-brick-home.webp',
+  'white-two-story-shingles.webp',
+  'white-lap-siding-shingles.webp',
+  'architectural-shingles-vents.webp',
+]);
+
+const lapSiding = gallery('roofing', 'Siding', [
+  'white-lap-siding-shingles.webp',
+  'white-two-story-shingles.webp',
+]);
+
+const patios = gallery('patios', 'Patio and pergola', [
+  'slate-patio.webp',
+  'dark-composite-deck-screen.webp',
+  'cedar-pergola-string-lights.webp',
+  'stained-pergola-pool.webp',
+  'pergola-before.webp',
+  'pergola-after.webp',
+]);
+
 const roofs = gallery('roofing', 'Roofing', [
   'brick-house-missing-shingles.webp',
   'roofer-ladder-underlayment.webp',
@@ -216,7 +312,7 @@ const response = [
     'tarp-partial-roof.jpg',
   ]),
   ...gallery('restoration', 'Water damage restoration', [
-    'air-movers-drying.jpg',
+    'storm-tarp-on-roof.webp',
   ]),
 ];
 
@@ -229,6 +325,25 @@ const exteriors = gallery('siding', 'Siding', [
 ]);
 
 export const projects: Project[] = [
+  {
+    slug: 'white-kitchens-islands-ranges',
+    title: 'White Kitchens, Islands & Ranges',
+    category: 'Kitchens',
+    tagline: 'Islands, pendant light, and the cooking wall.',
+    summary: [
+      'White and cream kitchens with islands, glass pendant lights, granite counters, and mosaic or brick-tile backsplashes.',
+      'One room centers on a cooktop island and stacked wall ovens. Others are a wet bar, a professional range in an arched alcove, and a custom hood over a gas range.',
+    ],
+    notes: [
+      'White island with a cooktop and glass pendants',
+      'Stacked wall ovens and a mosaic backsplash',
+      'Wet bar with a prep sink and beverage cooler',
+      'Professional range and a custom hood',
+    ],
+    services: ['kitchen-remodeling'],
+    cover: whiteKitchens[0],
+    gallery: whiteKitchens,
+  },
   {
     slug: 'coffered-ceilings-marble-islands',
     title: 'Coffered Ceilings & Marble Islands',
@@ -306,6 +421,24 @@ export const projects: Project[] = [
     services: ['kitchen-remodeling', 'countertops', 'backsplash'],
     cover: cookingWalls[0],
     gallery: cookingWalls,
+  },
+  {
+    slug: 'glass-showers-and-soaking-tubs',
+    title: 'Glass Showers & Soaking Tubs',
+    category: 'Bathrooms',
+    tagline: 'Wet rooms in tile, glass, and stone.',
+    summary: [
+      'Frameless glass showers, a jetted tub in a mosaic deck, a travertine shower with oil-rubbed bronze fixtures, and a dark wood vanity with a granite top.',
+    ],
+    notes: [
+      'Frameless glass shower and mosaic tile',
+      'Jetted soaking tub',
+      'Travertine and marble-look showers',
+      'Dark wood vanity',
+    ],
+    services: ['bathroom-remodeling'],
+    cover: glassBaths[0],
+    gallery: glassBaths,
   },
   {
     slug: 'marble-showers-and-patterned-floors',
@@ -447,6 +580,58 @@ export const projects: Project[] = [
     gallery: millwork,
   },
   {
+    slug: 'shingle-roofs-finished',
+    title: 'Shingle Roofs, Finished',
+    category: 'Roof & exterior',
+    tagline: 'New shingles on brick and siding houses.',
+    summary: [
+      'Architectural shingles on a brick house and on white lap-sided houses, plus a closer look at vents and pipe flashing.',
+    ],
+    notes: [
+      'Finished shingles on a brick house',
+      'Gray shingles over white lap siding',
+      'Vents and pipe flashing',
+    ],
+    services: ['roofing', 'roof-replacement'],
+    cover: newRoofs[0],
+    gallery: newRoofs,
+  },
+  {
+    slug: 'white-lap-siding',
+    title: 'White Lap Siding',
+    category: 'Roof & exterior',
+    tagline: 'New lap siding, with the roof that sits on it.',
+    summary: [
+      'White lap siding and a gray shingle roof on a one-story house and a two-story house, photographed from the yard.',
+    ],
+    notes: [
+      'White lap siding',
+      'New gray shingles on the same houses',
+    ],
+    services: ['siding'],
+    cover: lapSiding[0],
+    gallery: lapSiding,
+  },
+  {
+    slug: 'patios-decks-and-pergolas',
+    title: 'Patios, Decks & Pergolas',
+    category: 'Roof & exterior',
+    tagline: 'The outdoor room, from slate to stained cedar.',
+    summary: [
+      'A slate patio, a dark composite deck screen by a pool, and wood pergolas with fans and string lights.',
+      'One pergola is shown before the stain and again after the wood was finished.',
+    ],
+    notes: [
+      'Slate patio',
+      'Composite deck screen by a pool',
+      'Cedar pergola with fans and string lights',
+      'Before and after the pergola was stained',
+    ],
+    services: ['patios-decks'],
+    cover: patios[0],
+    gallery: patios,
+  },
+  {
     slug: 'roofs-read-from-above',
     title: 'Roofs, Read From Above',
     category: 'Roof & exterior',
@@ -469,13 +654,13 @@ export const projects: Project[] = [
     category: 'Recovery',
     tagline: 'The first call is about stopping the damage.',
     summary: [
-      'Tarps secured over full and partial roofs to keep water out, and air movers drying a room after water intrusion.',
+      'Tarps secured over full and partial roofs, including a blue tarp on a house after the roof opened up.',
       'This is the unglamorous, time-sensitive work that comes before any rebuilding.',
     ],
     notes: [
       'Aerial tarp coverage of damaged roofs',
       'Partial-roof protection',
-      'Air movers for structural drying',
+      'A storm tarp on the roof of a house',
     ],
     services: ['roofing-emergency-tarp-repair', 'water-damage-restoration'],
     cover: response[0],

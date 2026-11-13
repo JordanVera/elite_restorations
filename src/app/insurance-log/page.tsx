@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "First-night checklist for a leak or an open roof, then a room-by-room claim packet. Free from Elite Restorations in Houston.",
   path: "/insurance-log",
-  image: "/images/services/water-damage-restoration.jpg",
+  image: "/images/projects/restoration/storm-tarp-on-roof.webp",
 });
 
 export default function InsuranceLogPage() {

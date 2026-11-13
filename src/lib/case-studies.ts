@@ -2,6 +2,7 @@ import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
 import { getCostGuide } from '@/lib/cost-guides';
 import { img, type Img } from '@/lib/images';
+import { getProject } from '@/lib/projects';
 import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { getService } from '@/lib/services';
@@ -69,15 +70,8 @@ export const caseStudies: readonly CaseStudy[] = [
       {
         todo: 'TODO-GEORGE',
         image: img(
-          '/images/projects/restoration/air-movers-drying.jpg',
-          'Air movers drying a water-damaged room in a Houston home',
-        ),
-      },
-      {
-        todo: 'TODO-GEORGE',
-        image: img(
-          '/images/services/water-damage-restoration.jpg',
-          'Air movers drying a Houston home during water damage restoration',
+          '/images/projects/restoration/storm-tarp-on-roof.webp',
+          'Blue storm tarp covering an open section of roof on a Houston house, storm repair by Elite Restorations',
         ),
       },
     ],
@@ -111,22 +105,10 @@ export const caseStudies: readonly CaseStudy[] = [
       },
     ],
     jobPhotos: [],
-    examplePhotos: [
-      {
-        todo: 'TODO-GEORGE',
-        image: img(
-          '/images/services/kitchen-remodeling.jpg',
-          'Houston kitchen remodel with a coffered ceiling, marble island and pendant lighting',
-        ),
-      },
-      {
-        todo: 'TODO-GEORGE',
-        image: img(
-          '/images/projects/kitchens/coffered-ceiling-island.jpg',
-          'Houston kitchen remodel with a coffered ceiling, twin marble islands and pendant lighting',
-        ),
-      },
-    ],
+    examplePhotos: (getProject('white-kitchens-islands-ranges')?.gallery ?? []).map((image) => ({
+      todo: 'TODO-GEORGE' as const,
+      image,
+    })),
   },
 ];
 
@@ -154,5 +136,8 @@ for (const study of caseStudies) {
   }
   if (study.jobPhotos.length > 0) {
     throw new Error(`TODO-GEORGE: ${study.slug} job photos should stay empty until George supplies them.`);
+  }
+  if (study.examplePhotos.length === 0) {
+    throw new Error(`Case study has no example photos: ${study.slug}`);
   }
 }

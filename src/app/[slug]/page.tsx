@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight, Check, Phone } from 'lucide-react';
 
 import { AreaPageView } from '@/components/area-page';
 import { AreasWeServe } from '@/components/areas-we-serve';
+import { BeforeAfter } from '@/components/before-after';
 import { ArticleView } from '@/components/article-view';
 import { CtaBand } from '@/components/cta-band';
 import { CaseStudyView } from '@/components/case-study';
@@ -43,7 +44,12 @@ const galleryShift: Record<string, number> = {
 };
 
 function photographsFor(service: Service) {
-  const all = imagesForService(service.slug);
+  const hidden = new Set(
+    [service.compare?.before.src, service.compare?.after.src].filter(
+      (src): src is string => Boolean(src),
+    ),
+  );
+  const all = imagesForService(service.slug).filter((item) => !hidden.has(item.image.src));
   const count = all.length;
   const shift = count === 0 ? 0 : (galleryShift[service.slug] ?? 0) % count;
   const rotated =
@@ -228,6 +234,15 @@ export default async function ServicePage({
             />
           </ImageReveal>
         </div>
+      )}
+
+      {service.compare && (
+        <BeforeAfter
+          before={service.compare.before}
+          after={service.compare.after}
+          title={service.compare.title}
+          caption={service.compare.caption}
+        />
       )}
 
       <section aria-labelledby="scope-heading" className="py-20 md:py-28">

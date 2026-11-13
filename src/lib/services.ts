@@ -30,6 +30,13 @@ export type Service = {
   related: string[];
   /** Omitted when the site has no real job photo for this service yet. */
   image?: Img;
+  /** A labeled pair. Used when the two frames are different shots of one job. */
+  compare?: {
+    before: Img;
+    after: Img;
+    title: string;
+    caption: string;
+  };
   emergency?: boolean;
   links?: { href: string; label: string }[];
   local: ServiceLocal;
@@ -105,8 +112,8 @@ export const services: Service[] = [
       },
     ],
     image: img(
-      '/images/services/kitchen-remodeling.jpg',
-      'Houston kitchen remodel with a coffered ceiling, marble island and pendant lighting',
+      '/images/projects/kitchens/white-island-pendant-lights.webp',
+      'Custom white kitchen with island, cooktop, and glass pendant lights, Houston remodel by Elite Restorations',
     ),
     local: {
       heading: 'A kitchen planned around how you live.',
@@ -192,8 +199,8 @@ export const services: Service[] = [
       },
     ],
     image: img(
-      '/images/services/bathroom-remodeling.jpg',
-      'Houston bathroom remodel with a marble shower and frameless glass door',
+      '/images/projects/bathrooms/frameless-glass-shower.webp',
+      'Frameless glass shower with mosaic tile beside a soaking tub, Houston bathroom remodel by Elite Restorations',
     ),
     local: {
       heading: 'The bath you use every day, rebuilt.',
@@ -512,8 +519,8 @@ export const services: Service[] = [
     ],
     related: ['wood-flooring', 'bathroom-remodeling', 'tile-fireplaces'],
     image: img(
-      '/images/services/tile-flooring.jpg',
-      'Patterned tile floor in a Houston home',
+      '/images/projects/flooring/polished-porcelain-tile.webp',
+      'Polished brown porcelain tile floor in an open room, Houston tile flooring by Elite Restorations',
     ),
     local: {
       heading: 'Pattern and stone, laid for the room.',
@@ -586,8 +593,8 @@ export const services: Service[] = [
     ],
     related: ['laminate-flooring', 'wood-flooring', 'tile-flooring'],
     image: img(
-      '/images/services/vinyl-flooring.jpg',
-      'Wood-look vinyl plank flooring in a Houston home',
+      '/images/projects/flooring/wood-look-plank-hall.webp',
+      'Wood-look plank floor running through a kitchen and hallway, Houston flooring by Elite Restorations',
     ),
     local: {
       heading: 'Wood look, chosen for the room.',
@@ -908,8 +915,8 @@ export const services: Service[] = [
       'water-damage-restoration',
     ],
     image: img(
-      '/images/services/roof-replacement.webp',
-      'Roofing on a brick Houston home with a finished shingle roof',
+      '/images/projects/roofing/white-two-story-shingles.webp',
+      'White two-story house with a new gray shingle roof, Houston roofing by Elite Restorations',
     ),
     local: {
       heading: 'The roof the house shows, and the one it needs.',
@@ -1031,8 +1038,8 @@ export const services: Service[] = [
       },
     ],
     image: img(
-      '/images/services/roof-replacement.webp',
-      'Finished roof on a brick home in Houston',
+      '/images/projects/roofing/finished-shingles-brick-home.webp',
+      'Finished architectural shingle roof on a brick house, Houston roof replacement by Elite Restorations',
     ),
     local: {
       heading: 'The roof the house shows, and the one it needs.',
@@ -1280,6 +1287,23 @@ export const services: Service[] = [
       },
     ],
     related: ['siding', 'carpentry', 'roofing'],
+    image: img(
+      '/images/projects/patios/slate-patio.webp',
+      'Multicolor slate patio beside a brick house, Houston patio by Elite Restorations',
+    ),
+    compare: {
+      before: img(
+        '/images/projects/patios/pergola-before.webp',
+        'Unfinished cedar pergola framing beside a brick house, Houston project by Elite Restorations',
+      ),
+      after: img(
+        '/images/projects/patios/pergola-after.webp',
+        'Stained pergola with ceiling fans and a light beside a brick house, Houston patio cover by Elite Restorations',
+      ),
+      title: 'The same pergola, stained and finished.',
+      caption:
+        'Unfinished cedar framing, then the same backyard pergola after the wood was stained and the fans and light were in. These are project photographs. They are not tied to a street address.',
+    },
     local: {
       heading: 'Outside the back door.',
       body: [
@@ -1400,8 +1424,8 @@ export const services: Service[] = [
       },
     ],
     image: img(
-      '/images/services/water-damage-restoration.jpg',
-      'Air movers drying a Houston home during water damage restoration',
+      '/images/projects/restoration/storm-tarp-on-roof.webp',
+      'Blue storm tarp covering an open section of roof on a Houston house, storm repair by Elite Restorations',
     ),
     local: {
       heading: 'Dry the structure before you rebuild it.',
@@ -1494,8 +1518,8 @@ export const services: Service[] = [
       },
     ],
     image: img(
-      '/images/services/water-damage-restoration.jpg',
-      'Water damage drying in a Houston home before repairs and the insurance record',
+      '/images/projects/roofing/tarp-aerial-full-roof.jpg',
+      'Aerial view of an emergency tarp covering a Houston roof',
     ),
     local: {
       heading: 'A record of what the storm or the leak did.',
