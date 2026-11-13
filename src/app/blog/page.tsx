@@ -21,7 +21,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title={['Notes from', 'the job site.']}
-        lede="Short guides on restoration and remodeling, kept at the same addresses as the previous site."
+        lede="Guides on restoration and remodeling, kept at the same addresses as the previous site."
         crumbs={[{ name: 'Blog', path: '/blog' }]}
       />
       <section aria-label="Guides" className="pb-20 md:pb-28">

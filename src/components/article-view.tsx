@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
+import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { PageHero } from '@/components/page-hero';
 import {
@@ -89,6 +90,25 @@ export function ArticleView({ article }: { article: Article }) {
               </section>
             ))}
           </div>
+
+          {article.faqs && article.faqs.length > 0 ? (
+            <section
+              aria-labelledby="article-faq-heading"
+              className="mt-16 border-t border-border pt-16 md:pt-20"
+            >
+              <div className="grid gap-12 lg:grid-cols-12">
+                <div className="lg:col-span-4">
+                  <p className="eyebrow text-accent-ink">Questions</p>
+                  <h2 id="article-faq-heading" className="font-display t-lg mt-4">
+                    Good to know.
+                  </h2>
+                </div>
+                <div className="lg:col-span-8">
+                  <Faq items={[...article.faqs]} />
+                </div>
+              </div>
+            </section>
+          ) : null}
 
           <aside className="mt-16 border-t border-border pt-10">
             <p className="eyebrow text-muted-foreground">Keep reading</p>
