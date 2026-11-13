@@ -23,7 +23,7 @@ import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
-import { absoluteUrl, localTitle, pageMetadata } from '@/lib/seo';
+import { absoluteUrl, pageMetadata, servicePageTitle } from '@/lib/seo';
 import {
   getService,
   servicePath,
@@ -125,7 +125,7 @@ export async function generateMetadata({
   if (!service) return {};
   const path = servicePath(service.slug);
   return pageMetadata({
-    title: localTitle(service.metaTitle ?? service.name),
+    title: servicePageTitle(service),
     description: service.metaDescription,
     path,
     image: service.image?.src,

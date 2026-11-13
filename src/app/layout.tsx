@@ -55,6 +55,9 @@ export const metadata: Metadata = {
     description: site.description,
     images: ['/images/projects/kitchens/coffered-ceiling-island.jpg'],
   },
+  verification: {
+    google: 'adPxeKjsZSuzogI-35QH0lGetZO3S8hMRbJ5uFgyotg',
+  },
 };
 
 export const viewport: Viewport = {
