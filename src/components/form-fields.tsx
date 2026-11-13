@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function Field({
   id,
+  field,
   label,
   error,
   optional,
@@ -12,22 +13,30 @@ export function Field({
   children,
 }: {
   id: string;
+  /** Schema key used to move focus to the first invalid field. Defaults to `id`. */
+  field?: string;
   label: string;
   error?: string;
   optional?: boolean;
   hint?: string;
   children: React.ReactNode;
 }) {
+  const errorId = `${id}-error`;
+  const hintId = `${id}-hint`;
   return (
-    <div data-field={id}>
+    <div data-field={field ?? id}>
       <Label htmlFor={id}>
         {label}
         {optional && <span className="normal-case tracking-normal opacity-70">(optional)</span>}
       </Label>
-      {hint && <p className="mt-2 text-sm text-muted-foreground">{hint}</p>}
+      {hint && (
+        <p id={hintId} className="mt-2 text-sm text-muted-foreground">
+          {hint}
+        </p>
+      )}
       {children}
       {error && (
-        <p id={`${id}-error`} className="mt-2 text-sm text-accent-ink">
+        <p id={errorId} role="alert" className="mt-2 text-sm text-accent-ink">
           {error}
         </p>
       )}
@@ -39,23 +48,35 @@ type Choice = { value: string; label: string };
 
 export function ChoiceGroup({
   name,
+  field,
   legend,
   options,
   value,
   onChange,
   error,
   disabled,
+  required,
 }: {
   name: string;
+  /** Schema key used to move focus to the first invalid field. Defaults to `name`. */
+  field?: string;
   legend: string;
   options: readonly Choice[];
   value: string;
   onChange: (value: string) => void;
   error?: string;
   disabled?: boolean;
+  required?: boolean;
 }) {
+  const errorId = `${name}-error`;
   return (
-    <fieldset data-field={name} aria-describedby={error ? `${name}-error` : undefined} disabled={disabled}>
+    <fieldset
+      data-field={field ?? name}
+      aria-required={required || undefined}
+      aria-invalid={error ? true : undefined}
+      aria-describedby={error ? errorId : undefined}
+      disabled={disabled}
+    >
       <legend className="eyebrow text-muted-foreground">{legend}</legend>
       <div className="mt-4 flex flex-wrap gap-3">
         {options.map((option) => (
@@ -82,7 +103,7 @@ export function ChoiceGroup({
         ))}
       </div>
       {error && (
-        <p id={`${name}-error`} className="mt-3 text-sm text-accent-ink">
+        <p id={errorId} role="alert" className="mt-3 text-sm text-accent-ink">
           {error}
         </p>
       )}

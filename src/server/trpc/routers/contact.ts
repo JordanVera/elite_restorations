@@ -3,6 +3,7 @@ import "server-only";
 import { TRPCError } from "@trpc/server";
 
 import { leadSchema } from "@/lib/inquiry-schema";
+import { submitTiming } from "@/lib/lead-timing";
 import { deliverLead } from "@/server/delivery";
 import { resolveLead } from "@/server/leads/resolve";
 import { isRateLimited } from "@/server/rate-limit";
@@ -14,6 +15,19 @@ export const contactRouter = router({
       throw new TRPCError({
         code: "TOO_MANY_REQUESTS",
         message: "Too many requests. Please wait a few minutes or call us.",
+      });
+    }
+
+    if (input.website.trim()) {
+      console.info("[leads] dropped honeypot submission");
+      return { delivered: true as const, photosSaved: 0, photosMissing: 0 };
+    }
+
+    const timing = submitTiming(input.startedAt);
+    if (timing !== "ok") {
+      throw new TRPCError({
+        code: "PRECONDITION_FAILED",
+        message: timing === "expired" ? "expired" : "too-fast",
       });
     }
 

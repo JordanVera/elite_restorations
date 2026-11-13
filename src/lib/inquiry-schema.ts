@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-import { incidents, insurerAnswers, rooms, timelines, yesNo } from "@/lib/inquiry";
+import { isAddressOrZip, isHttpUrl, isUsablePhone } from "@/lib/lead-fields";
+import { claimAnswers, contactMethods, leadServices } from "@/lib/inquiry";
 
 export const MAX_PHOTOS = 6;
 
@@ -10,59 +11,86 @@ const photoPathPattern = /^lead-photos\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9
 const values = <T extends readonly { value: string }[]>(list: T) =>
   list.map((o) => o.value) as [T[number]["value"], ...T[number]["value"][]];
 
-const phoneDigits = (v: string) => v.replace(/\D/g, "").length;
-
-const shared = {
-  name: z.string().trim().min(2, "Please enter your name.").max(100, "That name is too long."),
-  email: z.email("Please enter a valid email address.").max(200),
-  photos: z
-    .array(z.string().regex(photoPathPattern))
-    .max(MAX_PHOTOS, `Please attach no more than ${MAX_PHOTOS} photos.`)
-    .optional()
-    .default([]),
-  website: z.string().max(0).optional().default(""),
-};
+const optionalEmail = z
+  .string()
+  .trim()
+  .max(200, "That email is too long.")
+  .refine(
+    (value) => value.length === 0 || z.email().safeParse(value).success,
+    "Please enter a valid email address.",
+  );
 
 const requiredPhone = z
   .string()
   .trim()
   .max(30, "That phone number is too long.")
-  .refine((v) => phoneDigits(v) >= 10, "Please enter a 10-digit phone number so we can call you back.");
+  .refine(isUsablePhone, "Enter a 10-digit phone number so we can call you back.");
 
-export const remodelSchema = z.object({
-  ...shared,
-  path: z.literal("remodel"),
+const optionalHttpUrl = z
+  .string()
+  .trim()
+  .max(800)
+  .optional()
+  .default("")
+  .transform((value) => (isHttpUrl(value) ? value : ""));
+
+const utmValue = z
+  .string()
+  .trim()
+  .max(120)
+  .optional()
+  .default("")
+  .transform((value) => value.replace(/[\u0000-\u001f]+/g, " ").trim().slice(0, 120));
+
+const shared = {
+  name: z.string().trim().min(2, "Please enter your name.").max(100, "That name is too long."),
   phone: requiredPhone,
-  room: z.enum(values(rooms), "Please choose the space."),
-  staying: z.string().trim().max(300, "Please keep this under 300 characters.").optional().default(""),
-  timeline: z.enum(values(timelines), "Please choose a timeline."),
-  message: z
+  photos: z
+    .array(z.string().regex(photoPathPattern))
+    .max(MAX_PHOTOS, `Please attach no more than ${MAX_PHOTOS} photos.`)
+    .optional()
+    .default([]),
+  /** Honeypot. Filled by bots. A value here is dropped before email is sent. */
+  website: z.string().max(200).optional().default(""),
+  pageUrl: optionalHttpUrl,
+  referrer: optionalHttpUrl,
+  utmSource: utmValue,
+  utmMedium: utmValue,
+  utmCampaign: utmValue,
+  utmTerm: utmValue,
+  utmContent: utmValue,
+  /** Client timestamp when the form was shown. Used for the time-to-submit check. */
+  startedAt: z.number().int(),
+};
+
+const contactMethod = z.enum(values(contactMethods), "Choose how we should reach you.");
+
+export const estimateSchema = z.object({
+  ...shared,
+  path: z.literal("estimate"),
+  email: optionalEmail,
+  address: z
     .string()
     .trim()
-    .min(10, "Please tell us a little more, at least a sentence.")
-    .max(2000, "Please keep this under 2,000 characters."),
-});
-
-export const recoverySchema = z.object({
-  ...shared,
-  path: z.literal("recovery"),
-  phone: requiredPhone,
-  incident: z.enum(values(incidents), "Please tell us what happened."),
-  waterActive: z.enum(values(yesNo), "Please tell us whether water is still coming in."),
-  insurer: z.enum(values(insurerAnswers), "Please choose an answer."),
-  address: z.string().trim().min(5, "Please enter the property address.").max(200, "That address is too long."),
+    .max(200, "That address is too long.")
+    .refine(isAddressOrZip, "Enter a street address or a 5-digit ZIP."),
+  service: z.enum(values(leadServices), "Choose the kind of work."),
+  claim: z.enum(values(claimAnswers), "Tell us if this is an insurance claim."),
+  carrier: z.string().trim().max(120, "That carrier name is too long.").optional().default(""),
+  contactMethod,
   message: z.string().trim().max(2000, "Please keep this under 2,000 characters.").optional().default(""),
 });
 
 export const partnerSchema = z.object({
   ...shared,
   path: z.literal("partner"),
-  phone: requiredPhone,
+  email: z.email("Please enter a valid email address.").max(200),
   company: z
     .string()
     .trim()
     .min(2, "Please enter your company or brokerage.")
     .max(120, "That company name is too long."),
+  contactMethod,
   message: z
     .string()
     .trim()
@@ -70,9 +98,15 @@ export const partnerSchema = z.object({
     .max(2000, "Please keep this under 2,000 characters."),
 });
 
-export const leadSchema = z.discriminatedUnion("path", [remodelSchema, recoverySchema, partnerSchema]);
+export const leadSchema = z.discriminatedUnion("path", [estimateSchema, partnerSchema]).superRefine((value, ctx) => {
+  if (value.path === "estimate" && value.contactMethod === "email" && value.email.length === 0) {
+    ctx.addIssue({
+      code: "custom",
+      path: ["email"],
+      message: "Enter an email address, or choose phone or text.",
+    });
+  }
+});
 
 export type LeadInput = z.input<typeof leadSchema>;
 export type Lead = z.output<typeof leadSchema>;
-export type RemodelLead = z.output<typeof remodelSchema>;
-export type RecoveryLead = z.output<typeof recoverySchema>;

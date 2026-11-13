@@ -2,12 +2,11 @@ import "server-only";
 
 import { randomUUID } from "node:crypto";
 
-import { incidents, insurerAnswers, rooms, timelines } from "@/lib/inquiry";
+import { claimAnswers, contactMethods, leadServices, optionLabel } from "@/lib/inquiry";
 import { site } from "@/lib/site";
 import type { DeliverableLead } from "@/server/leads/types";
 
-const label = (list: readonly { value: string; label: string }[], value: string) =>
-  list.find((o) => o.value === value)?.label ?? value;
+const label = optionLabel;
 
 /** Short unique id so each inquiry opens its own inbox thread. */
 export function inquiryReference(): string {
@@ -16,12 +15,7 @@ export function inquiryReference(): string {
 }
 
 export function inquirySubject(lead: DeliverableLead, reference: string): string {
-  const kind =
-    lead.path === "recovery"
-      ? "Storm / water damage"
-      : lead.path === "partner"
-        ? "Partner referral"
-        : "Remodel estimate";
+  const kind = lead.path === "partner" ? "Partner referral" : label(leadServices, lead.service);
   return `[${site.name}] ${kind} · ${lead.name} · ${reference}`;
 }
 
@@ -35,26 +29,35 @@ type DetailRow = { label: string; value: string };
 function detailRows(lead: DeliverableLead): DetailRow[] {
   const rows: DetailRow[] = [
     { label: "Name", value: lead.name },
-    { label: "Email", value: lead.email },
+    { label: "Email", value: lead.email || "Not provided" },
     { label: "Phone", value: lead.phone },
   ];
 
-  if (lead.path === "remodel") {
+  if (lead.path === "estimate") {
     rows.push(
-      { label: "Space", value: label(rooms, lead.room) },
-      { label: "Timeline", value: label(timelines, lead.timeline) },
+      { label: "Address or ZIP", value: lead.address },
+      { label: "Service", value: label(leadServices, lead.service) },
+      { label: "Insurance claim", value: label(claimAnswers, lead.claim) },
     );
-    if (lead.staying) rows.push({ label: "Staying in home", value: lead.staying });
-  } else if (lead.path === "recovery") {
-    rows.push(
-      { label: "What happened", value: label(incidents, lead.incident) },
-      { label: "Water still active", value: lead.waterActive === "yes" ? "Yes" : "No" },
-      { label: "Insurance claim", value: label(insurerAnswers, lead.insurer) },
-      { label: "Property", value: lead.address },
-    );
+    if (lead.carrier) rows.push({ label: "Insurance carrier", value: lead.carrier });
+    rows.push({ label: "Preferred contact", value: label(contactMethods, lead.contactMethod) });
   } else {
-    rows.push({ label: "Company", value: lead.company });
+    rows.push(
+      { label: "Company", value: lead.company },
+      { label: "Preferred contact", value: label(contactMethods, lead.contactMethod) },
+    );
   }
+
+  if (lead.pageUrl) rows.push({ label: "Page", value: lead.pageUrl });
+  if (lead.referrer) rows.push({ label: "Referrer", value: lead.referrer });
+  const campaign = [
+    lead.utmSource && `source ${lead.utmSource}`,
+    lead.utmMedium && `medium ${lead.utmMedium}`,
+    lead.utmCampaign && `campaign ${lead.utmCampaign}`,
+    lead.utmTerm && `term ${lead.utmTerm}`,
+    lead.utmContent && `content ${lead.utmContent}`,
+  ].filter((part): part is string => Boolean(part));
+  if (campaign.length > 0) rows.push({ label: "Campaign", value: campaign.join(" · ") });
 
   return rows;
 }
@@ -88,12 +91,7 @@ export function buildInquiryHtml(
   reference: string,
   options: { photosAttached: number; photoFilenames: string[] },
 ): string {
-  const pathTitle =
-    lead.path === "recovery"
-      ? "Water or storm damage"
-      : lead.path === "partner"
-        ? "Partner referral"
-        : "Remodel request";
+  const pathTitle = lead.path === "partner" ? "Partner referral" : label(leadServices, lead.service);
   const rows = detailRows(lead);
 
   const details = rows
@@ -190,7 +188,11 @@ export function buildInquiryHtml(
             <td bgcolor="${C.inset}" style="background:${C.inset};padding:18px 32px 22px;border-top:1px solid ${C.line};">
               <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:${C.muted};">
                 Reply to reach <span style="color:${C.ink};">${escapeHtml(lead.name)}</span>
-                at <a href="mailto:${escapeHtml(lead.email)}" style="color:${C.accent};text-decoration:none;">${escapeHtml(lead.email)}</a>.
+                ${
+                  lead.email
+                    ? `at <a href="mailto:${escapeHtml(lead.email)}" style="color:${C.accent};text-decoration:none;">${escapeHtml(lead.email)}</a>`
+                    : `at ${escapeHtml(lead.phone)}`
+                }.
               </p>
               <p style="margin:10px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:${C.muted};">${escapeHtml(site.name)} &nbsp;·&nbsp; ${escapeHtml(site.phone.display)}</p>
             </td>

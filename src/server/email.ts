@@ -1,15 +1,15 @@
 import 'server-only';
 
 /**
- * Send transactional email through the GoDaddy Node.js Hosting email gateway.
+ * Legacy GoDaddy Node.js Hosting email gateway.
  *
- * The gateway listens on 127.0.0.1:2525 inside the hosting container. Outbound
- * SMTP is not routable there, so production mail has to go through this hop.
- * Locally the port is closed and callers fall back to SMTP.
+ * The gateway listens on 127.0.0.1:2525 inside that host only. Vercel does not
+ * have it. Callers must skip this hop on Vercel. The timeout stays short so a
+ * dead port cannot consume the serverless limit before SMTP runs.
  */
 
 const EMAIL_GATEWAY_URL = 'http://127.0.0.1:2525/api/email/send';
-const REQUEST_TIMEOUT_MS = 30_000;
+const REQUEST_TIMEOUT_MS = 4_000;
 
 export type EmailAttachment = {
   filename: string;

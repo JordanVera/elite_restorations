@@ -27,7 +27,6 @@ import {
   checklistProgress,
   checklistShareText,
   formatWhen,
-  incidentForSituation,
   getClaimPacketServerSnapshot,
   getClaimPacketSnapshot,
   materialLabels,
@@ -79,8 +78,8 @@ type Status =
 type Handoff = {
   name: string;
   address: string;
-  incident: string;
-  waterActive: string;
+  service: string;
+  carrier: string;
   message: string;
   photos: { blob: Blob; name: string }[];
 };
@@ -383,12 +382,21 @@ export function InsuranceLog() {
   }
 
   function openEstimate() {
+    const water = waterActiveForLoss(loss);
+    const lines: string[] = [];
+    if (water === 'yes') lines.push('Water is still coming in.');
+    if (water === 'no') lines.push('Water has stopped.');
+    if (cover.claimNumber.trim()) {
+      lines.push(`Claim number: ${cover.claimNumber.trim()}`);
+    }
+    const details = recoveryMessage(loss);
+    if (details) lines.push(details);
     setHandoff({
       name: cover.owner,
       address: cover.address,
-      incident: incidentForSituation(situation),
-      waterActive: waterActiveForLoss(loss),
-      message: recoveryMessage(loss),
+      service: situation === 'roof' ? 'storm-hail' : 'water-damage',
+      carrier: cover.insurer,
+      message: lines.join('\n'),
       photos: photosForEstimate(rooms),
     });
   }
@@ -726,11 +734,12 @@ export function InsuranceLog() {
         {handoff ? (
           <div className="mt-10 max-w-3xl">
             <LeadForm
-              lockPath="recovery"
+              idPrefix="log"
               defaultName={handoff.name}
               defaultAddress={handoff.address}
-              defaultIncident={handoff.incident}
-              defaultWaterActive={handoff.waterActive}
+              defaultService={handoff.service}
+              defaultClaim="yes"
+              defaultCarrier={handoff.carrier}
               defaultMessage={handoff.message}
               initialPhotos={handoff.photos}
             />

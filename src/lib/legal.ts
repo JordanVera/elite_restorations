@@ -27,10 +27,14 @@ export const privacySections: LegalSection[] = [
       'Your name',
       'Phone number',
       'Email address',
-      'The property address, when the form asks for it',
+      'A property address or ZIP code',
+      'The kind of work, and whether it is an insurance claim',
+      'An insurance carrier, if you include one',
+      'How you prefer to be contacted',
       'A description of the job, the damage, or the referral',
       'Photographs of the property or the work',
       'A company or brokerage name, on the realtor form',
+      'The page address you submitted from, including campaign tags if the link had them',
     ],
   },
   {
@@ -71,7 +75,7 @@ export const privacySections: LegalSection[] = [
   {
     heading: 'Your choices',
     paragraphs: [
-      'You can call instead of using a form. You can skip the photos. The forms still need a way to reply, which is why they ask for a name and a phone number or email address.',
+      'You can call instead of using a form. You can skip the photos and, on the estimate form, the email. The forms ask for a name and a phone number so we can reply.',
     ],
   },
   {
