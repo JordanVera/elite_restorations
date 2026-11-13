@@ -25,7 +25,7 @@ const body = Geist({
   display: 'swap',
 });
 
-const defaultTitle = documentTitle('Remodeling & Roofing in Houston, TX');
+const defaultTitle = documentTitle('Houston Restoration & Remodeling');
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

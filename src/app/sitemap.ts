@@ -55,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const builtAt = new Date();
   const staticRoutes = [
     '/',
+    '/restoration',
     '/services',
     '/projects',
     '/resources',
@@ -68,7 +69,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
   ];
   return [
-    ...staticRoutes.map((path) => entry(path, path === '/' ? 1 : 0.8, builtAt)),
+    ...staticRoutes.map((path) =>
+      entry(path, path === '/' ? 1 : path === '/restoration' ? 0.9 : 0.8, builtAt),
+    ),
     ...services.map((s) => entry(servicePath(s.slug), 0.7, builtAt)),
     ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
     ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),

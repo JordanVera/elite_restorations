@@ -61,8 +61,9 @@ export const services: Service[] = [
     tagline: 'The room everything happens in, rebuilt around how you live.',
     summary:
       'Layouts, cabinetry, counters, lighting and finishes, planned and built as one project.',
+    metaTitle: 'Houston Kitchen Remodeling',
     metaDescription:
-      'Kitchen remodeling in Houston, TX: new layouts, cabinets, counters, backsplash and lighting for Heights, West University and open suburban family kitchens.',
+      'Kitchen remodeling in Houston: layouts, cabinets, counters, and lighting, built as one project. Call (713) 909-0034.',
     intro: [
       'A Houston kitchen remodel touches nearly every trade at once: cabinetry, counters, tile, flooring, electrical and plumbing. We manage that choreography so you talk to one team, not six.',
       'We walk the space with you, measure, and talk through how you cook, gather and store. Layout, cabinets and finishes are settled before demolition, so the room that comes back matches the way the house is lived in.',
@@ -235,8 +236,9 @@ export const services: Service[] = [
       'The smallest surface in the kitchen that gets the most attention.',
     summary:
       'Ceramic, porcelain, glass, marble and stone tile, laid out, grouted and sealed with care.',
+    metaTitle: 'Houston Backsplash Installation',
     metaDescription:
-      'Backsplash installation in Houston, TX: ceramic, porcelain, glass, marble and stone patterns set behind the range or along the full run of the counter.',
+      'Backsplash installation in Houston: ceramic, porcelain, glass, and stone, laid out before it is set. Call (713) 909-0034.',
     intro: [
       'A backsplash is the wall that finishes the kitchen. Chevron, herringbone, geometric and hand-finished tile all live or die by their layout.',
       'We dry-lay patterns before setting them, so cuts land where they should and the design centers on the range, the hood or the window. Grout and sealer are chosen so a working kitchen can be wiped down.',
@@ -399,8 +401,9 @@ export const services: Service[] = [
     tagline: 'Hardwood that warms a room for decades.',
     summary:
       'Hardwood and engineered wood: installation, replacement, dustless refinishing, staining and sealing.',
+    metaTitle: 'Houston Wood Flooring',
     metaDescription:
-      'Wood flooring in Houston, TX: hardwood and engineered installation, refinishing and dustless sanding for living rooms, halls and stairs in Houston houses.',
+      'Wood flooring in Houston: hardwood installation, refinishing, and dustless sanding. Call (713) 909-0034 for an estimate.',
     intro: [
       'Wood floors change how a Houston house looks and sounds, from a sunlit living room to a stair landing. Getting them right depends on a flat subfloor and a finish chosen for the room.',
       'We install hardwood and engineered planks, replace damaged sections, and refinish existing floors, including dustless sanding so the rest of the house stays cleaner. Material is acclimated in the house before it is fastened down.',
@@ -479,8 +482,9 @@ export const services: Service[] = [
     tagline: 'Pattern, stone and porcelain, laid flat and true.',
     summary:
       'Residential and commercial tile floors, with careful layout, grout and sealing.',
+    metaTitle: 'Houston Tile Flooring',
     metaDescription:
-      'Tile flooring in Houston, TX: porcelain, stone-look and patterned floors for homes and businesses, laid out for the room over a flat, prepared substrate.',
+      'Tile flooring in Houston: porcelain, stone-look, and patterned floors for homes and businesses. Call (713) 909-0034.',
     intro: [
       'Tile is the floor that can carry a pattern, a stone look, or a quiet large-format field through an entry, a kitchen or a bath. It still has to be flat, and the layout has to be right from the first row.',
       'We install tile in homes and commercial spaces across Houston, prepare the substrate, and finish with grout and sealer suited to the room. Wet areas are waterproofed before the finish tile goes on.',
@@ -554,8 +558,9 @@ export const services: Service[] = [
     tagline: 'The look of wood or stone, in a floor made for daily life.',
     summary:
       'Luxury vinyl plank, sheet and tile, installed as click-lock, glue-down or floating floors.',
+    metaTitle: 'Houston Vinyl Flooring',
     metaDescription:
-      'Vinyl flooring in Houston, TX: luxury vinyl plank, sheet and tile with a wood or stone look, chosen for kitchens, playrooms and first-floor living areas.',
+      'Vinyl flooring in Houston: luxury vinyl plank with a wood or stone look for kitchens and living areas. Call (713) 909-0034.',
     intro: [
       'Luxury vinyl plank gives a Houston house the look of wood or stone in kitchens, playrooms and first floors where you want a durable finish and a straightforward install.',
       'We install LVP, sheet and vinyl tile with the method that fits your subfloor, and we repair or replace worn sections when a full floor is more than you need.',
@@ -628,8 +633,9 @@ export const services: Service[] = [
     tagline: 'A clean, affordable look with a quick turnaround.',
     summary:
       'Laminate installation, repair and replacement, including underlayment, for a clean wood look.',
+    metaTitle: 'Houston Laminate Flooring',
     metaDescription:
-      'Laminate flooring in Houston, TX: click-lock or glue-down wood-look floors with underlayment for bedrooms, halls and living rooms.',
+      'Laminate flooring in Houston: wood-look floors with underlayment for bedrooms, halls, and living rooms. Call (713) 909-0034.',
     intro: [
       'Laminate gives a Houston house the look of wood with straightforward upkeep, which makes it a practical upgrade for bedrooms, halls and living rooms.',
       'We install click-lock or glued laminate over a flat subfloor with the right underlayment, and we replace damaged planks when a full floor is more than you need.',
@@ -1314,14 +1320,14 @@ export const services: Service[] = [
   },
   {
     slug: 'water-damage-restoration',
-    metaTitle: 'Water & Storm Restoration',
+    metaTitle: 'Houston Water & Storm Restoration',
     name: 'Water Damage Restoration',
     group: 'Recovery',
     tagline: 'Dry it properly, then rebuild it right.',
     summary:
       'Assessment, extraction, drying, cleaning and structural repair after a leak, flood or storm.',
     metaDescription:
-      'Water damage restoration in Houston, TX: moisture mapping, extraction, drying and dehumidification, then the repairs after a leak, a flood or a storm.',
+      'Water and storm damage restoration in Houston: drying, then the rebuild, with insurance claims help. Call (713) 909-0034.',
     emergency: true,
     intro: [
       'Water damage in Houston gets worse by the hour. Humidity slows drying, and standing water in a slab home invites mold and swells anything it touches.',
@@ -1536,8 +1542,9 @@ export const services: Service[] = [
     tagline: 'The color and the smooth wall a remodel ends on.',
     summary:
       'Drywall patching and replacement, priming and interior painting, with the cleanup done.',
+    metaTitle: 'Houston Painting & Drywall Repair',
     metaDescription:
-      'Painting and drywall in Houston, TX: patches, texture blending, primer and interior paint that finish a kitchen, bath or living-room remodel.',
+      'Painting and drywall repair in Houston: patches, texture, primer, and interior paint. Call (713) 909-0034.',
     intro: [
       'Paint is how a Houston remodel actually finishes: new drywall in a kitchen, a patched wall in a living room, a powder room taken to a deeper color. The repair has to disappear, and the paint has to sit on a sound surface.',
       'We patch or replace drywall, prime, and paint, then clean up. Texture is blended so the new work meets the walls already in the house.',

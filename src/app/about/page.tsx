@@ -11,9 +11,9 @@ import { CtaBand } from '@/components/cta-band';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'About Our Houston Remodeling Team',
+  title: 'About Our Houston Restoration Team',
   description:
-    'Family-owned remodeling and restoration in Houston since 1993. Meet the people at Elite Restorations who answer the phone and do the work.',
+    'Family-owned Houston restoration and remodeling since 1993. Meet the team that answers the phone. Call (713) 909-0034.',
   path: '/about',
   image: '/images/about/george_family.jpeg',
 });

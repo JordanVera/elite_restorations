@@ -18,6 +18,8 @@
 .kitchen-copy h1{font-family:var(--font-display),Georgia,serif;font-size:clamp(48px,5.5vw,92px);font-weight:400;line-height:1.06;letter-spacing:-.045em;max-width:850px;text-wrap:balance}
 .kitchen-copy h1 em{font-weight:400;color:#fff}
 .kitchen-description{max-width:355px;font-size:15px;line-height:1.8;color:#e0e0e0;margin-top:28px}
+.kitchen-description a{pointer-events:auto;color:#fff;text-decoration:underline;text-underline-offset:.28em;text-decoration-color:#ffffff80}
+.kitchen-description a:hover{text-decoration-color:var(--accent)}
 .kitchen-actions{display:flex;align-items:center;gap:28px;margin-top:34px;pointer-events:auto}
 .kitchen-primary,.kitchen-secondary{display:inline-flex;align-items:center;gap:22px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:background .2s,color .2s}
 .kitchen-primary{padding:20px 24px;background:var(--accent);color:#fff}.kitchen-primary:hover{background:var(--accent-ink)}

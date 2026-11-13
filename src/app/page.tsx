@@ -13,9 +13,9 @@ import { services } from '@/lib/services';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Remodeling & Roofing in Houston, TX',
+  title: 'Houston Restoration & Remodeling',
   description:
-    'Family-owned remodeling, restoration and roofing in Houston since 1993. Kitchens, baths, roofs and water damage. Call (713) 909-0034.',
+    'Water and storm damage restoration, remodeling, and insurance claims help in Houston. Family-owned since 1993. Call (713) 909-0034.',
   path: '/',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
 });
@@ -25,7 +25,7 @@ export default function HomePage() {
     { href: '/kitchen-remodeling', label: 'Kitchen remodeling' },
     { href: '/bathroom-remodeling', label: 'Bathroom remodeling' },
     { href: '/roofing', label: 'Roofing' },
-    { href: '/water-damage-restoration', label: 'Restoration' },
+    { href: '/restoration', label: 'Houston restoration services' },
     { href: '/insurance-claims', label: 'Insurance claims help' },
   ];
 
