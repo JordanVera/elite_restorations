@@ -97,6 +97,13 @@ export default function EmergencyPage() {
                 Open the first-night list
                 <ArrowUpRight className="size-4" aria-hidden />
               </Link>
+              <Link
+                href="/frozen-and-burst-pipes-in-houston"
+                className="mt-4 inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                Frozen or burst pipe: what to do first
+                <ArrowUpRight className="size-4" aria-hidden />
+              </Link>
             </div>
           </Reveal>
 

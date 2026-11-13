@@ -1,6 +1,7 @@
 export type ArticleBlock =
   | { type: 'p'; text: string }
-  | { type: 'list'; items: string[] };
+  | { type: 'list'; items: string[] }
+  | { type: 'links'; items: { href: string; label: string }[] };
 
 export type ArticleSection = {
   heading: string;
@@ -119,8 +120,8 @@ export const articles: Article[] = [
     ctaBody:
       'If the ceiling is wet, the floor is soft, or an appliance let go, call. Drying early is cheaper than rebuilding later.',
     related: [
-      'what-to-do-after-a-fire-your-first-5-steps',
-      'signs-its-time-to-replace-your-homes-flooring',
+      'frozen-and-burst-pipes-in-houston',
+      'water-damage-insurance-claims-in-texas',
     ],
     sections: [
       {
@@ -459,6 +460,188 @@ export const articles: Article[] = [
           {
             type: 'p',
             text: 'If the kitchen is also wet from a leak, dry and repair that first. A new cabinet run on a damp wall is not a remodel. It is a second loss.',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'frozen-and-burst-pipes-in-houston',
+    title: 'Frozen and burst pipes in Houston: what to do first',
+    metaTitle: 'Frozen and Burst Pipes in Houston, TX',
+    crumb: 'Frozen or burst pipes',
+    lines: ['A pipe let go.', 'Do this first.'],
+    description:
+      'What to do first when a Houston pipe freezes or bursts: shut off the water, open faucets, photograph the damage, and when to call for drying.',
+    lede: 'A hard freeze is uncommon in Houston, and that is why the pipes that fail are usually the ones nobody looked at: an attic line, an exterior wall, or a hose bib. If water is already out, stop it before you do anything else.',
+    image: '/images/services/water-damage-restoration.jpg',
+    service: 'water-damage-restoration',
+    emergency: true,
+    ctaTitle: 'Water still coming in?',
+    ctaBody:
+      'Call (713) 909-0034. If you cannot call, the emergency form reaches the same team. We dry and repair. We do not decide what an insurance policy pays.',
+    related: [
+      'water-damage-insurance-claims-in-texas',
+      'how-to-prevent-water-damage-in-your-home',
+    ],
+    sections: [
+      {
+        heading: 'Shut the water off',
+        blocks: [
+          {
+            type: 'p',
+            text: 'If a pipe is spraying, or a ceiling is dripping from a line you cannot see, turn off the main water valve. It is usually at the meter or where the line enters the house. Turn it clockwise. A single fixture may have its own valve under the sink or behind the toilet. Use that only when you are sure the break is on that one supply.',
+          },
+          {
+            type: 'p',
+            text: 'Stay out of standing water near outlets, appliances, or the breaker panel. If you cannot find the shutoff, or the water keeps coming after it is turned, call for help. Do not guess at a gas valve.',
+          },
+        ],
+      },
+      {
+        heading: 'Open faucets and leave the heat alone',
+        blocks: [
+          {
+            type: 'p',
+            text: 'After the main is off, open faucets so the pressure can drop and the lines can drain. Start with a faucet on the lowest floor. Open both hot and cold if you do not know which line failed. If the pipe is frozen but has not burst, an open faucet gives the thaw somewhere to go.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Do not thaw a pipe with a torch or an open flame.',
+              'If the water supply is off, turn the water heater off so it is not heating an empty tank.',
+              'A hair dryer on a reachable frozen spot is enough. Keep it away from water.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Photograph it before you clean up',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Once the water is stopped, take pictures before you move belongings or throw anything away. Wide shots of each wet room, close shots of the break if you can see it, and the path the water took. A short list of what got wet is as useful as the photos.',
+          },
+          {
+            type: 'p',
+            text: 'Your insurer decides what the policy covers. We do not. The photos are for your records and for whoever you ask to dry the house. If you want a room-by-room packet you can fill out yourself, the insurance photo log on this site is free to use.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/insurance-log', label: 'Open the insurance photo log' },
+              { href: '/insurance-claims', label: 'How we document a water or storm loss' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'When to call for water mitigation',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Towels and a household fan are enough for a small puddle on a hard floor that you caught immediately. Call for drying when the water got into the building, not only onto it.',
+          },
+          {
+            type: 'list',
+            items: [
+              'A ceiling is sagging, stained, or still dripping after the water is off.',
+              'Drywall, insulation, or carpet stayed wet.',
+              'Water reached the slab and you cannot see how far it traveled.',
+              'The break is in an attic or a wall you should not open yourself.',
+              'You are not sure the electrical system is safe.',
+            ],
+          },
+          {
+            type: 'p',
+            text: 'Mitigation is the work that stops more damage: extract the water, dry the structure, and keep a record. In Houston humidity, a room that looks dry can still hold moisture in the wall or the slab. Drying is a different job from the rebuild, and it should happen first.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/emergency', label: 'Request emergency help' },
+              { href: '/water-damage-restoration', label: 'Water damage restoration' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'water-damage-insurance-claims-in-texas',
+    title: "Water damage insurance claims in Texas: a homeowner's checklist",
+    metaTitle: 'Texas Water Damage Claim Checklist',
+    crumb: 'Claim checklist',
+    lines: ['The claim,', 'in order.'],
+    description:
+      'A Texas homeowner checklist after water damage: document the loss, call your insurer, limit further damage, and meet the adjuster.',
+    lede: 'A claim is a conversation with your insurer about your policy. The useful part, on the day of the loss, is a clear record and a dry house. Those are separate jobs.',
+    image: '/images/services/water-damage-restoration.jpg',
+    service: 'insurance-claims',
+    ctaTitle: 'Need the damage written down?',
+    ctaBody:
+      'We photograph what got wet and what was dried or repaired. Your insurer decides coverage. We are a contractor, not a public adjuster, and we do not negotiate the claim.',
+    related: [
+      'frozen-and-burst-pipes-in-houston',
+      'how-to-prevent-water-damage-in-your-home',
+    ],
+    sections: [
+      {
+        heading: 'Make the house safe, then document it',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Stop more water if you can do it safely. Shut off the supply for a plumbing leak. Stay out of standing water near electricity. Then photograph before you clean up: each room, the source if you can see it, and belongings before they are moved. A written list of damaged items belongs with the photos.',
+          },
+          {
+            type: 'p',
+            text: 'Do not throw damaged materials away until they are photographed, if you can store them without a safety problem. If something is a hazard, note why you removed it and keep the pictures.',
+          },
+        ],
+      },
+      {
+        heading: 'Call your insurer',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Report the loss to the company that wrote the policy, or to the agent who can start that report. Ask how they want the notice given, and ask what deadline your policy uses. Many policies say notice should be prompt. They do not all use the same number of days, so the policy or the insurer is the source for that, not a contractor.',
+          },
+          {
+            type: 'p',
+            text: 'Write down the claim number, the name of the person you spoke with, and what they told you to do next. Ask whether they want an adjuster to see the damage before permanent repairs, and what temporary protection they expect in the meantime.',
+          },
+        ],
+      },
+      {
+        heading: 'Limit further damage',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Homeowners policies commonly require you to protect the property from further damage and to keep records of reasonable costs. Yours may say it differently. Read the conditions, or ask the insurer. Stopping the water, tarping an opening, and drying wet materials are the usual meaning of that duty. They are not a promise that the policy will pay for them.',
+          },
+          {
+            type: 'p',
+            text: 'Keep receipts. Photograph the temporary work. Avoid permanent repairs that hide the damage before the adjuster has seen it, unless the insurer tells you to proceed or leaving it open would make the loss worse. If you have to cover something, photograph it first.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/insurance-log', label: 'Fill out a room-by-room photo log' },
+              { href: '/insurance-claims', label: 'What we document, and what we do not decide' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Meet the adjuster',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The adjuster works for the insurer. Be there if you can. Walk the rooms with your photos, point out damage that is easy to miss, and ask what was measured. You can share the packet you made. You can also ask, in writing, for anything you do not understand.',
+          },
+          {
+            type: 'p',
+            text: 'A public adjuster is a separate license: someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We are the contractor. We can photograph the conditions and do the drying and the repairs. We do not negotiate the claim, and we do not tell you what the policy owes.',
           },
         ],
       },

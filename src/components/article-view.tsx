@@ -25,7 +25,7 @@ export function ArticleView({ article }: { article: Article }) {
       <JsonLd
         data={{
           '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
+          '@type': ['BlogPosting', 'Article'],
           headline: article.title,
           description: article.description,
           mainEntityOfPage: absoluteUrl(path),
@@ -63,6 +63,20 @@ export function ArticleView({ article }: { article: Article }) {
                   {section.blocks.map((block, index) =>
                     block.type === 'p' ? (
                       <p key={index}>{block.text}</p>
+                    ) : block.type === 'links' ? (
+                      <ul key={index} className="space-y-3 pt-1">
+                        {block.items.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className="inline-flex items-center gap-2 text-foreground underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+                            >
+                              {item.label}
+                              <ArrowUpRight className="size-4" aria-hidden />
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     ) : (
                       <ul key={index} className="list-disc space-y-2 pl-5">
                         {block.items.map((item) => (

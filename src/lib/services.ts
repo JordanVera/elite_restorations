@@ -1363,6 +1363,16 @@ export const services: Service[] = [
       'roofing-emergency-tarp-repair',
       'insurance-claims',
     ],
+    links: [
+      {
+        href: '/frozen-and-burst-pipes-in-houston',
+        label: 'Frozen or burst pipe: what to do first',
+      },
+      {
+        href: '/water-damage-insurance-claims-in-texas',
+        label: 'Water-damage claim checklist',
+      },
+    ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
       'Air movers drying a Houston home during water damage restoration',
@@ -1444,6 +1454,14 @@ export const services: Service[] = [
     ],
     links: [
       { href: '/insurance-log', label: 'Open the free insurance photo log' },
+      {
+        href: '/water-damage-insurance-claims-in-texas',
+        label: 'Water-damage claim checklist',
+      },
+      {
+        href: '/frozen-and-burst-pipes-in-houston',
+        label: 'Frozen or burst pipe: what to do first',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
