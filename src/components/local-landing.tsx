@@ -331,24 +331,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
             name: `${area.name}, Texas`,
           },
           provider: {
-            '@type': ['HomeAndConstructionBusiness', 'GeneralContractor'],
             '@id': `${site.url}/#business`,
-            name: site.name,
-            url: site.url,
-            telephone: site.phone.e164,
-            email: site.email,
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: site.address.streetAddress,
-              addressLocality: site.address.addressLocality,
-              addressRegion: site.address.addressRegion,
-              postalCode: site.address.postalCode,
-              addressCountry: site.address.addressCountry,
-            },
-            areaServed: {
-              '@type': 'Place',
-              name: `${area.name}, Texas`,
-            },
           },
         }}
       />

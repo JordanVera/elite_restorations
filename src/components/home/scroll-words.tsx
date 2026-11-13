@@ -27,11 +27,12 @@ function Word({
         ["--ink" as string]: emphasis ? "var(--accent-ink)" : "var(--foreground)",
       }}
       className={cn(
-        "mr-[0.22em] inline-block text-[color-mix(in_srgb,var(--ink)_calc(var(--w)*100%),var(--muted-foreground))]",
+        "relative mr-[0.22em] inline-block text-[color-mix(in_srgb,var(--ink)_calc(var(--w)*100%),var(--muted-foreground))]",
         emphasis && "italic",
       )}
     >
       {children}
+      <span className="absolute size-0 overflow-hidden"> </span>
     </motion.span>
   );
 }

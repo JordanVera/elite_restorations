@@ -638,7 +638,7 @@ export function MissingRoom() {
           <div className="lg:col-span-5 lg:pt-6">
             <h1 id="missing-heading" className="font-display t-lg">
               <span className="block overflow-hidden">
-                <span className="anim-line-up block">This room</span>
+                <span className="anim-line-up block">{'This room '}</span>
               </span>
               <span className="block overflow-hidden">
                 <span

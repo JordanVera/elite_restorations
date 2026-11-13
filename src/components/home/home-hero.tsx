@@ -15,7 +15,7 @@ export function HomeHero() {
           Remodeling & restoration · Greater Houston
         </p>
         <h1 id="hero-heading">
-          Houston remodeling.
+          {'Houston remodeling. '}
           <br />
           <em>Beautifully lived in.</em>
         </h1>
