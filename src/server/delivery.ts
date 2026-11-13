@@ -1,6 +1,7 @@
 import "server-only";
 
 import { describeLead } from "@/server/leads/describe";
+import { syncLeadToJobber } from "@/server/leads/jobber";
 import { sendInquiryEmail } from "@/server/mail";
 import type { DeliverableLead } from "@/server/leads/types";
 
@@ -42,6 +43,7 @@ async function deliverViaWebhook(lead: DeliverableLead): Promise<boolean> {
 /**
  * Vercel delivers through SMTP. The GoDaddy gateway is not used there.
  * INQUIRY_WEBHOOK_URL is an optional extra copy.
+ * Jobber is attempted alongside email. A Jobber failure does not change this result.
  */
 export async function deliverLead(lead: DeliverableLead): Promise<DeliveryResult> {
   const useWebhook = isWebhookConfigured();
@@ -49,6 +51,11 @@ export async function deliverLead(lead: DeliverableLead): Promise<DeliveryResult
   const [email, webhookSent] = await Promise.all([
     sendInquiryEmail(lead),
     useWebhook ? deliverViaWebhook(lead) : Promise.resolve(false),
+    syncLeadToJobber(lead).catch((error: unknown) => {
+      const message = error instanceof Error ? error.message : "unknown error";
+      console.error("[jobber] sync failed", message.slice(0, 200));
+      return { status: "failed" as const };
+    }),
   ]);
 
   if (email.status === "sent" || webhookSent) {

@@ -2,30 +2,16 @@ import "server-only";
 
 import { leadServices, optionLabel } from "@/lib/inquiry";
 import { describeLead } from "@/server/leads/describe";
+import { syncEstimateToJobber, type JobberSyncResult } from "@/server/jobber/sync";
 import type { DeliverableLead } from "@/server/leads/types";
 
-/**
- * Jobber hand-off, intentionally not connected.
- *
- * Nothing imports this module and no request is made. It records how a lead
- * maps onto Jobber so the sync can be switched on later without touching the
- * form, the schema or the webhook sink.
- *
- * Planned sequence once credentials exist:
- *   1. Find a client by email or phone, otherwise create one from `client`.
- *   2. When the lead includes an address, add `property` to that client.
- *   3. Create a request titled `request.title` whose notes are `request.details`.
- *
- * Photo links in `request.details` are public Blob URLs. The sync should copy
- * the images into Jobber rather than rely on those links staying available.
- */
+export type { JobberSyncResult };
+
 export type JobberIntake = {
   client: { firstName: string; lastName: string; email: string; phone: string };
   property: { street: string } | null;
   request: { title: string; details: string; photoUrls: string[] };
 };
-
-export type JobberSyncResult = { status: "not-configured" };
 
 export function toJobberIntake(lead: DeliverableLead): JobberIntake {
   const [firstName = "", ...rest] = lead.name.split(/\s+/);
@@ -43,7 +29,10 @@ export function toJobberIntake(lead: DeliverableLead): JobberIntake {
   };
 }
 
+/**
+ * Creates a Jobber client and request for an estimate. Failures stay inside
+ * this function so email delivery and the visitor response are unchanged.
+ */
 export async function syncLeadToJobber(lead: DeliverableLead): Promise<JobberSyncResult> {
-  void toJobberIntake(lead);
-  return { status: "not-configured" };
+  return syncEstimateToJobber(lead);
 }
