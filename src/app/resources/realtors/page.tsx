@@ -6,7 +6,6 @@ import { ArrowUpRight } from 'lucide-react';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { PartnerForm } from '@/components/resources/partner-form';
-import { ReferralTierTable } from '@/components/resources/referral-tier-table';
 import { VideoPortal } from '@/components/resources/video-portal';
 import { Button } from '@/components/ui/button';
 import { pageMetadata } from '@/lib/seo';
@@ -14,7 +13,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'Realtor Partners in Houston, TX',
   description:
-    'Partner benefits and project walkthroughs for Houston realtors and investors who refer remodeling work to Elite Restorations.',
+    'How Houston realtors and investors can refer remodeling work to Elite Restorations, and the steps a typical project follows.',
   path: '/resources/realtors',
 });
 
@@ -36,36 +35,18 @@ const benefits = [
   },
   {
     index: '04',
-    title: 'Preferred partner pricing',
-    body: 'Partners are priced as repeat work, not as a one-off homeowner who found us once.',
+    title: 'A direct line',
+    body: 'Partners reach the office directly, instead of starting over as a one-time web lead.',
   },
   {
     index: '05',
-    title: 'Priority scheduling',
-    body: 'Higher referral tiers move to the front of the schedule when a closing date is real.',
+    title: 'A real closing date',
+    body: 'Tell us the date. We schedule around it when the crew can.',
   },
   {
     index: '06',
-    title: 'A project manager',
-    body: 'From the dedicated-manager tier up, one person owns the timeline, the trades, and the walkthrough.',
-  },
-];
-
-const quotes = [
-  {
-    quote: 'They treated the listing date like it was their own.',
-    name: 'Placeholder partner',
-    role: 'Realtor, Houston',
-  },
-  {
-    quote: 'The estimate matched the walkthrough, and the walkthrough matched the invoice.',
-    name: 'Placeholder partner',
-    role: 'Investor, Greater Houston',
-  },
-  {
-    quote: 'My clients heard from someone before I had to ask.',
-    name: 'Placeholder partner',
-    role: 'Broker, Memorial',
+    title: 'One person on the job',
+    body: 'One person owns the timeline, the trades, and the walkthrough.',
   },
 ];
 
@@ -75,7 +56,7 @@ export default function RealtorsResourcesPage() {
       <PageHero
         eyebrow="For realtors"
         title={['A partner for', 'the work you refer.']}
-        lede="The same project library your clients can watch, plus referral tiers and a direct way to send a flip or an introduction."
+        lede="The same project steps your clients can read, and a direct way to send a flip or an introduction."
         crumbs={[
           { name: 'Resources', path: '/resources' },
           { name: 'Realtors', path: '/resources/realtors' },
@@ -99,8 +80,8 @@ export default function RealtorsResourcesPage() {
               Show a client the sequence.
             </h2>
             <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-              Use the same films homeowners see. Every clip is a placeholder until real job
-              footage replaces it.
+              The same step-by-step sequences homeowners see, so you can walk a client through
+              the work.
             </p>
           </Reveal>
           <Suspense
@@ -138,26 +119,6 @@ export default function RealtorsResourcesPage() {
         </div>
       </section>
 
-      <section aria-labelledby="tiers-heading" className="py-20 md:py-28">
-        <div className="gutter mx-auto max-w-[120rem]">
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
-            <Reveal className="lg:col-span-4">
-              <p className="eyebrow text-accent-ink">Referral tiers</p>
-              <h2 id="tiers-heading" className="font-display t-lg mt-4">
-                Fees that follow the volume.
-              </h2>
-              <p className="mt-6 leading-relaxed text-muted-foreground">
-                Annual referred revenue sets the fee and the scheduling priority. The figures
-                below are placeholders and are easy to replace.
-              </p>
-            </Reveal>
-            <div className="lg:col-span-8">
-              <ReferralTierTable />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section
         id="partner-form"
         aria-labelledby="partner-heading"
@@ -170,8 +131,8 @@ export default function RealtorsResourcesPage() {
               Refer a project.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Tell us who you are and the kind of work you send. We will follow up with how the
-              partnership actually runs.
+              Tell us who you are and the kind of work you send. We will follow up with how a
+              partnership would actually run. We do not publish a fee schedule.
             </p>
           </Reveal>
           <div className="lg:col-span-7">
@@ -180,33 +141,6 @@ export default function RealtorsResourcesPage() {
         </div>
       </section>
 
-      <section aria-labelledby="trust-heading" className="py-20 md:py-28">
-        <div className="gutter mx-auto max-w-[120rem]">
-          <Reveal>
-            <p className="eyebrow text-muted-foreground">Why partners choose us</p>
-            <h2 id="trust-heading" className="font-display t-lg mt-4 max-w-[16ch]">
-              A crew that answers.
-            </h2>
-            <p className="measure mt-6 text-muted-foreground">
-              Placeholder notes until partner quotes are approved for the site.
-            </p>
-          </Reveal>
-          <ul className="mt-14 grid gap-px bg-border md:grid-cols-3">
-            {quotes.map((item) => (
-              <li key={item.quote} className="bg-background p-8 md:p-10">
-                <p className="eyebrow text-accent-ink">Placeholder quote</p>
-                <blockquote className="font-display mt-6 text-2xl leading-snug">
-                  “{item.quote}”
-                </blockquote>
-                <footer className="mt-8 text-sm text-muted-foreground">
-                  <p>{item.name}</p>
-                  <p>{item.role}</p>
-                </footer>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
     </>
   );
 }

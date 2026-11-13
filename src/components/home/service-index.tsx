@@ -265,18 +265,18 @@ function ServiceRow({
       data-active={active}
       onMouseEnter={() => onActivate(service.slug)}
       onFocus={() => onActivate(service.slug)}
-      className="group grid grid-cols-[2.25rem_1fr_auto] items-center gap-x-4 py-5 transition-opacity duration-500 md:grid-cols-[3.5rem_1fr_auto] md:py-6 lg:opacity-40 lg:data-[active=true]:opacity-100"
+      className="group grid min-w-0 grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-x-4 py-5 transition-opacity duration-500 md:grid-cols-[3.5rem_minmax(0,1fr)_auto] md:py-6 lg:opacity-40 lg:data-[active=true]:opacity-100"
     >
       <span className="eyebrow text-muted-foreground">
         {String(index + 1).padStart(2, '0')}
       </span>
-      <span className="flex items-center gap-5">
+      <span className="flex min-w-0 items-center gap-5">
         <span className="relative block size-14 shrink-0 overflow-hidden lg:hidden">
           <Photo image={service.image} sizes="56px" quality={60} />
         </span>
         <span
           className={cn(
-            't-lg transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3',
+            'min-w-0 font-display text-[clamp(1.45rem,5.4vw,2.15rem)] leading-[1.05] tracking-[-0.025em] transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3 lg:text-[clamp(2rem,4.6vw,4.25rem)] lg:leading-none',
             active && 'lg:translate-x-3',
           )}
         >

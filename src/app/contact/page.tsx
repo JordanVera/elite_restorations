@@ -52,7 +52,7 @@ export default async function ContactPage({
             <p className="eyebrow text-accent-ink">Talk to us</p>
             <a
               href={site.phone.href}
-              className="font-display mt-4 block text-5xl leading-none transition-colors hover:text-accent-ink sm:text-6xl"
+              className="font-display mt-4 block text-[clamp(2rem,10vw,3.75rem)] leading-none transition-colors hover:text-accent-ink"
             >
               {site.phone.display}
             </a>

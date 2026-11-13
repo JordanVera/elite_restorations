@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
-import { ArrowUpRight, ChevronDown } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
 import { NavigationMenu } from 'radix-ui';
 import { MobileNav } from '@/components/mobile-nav';
 import { ScrollProgressLine } from '@/components/motion';
@@ -17,7 +17,7 @@ import {
   servicePath,
   servicesInGroup,
 } from '@/lib/services';
-import { ctaHref, nav, type NavItem } from '@/lib/site';
+import { ctaHref, nav, site, type NavItem } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
@@ -55,7 +55,7 @@ export function SiteHeader() {
           aria-label="Elite Restorations, home"
           className="shrink-0"
         >
-          <SiteLogo />
+          <SiteLogo onDark={overHomeHero} />
         </Link>
 
         <NavigationMenu.Root
@@ -78,12 +78,14 @@ export function SiteHeader() {
         </NavigationMenu.Root>
 
         <div className="flex items-center gap-4">
-          {/* <a
+          <a
             href={site.phone.href}
-            className="hidden text-[0.8rem] tracking-wide text-black dark:text-white transition-colors hover:text-foreground xl:block"
+            className="inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap text-[0.8rem] tracking-wide transition-colors hover:text-accent-ink lg:hidden 2xl:inline-flex 2xl:min-w-0 2xl:justify-start"
           >
-            {site.phone.display}
-          </a> */}
+            <Phone className="size-4 2xl:hidden" aria-hidden />
+            <span className="hidden 2xl:inline">{site.phone.display}</span>
+            <span className="sr-only 2xl:hidden">Call {site.phone.display}</span>
+          </a>
           <ThemeToggle className="hidden sm:inline-flex cursor-pointer" />
           <Button
             asChild

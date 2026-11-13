@@ -2,13 +2,8 @@ import { ScrollWords } from '@/components/home/scroll-words';
 import { ImageReveal, Parallax, Reveal } from '@/components/motion';
 import { Photo } from '@/components/photo';
 import { img } from '@/lib/images';
-import Image from 'next/image';
 import { SiteLogo } from '../site-logo';
 
-const plank = img(
-  '/images/projects/bathrooms/charcoal-bath-patterned-shower.jpg',
-  'Bathroom remodel with a patterned tile shower and marble floor',
-);
 const tile = img(
   '/images/projects/bathrooms/freestanding-tub-window.jpg',
   'Freestanding tub, marble walls, and a glass shower in a Houston bathroom remodel',
@@ -75,16 +70,6 @@ export function HomeManifesto() {
                 },
               ]}
             />
-
-            {/* <div className="pointer-events-none absolute -right-4 -top-24 z-10 hidden w-44 lg:block xl:-right-16 xl:w-56">
-              <ImageReveal from="top" className="aspect-[3/4]">
-                <Parallax offset={40} className="size-full">
-                  <div className="relative size-full">
-                    <Photo image={plank} sizes="14vw" />
-                  </div>
-                </Parallax>
-              </ImageReveal>
-            </div> */}
           </div>
         </div>
 

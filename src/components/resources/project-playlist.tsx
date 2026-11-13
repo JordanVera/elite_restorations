@@ -6,7 +6,6 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
-  PLACEHOLDER_LABEL,
   isPlaceholderClip,
   stepVideo,
   type ProjectType,
@@ -106,35 +105,32 @@ export function ProjectPlaylist({
         </ol>
 
         <div>
-          <div className="relative border border-border bg-surface">
-            {placeholder && (
-              <p className="eyebrow absolute top-4 left-4 z-10 bg-background/92 px-3 py-2 text-accent-ink">
-                {PLACEHOLDER_LABEL}
-              </p>
-            )}
-            {video.kind === 'youtube' ? (
-              <iframe
-                key={video.src + step.title}
-                className="aspect-video w-full"
-                src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.src)}`}
-                title={placeholder ? `${step.title}. ${PLACEHOLDER_LABEL}` : step.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            ) : (
-              <video
-                key={video.src + step.title}
-                className="aspect-video w-full bg-black"
-                controls
-                playsInline
-                preload="metadata"
-                src={video.src}
-                aria-label={placeholder ? `${step.title}. ${PLACEHOLDER_LABEL}` : step.title}
-              />
-            )}
-          </div>
+          {!placeholder && (
+            <div className="relative border border-border bg-surface">
+              {video.kind === 'youtube' ? (
+                <iframe
+                  key={video.src + step.title}
+                  className="aspect-video w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.src)}`}
+                  title={step.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  key={video.src + step.title}
+                  className="aspect-video w-full bg-black"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  src={video.src}
+                  aria-label={step.title}
+                />
+              )}
+            </div>
+          )}
 
-          <p className="mt-6 text-lg leading-relaxed">{step.description}</p>
+          <p className={cn('text-lg leading-relaxed', !placeholder && 'mt-6')}>{step.description}</p>
           <p className="eyebrow mt-4 text-muted-foreground" aria-live="polite">
             Step {index + 1} of {total}
           </p>

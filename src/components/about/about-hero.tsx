@@ -8,7 +8,7 @@ const family = img(
   'The Rodriguez family at a graduation ceremony',
 );
 const harley = img(
-  '/images/about/george_and_mayor.png',
+  '/images/about/george_and_mayor.jpg',
   'George Rodriguez with Mayor Sylvester Turner',
 );
 const softball = img(

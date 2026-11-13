@@ -32,7 +32,12 @@ export function toJobberIntake(lead: DeliverableLead): JobberIntake {
     client: { firstName, lastName: rest.join(" "), email: lead.email, phone: lead.phone },
     property: lead.path === "recovery" ? { street: lead.address } : null,
     request: {
-      title: lead.path === "recovery" ? "Website request: water or storm damage" : "Website request: remodel",
+      title:
+        lead.path === "recovery"
+          ? "Website request: water or storm damage"
+          : lead.path === "partner"
+            ? "Website request: partner referral"
+            : "Website request: remodel",
       details: describeLead(lead),
       photoUrls: lead.photos.map((p) => p.url),
     },

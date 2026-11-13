@@ -135,12 +135,6 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
         opens: "08:00",
         closes: "18:00",
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Sunday",
-        opens: "00:00",
-        closes: "00:00",
-      },
     ],
     sameAs: [...site.sameAs],
     aggregateRating: {

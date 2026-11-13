@@ -14,7 +14,7 @@ import { ctaHref } from '@/lib/site';
 export const metadata: Metadata = pageMetadata({
   title: 'Homeowner Remodel Help in Houston',
   description:
-    'Watch how Elite Restorations sequences bathroom, kitchen, and whole-home remodels, then request a free estimate in Houston.',
+    'How Elite Restorations sequences bathroom, kitchen, and whole-home remodels in Houston, then how to request an estimate.',
   path: '/resources/homeowners',
 });
 
@@ -46,8 +46,8 @@ export default function HomeownersResourcesPage() {
     <>
       <PageHero
         eyebrow="For homeowners"
-        title={['Watch the work', 'before you hire.']}
-        lede="Short films of how a remodel actually proceeds, so you know what to expect before you ask for an estimate."
+        title={['See the sequence', 'before you hire.']}
+        lede="How a bathroom, kitchen, or whole-home remodel proceeds, step by step, before you ask for an estimate."
         crumbs={[
           { name: 'Resources', path: '/resources' },
           { name: 'Homeowners', path: '/resources/homeowners' },
@@ -74,9 +74,8 @@ export default function HomeownersResourcesPage() {
               See how the work <span className="italic">actually</span> goes.
             </h2>
             <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-              Choose a category, then a project type. Each film is a step in the
-              sequence, and every clip on this page is a placeholder until real
-              job footage is cut in.
+              Choose a category, then a project type. Each step is the sequence
+              our crews follow on that kind of work.
             </p>
           </Reveal>
           <Suspense
@@ -124,7 +123,7 @@ export default function HomeownersResourcesPage() {
 
       <CtaBand
         title="Ready for an estimate?"
-        body="Tell us which project you watched, or describe the room as it is. We will take it from there."
+        body="Tell us which project you have in mind, or describe the room as it is. We will take it from there."
       />
     </>
   );
