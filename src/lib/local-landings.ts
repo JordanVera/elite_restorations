@@ -2,7 +2,7 @@ import 'server-only';
 
 import { getArticle } from '@/lib/articles';
 import { localLandingSlug } from '@/lib/local-paths';
-import { fitDescription, titleFits } from '@/lib/seo';
+import { documentTitle, fitDescription, servicePageTitle, titleFits } from '@/lib/seo';
 import { getService, services, type Service } from '@/lib/services';
 import { getServiceArea, serviceAreas, type ServiceArea } from '@/lib/service-areas';
 import { site } from '@/lib/site';
@@ -669,6 +669,46 @@ export const localLandings: readonly LocalLanding[] = services.flatMap((service)
 assertLandings(localLandings);
 
 const bySlug = new Map(localLandings.map((page) => [page.slug, page]));
+
+const distinctFromHouston = [
+  'kitchen-remodeling',
+  'bathroom-remodeling',
+  'backsplash',
+  'countertops',
+  'wood-flooring',
+  'tile-flooring',
+  'vinyl-flooring',
+  'laminate-flooring',
+  'carpentry',
+  'tile-fireplaces',
+  'roofing',
+  'roof-replacement',
+  'roofing-emergency-tarp-repair',
+  'siding',
+  'patios-decks',
+  'painting-drywall-repair',
+  'insurance-claims',
+] as const;
+
+for (const slug of distinctFromHouston) {
+  const service = getService(slug);
+  const houston = bySlug.get(localLandingSlug(slug, 'houston'));
+  if (!service || !houston) throw new Error(`Missing Houston title pair for ${slug}`);
+  const main = documentTitle(servicePageTitle(service));
+  const city = documentTitle(houston.title);
+  if (main === city) throw new Error(`Service title still matches its Houston page: ${main}`);
+  if (main.length > 60 || city.length > 60) {
+    throw new Error(`Title over 60 characters: ${main} / ${city}`);
+  }
+  if (!main.endsWith('Elite Restorations') || !city.endsWith('Elite Restorations')) {
+    throw new Error(`Title is missing the brand: ${main} / ${city}`);
+  }
+  if (main.includes('Inc.') || city.includes('Inc.')) {
+    throw new Error(`Title includes Inc.: ${main} / ${city}`);
+  }
+  if (/\bHouston\b/.test(main)) throw new Error(`Service page title names Houston: ${main}`);
+  if (!/\bHouston\b/.test(city)) throw new Error(`Houston page title omits Houston: ${city}`);
+}
 
 export function getLocalLanding(slug: string) {
   return bySlug.get(slug);

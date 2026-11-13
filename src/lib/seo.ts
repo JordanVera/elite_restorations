@@ -14,9 +14,52 @@ type PageMetaInput = {
   image?: string;
 };
 
-/** Absolute URL on https://eliterestorations.com. */
+/**
+ * Absolute URL on https://eliterestorations.com.
+ * The homepage is the origin with no trailing slash. Next.js emits that
+ * form as the canonical for `/`, and the sitemap uses the same string.
+ */
 export function absoluteUrl(path: string) {
-  return new URL(path, site.url).toString();
+  const url = new URL(path, site.url);
+  if (url.pathname === "/" && url.search === "" && url.hash === "") {
+    return url.origin;
+  }
+  return url.toString();
+}
+
+/**
+ * These service pages name the trade. Their `-houston-tx` pages name Houston,
+ * so the two document titles stay different.
+ */
+const serviceLedTitleSlugs = new Set([
+  "kitchen-remodeling",
+  "bathroom-remodeling",
+  "backsplash",
+  "countertops",
+  "wood-flooring",
+  "tile-flooring",
+  "vinyl-flooring",
+  "laminate-flooring",
+  "carpentry",
+  "tile-fireplaces",
+  "roofing",
+  "roof-replacement",
+  "roofing-emergency-tarp-repair",
+  "siding",
+  "patios-decks",
+  "painting-drywall-repair",
+  "insurance-claims",
+]);
+
+/** Lead passed to `pageMetadata`. City pages keep a Houston title. */
+export function servicePageTitle(service: {
+  slug: string;
+  name: string;
+  metaTitle?: string;
+}) {
+  const lead = service.metaTitle ?? service.name;
+  if (serviceLedTitleSlugs.has(service.slug)) return lead;
+  return localTitle(lead);
 }
 
 /** True when `lead` plus the business name fits the 60-character title. */
