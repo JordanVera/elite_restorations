@@ -1,5 +1,6 @@
 import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
+import { costGuideExtras } from '@/lib/cost-guide-copy';
 import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
@@ -26,6 +27,7 @@ export type CostGuide = {
   factors: readonly { title: string; body: string }[];
   /** Hidden until every row has a low and a high. */
   ranges: readonly CostRange[];
+  sections: readonly { heading: string; paragraphs: readonly string[] }[];
   faqs: readonly { q: string; a: string }[];
   related: readonly { href: string; label: string }[];
 };
@@ -93,6 +95,7 @@ export const costGuides: readonly CostGuide[] = [
       { label: 'Layout change', low: 40000, high: 80000 },
       { label: 'Full gut', low: 70000, high: 135000 },
     ],
+    sections: costGuideExtras['kitchen-remodel-cost-houston'].sections,
     faqs: [
       {
         q: 'Why is there no single kitchen price for Houston?',
@@ -110,6 +113,7 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a number for my kitchen?',
         a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
       },
+      ...costGuideExtras['kitchen-remodel-cost-houston'].faqs,
     ],
     related: [
       { href: '/kitchen-remodeling', label: 'Houston kitchen remodeling' },
@@ -156,6 +160,7 @@ export const costGuides: readonly CostGuide[] = [
       { label: 'Shower rebuild, same layout', low: 12000, high: 25000 },
       { label: 'Full remodel with plumbing moves', low: 30000, high: 65000 },
     ],
+    sections: costGuideExtras['bathroom-remodel-cost-houston'].sections,
     faqs: [
       {
         q: 'Why can two bathroom remodels cost so differently?',
@@ -173,6 +178,7 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a price?',
         a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
       },
+      ...costGuideExtras['bathroom-remodel-cost-houston'].faqs,
     ],
     related: [
       { href: '/bathroom-remodeling', label: 'Houston bathroom remodeling' },
@@ -222,6 +228,7 @@ export const costGuides: readonly CostGuide[] = [
       { label: 'Metal, tile, or composite', low: 20000, high: 45000 },
       { label: 'Deck repairs found after tear-off', low: 500, high: 2000 },
     ],
+    sections: costGuideExtras['roof-replacement-cost-houston'].sections,
     faqs: [
       {
         q: 'Why is there no single roof price per square?',
@@ -239,6 +246,7 @@ export const costGuides: readonly CostGuide[] = [
         q: 'How do I get a roof estimate?',
         a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
       },
+      ...costGuideExtras['roof-replacement-cost-houston'].faqs,
     ],
     related: [
       { href: '/roof-replacement', label: 'Houston roof replacement' },
@@ -263,7 +271,27 @@ export function estimateHref(serviceSlug: string) {
   return `/contact?service=${encodeURIComponent(serviceSlug)}`;
 }
 
+function costGuideWordCount(guide: CostGuide) {
+  const parts = [
+    guide.lede,
+    ...guide.factors.flatMap((item) => [item.title, item.body]),
+    ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs]),
+    ...guide.ranges.flatMap((range) => [range.label, formatPublishedRange(range) ?? '']),
+    'These are typical planning ranges, not quotes. The final price comes from an on-site estimate.',
+    ...guide.faqs.flatMap((item) => [item.q, item.a]),
+  ];
+  const clean = parts.filter(Boolean).join('\n').replace(/\s+/g, ' ').trim();
+  return clean ? clean.split(' ').length : 0;
+}
+
 for (const guide of costGuides) {
+  const guideWords = costGuideWordCount(guide);
+  if (guideWords < 1500 || guideWords > 2200) {
+    throw new Error(`Cost guide ${guide.slug} is ${guideWords} words`);
+  }
+  if (guide.faqs.length < 6 || guide.faqs.length > 10) {
+    throw new Error(`Cost guide ${guide.slug} has ${guide.faqs.length} FAQs`);
+  }
   if (!titleFits(guide.title)) {
     throw new Error(`Cost guide title does not fit: ${guide.title}`);
   }

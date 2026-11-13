@@ -122,6 +122,33 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
         </div>
       </section>
 
+      {guide.sections.length > 0 && (
+        <section aria-labelledby="cost-read-heading" className="border-t border-border py-20 md:py-28">
+          <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-4">
+              <p className="eyebrow text-accent-ink">In Houston</p>
+              <h2 id="cost-read-heading" className="font-display t-lg mt-4">
+                How the number gets built.
+              </h2>
+            </Reveal>
+            <div className="space-y-12 lg:col-span-8">
+              {guide.sections.map((section) => (
+                <div key={section.heading}>
+                  <h3 className="font-display text-3xl leading-snug">{section.heading}</h3>
+                  <div className="mt-4 space-y-5">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className="measure text-lg leading-relaxed text-muted-foreground">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section aria-labelledby="cost-faq-heading" className="border-t border-border py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">

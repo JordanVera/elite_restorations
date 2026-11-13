@@ -12,6 +12,7 @@ import { CostGuideView } from '@/components/cost-guide';
 import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
+import { HoustonFactors, ServiceGuide } from '@/components/service-depth-sections';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
@@ -21,8 +22,8 @@ import { articlePath, articles, getArticle } from '@/lib/articles';
 import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
-import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
+import { getServiceDepth } from '@/lib/service-depth';
 import { absoluteUrl, pageMetadata, servicePageTitle } from '@/lib/seo';
 import {
   getService,
@@ -156,12 +157,12 @@ export default async function ServicePage({
   const service = getService(slug);
   if (!service) notFound();
 
-  const steps =
-    service.process ??
-    processSteps.map((step) => ({
-      title: step.title,
-      body: `${step.lead} ${step.body}`,
-    }));
+  const depth = getServiceDepth(service.slug);
+  const intro = [...service.intro, ...depth.moreIntro];
+  const localBody = [...service.local.body, ...depth.moreLocal];
+  const steps = depth.process;
+  const faqs = [...service.faqs, ...depth.faqs];
+  const costLinks = (service.links ?? []).filter((link) => link.href.includes('cost'));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
@@ -241,7 +242,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="mt-6 space-y-7">
-              {service.intro.map((p, i) => (
+              {intro.map((p, i) => (
                 <Reveal key={i} delay={i * 0.08}>
                   <p
                     className={
@@ -329,7 +330,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="mt-8 space-y-6">
-              {service.local.body.map((paragraph) => (
+              {localBody.map((paragraph) => (
                 <p
                   key={paragraph}
                   className="measure text-lg leading-relaxed text-muted-foreground"
@@ -363,6 +364,8 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      <HoustonFactors depth={depth} />
 
       <section
         aria-labelledby="steps-heading"
@@ -398,6 +401,8 @@ export default async function ServicePage({
           </ol>
         </div>
       </section>
+
+      <ServiceGuide depth={depth} costLinks={costLinks} />
 
       {masonry.length > 0 && (
         <section aria-labelledby="projects-heading" className="py-20 md:py-28">
@@ -459,7 +464,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="lg:col-span-8">
-              <Faq items={service.faqs} />
+              <Faq items={faqs} />
             </div>
           </div>
         </section>

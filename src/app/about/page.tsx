@@ -8,7 +8,9 @@ import { ProcessRail } from '@/components/about/process-rail';
 import { TeamGrid } from '@/components/about/team-grid';
 import { WorkHighlights } from '@/components/about/work-highlights';
 import { CtaBand } from '@/components/cta-band';
+import { JsonLd } from '@/components/json-ld';
 import { pageMetadata } from '@/lib/seo';
+import { teamSchema } from '@/lib/team';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About Our Houston Restoration Team',
@@ -25,6 +27,7 @@ export default function AboutPage() {
       <FamilyEssay />
       <HabitCards />
       <TeamGrid />
+      <JsonLd data={teamSchema()} />
       <WorkHighlights />
       <ProcessRail />
       <AreaMarquee />
