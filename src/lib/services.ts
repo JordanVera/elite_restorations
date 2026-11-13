@@ -148,6 +148,7 @@ export const services: Service[] = [
     tagline: 'A quieter room, finished with the tile and fixtures you want.',
     summary:
       'Showers, vanities, tile and lighting, planned as one bathroom and built with waterproofing behind the walls.',
+    metaTitle: 'Houston Bathroom Remodeling',
     metaDescription:
       'Bathroom remodeling in Houston, TX: showers, vanities, tile and lighting, from a powder-room refresh to a full primary bath planned for how you use it.',
     intro: [
@@ -322,6 +323,7 @@ export const services: Service[] = [
     tagline: 'Surfaces chosen to be lived on, and cut to fit exactly.',
     summary:
       'Granite, quartz, marble and solid-surface counters with custom edges and precise fabrication.',
+    metaTitle: 'Houston Countertops',
     metaDescription:
       'Countertop installation in Houston, TX: granite, quartz, marble and solid surface, templated on site for islands, edges and the kitchen you use every day.',
     intro: [
@@ -709,6 +711,7 @@ export const services: Service[] = [
     tagline: 'The structure and trim that make a room feel finished.',
     summary:
       'Framing, trim, built-ins, stairs and millwork, from repairs to custom pieces.',
+    metaTitle: 'Houston Carpentry',
     metaDescription:
       'Carpentry in Houston, TX: finish trim, built-ins, stairs and millwork, matched to older Heights and West University profiles or built new for the room.',
     intro: [
@@ -789,6 +792,7 @@ export const services: Service[] = [
     tagline: 'A hearth that anchors the room.',
     summary:
       'Tile and stone fireplace surrounds, new or refreshed, set with heat-appropriate materials.',
+    metaTitle: 'Houston Tile Fireplaces',
     metaDescription:
       'Tile fireplace installation in Houston, TX: heat-rated surrounds, retiling and sealing for living rooms that anchor the Houston house through the year.',
     intro: [
@@ -865,6 +869,7 @@ export const services: Service[] = [
     tagline: 'Repair or replacement, detailed for the house under the roof.',
     summary:
       'Inspections, repairs, tear-offs and new roofs, plus a tarp when a storm opens the roof.',
+    metaTitle: 'Houston Roof Repair & Replacement',
     metaDescription:
       'Roofing in Houston, TX: inspections, repairs, tear-off and replacement in asphalt, metal, tile or composite, and emergency tarping after storms.',
     intro: [
@@ -913,6 +918,16 @@ export const services: Service[] = [
       'siding',
       'water-damage-restoration',
     ],
+    links: [
+      {
+        href: '/roof-replacement-cost-houston',
+        label: 'What changes a Houston roof replacement cost',
+      },
+      {
+        href: '/storm-and-hail-roof-repair-houston',
+        label: 'Storm and hail roof repair in Houston',
+      },
+    ],
     image: img(
       '/images/services/roof-replacement.webp',
       'Roofing on a brick Houston home with a finished shingle roof',
@@ -956,6 +971,7 @@ export const services: Service[] = [
     tagline: 'A new roof, detailed for the house underneath it.',
     summary:
       'Assessment, tear-off and replacement in asphalt, metal, tile, slate and composite materials.',
+    metaTitle: 'Houston Roof Replacement',
     metaDescription:
       'Roof replacement in Houston, TX: tear-off and a new roof in asphalt, metal, tile or composite, detailed with flashing, vents and a finished site cleanup.',
     intro: [
@@ -1074,7 +1090,7 @@ export const services: Service[] = [
   },
   {
     slug: 'roofing-emergency-tarp-repair',
-    metaTitle: 'Emergency Roof Repair',
+    metaTitle: 'Houston Emergency Roof Tarping & Repair',
     name: 'Emergency Roof Tarping & Repair',
     group: 'Roof & exterior',
     tagline: 'When water is getting in, the first job is to stop it.',
@@ -1179,6 +1195,7 @@ export const services: Service[] = [
     tagline: 'The face your home shows the street.',
     summary:
       'Siding installation, repair and full replacement, including trim and color matching.',
+    metaTitle: 'Houston Siding Repair & Replacement',
     metaDescription:
       'Siding installation and replacement in Houston, TX: board-and-batten, lap and other profiles, with trim, corners and color matched to the street elevation.',
     intro: [
@@ -1253,6 +1270,7 @@ export const services: Service[] = [
     tagline: 'The outdoor room the house opens onto.',
     summary:
       'Decks, patios, and patio covers, built or rebuilt after a look at the framing, the ledger, and how the yard meets the house.',
+    metaTitle: 'Houston Patios & Decks',
     metaDescription:
       'Patios and decks in Houston, TX: new decks, rebuilds, patios, and covers, scoped from the framing and the yard you have. Call (713) 909-0034.',
     intro: [
@@ -1404,6 +1422,18 @@ export const services: Service[] = [
         href: '/water-heater-flood',
         label: 'Water heater flood: drying and a rebuild',
       },
+      {
+        href: '/what-to-do-after-water-damage-houston',
+        label: 'What to do after water damage in Houston',
+      },
+      {
+        href: '/hurricane-season-prep-houston',
+        label: 'Hurricane season prep for a Houston home',
+      },
+      {
+        href: '/how-insurance-claims-work-texas-restoration',
+        label: 'How insurance claims work for Texas restoration',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1445,6 +1475,7 @@ export const services: Service[] = [
     slug: 'insurance-claims',
     name: 'Insurance Claims Help',
     group: 'Recovery',
+    metaTitle: 'Houston Insurance Claims Help',
     tagline: 'Photographs and a clear record of the damage, for you and your adjuster.',
     summary:
       'Inspection photos and notes on water or storm damage. Your insurer decides what the claim covers.',
@@ -1497,6 +1528,14 @@ export const services: Service[] = [
       {
         href: '/water-heater-flood',
         label: 'Water heater flood: drying and a rebuild',
+      },
+      {
+        href: '/how-insurance-claims-work-texas-restoration',
+        label: 'How insurance claims work for Texas restoration',
+      },
+      {
+        href: '/storm-and-hail-roof-repair-houston',
+        label: 'Storm and hail roof repair in Houston',
       },
     ],
     image: img(

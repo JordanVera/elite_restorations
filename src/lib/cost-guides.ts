@@ -27,6 +27,7 @@ export type CostGuide = {
   /** Hidden until every row has a low and a high. */
   ranges: readonly CostRange[];
   faqs: readonly { q: string; a: string }[];
+  related: readonly { href: string; label: string }[];
 };
 
 export function rangesArePublishable(ranges: readonly CostRange[]) {
@@ -110,6 +111,17 @@ export const costGuides: readonly CostGuide[] = [
         a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
       },
     ],
+    related: [
+      { href: '/kitchen-remodeling', label: 'Houston kitchen remodeling' },
+      { href: '/kitchen-remodeling-houston-tx', label: 'Kitchen remodeling in Houston' },
+      { href: '/kitchen-remodeling-the-heights-tx', label: 'Kitchen remodeling in The Heights' },
+      { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
+      { href: '/kitchen-remodeling-the-woodlands-tx', label: 'Kitchen remodeling in The Woodlands' },
+      {
+        href: '/kitchen-remodel-case-study',
+        label: "A kitchen remodel, in a customer's words",
+      },
+    ],
   },
   {
     slug: 'bathroom-remodel-cost-houston',
@@ -160,6 +172,16 @@ export const costGuides: readonly CostGuide[] = [
       {
         q: 'How do I get a price?',
         a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
+      },
+    ],
+    related: [
+      { href: '/bathroom-remodeling', label: 'Houston bathroom remodeling' },
+      { href: '/bathroom-remodeling-houston-tx', label: 'Bathroom remodeling in Houston' },
+      { href: '/bathroom-remodeling-memorial-tx', label: 'Bathroom remodeling in Memorial' },
+      { href: '/bathroom-remodeling-bellaire-tx', label: 'Bathroom remodeling in Bellaire' },
+      {
+        href: '/bathroom-remodeling-west-university-tx',
+        label: 'Bathroom remodeling in West University',
       },
     ],
   },
@@ -218,6 +240,16 @@ export const costGuides: readonly CostGuide[] = [
         a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
       },
     ],
+    related: [
+      { href: '/roof-replacement', label: 'Houston roof replacement' },
+      { href: '/roof-replacement-houston-tx', label: 'Roof replacement in Houston' },
+      { href: '/roof-replacement-katy-tx', label: 'Roof replacement in Katy' },
+      { href: '/roof-replacement-memorial-tx', label: 'Roof replacement in Memorial' },
+      {
+        href: '/roof-replacement-the-woodlands-tx',
+        label: 'Roof replacement in The Woodlands',
+      },
+    ],
   },
 ];
 
@@ -249,5 +281,31 @@ for (const guide of costGuides) {
   if (!getService(guide.serviceSlug)) {
     throw new Error(`Cost guide service missing: ${guide.serviceSlug}`);
   }
-  servicePath(guide.serviceSlug);
+  const hub = servicePath(guide.serviceSlug);
+  if (!guide.related.some((link) => link.href === hub)) {
+    throw new Error(`Cost guide ${guide.slug} does not link its service hub`);
+  }
+  const cityLinks = guide.related.filter((link) => parseLocalLandingSlug(link.href.slice(1)));
+  if (cityLinks.length < 3 || cityLinks.length > 4) {
+    throw new Error(`Cost guide ${guide.slug} should link 3 or 4 city pages`);
+  }
+  if (
+    guide.serviceSlug === 'kitchen-remodeling' &&
+    !guide.related.some((link) => link.href === '/kitchen-remodel-case-study')
+  ) {
+    throw new Error(`Cost guide ${guide.slug} should link the kitchen case study`);
+  }
+  const seen = new Set<string>();
+  for (const link of guide.related) {
+    if (!link.label.trim()) throw new Error(`Cost guide ${guide.slug} has an empty anchor`);
+    if (seen.has(link.href)) throw new Error(`Cost guide ${guide.slug} repeats ${link.href}`);
+    seen.add(link.href);
+    const slug = link.href.replace(/^\//, '');
+    const known =
+      Boolean(getService(slug)) ||
+      Boolean(getArticle(slug)) ||
+      Boolean(parseLocalLandingSlug(slug)) ||
+      slug === 'kitchen-remodel-case-study';
+    if (!known) throw new Error(`Cost guide ${guide.slug} links an unknown path: ${link.href}`);
+  }
 }

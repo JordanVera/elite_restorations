@@ -28,7 +28,7 @@ export function absoluteUrl(path: string) {
 }
 
 /**
- * These service pages pass a finished title lead. Several lead with "Houston"
+ * These service pages pass a finished title lead. Each lead names Houston
  * in a different word order from the "{service} in Houston" city page, so the
  * two document titles stay different.
  */

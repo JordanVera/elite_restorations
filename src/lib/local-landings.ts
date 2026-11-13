@@ -692,20 +692,9 @@ const distinctFromHouston = [
 ] as const;
 
 /**
- * These service pages name Houston in the title, in a different order from
- * the "{service} in Houston" city page, so both can rank without sharing a title.
+ * Service hub titles name Houston in a different word order from the
+ * "{service} in Houston" city page, so both can rank without sharing a title.
  */
-const houstonOnServiceTitle = new Set<string>([
-  'kitchen-remodeling',
-  'backsplash',
-  'wood-flooring',
-  'tile-flooring',
-  'vinyl-flooring',
-  'laminate-flooring',
-  'painting-drywall-repair',
-  'water-damage-restoration',
-]);
-
 for (const slug of distinctFromHouston) {
   const service = getService(slug);
   const houston = bySlug.get(localLandingSlug(slug, 'houston'));
@@ -722,12 +711,8 @@ for (const slug of distinctFromHouston) {
   if (main.includes('Inc.') || city.includes('Inc.')) {
     throw new Error(`Title includes Inc.: ${main} / ${city}`);
   }
-  if (houstonOnServiceTitle.has(slug)) {
-    if (!/\bHouston\b/.test(main)) {
-      throw new Error(`Service page title should name Houston: ${main}`);
-    }
-  } else if (/\bHouston\b/.test(main)) {
-    throw new Error(`Service page title names Houston: ${main}`);
+  if (!/\bHouston\b/.test(main)) {
+    throw new Error(`Service page title should name Houston: ${main}`);
   }
   if (!/\bHouston\b/.test(city)) throw new Error(`Houston page title omits Houston: ${city}`);
 }
