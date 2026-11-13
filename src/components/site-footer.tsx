@@ -112,7 +112,23 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
-          <SiteLogo className="h-10" />
+          <div>
+            <SiteLogo className="h-10" />
+            <address className="mt-4 text-sm not-italic leading-relaxed text-muted-foreground">
+              <p className="text-foreground">{site.name}</p>
+              <p>{site.address.streetAddress}</p>
+              <p>
+                {site.address.addressLocality}, {site.address.addressRegion}{' '}
+                {site.address.postalCode}
+              </p>
+              <a
+                href={site.phone.href}
+                className="mt-2 inline-block text-foreground transition-colors hover:text-accent-ink"
+              >
+                {site.phone.display}
+              </a>
+            </address>
+          </div>
           <div className="text-sm text-muted-foreground">
             <p className="eyebrow text-foreground">Hours</p>
             <ul className="mt-3 space-y-2">

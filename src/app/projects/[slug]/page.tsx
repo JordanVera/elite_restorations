@@ -7,8 +7,8 @@ import { CtaBand } from "@/components/cta-band";
 import { ImageReveal, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
 import { Photo } from "@/components/photo";
-import { getProject, projects } from "@/lib/projects";
-import { pageMetadata } from "@/lib/seo";
+import { getProject, projectSeoName, projects } from "@/lib/projects";
+import { localTitle, pageMetadata } from "@/lib/seo";
 import { getService, servicePath } from "@/lib/services";
 
 type Params = { slug: string };
@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const project = getProject(slug);
   if (!project) return {};
   return pageMetadata({
-    title: project.title,
-    description: `${project.tagline} ${project.summary[0]}`.slice(0, 200),
+    title: localTitle(projectSeoName(project.slug) ?? project.title),
+    description: `${project.title} in Houston. ${project.tagline}`,
     path: `/projects/${project.slug}`,
     image: project.cover.src,
   });

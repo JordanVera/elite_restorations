@@ -32,26 +32,48 @@ export const projectCategories: ProjectCategory[] = [
 
 const altOverrides: Record<string, string> = {
   'kitchens/coffered-ceiling-island.jpg':
-    'Kitchen with a coffered ceiling, twin marble islands and pendant lighting',
+    'Houston kitchen remodel with a coffered ceiling, twin marble islands and pendant lighting',
   'bathrooms/white-vanity-oval-mirrors.webp':
-    'White double vanity with marble counter, marble-tiled wall and three oval mirrors',
+    'Houston bathroom remodel with a white double vanity, marble wall and oval mirrors',
   'flooring/dark-floors-french-doors.jpg':
-    'Dark wood-look plank floor running toward black-framed French doors',
+    'Dark wood-look plank floor in a Houston home, running toward black-framed French doors',
   'roofing/brick-house-missing-shingles.webp':
-    'Roofer working on the roof of a brick and cream-siding home on a sunny day',
+    'Roofer repairing shingles on a brick Houston home',
   'roofing/roofer-ladder-underlayment.webp':
-    'Roofer on a ladder installing underlayment on a roof deck',
+    'Roofer on a ladder installing underlayment on a Houston roof',
   'roofing/tarp-aerial-full-roof.jpg':
-    'Aerial view of a tarp covering a full roof',
-  'restoration/air-movers-drying.jpg': 'Air movers drying a water-damaged room',
+    'Aerial view of an emergency tarp covering a Houston roof',
+  'restoration/air-movers-drying.jpg':
+    'Air movers drying a water-damaged room in a Houston home',
 };
+
+const projectSeoNames: Record<string, string> = {
+  'coffered-ceilings-marble-islands': 'Coffered Kitchen Remodel',
+  'timber-and-lantern-light': 'Timber Kitchen Remodel',
+  'vaulted-rooms-waterfall-islands': 'Vaulted Kitchen Remodel',
+  'hoods-ranges-and-cooking-walls': 'Cooking Wall Remodel',
+  'marble-showers-and-patterned-floors': 'Marble Shower Remodel',
+  'vanities-gold-and-glass': 'Gold and Glass Vanities',
+  'charcoal-cream-and-wallpaper-baths': 'Wallpaper Bath Remodel',
+  'floors-that-hold-the-room': 'Flooring Project',
+  'hearths-in-stone-and-marble': 'Stone Fireplace Remodel',
+  'tile-as-detail': 'Kitchen Backsplash',
+  'stairs-beams-and-millwork': 'Carpentry and Millwork',
+  'roofs-read-from-above': 'Roofing Project Photos',
+  'storm-and-water-response': 'Storm and Water Repair',
+  'exteriors-renewed': 'Siding Project',
+};
+
+export function projectSeoName(slug: string) {
+  return projectSeoNames[slug];
+}
 
 function gallery(folder: string, label: string, files: string[]): Img[] {
   return files.map((file) => {
     const key = `${folder}/${file}`;
     return img(
       `/images/projects/${key}`,
-      altOverrides[key] ?? `${label}: ${humanize(file).toLowerCase()}`,
+      altOverrides[key] ?? `${label} in Houston: ${humanize(file).toLowerCase()}`,
     );
   });
 }

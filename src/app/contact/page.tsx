@@ -9,9 +9,9 @@ import { pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact',
+  title: 'Contact a Houston Remodeler',
   description:
-    'Call, email or send a request to Elite Restorations for remodeling and restoration estimates across Greater Houston.',
+    'Call (713) 909-0034 or visit Elite Restorations at 511 Crestwater Ct, Houston, TX 77082. Free estimates for remodeling, roofing and restoration.',
   path: '/contact',
 });
 
@@ -94,9 +94,23 @@ export default async function ContactPage({
                   <span className="sr-only">Service area</span>
                 </dt>
                 <dd className="max-w-[38ch] leading-relaxed text-muted-foreground">
-                  Serving Greater Houston, including{' '}
-                  {site.serviceArea.slice(0, 8).join(', ')} and surrounding
-                  communities.
+                  <p className="text-foreground">{site.name}</p>
+                  <p>{site.address.streetAddress}</p>
+                  <p>
+                    {site.address.addressLocality}, {site.address.addressRegion}{' '}
+                    {site.address.postalCode}
+                  </p>
+                  <a
+                    href={site.phone.href}
+                    className="mt-3 inline-block text-foreground underline decoration-foreground/30 underline-offset-[0.5em] hover:decoration-accent-ink"
+                  >
+                    {site.phone.display}
+                  </a>
+                  <p className="mt-4">
+                    Serving Greater Houston, including{' '}
+                    {site.serviceArea.slice(0, 8).join(', ')} and surrounding
+                    communities.
+                  </p>
                 </dd>
               </div>
             </dl>

@@ -16,9 +16,9 @@ import {
 } from '@/lib/services';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Services',
+  title: 'Houston Remodeling Services',
   description:
-    'Kitchen and bathroom remodeling, flooring, roofing, siding, carpentry and water-damage restoration across Greater Houston from one family-run team.',
+    'Kitchen and bathroom remodeling, roofing, water and storm restoration, and insurance-claim help in Houston, plus flooring, siding and carpentry.',
   path: '/services',
   image: '/images/services/kitchen-remodeling.jpg',
 });
@@ -26,12 +26,12 @@ export const metadata: Metadata = pageMetadata({
 export default function ServicesPage() {
   return (
     <>
-      {/* <PageHero
+      <PageHero
         eyebrow="Services"
-        title={["Fifteen trades.", "One family-run team."]}
-        lede="Planned remodels and unplanned emergencies use the same skills. Browse by what you need, or start with the problem and we will work out the rest together."
-        crumbs={[{ name: "Services", path: "/services" }]}
-      /> */}
+        title={['Services in Houston.']}
+        lede="Kitchens, bathrooms, roofing, water and storm restoration, and insurance-claim documentation. Family owned since 1993."
+        crumbs={[{ name: 'Services', path: '/services' }]}
+      />
 
       {serviceGroups.map((group) => {
         const items = servicesInGroup(group);

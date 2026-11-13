@@ -11,7 +11,7 @@ const plank = img(
 );
 const tile = img(
   '/images/projects/bathrooms/freestanding-tub-window.jpg',
-  'Freestanding tub, marble walls, and a glass shower in a bathroom remodel',
+  'Freestanding tub, marble walls, and a glass shower in a Houston bathroom remodel',
 );
 
 const principles = [

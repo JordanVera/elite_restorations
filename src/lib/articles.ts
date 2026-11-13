@@ -10,6 +10,8 @@ export type ArticleSection = {
 export type Article = {
   slug: string;
   title: string;
+  /** Search title, without the business name. Kept to 60 characters once branded. */
+  metaTitle: string;
   crumb: string;
   lines: readonly string[];
   description: string;
@@ -27,6 +29,7 @@ export const articles: Article[] = [
   {
     slug: 'remodeling-vs-restoring-whats-right-for-your-home',
     title: 'Remodeling vs. restoring: which one the house needs',
+    metaTitle: 'Restore or Remodel in Houston, TX',
     crumb: 'Restore or remodel',
     lines: ['Restore it,', 'or remodel it.'],
     description:
@@ -103,6 +106,7 @@ export const articles: Article[] = [
   {
     slug: 'how-to-prevent-water-damage-in-your-home',
     title: 'How to prevent water damage in your home',
+    metaTitle: 'Prevent Water Damage in Houston',
     crumb: 'Prevent water damage',
     lines: ['Stop the leak', 'before the tear-out.'],
     description:
@@ -178,6 +182,7 @@ export const articles: Article[] = [
   {
     slug: 'what-to-do-after-a-fire-your-first-5-steps',
     title: 'What to do after a fire: the first five steps',
+    metaTitle: 'After a House Fire in Houston, TX',
     crumb: 'After a fire',
     lines: ['The first hours', 'after a fire.'],
     description:
@@ -260,6 +265,7 @@ export const articles: Article[] = [
   {
     slug: 'bathroom-upgrades-that-boost-your-homes-resale-value',
     title: 'Bathroom upgrades that help a home sell',
+    metaTitle: 'Bathroom Upgrades in Houston, TX',
     crumb: 'Bathroom upgrades',
     lines: ['Bathroom work', 'buyers notice.'],
     description:
@@ -320,6 +326,7 @@ export const articles: Article[] = [
   {
     slug: 'signs-its-time-to-replace-your-homes-flooring',
     title: 'Signs it is time to replace your home’s flooring',
+    metaTitle: 'Replace Flooring in Houston, TX',
     crumb: 'Replacing flooring',
     lines: ['When a floor', 'is finished.'],
     description:
@@ -390,6 +397,7 @@ export const articles: Article[] = [
   {
     slug: 'top-5-benefits-of-remodeling-your-kitchen-in-2025',
     title: 'Five reasons a kitchen remodel is worth doing',
+    metaTitle: 'Kitchen Remodel Reasons, Houston',
     crumb: 'Kitchen remodel',
     lines: ['What a kitchen', 'remodel is for.'],
     description:

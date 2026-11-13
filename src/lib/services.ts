@@ -20,6 +20,8 @@ export type Service = {
   tagline: string;
   summary: string;
   metaDescription: string;
+  /** Shorter name used when the full service name cannot fit a Houston title. */
+  metaTitle?: string;
   intro: string[];
   includes: string[];
   materials?: { label: string; items: string[] };
@@ -28,6 +30,7 @@ export type Service = {
   related: string[];
   image: Img;
   emergency?: boolean;
+  links?: { href: string; label: string }[];
   local: ServiceLocal;
 };
 
@@ -46,7 +49,7 @@ export const serviceGroupBlurbs: Record<ServiceGroup, string> = {
   'Roof & exterior':
     'What keeps the weather out, from a single repair to a complete replacement.',
   Recovery:
-    'Paint and drywall that finish a remodel, and recovery when water or a storm is why you called.',
+    'Paint and drywall that finish a remodel, recovery after water or a storm, and documentation for an insurance claim.',
 };
 
 export const services: Service[] = [
@@ -92,7 +95,7 @@ export const services: Service[] = [
     related: ['countertops', 'backsplash', 'wood-flooring', 'carpentry'],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
-      'Luxury kitchen with a coffered ceiling, marble island and pendant lighting',
+      'Houston kitchen remodel with a coffered ceiling, marble island and pendant lighting',
     ),
     local: {
       heading: 'A kitchen planned around how you live.',
@@ -173,7 +176,7 @@ export const services: Service[] = [
     ],
     image: img(
       '/images/services/bathroom-remodeling.jpg',
-      'Marble-lined shower with a frameless glass door in a remodeled bathroom',
+      'Houston bathroom remodel with a marble shower and frameless glass door',
     ),
     local: {
       heading: 'The bath you use every day, rebuilt.',
@@ -259,7 +262,7 @@ export const services: Service[] = [
     related: ['kitchen-remodeling', 'countertops', 'tile-fireplaces'],
     image: img(
       '/images/services/backsplash.webp',
-      'Ornate ceramic tile backsplash above a marble kitchen counter',
+      'Ceramic tile backsplash above a marble counter in a Houston kitchen',
     ),
     local: {
       heading: 'The wall that finishes the kitchen.',
@@ -338,7 +341,7 @@ export const services: Service[] = [
     related: ['kitchen-remodeling', 'bathroom-remodeling', 'backsplash'],
     image: img(
       '/images/services/countertops.jpg',
-      'Quartz kitchen island with woven shades in the background',
+      'Quartz kitchen island in a Houston kitchen remodel',
     ),
     local: {
       heading: 'Stone cut to the kitchen you have.',
@@ -418,7 +421,7 @@ export const services: Service[] = [
     ],
     image: img(
       '/images/services/wood-flooring.jpg',
-      'Light wood plank flooring in an empty, sunlit room',
+      'Light wood plank flooring in a Houston home',
     ),
     local: {
       heading: 'A floor that holds the whole house.',
@@ -493,7 +496,7 @@ export const services: Service[] = [
     related: ['wood-flooring', 'bathroom-remodeling', 'tile-fireplaces'],
     image: img(
       '/images/services/tile-flooring.jpg',
-      'Encaustic-style patterned tile floor',
+      'Patterned tile floor in a Houston home',
     ),
     local: {
       heading: 'Pattern and stone, laid for the room.',
@@ -567,7 +570,7 @@ export const services: Service[] = [
     related: ['laminate-flooring', 'wood-flooring', 'tile-flooring'],
     image: img(
       '/images/services/vinyl-flooring.jpg',
-      'Plank flooring in a bright room with black-framed windows',
+      'Wood-look vinyl plank flooring in a Houston home',
     ),
     local: {
       heading: 'Wood look, chosen for the room.',
@@ -609,7 +612,7 @@ export const services: Service[] = [
     summary:
       'Laminate installation, repair and replacement, including underlayment, for a clean wood look.',
     metaDescription:
-      'Laminate flooring in Houston, TX: click-lock or glue-down wood-look floors with underlayment, installed in bedrooms, halls and living rooms across the house.',
+      'Laminate flooring in Houston, TX: click-lock or glue-down wood-look floors with underlayment for bedrooms, halls and living rooms.',
     intro: [
       'Laminate gives a Houston house the look of wood with straightforward upkeep, which makes it a practical upgrade for bedrooms, halls and living rooms.',
       'We install click-lock or glued laminate over a flat subfloor with the right underlayment, and we replace damaged planks when a full floor is more than you need.',
@@ -642,7 +645,7 @@ export const services: Service[] = [
     related: ['vinyl-flooring', 'wood-flooring', 'tile-flooring'],
     image: img(
       '/images/services/laminate-flooring.jpg',
-      'Chevron plank flooring detail',
+      'Chevron laminate flooring in a Houston home',
     ),
     local: {
       heading: 'A wood look with a quicker install.',
@@ -722,7 +725,7 @@ export const services: Service[] = [
     ],
     image: img(
       '/images/services/carpentry.jpg',
-      'Staircase with geometric wall millwork in a custom-finished home',
+      'Staircase millwork in a Houston home',
     ),
     local: {
       heading: 'Trim that belongs to the house.',
@@ -797,7 +800,7 @@ export const services: Service[] = [
     related: ['backsplash', 'tile-flooring', 'carpentry'],
     image: img(
       '/images/services/tile-fireplaces.jpg',
-      'Linear marble fireplace wall in a modern living room',
+      'Tile fireplace surround in a Houston living room',
     ),
     local: {
       heading: 'The wall the living room is built around.',
@@ -832,6 +835,97 @@ export const services: Service[] = [
     },
   },
 
+  {
+    slug: 'roofing',
+    name: 'Roofing',
+    group: 'Roof & exterior',
+    tagline: 'Repair or replacement, detailed for the house under the roof.',
+    summary:
+      'Inspections, repairs, tear-offs and new roofs, plus a tarp when a storm opens the roof.',
+    metaDescription:
+      'Roofing in Houston, TX: inspections, repairs, tear-off and replacement in asphalt, metal, tile or composite, and emergency tarping after storms.',
+    intro: [
+      'A Houston roof is the material, the underlayment, the flashing and the ventilation, planned as one system. We inspect it and say whether a repair will hold or the roof needs to come off.',
+      'After a storm, the first job is often a tarp so the next round of weather stays outside. We photograph what we find for your records and any insurance claim. Your insurer decides coverage. The permanent roof is the step after the house is covered.',
+    ],
+    includes: [
+      'Roof assessment and photographs',
+      'Repairs when the roof can be saved',
+      'Tear-off, underlayment, flashing and vents',
+      'New roofs in asphalt, metal, tile or composite',
+      'Emergency tarping when the roof is open',
+      'Help with insurance documentation',
+    ],
+    materials: {
+      label: 'Roofing materials',
+      items: [
+        'Asphalt architectural shingles',
+        'Metal',
+        'Ceramic and concrete tile',
+        'Slate and composite',
+        'Cool-roof membranes',
+      ],
+    },
+    faqs: [
+      {
+        q: 'Do you repair roofs, or only replace them?',
+        a: 'Both. We inspect the roof and say whether a repair will hold or the roofing needs to come off. A replacement includes the tear-off, a look at the deck, new underlayment, flashing, vents and the material you chose.',
+      },
+      {
+        q: 'What roofing material makes sense in Houston?',
+        a: 'We compare appearance, weight, heat and wind for your house. Architectural asphalt is common. Metal, tile and composite are options when the structure and the look call for them.',
+      },
+      {
+        q: 'Will you help with my insurance claim?',
+        a: 'We provide inspection photos and documentation that support a claim. Your insurer decides coverage.',
+      },
+      {
+        q: 'What if water is coming in right now?',
+        a: 'Call (713) 909-0034. A tarp is temporary protection, not a finished roof. We photograph the damage, cover the opening, and plan the permanent repair once the house is dry.',
+      },
+    ],
+    related: [
+      'roof-replacement',
+      'roofing-emergency-tarp-repair',
+      'siding',
+      'water-damage-restoration',
+    ],
+    image: img(
+      '/images/services/roof-replacement.webp',
+      'Roofing on a brick Houston home with a finished shingle roof',
+    ),
+    local: {
+      heading: 'The roof the house shows, and the one it needs.',
+      body: [
+        'Brick houses in Memorial and Bellaire and newer roofs in Katy, Pearland and The Woodlands get the same sequence: look, document, then repair or replace. Ventilation, valleys and flashing go in with the roofing, not as an afterthought.',
+        'Hurricane season and the squalls that come with it are a Houston fact. When a limb or lifted shingles open the roof, we tarp it when it is safe to be up there, then talk through the permanent roof with the pictures already in hand.',
+      ],
+      conditions: [
+        {
+          title: 'Repair or replace',
+          body: 'We say which one the roof in front of us actually needs, after the inspection, not before.',
+        },
+        {
+          title: 'The whole system',
+          body: 'Underlayment, valleys, pipe boots and attic vents are part of a replacement, along with the shingles or metal you see from the street.',
+        },
+        {
+          title: 'The first dry night',
+          body: 'A secured tarp buys time. It is not the finished roof, and we say when it needs to be checked.',
+        },
+      ],
+      neighborhoods: [
+        'Houston',
+        'Westchase',
+        'Alief',
+        'Memorial',
+        'Katy',
+        'Sugar Land',
+        'Bellaire',
+        'Spring Branch',
+      ],
+    },
+  },
   {
     slug: 'roof-replacement',
     name: 'Roof Replacement',
@@ -908,13 +1002,14 @@ export const services: Service[] = [
       },
     ],
     related: [
+      'roofing',
       'roofing-emergency-tarp-repair',
       'siding',
       'water-damage-restoration',
     ],
     image: img(
       '/images/services/roof-replacement.webp',
-      'Brick home with multiple gables and a newly finished roof',
+      'Finished roof on a brick home in Houston',
     ),
     local: {
       heading: 'The roof the house shows, and the one it needs.',
@@ -950,13 +1045,14 @@ export const services: Service[] = [
   },
   {
     slug: 'roofing-emergency-tarp-repair',
+    metaTitle: 'Emergency Roof Repair',
     name: 'Emergency Roof Tarping & Repair',
     group: 'Roof & exterior',
     tagline: 'When water is getting in, the first job is to stop it.',
     summary:
       'Inspection, photo documentation and waterproof tarping to protect your home until permanent repairs.',
     metaDescription:
-      'Emergency roof tarping in Houston, TX: inspection, damage photos and a secured tarp after storms, until the permanent roof repair can be scheduled with you.',
+      'Emergency roof tarping in Houston, TX: inspection, damage photos and a secured tarp after storms, until the permanent repair can be scheduled.',
     emergency: true,
     intro: [
       'After a Houston storm or a fallen limb, the priority is keeping water out of the house. A properly anchored tarp buys time to plan the permanent repair.',
@@ -1010,10 +1106,10 @@ export const services: Service[] = [
         a: 'Say so when you call. A tarp stops more water from entering. Wet insulation and drywall are a separate drying job, and we handle that restoration as well.',
       },
     ],
-    related: ['roof-replacement', 'water-damage-restoration', 'siding'],
+    related: ['roofing', 'roof-replacement', 'water-damage-restoration', 'insurance-claims'],
     image: img(
       '/images/services/roofing-emergency-tarp-repair.jpg',
-      'Aerial view of a blue tarp secured across a damaged roof',
+      'Emergency roof tarp secured on a Houston home after storm damage',
     ),
     local: {
       heading: 'The first dry night after a storm.',
@@ -1087,7 +1183,7 @@ export const services: Service[] = [
     related: ['roof-replacement', 'roofing-emergency-tarp-repair', 'carpentry'],
     image: img(
       '/images/services/siding.jpg',
-      'Farmhouse exterior with board-and-batten siding',
+      'Board-and-batten siding on a Houston home',
     ),
     local: {
       heading: 'An elevation, not just a wall covering.',
@@ -1123,6 +1219,7 @@ export const services: Service[] = [
   },
   {
     slug: 'water-damage-restoration',
+    metaTitle: 'Water & Storm Restoration',
     name: 'Water Damage Restoration',
     group: 'Recovery',
     tagline: 'Dry it properly, then rebuild it right.',
@@ -1189,12 +1286,13 @@ export const services: Service[] = [
     ],
     related: [
       'painting-drywall-repair',
-      'wood-flooring',
+      'roofing',
       'roofing-emergency-tarp-repair',
+      'insurance-claims',
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
-      'Air movers drying a room during water damage restoration',
+      'Air movers drying a Houston home during water damage restoration',
     ),
     local: {
       heading: 'Dry the structure before you rebuild it.',
@@ -1229,6 +1327,88 @@ export const services: Service[] = [
     },
   },
   {
+    slug: 'insurance-claims',
+    name: 'Insurance Claims Help',
+    group: 'Recovery',
+    tagline: 'Photographs and a clear record of the damage, for you and your adjuster.',
+    summary:
+      'Inspection photos and notes on water or storm damage. Your insurer decides what the claim covers.',
+    metaDescription:
+      'Insurance claims help in Houston, TX: damage photos and documentation for water and storm losses. Your insurer decides coverage. Call (713) 909-0034.',
+    intro: [
+      'When a roof or a pipe lets water in, a clear record helps the conversation with your insurer. We photograph the damage, note where the water went, and put that documentation with the repair scope.',
+      'We do not decide what your policy covers. Your insurer does. If you want a room-by-room record of your own before anything is moved, the insurance photo log on this site is free to use.',
+    ],
+    includes: [
+      'Inspection photos of roof, water and storm damage',
+      'Notes on what was wet and what was repaired',
+      'Documentation you can share with your adjuster',
+      'A free room-by-room photo log you can fill out yourself',
+      'Drying and repairs once the house is protected',
+    ],
+    faqs: [
+      {
+        q: 'Do you file the claim or decide what is covered?',
+        a: 'No. We provide inspection photos and documentation. Coverage decisions belong to your insurer.',
+      },
+      {
+        q: 'Should I clean up before the photos?',
+        a: 'Protect the house from more water, and photograph the damage before you throw things away. The insurance photo log walks a room at a time if you want to start that record yourself.',
+      },
+      {
+        q: 'Can you dry and rebuild after the loss?',
+        a: 'Yes. Tarping, drying, and the repairs to drywall, flooring and the roof can stay with the same team. The claim paperwork and the construction are separate jobs, and we keep them that way.',
+      },
+      {
+        q: 'How do I reach you?',
+        a: 'Call (713) 909-0034. If water is still coming in, say so. The emergency form on this site reaches the same team.',
+      },
+    ],
+    related: [
+      'water-damage-restoration',
+      'roofing-emergency-tarp-repair',
+      'roofing',
+    ],
+    links: [
+      { href: '/insurance-log', label: 'Open the free insurance photo log' },
+    ],
+    image: img(
+      '/images/services/water-damage-restoration.jpg',
+      'Water damage drying in a Houston home before repairs and the insurance record',
+    ),
+    local: {
+      heading: 'A record of what the storm or the leak did.',
+      body: [
+        'Houston claims we document usually start with a roof opening, a supply line, an appliance, or water that came in at grade. We photograph the conditions and the scope of drying and repair.',
+        'The photo log is yours to use whether or not you hire us for the work. It is a room-by-room packet, not a promise about what the policy will pay.',
+      ],
+      conditions: [
+        {
+          title: 'Photos before cleanup',
+          body: 'Wide shots and close shots of the opening, the wet rooms, and the belongings, taken before they are moved.',
+        },
+        {
+          title: 'What we write down',
+          body: 'Where the water went, what was dried, and what was repaired. Your insurer uses that record however the policy allows.',
+        },
+        {
+          title: 'The building, separately',
+          body: 'Stopping more water and drying the structure do not wait on a coverage decision. We say which work is protection and which work is the rebuild.',
+        },
+      ],
+      neighborhoods: [
+        'Houston',
+        'Westchase',
+        'Alief',
+        'Katy',
+        'Sugar Land',
+        'Bellaire',
+        'Memorial',
+        'Spring Branch',
+      ],
+    },
+  },
+  {
     slug: 'painting-drywall-repair',
     name: 'Painting & Drywall Repair',
     group: 'Recovery',
@@ -1236,7 +1416,7 @@ export const services: Service[] = [
     summary:
       'Drywall patching and replacement, priming and interior painting, with the cleanup done.',
     metaDescription:
-      'Painting and drywall in Houston, TX: patches, texture blending, primer and interior paint that close a kitchen, bath or living-room remodel, then the cleanup.',
+      'Painting and drywall in Houston, TX: patches, texture blending, primer and interior paint that finish a kitchen, bath or living-room remodel.',
     intro: [
       'Paint is how a Houston remodel actually finishes: new drywall in a kitchen, a patched wall in a living room, a powder room taken to a deeper color. The repair has to disappear, and the paint has to sit on a sound surface.',
       'We patch or replace drywall, prime, and paint, then clean up. Texture is blended so the new work meets the walls already in the house.',
@@ -1269,7 +1449,7 @@ export const services: Service[] = [
     related: ['water-damage-restoration', 'carpentry', 'kitchen-remodeling'],
     image: img(
       '/images/projects/bathrooms/powder-room-charcoal-walls.jpg',
-      'Powder room with painted charcoal walls after interior drywall and paint work',
+      'Painted powder room in a Houston home after drywall repair',
     ),
     local: {
       heading: 'The finish the remodel is judged by.',

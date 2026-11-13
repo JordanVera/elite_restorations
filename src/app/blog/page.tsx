@@ -8,10 +8,11 @@ import { articlePath, articles } from '@/lib/articles';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Guides',
+  title: 'Houston Remodeling Guides',
   description:
-    'Practical guides from Elite Restorations on water damage, fire recovery, kitchens, bathrooms, and flooring in Greater Houston.',
+    'Houston guides from Elite Restorations on water damage, fire recovery, kitchen and bathroom remodeling, and flooring.',
   path: '/blog',
+  image: '/images/services/kitchen-remodeling.jpg',
 });
 
 export default function BlogPage() {

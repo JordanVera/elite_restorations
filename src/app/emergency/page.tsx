@@ -9,9 +9,9 @@ import { pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Emergency Roof Leak & Water Damage Repair in Houston',
+  title: 'Emergency Roof & Water Help in Houston',
   description:
-    'Roof leak, missing shingles, burst pipe or flooding in Houston? Call Elite Restorations at (713) 909-0034, learn what to do first, and request emergency tarping or water-damage help.',
+    'Roof leak, missing shingles, or a flood in Houston? Call (713) 909-0034 for emergency tarping and water-damage help.',
   path: '/emergency',
   image: '/images/services/roofing-emergency-tarp-repair.jpg',
 });

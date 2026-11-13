@@ -12,7 +12,7 @@ export const quickPicks = [
   { value: "kitchen-remodeling", label: "Kitchen" },
   { value: "bathroom-remodeling", label: "Bathroom" },
   { value: "wood-flooring", label: "Floors" },
-  { value: "roof-replacement", label: "Roof" },
+  { value: "roofing", label: "Roof" },
   { value: "water-damage-restoration", label: "Water damage" },
   { value: NOT_SURE, label: "Something else" },
 ] as const;
@@ -68,7 +68,9 @@ export const insurerAnswers = [
 const recoveryServices: Record<string, Incident | ""> = {
   "roofing-emergency-tarp-repair": "storm-roof",
   "roof-replacement": "storm-roof",
+  roofing: "storm-roof",
   "water-damage-restoration": "",
+  "insurance-claims": "",
 };
 
 const roomByService: Record<string, Room> = {
