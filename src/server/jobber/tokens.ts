@@ -1,6 +1,6 @@
 import "server-only";
 
-import { BlobNotFoundError, BlobPreconditionFailedError, get, put } from "@vercel/blob";
+import { BlobError, BlobNotFoundError, BlobPreconditionFailedError, get, put } from "@vercel/blob";
 
 import { JOBBER_REDIRECT_URI, JOBBER_TOKEN_URL, TOKEN_PATH, jobberClientId, jobberClientSecret } from "@/server/jobber/config";
 
@@ -20,8 +20,39 @@ type TokenResponse = {
 
 let memory: { tokens: StoredTokens; etag: string } | null = null;
 
+/** Thrown when the private Jobber Blob store token is absent. Sync treats this as not configured. */
+export const JOBBER_TOKEN_STORE_MISSING =
+  "Jobber token store not configured (JOBBER_BLOB_READ_WRITE_TOKEN missing)";
+
 export function resetJobberTokenMemory(): void {
   memory = null;
+}
+
+/**
+ * Read-write token for the private Jobber Blob store.
+ * Pass this on every get, head, put, and del. Omitting it makes the SDK use
+ * BLOB_READ_WRITE_TOKEN, the public photo store, which rejects private access.
+ */
+function jobberBlobToken(): string {
+  const token = process.env.JOBBER_BLOB_READ_WRITE_TOKEN?.trim();
+  if (!token) throw new Error(JOBBER_TOKEN_STORE_MISSING);
+  return token;
+}
+
+function isMissingTokenBlob(error: unknown): boolean {
+  if (error instanceof BlobNotFoundError) return true;
+  const message = error instanceof Error ? error.message.toLowerCase() : "";
+  return message.includes("not_found") || /\bnot found\b/.test(message);
+}
+
+export function isJobberTokenStoreError(error: unknown): boolean {
+  if (error instanceof BlobError) return true;
+  if (!(error instanceof Error)) return false;
+  return (
+    error.message === JOBBER_TOKEN_STORE_MISSING ||
+    error.message.includes("Vercel Blob:") ||
+    error.message.includes("Stored Jobber tokens")
+  );
 }
 
 function isUsable(tokens: StoredTokens, now = Date.now()): boolean {
@@ -29,24 +60,22 @@ function isUsable(tokens: StoredTokens, now = Date.now()): boolean {
 }
 
 async function readStored(): Promise<{ tokens: StoredTokens; etag: string } | null> {
+  const token = jobberBlobToken();
   let result;
   try {
-    result = await get(TOKEN_PATH, { access: "private", useCache: false });
+    result = await get(TOKEN_PATH, { access: "private", token, useCache: false });
   } catch (error) {
-    if (error instanceof BlobNotFoundError) return null;
-    const message = error instanceof Error ? error.message : "";
-    if (
-      message.includes("BLOB_READ_WRITE_TOKEN") ||
-      message.includes("No blob credentials") ||
-      message.includes("No read-write token")
-    ) {
-      throw new Error("Jobber token store is not configured.");
-    }
+    if (isMissingTokenBlob(error)) return null;
     throw error;
   }
   if (!result || result.statusCode !== 200 || !result.stream) return null;
   const text = await new Response(result.stream).text();
-  const parsed = JSON.parse(text) as Partial<StoredTokens>;
+  let parsed: Partial<StoredTokens>;
+  try {
+    parsed = JSON.parse(text) as Partial<StoredTokens>;
+  } catch {
+    throw new Error("Stored Jobber tokens are unreadable.");
+  }
   if (
     typeof parsed.accessToken !== "string" ||
     typeof parsed.refreshToken !== "string" ||
@@ -67,8 +96,10 @@ async function readStored(): Promise<{ tokens: StoredTokens; etag: string } | nu
 }
 
 async function writeStored(tokens: StoredTokens, etag?: string): Promise<void> {
+  const token = jobberBlobToken();
   const result = await put(TOKEN_PATH, JSON.stringify(tokens), {
     access: "private",
+    token,
     contentType: "application/json",
     addRandomSuffix: false,
     allowOverwrite: true,
@@ -76,6 +107,31 @@ async function writeStored(tokens: StoredTokens, etag?: string): Promise<void> {
     ...(etag ? { ifMatch: etag } : {}),
   });
   memory = { tokens, etag: result.etag ?? etag ?? "" };
+}
+
+const OAUTH_ERROR_LOG_LIMIT = 200;
+
+function clipOauthField(value: unknown): string {
+  if (typeof value !== "string") return "";
+  return value
+    .replace(/[\r\n]+/g, " ")
+    .replace(/eyJ[\w.-]+/g, "[redacted]")
+    .replace(/(client_secret|refresh_token|access_token|code_verifier)(=|:)\s*\S+/gi, "$1=[redacted]")
+    .trim()
+    .slice(0, OAUTH_ERROR_LOG_LIMIT);
+}
+
+/** Status plus the OAuth error fields only. The body can contain the client secret and tokens. */
+async function oauthErrorFields(response: Response): Promise<{ error: string; error_description: string }> {
+  try {
+    const parsed = (await response.json()) as { error?: unknown; error_description?: unknown };
+    return {
+      error: clipOauthField(parsed.error),
+      error_description: clipOauthField(parsed.error_description),
+    };
+  } catch {
+    return { error: "", error_description: "" };
+  }
 }
 
 async function requestTokens(body: URLSearchParams): Promise<StoredTokens> {
@@ -86,13 +142,9 @@ async function requestTokens(body: URLSearchParams): Promise<StoredTokens> {
     signal: AbortSignal.timeout(8000),
   });
   if (!response.ok) {
-    let detail = "";
-    try {
-      const parsed = (await response.json()) as { error?: unknown };
-      if (typeof parsed.error === "string" && parsed.error.length < 40) detail = ` ${parsed.error}`;
-    } catch {
-      detail = "";
-    }
+    const fields = await oauthErrorFields(response);
+    console.error("[jobber] token request failed", response.status, fields.error, fields.error_description);
+    const detail = /^[a-z0-9_-]{1,39}$/i.test(fields.error) ? ` ${fields.error}` : "";
     throw new Error(`Jobber token request failed (${response.status}${detail})`);
   }
 
@@ -146,7 +198,15 @@ export async function saveJobberTokens(tokens: {
     refreshToken: tokens.refreshToken,
     accessTokenExpiresAt: Date.now() + tokens.expiresIn * 1000,
   };
-  const existing = memory ?? (await readStored().catch(() => null));
+  let existing = memory;
+  if (!existing) {
+    try {
+      existing = await readStored();
+    } catch (error) {
+      if (!isMissingTokenBlob(error)) throw error;
+      existing = null;
+    }
+  }
   await writeStored(stored, existing?.etag);
 }
 
