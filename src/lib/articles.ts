@@ -1,3 +1,5 @@
+import { restorationGuides } from '@/lib/restoration-guides';
+
 export type ArticleBlock =
   | { type: 'p'; text: string }
   | { type: 'list'; items: string[] }
@@ -23,6 +25,7 @@ export type Article = {
   ctaTitle: string;
   ctaBody: string;
   related: string[];
+  faqs?: readonly { q: string; a: string }[];
   sections: ArticleSection[];
 };
 
@@ -647,6 +650,7 @@ export const articles: Article[] = [
       },
     ],
   },
+  ...restorationGuides,
 ];
 
 const articlesBySlug = new Map(
