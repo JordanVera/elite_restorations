@@ -10,16 +10,52 @@ import {
   getArticle,
   type Article,
 } from '@/lib/articles';
+import { esServiceNames, serviceHref } from '@/lib/i18n';
 import { absoluteUrl } from '@/lib/seo';
-import { getService, servicePath } from '@/lib/services';
+import { getService } from '@/lib/services';
 import { site } from '@/lib/site';
 
-export function ArticleView({ article }: { article: Article }) {
-  const path = articlePath(article.slug);
+export function ArticleView({
+  article,
+  locale = 'en',
+  relatedArticles,
+}: {
+  article: Article;
+  locale?: 'en' | 'es';
+  relatedArticles?: readonly Article[];
+}) {
+  const es = locale === 'es';
+  const path = es ? `/es/blog/${article.slug}` : articlePath(article.slug);
   const service = article.service ? getService(article.service) : undefined;
-  const related = article.related
-    .map((slug) => getArticle(slug))
-    .filter((item): item is Article => Boolean(item));
+  const related = (relatedArticles ??
+    article.related
+      .map((slug) => getArticle(slug))
+      .filter((item): item is Article => Boolean(item))) as Article[];
+  const copy = es
+    ? {
+        eyebrow: 'Guía',
+        blog: 'Blog',
+        blogPath: '/es/blog',
+        questions: 'Preguntas',
+        faqTitle: 'Conviene saber.',
+        keep: 'Siga leyendo',
+        service: 'Servicio',
+        see: 'Ver el trabajo',
+        read: 'Leer',
+        home: { name: 'Inicio', path: '/es' },
+      }
+    : {
+        eyebrow: 'Guide',
+        blog: 'Blog',
+        blogPath: '/blog',
+        questions: 'Questions',
+        faqTitle: 'Good to know.',
+        keep: 'Keep reading',
+        service: 'Service',
+        see: 'See the work',
+        read: 'Read',
+        home: undefined,
+      };
 
   return (
     <>
@@ -29,6 +65,7 @@ export function ArticleView({ article }: { article: Article }) {
           '@type': ['BlogPosting', 'Article'],
           headline: article.title,
           description: article.description,
+          inLanguage: es ? 'es-US' : 'en-US',
           mainEntityOfPage: absoluteUrl(path),
           image: article.image ? absoluteUrl(article.image) : undefined,
           author: {
@@ -44,13 +81,14 @@ export function ArticleView({ article }: { article: Article }) {
         }}
       />
       <PageHero
-        eyebrow="Guide"
+        eyebrow={copy.eyebrow}
         title={article.lines}
         lede={article.lede}
         crumbs={[
-          { name: 'Blog', path: '/blog' },
+          { name: copy.blog, path: copy.blogPath },
           { name: article.crumb, path },
         ]}
+        homeCrumb={copy.home}
       />
       <article className="pb-8 md:pb-14">
         <div className="gutter mx-auto max-w-[120rem]">
@@ -98,33 +136,35 @@ export function ArticleView({ article }: { article: Article }) {
             >
               <div className="grid gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-4">
-                  <p className="eyebrow text-accent-ink">Questions</p>
+                  <p className="eyebrow text-accent-ink">{copy.questions}</p>
                   <h2 id="article-faq-heading" className="font-display t-lg mt-4">
-                    Good to know.
+                    {copy.faqTitle}
                   </h2>
                 </div>
                 <div className="lg:col-span-8">
-                  <Faq items={[...article.faqs]} />
+                  <Faq items={[...article.faqs]} inLanguage={es ? 'es' : 'en'} />
                 </div>
               </div>
             </section>
           ) : null}
 
           <aside className="mt-16 border-t border-border pt-10">
-            <p className="eyebrow text-muted-foreground">Keep reading</p>
+            <p className="eyebrow text-muted-foreground">{copy.keep}</p>
             <ul className="mt-6 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
               {service ? (
                 <li className="bg-background">
                   <Link
-                    href={servicePath(service.slug)}
+                    href={serviceHref(service.slug, es ? 'es' : 'en')}
                     className="group flex h-full flex-col p-6 transition-colors hover:text-accent-ink md:p-8"
                   >
-                    <span className="eyebrow text-accent-ink">Service</span>
+                    <span className="eyebrow text-accent-ink">{copy.service}</span>
                     <span className="font-display mt-4 text-2xl tracking-[-0.03em]">
-                      {service.name}
+                      {es && service.slug in esServiceNames
+                        ? esServiceNames[service.slug as keyof typeof esServiceNames]
+                        : service.name}
                     </span>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
-                      See the work
+                      {copy.see}
                       <ArrowUpRight className="size-4" aria-hidden />
                     </span>
                   </Link>
@@ -133,15 +173,15 @@ export function ArticleView({ article }: { article: Article }) {
               {related.map((item) => (
                 <li key={item.slug} className="bg-background">
                   <Link
-                    href={articlePath(item.slug)}
+                    href={es ? `/es/blog/${item.slug}` : articlePath(item.slug)}
                     className="group flex h-full flex-col p-6 transition-colors hover:text-accent-ink md:p-8"
                   >
-                    <span className="eyebrow text-muted-foreground">Guide</span>
+                    <span className="eyebrow text-muted-foreground">{copy.eyebrow}</span>
                     <span className="font-display mt-4 text-2xl tracking-[-0.03em]">
                       {item.crumb}
                     </span>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
-                      Read
+                      {copy.read}
                       <ArrowUpRight className="size-4" aria-hidden />
                     </span>
                   </Link>
@@ -154,8 +194,13 @@ export function ArticleView({ article }: { article: Article }) {
       <CtaBand
         title={article.ctaTitle}
         body={article.ctaBody}
-        service={article.service}
+        service={es ? undefined : article.service}
         emergency={article.emergency}
+        href={es ? (article.emergency ? '/es/emergency' : '/es/contact') : undefined}
+        buttonLabel={
+          es ? (article.emergency ? 'Pedir ayuda de emergencia' : 'Pedir un estimado') : undefined
+        }
+        textLabel={es ? 'Envíanos un texto' : undefined}
       />
     </>
   );

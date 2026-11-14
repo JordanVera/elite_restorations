@@ -202,6 +202,7 @@ const esNavLabels: Record<string, string> = {
   '/resources/homeowners': 'Propietarios',
   '/resources/realtors': 'Agentes inmobiliarios',
   '/about': 'Nosotros',
+  '/blog': 'Blog',
   '/contact': 'Contacto',
   '/emergency': 'Emergencia',
 };
@@ -212,7 +213,9 @@ function localizeNavItem(item: NavItem): NavItem {
       ? '/es/contact'
       : item.href === '/emergency'
         ? '/es/emergency'
-        : item.href;
+        : item.href === '/blog'
+          ? '/es/blog'
+          : item.href;
   return {
     ...item,
     href,

@@ -22,6 +22,7 @@ import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { getNeighborhood, neighborhoods } from '@/lib/neighborhoods';
 import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
@@ -30,6 +31,7 @@ import { imagesForService } from '@/lib/projects';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import { claimHelpFaqs } from '@/lib/claim-help';
 import { spanishPathFor } from '@/lib/i18n';
+import { NeighborhoodPageView } from '@/components/neighborhood-page';
 import { absoluteUrl, languageAlternates, pageMetadata, servicePageTitle } from '@/lib/seo';
 import {
   getService,
@@ -71,6 +73,7 @@ export function generateStaticParams(): Params[] {
     ...articles.map((article) => ({ slug: article.slug })),
     ...localLandings.map((page) => ({ slug: page.slug })),
     ...areaPages.map((page) => ({ slug: page.slug })),
+    ...neighborhoods.map((page) => ({ slug: page.slug })),
     ...costGuides.map((guide) => ({ slug: guide.slug })),
     ...caseStudies.map((study) => ({ slug: study.slug })),
   ];
@@ -104,6 +107,16 @@ export async function generateMetadata({
       path: area.path,
     });
   }
+  const neighborhood = getNeighborhood(slug);
+  if (neighborhood) {
+    const esPath = spanishPathFor(neighborhood.path);
+    return pageMetadata({
+      title: neighborhood.title,
+      description: neighborhood.description,
+      path: neighborhood.path,
+      languages: esPath ? languageAlternates(neighborhood.path, esPath) : undefined,
+    });
+  }
   const guide = getCostGuide(slug);
   if (guide) {
     const service = getService(guide.serviceSlug);
@@ -125,11 +138,14 @@ export async function generateMetadata({
   }
   const article = getArticle(slug);
   if (article) {
+    const path = articlePath(article.slug);
+    const esPath = spanishPathFor(path);
     return pageMetadata({
       title: article.metaTitle,
       description: article.description,
-      path: articlePath(article.slug),
+      path,
       image: article.image,
+      languages: esPath ? languageAlternates(path, esPath) : undefined,
     });
   }
   const service = getService(slug);
@@ -171,6 +187,17 @@ export default async function ServicePage({
 
   const area = getAreaPage(slug);
   if (area) return <AreaPageView page={area} />;
+
+  const neighborhood = getNeighborhood(slug);
+  if (neighborhood) {
+    return (
+      <NeighborhoodPageView
+        page={neighborhood}
+        others={neighborhoods.filter((item) => item.slug !== neighborhood.slug)}
+        locale="en"
+      />
+    );
+  }
 
   const article = getArticle(slug);
   if (article) return <ArticleView article={article} />;

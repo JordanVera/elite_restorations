@@ -29,6 +29,7 @@ const esNavLabels: Record<string, string> = {
   '/resources/homeowners': 'Propietarios',
   '/resources/realtors': 'Agentes inmobiliarios',
   '/about': 'Nosotros',
+  '/blog': 'Blog',
   '/contact': 'Contacto',
   '/emergency': 'Emergencia',
 };
@@ -116,7 +117,9 @@ export function MobileNav({ className }: { className?: string }) {
                         ? '/es/emergency'
                         : es && item.href === '/services'
                           ? '/es'
-                          : item.href;
+                          : es && item.href === '/blog'
+                            ? '/es/blog'
+                            : item.href;
                 const label = es ? (esNavLabels[item.href] ?? item.label) : item.label;
                 const active =
                   item.href === '/'

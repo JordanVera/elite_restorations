@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next';
 
 import { areaPages } from '@/lib/area-pages';
+import { esNeighborhoods } from '@/lib/es/neighborhoods';
+import { esPosts } from '@/lib/es/posts';
+import { neighborhoods } from '@/lib/neighborhoods';
 import { brandPages } from '@/lib/brand-pages';
 import { articlePath, articles } from '@/lib/articles';
 import { caseStudies } from '@/lib/case-studies';
@@ -71,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/emergency',
     '/insurance-log',
     '/blog',
+    '/es/blog',
     '/houston-storm-damage',
     '/insurance-claims/companies',
   ];
@@ -96,6 +100,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry('/terms', 0.3, builtAt),
     ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
+    ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esNeighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esPosts.map((post) => entry(post.path, 0.5, builtAt)),
     ...costGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
     ...brandPages.map((page) => entry(page.path, page.locale === 'es' ? 0.6 : 0.7, builtAt)),
     ...caseStudies.map((study) => entry(study.path, 0.6, builtAt)),
