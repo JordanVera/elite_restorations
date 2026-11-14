@@ -1,3 +1,5 @@
+import { isValidContactPhone } from "@/lib/contact-identity";
+
 /** A street address, or a US ZIP / ZIP+4. */
 export function isAddressOrZip(value: string): boolean {
   const trimmed = value.trim();
@@ -12,8 +14,9 @@ export function usablePhoneDigits(value: string): string {
   return digits;
 }
 
+/** At least 10 digits. Formatting, spaces, dashes, and a leading +1 are ignored. */
 export function isUsablePhone(value: string): boolean {
-  return usablePhoneDigits(value).length === 10;
+  return isValidContactPhone(value);
 }
 
 export function isHttpUrl(value: string): boolean {

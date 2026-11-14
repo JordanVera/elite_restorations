@@ -22,6 +22,7 @@ import {
   type ClaimAnswer,
   type ContactMethod,
 } from '@/lib/inquiry';
+import { contactFieldErrors, contactIdentityCopy, type ContactLocale } from '@/lib/contact-identity';
 import { leadSchema, type LeadInput } from '@/lib/inquiry-schema';
 import { trackLeadConversion } from '@/lib/lead-analytics';
 import { readLeadSource } from '@/lib/lead-source';
@@ -67,6 +68,7 @@ export type LeadPhotoSeed = { blob: Blob; name: string };
 
 type LeadFormProps = {
   intent?: 'estimate' | 'partner';
+  locale?: ContactLocale;
   idPrefix?: string;
   density?: 'comfortable' | 'compact';
   showPhotos?: boolean;
@@ -161,6 +163,7 @@ function buildCandidate(
 
 export function LeadForm({
   intent = 'estimate',
+  locale = 'en',
   idPrefix = 'lead',
   density = 'comfortable',
   showPhotos,
@@ -176,6 +179,7 @@ export function LeadForm({
 }: LeadFormProps) {
   const photosEnabled = showPhotos ?? intent === 'estimate';
   const partner = intent === 'partner';
+  const copy = contactIdentityCopy[locale];
   const fid = (name: string) => `${idPrefix}-${name}`;
   const [values, setValues] = React.useState<Values>({
     name: defaultName ?? '',
@@ -238,15 +242,20 @@ export function LeadForm({
     if (status.kind === 'submitting') return;
 
     const trap = (honeypotRef.current?.value || values.website).trim();
+    const identity = contactFieldErrors(values.name, values.phone, locale);
     const check = leadSchema.safeParse(
       buildCandidate(intent, values, [], startedAt.current, trap),
     );
-    if (!check.success) {
+    if (!check.success || identity.name || identity.phone) {
       const next: FieldErrors = {};
-      for (const issue of check.error.issues) {
-        const key = issue.path[0] as keyof FieldErrors | undefined;
-        if (key && key !== 'photos' && key !== 'website' && !next[key]) next[key] = issue.message;
+      if (!check.success) {
+        for (const issue of check.error.issues) {
+          const key = issue.path[0] as keyof FieldErrors | undefined;
+          if (key && key !== 'photos' && key !== 'website' && !next[key]) next[key] = issue.message;
+        }
       }
+      if (identity.name) next.name = identity.name;
+      if (identity.phone) next.phone = identity.phone;
       if (
         intent === 'estimate' &&
         values.contactMethod === 'email' &&
@@ -315,6 +324,17 @@ export function LeadForm({
         error instanceof TRPCClientError ? (error as TRPCClientError<AppRouter>) : null;
       const code = trpcError?.data?.code;
       const message = trpcError?.message ?? '';
+      if (code === 'BAD_REQUEST') {
+        const next: FieldErrors = {};
+        if (message.includes(contactIdentityCopy.en.nameError)) next.name = copy.nameError;
+        if (message.includes(contactIdentityCopy.en.phoneError)) next.phone = copy.phoneError;
+        if (next.name || next.phone) {
+          setErrors(next);
+          setStatus({ kind: 'idle' });
+          focusFirstError(next);
+          return;
+        }
+      }
       const reason: ErrorReason =
         code === 'SERVICE_UNAVAILABLE'
           ? 'unavailable'
@@ -431,7 +451,14 @@ export function LeadForm({
       </noscript>
 
       <div className="grid gap-6 sm:grid-cols-2">
-        <Field id={fid('name')} field="name" label="Name" error={errors.name}>
+        <Field
+          id={fid('name')}
+          field="name"
+          label={copy.nameLabel}
+          error={errors.name}
+          required
+          requiredLabel={copy.required}
+        >
           <Input
             id={fid('name')}
             name="name"
@@ -443,7 +470,14 @@ export function LeadForm({
             {...described(fid('name'), Boolean(errors.name), true)}
           />
         </Field>
-        <Field id={fid('phone')} field="phone" label="Phone" error={errors.phone}>
+        <Field
+          id={fid('phone')}
+          field="phone"
+          label={copy.phoneLabel}
+          error={errors.phone}
+          required
+          requiredLabel={copy.required}
+        >
           <Input
             id={fid('phone')}
             name="phone"

@@ -9,6 +9,8 @@ export function Field({
   label,
   error,
   optional,
+  required,
+  requiredLabel = "required",
   hint,
   children,
 }: {
@@ -18,6 +20,9 @@ export function Field({
   label: string;
   error?: string;
   optional?: boolean;
+  /** Shows an asterisk and a visible required label. Does not set the input attribute. */
+  required?: boolean;
+  requiredLabel?: string;
   hint?: string;
   children: React.ReactNode;
 }) {
@@ -27,7 +32,16 @@ export function Field({
     <div data-field={field ?? id}>
       <Label htmlFor={id}>
         {label}
-        {optional && <span className="normal-case tracking-normal opacity-70">(optional)</span>}
+        {required ? (
+          <span className="normal-case tracking-normal">
+            <span aria-hidden="true" className="text-accent-ink">
+              *
+            </span>{" "}
+            <span className="opacity-70">({requiredLabel})</span>
+          </span>
+        ) : (
+          optional && <span className="normal-case tracking-normal opacity-70">(optional)</span>
+        )}
       </Label>
       {hint && (
         <p id={hintId} className="mt-2 text-sm text-muted-foreground">

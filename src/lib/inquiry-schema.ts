@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+import { MIN_CONTACT_NAME_LENGTH, contactIdentityCopy } from "@/lib/contact-identity";
 import { isAddressOrZip, isHttpUrl, isUsablePhone } from "@/lib/lead-fields";
 import { claimAnswers, contactMethods, leadServices } from "@/lib/inquiry";
 
@@ -24,7 +25,7 @@ const requiredPhone = z
   .string()
   .trim()
   .max(30, "That phone number is too long.")
-  .refine(isUsablePhone, "Enter a 10-digit phone number so we can call you back.");
+  .refine(isUsablePhone, contactIdentityCopy.en.phoneError);
 
 const optionalHttpUrl = z
   .string()
@@ -43,7 +44,11 @@ const utmValue = z
   .transform((value) => value.replace(/[\u0000-\u001f]+/g, " ").trim().slice(0, 120));
 
 const shared = {
-  name: z.string().trim().min(2, "Please enter your name.").max(100, "That name is too long."),
+  name: z
+    .string()
+    .trim()
+    .min(MIN_CONTACT_NAME_LENGTH, contactIdentityCopy.en.nameError)
+    .max(100, "That name is too long."),
   phone: requiredPhone,
   photos: z
     .array(z.string().regex(photoPathPattern))

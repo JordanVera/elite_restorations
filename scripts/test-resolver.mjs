@@ -14,6 +14,10 @@ function localFile(specifier, parentURL) {
 }
 
 export async function resolve(specifier, context, nextResolve) {
+  // server-only throws outside the Next bundler. Tests stub it so route tests can import handlers.
+  if (specifier === "server-only") {
+    return nextResolve(pathToFileURL(path.join(root, "scripts/server-only-stub.mjs")).href, context);
+  }
   const base = localFile(specifier, context.parentURL);
   if (base) {
     const files = [base, `${base}.ts`, `${base}.tsx`, `${base}.mjs`, path.join(base, "index.ts")];

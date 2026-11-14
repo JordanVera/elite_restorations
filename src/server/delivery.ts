@@ -1,5 +1,6 @@
 import "server-only";
 
+import { websiteLeadContactError } from "@/lib/contact-identity";
 import { describeLead } from "@/server/leads/describe";
 import { syncLeadToJobber } from "@/server/leads/jobber";
 import { sendInquiryEmail } from "@/server/mail";
@@ -46,6 +47,11 @@ async function deliverViaWebhook(lead: DeliverableLead): Promise<boolean> {
  * Jobber is attempted alongside email. A Jobber failure does not change this result.
  */
 export async function deliverLead(lead: DeliverableLead): Promise<DeliveryResult> {
+  if (websiteLeadContactError(lead.name, lead.phone)) {
+    console.error("[leads] refused a lead without a valid name and phone");
+    return { status: "failed" };
+  }
+
   const useWebhook = isWebhookConfigured();
 
   const [email, webhookSent] = await Promise.all([

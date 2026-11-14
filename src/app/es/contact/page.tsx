@@ -68,7 +68,7 @@ export default function SpanishContactPage() {
               El formulario está en inglés, el mismo de la página de contacto en inglés, y su solicitud llega al mismo lugar.
             </p>
             <div className="relative mt-8">
-              <LeadForm />
+              <LeadForm locale="es" />
             </div>
           </Reveal>
         </div>
