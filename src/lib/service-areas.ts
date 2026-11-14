@@ -18,7 +18,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Westchase: {
     setting:
-      'Westchase sits on the west side of Houston, with townhomes and single-family houses, many of them built from the 1970s through the 1990s. Our office at 511 Crestwater Ct is in 77082, in this part of town.',
+      'Westchase is the west Houston district of offices, townhomes, and houses along Westheimer and the Beltway. Our office at 511 Crestwater Ct is in 77082, a short drive west near George Bush Park.',
     clause: 'townhomes and single-family houses around the 77082 office',
   },
   Alief: {
