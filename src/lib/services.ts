@@ -111,6 +111,18 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/kitchen-remodel-case-study',
         label: 'A kitchen remodel, in a customer\'s words',
       },
+      {
+        href: '/expo-stone-countertops-houston',
+        label: 'Expo Stone countertops in Houston',
+      },
+      {
+        href: '/sherwin-williams-painting-houston',
+        label: 'Sherwin-Williams painting in Houston',
+      },
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
     ],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
@@ -198,6 +210,18 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/bathroom-remodel-cost-houston',
         label: 'What changes a bathroom remodel cost',
+      },
+      {
+        href: '/expo-stone-countertops-houston',
+        label: 'Expo Stone countertops in Houston',
+      },
+      {
+        href: '/sherwin-williams-painting-houston',
+        label: 'Sherwin-Williams painting in Houston',
+      },
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
       },
     ],
     image: img(
@@ -287,6 +311,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['kitchen-remodeling', 'countertops', 'tile-fireplaces'],
+    links: [
+      {
+        href: '/expo-stone-countertops-houston',
+        label: 'Expo Stone countertops in Houston',
+      },
+    ],
     image: img(
       '/images/services/backsplash.webp',
       'Ceramic tile backsplash above a marble counter in a Houston kitchen',
@@ -367,6 +397,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['kitchen-remodeling', 'bathroom-remodeling', 'backsplash'],
+    links: [
+      {
+        href: '/expo-stone-countertops-houston',
+        label: 'Expo Stone countertops in Houston',
+      },
+    ],
     image: img(
       '/images/services/countertops.jpg',
       'Quartz kitchen island in a Houston kitchen remodel',
@@ -448,6 +484,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'laminate-flooring',
       'water-damage-restoration',
     ],
+    links: [
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
+    ],
     image: img(
       '/images/services/wood-flooring.jpg',
       'Light wood plank flooring in a Houston home',
@@ -524,6 +566,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['wood-flooring', 'bathroom-remodeling', 'tile-fireplaces'],
+    links: [
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
+    ],
     image: img(
       '/images/services/tile-flooring.jpg',
       'Patterned tile floor in a Houston home',
@@ -599,6 +647,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['laminate-flooring', 'wood-flooring', 'tile-flooring'],
+    links: [
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
+    ],
     image: img(
       '/images/services/vinyl-flooring.jpg',
       'Wood-look vinyl plank flooring in a Houston home',
@@ -675,6 +729,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['vinyl-flooring', 'wood-flooring', 'tile-flooring'],
+    links: [
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
+    ],
     image: img(
       '/images/services/laminate-flooring.jpg',
       'Chevron laminate flooring in a Houston home',
@@ -1508,6 +1568,18 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       { href: '/water-heater-leak-damage-houston', label: 'Water heater leak damage' },
       { href: '/dishwasher-leak-water-damage-houston', label: 'Dishwasher leak damage' },
       { href: '/toilet-overflow-water-damage-houston', label: 'Toilet overflow damage' },
+      {
+        href: '/sherwin-williams-painting-houston',
+        label: 'Sherwin-Williams painting in Houston',
+      },
+      {
+        href: '/floor-and-decor-flooring-installation-houston',
+        label: 'Floor & Decor flooring installation in Houston',
+      },
+      {
+        href: '/expo-stone-countertops-houston',
+        label: 'Expo Stone countertops in Houston',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1700,6 +1772,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['water-damage-restoration', 'carpentry', 'kitchen-remodeling'],
+    links: [
+      {
+        href: '/sherwin-williams-painting-houston',
+        label: 'Sherwin-Williams painting in Houston',
+      },
+    ],
     image: img(
       '/images/projects/bathrooms/powder-room-charcoal-walls.jpg',
       'Painted powder room in a Houston home after drywall repair',

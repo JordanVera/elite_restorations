@@ -1,5 +1,6 @@
 import { getAreaPage } from "@/lib/area-pages";
 import { getArticle } from "@/lib/articles";
+import { productBrandPages } from "@/lib/brand-pages-products";
 import { getCostGuide } from "@/lib/cost-guides";
 import type { GuideSection } from "@/lib/guides/types";
 import { parseLocalLandingSlug } from "@/lib/local-paths";
@@ -525,6 +526,7 @@ export const brandPages: readonly BrandPage[] = [
   hardieEn,
   certainteedEs,
   hardieEs,
+  ...productBrandPages,
 ];
 
 export function brandBodyWords(page: BrandPage) {
@@ -545,7 +547,91 @@ const banned =
 const requiredMarks: Record<string, readonly string[]> = {
   "certainteed-roofing-houston": ["CertainTeed", "Landmark", "Landmark PRO", "Landmark ClimateFlex"],
   "james-hardie-siding-houston": ["James Hardie", "HardiePlank", "HardieTrim", "ColorPlus"],
+  "sherwin-williams-painting-houston": [
+    "Sherwin-Williams",
+    "Duration",
+    "Emerald",
+    "SuperPaint",
+    "ProClassic",
+  ],
+  "floor-and-decor-flooring-installation-houston": ["Floor & Decor", "LVP"],
+  "expo-stone-countertops-houston": ["Expo Stone", "Taj Mahal", "Calacatta", "quartzite"],
 };
+
+/** City service whose neighborhood pages each brand article must link. */
+const pageCityService: Record<string, string> = {
+  "certainteed-roofing-houston": "roofing",
+  "james-hardie-siding-houston": "siding",
+  "sherwin-williams-painting-houston": "painting-drywall-repair",
+  "floor-and-decor-flooring-installation-houston": "vinyl-flooring",
+  "expo-stone-countertops-houston": "countertops",
+};
+
+const pageHubs: Record<string, { en: readonly string[]; es: readonly string[] }> = {
+  "certainteed-roofing-houston": {
+    en: ["/roofing", "/insurance-claims", "/houston-storm-damage"],
+    es: ["/es/roofing", "/es/insurance-claims", "/es/houston-storm-damage"],
+  },
+  "james-hardie-siding-houston": {
+    en: ["/siding", "/insurance-claims", "/houston-storm-damage"],
+    es: ["/es/siding", "/es/insurance-claims", "/es/houston-storm-damage"],
+  },
+  "sherwin-williams-painting-houston": {
+    en: [
+      "/painting-drywall-repair",
+      "/water-damage-restoration",
+      "/kitchen-remodeling",
+      "/insurance-claims",
+    ],
+    es: [
+      "/es/painting-drywall-repair",
+      "/es/water-damage-restoration",
+      "/es/kitchen-remodeling",
+      "/es/insurance-claims",
+    ],
+  },
+  "floor-and-decor-flooring-installation-houston": {
+    en: [
+      "/vinyl-flooring",
+      "/tile-flooring",
+      "/wood-flooring",
+      "/laminate-flooring",
+      "/water-damage-restoration",
+    ],
+    es: [
+      "/es/vinyl-flooring",
+      "/es/tile-flooring",
+      "/es/wood-flooring",
+      "/es/laminate-flooring",
+      "/es/water-damage-restoration",
+    ],
+  },
+  "expo-stone-countertops-houston": {
+    en: [
+      "/countertops",
+      "/kitchen-remodeling",
+      "/bathroom-remodeling",
+      "/backsplash",
+      "/water-damage-restoration",
+    ],
+    es: [
+      "/es/countertops",
+      "/es/kitchen-remodeling",
+      "/es/bathroom-remodeling",
+      "/es/backsplash",
+      "/es/water-damage-restoration",
+    ],
+  },
+};
+
+const trademarkSlugs = new Set([
+  "sherwin-williams-painting-houston",
+  "floor-and-decor-flooring-installation-houston",
+  "expo-stone-countertops-houston",
+]);
+
+const affiliationBanned =
+  /\bpartner\b|\bpartnership\b|\bpreferred\b|\baffiliat|\bsponsor|\bendors|\bpreferid|\bafiliad|\bpatrocin/i;
 
 function pageBlob(page: BrandPage) {
   return [
@@ -624,21 +710,33 @@ for (const page of brandPages) {
     }
   }
   const hrefs = new Set(page.related.map((link) => link.href));
-  const service = page.slug.startsWith("certainteed") ? "roofing" : "siding";
+  const service = pageCityService[page.slug];
+  if (!service) brandErrors.push(`${page.path} has no city-service map`);
   for (const [area] of cities) {
     const href = `/${service}-${area}-tx`;
     if (!hrefs.has(href)) brandErrors.push(`${page.path} is missing ${href}`);
   }
-  const hubs =
-    page.locale === "es"
-      ? service === "roofing"
-        ? ["/es/roofing", "/es/insurance-claims", "/es/houston-storm-damage"]
-        : ["/es/siding", "/es/insurance-claims", "/es/houston-storm-damage"]
-      : service === "roofing"
-        ? ["/roofing", "/insurance-claims", "/houston-storm-damage"]
-        : ["/siding", "/insurance-claims", "/houston-storm-damage"];
+  const hubs = pageHubs[page.slug]?.[page.locale] ?? [];
+  if (hubs.length === 0) brandErrors.push(`${page.path} has no related-hub map`);
   for (const href of hubs) {
     if (!hrefs.has(href)) brandErrors.push(`${page.path} is missing ${href}`);
+  }
+  if (trademarkSlugs.has(page.slug)) {
+    if (page.locale === "en" && !/trademarks of their owners/i.test(blob)) {
+      brandErrors.push(`${page.path} is missing the trademark line`);
+    }
+    if (page.locale === "en" && !/independent contractor/i.test(blob)) {
+      brandErrors.push(`${page.path} is missing the independent-contractor line`);
+    }
+    if (page.locale === "es" && !blob.includes("marcas de sus dueños")) {
+      brandErrors.push(`${page.path} is missing the trademark line`);
+    }
+    if (page.locale === "es" && !blob.includes("contratista independiente")) {
+      brandErrors.push(`${page.path} is missing the independent-contractor line`);
+    }
+    if (affiliationBanned.test(blob)) {
+      brandErrors.push(`${page.path} uses a banned affiliation phrase`);
+    }
   }
 }
 if (brandErrors.length > 0) {
