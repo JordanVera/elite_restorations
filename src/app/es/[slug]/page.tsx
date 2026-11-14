@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { LongformPage } from "@/components/longform-page";
+import { NeighborhoodPageView } from "@/components/neighborhood-page";
 import { WaterCauseSections } from "@/components/water-cause-sections";
 import { brandLinksForService } from "@/lib/brand-nav";
+import { esNeighborhoods, getEsNeighborhood } from "@/lib/es/neighborhoods";
 import { esHubs, getEsHub } from "@/lib/es/hubs";
 import { getService } from "@/lib/services";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
@@ -19,7 +21,10 @@ const claimSlugs = new Set([
 ]);
 
 export function generateStaticParams() {
-  return esHubs.map((hub) => ({ slug: hub.slug }));
+  return [
+    ...esHubs.map((hub) => ({ slug: hub.slug })),
+    ...esNeighborhoods.map((page) => ({ slug: page.slug })),
+  ];
 }
 
 export async function generateMetadata({
@@ -28,6 +33,16 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  const neighborhood = getEsNeighborhood(slug);
+  if (neighborhood) {
+    return pageMetadata({
+      title: neighborhood.title,
+      description: neighborhood.description,
+      path: neighborhood.path,
+      locale: "es",
+      languages: languageAlternates(`/${slug}`, neighborhood.path),
+    });
+  }
   const hub = getEsHub(slug);
   const service = getService(slug);
   if (!hub) return {};
@@ -47,6 +62,16 @@ export default async function SpanishServicePage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
+  const neighborhood = getEsNeighborhood(slug);
+  if (neighborhood) {
+    return (
+      <NeighborhoodPageView
+        page={neighborhood}
+        others={esNeighborhoods.filter((item) => item.slug !== neighborhood.slug)}
+        locale="es"
+      />
+    );
+  }
   const hub = getEsHub(slug);
   const service = getService(slug);
   if (!hub || !service) notFound();

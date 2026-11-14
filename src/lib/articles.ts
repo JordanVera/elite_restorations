@@ -1,4 +1,5 @@
 import { fieldNotes } from '@/lib/field-notes';
+import { houstonPosts } from '@/lib/houston-posts';
 import { restorationGuides } from '@/lib/restoration-guides';
 
 export type ArticleBlock =
@@ -653,11 +654,16 @@ export const articles: Article[] = [
   },
   ...restorationGuides,
   ...fieldNotes,
+  ...houstonPosts,
 ];
 
 const articlesBySlug = new Map(
   articles.map((article) => [article.slug, article]),
 );
+
+if (articlesBySlug.size !== articles.length) {
+  throw new Error('Duplicate article slug');
+}
 
 export function getArticle(slug: string) {
   return articlesBySlug.get(slug);

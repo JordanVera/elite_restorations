@@ -5,6 +5,7 @@ import { Faq } from "@/components/faq";
 import { esRestorationFaqs } from "@/lib/faqs/es";
 import { PageHero } from "@/components/page-hero";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
+import { esNeighborhoods } from "@/lib/es/neighborhoods";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -46,6 +47,13 @@ export default function SpanishRestorationPage() {
           Restaurar es dejar el edificio seco y listo para usarse otra vez. Un tubo de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. La oficina está en {site.address.streetAddress}, Houston, TX 77082. La visita es en la propiedad.
         </p>
         <ul className="mt-10 flex flex-wrap gap-6">
+          {esNeighborhoods.map((area) => (
+            <li key={area.path}>
+              <Link href={area.path} className="underline underline-offset-4">
+                {area.name}
+              </Link>
+            </li>
+          ))}
           {links.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="underline underline-offset-4">

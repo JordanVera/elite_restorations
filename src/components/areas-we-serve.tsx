@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { areaPages } from '@/lib/area-pages';
 import { landingsForService } from '@/lib/local-landings';
+import { neighborhoods } from '@/lib/neighborhoods';
 import { getService } from '@/lib/services';
 import { site } from '@/lib/site';
 
@@ -33,6 +34,18 @@ export function AreasWeServe({ serviceSlug }: { serviceSlug: string }) {
               <Link
                 href={area.path}
                 className="font-display text-3xl transition-colors hover:text-accent-ink"
+              >
+                {area.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+          {neighborhoods.map((area) => (
+            <li key={area.slug}>
+              <Link
+                href={area.path}
+                className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
               >
                 {area.name}
               </Link>

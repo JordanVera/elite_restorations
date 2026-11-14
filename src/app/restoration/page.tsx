@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight, Phone } from 'lucide-react';
 
 import { areaPages } from '@/lib/area-pages';
+import { neighborhoods } from '@/lib/neighborhoods';
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
 import { restorationFaqs as extraRestorationFaqs } from '@/lib/faqs/pages';
@@ -478,6 +479,18 @@ export default function RestorationPage() {
                 <Link
                   href={area.path}
                   className="font-display text-3xl transition-colors hover:text-accent-ink"
+                >
+                  {area.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            {neighborhoods.map((area) => (
+              <li key={area.path}>
+                <Link
+                  href={area.path}
+                  className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                 >
                   {area.name}
                 </Link>

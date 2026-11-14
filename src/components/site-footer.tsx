@@ -148,6 +148,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/es/blog" className={linkClass}>
+                  Blog en español
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy" className={linkClass}>
                   Privacy
                 </Link>

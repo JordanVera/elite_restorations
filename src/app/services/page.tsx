@@ -7,6 +7,7 @@ import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages } from '@/lib/area-pages';
+import { neighborhoods } from '@/lib/neighborhoods';
 import { pageMetadata } from '@/lib/seo';
 import {
   serviceGroupBlurbs,
@@ -145,6 +146,18 @@ export default function ServicesPage() {
                 >
                   {area.name}
                   <ArrowUpRight className="size-5 text-accent-ink" aria-hidden />
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            {neighborhoods.map((area) => (
+              <li key={area.slug}>
+                <Link
+                  href={area.path}
+                  className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+                >
+                  {area.name}
                 </Link>
               </li>
             ))}

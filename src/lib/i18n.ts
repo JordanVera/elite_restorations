@@ -1,3 +1,5 @@
+import { houstonPostSlugs, neighborhoodSlugs } from "@/lib/locale-paths";
+
 /** English paths that have a Spanish page. City pages are not in this set. */
 
 export const spanishServiceSlugs = [
@@ -22,6 +24,8 @@ export const spanishServiceSlugs = [
 ] as const;
 
 const spanishServiceSlugSet = new Set<string>(spanishServiceSlugs);
+const neighborhoodSlugSet = new Set<string>(neighborhoodSlugs);
+const houstonPostSlugSet = new Set<string>(houstonPostSlugs);
 
 const staticSpanishPaths: Record<string, string> = {
   "/": "/es",
@@ -47,14 +51,22 @@ export function isSpanishPath(pathname: string) {
 export function spanishPathFor(pathname: string) {
   const path = pathname.split("?")[0] || "/";
   if (staticSpanishPaths[path]) return staticSpanishPaths[path];
+  if (path === "/blog") return "/es/blog";
   const slug = path.slice(1);
   if (spanishServiceSlugSet.has(slug)) return `/es/${slug}`;
+  if (neighborhoodSlugSet.has(slug)) return `/es/${slug}`;
+  if (houstonPostSlugSet.has(slug)) return `/es/blog/${slug}`;
   return null;
 }
 
 export function englishPathFor(pathname: string) {
   const path = pathname.split("?")[0] || "/";
   if (path === "/es") return "/";
+  if (path === "/es/blog") return "/blog";
+  if (path.startsWith("/es/blog/")) {
+    const slug = path.slice("/es/blog/".length);
+    if (houstonPostSlugSet.has(slug)) return `/${slug}`;
+  }
   if (path.startsWith("/es/")) {
     const rest = path.slice(3);
     return rest.startsWith("/") ? rest : `/${rest}`;
