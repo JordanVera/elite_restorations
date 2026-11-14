@@ -542,7 +542,7 @@ export function brandBodyWords(page: BrandPage) {
 }
 
 const banned =
-  /\bGAF\b|\bIICRC\b|\bguarant|\bgarantiz|\bcertific|\bauthorized\b|\bautorizad|\bpreferred contractor\b|\bcontratista preferid/i;
+  /\bGAF\b|\bIICRC\b|\bguarant|\bgarantiz|\bcertific|\bauthorized\b|\bautorizad|\bpreferred contractor\b|\bcontratista preferid|\bdealer\b|\bofficial\b|\boficial\b/i;
 
 const requiredMarks: Record<string, readonly string[]> = {
   "certainteed-roofing-houston": ["CertainTeed", "Landmark", "Landmark PRO", "Landmark ClimateFlex"],
@@ -556,6 +556,8 @@ const requiredMarks: Record<string, readonly string[]> = {
   ],
   "floor-and-decor-flooring-installation-houston": ["Floor & Decor", "LVP"],
   "expo-stone-countertops-houston": ["Expo Stone", "Taj Mahal", "Calacatta", "quartzite"],
+  "abc-supply-roofing-siding-houston": ["ABC Supply", "ABC Supply Co."],
+  "ferguson-plumbing-fixtures-installation-houston": ["Ferguson", "Ferguson Home"],
 };
 
 /** City service whose neighborhood pages each brand article must link. */
@@ -565,6 +567,8 @@ const pageCityService: Record<string, string> = {
   "sherwin-williams-painting-houston": "painting-drywall-repair",
   "floor-and-decor-flooring-installation-houston": "vinyl-flooring",
   "expo-stone-countertops-houston": "countertops",
+  "abc-supply-roofing-siding-houston": "roofing",
+  "ferguson-plumbing-fixtures-installation-houston": "bathroom-remodeling",
 };
 
 const pageHubs: Record<string, { en: readonly string[]; es: readonly string[] }> = {
@@ -622,13 +626,53 @@ const pageHubs: Record<string, { en: readonly string[]; es: readonly string[] }>
       "/es/water-damage-restoration",
     ],
   },
+  "abc-supply-roofing-siding-houston": {
+    en: ["/roofing", "/siding", "/insurance-claims", "/houston-storm-damage"],
+    es: ["/es/roofing", "/es/siding", "/es/insurance-claims", "/es/houston-storm-damage"],
+  },
+  "ferguson-plumbing-fixtures-installation-houston": {
+    en: [
+      "/bathroom-remodeling",
+      "/kitchen-remodeling",
+      "/water-damage-restoration",
+      "/insurance-claims",
+    ],
+    es: [
+      "/es/bathroom-remodeling",
+      "/es/kitchen-remodeling",
+      "/es/water-damage-restoration",
+      "/es/insurance-claims",
+    ],
+  },
 };
 
 const trademarkSlugs = new Set([
   "sherwin-williams-painting-houston",
   "floor-and-decor-flooring-installation-houston",
   "expo-stone-countertops-houston",
+  "abc-supply-roofing-siding-houston",
+  "ferguson-plumbing-fixtures-installation-houston",
 ]);
+
+function hasTrademarkLine(blob: string, locale: "en" | "es") {
+  if (locale === "en") {
+    return /trademarks of their owners/i.test(blob) || /trademark of its owner/i.test(blob);
+  }
+  return blob.includes("marcas de sus dueños") || blob.includes("marca de su dueño");
+}
+
+function hasIndependentLine(blob: string, locale: "en" | "es") {
+  if (locale === "en") return /independent contractor/i.test(blob);
+  return blob.includes("contratista independiente");
+}
+
+/** "Not affiliated" is the required disclaimer, not a claim of affiliation. */
+function affiliationBlob(blob: string) {
+  return blob
+    .replace(/\bnot affiliated\b/gi, "")
+    .replace(/\bno está afiliad[oa]s?\b/gi, "")
+    .replace(/\bno estan afiliad[oa]s?\b/gi, "");
+}
 
 const affiliationBanned =
   /\bpartner\b|\bpartnership\b|\bpreferred\b|\baffiliat|\bsponsor|\bendors|\bpreferid|\bafiliad|\bpatrocin/i;
@@ -722,19 +766,13 @@ for (const page of brandPages) {
     if (!hrefs.has(href)) brandErrors.push(`${page.path} is missing ${href}`);
   }
   if (trademarkSlugs.has(page.slug)) {
-    if (page.locale === "en" && !/trademarks of their owners/i.test(blob)) {
+    if (!hasTrademarkLine(blob, page.locale)) {
       brandErrors.push(`${page.path} is missing the trademark line`);
     }
-    if (page.locale === "en" && !/independent contractor/i.test(blob)) {
+    if (!hasIndependentLine(blob, page.locale)) {
       brandErrors.push(`${page.path} is missing the independent-contractor line`);
     }
-    if (page.locale === "es" && !blob.includes("marcas de sus dueños")) {
-      brandErrors.push(`${page.path} is missing the trademark line`);
-    }
-    if (page.locale === "es" && !blob.includes("contratista independiente")) {
-      brandErrors.push(`${page.path} is missing the independent-contractor line`);
-    }
-    if (affiliationBanned.test(blob)) {
+    if (affiliationBanned.test(affiliationBlob(blob))) {
       brandErrors.push(`${page.path} uses a banned affiliation phrase`);
     }
   }

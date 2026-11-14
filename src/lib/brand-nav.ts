@@ -18,6 +18,14 @@ export const brandServiceLinks = [
     services: ["siding"] as const,
   },
   {
+    group: "Roof & exterior" as const,
+    href: "/abc-supply-roofing-siding-houston",
+    esHref: "/es/abc-supply-roofing-siding-houston",
+    label: "ABC Supply roofing and siding",
+    esLabel: "Techos y siding ABC Supply",
+    services: ["roofing", "roof-replacement", "roofing-emergency-tarp-repair", "siding"] as const,
+  },
+  {
     group: "Recovery" as const,
     href: "/sherwin-williams-painting-houston",
     esHref: "/es/sherwin-williams-painting-houston",
@@ -59,6 +67,14 @@ export const brandServiceLinks = [
       "bathroom-remodeling",
       "water-damage-restoration",
     ] as const,
+  },
+  {
+    group: "Interiors" as const,
+    href: "/ferguson-plumbing-fixtures-installation-houston",
+    esHref: "/es/ferguson-plumbing-fixtures-installation-houston",
+    label: "Ferguson fixtures",
+    esLabel: "Accesorios Ferguson",
+    services: ["kitchen-remodeling", "bathroom-remodeling", "water-damage-restoration"] as const,
   },
 ];
 

@@ -123,6 +123,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
       },
+      {
+        href: '/ferguson-plumbing-fixtures-installation-houston',
+        label: 'Ferguson fixture installation in Houston',
+      },
     ],
     image: img(
       '/images/services/kitchen-remodeling.jpg',
@@ -222,6 +226,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
+      },
+      {
+        href: '/ferguson-plumbing-fixtures-installation-houston',
+        label: 'Ferguson fixture installation in Houston',
       },
     ],
     image: img(
@@ -1009,6 +1017,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/certainteed-roofing-houston',
         label: 'CertainTeed shingle roofing in Houston',
       },
+      {
+        href: '/abc-supply-roofing-siding-houston',
+        label: 'ABC Supply roofing and siding in Houston',
+      },
     ],
     image: img(
       '/images/projects/roofing/brick-home-multi-gable.webp',
@@ -1145,6 +1157,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/certainteed-roofing-houston',
         label: 'CertainTeed shingle roofing in Houston',
       },
+      {
+        href: '/abc-supply-roofing-siding-houston',
+        label: 'ABC Supply roofing and siding in Houston',
+      },
     ],
     image: img(
       '/images/services/roof-replacement.webp',
@@ -1257,6 +1273,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/certainteed-roofing-houston',
         label: 'CertainTeed shingle roofing in Houston',
       },
+      {
+        href: '/abc-supply-roofing-siding-houston',
+        label: 'ABC Supply roofing and siding in Houston',
+      },
     ],
     image: img(
       '/images/services/roofing-emergency-tarp-repair.jpg',
@@ -1337,6 +1357,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/james-hardie-siding-houston',
         label: 'James Hardie siding in Houston',
+      },
+      {
+        href: '/abc-supply-roofing-siding-houston',
+        label: 'ABC Supply roofing and siding in Houston',
       },
     ],
     image: img(
@@ -1579,6 +1603,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/expo-stone-countertops-houston',
         label: 'Expo Stone countertops in Houston',
+      },
+      {
+        href: '/ferguson-plumbing-fixtures-installation-houston',
+        label: 'Ferguson fixture installation in Houston',
       },
     ],
     image: img(
