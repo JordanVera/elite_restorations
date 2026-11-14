@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Contacto en Houston",
   description:
-    "Llame al (713) 909-0034 para restauración o remodelación en Houston. 511 Crestwater Ct, Houston, TX 77082, o pida un estimado.",
+    "Llame al (713) 909-0034 para restauración o remodelación en Houston. La oficina está en 511 Crestwater Ct, Houston, TX 77082, o pida un estimado.",
   path: "/es/contact",
   locale: "es",
   languages: languageAlternates("/contact", "/es/contact"),
@@ -21,8 +21,8 @@ export default function SpanishContactPage() {
     <>
       <PageHero
         eyebrow="Contacto"
-        title={["Hablemos de Houston."]}
-        lede="Llame, escriba o envíe la solicitud. Si está entrando agua o el techo está abierto, llame primero. El formulario es el mismo que usamos en inglés y llega al mismo lugar."
+        title={["Hablemos de su casa en Houston."]}
+        lede="Llame, escriba o envíe la solicitud. Si está entrando agua o el techo está abierto, llame primero. El formulario es el mismo de la página en inglés y llega al mismo lugar."
         crumbs={[{ name: "Contacto", path: "/es/contact" }]}
         homeCrumb={{ name: "Inicio", path: "/es" }}
       />
@@ -34,7 +34,7 @@ export default function SpanishContactPage() {
               {site.phone.display}
             </a>
             <a href={site.phone.sms} className="mt-4 inline-flex text-sm underline underline-offset-4">
-              Envíanos un texto
+              Envíenos un texto
             </a>
             <dl className="mt-10 space-y-6 text-sm">
               <div className="flex gap-3">
@@ -46,7 +46,7 @@ export default function SpanishContactPage() {
               <div className="flex gap-3">
                 <Clock className="size-4 text-accent-ink" aria-hidden />
                 <dd>
-                  Lunes a sábado, 8:00 AM a 6:00 PM. Domingo cerrado. Para una emergencia de agua o tormenta, llame a cualquier hora.
+                  De lunes a sábado, de 8:00 AM a 6:00 PM. El domingo la oficina está cerrada. Si es una emergencia de agua o de tormenta, llame a cualquier hora.
                 </dd>
               </div>
               <div className="flex gap-3">
@@ -65,7 +65,7 @@ export default function SpanishContactPage() {
             <p className="eyebrow text-accent-ink">Estimado</p>
             <h2 className="font-display mt-4 text-4xl">Cuéntenos qué necesita.</h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              El formulario está en inglés, igual que en la página de contacto en inglés, para que la solicitud entre al mismo sistema. No cambia a dónde llega.
+              El formulario está en inglés, el mismo de la página de contacto en inglés, y su solicitud llega al mismo lugar.
             </p>
             <div className="relative mt-8">
               <LeadForm />

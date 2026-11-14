@@ -11,16 +11,16 @@ export const carpentryBrief: Brief = {
     '{name} framing is inspected before we cut, especially when a wall or a doorway is part of a remodel.',
   ],
   opener: [
-    'For carpentry, that housing tells us whether we are matching old casing or building new millwork for a room that never had it. {name} has both. We measure the profiles that should stay.',
+    'For carpentry, these houses tell us whether we are matching old casing or building new millwork for a room that never had it. {name} has both. We measure the profiles that should stay.',
     'Carpentry there is stairs, built-ins, and the trim that finishes a kitchen or a bath. In {name} that work stays with the same team as the remodel instead of arriving as a stranger at the end.',
-    'We read that house type as square-ness and as rules. Out-of-square walls in {name} get scribed. Street-facing trim on a regulated block gets checked before it changes.',
+    'For us, that house type means square-ness and the rules. Out-of-square walls in {name} get fitted. Street-facing trim on a regulated block gets checked before it changes.',
   ],
   pier: [
     'Pier-and-beam houses in {name} often have original casing worth matching. New wood is acclimated before it is cut, because humidity moves it. Opening a wall means looking at what the wall is holding up. A crawlspace does not make every wall a non-bearing wall. We inspect before we cut.',
     'Built-ins in a {name} cottage are scribed to plaster that is not flat. A square box from a shop will gap. We build or trim to the wall that exists, including awkward alcoves the original carpenter already fought.',
   ],
   slab: [
-    'Slab houses in {name} often have simpler trim. Matching it is straightforward if that is the goal, and changing the profile is a choice we name before we mill anything. Stairs in two-story plans are a large part of the visible carpentry. Rails and nosings are one scope with the floors they meet.',
+    'Slab houses in {name} often have simpler trim. Matching it is straightforward if that is the goal, and changing the profile is a choice we name before we mill anything. Stairs in two-story plans are a large part of the visible carpentry. Rails and nosings are one job with the floors they meet.',
     'Framing on a {name} slab remodel is about openings, soffits, and cabinet modifications, not about a crawlspace. We still check structure before a pass-through is cut. New wood acclimates in the house.',
   ],
   mixed: [
@@ -32,7 +32,7 @@ export const carpentryBrief: Brief = {
     'Open plans in {name} need the built-in sized to the wall you see from the kitchen. A piece that is too small looks like furniture that stayed. We measure the alcove, including outlets that have to remain usable.',
   ],
   raised: [
-    'Carpentry in a raised {name} house includes how trim and stairs meet an elevated structure. Exterior wood lives in salt air and is detailed to shed water. Interior built-ins still acclimate indoors. Historic blocks can regulate street-facing millwork. We check the block before the elevation changes.',
+    'Carpentry in a raised {name} house includes how trim and stairs meet an elevated structure. Exterior wood lives in salt air and is detailed to shed water. Interior built-ins still acclimate indoors. Historic blocks can regulate street-facing millwork. We check the block before the front changes.',
     'Access in {name} limits the length of a stair part or a mantel that can turn the landing. We measure the path. Interior profiles are matched or replaced on purpose, not because a piece was easier to carry.',
   ],
   craft: [
@@ -41,7 +41,7 @@ export const carpentryBrief: Brief = {
     'Framing in {name} for a new opening is inspected first. Soffits and cabinet modifications that belong to a kitchen stay with that remodel instead of being handed off at the end.',
   ],
   sequence: [
-    'The {name} order is measure the existing profiles and the structure, acclimate new wood, cut and fit, then finish or leave the wood ready for paint as the scope says. Site protection matters because trim is the last thing people touch.',
+    'The {name} order is measure the existing profiles and the structure, acclimate new wood, cut and fit, then finish or leave the wood ready for paint as the plan says. Site protection matters because trim is the last thing people touch.',
     'We do not remove {name} casing we intended to match until the new knives or the new stock are confirmed. Openings are checked for what they carry before the drywall comes off.',
   ],
   coda: [
@@ -76,7 +76,7 @@ export const carpentryBrief: Brief = {
       q: 'Can you match old trim in {name}?',
       answers: [
         'When the profile is still there to copy and the stock can be milled or sourced. {name} bungalows and cottages often have casing worth keeping. We will not nail a standard big-box profile next to an original one and call it close. If the original is too far gone, we say so and choose a replacement on purpose.',
-        'Matching is a sample problem. In {name} we take the existing stick as the guide, acclimate the new wood, and scribe to walls that are out of square. Paint grade and stain grade are different scopes. We name which one you want.',
+        'Matching is a sample problem. In {name} we take the existing stick as the guide, acclimate the new wood, and scribe to walls that are out of square. Paint grade and stain grade are different jobs. We name which one you want.',
       ],
     },
     {
@@ -96,8 +96,8 @@ export const carpentryBrief: Brief = {
     {
       q: 'Will you open a wall in {name} as part of the carpentry?',
       answers: [
-        'When the structure allows it and the remodel needs the opening. {name} houses vary from conventional framing to older balloon-era walls. We look before we cut. A carpentry scope can also be trim only, with no wall opened at all.',
-        'Opening a wall is not assumed. If the {name} project is baseboard and a built-in, that is the scope. If you want a pass-through, we inspect and say whether the wall can give it to you.',
+        'When the structure allows it and the remodel needs the opening. {name} houses vary from conventional framing to older balloon-era walls. We look before we cut. A carpentry job can also be trim only, with no wall opened at all.',
+        'Opening a wall is not assumed. If the {name} project is baseboard and a built-in, that is the job. If you want a pass-through, we inspect and say whether the wall can give it to you.',
       ],
     },
     {
@@ -121,16 +121,16 @@ export const fireplaceBrief: Brief = {
     '{name} surrounds use heat-rated tile and mortar even when the fireplace is mostly decorative. The scale has to fit the room.',
   ],
   opener: [
-    'For a fireplace, that housing tells us the scale of the wall. {name} great rooms and {name} bungalow parlors are not the same surround. We measure before we promise a stone field.',
+    'For a fireplace, these houses tell us the scale of the wall. {name} great rooms and {name} bungalow parlors are not the same surround. We measure before we promise a stone face.',
     'Fireplace tile there is a finish and a heat assembly. In {name} we check what is behind the face before a new surface is promised.',
-    'We read that house type as room size. An oversized surround swallows a small {name} living room. A tiny one looks lost on a two-story wall. The visit sets the proportion.',
+    'For us, that house type means room size. An oversized surround swallows a small {name} living room. A tiny one looks lost on a two-story wall. The visit sets the proportion.',
   ],
   pier: [
     'Older pier-and-beam houses in {name} sometimes have a small original masonry fireplace. The surround should fit that room. Heat-rated materials still go in. The crawlspace does not change the firebox. It only tells us the house is older and the hearth may not be square. We check the face and the hearth before we cover either one.',
-    'A {name} bungalow fireplace is often the scale of the room, not the scale of a catalog photo. We will not wrap a small firebox in a field of stone that reaches the ceiling unless the wall and the structure support that idea. The mantel, if there is one, is part of the composition.',
+    'A {name} bungalow fireplace is often the scale of the room, not the scale of a catalog photo. We will not wrap a small firebox in a wall of stone that reaches the ceiling unless the wall and the structure support that idea. The mantel, if there is one, is part of the composition.',
   ],
   slab: [
-    'Slab-era houses in {name} often have a simple masonry or prefabricated firebox on a living-room wall. We say whether the face can be retiled or whether the surround needs to be rebuilt. Heat-rated thinset and tile are used even if you light the fire a few times a year. The hearth extension has to remain a safe size.',
+    'Slab-era houses in {name} often have a simple masonry or prefabricated firebox on a living-room wall. We say whether the face can be retiled or whether the surround needs to be rebuilt. Heat-rated mortar and tile are used even if you light the fire a few times a year. The hearth extension has to remain a safe size.',
     'On a {name} slab the fireplace is usually a vertical project, not a foundation project. We still look at cracks in the existing face before we cover them. Covering a moving crack with tile does not stop the crack. We say what we see.',
   ],
   mixed: [
@@ -139,7 +139,7 @@ export const fireplaceBrief: Brief = {
   ],
   post: [
     'Newer {name} fireplaces are often a manufactured box in a tall family room. The surround has to be large enough for that wall and still heat-rated. We do not cut a post-tension slab to extend a hearth without locating cables. Most surrounds never need that cut. The face is the project.',
-    'Open rooms in {name} see the fireplace from the kitchen. Mantel, paneling, and tile are one drawing. A stone field that ignores the sightline looks pasted on. We size it in the room.',
+    'Open rooms in {name} see the fireplace from the kitchen. Mantel, paneling, and tile are one drawing. A stone face that ignores the sightline looks pasted on. We size it in the room.',
   ],
   raised: [
     'A fireplace in a raised {name} house is still a heat-rated assembly. Salt air does not change the mortar requirement. Access for stone and a mantel is planned around the stairs. If the block is historic, the exterior chimney and the interior surround are different reviews. We check which one you are asking to change.',
@@ -147,8 +147,8 @@ export const fireplaceBrief: Brief = {
   ],
   craft: [
     'In {name} mantel, paneling, and tile are planned together when the wall needs all three. Heat-rated tile and mortar go in even when the fireplace is lit occasionally.',
-    'We size the {name} field to the room. A large great room and a small parlor do not get the same surround. The carpentry can travel with the tile.',
-    'Updating a brick face in {name} starts with what is behind it. Retile, resurface, or rebuild are different scopes. We pick after we see the box.',
+    'We size the {name} face to the room. A large great room and a small parlor do not get the same surround. The carpentry can travel with the tile.',
+    'Updating a brick face in {name} starts with what is behind it. Retile, resurface, or rebuild are different jobs. We pick after we see the box.',
   ],
   sequence: [
     'The {name} order is inspect the firebox and the face, confirm the hearth size, draw the surround, then set heat-rated materials and the mantel. The room stays protected because mortar and stone dust travel.',
@@ -156,7 +156,7 @@ export const fireplaceBrief: Brief = {
   ],
   coda: [
     'That is the {name} fireplace: the wall you have, a heat-rated finish, and a surround that fits the room rather than a showroom.',
-    'Call {phone} if the {name} fireplace is still in use or only decorative. The materials are heat-rated either way. The condition of the box decides the scope.',
+    'Call {phone} if the {name} fireplace is still in use or only decorative. The materials are heat-rated either way. The condition of the box decides the job.',
   ],
   notes: [
     {
@@ -200,7 +200,7 @@ export const fireplaceBrief: Brief = {
       q: 'Can you add a mantel in {name}?',
       answers: [
         'Yes, when the wall and the firebox allow it. The mantel, the paneling, and the tile are one composition in {name}. A mantel that is the wrong scale makes the surround look small or crowded. We draw them together.',
-        'Mantels in {name} are carpentry plus the tile field. We measure the wall height and the opening. On a regulated exterior, a chimney change is a different question from an interior mantel. We separate those.',
+        'Mantels in {name} are carpentry plus the tile face. We measure the wall height and the opening. On a regulated exterior, a chimney change is a different question from an interior mantel. We separate those.',
       ],
     },
     {

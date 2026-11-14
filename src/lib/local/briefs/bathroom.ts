@@ -6,14 +6,14 @@ export const bathroomBrief: Brief = {
   exterior: false,
   lede: [
     'Bathroom remodeling in {name}, TX, is the shower, the vanity, the tile, and the light, with waterproofing in place before the finish.',
-    'A {name} bath is scoped from the room you have, whether that is a tight powder room or a primary bath. The drain decides how far the layout can move.',
+    'A {name} bath is planned from the room you have, whether that is a tight powder room or a primary bath. The drain decides how far the layout can move.',
     'In {name} the wet wall comes first. Tile and a vanity are what you see. The waterproofing is what has to be right.',
     '{name} bathrooms are a fixture swap only when that is all you asked for. Otherwise the pan, the valve, and the floor are in the conversation.',
   ],
   opener: [
-    'For a bathroom, that housing tells us whether we are in a small powder room or a primary bath. {name} has both, sometimes on the same street. If the walls get wet, waterproofing is in the scope.',
+    'For a bathroom, these houses tell us whether we are in a small powder room or a primary bath. {name} has both, sometimes on the same street. If the walls get wet, waterproofing is in the job.',
     'Bathroom remodeling there starts with the valve, the drain, the pan, and the fan. In {name} those are settled before finish tile is chosen. The visible tile cannot rescue a shower that was never waterproofed.',
-    'We use that house type to judge scale. A vanity from a showroom can miss the door swing in {name}. The ceiling, the window, and the door are measured before fixtures are ordered.',
+    'That house type helps us judge the scale. A vanity from a showroom can miss the door swing in {name}. The ceiling, the window, and the door are measured before fixtures are ordered.',
   ],
   pier: [
     'A pier-and-beam bath in {name} can often move a drain through the crawlspace instead of a saw cut. That is easier, and it is not permission to ignore the joists. We look underneath, then build the pan and the waterproofing as one system. Finish tile is last.',
@@ -28,24 +28,24 @@ export const bathroomBrief: Brief = {
     'We do not guess a {name} bath from the year the street was built. Additions and original rooms can sit on different structures a few feet apart. The visit sorts that out. The fixture layout follows the floor.',
   ],
   post: [
-    'Newer {name} baths are often on post-tension slabs. A toilet or a shower that moves has to miss the cables. We locate them before a cut is designed. Keeping the drains and rebuilding the shower in place is often the cleaner scope, and we will say so.',
+    'Newer {name} baths are often on post-tension slabs. A toilet or a shower that moves has to miss the cables. We locate them before a cut is designed. Keeping the drains and rebuilding the shower in place is often the cleaner job, and we will say so.',
     'Cutting a post-tension slab in a {name} bath without locating the cables is not a step we take. If the cables block a curbless drain, the shower design changes. The waterproofing, the valve, and the glass are still detailed as one shower.',
   ],
   raised: [
     'A bath in {name} may sit well above the street. The drain run is longer, and the path for a tub or a panel of glass has to be planned. Waterproofing is the layer behind the tile, then the finish. Salt air is a reason to be careful with exterior metal, not a reason to skip the pan.',
-    'Raised houses in {name} make access part of the bath scope. We look at stairs and landings and how fixtures reach the room. Some blocks limit what the street sees. The shower itself is still valve, slope, and waterproofing.',
+    'Raised houses in {name} make access part of the bath work. We look at stairs and landings and how fixtures reach the room. Some blocks limit what the street sees. The shower itself is still valve, slope, and waterproofing.',
   ],
   craft: [
     'In {name} the shower is what you feel every day: slope, niche, glass, and a valve at a usable height. The vanity, the mirror, and the light are planned with it. We do not tile first and then discover the mirror has nowhere to go.',
     'A {name} powder room might be a vanity, a mirror, and paint. A primary bath might move a shower. We name which one you are asking for, because they do not share a timeline or a materials list.',
-    'Grout, glass, and the fan are part of a {name} bath even when the conversation started with a picture of tile. The fan has to move air. The glass has to fit the curb we built. Those are in the scope.',
+    'Grout, glass, and the fan are part of a {name} bath even when the conversation started with a picture of tile. The fan has to move air. The glass has to fit the curb we built. Those are in the job.',
   ],
   sequence: [
     'The {name} sequence is protect the rest of the house, open what the plan requires, set the drain and the pan, waterproof, then tile and set the vanity. Paint and glass close the room. Fixtures are not a substitute for the layer you cannot see.',
     'When {name} has a second bath, we say how the house stays usable. When it does not, we say that too. Either way the pan comes before the finish, so the shower is not built backward.',
   ],
   coda: [
-    'That local limit sits on the same bath scope: a waterproof shower, a vanity that fits, and light you can use. The visit writes the price for this {name} room.',
+    'That local limit sits on the same bath job: a waterproof shower, a vanity that fits, and light you can use. The visit writes the price for this {name} room.',
     'If the shower has to stay on its drain, say that when you call {phone}. If you hope to move it, say that too. {name} is scheduled from our west Houston office either way.',
   ],
   notes: [
@@ -59,7 +59,7 @@ export const bathroomBrief: Brief = {
     {
       title: 'Room scale',
       bodies: [
-        'Powder rooms and primary baths in {name} are different scopes. We measure the door and the ceiling before a vanity is ordered.',
+        'Powder rooms and primary baths in {name} are different jobs. We measure the door and the ceiling before a vanity is ordered.',
         'Glass and a niche are sized to the {name} shower you have, including a tight room where a large panel would hit the toilet.',
       ],
     },
@@ -83,7 +83,7 @@ export const bathroomBrief: Brief = {
       q: 'Do you waterproof before tile in {name}?',
       answers: [
         'Yes. The membrane, the pan slope, and the niches are in place before finish tile goes up in a {name} bath. Grout is not the waterproofing. We also set a fan so the room can dry between showers in this humidity.',
-        'Tile is the finish, not the water barrier. A {name} shower we rebuild gets the corners and the valve detailed before the surface. If you only want a vanity and paint, we will not invent a shower scope. If the shower is open, the membrane is part of the job.',
+        'Tile is the finish, not the water barrier. A {name} shower we rebuild gets the corners and the valve detailed before the surface. If you only want a vanity and paint, we will not invent a shower job. If the shower is open, the membrane is part of the job.',
       ],
     },
     {
@@ -97,7 +97,7 @@ export const bathroomBrief: Brief = {
       q: 'What should I decide before a {name} bath visit?',
       answers: [
         'Whether this is a powder room or a full bath, and whether the shower has to stay where it is. Photos help. In {name} the foundation changes the rest, and that is what the visit is for. You do not need a final tile picked. You do need to know who uses the room.',
-        'Know which bath and what fails in it: the light, the storage, the shower size, the fan. We turn that into a {name} scope. Mention any leak you have already seen so we are not designing on top of a wet wall.',
+        'Know which bath and what fails in it: the light, the storage, the shower size, the fan. We turn that into a {name} job. Mention any leak you have already seen so we are not designing on top of a wet wall.',
       ],
     },
     {

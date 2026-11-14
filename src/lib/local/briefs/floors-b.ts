@@ -11,16 +11,16 @@ export const vinylBrief: Brief = {
     '{name} vinyl can replace a worn section when the product matches, and it is a full floor when the wear is even. We look before we choose.',
   ],
   opener: [
-    'For vinyl, that housing tells us slab or wood subfloor, and whether the room is a spill zone or a bath. {name} baths stay tile. Kitchens and playrooms are where this floor earns its place.',
+    'For vinyl, these houses tell us slab or wood subfloor, and whether the room is a spill zone or a bath. {name} baths stay tile. Kitchens and playrooms are where this floor earns its place.',
     'Vinyl there is only as flat as what is under it. In {name} we reject the idea that a pad hides a ridge. Glue-down is often steadier on a slab. We explain that before the planks arrive.',
-    'We read that house type as access and as moisture. A {name} slab in a humid month gets a meter. A wood subfloor gets a flatness check. The picture on the box does not replace either one.',
+    'For us, that house type means access and moisture too. A {name} slab in a humid month gets a meter. A wood subfloor gets a flatness check. The picture on the box does not replace either one.',
   ],
   pier: [
     'Vinyl over a wood subfloor in {name} needs the floor flat and tight. A pier-and-beam house can bounce. Vinyl will not stiffen it. We say if the subfloor comes first. Glue-down on a moving wood floor is a different conversation from a click floor on a prepared slab, and we do not pretend they are the same.',
     'Older {name} floors are often uneven. Vinyl highlights that. We fill or sand the high and low spots the product allows, and we stop if the structure is the real issue. This is not the assembly we use inside a shower.',
   ],
   slab: [
-    'On a {name} slab, glue-down vinyl is often the steadier choice. The slab has to be dry and flat or the plank telegraphs every trowel ridge and every hump. We check both. Door heights are measured so the new floor does not catch.',
+    'On a {name} slab, glue-down vinyl is often the steadier choice. The slab has to be dry and flat or the plank shows every trowel ridge and every hump. We check both. Door heights are measured so the new floor does not catch.',
     'A {name} slab that felt fine under carpet can be too uneven for vinyl. We find that before the boxes are scheduled. Transitions at tile and at the garage door are drawn, not improvised on install day.',
   ],
   mixed: [
@@ -28,7 +28,7 @@ export const vinylBrief: Brief = {
     'Mixed floors in {name} change height at doorways. Vinyl thickness is small, which helps, and it is not zero. We measure so the reducer is the right one.',
   ],
   post: [
-    'Post-tension slabs in {name} are a surface for vinyl, not something we cut. Flatness and moisture are the whole substrate story. A plank floor does not relocate a drain. If the project also moves plumbing, that scope is separate and the cables are located first.',
+    'Post-tension slabs in {name} are a surface for vinyl, not something we cut. Flatness and moisture are the whole surface story. A plank floor does not relocate a drain. If the project also moves plumbing, that job is separate and the cables are located first.',
     'Open {name} floors show vinyl seams and pattern direction from across the room. We plan the direction and the breaks at doorways. Glue-down or click is chosen for this slab, then explained before material is ordered.',
   ],
   raised: [
@@ -121,9 +121,9 @@ export const laminateBrief: Brief = {
     '{name} laminate is the quicker wood look when a full sanding project is more than the room needs. A damaged plank can sometimes be matched.',
   ],
   opener: [
-    'For laminate, that housing tells us where the floor is dry enough and flat enough. {name} bedrooms and halls are the usual rooms. We check the subfloor before the planks arrive.',
+    'For laminate, these houses tell us where the floor is dry enough and flat enough. {name} bedrooms and halls are the usual rooms. We check the subfloor before the planks arrive.',
     'Laminate there is underlayment, transitions, and a honest limit on wet rooms. In {name} we set the floor so it meets the doors instead of catching on them.',
-    'We read that house type as stairs and as flatness. A {name} two-story hall shows a bad nosing immediately. A ridge under the plank ticks when you walk.',
+    'For us, that house type means stairs and flatness too. A {name} two-story hall shows a bad stair edge immediately. A ridge under the plank ticks when you walk.',
   ],
   pier: [
     'Laminate over a wood subfloor in {name} needs the floor reasonably stiff and flat. A bouncy pier-and-beam floor is a structure problem. Laminate will not fix it, and the click joints will complain. We walk the floor and say if prep or sistering comes first.',
@@ -131,14 +131,14 @@ export const laminateBrief: Brief = {
   ],
   slab: [
     'On a {name} slab, laminate needs flatness. Underlayment takes out minor variation and does not bridge a hump. We check moisture too. A damp slab is a poor place for a floating floor. Door undercuts are measured before the boxes are ordered.',
-    'Bedrooms and halls in {name} are the usual laminate scope on a slab. We plan the direction and the breaks at doorways. A kitchen gets a product conversation, not an automatic yes.',
+    'Bedrooms and halls in {name} are the usual laminate job on a slab. We plan the direction and the breaks at doorways. A kitchen gets a product conversation, not an automatic yes.',
   ],
   mixed: [
     '{name} houses with both slabs and wood floors get the method that matches the room. The hallway is where those methods meet. We detail that joint so it is a reducer you chose, not a threshold you tripped on.',
     'Mixed construction in {name} changes height. Laminate is thin, which helps at doors, and the subfloor still has to be flat on both sides of the joint.',
   ],
   post: [
-    'Newer {name} slabs get laminate on top, without cutting post-tension cables. Flatness is the prep. Upstairs bedrooms in these plans are a common scope. The stair nose is part of it if the floor reaches the stair.',
+    'Newer {name} slabs get laminate on top, without cutting post-tension cables. Flatness is the prep. Upstairs bedrooms in these plans are a common job. The stair nose is part of it if the floor reaches the stair.',
     'Open plans and upstairs halls in {name} show laminate direction. We choose it before install. The bath stays tile. We do not run laminate into a shower or a truly wet laundry pan.',
   ],
   raised: [
@@ -176,7 +176,7 @@ export const laminateBrief: Brief = {
     {
       title: 'Stairs and matches',
       bodies: [
-        'If the {name} floor meets stairs, the nosing is part of the scope.',
+        'If the {name} floor meets stairs, the stair edge is part of the job.',
         'A damaged plank in {name} is replaced when the product can be matched. Otherwise the room is the unit of work.',
       ],
     },
@@ -192,7 +192,7 @@ export const laminateBrief: Brief = {
     {
       q: 'Does underlayment fix an uneven floor in {name}?',
       answers: [
-        'No. It handles minor variation and sound. A {name} slab or wood floor that is out of plane has to be corrected. We check with a straightedge on the visit so the click joints are not asked to bridge a hump.',
+        'No. It handles minor variation and sound. A {name} slab or wood floor that is not fully flat has to be corrected. We check with a straightedge on the visit so the click joints are not asked to bridge a hump.',
         'Underlayment is part of the assembly in {name}, specified for the plank. It is not a shortcut around prep. Doors and transitions are measured at the same time.',
       ],
     },
@@ -206,8 +206,8 @@ export const laminateBrief: Brief = {
     {
       q: 'How are stairs handled with laminate in {name}?',
       answers: [
-        'With a nosing and a plan, if the floor reaches them. {name} two-story houses show the top step from the hall. We include that in the scope instead of stopping the field an inch short.',
-        'A one-story {name} house may have no stair at all. We do not add one to the scope. Where stairs exist, the landing and the nose are measured before the boxes are ordered.',
+        'With a stair nose and a plan, if the floor reaches them. {name} two-story houses show the top step from the hall. We include that in the job instead of stopping the floor an inch short.',
+        'A one-story {name} house may have no stair at all. We do not add one to the job. Where stairs exist, the landing and the nose are measured before the boxes are ordered.',
       ],
     },
     {

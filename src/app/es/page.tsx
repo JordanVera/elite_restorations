@@ -13,7 +13,7 @@ import "@/components/home/kitchen-hero.css";
 export const metadata: Metadata = pageMetadata({
   title: "Restauración en Houston",
   description:
-    "Restauración por agua y tormenta, remodelación y ayuda con reclamos en Houston. Familia desde 1993. Llame al (713) 909-0034.",
+    "Restauración por agua y tormenta, remodelación y ayuda con su reclamo en Houston. Empresa familiar desde 1993. Llame al (713) 909-0034.",
   path: "/es",
   locale: "es",
   languages: languageAlternates("/", "/es"),
@@ -43,11 +43,11 @@ export default function SpanishHomePage() {
           </p>
           <h1 id="hero-heading">
             Remodelación en Houston. <br />
-            <em>Para vivirla.</em>
+            <em>Para vivir en ella.</em>
           </h1>
           <p className="kitchen-description">
-            Remodelamos cocinas y baños en el área de Houston. Si entra agua o
-            pega una tormenta, empiece por{" "}
+            Remodelamos cocinas y baños en el área de Houston. Si está entrando
+            agua, o acaba de pegar una tormenta, empiece por{" "}
             <Link href="/es/restoration">restauración en Houston</Link>. Después
             de un huracán, granizo o helada, vea{" "}
             <Link href="/es/houston-storm-damage">ayuda por tormenta</Link>.
@@ -71,8 +71,8 @@ export default function SpanishHomePage() {
       </section>
       <ServiceIndex
         services={indexServices}
-        heading={["Veinticinco oficios.", "Un equipo."]}
-        intro="El mismo equipo hace la remodelación planeada y la emergencia. Elija un oficio."
+        heading={["Veinticinco trabajos.", "Un solo equipo."]}
+        intro="El mismo equipo hace la remodelación con cita y la emergencia. Elija el trabajo que necesita."
         indexLabel="Servicios"
         exploreLabel="Ver"
         lessLabel="Ver menos"

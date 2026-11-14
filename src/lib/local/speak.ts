@@ -64,11 +64,11 @@ export function driveParagraph(
     ? `If water is still coming in, call ${phone} before you do anything else.`
     : `Call ${phone} or send the estimate form.`;
   const options = [
-    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${street}, ${zip}. The drive follows ${area.roads}. ${call} We book ${work} in ${area.name} from the office on that street, and traffic is why we do not promise an exact time.`,
+    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${street}, ${zip}. The drive follows ${area.roads}. ${call} We book ${work} in ${area.name} from the office on that street, and traffic is why your arrival time is just a window.`,
     `From ${street} to ${area.landmark} is about ${miles} miles as a straight line, ${area.direction}. ${area.roads} is the road the drive actually takes. ${call} ${work} in ${area.name} is booked from the 77082 office.`,
     `${area.name} is on our list because we can get there from ${street}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} plan is still based on the house, not on the mileage.`,
     `Schedule ${work} in ${area.name} at ${street}, Houston ${zip}. A straight line to ${area.landmark} is about ${miles} miles, ${area.direction}, and ${area.roads} is the normal route. ${call}`,
-    `The 77082 office on ${street} is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} We will not invent a drive time.`,
+    `The 77082 office on ${street} is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} Traffic makes that drive time a window.`,
     `${call} The office is ${street}, Houston, ${zip}. ${area.name} sits about ${miles} miles ${area.direction} of that door if you measure straight to ${area.landmark}. Day to day the route is ${area.roads}.`,
   ];
   return pick(options, `${salt}:drive:${area.slug}`);
@@ -78,7 +78,7 @@ export function nearbyParagraph(area: AreaProfile, work: string, salt: string) {
   const [a, b, c] = neighborNames(area);
   const options = [
     `${work} nearby is listed for ${a}, ${b}, and ${c}. Each community has its own page because the houses are not interchangeable with ${area.name}. The links are at the bottom of this page. Work still happens at this house.`,
-    `${a}, ${b}, and ${c} are the neighboring areas we publish for the same trade. Open those pages for the local differences. A scope written for ${area.name} does not move with you if the house is actually in one of them.`,
+    `${a}, ${b}, and ${c} are the neighboring areas we publish for the same trade. Open those pages for the local differences. A plan written for ${area.name} does not move with you if the house is actually in one of them.`,
     `If the house is closer to ${a}, ${b}, or ${c}, use that city page. This one is ${area.name}: ${area.housingShort}, reached from our office along ${area.roads}.`,
   ];
   return pick(options, `${salt}:nearby:${area.slug}`);
@@ -87,7 +87,7 @@ export function nearbyParagraph(area: AreaProfile, work: string, salt: string) {
 export function permitSentence(area: AreaProfile, exterior: boolean) {
   const interior = exterior
     ? 'Roof color, siding, paint, fences, and anything the street sees are the items an association or a historic district is most likely to review.'
-    : 'An association or a historic district, where one applies, usually reviews the street elevation. Work inside the house is often outside that review, and a permit is a separate question when plumbing, electrical, or structure changes.';
+    : 'An association or a historic district, where one applies, usually reviews the front wall. Work inside the house is often outside that review, and a permit is a separate question when plumbing, electrical, or structure changes.';
   switch (area.authority) {
     case 'houston':
       return `This address is in Houston, which does not use zoning. ${

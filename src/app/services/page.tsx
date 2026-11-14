@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling & Restoration',
   description:
-    'Houston restoration and remodeling: water and storm damage, kitchens, baths, roofs, and flooring. Call (713) 909-0034.',
+    'Restoration and remodeling in Houston: water and storm damage, kitchens, baths, roofs, and floors. Call (713) 909-0034.',
   path: '/services',
   image: '/images/services/kitchen-remodeling.jpg',
 });
@@ -30,7 +30,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title={['Services in Houston.']}
-        lede="Kitchens, bathrooms, roofing, water and storm restoration, and insurance-claim documentation. Family owned since 1993."
+        lede="Kitchens, bathrooms, roofs, water and storm restoration, and help writing down an insurance claim. Family-owned since 1993."
         crumbs={[{ name: 'Services', path: '/services' }]}
       >
         <Link
@@ -133,8 +133,8 @@ export default function ServicesPage() {
           </h2>
           <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
             The office is at 511 Crestwater Ct, Houston, TX 77082. Westchase,
-            Alief, and the Energy Corridor are the neighborhoods beside it.
-            Each service page lists the wider Houston area.
+            Alief, and the Energy Corridor are next door. Each service page
+            also covers the wider Houston area.
           </p>
           <ul className="mt-10 flex flex-wrap gap-x-10 gap-y-4">
             {areaPages.map((area) => (
@@ -154,7 +154,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Not sure which one you need?"
-        body="Describe what you are seeing or what you want to change. We will point you to the right starting place."
+        body="Describe what you are seeing, or what you want to change. We will help you find the right place to start."
         service="not-sure"
       />
     </>

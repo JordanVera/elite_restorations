@@ -31,7 +31,7 @@ export default function HoustonStormDamagePage() {
       sections={[
         {
           eyebrow: "Latest storm update",
-          heading: dated ? `Update ${update.date}` : "No named storm on this page.",
+          heading: dated ? `Update for ${update.date}` : "No named storm to report right now.",
           paragraphs: [update.text],
         },
         ...stormPage.sections,
@@ -40,7 +40,7 @@ export default function HoustonStormDamagePage() {
       related={[
         { href: "/emergency", label: "Emergency help" },
         { href: "/roofing-emergency-tarp-repair", label: "Emergency roof tarping" },
-        { href: "/emergency-board-up", label: "Emergency board-up" },
+        { href: "/emergency-board-up", label: "Boarding up broken windows and doors" },
         { href: "/water-damage-restoration", label: "Water damage restoration" },
         { href: "/roofing", label: "Roofing" },
         { href: "/commercial-storm-restoration", label: "Commercial and apartment buildings" },
@@ -48,8 +48,8 @@ export default function HoustonStormDamagePage() {
         { href: "/how-to-build-an-insurance-photo-log", label: "Insurance photo log" },
         { href: "/burst-frozen-pipe-water-damage-houston", label: "Frozen or burst pipes" },
       ]}
-      ctaTitle="Roof open, or water inside?"
-      ctaBody={`Call ${site.phone.display} any time. Text the same number if you cannot talk. We tarp, board up, and dry houses, apartments, and commercial buildings. We do not decide the claim.`}
+      ctaTitle="Is the roof open, or is there water inside?"
+      ctaBody={`Call ${site.phone.display} any time. Text the same number if you cannot talk. We can tarp the roof, board up broken windows and doors, and dry houses, apartments, and commercial buildings. Your insurer decides the claim.`}
       serviceName="Houston storm damage help"
       description={stormPage.description}
       emergency

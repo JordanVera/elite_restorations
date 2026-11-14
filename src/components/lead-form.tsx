@@ -83,24 +83,24 @@ type LeadFormProps = {
 
 const errorCopy: Record<ErrorReason, { title: string; body: string }> = {
   unavailable: {
-    title: 'Online requests are not available yet.',
-    body: 'Nothing was sent. Your details are still in the form. Call us and we will take it from here.',
+    title: 'The online form is not available yet.',
+    body: 'Nothing went out. What you typed is still here. Call us and we will take it from there.',
   },
   'rate-limited': {
-    title: 'Too many attempts.',
-    body: 'Please wait a few minutes, or call us and we will take it from here.',
+    title: 'That was a few tries in a row.',
+    body: 'Wait a few minutes and try again, or call us and we will take it from there.',
   },
   failed: {
-    title: 'We could not send your request.',
-    body: 'Nothing was sent. Your details are still in the form. Call us and we will take it from here.',
+    title: 'We could not send this request.',
+    body: 'Nothing went out. What you typed is still here. Call us and we will take it from there.',
   },
   'too-fast': {
-    title: 'Please take a moment and send it again.',
-    body: 'Nothing was sent. Your details are still in the form. You can also call us.',
+    title: 'Give it a moment, then send it again.',
+    body: 'Nothing went out. What you typed is still here. You can also call.',
   },
   expired: {
     title: 'This page has been open a while.',
-    body: 'Refresh the page and send it again, or call us. Your details are still in the form.',
+    body: 'Refresh the page and send it again, or call us. What you typed is still in the form.',
   },
 };
 
@@ -253,7 +253,7 @@ export function LeadForm({
         values.email.trim().length === 0 &&
         !next.email
       ) {
-        next.email = 'Enter an email address, or choose phone or text.';
+        next.email = 'Add an email, or choose phone or text.';
       }
       setErrors(next);
       setStatus({ kind: 'idle' });
@@ -336,7 +336,7 @@ export function LeadForm({
       : [
           `Service: ${optionLabel(leadServices, values.service)}`,
           `Insurance claim: ${optionLabel(claimAnswers, values.claim)}`,
-          values.carrier ? `Insurance carrier: ${values.carrier}` : '',
+          values.carrier ? `Insurance company: ${values.carrier}` : '',
           `Address or ZIP: ${values.address}`,
           `Preferred contact: ${optionLabel(contactMethods, values.contactMethod)}`,
         ];
@@ -367,9 +367,9 @@ export function LeadForm({
         role="status"
         className="border border-border p-6 outline-none sm:p-8"
       >
-        <p className="font-display text-4xl">Request received.</p>
+        <p className="font-display text-4xl">We got your request.</p>
         <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">
-          We have your note. If you need us sooner, call{' '}
+          We have what you sent. If you need us sooner, call{' '}
           <a
             href={site.phone.href}
             className="text-foreground underline underline-offset-[0.4em] hover:text-accent-ink"
@@ -382,8 +382,8 @@ export function LeadForm({
         {photosTotal > 0 && photosSaved < photosTotal && (
           <p className="mt-4 max-w-[48ch] leading-relaxed">
             {photosSaved === 0
-              ? 'Your photos could not be attached.'
-              : `${photosSaved} of ${photosTotal} photos were attached.`}{' '}
+              ? 'We could not attach your photos.'
+              : `We attached ${photosSaved} of ${photosTotal} photos.`}{' '}
             <a
               href={`mailto:${site.email}`}
               className="underline underline-offset-[0.5em] hover:text-accent-ink"
@@ -422,7 +422,7 @@ export function LeadForm({
     >
       <noscript>
         <p className="text-sm leading-relaxed">
-          This form needs JavaScript. Call{' '}
+          This form needs JavaScript to send. You can also call{' '}
           <a href={site.phone.href} className="underline underline-offset-[0.4em]">
             {site.phone.display}
           </a>
@@ -540,14 +540,14 @@ export function LeadForm({
 
       {!partner && isUrgentService(values.service) && (
         <p className="max-w-[52ch] text-sm leading-relaxed">
-          If water is still coming in or the roof is open, call{' '}
+          If water is still coming in, or the roof is open, call{' '}
           <a
             href={site.phone.href}
             className="underline underline-offset-[0.4em] hover:text-accent-ink"
           >
             {site.phone.display}
           </a>{' '}
-          first. You can finish this request after you call.
+          first. You can finish this form after you hang up.
         </p>
       )}
 
@@ -569,7 +569,7 @@ export function LeadForm({
         <Field
           id={fid('carrier')}
           field="carrier"
-          label="Insurance carrier"
+          label="Insurance company"
           optional
           error={errors.carrier}
         >
@@ -633,7 +633,7 @@ export function LeadForm({
           </button>
           <div id={fid('photos-panel')} hidden={!photosOpen} className="mt-4">
             <p className="mb-4 max-w-[52ch] text-sm text-muted-foreground">
-              A few photos of the damage or the room help us prepare. Up to 6.
+              A few photos of the damage, or of the room, help us get ready. You can add up to 6.
             </p>
             <PhotoPicker
               id={fid('photos')}

@@ -6,79 +6,79 @@ const steps = (
 
 export const siding: ServiceGuide = {
   process: steps([
-    ['Look at the elevation', 'We see the profile, the sun fade, the corners, and whether the damage is a section or the wall. South and west sides in Houston age faster than the north.'],
-    ['Match or replace', 'A repair works when the profile and the faded color can be blended. A full wall is the recommendation when a patch will always read as a patch.'],
-    ['Open what is soft', 'If the sheathing or the weather barrier is wet or rotten, the pretty boards are not the repair. We show you that layer before we cover it again.'],
-    ['Detail the trim', 'Corners, windows, doors, and soffits are planned with the profile. Board-and-batten and lap do not finish the same way at a window.'],
-    ['Install and finish', 'The new wall goes on with the flashing and the paint or the factory finish the product uses. Color is matched to the boards that are on the house now, not to a chip from the year it was built.'],
-    ['Walk the curb', 'We look at the elevation from the street and at the joints up close, and we list anything that still needs a pass.'],
+    ['Look at the wall', 'We look at the board style, the sun fade, the corners, and whether the damage is a section or the wall. South and west sides in Houston age faster than the north.'],
+    ['Match or replace', 'A repair works when the style and the faded color can be blended. A full wall is the plan when a patch will always show.'],
+    ['Open what is soft', 'If the wood under the siding, or the wrap behind it, is wet or rotten, the pretty boards are not the repair. We show you that layer before we cover it again.'],
+    ['Detail the trim', 'Corners, windows, doors, and the eave undersides are planned with the boards. Board-and-batten and overlapping rows finish differently at a window.'],
+    ['Install and finish', 'The new wall goes on with metal that keeps water out at the joints, and with the paint or factory finish. Color is matched to the boards on the house now, not to a chip from the year it was built.'],
+    ['Walk the curb', 'We look at the front from the street and at the joints up close, and we list anything that still needs a pass.'],
   ]),
   sections: [
     {
       eyebrow: 'Signs',
       heading: 'Signs the siding is more than paint.',
       paragraphs: [
-        'Soft boards at a hose bib, swelling at the bottom course, paint that keeps peeling on the west wall, or a crack that opens at a corner after a storm are reasons to look at the wall, not only the color. Hail and wind bruise and crack fiber cement and knock wood siding loose. A section can be replaced when the profile still exists and the fade can be blended. A wall that is tired on every course is a replacement.',
-        'If you can see the sheathing, or the wall feels soft, water is already behind the siding. Covering that with new boards without drying and flashing it repeats the rot. We look behind the damage before we order a match.',
+        'Soft boards at an outdoor faucet, swelling on the lowest row, paint that keeps peeling on the west wall, or a crack that opens at a corner after a storm are reasons to look at the wall, not only the color. Hail and wind bruise fiber cement and knock wood siding loose. A section can be replaced when that style still exists and the fade can be blended. A wall that is tired on every row is a replacement.',
+        'If you can see the wood under the siding, or the wall feels soft, water is already behind it. Covering that before the wood is dry and the joints are sealed repeats the rot. We look behind the damage before we order a match.',
       ],
       points: [
-        { title: 'Fade on the sunny side', body: 'A new board next to ten-year-old south-facing siding will not match the original chip. We match the wall as it is, or we say the wall needs more than a patch.' },
-        { title: 'Bottom courses', body: 'The lowest boards see sprinklers, soil, and splashback. Rot there is often drainage and grade, not only a bad board. The grade is part of the look.' },
-        { title: 'Storm hits', body: 'Wind-lifted courses and impact cracks are documented. A storm repair and a full re-side are different scopes. The inspection says which.' },
+        { title: 'Sunny-side fade', body: 'A new board next to ten-year-old south-facing siding will not match the original chip. We match the wall as it is, or we say it needs more than a patch.' },
+        { title: 'Lowest boards', body: 'The lowest boards see sprinklers, soil, and splash. Rot there is often the ground level, not only a bad board. Where the soil sits is part of the look.' },
+        { title: 'Storm hits', body: 'Rows the wind lifted, and impact cracks, are photographed. A storm repair and all-new siding are different jobs. The visit says which.' },
       ],
     },
     {
       eyebrow: 'Materials',
-      heading: 'Lap, board-and-batten, and what is behind them.',
+      heading: 'Rows, board-and-batten, and what is behind them.',
       paragraphs: [
-        'Fiber cement and engineered wood are the profiles we install most, in lap, board-and-batten, and other common patterns. Fiber cement handles Houston sun and humidity better than untreated wood, and it still wants the flashing, the clearance off the roof and the grade, and the paint or finish the manufacturer expects. Engineered wood wants the same respect for water at the ends and the bottom edge. We talk through which profile fits the house, from a newer Cinco Ranch elevation to an older Memorial wall that only needs a matched section.',
-        'The weather barrier and the flashing at windows and doors are the wall you do not see. New siding over a torn barrier will not last. Trim, corners, and soffits are finished with the boards so the front of the house looks like one job. Color is chosen in daylight on that wall. A sample indoors will not match the sun outside.',
+        'Fiber cement and engineered wood are the boards we install most, in rows, board-and-batten, and other common patterns. Fiber cement handles Houston sun and humidity better than untreated wood, and it still needs metal that keeps water out, a gap off the roof and the ground, and the paint or finish the maker expects. Engineered wood needs the same care with water at the ends and the bottom edge. We talk through which pattern fits the house, from a newer Cinco Ranch front to an older Memorial wall that only needs a matched section.',
+        'The wrap, and the metal that keeps water out at windows and doors, are the wall you do not see. New siding over a torn wrap will not last. Trim, corners, and the eave undersides are finished with the boards so the front looks like one job. Color is chosen in daylight on that wall. A sample indoors will not match the sun outside.',
       ],
       points: [
-        { title: 'Profile changes the house', body: 'Board-and-batten and lap are different shadows and different trim. We decide that with the elevation, not after the first course is up.' },
-        { title: 'Clearances', body: 'Siding that runs into the roof, the soil, or a deck ledger stays wet. We keep the gaps that let the wall dry.' },
-        { title: 'Paint with the boards', body: 'Cut ends and field finish are done as the wall goes up, not months later. Raw cuts in this humidity are how the next peel starts.' },
+        { title: 'Pattern changes the house', body: 'Board-and-batten and row siding are different shadows and different trim. We decide that with the wall, not after the first row is up.' },
+        { title: 'Dry gaps', body: 'Siding that meets the roof, the soil, or the board tying a deck to the house stays wet. We keep the gaps that let the wall dry.' },
+        { title: 'Paint with the boards', body: 'Cut ends and the finish on the main open wall go on as the wall goes up, not months later. Raw cuts in this humidity start the next peel.' },
       ],
     },
     {
       eyebrow: 'Cost',
       heading: 'A section, a wall, or the whole house.',
       paragraphs: [
-        'As a planning range, not a quote, a matched repair of a damaged section often falls around $800 to $3,500 when the profile can be found. A full wall or a typical single-family re-side often plans around $10,000 to $30,000, more for a complex two-story, a lot of windows, or a premium profile. Stories, gables, and how much rotten sheathing is hiding are the usual reasons a number moves. We do not price siding by the square of the roof.',
-        'Paint-only on sound boards is a different project from a re-side. If the boards are sound and the paint has failed, we will say so. If the boards are soft, paint is a waste. Storm documentation, when you are filing, is photos of the damage and of the completed repair. Your insurer decides coverage. We do not.',
+        'As a planning range, not a quote, a matched repair of a damaged section often falls around $800 to $3,500 when the style can be found. A full wall or new siding on a typical house often plans around $10,000 to $30,000, more for a complex two-story, many windows, or a premium pattern. Height, gables, and rotten wood under the siding move the number. The price follows the wall, not the size of the roof.',
+        'Paint on sound boards is a different project from new siding. If the boards are sound and only the paint has failed, we will say so. Soft boards make paint a waste. If you are filing, the record is photos of the damage and of the finished repair. Your insurer decides coverage. We help with the photos and the work.',
       ],
       points: [
-        { title: 'Sheathing', body: 'Soft plywood or a failed barrier behind the siding is extra work. We open enough to know, and we stop to show you before the job grows.' },
+        { title: 'Wood behind it', body: 'Soft plywood or a torn wrap behind the siding is extra work. We open enough to know, and we stop to show you before the job grows.' },
         { title: 'Height', body: 'A one-story ranch and a two-story with a tall gable are different access. The price follows the wall, not the neighborhood name.' },
-        { title: 'Trim and openings', body: 'Every window and door needs flashing. A house with more openings takes longer. That extra time is part of the work.' },
+        { title: 'Trim and openings', body: 'Every window and door needs metal that keeps water out. More openings take longer, and that time is part of the work.' },
       ],
     },
     {
       eyebrow: 'Houston',
       heading: 'Sun, splash, and the permit on the address.',
       paragraphs: [
-        'West and south walls here take the sun and the weather. North walls grow mildew in the shade. A repair plan that treats all four sides as the same age will look wrong in a year. Sprinklers that hit the wall, and soil piled against the bottom course, keep the wall wet no matter how good the siding is. We point that out. Fixing the sprinkler is not something we pretend a new board will solve by itself.',
-        'A full re-side in the City of Houston can require a permit. A small repair often does not. Bellaire, West University Place, Sugar Land, Pearland, and the counties that cover much of Katy and The Woodlands are different counters. We check the address. If the wall was opened by wind or hail, we photograph it before we cover it. Hurricane season is June 1 through November 30. That is when a lot of these calls come, and it is not the only time sun and irrigation rot a bottom course.',
+        'West and south walls here take the sun and the weather. North walls grow mildew in the shade. A plan that treats all four sides as the same age will look wrong in a year. Sprinklers that hit the wall, and soil piled on the lowest row, keep the wall wet no matter how good the siding is. We point that out. A new board will not fix a sprinkler that soaks the wall.',
+        'New siding on a whole house in the City of Houston can require a permit. A small repair often does not. Bellaire, West University Place, Sugar Land, Pearland, and the counties that cover much of Katy and The Woodlands are different counters. We check the address. If wind or hail opened the wall, we photograph it before we cover it. Hurricane season is June 1 through November 30. Many of these calls come then, and sun and irrigation still rot the lowest row the rest of the year.',
       ],
       points: [
-        { title: 'With the roof', body: 'Step flashing where a roof meets a wall has to be right before new siding meets that wall. If both are in the project, we plan them together.' },
-        { title: 'Older walls', body: 'Some older Houston houses have layers. What is under the siding changes the scope. We do not assume one layer of plank on plywood.' },
-        { title: 'Records', body: 'Photos of storm damage and of the repair are yours to share. A planned re-side is not a claim. We do not describe it as one.' },
+        { title: 'With the roof', body: 'Where a roof meets a wall, metal that keeps water out has to be right before new siding goes up. If both are in the project, we plan them together.' },
+        { title: 'Older walls', body: 'Some older Houston houses have extra layers. What is under the siding changes the work. We look, instead of assuming one layer of boards on plywood.' },
+        { title: 'Records', body: 'Photos of the damage and of the repair are yours to share. Siding you planned is a project, and that is how we describe it.' },
       ],
     },
   ],
   faqs: [
     {
       q: 'Can you replace a section instead of the whole wall?',
-      a: 'Often, if the profile exists and the sun fade can be blended. If a patch will always show, we say the wall needs more. We decide that on the house, not from a photo of the sunny side only.',
+      a: 'Often, when the style still exists and the sun fade can be blended. If a patch will always show, we say the wall needs more. We decide on the house, not from a photo of the sunny side only.',
     },
     {
       q: 'What is a planning range for siding?',
-      a: 'A matched section often falls around $800 to $3,500. A full wall or a typical house often plans around $10,000 to $30,000, more when the wall is tall or the sheathing is rotten. Those are planning ranges, not a quote.',
+      a: 'A matched section often falls around $800 to $3,500. A full wall or a typical house often plans around $10,000 to $30,000, more when the wall is tall or the wood behind it is rotten. Those are planning ranges, not a quote.',
     },
     {
       q: 'Fiber cement or engineered wood?',
-      a: 'Both can work. Fiber cement is the usual answer for Houston sun and humidity when the profile fits the house. We talk through ends, clearances, and finish before anything is ordered.',
+      a: 'Both can work. Fiber cement is the usual answer for Houston sun and humidity when the style fits the house. We talk through ends, gaps, and finish before anything is ordered.',
     },
     {
       q: 'Do you document storm damage?',
@@ -89,11 +89,11 @@ export const siding: ServiceGuide = {
 
 export const patiosDecks: ServiceGuide = {
   process: steps([
-    ['See the yard and the door', 'We measure the door, the grade, and what is holding up anything already there. A ground-level patio and an elevated deck are different structures.'],
-    ['Check what is sound', 'Ledger, posts, footings, and joists are inspected before new boards go down. Rotted structure comes out. Sound structure can stay.'],
-    ['Choose the surface', 'Wood, composite, pavers, or concrete, and whether a cover is part of the project. Houston sun and rain are part of that choice, not a footnote.'],
-    ['Permit if it is a structure', 'An attached deck or a patio cover usually needs a permit. A simple at-grade patio often does not. The office is the one that covers the address.'],
-    ['Build and flash', 'Footings, framing, the ledger where it meets the house, decking or paving, rails, and stairs. Water is sent away from the wall, not toward it.'],
+    ['See the yard and the door', 'We measure the door, the ground, and what is holding up anything already there. A ground-level patio and a raised deck are different structures.'],
+    ['Check what is sound', 'The board tying the deck to the house, the posts, the footings, and the supports are checked before new boards go down. Rot comes out. Sound wood can stay.'],
+    ['Choose the surface', 'Wood, composite, pavers, or concrete, and whether a cover is part of the project. Houston sun and rain belong in that choice.'],
+    ['Permit if it is a structure', 'An attached deck or a patio cover usually needs a permit. A simple ground-level patio often does not. The city or county for the address decides.'],
+    ['Build and seal', 'Footings, framing, the board where the deck meets the house, boards or paving, rails, and stairs. Water goes away from the wall, not toward it.'],
     ['Walk it', 'We check rails, stairs, the door threshold, and the way the cover sheds, and we walk it with you before we call it done.'],
   ]),
   sections: [
@@ -101,59 +101,59 @@ export const patiosDecks: ServiceGuide = {
       eyebrow: 'Signs',
       heading: 'Signs the deck or patio is unsafe or used up.',
       paragraphs: [
-        'Soft decking, a rail that moves, a stair that dips, or a ledger pulling away from the house are reasons to rebuild, not to stain. A patio that holds water against the slab, or a cover that dumps rain at the back door, is a drainage problem you feel every storm. Shade structures that were added without a thought for wind are the ones that rack.',
-        'Sometimes the framing is sound and the boards are gone. Sometimes the boards hide rotten joists. We look underneath before we recommend a resurface. A new composite board on a rotten ledger is not a repair.',
+        'Soft boards, a rail that moves, a stair that dips, or the board at the house pulling away are reasons to rebuild, not to stain. A patio that holds water against the slab, or a cover that dumps rain at the back door, is a drainage problem you feel every storm. Shade covers added without a thought for wind are the ones that twist.',
+        'Sometimes the framing is sound and the boards are gone. Sometimes the boards hide rotten supports. We look underneath before we recommend new boards. A new board on a rotten house connection is not a repair.',
       ],
       points: [
-        { title: 'The ledger', body: 'Where the deck meets the house is the detail that keeps water out of the wall and keeps the deck on the house. It is the first thing we inspect.' },
-        { title: 'Rails and stairs', body: 'Loose rails and uneven stairs are the parts people fall on. They are not trim. If they move, they are in the scope.' },
-        { title: 'Water at the door', body: 'Ponding on a patio or a negative slope toward the slab shows up indoors as a wet floor. The outdoor work has to fix the slope.' },
+        { title: 'At the house', body: 'The board where the deck meets the house keeps water out of the wall and keeps the deck on the house. It is the first thing we inspect.' },
+        { title: 'Rails and stairs', body: 'Loose rails and uneven stairs are the parts people fall on. They are not trim. If they move, they are part of the work.' },
+        { title: 'Water at the door', body: 'Water sitting on a patio, or a slope toward the slab, shows up indoors as a wet floor. The outdoor work has to fix that slope.' },
       ],
     },
     {
       eyebrow: 'Materials',
       heading: 'Wood, composite, pavers, and covers.',
       paragraphs: [
-        'Wood looks like wood and it wants maintenance in this sun and rain. Composite and capped boards ask less of you and cost more up front. Both need framing that can carry them and a gap pattern that drains. Pavers and concrete are the ground-level answer when you do not need to stand above the grade. A cover, wood or metal, is posts, beams, and a roof that sheds away from the wall. It is planned with the patio, not bolted on after the fact.',
-        'Rails, stairs, and gates are part of the same design. A pretty deck with a stair that is an afterthought is how people get hurt. Flashing at the house and clearance so the siding is not buried are part of the build. We do not bury siding behind a new ledger.',
+        'Wood looks like wood and it wants care in this sun and rain. Composite boards ask less of you and cost more up front. Both need framing that can carry them and gaps that drain. Pavers and concrete are the ground-level answer when you do not need to stand above the ground. A cover, wood or metal, is posts, beams, and a roof that sheds away from the wall. It is planned with the patio, not bolted on later.',
+        'Rails, stairs, and gates are part of the same design. A pretty deck with a stair that is an afterthought is how people get hurt. Metal that keeps water out at the house, and a gap so the siding stays clear, are part of the build. That siding stays off the board tying the deck to the house.',
       ],
       points: [
         { title: 'Sun and upkeep', body: 'A west-facing deck in Houston cooks. We talk about finish, color, and how often you want to maintain it before the boards are ordered.' },
         { title: 'Footings', body: 'Posts sit on footings sized for the structure and the soil, not on a surface block because it was faster. Clay soil here moves. The footing plan respects that.' },
-        { title: 'The door', body: 'The threshold, the siding, and the first step are one detail. Water and the walk have to work at that line.' },
+        { title: 'The door', body: 'The threshold, the siding, and the first step are one detail. Water and the walk have to work together there.' },
       ],
     },
     {
       eyebrow: 'Cost',
       heading: 'What changes an outdoor project’s price.',
       paragraphs: [
-        'As a planning range, not a quote, a ground-level paver or concrete patio often falls around $4,000 to $15,000 depending on size and how much the grade has to change. Rebuilding a deck on sound footings, with new framing where it is needed and new boards, often plans around $8,000 to $20,000. An elevated deck or a patio cover often plans around $12,000 to $35,000. Height, the cover, rails, and rotten structure are what push a project up. A stain on sound boards is not in these bands. We will say if that is all you need.',
-        'Demolition of an old deck, access through a fenced yard, and electrical for a fan or a light on a cover are extras when they are real. We do not bury them. If a storm damaged the deck, we can photograph it. Coverage is your insurer’s decision.',
+        'As a planning range, not a quote, a ground-level paver or concrete patio often falls around $4,000 to $15,000 depending on size and how much the ground has to change. Rebuilding a deck on sound footings, with new framing where it is needed and new boards, often plans around $8,000 to $20,000. A raised deck or a patio cover often plans around $12,000 to $35,000. Height, the cover, rails, and rotten structure push a project up. A stain on sound boards is outside these ranges. We will say if that is all you need.',
+        'Hauling out an old deck, access through a fenced yard, and wiring for a fan or a light on a cover are extras when they are real. We put them on the list. If a storm damaged the deck, we can photograph it. Your insurer decides coverage.',
       ],
       points: [
-        { title: 'What can stay', body: 'Sound footings and posts save money. Guessing they are sound and finding rot later is how budgets break. We open the framing first.' },
-        { title: 'The cover', body: 'Posts, beams, and roofing are a structure. They are a different price from decking alone, and they usually bring a permit.' },
-        { title: 'Grade', body: 'Moving soil so water leaves the house is part of a patio. Skipping it to save the number keeps the water at the slab.' },
+        { title: 'What can stay', body: 'Sound footings and posts save money. Guessing they are sound, then finding rot, is how budgets break. We open the framing first.' },
+        { title: 'The cover', body: 'Posts, beams, and a roof are a structure. They cost more than boards alone, and they usually bring a permit.' },
+        { title: 'The ground', body: 'Moving soil so water leaves the house is part of a patio. Skipping it to save money keeps the water at the slab.' },
       ],
     },
     {
       eyebrow: 'Houston',
       heading: 'Rain, sun, clay, and permits.',
       paragraphs: [
-        'A deck or patio here has to shed a hard rain and survive a west sun. Boards gap so water does not sit. A patio slopes away from the house. A cover is tied so wind has a harder time racking it, and we still will not call it storm-proof. Expansive clay swells and shrinks. Footings and a patio that was poured tight against a moving slab need room to move without directing water inside.',
-        'In the City of Houston, an attached deck and a patio cover usually need a permit. An at-grade paver patio often does not, if it is not a structure. The Memorial villages, Bellaire, Sugar Land, and the county that covers a Katy or Woodlands address have their own rules. We confirm from the address. Hurricane season, June 1 through November 30, is a bad time to leave a ledger open. We sequence the work so the wall is not left unprotected into a storm.',
+        'A deck or patio here has to shed a hard rain and survive a west sun. Boards gap so water does not sit. A patio slopes away from the house. A cover is tied so wind has a harder time twisting it, and we still will not call it storm-proof. Clay swells and shrinks. Footings and a patio poured tight against a moving slab need room to move without sending water inside.',
+        'In the City of Houston, an attached deck and a patio cover usually need a permit. A ground-level paver patio often does not, if it is not a structure. The Memorial villages, Bellaire, Sugar Land, and the county that covers a Katy or Woodlands address have their own rules. We confirm from the address. Hurricane season, June 1 through November 30, is a bad time to leave the board at the house open. We order the work so the wall is not left open into a storm.',
       ],
       points: [
-        { title: 'Siding and the ledger', body: 'The ledger flashes into the wall. If the siding is in the same project, we detail them together so the outdoor room belongs to the elevation.' },
-        { title: 'Trees', body: 'Shade is pleasant and limbs are a load. We do not build where a limb will land on the cover without saying so.' },
-        { title: 'One outdoor room', body: 'Surface, rails, stairs, and cover are easier to get right as one project. We can phase them. We do not pretend a later cover will magically fit a patio that ignored it.' },
+        { title: 'Siding and the deck', body: 'Metal at the board that ties the deck to the house keeps water out of the wall. If the siding is in the same project, we detail them together so the outdoor room belongs with the house.' },
+        { title: 'Trees', body: 'Shade is pleasant and limbs are a load. If a limb can land on the cover, we say so before we build.' },
+        { title: 'One outdoor room', body: 'Surface, rails, stairs, and cover are easier to get right as one project. We can phase them. A later cover fits a patio that left room for it.' },
       ],
     },
   ],
   faqs: [
     {
-      q: 'When is new decking enough, without new framing?',
-      a: 'When the ledger, posts, and joists are sound. New boards and rails can go on that frame. If the structure is rotten, it comes out. We look underneath before we recommend a resurface.',
+      q: 'When are new boards enough, without new framing?',
+      a: 'When the board at the house, the posts, and the supports are sound. New boards and rails can go on that frame. If the structure is rotten, it comes out. We look underneath before we recommend new boards.',
     },
     {
       q: 'What is a planning range for a patio or deck?',
@@ -161,19 +161,19 @@ export const patiosDecks: ServiceGuide = {
     },
     {
       q: 'Does a patio cover need a permit?',
-      a: 'Usually, yes, when it is a roof structure, and an attached deck usually does too. A simple at-grade patio often does not. The office depends on the address, and we confirm it.',
+      a: 'Usually, yes, when it is a roof structure, and an attached deck usually does too. A simple ground-level patio often does not. Which office decides depends on the address, and we confirm it.',
     },
     {
       q: 'Wood or composite in this sun?',
-      a: 'Wood is the look and the upkeep. Composite asks less maintenance and costs more at the start. We talk through a west-facing yard before you order either one. Neither is maintenance-free in the sense of never being looked at.',
+      a: 'Wood is the look and the upkeep. Composite asks less care and costs more at the start. We talk through a west-facing yard before you order either one. Both still need a look now and then.',
     },
   ],
 };
 
 export const emergencyTarp: ServiceGuide = {
   process: steps([
-    ['Take the call', 'Tell us what happened, where in the Houston area, and whether water is still coming in. If you cannot call (713) 909-0034, the emergency form is a request for a call back, not a guaranteed arrival time.'],
-    ['Make it safe', 'Stay off a wet or damaged roof. We do not send a crew up during lightning or in wind that makes the roof unsafe. If the ceiling is sagging, stay out of that room.'],
+    ['Take the call', 'Tell us what happened, where in the Houston area, and whether water is still coming in. If you cannot call (713) 909-0034, use the emergency form. We\'ll call you back as soon as we can.'],
+    ['Make it safe', 'Stay off a wet or damaged roof. If lightning is close, or the wind makes the roof unsafe, we wait and tell you the next safe step. A sagging ceiling means stay out of that room.'],
     ['Photograph', 'We document the opening, the surrounding roof, and interior wetting we can see before the tarp covers the evidence. Your insurer decides what those photos are worth.'],
     ['Anchor the cover', 'The tarp is sized to the opening and secured so the next wind does not turn it into a sail. A loose cover is the next leak.'],
     ['Divert water', 'Water is directed off the cover and away from the opening. A tarp that holds a pond will find its way inside.'],
@@ -184,8 +184,8 @@ export const emergencyTarp: ServiceGuide = {
       eyebrow: 'Signs',
       heading: 'When the first job is to stop the water.',
       paragraphs: [
-        'Call when a limb is through the roof, when shingles are gone and you can see deck, when wind lifted a valley and the ceiling is dripping, or when a skylight or a flashing pulled loose in a squall. A slow stain that has been there all year is a repair to schedule. An open roof with weather still in the forecast is the emergency. Those are different speeds, and we will tell you which one you are describing.',
-        'If water is already in the insulation and the ceiling, say that on the call. The tarp stops more water. The wet rooms are a drying job. Both can be this company. They are not the same hour of work, and we do not treat a soaked ceiling as solved because the roof is blue.',
+        'Call when a limb is through the roof, when shingles are gone and you can see the wood under them, when wind lifted a valley and the ceiling is dripping, or when a skylight or the metal at a joint pulled loose in a squall. A slow stain that has been there all year is a repair to schedule. An open roof with weather still coming is the emergency. We will tell you which speed you are on.',
+        'If water is already in the insulation and the ceiling, say that on the call. The tarp stops more water. The wet rooms are a drying job. Both can be this company. They are not the same hour of work, and a blue cover on the roof does not mean the soaked ceiling is finished.',
       ],
       points: [
         { title: 'Do not climb it', body: 'A wet roof, a dark roof, and a roof in the storm are how people get hurt. Stay off it. Interior leaks can be caught with a bucket if the ceiling is sound and the power is safe.' },
@@ -197,8 +197,8 @@ export const emergencyTarp: ServiceGuide = {
       eyebrow: 'The cover',
       heading: 'What a tarp does, and what it does not.',
       paragraphs: [
-        'A tarp is a temporary weather cover. It buys time to dry the house and to plan a repair or a replacement. It is not a roof, it is not a warranty, and it does not make the deck sound. We photograph first when we can do that safely, then cover the opening, anchor the tarp against wind, and send water off it. We say when the cover should be checked, because sun and wind age a tarp faster than people expect.',
-        'We will not install one if being on the roof is unsafe. Waiting for daylight or for a wind shift is the right call even when the ceiling is dripping. A crew injured on a roof does not dry your house. If only a small flashing leak is involved and the roof can wait for a proper repair, we will say the tarp is unnecessary. Covering a roof that does not need it is not a service.',
+        'A tarp is a temporary weather cover. It buys time to dry the house and to plan a repair or a replacement. It is not a finished roof, and the wood under the shingles can still be soft. We photograph first when we can do that safely, then cover the opening, anchor the tarp against wind, and send water off it. We say when the cover should be checked, because sun and wind age a tarp faster than people expect.',
+        'If lightning is close, or the wind makes the roof unsafe, we wait to go up. Daylight or a calmer wind is the right call even when the ceiling is dripping. An injured crew does not dry your house. If the leak is only at a small metal joint and the roof can wait for a proper repair, we will say the tarp can wait too. Covering a sound roof does not help you, and we will say so.',
       ],
       points: [
         { title: 'Anchored, not draped', body: 'A tarp that is laid on and weighted with a few boards becomes the next opening. We fasten it for the wind that is still in the forecast.' },
@@ -210,25 +210,25 @@ export const emergencyTarp: ServiceGuide = {
       eyebrow: 'Cost',
       heading: 'What a temporary cover costs to plan.',
       paragraphs: [
-        'There is no flat tarp price, because height, pitch, how much roof is open, and whether it can be walked safely all change the work. As a planning range, not a quote, many single openings on a house that can be walked safely fall around a few hundred dollars to about $2,000. A steep, multi-story, or widespread opening is more, and it may not be safe to cover until the weather breaks. The permanent roof, if you need one, is a different number. Architectural asphalt replacement on many Houston houses plans around $12,000 to $24,000. That is not the tarp.',
-        'Interior drying is also separate. A ceiling that is already wet does not get “included” in a tarp price by magic. We will tell you on the call what we need to see, and we will price what we find. We do not take a tarp job as a way to lock you into a replacement you have not agreed to.',
+        'There is no flat tarp price, because height, slope, how much roof is open, and whether it can be walked safely all change the work. As a planning range, not a quote, many single openings on a house that can be walked safely fall around a few hundred dollars to about $2,000. A steep, multi-story, or widespread opening is more, and it may not be safe to cover until the weather breaks. The permanent roof, if you need one, is a different number. Architectural asphalt replacement on many Houston houses plans around $12,000 to $24,000. That is not the tarp.',
+        'Interior drying is also separate. A ceiling that is already wet is its own price, not a free extra tucked into the tarp. We will tell you on the call what we need to see, and we will price what we find. The tarp covers the opening you called about. A replacement waits until you agree to it.',
       ],
       points: [
         { title: 'Access', body: 'Two stories, a steep front, and trees against the eave change the day. A one-story ranch with a clear yard does not.' },
         { title: 'How open it is', body: 'A cracked skylight and a limb through a wide section of roof are not the same cover. We size the tarp to the damage, not to a package.' },
-        { title: 'The claim is not the price', body: 'Some policies pay for temporary covering that limits further damage. Some do not pay what you hoped. We do not set that. We also do not wait to cover a house that is taking on water if it is safe to be up there.' },
+        { title: 'The claim is not the price', body: 'Some policies pay for a temporary cover that limits further damage. Some pay less than you hoped. Your insurer decides that part. When the roof is safe to be on, we still cover a house that is taking on water.' },
       ],
     },
     {
       eyebrow: 'Houston',
       heading: 'Storms, photos, and the interior underneath.',
       paragraphs: [
-        'The calls come from Clear Lake and Galveston after coastal wind, and from Katy, Cypress, and The Woodlands after hail and straight-line wind. The work is the same sequence: safe access, photos, a cover that stays on, then a plan. Live oaks throw limbs. Older roofs open at valleys and at wall flashing. Newer roofs open when a ridge vent or a pipe boot gives up. We document the one you have.',
-        'Many Texas policies use a separate wind or hail deductible that is a percentage of the dwelling limit. That deductible is not the one on a plumbing leak, and it can be a large number. Whether this storm clears it is a question for your insurer. Our part is the photos and the protection. Call (713) 909-0034. The office is at 511 Crestwater Ct, Houston, TX 77082, and the form on this site reaches the same team. Neither is a promise that someone is already on the way.',
+        'The calls come from Clear Lake and Galveston after coastal wind, and from Katy, Cypress, and The Woodlands after hail and straight-line wind. The work is the same order: safe access, photos, a cover that stays on, then a plan. Live oaks throw limbs. Older roofs open at valleys and where metal meets a wall. Newer roofs open when a ridge vent or the rubber collar around a vent pipe gives up. We document the one you have.',
+        'Many Texas policies use a separate wind or hail deductible that is a percentage of the insured value of the house. That deductible is not the one on a plumbing leak, and it can be a large number. Whether this storm clears it is a question for your insurer. Our part is the photos and the protection. Call (713) 909-0034. The office is at 511 Crestwater Ct, Houston, TX 77082, and the form on this site reaches the same team. We\'ll call you back as soon as we can.',
       ],
       points: [
         { title: 'Photograph before cleanup', body: 'Wide shots and close shots, before belongings are thrown away and before the tarp hides the opening. We take our own set too.' },
-        { title: 'Start drying', body: 'Wet insulation will not pause because an adjuster has not visited. If the interior is wet, say so. Drying is the water-damage scope, and it can start while the roof decision is still open.' },
+        { title: 'Start drying', body: 'Wet insulation will not pause because an adjuster has not visited. If the interior is wet, say so. Drying is its own work, and it can start while the roof decision is still open.' },
         { title: 'Check the cover', body: 'After the next wind, a tarp can loosen. We tell you what to look for and when it needs another visit. It is still temporary.' },
       ],
     },
@@ -249,7 +249,7 @@ export const emergencyTarp: ServiceGuide = {
   faqs: [
     {
       q: 'Is a tarp a finished repair?',
-      a: 'No. It is temporary protection so the next rain stays out. The repair or the replacement is planned after the house is covered and we can see the deck.',
+      a: 'No. It is temporary protection so the next rain stays out. The repair or the replacement is planned after the house is covered and we can see the wood under the shingles.',
     },
     {
       q: 'What does emergency tarping usually cost?',
@@ -261,7 +261,7 @@ export const emergencyTarp: ServiceGuide = {
     },
     {
       q: 'Will you come during the storm?',
-      a: 'We do not send anyone onto a roof during lightning or in wind that makes it unsafe. Call (713) 909-0034 and we will tell you the next safe step. The online form asks us to call you back. It does not mean a crew is already on the way.',
+      a: 'If lightning is close, or the wind makes the roof unsafe, we wait and tell you the next safe step. Call (713) 909-0034 and we will talk through that step with you. If you use the online form instead, we\'ll call you back as soon as we can.',
     },
     {
       q: 'Do you tarp apartment and commercial roofs?',
@@ -282,23 +282,23 @@ export const insuranceClaims: ServiceGuide = {
   process: steps([
     ['Make the scene safe', 'Stop more water if you can do that safely. Stay out of wet rooms with damaged ceilings or live power. Call (713) 909-0034 if water is still coming in.'],
     ['Photograph before you toss', 'Wide shots, close shots, the source, and the belongings, before they are bagged. The photo log on this site is a room-by-room way to do that yourself.'],
-    ['Notice the insurer', 'Call the company on the policy or the agent who can open a claim. Ask how they want notice. Write down the claim number. We do not quote you a deadline. The policy does.'],
+    ['Notice the insurer', 'Call the company on the policy or the agent who can open a claim. Ask how they want notice. Write down the claim number. The deadline is in your policy, and that is the one we follow.'],
     ['We document the building', 'Our photos and notes cover what was wet, what was dried, and what was repaired. You can share them. They are not a coverage opinion.'],
-    ['Dry and protect', 'Tarping a safe roof and drying wet structure do not wait on a meeting. Many policies expect you to limit further damage. That work is still not a promise of reimbursement.'],
-    ['Rebuild as construction', 'The repair is a scope and a price. The claim payment is whatever the insurer allows. We keep those labeled separately, and we do not negotiate the claim.'],
+    ['Dry and protect', 'Tarping a safe roof and drying wet structure do not wait on a meeting. Many policies expect you to limit further damage. That work is separate from what the policy pays back.'],
+    ['Rebuild as construction', 'The repair is the work and a price. The claim payment is whatever the insurer allows. We keep those labeled separately. You and your insurer handle the claim.'],
   ]),
   sections: [
     {
       eyebrow: 'What this is',
       heading: 'Photos and a clear record. Not a coverage decision.',
       paragraphs: [
-        'Insurance claims help, here, means inspection photos and notes on water or storm damage, tied to the work if you hire us to dry or rebuild. It does not mean we file the claim for you, interpret the policy, or argue with the adjuster. Your insurer decides what is covered. We are not a public adjuster. The free insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
-        'The losses we document most often start with a roof opening, a supply line, an appliance, or water that came in at grade. Those are different facts. A homeowners policy often treats them differently, and flood from rising water is often a different policy entirely. We describe what we can see. We do not rename a flood as a sudden plumbing break because the second phrase sounds more payable.',
+        'When we help with a claim, we mean photos and notes of the water or storm damage, tied to the work if you hire us to dry or rebuild. Filing the claim, reading the policy, and the numbers with the adjuster stay with you and your insurer. Your insurer decides what is covered. We are not a public adjuster. The free insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
+        'The losses we document most often start with a roof opening, a supply line, an appliance, or water that came in at ground level. Those are different facts. A homeowners policy often treats them differently, and flood from rising water is often a different policy entirely. We describe what we can see. If the water rose into the house, we write it that way. Check your policy before calling it a burst pipe.',
       ],
       points: [
         { title: 'Your photos first', body: 'If it is safe, shoot the rooms before you clean. Thrown-away belongings and a mopped floor are hard to explain later. Do not wait on us to take the only pictures.' },
         { title: 'Our photos second', body: 'We add the conditions we find, the moisture, the tear-out, and the repair. They are specific. They are not a narrative written to chase a number.' },
-        { title: 'Two different jobs', body: 'The paper and the construction stay separate. Drying a house is not “handling the claim.” Building it back is not a settlement.' },
+        { title: 'Two different jobs', body: 'The paperwork and the construction stay separate. Drying a house is the drying. Building it back is the repair. Neither one is the claim settlement.' },
       ],
     },
     {
@@ -306,25 +306,25 @@ export const insuranceClaims: ServiceGuide = {
       heading: 'What to write down, and what we will write down.',
       paragraphs: [
         'Write the date you noticed the damage, who you called, and the claim number. Keep the failed hose or the fitting if you can do it safely. Note whether water came from a pipe, from the roof, or from the street. Ask the insurer what they want saved and whether they want to see anything before it is removed. Notice language is in the policy. It is not the same on every Texas policy, so we will not invent “you have 48 hours” or any other deadline.',
-        'When we are on the loss, the notes say where the water went, what was dried, what was removed, and what was rebuilt. Photos are taken before a tarp covers an opening when that is safe, and before new drywall closes a wall. You may give that set to the adjuster. We can walk an adjuster through what we saw of the building. We do not negotiate the dollar figure and we do not sign your claim over to ourselves.',
+        'When we are there, the notes say where the water went, what was dried, what was removed, and what was rebuilt. Photos are taken before a tarp covers an opening when that is safe, and before new drywall closes a wall. You may give that set to the adjuster. We can walk an adjuster through what we saw of the building. The dollar figure stays between you and your insurer, and the claim stays in your name.',
       ],
       points: [
         { title: 'The photo log', body: 'The log on this site is room by room. Use it the day of the loss if you want a structure. It is free. It does not create coverage.' },
-        { title: 'Cause in plain words', body: '“The supply line under the sink failed” is a fact if that is what happened. “The policy should pay” is not a fact we will write.' },
-        { title: 'Depreciation', body: 'Some policies pay actual cash value first and hold recoverable depreciation until the work is done. Some do not. The wording is yours. We do not calculate it for you.' },
+        { title: 'Cause in plain words', body: '“The supply line under the sink failed” is a fact if that is what happened. Whether the policy should pay is for your insurer to decide.' },
+        { title: 'Depreciation', body: 'Some policies pay a lower amount first and hold the rest until the work is done. Some do not. That wording is in your policy. Your insurer does the math.' },
       ],
     },
     {
       eyebrow: 'Cost',
       heading: 'The construction price and the claim are different.',
       paragraphs: [
-        'We do not publish a separate price list for documentation. Photos and notes ride with the inspection, the drying, or the repair you hire. The construction price is the scope of that work. For scale, a contained one-room water loss often plans around $1,500 to $5,000, a room that needs drywall and flooring often around $5,000 to $15,000, and a larger loss often around $15,000 to $50,000 or more. An asphalt roof replacement on many Houston houses plans around $12,000 to $24,000. Those are planning ranges for the building, not a prediction of the check.',
-        'The insurer’s figure and our estimate measure different things, and they can differ. A percentage wind or hail deductible, often one, two, or five percent of the dwelling limit on Texas policies near the coast, can be larger than a plumbing deductible on the same policy. If the check is short of the scope, the conversation is about the scope. The estimate stays the work required to repair the house.',
+        'Photos and notes come with the inspection, the drying, or the repair you hire, not as a separate price list. The construction price is the price of that work. For scale, a contained one-room water loss often plans around $1,500 to $5,000, a room that needs drywall and flooring often around $5,000 to $15,000, and a larger loss often around $15,000 to $50,000 or more. An asphalt roof replacement on many Houston houses plans around $12,000 to $24,000. Those are planning ranges for the building, not a prediction of the check.',
+        'The insurer’s figure and our estimate measure different things, and they can differ. A wind or hail deductible of one, two, or five percent of the home\'s insured value, common on Texas policies near the coast, can be larger than a plumbing deductible on the same policy. If the check is short of the work, the conversation is about the work. The estimate stays the work required to repair the house.',
       ],
       points: [
         { title: 'The claim stays yours', body: 'Hiring the drying or the repair does not assign the claim to us. You remain the person on the policy. We document the building.' },
-        { title: 'Mitigation is still work', body: 'A tarp and a dry-out have a cost even when you hope the policy reimburses them. We price that work as work. Starting it is not an approval from the carrier.' },
-        { title: 'Get the number from the visit', body: 'Call (713) 909-0034 or request an estimate. The address is 511 Crestwater Ct, Houston, TX 77082. The visit is how the scope, and then the price, gets decided.' },
+        { title: 'Limiting more damage', body: 'A tarp and a dry-out have a cost even when you hope the policy pays them back. We price that work as work. Starting it is not a yes from the insurer.' },
+        { title: 'Get the number from the visit', body: 'Call (713) 909-0034 or request an estimate. The address is 511 Crestwater Ct, Houston, TX 77082. The visit is how the work, and then the price, gets decided.' },
       ],
     },
     {
@@ -332,11 +332,11 @@ export const insuranceClaims: ServiceGuide = {
       heading: 'Wind, plumbing, and flood are not the same story.',
       paragraphs: [
         'A spring hail storm, a hurricane-season opening in the roof, a burst hose in August, and water that came in from a bayou or a flooded street produce different documentation because they are different events. Hurricane season is June 1 through November 30. Hail is often earlier. Plumbing failures do not read the calendar. Rising water is the one people most often confuse with a homeowners claim. If the water came from outside and rose into the house, say that. Do not let anyone, including us, soften it into a phrase that sounds easier to cover.',
-        'Houses on slabs hide water under floors. Pier-and-beam houses drop it into the crawl space. The photos should show the path, not only the room that looks the worst. Older Heights and West University houses may have plaster. Newer Katy houses may have wet insulation in a big open ceiling. We document the assembly that is there. The permit for the rebuild, if plumbing, electrical, structure, or a full roof is involved, follows the address: City of Houston, an independent city, or the county. The claim does not replace the permit.',
+        'Houses on slabs hide water under floors. Pier-and-beam houses drop it into the crawl space. The photos should show the path, not only the room that looks the worst. Older Heights and West University houses may have plaster. Newer Katy houses may have wet insulation in a big open ceiling. We document the materials that are there. The permit for the rebuild, if plumbing, electrical, structure, or a full roof is involved, follows the address: City of Houston, an independent city, or the county. The claim does not replace the permit.',
       ],
       points: [
-        { title: 'Limit further damage', body: 'Many policies expect you to protect the property. Cover an open roof when it is safe. Start drying. Keep the receipts and the photos. That is mitigation, not an admission you know the coverage.' },
-        { title: 'Do not discard the source', body: 'The failed part helps the story. Bag it if you can. A repaired pipe with no photo of the break is a thinner record.' },
+        { title: 'Limit further damage', body: 'Many policies expect you to protect the property. Cover an open roof when it is safe. Start drying. Keep the receipts and the photos. Those are steps that limit more damage, not a guess about what is covered.' },
+        { title: 'Keep the failed part', body: 'The broken piece helps the story. Bag it if you can. A repaired pipe with no photo of the break is a thinner record.' },
         { title: 'One company, labeled work', body: 'Tarping, drying, and the rebuild can stay with Elite Restorations, family-owned in Houston since 1993. The claim file and the construction file are still two files.' },
       ],
     },
@@ -344,11 +344,11 @@ export const insuranceClaims: ServiceGuide = {
   faqs: [
     {
       q: 'Do you file claims or negotiate with the insurer?',
-      a: 'No. We photograph and note the damage and the work. Coverage, payment, and depreciation belong to your insurer. We are not a public adjuster.',
+      a: 'We photograph and note the damage and the work. Coverage, payment, and any holdback belong to your insurer. We are not a public adjuster, and the claim stays yours.',
     },
     {
       q: 'Is there a fee for the documentation?',
-      a: 'We do not publish a standalone price for documentation. Photos and notes are part of the inspection, drying, or repair you hire. The photo log on the site is free to use on your own.',
+      a: 'Photos and notes are part of the inspection, drying, or repair you hire. There is no separate bill just for the paperwork. The photo log on the site is free to use on your own.',
     },
     {
       q: 'What should I do before anyone arrives?',
@@ -356,7 +356,7 @@ export const insuranceClaims: ServiceGuide = {
     },
     {
       q: 'Why might the insurance check and your estimate differ?',
-      a: 'They measure different things. The check is what the policy pays. The estimate is the cost of the scope. Wind and hail deductibles on many Texas policies are a percentage of the dwelling limit and are not the plumbing deductible. We do not rewrite the work to force those numbers to match.',
+      a: 'They measure different things. The check is what the policy pays. The estimate is the cost of the work. Wind and hail deductibles on many Texas policies are a percentage of the home\'s insured value, and they are not the plumbing deductible. The work stays the work, even when those numbers differ.',
     },
   ],
 };
@@ -364,11 +364,11 @@ export const insuranceClaims: ServiceGuide = {
 export const paintingDrywall: ServiceGuide = {
   process: steps([
     ['See the wall', 'We look at the damage, the texture, and whether the wall is dry. A leak stain and a scuffed corner are different repairs. Older plaster is different from modern drywall.'],
-    ['Confirm it is dry', 'If the wall was opened by water, moisture readings come before close-up. Paint over a damp stain seals the problem in. We will not do that to hold a schedule.'],
+    ['Confirm it is dry', 'If water opened the wall, we check the moisture before we close it. Paint over a damp stain seals the problem in. The wall dries first, even when the calendar is tight.'],
     ['Patch or hang', 'Small damage is patched and feathered. A large area, or drywall that came out in a dry-out, is hung, taped, and finished to the level the room needs.'],
-    ['Texture', 'Houston walls are often textured. The patch is blended into that texture so the paint has one plane. A smooth patch on an orange-peel wall will show forever.'],
+    ['Texture', 'Houston walls are often textured. The patch is blended into that texture so the paint has one surface. A smooth patch on a bumpy orange-peel wall will show.'],
     ['Prime and paint', 'Primer, then paint, in the sheen the room needs. A spot repair is carried far enough to blend. A whole room is painted when a spot would flash.'],
-    ['Clean and walk', 'We pick up the work and look at the wall in the light you live with, including the raking light from a window that shows every ridge.'],
+    ['Clean and walk', 'We pick up the work and look at the wall in the light you live with, including the low light from a window that shows every ridge.'],
   ]),
   sections: [
     {
@@ -376,25 +376,25 @@ export const paintingDrywall: ServiceGuide = {
       heading: 'Signs the wall needs more than a gallon of paint.',
       paragraphs: [
         'Paint is the last step when the surface is sound. It is the wrong first step when the drywall is soft, the tape is bubbling, the texture is missing in a patch, or a stain keeps bleeding through. After a kitchen or a bath remodel, the new drywall is unfinished until it is taped, textured, primed, and painted with the room. After a water loss, the same steps wait until the cavity is dry.',
-        'Hairline cracks that come back in the same place on a slab house are often the soil moving, not a painter who missed a coat. We can make the wall look right. We will not tell you paint stops foundation movement. A door that suddenly will not close is a clue to mention, not a punch item to sand away.',
+        'Hairline cracks that come back in the same place on a slab house are often the soil moving, not a painter who missed a coat. We can make the wall look right. Paint will not stop the foundation from moving. A door that suddenly will not close is a clue to mention, not a little sanding job.',
       ],
       points: [
-        { title: 'The stain returns', body: 'A water stain that telegraphs through new paint was not dry, or it was not primed for the stain. We find out which before a third coat.' },
+        { title: 'The stain returns', body: 'A water stain that comes through new paint was not dry, or it was not primed for the stain. We find out which before a third coat.' },
         { title: 'Texture that does not match', body: 'A smooth float on a textured wall reads as a patch in daylight. Blending is the repair. Painting alone is not.' },
-        { title: 'After the remodel', body: 'New lid, new returns, and patched outlets are what make a finished kitchen look unfinished. They are part of closing the project.' },
+        { title: 'After the remodel', body: 'A new ceiling, the drywall around the windows, and patched outlets are what make a finished kitchen look unfinished. They are part of closing the project.' },
       ],
     },
     {
       eyebrow: 'Materials',
-      heading: 'Board, texture, primer, and sheen.',
+      heading: 'Board, texture, primer, and shine.',
       paragraphs: [
-        'Drywall, tape, and joint compound are the body of the repair. The texture is what makes it disappear: orange peel, knock-down, or a smooth wall where the house is actually smooth. A lot of Heights, Bellaire, and West University interiors are textured, and some are plaster. Plaster is patched as plaster, not buried under a thick skim that cracks off. Primer is chosen for the stain and for new compound, which flashes if you paint it raw.',
-        'Sheen is a Houston practical choice. Flat hides more and marks more. A higher sheen in a bath or a kitchen cleans and shows every ridge. Color is matched to the wall you have when the job is a blend, and carried to a corner or a whole room when a spot would flash. We do not promise a one-pint touch-up will vanish on a wall that has faded for a decade in a south window.',
+        'Drywall, tape, and joint compound are the body of the repair. The texture is what makes it disappear: orange peel, knock-down, or a smooth wall where the house is actually smooth. A lot of Heights, Bellaire, and West University interiors are textured, and some are plaster. Plaster is patched as plaster, not buried under a thick coat that cracks off. Primer is chosen for the stain and for new compound, which shows through if you paint it raw.',
+        'Shine is a practical Houston choice. Flat hides more and marks more. A shinier paint in a bath or a kitchen cleans and shows every ridge. Color is matched to the wall you have when the job is a blend, and carried to a corner or a whole room when a spot would show. A one-pint touch-up rarely disappears on a wall that has faded for a decade in a south window.',
       ],
       points: [
-        { title: 'Feather past the damage', body: 'A hard edge of compound shows through paint. The repair is feathered wide enough that the eye cannot find the border.' },
+        { title: 'Blend past the damage', body: 'A hard edge of compound shows through paint. The repair is blended wide enough that the eye cannot find the border.' },
         { title: 'Bath and kitchen paint', body: 'Wet rooms want a paint that can be wiped. A flat ceiling paint on a bath wall is the wrong product. We match the paint to the room.' },
-        { title: 'Ceilings', body: 'A ceiling stain from a roof or a bath above is primed for the stain and often painted past the spot, because ceiling paint flashes under window light.' },
+        { title: 'Ceilings', body: 'A ceiling stain from a roof or a bath above is primed for the stain and often painted past the spot, because ceiling paint shows a patch under window light.' },
       ],
     },
     {
@@ -418,7 +418,7 @@ export const paintingDrywall: ServiceGuide = {
         'West light in a Houston afternoon shows every ridge in a ceiling. We look at the repair in that light, not only under a work lamp. Seasonal cracks on slab houses in Katy and newer subdivisions, and racked trim in pier-and-beam bungalows, are the structure moving on clay. We can retape and repaint. We will tell you if the crack is a pattern that has come back because the soil moved, so you are not surprised when a hairline returns in the next dry summer.',
       ],
       points: [
-        { title: 'Do not paint a wet stain', body: 'If the ceiling is from a roof leak or a bath above, the source and the dryness come first. Paint is the last coat, not the mop.' },
+        { title: 'Dry the stain first', body: 'If the ceiling stain is from a roof leak or a bath above, the source and the dryness come first. Paint is the last coat.' },
         { title: 'Color that has faded', body: 'South rooms fade. A careful match to a chip from the can may still flash. Painting to a break in the wall is the usual fix.' },
         { title: 'With the other trades', body: 'After cabinets, tile, and floors, paint is what makes the remodel look finished. We schedule it when the dust of those trades is actually done.' },
       ],
@@ -427,7 +427,7 @@ export const paintingDrywall: ServiceGuide = {
   faqs: [
     {
       q: 'Will I see the patch after it is painted?',
-      a: 'A good repair is feathered, textured to the wall, primed, and painted far enough to blend. A hard-edged patch on a textured Houston wall will show. That is the job we are not doing.',
+      a: 'A good repair is blended wide, textured to the wall, primed, and painted far enough to blend. A hard-edged patch on a textured Houston wall will show. We blend until the edge disappears.',
     },
     {
       q: 'What is a planning range for paint and drywall?',
@@ -435,11 +435,11 @@ export const paintingDrywall: ServiceGuide = {
     },
     {
       q: 'Can you match texture in an older house?',
-      a: 'Yes. Many Heights, Bellaire, and West University walls are textured or plaster. We blend the patch into that surface. We do not skim a textured wall smooth in one spot and call it matched.',
+      a: 'Yes. Many Heights, Bellaire, and West University walls are textured or plaster. We blend the patch into that surface. One smooth spot on a bumpy wall is not a match.',
     },
     {
       q: 'Can you paint right after a water-damage repair?',
-      a: 'After the readings say the wall is dry, and after the source is handled. Paint on a damp cavity traps moisture. We wait on the meters, not on the calendar.',
+      a: 'After the readings say the wall is dry, and after the source is handled. Paint on a damp wall traps moisture. We wait until the meter says dry, not until the calendar does.',
     },
   ],
 };

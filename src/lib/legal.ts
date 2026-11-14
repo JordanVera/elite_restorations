@@ -34,7 +34,7 @@ export const privacySections: LegalSection[] = [
       'A description of the job, the damage, or the referral',
       'Photographs of the property or the work',
       'A company or brokerage name, on the realtor form',
-      'The page address you submitted from, including campaign tags if the link had them',
+      'The page address you submitted from, including any tracking labels on that link',
     ],
   },
   {
@@ -96,8 +96,8 @@ export const termsSections: LegalSection[] = [
   {
     heading: 'Requests and estimates',
     paragraphs: [
-      'The contact form, the emergency form, and the realtor form send a request. Submitting one does not reserve a crew and does not create a construction contract. We confirm scope, schedule, and price with you separately, usually after we have seen the property or the photos you sent.',
-      'An estimate describes the scope it was written for. If we open a wall or a roof and find something the first look could not show, such as wet framing or a damaged deck, we will tell you before the work grows past that scope.',
+      'The contact form, the emergency form, and the realtor form send a request. Submitting one does not reserve a crew and does not create a construction contract. We confirm the work, the schedule, and the price with you separately, usually after we have seen the property or the photos you sent.',
+      'An estimate describes the work it was written for. If we open a wall or a roof and find something the first look could not show, such as wet wood in the wall or damaged wood under the shingles, we will tell you before the work grows past what that estimate described.',
     ],
   },
   {

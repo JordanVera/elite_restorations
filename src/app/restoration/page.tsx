@@ -29,37 +29,37 @@ const services = [
   {
     href: '/water-damage-restoration',
     label: 'Water damage restoration',
-    body: 'Leaks, appliance failures, and water that came in at grade. Mapped, extracted, dried, then rebuilt.',
+    body: 'Leaks, a failed appliance, and water that came in at ground level. We find it, get it out, dry the house, and then rebuild.',
   },
   {
     href: '/roofing-emergency-tarp-repair',
     label: 'Emergency roof tarping',
-    body: 'When a storm opens the roof, the first job is to stop more water and photograph what happened.',
+    body: 'When a storm opens the roof, the first job is to keep the next rain out and to photograph what happened.',
   },
   {
     href: '/roofing',
     label: 'Roofing',
-    body: 'Wind and hail repairs, or a replacement when the roof will not hold. Underlayment, flashing, and vents go with the roof you see.',
+    body: 'Repairs after wind and hail, or a new roof when the old one will not hold. The layer under the shingles, the metal that keeps water out, and the vents go with the roof you see.',
   },
   {
     href: '/roof-replacement',
     label: 'Roof replacement',
-    body: 'Tear-off and a new roof when repair is no longer the honest answer.',
+    body: 'The old roof comes off and a new one goes on, when a patch is no longer the honest answer.',
   },
   {
     href: '/siding',
     label: 'Siding',
-    body: 'Sections the wind took, and elevations that need to match what is still on the house.',
+    body: 'The pieces the wind took, matched to the sides of the house that are still there.',
   },
   {
     href: '/painting-drywall-repair',
     label: 'Painting and drywall repair',
-    body: 'The walls that come out after a dry-out, patched and painted once the structure is actually dry.',
+    body: 'Walls that come out after the drying, patched and painted once the structure is actually dry.',
   },
   {
     href: '/insurance-claims',
     label: 'Insurance claims help',
-    body: 'Photos and a written record of the damage, the drying, and the repairs. Your insurer decides coverage.',
+    body: 'Photos and a written record of the damage, the drying, and the repairs. Your insurer decides what the policy covers.',
   },
 ] as const;
 
@@ -85,27 +85,27 @@ const reads = [
 const faqs = [
   {
     q: 'What does a Houston restoration company handle?',
-    a: 'Water damage, storm and wind and hail damage, fire and smoke cleanup, and the repairs that follow. A remodel is a separate decision, made after the house is dry and safe.',
+    a: 'Water damage, damage from storms, wind, and hail, fire and smoke cleanup, and the repairs that follow. A remodel is a separate decision, after the house is dry and safe.',
   },
   {
     q: 'How quickly should water damage drying start?',
-    a: 'The same day if you can. Houston humidity does not give wet drywall and insulation much time. If water is still coming in, call (713) 909-0034.',
+    a: 'The same day, if you can. Houston humidity does not give wet drywall and insulation much time. If water is still coming in, call (713) 909-0034.',
   },
   {
     q: 'Do you repair storm, wind, and hail damage?',
-    a: 'Yes. We photograph the roof and the wet rooms, tarp an open roof when it is safe to be up there, and then repair or replace the roof, siding, and interior finishes.',
+    a: 'Yes. We photograph the roof and the wet rooms, cover an open roof with a tarp when it is safe to be up there, and then repair or replace the roof, the siding, and the inside finishes.',
   },
   {
     q: 'Can you help after a house fire?',
-    a: 'After the fire department releases the property, we can board up openings, deal with soot, and dry the water used to put the fire out. Cleanup should not wait on soot. The rebuild can.',
+    a: 'After the fire department says the house is safe to enter, we can board up openings, clean soot, and dry the water used to put the fire out. Soot should not sit while you wait. The rebuild can wait until the house is secure.',
   },
   {
     q: 'Will you decide what my insurance covers?',
-    a: 'No. We provide inspection photos and a record of what was dried and repaired. Coverage is your insurer’s decision. The insurance photo log on this site is free if you want to start that record yourself.',
+    a: 'Your insurer decides what the policy covers. We give you inspection photos and a record of what was dried and repaired. The photo log on this site is free if you want to start that record yourself.',
   },
   {
     q: 'Which parts of Houston do you restore?',
-    a: 'Greater Houston, scheduled from 511 Crestwater Ct, Houston, TX 77082. City pages for water damage, and the neighborhoods beside the office, are linked on this page.',
+    a: 'Greater Houston, with visits scheduled from 511 Crestwater Ct, Houston, TX 77082. The neighborhoods beside the office, and the city pages for water damage, are linked below.',
   },
 ];
 
@@ -138,7 +138,7 @@ export default function RestorationPage() {
       <PageHero
         eyebrow="Restoration"
         title={['Restoration Company in Houston, TX']}
-        lede="Water, storm, wind, hail, and fire damage, then the repairs. Family-owned in Houston since 1993. One team from the dry-out through the rebuild."
+        lede="Water, storm, wind, hail, and fire damage, and then the repairs. Family-owned in Houston since 1993. The same team stays with you from the drying through the rebuild."
         crumbs={[{ name: 'Restoration', path: '/restoration' }]}
       >
         <Reveal delay={0.2} className="mt-8">
@@ -151,7 +151,7 @@ export default function RestorationPage() {
               aria-hidden
             />
             <span className="text-[0.72rem] font-medium uppercase tracking-[0.2em]">
-              Active leak or storm damage? Call {site.phone.display}
+              Water still coming in, or storm damage? Call {site.phone.display}
             </span>
           </a>
         </Reveal>
@@ -182,22 +182,23 @@ export default function RestorationPage() {
           </Reveal>
           <div className="space-y-6 text-lg leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
             <p>
-              Restoration puts a damaged house back. A supply line, a roof
+              Restoration puts a damaged house back. A water line, a roof
               that let a storm in, hail, smoke, or the water the fire
-              department left behind. The aim is a dry, safe, usable space,
-              as close to the condition before the loss as the materials
+              department left behind. The aim is a dry, safe space you can
+              use, as close to how it was before the damage as the materials
               allow.
             </p>
             <p>
               A remodel is a different decision: a new layout, new cabinets, a
               bath that works better. Nothing has to be broken for that to
-              make sense. When damage and a wish list arrive together, we dry
-              and document first, then talk about what is worth changing.
+              make sense. When the damage and a wish list show up together, we
+              dry the house and write down what we see first. Then we talk
+              about what is worth changing.
             </p>
             <p>
               The office is at {site.address.streetAddress},{' '}
               {site.address.addressLocality}, {site.address.addressRegion}{' '}
-              {site.address.postalCode}. The visit is at the house.
+              {site.address.postalCode}. We come to the house for the visit.
             </p>
           </div>
         </div>
@@ -216,13 +217,14 @@ export default function RestorationPage() {
           </Reveal>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Houston water damage is usually a supply line, an appliance, a
-              roof opening, or water that came in at grade. Humidity keeps a
-              room wet after the puddle is gone. Moisture in a slab, in
-              insulation, or at the bottom of the drywall does not show up as
-              a stain. We measure before we open more wall than the readings
-              call for, extract what is standing, and dry with air movers and
-              dehumidifiers. Repairs start when the structure is dry.
+              Houston water damage usually starts with a water line, an
+              appliance, an opening in the roof, or water that came in at
+              ground level. The humidity keeps a room wet after the puddle is
+              gone. Moisture in the slab, in the insulation, or at the bottom
+              of the drywall does not always show up as a stain. We measure
+              before we open more wall than we need to, pull out the standing
+              water, and dry with fans and dehumidifiers. Repairs start when
+              the structure is dry.
             </p>
             <Link
               href="/water-damage-restoration"
@@ -248,13 +250,13 @@ export default function RestorationPage() {
           </Reveal>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Hurricane season and the squalls that come with it lift
-              shingles, drop limbs, and drive rain into ceilings from Clear
-              Lake to Katy and The Woodlands. We photograph the damage, tarp
-              the roof when it is safe to be up there, and then talk through
-              repair or replacement with those pictures in hand. Siding and
-              wet drywall travel with the same storm. A tarp is temporary. It
-              is not the finished roof.
+              Hurricane season, and the hard storms that come with it, lifts
+              shingles, drops limbs, and drives rain into ceilings from Clear
+              Lake to Katy and The Woodlands. We photograph the damage, cover
+              the roof with a tarp when it is safe to be up there, and then
+              talk through a repair or a new roof with those pictures in hand.
+              Siding and wet drywall often come with the same storm. A tarp is
+              temporary. It is not the finished roof.
             </p>
             <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
               <li>
@@ -322,11 +324,12 @@ export default function RestorationPage() {
             <p className="text-lg leading-relaxed text-muted-foreground">
               Stay out until the fire department says the building is safe.
               After that, an open roof or a door that will not lock turns one
-              loss into two. Soot is acidic. The longer it sits on metal,
-              stone, and finished wood, the more of those surfaces are lost.
-              The water used to fight the fire has to be dried like any other
-              flood. The choice to restore the finishes or remodel the room
-              can wait until the house is secure, dry, and documented.
+              problem into two. Soot is acidic. The longer it sits on
+              metal, stone, and finished wood, the more of those surfaces are
+              lost. The water used to fight the fire has to be dried like any
+              other flood. You can decide later whether to restore the
+              finishes or remodel the room. That choice can wait until the
+              house is secure, dry, and written down.
             </p>
             <Link
               href="/what-to-do-after-a-fire-your-first-5-steps"
@@ -352,12 +355,12 @@ export default function RestorationPage() {
           </Reveal>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              We photograph the opening, the wet rooms, and the scope of
-              drying and repair. We do not file the claim, and we do not
-              decide what the policy pays. Protecting the house from more
-              water does not wait on that decision. If you want a room-by-room
-              packet of your own before anything is moved, the photo log is
-              free to use whether or not you hire us.
+              We photograph the opening, the wet rooms, and the drying and
+              repair work. You file the claim with your insurer. They decide
+              what the policy pays. Keeping more water out of the house does
+              not wait on that decision. If you want a room-by-room packet of
+              your own before anything is moved, the photo log is free,
+              whether or not you hire us.
             </p>
             <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
               <li>
@@ -463,9 +466,9 @@ export default function RestorationPage() {
           </h2>
           <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
             Westchase, Alief, and the Energy Corridor sit beside the office.
-            Every community below has a water-damage page. Roofing, tarping,
-            siding, painting, and insurance claims each have a Houston page
-            as well.
+            Each community below has its own page for water damage. Roofing,
+            emergency tarps, siding, painting, and insurance claims each have
+            a Houston page as well.
           </p>
           <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
             {areaPages.map((area) => (

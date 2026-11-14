@@ -27,7 +27,7 @@ export const fieldNotes: Article[] = [
     faqs: [
       {
         q: 'Should I climb up and look for the hole?',
-        a: 'No. A wet slope, a soft deck, and a roof you do not walk in ordinary weather are how people get hurt after a leak. Look from the ground and from inside the house. We will get on the roof when it is safe.',
+        a: 'No. A wet slope, soft wood under the shingles, and a roof you do not walk on a dry day are how people get hurt after a leak. Look from the ground and from inside the house. We will get on the roof when it is safe.',
       },
       {
         q: 'Can I wait until the weather clears?',
@@ -35,11 +35,11 @@ export const fieldNotes: Article[] = [
       },
       {
         q: 'Does a ceiling stain mean the roof has to be replaced?',
-        a: 'No. A stain means water found a path. It might be one flashing detail, a lifted shingle, or a larger failure. The roof has to be seen before anyone can say which job it is.',
+        a: 'No. A stain means water found a path. It might be metal at one joint, a lifted shingle, or a larger failure. Someone has to see the roof before anyone can say which job it is.',
       },
       {
         q: 'Who decides whether insurance pays for the leak?',
-        a: 'Your insurer. We photograph the opening and the rooms that got wet, and we can tarp and repair. We are a contractor, not a public adjuster, and we do not tell you what the policy owes.',
+        a: 'Your insurer. We photograph the opening and the rooms that got wet, and we can tarp and repair. We are the contractor. Your insurer decides the payment, and a public adjuster is a different license.',
       },
     ],
     sections: [
@@ -83,15 +83,15 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'The calls are ordinary until the ceiling shows them. Pipe boots around plumbing vents crack in the sun. Valleys hold debris and then hold water. Step flashing at a wall or a chimney pulls loose. A previous patch lifts. Wind gets under a shingle edge on the side the storm came from. Flat roofs and low-slope additions fail at the seams and at the edge where they meet a steeper roof.',
+            text: 'These leaks sound ordinary until the ceiling shows them. The rubber collar on a vent pipe cracks in the sun. Valleys hold debris and then hold water. Metal where the roof meets a wall or a chimney pulls loose. An old patch lifts. Wind gets under a shingle edge on the storm side. Flat roofs and low additions fail at the seams and where they meet a steeper roof.',
           },
           {
             type: 'p',
-            text: 'A one-story house on a slab often shows the leak in the room directly under the opening. A two-story house in Memorial, Bellaire, or West University can send the water along a rafter and stain a ceiling that is not under the damaged shingle. The stain is a clue, not a map. Attic decking, if you can look from the attic floor without stepping off the joists, sometimes shows the wet sheathing more honestly than the ceiling paint does.',
+            text: 'A one-story house on a slab often shows the leak in the room directly under the opening. A two-story house in Memorial, Bellaire, or West University can send the water along a rafter and stain a ceiling that is not under the damaged shingle. The stain is a clue, not a map. If you can look from the attic floor without stepping off the beams, the wet wood up there sometimes shows more honestly than the ceiling paint does.',
           },
           {
             type: 'p',
-            text: 'Humidity is why this should not sit. Houston air does not dry a wet attic the way a dry climate would. Insulation that got wet stays heavy. The ceiling paint can look better by evening while the deck above it is still damp. Leaving it “to see if it comes back next rain” is how a small opening becomes wet drywall, wet insulation, and a second leak path.',
+            text: 'Humidity is why this should not sit. Houston air does not dry a wet attic the way a dry climate would. Insulation that got wet stays heavy. The ceiling paint can look better by evening while the wood above it is still damp. Leaving it “to see if it comes back next rain” is how a small opening becomes wet drywall, wet insulation, and a second leak path.',
           },
         ],
       },
@@ -100,7 +100,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Take the pictures before a tarp, a towel pile, or a coat of primer hides the evidence. From inside: a wide shot of the room, a closer shot of the stain or the drip, and the path the water took, including the floor and any belongings. From the yard: the slope you can see, missing pieces, and a limb if one is on the roof. If an attic is safe to enter from a ladder on the floor, a photo of wet decking helps. Do not walk the attic if the deck is soft.',
+            text: 'Take the pictures before a tarp, a towel pile, or a coat of primer hides the evidence. From inside: a wide shot of the room, a closer shot of the stain or the drip, and the path the water took, including the floor and any belongings. From the yard: the slope you can see, missing pieces, and a limb if one is on the roof. If an attic is safe to enter from a ladder on the floor, a photo of the wet wood helps. Do not walk the attic if that wood is soft.',
           },
           {
             type: 'p',
@@ -125,7 +125,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Do not nail a hardware-store tarp on yourself if you would be standing on a wet slope to do it. Call. Emergency tarping is the temporary step. The permanent work is a repair or a replacement after someone has seen the deck, the flashing, and how far the water traveled.',
+            text: 'Do not nail a hardware-store tarp on yourself if you would be standing on a wet slope to do it. Call. Emergency tarping is the temporary step. The permanent work is a repair or a replacement after someone has seen the wood, the metal joints, and how far the water traveled.',
           },
           {
             type: 'links',
@@ -141,15 +141,15 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A repair makes sense when the rest of the roof can still do its job and the problem is in one place: a pipe boot, a run of flashing, a few shingles, or a seam. Replacement is the honest answer when the shingles are worn out across the roof, the wood under them is soft in more than one place, or the same slopes keep letting water in. We say which one after we are on the roof, not from the street.',
+            text: 'A repair makes sense when the rest of the roof can still do its job and the problem is in one place: a vent collar, metal at a joint, a few shingles, or a seam. Replacement is the honest answer when the shingles are worn out across the roof, the wood under them is soft in more than one place, or the same slopes keep letting water in. We say which one after we are on the roof, not from the street.',
           },
           {
             type: 'p',
-            text: 'The ceiling, the insulation, and the floor are a separate scope from the roofing. Wet drywall and insulation that stayed wet have to be dried or removed. Paint over a damp stain comes back. If the water reached cabinets, hardwood, or a slab-level floor, that is water-damage work, and it should be measured before anyone rebuilds the finish. Drying comes before new drywall.',
+            text: 'The ceiling, the insulation, and the floor are separate work from the roofing. Wet drywall and insulation that stayed wet have to be dried or removed. Paint over a damp stain comes back. If the water reached cabinets, hardwood, or a slab-level floor, that is water-damage work, and it should be measured before anyone rebuilds the finish. Drying comes before new drywall.',
           },
           {
             type: 'p',
-            text: 'The price of a replacement is the roof you have: size, pitch, what the deck looks like after the old roofing comes off, and the material. An insurance claim does not set that price. Your insurer decides what the policy pays. We install the roof you hire us to build. What changes a Houston roof price is written out on the cost guide, as planning ranges, not as a quote.',
+            text: 'The price of a replacement is the roof you have: size, slope, what the boards look like after the old roofing comes off, and the material. An insurance claim does not set that price. Your insurer decides what the policy pays. We install the roof you hire us to build. What changes a Houston roof price is written out on the cost guide, as planning ranges, not as a quote.',
           },
           {
             type: 'links',
@@ -233,11 +233,11 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A lot of Houston houses sit on a concrete slab. There is no basement to look into and no crawlspace that shows you a wet joist. Water from a washing-machine hose, an ice-maker line, a toilet supply, a water heater, or a pinhole in a line inside a wall leaves the room at floor level. It runs under vinyl, under laminate, under tile, and under wood. The surface you walk on can look almost ordinary while the edges cup, the seams swell, or the baseboard darkens a day later.',
+            text: 'A lot of Houston houses sit on a concrete slab. There is no basement to look into and no crawlspace that shows you a wet beam. Water from a washing-machine hose, an ice-maker line, a toilet supply, a water heater, or a pinhole in a line inside a wall leaves the room at floor level. It runs under vinyl, under laminate, under tile, and under wood. The surface you walk on can look almost ordinary while the edges cup, the seams swell, or the baseboard darkens a day later.',
           },
           {
             type: 'p',
-            text: 'The wall is the other record. Gypsum wicks. The paint a few inches up from the floor blisters or stains. Cabinets on particle board swell at the toe kick first. Trim swells at the miter. Those are signs the water did not stay in the puddle you mopped. They are also easy to paint over and then discover again.',
+            text: 'The wall is the other record. Drywall soaks water up. The paint a few inches up from the floor blisters or stains. Cabinets on particle board swell at the bottom first. Trim swells at the corners. Those are signs the water did not stay in the puddle you mopped. They are also easy to paint over and then discover again.',
           },
           {
             type: 'p',
@@ -263,7 +263,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Your insurer decides coverage. We do not. Many policies expect you to limit further damage and to keep a record. Yours may say that differently. Ask the insurer what they want saved before you throw wet materials away. If you need a room-by-room packet, the photo log on this site walks that order.',
+            text: 'Your insurer decides coverage. Many policies expect you to limit further damage and to keep a record. Yours may say that differently. Ask the insurer what they want saved before you throw wet materials away. If you need a room-by-room packet, the photo log on this site walks that order.',
           },
         ],
       },
@@ -276,7 +276,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Mitigation is extraction of what is still standing, air movement, and dehumidification, with meters on the materials that actually got wet. A slab does not show you a joist bay. The readings are on the floor covering, the subfloor where there is one, and the wall. We do not put a clock on mold. What we do say is that wet paper, wet pad, and wet particle board do not improve while the house stays closed up and humid. A musty smell in a room that “looks dry” is a reason to find the material, not a reason to mask it.',
+            text: 'The first steps pull out standing water, move air, and pull moisture from the air, with meters on the materials that actually got wet. A slab does not show you open beams. The readings are on the floor covering, the layer under it where there is one, and the wall. We will not name a mold deadline. Wet paper, wet pad, and wet particle board do not improve while the house stays closed up and humid. A musty smell in a room that “looks dry” is a reason to find the material, not a reason to cover it.',
           },
           {
             type: 'p',
@@ -289,7 +289,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Cabinets at the toe kick, drywall at the bottom of the wall, and the floor covering are the three places a slab release shows up. Hardwood cups. Laminate swells at the joints until the edges stand proud. Vinyl can hide water and then loosen. Tile can look fine while the setting bed or the wall behind the base is wet. Insulation, if the water reached a wall that has it, holds water after the face of the drywall feels dry to your hand.',
+            text: 'Cabinets at the bottom, drywall at the bottom of the wall, and the floor covering are the three places a slab leak shows up. Hardwood cups. Laminate swells at the joints until the edges lift. Vinyl can hide water and then loosen. Tile can look fine while the mortar under it, or the wall behind the base, is wet. Insulation, if the water reached a wall that has it, holds water after the face of the drywall feels dry to your hand.',
           },
           {
             type: 'p',
@@ -302,11 +302,11 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Call the company that wrote the policy when you reasonably can. Ask how they want notice, and whether an adjuster should see the damage before permanent repairs. Write down the claim number. Notice timing is in your policy. It is not the same on every Texas form, so we do not quote a number of days.',
+            text: 'Call the company that wrote the policy when you reasonably can. Ask how they want notice, and whether an adjuster should see the damage before permanent repairs. Write down the claim number. Notice timing is in your policy. It is not the same on every Texas form, so ask the insurer what the deadline is.',
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild finishes. We do not negotiate the claim, and we do not tell you what the policy owes. If the loss also opened a roof or you are not sure the water was only the supply line, say so. A roof leak and a supply break are different paths, and both can wet the same slab.',
+            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild finishes. The claim and the payment stay with your insurer. If the loss also opened a roof or you are not sure the water was only the supply line, say so. A roof leak and a supply break are different paths, and both can wet the same slab.',
           },
           {
             type: 'links',
@@ -348,7 +348,7 @@ export const fieldNotes: Article[] = [
     image: '/images/projects/roofing/two-story-stone-home.jpg',
     service: 'roofing',
     ctaTitle: 'Not sure what the storm did?',
-    ctaBody: `Call ${phone}, or use the contact form. If water is coming inside, say so at the start. We look at the roof. We do not decide what an insurance policy pays.`,
+    ctaBody: `Call ${phone}, or use the contact form. If water is coming inside, say so at the start. We look at the roof. Your insurer decides what the policy pays.`,
     related: [
       'what-to-do-after-a-roof-leak-in-houston',
       'storm-and-hail-roof-repair-houston',
@@ -382,7 +382,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'On asphalt shingles, people describe hail as bruises: dark spots where the granules were knocked off, sometimes with the mat showing, often in a scatter across the field rather than only along the edge that faces the afternoon sun. The bruise can be easier to feel than to see from the street. That is one reason the inspection is done on the roof, not from a photograph taken at the curb at noon.',
+            text: 'On asphalt shingles, people describe hail as bruises: dark spots where the granules were knocked off, sometimes with the dark layer showing, often scattered across the open roof rather than only along the edge that faces the afternoon sun. The bruise can be easier to feel than to see from the street. That is one reason the inspection is done on the roof, not from a photograph taken at the curb at noon.',
           },
           {
             type: 'p',
@@ -395,19 +395,19 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Houston sun and heat age a roof whether or not a storm shows up. Granules thin on the slopes that take the most sun, often the south and the west. Tabs curl or crack along courses that have been opening for seasons. Sealant strips let go. Pipe boots dry out and split. Caulk at flashing shrinks. Moss or debris sits in a valley that does not get rinsed. None of that requires a hailstone.',
+            text: 'Houston sun and heat age a roof whether or not a storm shows up. Granules thin on the slopes that take the most sun, often the south and the west. Tabs curl or crack along rows that have been opening for seasons. Sealant strips let go. Rubber collars dry out and split. Caulk at metal joints shrinks. Moss or debris sits in a valley that does not get rinsed. None of that requires a hailstone.',
           },
           {
             type: 'p',
-            text: 'Wear is usually more even, and it follows exposure and time. The shaded north slope can look younger than the south slope of the same house. A patched area can look newer than the field around it. Blisters, curled corners, and a general thinning of granules without a matching pattern of dents in the metal are reasons to talk about age, not about one storm.',
+            text: 'Wear is usually more even, and it follows exposure and time. The shaded north slope can look younger than the south slope of the same house. A patched area can look newer than the open roof around it. Blisters, curled corners, and a general thinning of granules without a matching pattern of dents in the metal are reasons to talk about age, not about one storm.',
           },
           {
             type: 'p',
-            text: 'An old roof can still be hit by hail. The two conditions stack. A worn slope with fresh bruises is a different conversation from a worn slope with no new marks, and from a young roof with a scatter of bruises and a split boot. The inspection is there to separate those, not to force every roof into one category.',
+            text: 'An old roof can still be hit by hail. The two conditions stack. A worn slope with fresh bruises is a different conversation from a worn slope with no new marks, and from a young roof with a scatter of bruises and a split collar. The inspection is there to separate those, not to force every roof into one category.',
           },
           {
             type: 'p',
-            text: 'Neighborhood does not change the difference. A Memorial roof, a Katy roof, and a roof in The Woodlands age under the same sun and get hit by the same kind of storm. What changes is the house: pitch, the number of valleys, and whether you can see the metal from the yard. The comparison is still marks from one event against wear that has been underway for years.',
+            text: 'Neighborhood does not change the difference. A Memorial roof, a Katy roof, and a roof in The Woodlands age under the same sun and get hit by the same kind of storm. What changes is the house: slope, the number of valleys, and whether you can see the metal from the yard. The comparison is still marks from one event against wear that has been underway for years.',
           },
         ],
       },
@@ -416,7 +416,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Wet shingles, a steep pitch, and a ladder on a soft flower bed are how people get hurt trying to confirm what a storm did. You do not need to be up there to start. From the yard and from a window, note dents in gutters and caps, missing pieces, a limb, and any ceiling stain inside. Tell us what you can see. We look at the roof when it is safe to be on it.',
+            text: 'Wet shingles, a steep slope, and a ladder on a soft flower bed are how people get hurt trying to confirm what a storm did. You do not need to be up there to start. From the yard and from a window, note dents in gutters and caps, missing pieces, a limb, and any ceiling stain inside. Tell us what you can see. We look at the roof when it is safe to be on it.',
           },
           {
             type: 'p',
@@ -443,7 +443,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Date the pictures. If you know which storm you are asking about, write that down. Your insurer decides whether that storm is a covered cause and what they will pay. We do not. We can put the inspection photos with the repair scope so the conversation has something specific in it. The photo log on this site is a way to keep the interior rooms in the same packet as the roof notes.',
+            text: 'Date the pictures. If you know which storm you are asking about, write that down. Your insurer decides whether that storm is a covered cause and what they will pay. We can put the inspection photos with the repair plan so the conversation has something specific in it. The photo log on this site is a way to keep the interior rooms in the same packet as the roof notes.',
           },
           {
             type: 'links',
@@ -460,15 +460,15 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Hail marks do not, by themselves, pick the scope. A handful of damaged shingles on an otherwise sound roof can be a repair. A field of bruises, a deck that is soft, or wear that has already used up the shingles can be a replacement. Wind-lifted courses and failed flashing are part of that same look. We say which job we recommend after we are on the roof.',
+            text: 'Hail marks do not, by themselves, pick the work. A handful of damaged shingles on an otherwise sound roof can be a repair. Bruises across the open roof, soft wood under the shingles, or wear that has already used up the shingles can be a replacement. Wind-lifted rows and failed metal joints are part of that same look. We say which job we recommend after we are on the roof.',
           },
           {
             type: 'p',
-            text: 'Architectural asphalt is common on Houston houses. Metal, tile, and composite are different installs and different ways of showing a dent or a crack. The structure has to carry the material you want if the roof is coming off. The cost guide explains what changes a replacement price: size, pitch, the deck, and the material. Those are planning ranges. The number for your house comes from the inspection, not from a citywide price.',
+            text: 'Architectural asphalt is common on Houston houses. Metal, tile, and composite are different installs and different ways of showing a dent or a crack. The structure has to carry the material you want if the roof is coming off. The cost guide explains what changes a replacement price: size, slope, the wood, and the material. Those are planning ranges. The number for your house comes from the inspection, not from a citywide price.',
           },
           {
             type: 'p',
-            text: 'An insurance payment, if there is one, is not the bid. A claim can pay for less than the work the roof needs, or for work you decide not to do yet. We photograph and we build the roof you hire. We do not negotiate the claim.',
+            text: 'An insurance payment, if there is one, is not the bid. A claim can pay for less than the work the roof needs, or for work you decide not to do yet. We photograph and we build the roof you hire. The claim stays with your insurer.',
           },
           {
             type: 'links',
@@ -525,7 +525,7 @@ export const fieldNotes: Article[] = [
       },
       {
         q: 'Does the log decide what gets paid?',
-        a: 'No. The log is your record. Your insurer decides what the policy covers. Elite Restorations is a contractor, not a public adjuster. We do not negotiate the claim.',
+        a: 'No. The log is your record. Your insurer decides what the policy covers. Elite Restorations is the contractor. A public adjuster is a different license, and the claim stays with your insurer.',
       },
       {
         q: 'Where is the free log on this site?',
@@ -580,7 +580,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'The materials worth naming are the ones that change the scope: drywall, ceiling, insulation, flooring, cabinets, trim, furniture, belongings, roofing. You do not need a price next to each one. You need to show they were wet, or broken, or missing. Prices and coverage are the insurer’s worksheet, not yours to invent on the night of the loss.',
+            text: 'The materials worth naming are the ones that change the work: drywall, ceiling, insulation, flooring, cabinets, trim, furniture, belongings, roofing. You do not need a price next to each one. You need to show they were wet, or broken, or missing. Prices and coverage are the insurer’s worksheet, not yours to invent on the night of the loss.',
           },
         ],
       },
@@ -630,7 +630,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'It is not a guarantee of payment. It is not a substitute for reading your policy or for asking the insurer how they want notice given. It is not a reason to delay stopping more water. And it is not legal advice. A public adjuster, if you hire one, is a licensed representative who can negotiate with the insurance company. That is a different role. We are the contractor. We can photograph, tarp, dry, and rebuild. We do not negotiate the claim.',
+            text: 'The log is your record, and your insurer still decides whether anything is paid. Read your policy, or ask the insurer how they want notice given. Keep stopping more water while you write it down. This is not legal advice. A public adjuster, if you hire one, is a licensed representative who can negotiate with the insurance company. That is a different role. We are the contractor. We can photograph, tarp, dry, and rebuild. The claim stays with your insurer.',
           },
           {
             type: 'p',

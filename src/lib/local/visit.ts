@@ -16,18 +16,18 @@ function fill(area: AreaProfile, template: string) {
 const visits: Record<string, readonly [string, string]> = {
   'kitchen-remodeling': [
     'On a {name} kitchen visit we walk the path you actually use, from the refrigerator to the sink to the range, and we mark the wall you hope to open before anyone calls it structural. Outlets, the dishwasher, and the landing spot for groceries are part of that walk. We leave with a layout that names what can move and what should stay, plus a materials list that can be ordered without inventing a second kitchen later. Bring a photo of a cabinet you like if you have one. You do not need a finished drawing.',
-    'What we will not do in {name} is price a kitchen from {housing} alone. Two houses near {landmark} can share a decade and not share a drain. The visit is the cabinets that are there, the light you hate at night, and the floor height at the next room. After that, demolition has a sequence. Call {phone} when you want that hour on the calendar. The drive along {roads} is separate from the scope.',
+    'What we will not do in {name} is price a kitchen from {housing} alone. Two houses near {landmark} can share a decade and not share a drain. The visit is the cabinets that are there, the light you hate at night, and the floor height at the next room. After that, demolition has a sequence. Call {phone} when you want that hour on the calendar. The drive along {roads} is separate from the job.',
   ],
   'bathroom-remodeling': [
     'A {name} bath visit starts in the wet wall. We look at the valve, the drain, the pan, and the fan, then at the door swing that a new vanity has to miss. If you have a second bath, say so, because that changes how the house lives during the work. Waterproofing is discussed while the wall is still visible in our notes, not after tile is chosen. Photos of the room help. A final grout color can wait.',
-    'We do not treat every {name} bathroom as a primary suite. A powder room is a smaller scope, and we will say so. Near {landmark} the houses called {housing} still hide different drains. Call {phone} and name the bath. The straight-line distance, about {miles} miles {direction}, only gets us there. The pan and the waterproofing are decided at the address.',
+    'We do not treat every {name} bathroom as a primary suite. A powder room is a smaller job, and we will say so. Near {landmark} the houses called {housing} still hide different drains. Call {phone} and name the bath. The straight-line distance, about {miles} miles {direction}, only gets us there. The pan and the waterproofing are decided at the address.',
   ],
   backsplash: [
-    'For a {name} backsplash we measure the run, the outlets, and the counter edge that is staying. If you want a pattern with a center, we mark that center on the range or the window before mortar. Short walls and long open walls do not get the same module. You can bring a tile sample. The wall behind the old tile is something we have to see, because a soft backer changes the day.',
-    'We will not pull {name} counters just to change the tile unless the top itself is failing. Say that the counters stay when you call {phone}. The visit confirms the substrate and the cuts at the window trim. {landmark} is about {miles} miles {direction}. That drive, on {roads}, is not the layout.',
+    'For a {name} backsplash we measure the run, the outlets, and the counter edge that is staying. If you want a pattern with a center, we mark that center on the range or the window before mortar. Short walls and long open walls do not get the same layout. You can bring a tile sample. The wall behind the old tile is something we have to see, because a soft board changes the day.',
+    'We will not pull {name} counters just to change the tile unless the top itself is failing. Say that the counters stay when you call {phone}. The visit confirms the surface and the cuts at the window trim. {landmark} is about {miles} miles {direction}. That drive, on {roads}, is not the layout.',
   ],
   countertops: [
-    'A {name} counter visit is useful once the cabinets you are keeping are the ones we will template. We look at level, at the sink you want, and at how a slab gets from the truck to the kitchen. Seams and overhangs are marked in the room, not guessed from a plan. If the top you have is only chipped, we say whether a repair is the real scope before a new slab is discussed.',
+    'A {name} counter visit is useful once the cabinets you are keeping are the ones we will template. We look at level, at the sink you want, and at how a slab gets from the truck to the kitchen. Seams and overhangs are marked in the room, not guessed from a plan. If the top you have is only chipped, we say whether a repair is the real job before a new slab is discussed.',
     'Do not order stone for {name} before this visit. Houses near {landmark} vary from square rebuilds to rooms that are not square at all. Call {phone} and say whether the boxes are already set. About {miles} miles {direction} by {roads} is the trip. The template is the work.',
   ],
   'wood-flooring': [
@@ -35,12 +35,12 @@ const visits: Record<string, readonly [string, string]> = {
     'We will not promise a {name} refinish from a photo of the stain you want. The boards have to be thick enough, and the floor under them has to be quiet. Call {phone}. {landmark} is about {miles} miles {direction}. The route is {roads}. The inspection is still at the house.',
   ],
   'tile-flooring': [
-    'A {name} tile visit checks flatness, door clearance, and whether any room is a wet room. A shower is a waterproof assembly. A living room is a flat field. We do not price them as one number. If you hope to tile over what is there, we test that idea against the height at the door before it becomes the plan. Layout lines are discussed so the cuts are not the first thing you see.',
-    'Bring the room list to the {name} visit, especially if a bath and a kitchen are both in the request. Near {landmark} the substrate follows the house, which is described loosely as {housing} and still has to be seen. Call {phone}. The {miles}-mile straight line {direction} is only the drive along {roads}.',
+    'A {name} tile visit checks flatness, door clearance, and whether any room is a wet room. A shower is a waterproof assembly. A living room is a flat floor. We do not price them as one number. If you hope to tile over what is there, we test that idea against the height at the door before it becomes the plan. Layout lines are discussed so the cuts are not the first thing you see.',
+    'Bring the room list to the {name} visit, especially if a bath and a kitchen are both in the request. Near {landmark} the floor follows the house, which is described loosely as {housing} and still has to be seen. Call {phone}. The {miles}-mile straight line {direction} is only the drive along {roads}.',
   ],
   'vinyl-flooring': [
     'For vinyl in {name} we check that the floor is flat and dry, then we choose glue-down, click-lock, or a floating install for that subfloor. Tell us if a shower is on the list. It should not be vinyl. Kitchens and playrooms are the usual yes, after the ridge that carpet used to hide is measured. Transitions at doors are part of the same visit so the plank does not arrive and then fail to meet the tile.',
-    'A {name} vinyl scope is not a box count from a phone photo. Call {phone} and name the rooms. {landmark} sits about {miles} miles {direction}, by {roads}. We still have to see the slab or the wood floor before the product is ordered.',
+    'A {name} vinyl job is not a box count from a phone photo. Call {phone} and name the rooms. {landmark} sits about {miles} miles {direction}, by {roads}. We still have to see the slab or the wood floor before the product is ordered.',
   ],
   'laminate-flooring': [
     'A {name} laminate visit is for bedrooms, halls, and living rooms unless we explicitly say a kitchen product fits. We check flatness, the stair if the floor will reach one, and the bath doorway that should stay tile. Underlayment is specified for the plank. It is not a substitute for fixing a hump. Boxes are acclimated in the house after the subfloor is accepted.',
@@ -51,23 +51,23 @@ const visits: Record<string, readonly [string, string]> = {
     'Say whether the {name} work is trim, a stair, a built-in, or an opening. Those are different tools and different days. Call {phone}. {housing} near {landmark} can mean original casing or none at all. About {miles} miles {direction} on {roads} gets us to the house. The profiles are measured there.',
   ],
   'tile-fireplaces': [
-    'On a {name} fireplace visit we look at the firebox, the hearth, and the wall around them before we talk about stone. Not every house has a fireplace left to tile. If yours does, we say retile, resurface, or rebuild. Heat-rated materials are the assumption even when you rarely light it. A mantel is drawn with the field so the scale fits the room you sit in.',
+    'On a {name} fireplace visit we look at the firebox, the hearth, and the wall around them before we talk about stone. Not every house has a fireplace left to tile. If yours does, we say retile, resurface, or rebuild. Heat-rated materials are the assumption even when you rarely light it. A mantel is drawn with the tile so the scale fits the room you sit in.',
     'A photo of the {name} face helps, and it does not replace the visit. We have to see cracks and the opening. Call {phone}. {landmark} is about {miles} miles {direction}. The drive uses {roads}. The surround is sized on site.',
   ],
   roofing: [
-    'A {name} roof visit is on the roof when it is safe: every slope, the penetrations, the flashing, and any decking we can already tell is soft. We photograph what we find and say repair or replacement. If an association or a district controls color, tell us before we talk about a product. If water is coming in today, say that when you call so a temporary cover is the first topic, not a color chart.',
+    'A {name} roof visit is on the roof when it is safe: every slope, the penetrations, the flashing, and any boards we can already tell are soft. We photograph what we find and say repair or replacement. If an association or a district controls color, tell us before we talk about a product. If water is coming in today, say that when you call so a temporary cover is the first topic, not a color chart.',
     'We do not price a {name} roof from the ground. Call {phone} and describe the leak or the storm. {landmark} is about {miles} miles {direction} in a straight line. {roads} is the drive. The recommendation still comes from the roof at the address, including slopes you cannot see from the driveway.',
   ],
   'roof-replacement': [
-    'Before a {name} replacement we confirm a repair will not hold, then we talk tear-off, the deck, underlayment, flashing, vents, and the material. Color waits on the elevation and on any review the address requires. You should know whether you are filing a claim. We can photograph the roof. We cannot decide what the policy pays. Soft decking, if tear-off reveals it, is discussed before it is covered.',
-    'Schedule the {name} inspection by calling {phone}. Do not order shingles first. Near {landmark}, about {miles} miles {direction} via {roads}, roofs that look alike from the street still hide different decks. The visit is how we see this one. The Houston cost page is a range, not this roof.',
+    'Before a {name} replacement we confirm a repair will not hold, then we talk tear-off, the wood, underlayment, flashing, vents, and the material. Color waits on the front and on any review the address requires. You should know whether you are filing a claim. We can photograph the roof. We cannot decide what the policy pays. Soft boards, if tear-off reveals them, are discussed before they are covered.',
+    'Schedule the {name} inspection by calling {phone}. Do not order shingles first. Near {landmark}, about {miles} miles {direction} via {roads}, roofs that look alike from the street still hide different boards. The visit is how we see this one. The Houston cost page is a range, not this roof.',
   ],
   'roofing-emergency-tarp-repair': [
     'When you call about {name}, say if water is still entering and if anyone is near a wet ceiling or wet wiring. We come when the roof can be climbed safely. The order is photographs, then an anchored cover, then a plan for the permanent roof and for any interior that is already wet. A tarp left as the finished roof is not the outcome. Have a clear path to the house if the yard is blocked by debris.',
     'Call {phone} for {name} rather than waiting on a claim decision to keep rain out. {landmark} is about {miles} miles {direction}. {roads} is the route, and traffic plus the weather set the arrival. We will tell you if the climb has to wait for a safer hour. The emergency form reaches the same team.',
   ],
   siding: [
-    'A {name} siding visit is up close: rot, fade on the south and west walls, and the trim at windows and corners. We say whether a section can match or the elevation wants to be replaced. If a committee reviews color, that answer is needed before boards are ordered. Storm damage can be photographed. Coverage, if you file, is your insurer’s decision. The wall is the construction.',
+    'A {name} siding visit is up close: rot, fade on the south and west walls, and the trim at windows and corners. We say whether a section can match or the front wall needs to be replaced. If a committee reviews color, that answer is needed before boards are ordered. Storm damage can be photographed. Coverage, if you file, is your insurer’s decision. The wall is the construction.',
     'Tell us if the {name} request is a patch or a new profile. Those are different orders. Call {phone}. Houses near {landmark}, about {miles} miles {direction} along {roads}, do not share one siding material. We match, or replace, the wall that is there.',
   ],
   'patios-decks': [
@@ -90,13 +90,13 @@ const visits: Record<string, readonly [string, string]> = {
 
 const closers = [
   'Nothing on this page is a bid for {name}. The number comes after we see the property, including the parts {housing} does not reveal from the street.',
-  'Bring questions about what has already failed. A {name} scope written without that history misses the repair hiding under the finish.',
+  'Bring questions about what has already failed. A {name} plan written without that history misses the repair hiding under the finish.',
   'If an association or a city desk has to review part of the work, tell us on the {name} visit so the order does not get ahead of the paperwork.',
   'We would rather say a {name} idea will not fit than discover it after demolition or tear-off. That is what the hour at the house is for.',
   'Photos help us prepare for {name}. They do not replace measurements, moisture readings, or a look at the structure.',
   'The same trade in a neighboring city is a different page because the houses differ. This one stays on {name}.',
   'Ask what is included before work starts in {name}. Surprises belong in the visit notes, not in the last day of the job.',
-  'A straight line of about {miles} miles to {landmark} is only how we get to {name}. The property still sets the scope.',
+  'A straight line of about {miles} miles to {landmark} is only how we get to {name}. The property still sets the job.',
 ];
 
 export function visitParagraph(serviceSlug: string, area: AreaProfile) {

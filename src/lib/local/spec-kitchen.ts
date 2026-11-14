@@ -22,7 +22,7 @@ export const kitchenTrade: TradeSpec = {
     (a) =>
       `For a kitchen, that kind of house decides whether the work is an island in a room that is already open, or a wall we may not be able to remove. In ${a.name} the answer is on paper before the first cabinet comes out.`,
     (a) =>
-      `Kitchen remodeling there means one scope: cabinets, counters, backsplash, lighting, and the floor where the kitchen meets the next room. ${a.name} does not get a different sequence. The room does.`,
+      `Kitchen remodeling there means one job: cabinets, counters, backsplash, lighting, and the floor where the kitchen meets the next room. ${a.name} does not get a different sequence. The room does.`,
     (a) =>
       `We treat that description as a reason to measure, not as a style. Out-of-square walls, a closed galley, or an island that already holds the parties are different drawings, and ${a.name} has more than one of them.`,
   ],
@@ -55,7 +55,7 @@ export const kitchenTrade: TradeSpec = {
       (a) =>
         `A kitchen in ${a.name} may be a flight up from the street. We plan the layout for the room you cook in, and we plan how cabinets get up there. The plumbing drop is longer than in a slab house on the mainland. Salt air is an exterior problem. Inside, the work is still the drains, the humidity, and the cabinets.`,
       (a) =>
-        `Raised construction in ${a.name} is not the same as a bungalow crawlspace. We look at access, the length of the drain run, and whether this block limits what the street sees. The kitchen behind the wall is planned as its own scope once that is clear.`,
+        `Raised construction in ${a.name} is not the same as a bungalow crawlspace. We look at access, the length of the drain run, and whether this block limits what the street sees. The kitchen behind the wall is planned as its own job once that is clear.`,
     ],
   },
   craft: [
@@ -64,17 +64,17 @@ export const kitchenTrade: TradeSpec = {
     (a) =>
       `The drawing for a ${a.name} kitchen includes storage, the appliance locations, and where people stand. An island that blocks the refrigerator is a layout problem, and it is cheaper to erase on paper. We also match the new work to the trim you are keeping.`,
     (a) =>
-      `Demolition in ${a.name} starts only after the layout and the lead times are real. The cabinet order, the template sequence, and the electrical for the lights are already in the plan. A sample board is not a scope.`,
+      `Demolition in ${a.name} starts only after the layout and the lead times are real. The cabinet order, the template sequence, and the electrical for the lights are already in the plan. A sample board is not a plan.`,
   ],
   sequence: [
     (a) =>
-      `The visit order in ${a.name} is measure, including anything out of square, then decide what plumbing can move, then choose cabinets and surfaces, then demolish. After that comes rough-in, boxes, template, stone, backsplash, the floor transition, and the paint that closes the room.`,
+      `The visit order in ${a.name} is measure, including anything out of square, then decide what plumbing can move, then choose cabinets and surfaces, then demolish. After that comes rough work, boxes, template, stone, backsplash, the floor transition, and the paint that closes the room.`,
     (a) =>
       `We do not start a ${a.name} kitchen by tearing out boxes to see what happens. That part is the measuring visit. After that, demolition has a plan, a dumpster location that fits the lot, and a sequence the other trades can follow.`,
   ],
   coda: [
     (a) =>
-      `That local constraint sits on an ordinary scope: cabinets, counters, light, and a floor that meets the next room. The price is this kitchen after the visit, not a ${a.name} average.`,
+      `That local constraint sits on an ordinary job: cabinets, counters, light, and a floor that meets the next room. The price is this kitchen after the visit, not a ${a.name} average.`,
     (a) =>
       `Houses near ${a.name} can look alike from the street and still hide a different drain. We will say what this address allows. Call ${phone} when you want the visit on the calendar.`,
   ],
@@ -103,7 +103,7 @@ export const kitchenTrade: TradeSpec = {
         (a) =>
           `Cabinet boxes for a humid summer, the counter, the backsplash, and the lights are chosen together in ${a.name}, before the room is an empty shell.`,
         (a) =>
-          `The floor where the ${a.name} kitchen meets the next room is part of the same scope, so the heights are decided with the cabinets.`,
+          `The floor where the ${a.name} kitchen meets the next room is part of the same job, so the heights are decided with the cabinets.`,
       ],
     },
   ],
@@ -114,7 +114,7 @@ export const kitchenTrade: TradeSpec = {
         (a) =>
           `Sometimes. It depends on the drain under this kitchen, not on ${a.name} as a label. A crawlspace can make a move simpler. A slab means cutting concrete. A post-tension slab means locating cables before anyone cuts. We trace the current drain on the visit and say which of those this room is. Keeping the sink where it is remains a valid layout when the move is the costly part and you do not need it.`,
         (a) =>
-          `The sink moves when the plumbing can move with it. In ${a.name}, near ${a.landmark}, that is a foundation question. If the drain should stay, the cabinets are designed around it. If it can move, the cut or the crawlspace work is in the scope before demolition. We do not discover that after the old kitchen is already gone.`,
+          `The sink moves when the plumbing can move with it. In ${a.name}, near ${a.landmark}, that is a foundation question. If the drain should stay, the cabinets are designed around it. If it can move, the cut or the crawlspace work is in the job before demolition. We do not discover that after the old kitchen is already gone.`,
       ],
     },
     {
@@ -123,7 +123,7 @@ export const kitchenTrade: TradeSpec = {
         (a) =>
           `Interior cabinets rarely need an association’s approval. Around ${a.name}, reviews usually cover the roof, the paint, and the street. A building permit is separate. It shows up when plumbing, electrical, or a wall changes. We say which of those this plan triggers after we see it, and which city counter the address uses. ${a.housingShort} is not what decides the permit.`,
         (a) =>
-          `Do not assume a ${a.name} kitchen is either unregulated or designed by a committee. The association, where one exists, usually cares about the elevation. The city cares when pipes, wires, or structure change. We separate those on the visit so the schedule includes a permit only when the work requires one.`,
+          `Do not assume a ${a.name} kitchen is either unregulated or designed by a committee. The association, where one exists, usually cares about the front. The city cares when pipes, wires, or structure change. We separate those on the visit so the schedule includes a permit only when the work requires one.`,
       ],
     },
     {

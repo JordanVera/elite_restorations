@@ -8,7 +8,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       title: "Photograph first",
-      body: "Wide shots of the elevation, close shots of the broken opening, and any wet interior. We take our own set before plywood covers the evidence. Your insurer decides what the photos are worth.",
+      body: "Wide shots of that wall, close shots of the broken opening, and any wet interior. We take our own set before plywood covers the evidence. Your insurer decides what the photos are worth.",
     },
     {
       title: "Choose the cover",
@@ -20,11 +20,11 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       title: "Keep water moving out",
-      body: "Board-up stops weather and casual entry. It does not dry a wet room. If insulation or drywall is wet, that is a water-damage scope we can start while the opening stays closed.",
+      body: "Board-up stops weather and casual entry. It does not dry a wet room. If insulation or drywall is wet, that drying is work we can start while the opening stays closed.",
     },
     {
       title: "Plan the permanent repair",
-      body: "Glass, a door, siding, or a wall comes next. The board is temporary. We say what the permanent repair looks like and we do not treat the plywood as the finished elevation.",
+      body: "Glass, a door, siding, or a wall comes next. The board is temporary. We say what the permanent repair looks like. The plywood is not the finished front of the house.",
     },
   ],
   sections: [
@@ -55,7 +55,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "What temporary protection includes.",
       paragraphs: [
         "We measure the opening, photograph it, and fasten a rigid cover to framing that can hold it. Windows, doors, and broken wall sections get a cover that sheds water away from the interior. On a house the board may sit until the glass is available. On an apartment or a storefront we note the unit so the photos match the opening.",
-        "We do not board a building we cannot reach safely. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer any time. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM. The form asks for a call back. It is not a guaranteed arrival.",
+        "If we cannot reach the building safely, we wait. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer any time. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM. Use the form, and we'll call you back as soon as we can.",
       ],
       points: [
         {
@@ -64,7 +64,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "One opening or a row",
-          body: "A single window and a whole elevation of storefront glass are different days. We price the openings we can see, not a package.",
+          body: "A single window and a whole wall of storefront glass are different days. We price the openings we can see, not a package.",
         },
         {
           title: "Then the real closure",
@@ -77,7 +77,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "What changes the price of a board-up.",
       paragraphs: [
         "There is no single Houston board-up price. Height, the number of openings, whether the frame is still square, after-dark access, and how much glass has to be cleared all move the number. As a planning range, not a quote, a ground-floor window or door on a house we can reach safely often falls around a few hundred dollars to about $1,500. A second story, a bank of storefront glass, or several apartment units is more. That range is not a promise and it is not the cost of the replacement glass.",
-        "The permanent window, door, or wall is a separate scope. So is drying, if water is already in the floor or the insulation. We will not fold those into a board-up number to make the first call sound smaller. If you are filing a claim, some policies pay for reasonable steps that limit further damage. Some pay less than people hope. We do not decide that, and we do not wait to secure an open building when it is safe to do the work.",
+        "The permanent window, door, or wall is separate work. So is drying, if water is already in the floor or the insulation. We keep those out of the board-up number so the first call stays honest. If you are filing a claim, some policies pay for reasonable steps that limit further damage. Some pay less than people hope. Your insurer decides that part. When it is safe to do the work, we secure a building that is still open.",
       ],
       points: [
         {
@@ -86,7 +86,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "How broken it is",
-          body: "A cracked lite still in the frame and a missing sliding door are different materials and different time.",
+          body: "A cracked pane still in the frame and a missing sliding door are different materials and different time.",
         },
         {
           title: "The claim is separate",
@@ -98,7 +98,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       eyebrow: "Houston",
       heading: "Wind, hail, and buildings that sit on slabs.",
       paragraphs: [
-        "Hurricane season is June 1 through November 30, and spring squalls do the same work earlier. Wind finds the large pane and the patio door. Hail can break a skylight and leave the wall for a later gust. A hard freeze is more often a pipe problem. If both show up, we secure the opening and stop the water as two scopes.",
+        "Hurricane season is June 1 through November 30, and spring squalls do the same work earlier. Wind finds the large pane and the patio door. Hail can break a skylight and leave the wall for a later gust. A hard freeze is more often a pipe problem. If both show up, we secure the opening and stop the water as two separate jobs.",
         "Houses in Westchase, Alief, the Energy Corridor, Katy, and Sugar Land usually sit on slabs. Water through a broken door sits on the concrete and wicks into the drywall. Photos and drying belong on the same day as the board. The Woodlands and Memorial add limbs. Clear Lake and Galveston add coastal wind. The side of town changes the drive and the building.",
       ],
       points: [
@@ -112,7 +112,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "Family company",
-          body: "Elite Restorations is family-owned in Houston since 1993. The office is 511 Crestwater Ct, Houston, TX 77082. That is the fact. We do not add awards or a preferred-vendor title.",
+          body: "Elite Restorations is family-owned in Houston since 1993. The office is 511 Crestwater Ct, Houston, TX 77082. That is the fact we stand on. You hire us directly, and your insurer decides the claim.",
         },
       ],
     },
@@ -121,7 +121,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "Photos, the adjuster, and the repair that follows.",
       paragraphs: [
         "We help you with the insurance claim by documenting the opening, meeting the adjuster on site if you want us there, and writing a repair estimate. We assist. We are not public adjusters, we do not give legal advice, and we do not promise approval or a payout. Flooding from rising water, a hurricane, hail, straight-line wind, and a tornado can all break glass. They are not the same coverage story. Check your policy.",
-        "Mitigation to limit further damage, including a board-up, is something many policies expect. Whether this policy pays for it is a question for the carrier. Link the photos to the claim number, keep the broken hardware if you can do that safely, and use the photo log on this site if you want a room-by-room record of your own. The permanent glass or door is construction. The claim payment is whatever the insurer allows.",
+        "Steps that limit more damage, including a board-up, are something many policies expect. Whether this policy pays for them is a question for the insurer. Link the photos to the claim number, keep the broken hardware if you can do that safely, and use the photo log on this site if you want a room-by-room record of your own. The permanent glass or door is construction. The claim payment is whatever the insurer allows.",
       ],
       points: [
         {
@@ -162,7 +162,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       q: "Will you come during the storm?",
-      a: "We do not send a crew to broken glass during lightning, or in wind that makes the wall unsafe. Call and we will tell you the next safe step. The form on this site asks us to call you back. It does not promise we are already on the way.",
+      a: "If lightning is close, or the wind makes the wall unsafe, we wait and tell you the next safe step. Call (713) 909-0034 any time and we will talk through that step with you. If you use the form on this site, we'll call you back as soon as we can.",
     },
   ],
 };

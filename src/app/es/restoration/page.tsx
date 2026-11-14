@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Restauración en Houston, TX",
   description:
-    "Restauración en Houston por agua, tormenta, granizo y fuego, y ayuda con reclamos. Familia desde 1993. Llame al (713) 909-0034.",
+    "Restauración en Houston por agua, tormenta, granizo y fuego, y ayuda con su reclamo. Empresa familiar desde 1993. Llame al (713) 909-0034.",
   path: "/es/restoration",
   locale: "es",
   languages: languageAlternates("/restoration", "/es/restoration"),
@@ -23,7 +23,7 @@ const links = [
   { href: "/es/insurance-claims", label: "Reclamos de seguro" },
   { href: "/es/houston-storm-damage", label: "Ayuda por tormenta" },
   { href: "/commercial-storm-restoration", label: "Comercios y apartamentos" },
-  { href: "/emergency-board-up", label: "Board-up de emergencia" },
+  { href: "/emergency-board-up", label: "Tablas en ventanas y puertas" },
 ];
 
 export default function SpanishRestorationPage() {
@@ -32,7 +32,7 @@ export default function SpanishRestorationPage() {
       <PageHero
         eyebrow="Restauración"
         title={["Restauración en Houston, TX"]}
-        lede="Agua, viento, granizo y fuego, y después la reparación. Empresa familiar en Houston desde 1993. Casas, comercios y apartamentos."
+        lede="Agua, viento, granizo y fuego, y después la reparación. Empresa familiar en Houston desde 1993. Atendemos casas, comercios y apartamentos."
         crumbs={[{ name: "Restauración", path: "/es/restoration" }]}
         homeCrumb={{ name: "Inicio", path: "/es" }}
       >
@@ -42,7 +42,7 @@ export default function SpanishRestorationPage() {
       </PageHero>
       <section className="gutter mx-auto max-w-[120rem] py-16">
         <p className="measure text-lg leading-relaxed text-muted-foreground">
-          Restaurar es devolver un edificio dañado a un estado seco y usable. Una línea de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. La oficina está en {site.address.streetAddress}, Houston, TX 77082. La visita es en la propiedad.
+          Restaurar es dejar el edificio seco y listo para usarse otra vez. Un tubo de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. La oficina está en {site.address.streetAddress}, Houston, TX 77082. La visita es en la propiedad.
         </p>
         <ul className="mt-10 flex flex-wrap gap-6">
           {links.map((link) => (
@@ -59,15 +59,15 @@ export default function SpanishRestorationPage() {
             items={[
               {
                 q: "¿Qué hace una empresa de restauración en Houston?",
-                a: "Daño de agua, tormenta, viento, granizo, y la reparación que sigue. También board-up y lona cuando el edificio está abierto. El seguro decide la cobertura.",
+                a: "Daño de agua, tormenta, viento, granizo, y la reparación que sigue. También ponemos tablas en ventanas y una lona cuando el edificio está abierto. La aseguradora decide la cobertura.",
               },
               {
                 q: "¿Atienden apartamentos y comercios?",
-                a: "Sí. Administradores, HOA y dueños pueden llamar al (713) 909-0034 a cualquier hora si la emergencia de agua o tormenta sigue activa.",
+                a: "Sí. Administradores, la asociación de propietarios y los dueños pueden llamar al (713) 909-0034 a cualquier hora si la emergencia de agua o tormenta sigue.",
               },
               {
                 q: "¿Hablan por la aseguradora?",
-                a: "No. Fotografiamos y reparamos lo contratado. No somos ajustadores públicos y no prometemos un pago.",
+                a: "Fotografiamos y reparamos lo que usted contrata. La aseguradora decide el pago. Nosotros no somos ajustadores públicos y no lo prometemos.",
               },
             ]}
           />

@@ -2,11 +2,11 @@ import type { ServiceGuide } from "@/lib/guides/types";
 
 export const patioGuide: ServiceGuide = {
   process: [
-    { title: "Read the yard", body: "We look at the door threshold, the slab of the house, where the rain goes, and what is already cracked. A patio that pitches toward the brick will wet the foundation no matter how nice the pavers are." },
+    { title: "Read the yard", body: "We look at the door threshold, the slab of the house, where the rain goes, and what is already cracked. A patio that slopes toward the brick will wet the foundation no matter how nice the pavers are." },
     { title: "Choose the surface", body: "Concrete, pavers, and stone are different under Houston sun and clay. We talk through drainage, joints, and whether a cover is part of this project or a later one." },
-    { title: "Set the grade", body: "The surface falls away from the house. On a flat lot in Alief or Westchase that can mean a careful few inches, not a dramatic slope. We do not trap water against the slab." },
+    { title: "Set the slope", body: "The surface falls away from the house. On a flat lot in Alief or Westchase that can mean a careful few inches, not a dramatic slope. The new surface keeps water off the slab." },
     { title: "Build the base", body: "Clay soil moves. The base under concrete or pavers is the part you do not see and the part that decides whether the patio rocks next summer." },
-    { title: "Install the surface", body: "Joints, edges, and the meeting with the door and the fence are finished so the patio belongs to the house. A cover, if it is in the scope, is framed so water sheds off the roof of the cover too." },
+    { title: "Install the surface", body: "Joints, edges, and the meeting with the door and the fence are finished so the patio belongs to the house. A cover, if it is in the work, is framed so water sheds off the roof of the cover too." },
     { title: "Walk the drainage", body: "We look at it in daylight and we say where a downspout still needs to be extended. Elite Restorations is family-owned in Houston since 1993." },
   ],
   sections: [
@@ -15,12 +15,12 @@ export const patioGuide: ServiceGuide = {
       heading: "Cracks, ponding, and a patio that faces the house.",
       paragraphs: [
         "A patio that holds water after a Houston downpour, a crack that has become a trip, soil washed out at the edge, or a slab that has risen against the door are reasons to look before you resurface. Coating a patio that pitches the wrong way paints the problem. Hurricane-season rain and ordinary summer storms both test the slope. A hard freeze is rare and usually not what breaks a patio. Tree roots in Memorial and The Woodlands lift edges. That is a different cause from a thin pour on clay.",
-        "This page is the patio: the flat outdoor floor at the back or side of the house. Decks, which are framed wood or composite above the ground, have their own page. Gazebos have theirs. The older combined page still explains patios and decks together. Use this one when the question is the surface on grade.",
+        "This page is the patio: the flat outdoor floor at the back or side of the house. Decks, which are framed wood or composite above the ground, have their own page. Gazebos have theirs. The older combined page still explains patios and decks together. Use this one when the question is the surface on the ground.",
       ],
       points: [
         { title: "At the door", body: "The patio should sit below the threshold so water and insects are not invited inside. We measure that before we promise a height." },
         { title: "Downspouts", body: "A new patio that buries a downspout outlet will flood. Gutters and the patio are one drainage picture." },
-        { title: "Covers", body: "A cover is posts, beams, and a small roof. It is not a stain on the concrete. We scope it separately if you want it." },
+        { title: "Covers", body: "A cover is posts, beams, and a small roof. It is not a stain on the concrete. We plan it separately if you want it." },
       ],
     },
     {
@@ -54,10 +54,10 @@ export const patioGuide: ServiceGuide = {
       heading: "Clay, slabs, and rain that falls all at once.",
       paragraphs: [
         "Much of the housing around our office at 511 Crestwater Ct, Houston, TX 77082 sits on concrete slabs in clay. The patio is outside that slab and still affects it. Water held against the brick keeps the edge wet. We slope the new surface away, and we keep a path for the roof water. Hurricane season is June 1 through November 30. Afternoon storms the rest of the summer are enough to pond a flat patio. That is the test, not a light sprinkle.",
-        "We build patios for houses across Houston, Westchase, Alief, the Energy Corridor, Sugar Land, Bellaire, Memorial, and The Woodlands. A townhome court is smaller and may have an association rule. A commercial courtyard is rarer for us and still possible if the drainage is the same problem. Call (713) 909-0034 or text. Family-owned since 1993. We do not claim a certification that this site does not state.",
+        "We build patios for houses across Houston, Westchase, Alief, the Energy Corridor, Sugar Land, Bellaire, Memorial, and The Woodlands. A townhome court is smaller and may have an association rule. A commercial courtyard is rarer for us and still possible if the drainage is the same problem. Call (713) 909-0034 or text. Family-owned in Houston since 1993 is the history this page states.",
       ],
       points: [
-        { title: "Grade", body: "The eye lies on a flat lot. We check the fall away from the house before we call it done." },
+        { title: "The slope", body: "The eye lies on a flat lot. We check the fall away from the house before we call it done." },
         { title: "Trees", body: "Roots belong in the plan. A patio poured over a major root will lift." },
         { title: "Decks", body: "If you wanted a raised wood platform, that is the deck page. We will say so instead of forcing a patio." },
       ],
@@ -67,11 +67,11 @@ export const patioGuide: ServiceGuide = {
       heading: "Storm damage to flatwork, stated carefully.",
       paragraphs: [
         "We help document a patio that a storm actually damaged: undermined soil, a cover that wind took, impact from debris. Photos, a meeting with an adjuster if you want us there, and a repair estimate are the help. We are not public adjusters and we do not promise payment. Flooding that deposits mud is a different story from wind. Check your policy. A crack that has been growing for years is not something we will rename.",
-        "Hail, hurricane wind, a tornado, and rising water are different events. The insurance claims page and the photo log explain how we keep records. Our work is the outdoor floor and, when it is in the scope, the cover. The claim decision stays with your insurer.",
+        "Hail, hurricane wind, a tornado, and rising water are different events. The insurance claims page and the photo log explain how we keep records. Our work is the outdoor floor and, when it is in the work, the cover. The claim decision stays with your insurer.",
       ],
       points: [
         { title: "Photos before demo", body: "Once the old slab is gone, the damage is a story. Photograph the failure first." },
-        { title: "Cover versus floor", body: "A destroyed cover and a stained patio may be different scopes. We separate them." },
+        { title: "Cover versus floor", body: "A destroyed cover and a stained patio may be different jobs. We separate them." },
         { title: "No payout promise", body: "The estimate is what the work costs. It is not a settlement." },
       ],
     },
@@ -81,7 +81,7 @@ export const patioGuide: ServiceGuide = {
     { q: "What does a patio usually cost?", a: "A modest concrete patio on an open yard often plans around $4,000 to $12,000. Pavers, stone, covers, and difficult yards often plan around $8,000 to $25,000 or more. That is a range, not a quote." },
     { q: "Will the patio slope toward the house?", a: "No. We set the fall away from the foundation and below the door threshold. Holding water against the slab is the failure we are trying to avoid." },
     { q: "Can you add a cover?", a: "Yes. Posts, beams, and a roof are scoped with the drainage. A cover is not included in a plain slab price." },
-    { q: "Is this the same as a deck?", a: "No. A patio is on grade. A deck is a framed platform. Gazebos are separate too. We still build all three. This page is the patio." },
+    { q: "Is this the same as a deck?", a: "No. A patio sits on the ground. A deck is a framed platform. Gazebos are separate too. We still build all three. This page is the patio." },
     { q: "Do you help if a storm damaged the patio?", a: "We photograph it and estimate the repair. We do not decide the claim or promise payment. Check your policy. Call (713) 909-0034." },
   ],
 };

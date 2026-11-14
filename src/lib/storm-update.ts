@@ -5,5 +5,5 @@
  */
 export const latestStormUpdate = {
   date: "",
-  text: "There is no named-storm update on this page right now. If a hurricane, hailstorm, or hard freeze has just hit your Houston property, the steps below are the ones to use: keep people safe, stop more water if you can do it safely, photograph the damage, and call (713) 909-0034.",
+  text: "There is no named-storm update on this page right now. If a hurricane, a hailstorm, or a hard freeze has just hit your Houston property, use the steps below: keep people safe, stop more water if you can do it safely, photograph the damage, and call (713) 909-0034.",
 };

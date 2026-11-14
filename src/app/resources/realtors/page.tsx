@@ -14,30 +14,30 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'Realtor Partners in Houston, TX',
   description:
-    'How Houston realtors and investors can refer remodeling work to Elite Restorations, and the steps a typical project follows.',
+    'How Houston realtors and investors can send remodeling work to Elite Restorations, and the steps a typical project follows.',
   path: '/resources/realtors',
 });
 
 const benefits = [
   {
     index: '01',
-    title: 'Consistent quality',
-    body: 'The same crew standards on a listing refresh and a full remodel, so the work you refer looks like the work you saw.',
+    title: 'The same standard',
+    body: 'The same crew standard on a quick listing update and on a full remodel, so the work you send looks like the work you saw.',
   },
   {
     index: '02',
-    title: 'Fast turnaround',
-    body: 'Scopes are written to the calendar a sale or a flip actually has, not an open-ended start date.',
+    title: 'A real calendar',
+    body: 'The work is planned around the date a sale or a flip actually has, not an open-ended start.',
   },
   {
     index: '03',
-    title: 'Reliable communication',
-    body: 'One point of contact for you and your client, with updates that do not require a chase.',
+    title: 'Someone who answers',
+    body: 'One person for you and your client, with updates you do not have to chase.',
   },
   {
     index: '04',
     title: 'A direct line',
-    body: 'Partners reach the office directly, instead of starting over as a one-time web lead.',
+    body: 'Partners reach the office directly. You do not start over as a stranger each time.',
   },
   {
     index: '05',
@@ -47,7 +47,7 @@ const benefits = [
   {
     index: '06',
     title: 'One person on the job',
-    body: 'One person owns the timeline, the trades, and the walkthrough.',
+    body: 'One person keeps the timeline, the other crews, and the final walkthrough.',
   },
 ];
 
@@ -57,7 +57,7 @@ export default function RealtorsResourcesPage() {
       <PageHero
         eyebrow="For realtors"
         title={['A partner for', 'the work you refer.']}
-        lede="Refer a flip or an introduction. One crew, a direct line, and a form that reaches the office."
+        lede="Send a flip, or introduce a client. One crew, a direct line, and a form that reaches the office."
         crumbs={[
           { name: 'Resources', path: '/resources' },
           { name: 'Realtors', path: '/resources/realtors' },
@@ -82,7 +82,7 @@ export default function RealtorsResourcesPage() {
                 Show a client the sequence.
               </h2>
               <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-                The same step-by-step sequences homeowners see, so you can walk a client through
+                The same step-by-step order homeowners see, so you can walk a client through
                 the work.
               </p>
             </Reveal>
@@ -107,7 +107,7 @@ export default function RealtorsResourcesPage() {
           <Reveal>
             <p className="eyebrow text-muted-foreground">Partner benefits</p>
             <h2 id="benefits-heading" className="font-display t-lg mt-4 max-w-[16ch]">
-              What you get for sending the work.
+              What you get when you send us the work.
             </h2>
           </Reveal>
           <ul className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -134,8 +134,8 @@ export default function RealtorsResourcesPage() {
               Refer a project.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Tell us who you are and the kind of work you send. We will follow up with how a
-              partnership would actually run. We do not publish a fee schedule.
+              Tell us who you are and the kind of work you send. We will call you back and explain how a
+              partnership would actually run. Fees are part of that conversation. We do not post a rate sheet.
             </p>
           </Reveal>
           <div className="lg:col-span-7">
