@@ -212,8 +212,10 @@ export default async function ServicePage({
           { name: service.name, path },
         ]}
       >
-        <p className="mt-8 text-[0.72rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Serving Houston since {site.founded}
+        <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
+          {service.emergency
+            ? `Family-owned in Houston since ${site.founded}. If water is still coming in, call ${site.phone.display}.`
+            : `Family-owned in Houston since ${site.founded}. Call ${site.phone.display} for a free estimate.`}
         </p>
         {service.emergency && (
           <Reveal

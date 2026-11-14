@@ -61,10 +61,10 @@ const certainteedEn: BrandPage = {
   esPath: "/es/certainteed-roofing-houston",
   metaTitle: "CertainTeed Roofing Houston",
   description:
-    "CertainTeed shingle roofing in Houston: Landmark replacement, hail and storm re-roofs, and claim photos. Call (713) 909-0034.",
+    "CertainTeed shingle roofing in Houston, including Landmark after hail or wind. Family-owned since 1993. Free estimates. Call (713) 909-0034.",
   eyebrow: "CertainTeed shingles",
   title: ["CertainTeed roofing", "in Houston."],
-  lede: `CertainTeed shingle roofing in Houston is usually a Landmark architectural shingle: a replacement, a re-roof after hail or wind, or a roof tied to an insurance claim. Elite Restorations installs these products. We have been family-owned in Houston since 1993. If water is coming in, call ${phone}.`,
+  lede: `Ready for a new CertainTeed roof in Houston? Elite Restorations installs CertainTeed architectural shingles for full replacements and re-roofs after hail or wind damage, and we document everything for your insurance claim. CertainTeed has been making roofing products since 1904, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Roofing", path: "/roofing" },
@@ -74,7 +74,7 @@ const certainteedEn: BrandPage = {
   serviceName: "CertainTeed roofing in Houston",
   relatedHeading: "Neighborhoods and related roofing",
   ctaTitle: "Planning a CertainTeed roof?",
-  ctaBody: `Call ${phone} and we will look at the roof you have. If water is coming in, call any time. We install the shingles. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the roof you have. The estimate is free. We install the shingles. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The shingles",
@@ -121,14 +121,14 @@ const certainteedEn: BrandPage = {
       heading: "Wind, hail, and what we will not promise.",
       paragraphs: [
         "CertainTeed's literature describes wind resistance for Landmark shingles, including a published 110 mph figure and a higher figure, up to 160 mph in that literature, when CertainTeed starter and hip-and-ridge are used. Read the current sheet. Those figures assume the instructions were followed. They describe the product. They are not a promise about one Houston storm, and they are not something we unlock.",
-        `We install the nailing pattern in the instructions, starter at the eaves, and hip and ridge. Wind-driven rain in Memorial, Bellaire, and West University usually enters at a valley, a rake, or the metal against brick, not through the middle of an intact slope. Class 4 and Class 3 are reasons to pick a line, not a forecast. Any insurer credit for an impact-rated roof is between you and that insurer. The office is at 511 Crestwater Ct, Houston, TX 77082, Monday through Saturday, 8:00 AM to 6:00 PM. For an open roof, call ${phone} any time.`,
+        `We install the nailing pattern in the instructions, starter at the eaves, and hip and ridge. Wind-driven rain in Memorial, Bellaire, and West University usually enters at a valley, a rake, or the metal against brick, not through the middle of an intact slope. Class 4 and Class 3 are reasons to pick a line, not a forecast. Any insurer credit for an impact-rated roof is between you and that insurer. The office is at 511 Crestwater Ct, Houston, TX 77082, Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate.`,
       ],
     },
   ],
   faqs: [
     {
       q: "Do you install CertainTeed shingles in Houston?",
-      a: `Yes. We install CertainTeed asphalt shingles, including Landmark, Landmark PRO, and Landmark ClimateFlex. We install the products. Call ${phone} to have the roof you have looked at.`,
+      a: `Yes. We install CertainTeed asphalt shingles, including Landmark, Landmark PRO, and Landmark ClimateFlex. Call ${phone} and we will look at the roof you have. The estimate is free.`,
     },
     {
       q: "Which Landmark line do people ask about after Houston hail?",
@@ -179,10 +179,10 @@ const hardieEn: BrandPage = {
   esPath: "/es/james-hardie-siding-houston",
   metaTitle: "James Hardie Siding Houston",
   description:
-    "James Hardie fiber cement siding in Houston: HardiePlank, HardieTrim, ColorPlus, and hail or rot repair. Call (713) 909-0034.",
+    "James Hardie siding in Houston: HardiePlank, HardieTrim, and ColorPlus on the wall you have. Free estimates. Call (713) 909-0034.",
   eyebrow: "James Hardie",
   title: ["James Hardie siding", "in Houston."],
-  lede: `James Hardie siding in Houston is fiber-cement board on the wall the street sees: HardiePlank lap siding, HardieTrim at the corners and windows, and either paint or ColorPlus. Elite Restorations installs these products. We have been family-owned in Houston since 1993. Call ${phone}.`,
+  lede: `Thinking about James Hardie siding in Houston? Elite Restorations installs HardiePlank lap siding and HardieTrim, finished in paint or ColorPlus, for a durable fiber cement exterior that stands up to Houston weather. James Hardie has been in business since 1888, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Siding", path: "/siding" },
@@ -192,13 +192,13 @@ const hardieEn: BrandPage = {
   serviceName: "James Hardie siding in Houston",
   relatedHeading: "Neighborhoods and related exterior work",
   ctaTitle: "Planning James Hardie siding?",
-  ctaBody: `Call ${phone} for a look at the wall. If the wall is open and water is coming in, call any time. We install the boards. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will walk the wall with you. The estimate is free. We install the boards. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The boards",
       heading: "HardiePlank, HardieTrim, and ColorPlus.",
       paragraphs: [
-        "HardiePlank is lap siding, the overlapping rows. The boards are commonly 12 feet long, in several widths, so the exposure can match a ranch in Sugar Land or a taller wall in Memorial. HardieTrim is the board at corners, windows, doors, and the edges that make the wall look finished. We do not use HardiePlank as trim or as fascia. ColorPlus is James Hardie's factory-applied baked finish. Primed HardiePlank is painted on the house. We install these products. That is the work. It is not a credential.",
+        "HardiePlank goes on in overlapping rows. The boards are commonly 12 feet long, in several widths, so the exposure can match a ranch in Sugar Land or a taller wall in Memorial. HardieTrim finishes the corners, windows, doors, and the edges that make the wall look finished. We do not use HardiePlank as trim or as fascia. ColorPlus comes with James Hardie's factory-applied baked finish. Primed HardiePlank is painted on the house. We install these boards on your wall. That is what you are hiring us to do.",
         "Fiber cement is cement and cellulose fiber. It does not rot the way pine does when the bottom row stays wet, and it is not food for termites the way wood is. That is why people ask for it in this humidity. It does not make the house termite-proof, and it does not replace flashing or a water-resistive barrier. We look behind the damage before we order a match.",
       ],
     },
@@ -239,18 +239,18 @@ const hardieEn: BrandPage = {
       heading: "What to expect, and how long the wall takes.",
       paragraphs: [
         `A matched section is often a day or two once the boards are here. A one-story house with HardieTrim is often several days after the material arrives. Two stories, many windows, and rotten sheathing add days. A ColorPlus color that must be ordered is a lead time before those days. A whole-house re-side in the City of Houston can require a permit. A small repair often does not. Bellaire, West University, Sugar Land, Katy, and The Woodlands are different counters. We check the address.`,
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If the wall is open and water is coming in, call ${phone} any time. Text the same number if you cannot talk. We are family-owned here since 1993. The visit is at the house, in Houston and in the cities linked below, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University.`,
+        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate, or text the same number if you cannot talk. We are family-owned here since 1993. The visit is at the house, in Houston and in the cities linked below, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University.`,
       ],
     },
   ],
   faqs: [
     {
       q: "Do you install James Hardie siding in Houston?",
-      a: `Yes. We install James Hardie fiber cement, including HardiePlank lap siding and HardieTrim, with ColorPlus or paint. We install the products. Call ${phone} to look at the wall.`,
+      a: `Yes. We install James Hardie fiber cement, including HardiePlank lap siding and HardieTrim, with ColorPlus or paint. Call ${phone} and we will look at the wall. The estimate is free.`,
     },
     {
       q: "Is HardiePlank the same as board-and-batten?",
-      a: "No. HardiePlank is the lap, the overlapping rows. Board-and-batten is a different profile and a different shadow. We decide the pattern with you before the first course goes up.",
+      a: "No. HardiePlank goes on in overlapping rows. Board-and-batten is a different profile and a different shadow. We decide the pattern with you before the first course goes up.",
     },
     {
       q: "Can you replace rotted wood siding with fiber cement?",
@@ -262,7 +262,7 @@ const hardieEn: BrandPage = {
     },
     {
       q: "Should I choose ColorPlus or have the siding painted?",
-      a: "ColorPlus is the factory baked finish. Primed board is painted on site, which helps when you need a color the factory sheet does not have. Both fade in Houston sun. We look at a sample outside.",
+      a: "ColorPlus comes with a factory baked finish. Primed board is painted on site, which helps when you need a color the factory sheet does not have. Both fade in Houston sun. We look at a sample outside.",
     },
     {
       q: "Can you repair hail-damaged siding instead of re-siding the house?",
@@ -295,10 +295,10 @@ const certainteedEs: BrandPage = {
   esPath: "/es/certainteed-roofing-houston",
   metaTitle: "Techos CertainTeed en Houston",
   description:
-    "Techos CertainTeed en Houston: líneas Landmark, granizo, viento y fotos para su reclamo. Llame al (713) 909-0034.",
+    "Techos CertainTeed en Houston, incluida teja Landmark después de granizo o viento. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Teja CertainTeed",
   title: ["Techos CertainTeed", "en Houston."],
-  lede: `Un techo CertainTeed en Houston suele ser teja arquitectónica Landmark: un cambio completo, un techo después de granizo o viento, o un techo ligado a un reclamo. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Si entra agua, llame al ${phone}.`,
+  lede: `¿Listo para un techo CertainTeed nuevo en Houston? Elite Restorations instala teja arquitectónica CertainTeed en cambios completos y después de granizo o viento, y documentamos todo para su reclamo. CertainTeed fabrica techos desde 1904, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Techos", path: "/es/roofing" },
@@ -308,7 +308,7 @@ const certainteedEs: BrandPage = {
   serviceName: "Techos CertainTeed en Houston",
   relatedHeading: "Vecindarios y techos relacionados",
   ctaTitle: "¿Planea un techo CertainTeed?",
-  ctaBody: `Llame al ${phone} y vemos el techo que tiene. Si entra agua, llame a cualquier hora. Instalamos la teja. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos el techo que tiene. El estimado es gratis. Instalamos la teja. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "La teja",
@@ -355,14 +355,14 @@ const certainteedEs: BrandPage = {
       heading: "Viento y granizo, sin una promesa.",
       paragraphs: [
         "La literatura de CertainTeed describe la resistencia al viento de Landmark, con una cifra de 110 mph y otra más alta, hasta 160 mph en esa literatura, cuando el arranque y la cumbrera son de CertainTeed. Lea la hoja actual. Esas cifras suponen que se siguieron las instrucciones. Describen el producto. No son una promesa sobre una tormenta de Houston, y no son algo que nosotros desbloqueamos.",
-        `Instalamos el clavado de las instrucciones, el arranque y la cumbrera. La lluvia con viento en Memorial, Bellaire y West University suele entrar por un valle, un borde o el metal contra el ladrillo. La Clase 4 y la Clase 3 son razones para elegir una línea, no un pronóstico. Un crédito de la aseguradora, si existe, es entre usted y ellos. La oficina está en 511 Crestwater Ct, Houston, TX 77082, de lunes a sábado, de 8:00 AM a 6:00 PM. Si el techo está abierto, llame al ${phone} a cualquier hora.`,
+        `Instalamos el clavado de las instrucciones, el arranque y la cumbrera. La lluvia con viento en Memorial, Bellaire y West University suele entrar por un valle, un borde o el metal contra el ladrillo. La Clase 4 y la Clase 3 son razones para elegir una línea, no un pronóstico. Un crédito de la aseguradora, si existe, es entre usted y ellos. La oficina está en 511 Crestwater Ct, Houston, TX 77082, de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis.`,
       ],
     },
   ],
   faqs: [
     {
       q: "¿Instalan teja CertainTeed en Houston?",
-      a: `Sí. Instalamos teja de asfalto CertainTeed, incluidas Landmark, Landmark PRO y Landmark ClimateFlex. Instalamos los productos. Llame al ${phone} para ver el techo que tiene.`,
+      a: `Sí. Instalamos teja de asfalto CertainTeed, incluidas Landmark, Landmark PRO y Landmark ClimateFlex. Llame al ${phone} y vemos el techo que tiene. El estimado es gratis.`,
     },
     {
       q: "¿Qué línea Landmark piden después del granizo en Houston?",
@@ -413,10 +413,10 @@ const hardieEs: BrandPage = {
   esPath: "/es/james-hardie-siding-houston",
   metaTitle: "Siding James Hardie en Houston",
   description:
-    "Siding James Hardie en Houston: HardiePlank, HardieTrim, ColorPlus y reparación por granizo o pudrición. Llame al (713) 909-0034.",
+    "Siding James Hardie en Houston: HardiePlank, HardieTrim y ColorPlus en la pared que ya tiene. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "James Hardie",
   title: ["Siding James Hardie", "en Houston."],
-  lede: `El siding James Hardie en Houston es tabla de fibrocemento en la pared que ve la calle: HardiePlank en hileras, HardieTrim en esquinas y ventanas, y pintura o ColorPlus. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}.`,
+  lede: `¿Está pensando en siding James Hardie en Houston? Elite Restorations instala HardiePlank en hileras y HardieTrim, con pintura o ColorPlus, para un exterior de fibrocemento que aguante el clima de Houston. James Hardie existe desde 1888, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Siding", path: "/es/siding" },
@@ -426,13 +426,13 @@ const hardieEs: BrandPage = {
   serviceName: "Siding James Hardie en Houston",
   relatedHeading: "Vecindarios y exterior relacionado",
   ctaTitle: "¿Planea siding James Hardie?",
-  ctaBody: `Llame al ${phone} para ver la pared. Si la pared está abierta y entra agua, llame a cualquier hora. Instalamos las tablas. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y caminamos la pared con usted. El estimado es gratis. Instalamos las tablas. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "Las tablas",
       heading: "HardiePlank, HardieTrim y ColorPlus.",
       paragraphs: [
-        "HardiePlank es el siding de traslape, las hileras que se montan una sobre otra. Las tablas suelen medir 12 pies, en varios anchos, para que la parte visible coincida con un rancho en Sugar Land o con un muro más alto en Memorial. HardieTrim es la tabla de esquinas, ventanas, puertas y los bordes que hacen que la pared se vea terminada. No usamos HardiePlank como moldura ni como fascia. ColorPlus es el acabado horneado de fábrica de James Hardie. El HardiePlank con primario se pinta en la casa. Instalamos estos productos. Ese es el trabajo. No es una credencial.",
+        "El HardiePlank va en hileras, una sobre otra. Las tablas suelen medir 12 pies, en varios anchos, para que la parte visible coincida con un rancho en Sugar Land o con un muro más alto en Memorial. El HardieTrim remata las esquinas, las ventanas, las puertas y los bordes que hacen que la pared se vea terminada. No usamos HardiePlank como moldura ni como fascia. ColorPlus trae el acabado horneado de fábrica de James Hardie. El HardiePlank con primario se pinta en la casa. Instalamos estas tablas en su pared. Para eso nos contrata.",
         "El fibrocemento es cemento y fibra de celulosa. No se pudre como el siding de pino cuando un aspersor o la tierra mantienen mojada la hilera de abajo, y no es comida para las termitas como lo es la madera. Por eso lo piden en esta humedad. No vuelve la casa a prueba de termitas, y no reemplaza el metal que saca el agua ni una barrera contra el agua. Una tabla nueva sobre un muro mojado sigue siendo un muro mojado. Vemos detrás del daño antes de pedir un igualado.",
       ],
     },
@@ -473,18 +473,18 @@ const hardieEs: BrandPage = {
       heading: "Qué puede esperar, y cuánto tarda la pared.",
       paragraphs: [
         `Un tramo igualado suele ser un día o dos cuando las tablas ya están aquí. Una casa de un piso, con HardieTrim, suele ser varios días de instalación después de que llega el material. Dos pisos, muchas ventanas, gabletes y triplay podrido añaden días. Un color ColorPlus que hay que pedir es un tiempo de espera antes de esos días. Separamos la espera del trabajo en el muro cuando hablamos. Cambiar el siding de toda una casa en la ciudad de Houston puede pedir permiso. Una reparación chica muchas veces no. Bellaire, West University, Sugar Land y los condados de Katy y The Woodlands son mostradores distintos. Confirmamos la dirección.`,
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si la pared está abierta y entra agua, llame al ${phone} a cualquier hora. Envíe un texto al mismo número si no puede hablar. Somos una empresa familiar aquí desde 1993. La visita es en la casa, en Houston y en las ciudades de abajo, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University.`,
+        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis, o envíe un texto al mismo número si no puede hablar. Somos una empresa familiar aquí desde 1993. La visita es en la casa, en Houston y en las ciudades de abajo, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University.`,
       ],
     },
   ],
   faqs: [
     {
       q: "¿Instalan siding James Hardie en Houston?",
-      a: `Sí. Instalamos fibrocemento James Hardie, incluido HardiePlank y HardieTrim, con ColorPlus o pintura. Instalamos los productos. Llame al ${phone} para ver la pared.`,
+      a: `Sí. Instalamos fibrocemento James Hardie, incluido HardiePlank y HardieTrim, con ColorPlus o pintura. Llame al ${phone} y vemos la pared. El estimado es gratis.`,
     },
     {
       q: "¿HardiePlank es lo mismo que board-and-batten?",
-      a: "No. HardiePlank es el traslape, las hileras. Board-and-batten es otro perfil y otra sombra. El patrón se decide con usted antes de la primera hilera.",
+      a: "No. El HardiePlank va en hileras, una sobre otra. Board-and-batten es otro perfil y otra sombra. El patrón se decide con usted antes de la primera hilera.",
     },
     {
       q: "¿Pueden cambiar siding de madera podrida por fibrocemento?",
@@ -496,7 +496,7 @@ const hardieEs: BrandPage = {
     },
     {
       q: "¿Conviene ColorPlus o pintar el siding?",
-      a: "ColorPlus es el acabado horneado de fábrica. La tabla con primario se pinta en el sitio, y sirve cuando el color que necesita no está en la hoja de fábrica. Los dos se destiñen con el sol de Houston. La muestra se ve afuera.",
+      a: "ColorPlus trae el acabado horneado de fábrica. La tabla con primario se pinta en el sitio, y sirve cuando el color que necesita no está en la hoja de fábrica. Los dos se destiñen con el sol de Houston. La muestra se ve afuera.",
     },
     {
       q: "¿Pueden reparar siding dañado por granizo sin cambiar toda la casa?",

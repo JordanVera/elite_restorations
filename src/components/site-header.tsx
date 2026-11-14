@@ -58,7 +58,7 @@ export function SiteHeader() {
         overHomeHero && 'text-white dark:text-foreground',
       )}
     >
-      <div className="gutter mx-auto flex h-20 max-w-[120rem] items-center justify-between gap-6">
+      <div className="gutter mx-auto flex h-20 max-w-[120rem] items-center justify-between gap-3 sm:gap-6">
         <Link
           href={es ? '/es' : '/'}
           aria-label="Elite Restorations, home"
@@ -86,7 +86,7 @@ export function SiteHeader() {
           </NavigationMenu.List>
         </NavigationMenu.Root>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <a
             href={site.phone.href}
             className="inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap text-[0.8rem] tracking-wide transition-colors hover:text-accent-ink lg:hidden 2xl:inline-flex 2xl:min-w-0 2xl:justify-start"
@@ -103,7 +103,7 @@ export function SiteHeader() {
           >
             {es ? 'Envíanos un texto' : 'Text us'}
           </a>
-          <LanguageSwitch className="hidden sm:inline-flex" />
+          <LanguageSwitch className="inline-flex" />
           <ThemeToggle className="hidden sm:inline-flex cursor-pointer" />
           <Button
             asChild

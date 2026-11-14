@@ -16,6 +16,14 @@ export type EsHub = {
 
 const phone = "(713) 909-0034";
 
+const claimHubs = new Set<EsHub["slug"]>([
+  "roofing",
+  "roof-replacement",
+  "roofing-emergency-tarp-repair",
+  "water-damage-restoration",
+  "insurance-claims",
+]);
+
 function hub(
   slug: EsHub["slug"],
   metaTitle: string,
@@ -30,7 +38,7 @@ function hub(
     metaTitle,
     name,
     eyebrow,
-    description: `${name} en Houston. Somos una empresa familiar desde 1993. Llame al ${phone}.`,
+    description: `${name} en Houston. Empresa familiar desde 1993. El estimado es gratis. Llame al ${phone}.`,
     lede,
     sections: [
       {
@@ -43,7 +51,9 @@ function hub(
         heading: "Qué puede esperar",
         paragraphs: [
           `Vemos la casa o el edificio, le decimos qué hace falta y qué puede quedarse, y lo escribimos antes de quitar de más. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Elite Restorations es una empresa familiar desde 1993.`,
-          `Si hay seguro de por medio, ayudamos con fotos, un estimado de la reparación y, si usted quiere, estamos cuando llegue el ajustador. La aseguradora decide si paga. Nosotros no somos ajustadores públicos. Revise su póliza, y llame o envíe un texto al ${phone}.`,
+          claimHubs.has(slug)
+            ? `Si hay seguro de por medio, ayudamos con fotos, un estimado de la reparación y, si usted quiere, estamos cuando llegue el ajustador. La aseguradora decide si paga. Nosotros no somos ajustadores públicos. Revise su póliza, y llame o envíe un texto al ${phone}.`
+            : `El estimado es gratis. Llame o envíe un texto al ${phone} y agendamos la visita, de lunes a sábado. Si el trabajo no le conviene, se lo decimos en la casa, antes de empezar.`,
         ],
       },
     ],
@@ -51,7 +61,9 @@ function hub(
       ...faqs,
       {
         q: "¿Atienden casas, comercios y apartamentos?",
-        a: `Sí en emergencia de tormenta y de agua. Para una visita programada, la oficina abre de lunes a sábado, de 8:00 AM a 6:00 PM. El teléfono de emergencia es el ${phone}.`,
+        a: claimHubs.has(slug)
+          ? `Sí en emergencia de tormenta y de agua. Para una visita programada, la oficina abre de lunes a sábado, de 8:00 AM a 6:00 PM. Si sigue entrando agua, llame al ${phone}.`
+          : `Sí. Una visita programada es de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} y le decimos el siguiente paso. El estimado es gratis.`,
       },
       {
         q: "¿Deciden si el seguro paga?",
