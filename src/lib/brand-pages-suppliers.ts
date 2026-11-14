@@ -31,7 +31,7 @@ const abcEn = {
     "ABC Supply roofing and siding in Houston. We buy the materials and install the roof, wall, or gutters. Free estimates. Call (713) 909-0034.",
   eyebrow: "ABC Supply",
   title: ["ABC Supply roofing", "and siding."],
-  lede: `ABC Supply roofing and siding in Houston is the material on the house and the work that puts it there: a replacement, a repair, new siding, or gutters. ABC Supply has been supplying those materials since 1982. Elite Restorations buys these products from ABC Supply Co. and installs them. We have been family-owned in Houston since 1993. Call ${phone} and we will look at the roof or the wall. The estimate is free.`,
+  lede: `Need roofing or siding work in Houston? Elite Restorations buys quality roofing, siding and gutter materials from ABC Supply and installs them on your home, whether it's a full replacement, a repair, new siding or new gutters. ABC Supply has been supplying building materials since 1982, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Roofing", path: "/roofing" },
@@ -48,7 +48,7 @@ const abcEn = {
       heading: "What we buy from ABC Supply Co.",
       paragraphs: [
         "Homeowners searching for an ABC Supply roofing contractor in Houston are usually looking for the company that will buy the shingles and put them on the house. ABC Supply Co. is a wholesale supplier of roofing and exterior products. Branches around Houston sell to contractors. The materials include architectural asphalt shingles, underlayment, starter, hip and ridge, flashing and vent metal, gutters, downspouts, and siding. Elite Restorations buys those materials from ABC Supply and installs them. We are the contractor on the house. You do not have to open an account at the branch.",
-        "Orders go to Houston-area branches, including the roofing yards and a gutter-and-siding branch at 14904 North Freeway. Published hours there have been weekday mornings into the afternoon. Hours change, and a branch can be out of a color, so we confirm what is actually on the shelf before a tear-off or a siding day is scheduled. Roofing and siding installation in Houston, with these materials, is the work on this page. ABC Supply is a trademark of its owner. Elite Restorations is an independent contractor and is not affiliated with ABC Supply.",
+        "Orders go to Houston-area branches, including the roofing yards and a gutter-and-siding branch at 14904 North Freeway. Published hours there have been weekday mornings into the afternoon. Hours change, and a branch can be out of a color, so we confirm what is actually on the shelf before a tear-off or a siding day is scheduled. On this page, we buy those roofing and siding materials from ABC Supply and install them on your house. ABC Supply is a trademark of its owner. Elite Restorations is an independent contractor and is not affiliated with ABC Supply.",
       ],
     },
     {
@@ -146,7 +146,7 @@ const fergusonEn = {
     "Ferguson fixture installation in Houston for kitchens and baths. We buy the fixtures and set them. Free estimates. Call (713) 909-0034.",
   eyebrow: "Ferguson",
   title: ["Ferguson fixtures", "in Houston."],
-  lede: `Ferguson fixtures installation in Houston is the faucet, the sink, the toilet, the shower, the tub, the water heater, or the appliance you use every day, set during a kitchen remodel, a bathroom remodel, or after a leak has been dried out. Ferguson has been supplying plumbing products since 1953. Elite Restorations buys these products from Ferguson and installs them. We have been family-owned in Houston since 1993. Call ${phone} for a free estimate.`,
+  lede: `Upgrading your kitchen or bathroom in Houston? Elite Restorations buys faucets, sinks, toilets, showers, tubs, water heaters and appliances from Ferguson and installs them during remodels or after leak repairs. Ferguson has been supplying plumbing products since 1953, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Bathrooms", path: "/bathroom-remodeling" },
@@ -260,7 +260,7 @@ const abcEs = {
     "Techos y siding ABC Supply en Houston. Compramos el material e instalamos el techo, el muro o las canaletas. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "ABC Supply",
   title: ["Techos y siding", "ABC Supply."],
-  lede: `Los techos y el siding ABC Supply en Houston son el material de la casa y el trabajo que lo deja puesto: un cambio de techo, una reparación, siding nuevo o canaletas. ABC Supply surte esos materiales desde 1982. Elite Restorations los compra en ABC Supply Co. y los instala. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y vemos el techo o el muro. El estimado es gratis.`,
+  lede: `¿Necesita trabajo de techo o de siding en Houston? Elite Restorations compra materiales de techo, siding y canaletas en ABC Supply Co. y los instala en su casa, ya sea un cambio completo, una reparación, siding nuevo o canaletas nuevas. ABC Supply surte materiales de construcción desde 1982, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Techos", path: "/es/roofing" },
@@ -277,7 +277,7 @@ const abcEs = {
       heading: "Qué compramos en ABC Supply Co.",
       paragraphs: [
         "Quien busca un contratista de techos ABC Supply en Houston suele buscar a quien compra la teja y la pone en la casa. ABC Supply Co. es un proveedor mayorista de techos y productos de exterior. Las sucursales del área de Houston venden a contratistas. El material incluye teja arquitectónica de asfalto, fieltro o sintética de base, arranque, cumbrera, metal de valles y tubos, canaletas, bajantes y siding. Elite Restorations compra ese material en ABC Supply y lo instala. Nosotros somos el contratista en la casa.",
-        "Los pedidos van a sucursales del área de Houston, incluidos los patios de techo y una sucursal de canaletas y siding en 14904 North Freeway. El horario que han publicado ahí ha sido por la mañana y hasta la tarde, entre semana. Los horarios cambian, y una sucursal puede no tener un color, así que confirmamos lo que de verdad hay antes de agendar el día de quitar el techo o el día del siding. La instalación de techos y siding en Houston, con este material, es el trabajo de esta página. ABC Supply es una marca de su dueño. Elite Restorations es un contratista independiente y no está afiliado a ABC Supply.",
+        "Los pedidos van a sucursales del área de Houston, incluidos los patios de techo y una sucursal de canaletas y siding en 14904 North Freeway. El horario que han publicado ahí ha sido por la mañana y hasta la tarde, entre semana. Los horarios cambian, y una sucursal puede no tener un color, así que confirmamos lo que de verdad hay antes de agendar el día de quitar el techo o el día del siding. En esta página compramos ese material de techo y de siding en ABC Supply y lo instalamos en su casa. ABC Supply es una marca de su dueño. Elite Restorations es un contratista independiente y no está afiliado a ABC Supply.",
       ],
     },
     {
@@ -374,7 +374,7 @@ const fergusonEs = {
     "Instalación de accesorios Ferguson en Houston para cocinas y baños. Compramos las piezas y las ponemos. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Ferguson",
   title: ["Accesorios Ferguson", "en Houston."],
-  lede: `La instalación de accesorios Ferguson en Houston es la llave, el fregadero, el inodoro, la regadera, la tina, el calentador o el aparato que se usa todos los días, en una remodelación de cocina, de baño, o después de secar una fuga. Ferguson surte productos de plomería desde 1953. Elite Restorations compra estos productos en Ferguson y los instala. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}. El estimado es gratis.`,
+  lede: `¿Va a renovar la cocina o el baño en Houston? Elite Restorations compra llaves, fregaderos, inodoros, regaderas, tinas, calentadores y aparatos en Ferguson y los instala en la remodelación o después de reparar una fuga. Ferguson surte productos de plomería desde 1953, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Baños", path: "/es/bathroom-remodeling" },

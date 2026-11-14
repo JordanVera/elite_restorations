@@ -32,7 +32,7 @@ const sherwinEn = {
     "Sherwin-Williams painting in Houston for walls, trim, and sun-faded siding. Family-owned since 1993. Free estimates. Call (713) 909-0034.",
   eyebrow: "Sherwin-Williams",
   title: ["Sherwin-Williams painting", "in Houston."],
-  lede: `Sherwin-Williams painting in Houston is the color on the walls and trim inside, and on the siding, stucco, doors, and fascia the sun hits outside. Sherwin-Williams has been making paint since 1866. Elite Restorations uses these paints. We have been family-owned in Houston since 1993. If the color is tired, or a repair needs to disappear, call ${phone}. We will look at the rooms, and the estimate is free.`,
+  lede: `Need Sherwin-Williams painting in Houston? Elite Restorations paints interiors and exteriors with Sherwin-Williams paints, from walls and trim to siding, stucco, doors and fascia. Sherwin-Williams has been making paint since 1866, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Painting", path: "/painting-drywall-repair" },
@@ -49,7 +49,7 @@ const sherwinEn = {
       heading: "Duration, Emerald, SuperPaint, and ProClassic.",
       paragraphs: [
         "Duration, Emerald, SuperPaint, and ProClassic are the Sherwin-Williams lines we put on Houston houses. Duration is the exterior acrylic people ask for when siding, stucco, and trim take full sun and Gulf humidity. Emerald is the higher interior paint, and Sherwin-Williams also makes an Emerald exterior for a wall you want smoother and easier to wash. SuperPaint is the practical interior and exterior when a whole house needs a solid coat. ProClassic is the enamel for doors, trim, and cabinets, where brush marks show and the film has to be harder than a wall paint.",
-        "We look at the surface before we name a line. A chalking south wall, a mildewed north wall, new fiber cement, and a patched living room are not the same paint job. Color is chosen outside, in daylight, against the brick or the siding, because a chip under a kitchen light will lie to you. Sherwin-Williams and Floor & Decor are trademarks of their owners, and we are an independent contractor. We use these paints. That is the work.",
+        "We look at the surface before we name a line. A chalking south wall, a mildewed north wall, new fiber cement, and a patched living room are not the same paint job. Color is chosen outside, in daylight, against the brick or the siding, because a chip under a kitchen light will lie to you. Sherwin-Williams and Floor & Decor are trademarks of their owners, and we are an independent contractor. We use these paints on your house.",
       ],
     },
     {
@@ -146,7 +146,7 @@ const floorEn = {
     "Floor & Decor flooring installation in Houston: tile, luxury vinyl plank, wood, and laminate. Free estimates. Call (713) 909-0034.",
   eyebrow: "Floor & Decor",
   title: ["Floor & Decor flooring", "in Houston."],
-  lede: `Floor & Decor flooring installation in Houston is tile, luxury vinyl plank, wood, and laminate, set on the slab or the wood floor you already have. Floor & Decor has been selling flooring since 2000. Elite Restorations installs these products. We have been family-owned in Houston since 1993. Call ${phone} and tell us about the room. We will come look, and the estimate is free.`,
+  lede: `Looking for Floor & Decor flooring installation in Houston? Elite Restorations installs the tile, luxury vinyl plank, wood and laminate you pick out at Floor & Decor, with careful prep so your new floors look great and last. Floor & Decor has been selling flooring since 2000, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Vinyl flooring", path: "/vinyl-flooring" },
@@ -163,7 +163,7 @@ const floorEn = {
       heading: "Tile, LVP, wood, and laminate.",
       paragraphs: [
         "Floor & Decor sells the floors Houston houses are asking for: porcelain and ceramic tile, luxury vinyl plank, wood, and laminate. We install them. You can buy the material at the store and have us install it, or we can source it and put the product and the labor on one estimate. Either way we look at the boxes before the install is scheduled. Quantity, waste, the same dye lot, and whether that product belongs in a kitchen, a bath, or a bedroom are checked while a return is still easy.",
-        "Tile wants a flat substrate and the right mortar, and large pieces show every ridge in a slab. LVP is the wood-look plank that clicks together or glues down, and it is only as flat as the floor under it. Wood in this climate is usually engineered when it sits on concrete, and it has to acclimate in the house. Laminate is a floating floor with a pad, useful in bedrooms and living rooms, and a poor choice where water sits. Floor & Decor and Sherwin-Williams are trademarks of their owners, and we are an independent contractor.",
+        "Tile wants a flat substrate and the right mortar, and large pieces show every ridge in a slab. LVP clicks together or glues down, and it only looks as flat as the floor under it. Wood in this climate is usually engineered when it sits on concrete, and it has to acclimate in the house. Laminate floats on a pad. It works in bedrooms and living rooms, and it is a poor choice where water sits. Floor & Decor and Sherwin-Williams are trademarks of their owners, and we are an independent contractor.",
       ],
     },
     {
@@ -260,7 +260,7 @@ const stoneEn = {
     "Expo Stone countertops in Houston: granite, quartz, quartzite, and marble, cut to your cabinets. Free estimates. Call (713) 909-0034.",
   eyebrow: "Expo Stone",
   title: ["Expo Stone countertops", "in Houston."],
-  lede: `Expo Stone countertops in Houston are granite, quartz, quartzite, and marble for the kitchen or the bath, cut to the cabinets you already have. Elite Restorations uses this stone. We have been family-owned in Houston since 1993. Call ${phone}, tell us which room, and we will come measure. The estimate is free.`,
+  lede: `Want new countertops in Houston? Elite Restorations installs quartz, granite, quartzite, and marble countertops from Expo Stone for kitchens and bathrooms, cut to fit the cabinets you already have. We've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Countertops", path: "/countertops" },
@@ -373,7 +373,7 @@ const sherwinEs = {
     "Pintura Sherwin-Williams en Houston para paredes, moldura y siding al sol. Empresa familiar desde 1993. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Sherwin-Williams",
   title: ["Pintura Sherwin-Williams", "en Houston."],
-  lede: `La pintura Sherwin-Williams en Houston es el color de las paredes y la moldura de adentro, y del siding, el estuco, las puertas y la fascia que el sol pega afuera. Sherwin-Williams fabrica pintura desde 1866. Elite Restorations usa estas pinturas. Somos una empresa familiar en Houston desde 1993. Si el color ya se ve cansado, o un parche tiene que desaparecer, llame al ${phone}. Vemos los cuartos y el estimado es gratis.`,
+  lede: `¿Necesita pintura Sherwin-Williams en Houston? Elite Restorations pinta interiores y exteriores con pinturas Sherwin-Williams, desde las paredes y la moldura hasta el siding, el estuco, las puertas y la fascia. Sherwin-Williams fabrica pintura desde 1866, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Pintura", path: "/es/painting-drywall-repair" },
@@ -390,7 +390,7 @@ const sherwinEs = {
       heading: "Duration, Emerald, SuperPaint y ProClassic.",
       paragraphs: [
         "Duration, Emerald, SuperPaint y ProClassic son las líneas Sherwin-Williams que ponemos en las casas de Houston. Duration es el acrílico de exterior que piden cuando el siding, el estuco y la moldura reciben sol pleno y la humedad del Golfo. Emerald es la pintura interior más alta, y Sherwin-Williams también hace un Emerald de exterior para un muro que quiere más lavable. SuperPaint es el interior y el exterior práctico cuando toda la casa necesita una mano pareja. ProClassic es el esmalte para puertas, moldura y gabinetes, donde se ven los brochazos y la película tiene que ser más dura que una pintura de pared.",
-        "Vemos la superficie antes de nombrar una línea. Un muro sur que suelta polvo, un muro norte con moho, fibrocemento nuevo y una sala parchada no son el mismo trabajo. El color se elige afuera, de día, contra el ladrillo o el siding, porque una muestra bajo la luz de la cocina miente. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente. Usamos estas pinturas. Ese es el trabajo.",
+        "Vemos la superficie antes de nombrar una línea. Un muro sur que suelta polvo, un muro norte con moho, fibrocemento nuevo y una sala parchada no son el mismo trabajo. El color se elige afuera, de día, contra el ladrillo o el siding, porque una muestra bajo la luz de la cocina miente. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente. Usamos estas pinturas en su casa.",
       ],
     },
     {
@@ -487,7 +487,7 @@ const floorEs = {
     "Instalación de pisos Floor & Decor en Houston: loseta, duela de vinil, madera y laminado. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Floor & Decor",
   title: ["Pisos Floor & Decor", "en Houston."],
-  lede: `La instalación de pisos Floor & Decor en Houston es loseta, duela de vinil de lujo, madera y laminado, puestos sobre la losa o el piso de madera que ya tiene. Floor & Decor vende pisos desde 2000. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y cuéntenos del cuarto. Pasamos a verlo, y el estimado es gratis.`,
+  lede: `¿Busca instalación de pisos Floor & Decor en Houston? Elite Restorations instala la loseta, la duela de vinil de lujo, la madera y el laminado que usted escoge en Floor & Decor, con una preparación cuidadosa para que el piso nuevo se vea bien y dure. Floor & Decor vende pisos desde 2000, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Pisos de vinil", path: "/es/vinyl-flooring" },
@@ -504,7 +504,7 @@ const floorEs = {
       heading: "Loseta, LVP, madera y laminado.",
       paragraphs: [
         "Floor & Decor vende los pisos que piden las casas de Houston: loseta de porcelana y cerámica, duela de vinil de lujo (LVP), madera y laminado. Nosotros los instalamos. Usted puede comprar el material en la tienda y nosotros lo instalamos, o nosotros lo conseguimos y el producto y la mano de obra van en un solo estimado. De las dos formas vemos las cajas antes de agendar. La cantidad, el desperdicio, el mismo lote de color y si ese producto va en una cocina, un baño o una recámara se revisan mientras todavía es fácil devolver.",
-        "La loseta pide una base plana y el mortero correcto, y las piezas grandes enseñan cada lomo de la losa. El LVP es la duela que parece madera, que se ensambla o se pega, y queda tan plana como el piso de abajo. La madera en este clima suele ser de ingeniería cuando va sobre concreto, y tiene que aclimatarse en la casa. El laminado es un piso flotante con una colchoneta, útil en recámaras y salas, y mala idea donde el agua se queda. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente.",
+        "La loseta pide una base plana y el mortero correcto, y las piezas grandes enseñan cada lomo de la losa. El LVP se ensambla o se pega, y se ve tan plano como el piso de abajo. La madera en este clima suele ser de ingeniería cuando va sobre concreto, y tiene que aclimatarse en la casa. El laminado flota sobre una colchoneta. Sirve en recámaras y salas, y es mala idea donde el agua se queda. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente.",
       ],
     },
     {
@@ -527,7 +527,7 @@ const floorEs = {
       eyebrow: "La instalación",
       heading: "Ensamble, pegamento, mortero y los bordes.",
       paragraphs: [
-        "El LVP es un piso de ensamble, flotado sobre una base que el fabricante acepta, o una duela pegada. La caja lo dice. Seguimos eso, incluido el espacio de expansión en las paredes. Un piso de ensamble apretado por un marco de puerta o un gabinete se pandea en el primer mes de calor. El pegado necesita la prueba de humedad y una losa limpia. El laminado flota sobre su colchoneta, con transiciones en las puertas y donde el piso cambia de altura.",
+        "El LVP se ensambla y flota sobre una base que el fabricante acepta, o se pega. La caja lo dice. Seguimos eso, incluido el espacio de expansión en las paredes. Un piso de ensamble apretado por un marco de puerta o un gabinete se pandea en el primer mes de calor. El pegado necesita la prueba de humedad y una losa limpia. El laminado flota sobre su colchoneta, con transiciones en las puertas y donde el piso cambia de altura.",
         "La loseta se asienta en mortero, con líneas para que el patrón llegue a la puerta con una pieza decente en la entrada. La junta es parte del piso, y los cuartos húmedos llevan la junta que pide el producto. La madera se fija o se pega como permiten esa especie y esa losa, después de haber estado en la casa. Los inodoros y a veces los aparatos se quitan para que el piso pase por debajo. El zoclo de cuarto de caña y las transiciones son las últimas piezas, para que el borde se vea terminado contra el zoclo que usted tiene.",
       ],
     },
@@ -601,7 +601,7 @@ const stoneEs = {
     "Cubiertas Expo Stone en Houston: granito, cuarzo, cuarcita y mármol, cortados a sus gabinetes. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Expo Stone",
   title: ["Cubiertas Expo Stone", "en Houston."],
-  lede: `Las cubiertas Expo Stone en Houston son granito, cuarzo, cuarcita y mármol para la cocina o el baño, cortados a los gabinetes que ya tiene. Elite Restorations usa esta piedra. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}, díganos cuál cuarto, y lo medimos. El estimado es gratis.`,
+  lede: `¿Quiere cubiertas nuevas en Houston? Elite Restorations instala cubiertas de cuarzo, granito, cuarcita y mármol de Expo Stone para cocinas y baños, cortadas a los gabinetes que ya tiene. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Cubiertas", path: "/es/countertops" },

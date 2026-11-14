@@ -64,7 +64,7 @@ const certainteedEn: BrandPage = {
     "CertainTeed shingle roofing in Houston, including Landmark after hail or wind. Family-owned since 1993. Free estimates. Call (713) 909-0034.",
   eyebrow: "CertainTeed shingles",
   title: ["CertainTeed roofing", "in Houston."],
-  lede: `CertainTeed shingle roofing in Houston is usually a Landmark architectural shingle: a replacement, a re-roof after hail or wind, or a roof you want documented for a claim. CertainTeed has been making roofing products since 1904. Elite Restorations installs these products. We have been family-owned in Houston since 1993. Call ${phone} and we will look at the roof with you. The estimate is free.`,
+  lede: `Ready for a new CertainTeed roof in Houston? Elite Restorations installs CertainTeed architectural shingles for full replacements and re-roofs after hail or wind damage, and we document everything for your insurance claim. CertainTeed has been making roofing products since 1904, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Roofing", path: "/roofing" },
@@ -182,7 +182,7 @@ const hardieEn: BrandPage = {
     "James Hardie siding in Houston: HardiePlank, HardieTrim, and ColorPlus on the wall you have. Free estimates. Call (713) 909-0034.",
   eyebrow: "James Hardie",
   title: ["James Hardie siding", "in Houston."],
-  lede: `James Hardie siding in Houston is the fiber-cement wall the street sees: HardiePlank lap siding, HardieTrim at the corners and windows, finished in paint or ColorPlus. James Hardie has been in business since 1888. Elite Restorations installs these products. We have been family-owned in Houston since 1993. Call ${phone} and we will walk the wall with you. The estimate is free.`,
+  lede: `Thinking about James Hardie siding in Houston? Elite Restorations installs HardiePlank lap siding and HardieTrim, finished in paint or ColorPlus, for a durable fiber cement exterior that stands up to Houston weather. James Hardie has been in business since 1888, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Siding", path: "/siding" },
@@ -198,7 +198,7 @@ const hardieEn: BrandPage = {
       eyebrow: "The boards",
       heading: "HardiePlank, HardieTrim, and ColorPlus.",
       paragraphs: [
-        "HardiePlank is lap siding, the overlapping rows. The boards are commonly 12 feet long, in several widths, so the exposure can match a ranch in Sugar Land or a taller wall in Memorial. HardieTrim is the board at corners, windows, doors, and the edges that make the wall look finished. We do not use HardiePlank as trim or as fascia. ColorPlus is James Hardie's factory-applied baked finish. Primed HardiePlank is painted on the house. We install these products. That is the work. It is not a credential.",
+        "HardiePlank goes on in overlapping rows. The boards are commonly 12 feet long, in several widths, so the exposure can match a ranch in Sugar Land or a taller wall in Memorial. HardieTrim finishes the corners, windows, doors, and the edges that make the wall look finished. We do not use HardiePlank as trim or as fascia. ColorPlus comes with James Hardie's factory-applied baked finish. Primed HardiePlank is painted on the house. We install these boards on your wall. That is what you are hiring us to do.",
         "Fiber cement is cement and cellulose fiber. It does not rot the way pine does when the bottom row stays wet, and it is not food for termites the way wood is. That is why people ask for it in this humidity. It does not make the house termite-proof, and it does not replace flashing or a water-resistive barrier. We look behind the damage before we order a match.",
       ],
     },
@@ -250,7 +250,7 @@ const hardieEn: BrandPage = {
     },
     {
       q: "Is HardiePlank the same as board-and-batten?",
-      a: "No. HardiePlank is the lap, the overlapping rows. Board-and-batten is a different profile and a different shadow. We decide the pattern with you before the first course goes up.",
+      a: "No. HardiePlank goes on in overlapping rows. Board-and-batten is a different profile and a different shadow. We decide the pattern with you before the first course goes up.",
     },
     {
       q: "Can you replace rotted wood siding with fiber cement?",
@@ -262,7 +262,7 @@ const hardieEn: BrandPage = {
     },
     {
       q: "Should I choose ColorPlus or have the siding painted?",
-      a: "ColorPlus is the factory baked finish. Primed board is painted on site, which helps when you need a color the factory sheet does not have. Both fade in Houston sun. We look at a sample outside.",
+      a: "ColorPlus comes with a factory baked finish. Primed board is painted on site, which helps when you need a color the factory sheet does not have. Both fade in Houston sun. We look at a sample outside.",
     },
     {
       q: "Can you repair hail-damaged siding instead of re-siding the house?",
@@ -298,7 +298,7 @@ const certainteedEs: BrandPage = {
     "Techos CertainTeed en Houston, incluida teja Landmark después de granizo o viento. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Teja CertainTeed",
   title: ["Techos CertainTeed", "en Houston."],
-  lede: `Un techo CertainTeed en Houston suele ser teja arquitectónica Landmark: un cambio completo, un techo después de granizo o viento, o un techo que quiere dejar documentado para un reclamo. CertainTeed fabrica techos desde 1904. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y vemos el techo con usted. El estimado es gratis.`,
+  lede: `¿Listo para un techo CertainTeed nuevo en Houston? Elite Restorations instala teja arquitectónica CertainTeed en cambios completos y después de granizo o viento, y documentamos todo para su reclamo. CertainTeed fabrica techos desde 1904, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Techos", path: "/es/roofing" },
@@ -416,7 +416,7 @@ const hardieEs: BrandPage = {
     "Siding James Hardie en Houston: HardiePlank, HardieTrim y ColorPlus en la pared que ya tiene. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "James Hardie",
   title: ["Siding James Hardie", "en Houston."],
-  lede: `El siding James Hardie en Houston es la pared de fibrocemento que ve la calle: HardiePlank en hileras, HardieTrim en las esquinas y las ventanas, con pintura o ColorPlus. James Hardie existe desde 1888. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y caminamos la pared con usted. El estimado es gratis.`,
+  lede: `¿Está pensando en siding James Hardie en Houston? Elite Restorations instala HardiePlank en hileras y HardieTrim, con pintura o ColorPlus, para un exterior de fibrocemento que aguante el clima de Houston. James Hardie existe desde 1888, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Siding", path: "/es/siding" },
@@ -432,7 +432,7 @@ const hardieEs: BrandPage = {
       eyebrow: "Las tablas",
       heading: "HardiePlank, HardieTrim y ColorPlus.",
       paragraphs: [
-        "HardiePlank es el siding de traslape, las hileras que se montan una sobre otra. Las tablas suelen medir 12 pies, en varios anchos, para que la parte visible coincida con un rancho en Sugar Land o con un muro más alto en Memorial. HardieTrim es la tabla de esquinas, ventanas, puertas y los bordes que hacen que la pared se vea terminada. No usamos HardiePlank como moldura ni como fascia. ColorPlus es el acabado horneado de fábrica de James Hardie. El HardiePlank con primario se pinta en la casa. Instalamos estos productos. Ese es el trabajo. No es una credencial.",
+        "El HardiePlank va en hileras, una sobre otra. Las tablas suelen medir 12 pies, en varios anchos, para que la parte visible coincida con un rancho en Sugar Land o con un muro más alto en Memorial. El HardieTrim remata las esquinas, las ventanas, las puertas y los bordes que hacen que la pared se vea terminada. No usamos HardiePlank como moldura ni como fascia. ColorPlus trae el acabado horneado de fábrica de James Hardie. El HardiePlank con primario se pinta en la casa. Instalamos estas tablas en su pared. Para eso nos contrata.",
         "El fibrocemento es cemento y fibra de celulosa. No se pudre como el siding de pino cuando un aspersor o la tierra mantienen mojada la hilera de abajo, y no es comida para las termitas como lo es la madera. Por eso lo piden en esta humedad. No vuelve la casa a prueba de termitas, y no reemplaza el metal que saca el agua ni una barrera contra el agua. Una tabla nueva sobre un muro mojado sigue siendo un muro mojado. Vemos detrás del daño antes de pedir un igualado.",
       ],
     },
@@ -484,7 +484,7 @@ const hardieEs: BrandPage = {
     },
     {
       q: "¿HardiePlank es lo mismo que board-and-batten?",
-      a: "No. HardiePlank es el traslape, las hileras. Board-and-batten es otro perfil y otra sombra. El patrón se decide con usted antes de la primera hilera.",
+      a: "No. El HardiePlank va en hileras, una sobre otra. Board-and-batten es otro perfil y otra sombra. El patrón se decide con usted antes de la primera hilera.",
     },
     {
       q: "¿Pueden cambiar siding de madera podrida por fibrocemento?",
@@ -496,7 +496,7 @@ const hardieEs: BrandPage = {
     },
     {
       q: "¿Conviene ColorPlus o pintar el siding?",
-      a: "ColorPlus es el acabado horneado de fábrica. La tabla con primario se pinta en el sitio, y sirve cuando el color que necesita no está en la hoja de fábrica. Los dos se destiñen con el sol de Houston. La muestra se ve afuera.",
+      a: "ColorPlus trae el acabado horneado de fábrica. La tabla con primario se pinta en el sitio, y sirve cuando el color que necesita no está en la hoja de fábrica. Los dos se destiñen con el sol de Houston. La muestra se ve afuera.",
     },
     {
       q: "¿Pueden reparar siding dañado por granizo sin cambiar toda la casa?",
