@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Faq } from "@/components/faq";
+import { esRestorationFaqs } from "@/lib/faqs/es";
 import { PageHero } from "@/components/page-hero";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -69,6 +70,7 @@ export default function SpanishRestorationPage() {
                 q: "¿Hablan por la aseguradora?",
                 a: "Fotografiamos y reparamos lo que usted contrata. La aseguradora decide el pago. Nosotros no somos ajustadores públicos y no lo prometemos.",
               },
+              ...esRestorationFaqs,
             ]}
           />
         </div>

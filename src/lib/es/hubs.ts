@@ -1,3 +1,5 @@
+import { duplicateQuestions } from "@/lib/faqs";
+import { esServiceFaqs } from "@/lib/faqs/es";
 import type { GuideSection } from "@/lib/guides/types";
 import { spanishServiceSlugs } from "@/lib/i18n";
 
@@ -63,7 +65,7 @@ function hub(
   };
 }
 
-export const esHubs: readonly EsHub[] = [
+const esHubInputs: readonly EsHub[] = [
   hub(
     "kitchen-remodeling",
     "Cocinas en Houston",
@@ -281,6 +283,17 @@ export const esHubs: readonly EsHub[] = [
     ],
   ),
 ];
+
+export const esHubs: readonly EsHub[] = esHubInputs.map((hub) => {
+  const extra = esServiceFaqs[hub.slug];
+  if (!extra) throw new Error(`Missing Spanish FAQs: ${hub.slug}`);
+  const faqs = [...hub.faqs, ...extra];
+  const repeated = duplicateQuestions(faqs);
+  if (repeated.length > 0) {
+    throw new Error(`/es/${hub.slug} repeats FAQ: ${repeated.join(" | ")}`);
+  }
+  return { ...hub, faqs };
+});
 
 export function getEsHub(slug: string) {
   return esHubs.find((hub) => hub.slug === slug);

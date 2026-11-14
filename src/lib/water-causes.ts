@@ -1,3 +1,5 @@
+import { duplicateQuestions } from "@/lib/faqs";
+import { waterFaqs as extraWaterFaqs } from "@/lib/faqs/pages";
 import type { GuideSection } from "@/lib/guides/types";
 import { img, type Img } from "@/lib/images";
 import { moreWaterCauses } from "@/lib/water-causes-rest";
@@ -40,7 +42,7 @@ function cause(
   };
 }
 
-export const waterCauses: readonly WaterCause[] = [
+const waterCauseInputs: readonly WaterCause[] = [
   cause({
     slug: "burst-frozen-pipe-water-damage-houston",
     metaTitle: "Burst Pipe Damage in Houston",
@@ -146,6 +148,17 @@ export const waterCauses: readonly WaterCause[] = [
   }),
   ...moreWaterCauses,
 ];
+
+export const waterCauses: readonly WaterCause[] = waterCauseInputs.map((page) => {
+  const extra = extraWaterFaqs[page.slug];
+  if (!extra) throw new Error(`Missing water FAQs: ${page.slug}`);
+  const faqs = [...page.faqs, ...extra];
+  const repeated = duplicateQuestions(faqs);
+  if (repeated.length > 0) {
+    throw new Error(`${page.slug} repeats FAQ: ${repeated.join(" | ")}`);
+  }
+  return { ...page, faqs };
+});
 
 function pageWords(page: WaterCause) {
   return wordCount([

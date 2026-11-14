@@ -5,6 +5,7 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 import { areaPages } from '@/lib/area-pages';
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
+import { restorationFaqs as extraRestorationFaqs } from '@/lib/faqs/pages';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
@@ -107,6 +108,7 @@ const faqs = [
     q: 'Which parts of Houston do you restore?',
     a: 'Greater Houston, with visits scheduled from 511 Crestwater Ct, Houston, TX 77082. The neighborhoods beside the office, and the city pages for water damage, are linked below.',
   },
+  ...extraRestorationFaqs,
 ];
 
 export default function RestorationPage() {
