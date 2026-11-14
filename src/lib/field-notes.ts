@@ -141,7 +141,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A repair makes sense when the rest of the roof can still do its job and the failure is local: a boot, a flashing run, a few shingles, a seam. A replacement is the conversation when the field of shingles is worn out, the deck is soft in more than one place, or the same slopes keep letting water in. We say which one after the inspection, not from the curb.',
+            text: 'A repair makes sense when the rest of the roof can still do its job and the problem is in one place: a pipe boot, a run of flashing, a few shingles, or a seam. Replacement is the honest answer when the shingles are worn out across the roof, the wood under them is soft in more than one place, or the same slopes keep letting water in. We say which one after we are on the roof, not from the street.',
           },
           {
             type: 'p',

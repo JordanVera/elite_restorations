@@ -134,7 +134,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "What to keep before the house gets cleaned up.",
         paragraphs: [
           "Save the broken supply line if you can do it safely. Photograph the roof opening before the tarp. List rooms, not just 'the house was wet.' A claim file that starts after the dumpster is loaded is harder for you to explain. The photo log is free. Our photos of moisture and repairs can go in the same packet.",
-          "Temporary repairs that limit further damage are often expected. Whether Allstate pays the invoice is a separate question. We bill for the work you hire. We do not wait on a promise of reimbursement to cover an open roof when the weather is still coming and the roof is safe to walk.",
+          "Temporary repairs that limit further damage are often expected. Whether Allstate pays our bill is a separate question. We bill you for the work you hire. We do not wait on a promise of repayment to cover an open roof when more rain is coming and the roof is safe to walk.",
         ],
       },
       {

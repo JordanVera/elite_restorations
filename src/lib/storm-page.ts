@@ -31,7 +31,7 @@ export const stormPage = {
       heading: "Gulf storms, June through November.",
       paragraphs: [
         "Hurricane season runs June 1 through November 30. A Gulf storm can lift shingles from Galveston and Clear Lake inland through Pearland, Houston, and Katy, throw limbs through roofs in Memorial and The Woodlands, and push rain through flashing for days after the eye has gone. The first construction job, when the wind lets a crew up, is often a tarp so the next band stays outside. Board-up is the broken window or door. They are different tasks and a bad storm needs both.",
-        "We do not put people on a roof in lightning or in wind that makes it unsafe. Waiting for daylight is the right call even when a ceiling is dripping. Homes, apartment communities, and low commercial roofs are all in scope. A property manager should have unit numbers and a roof hatch ready. We work for the person who hires us. We are not a preferred vendor of any insurer.",
+        "We do not send a crew onto a roof during lightning or in wind that makes it unsafe. Waiting for daylight is the right call even when a ceiling is dripping. We do this for houses, apartment communities, and low commercial roofs. A property manager should have unit numbers and a way onto the roof ready. We work for the person who calls us. We are not a preferred vendor of any insurer.",
       ],
       points: [
         { title: "Tarp", body: "A cover buys time. It is not a roof and it is not a warranty. The roofing and tarp pages say what the permanent step is." },
@@ -112,7 +112,7 @@ export const stormPage = {
   faqs: [
     { q: "What should I do first after a Houston storm?", a: "Stay off the roof, keep people out of sagging ceilings and water near power, photograph the damage, and call " + phone + " if the building is open or wet." },
     { q: "Do you tarp roofs and board up windows?", a: "Yes. A tarp is the roof. Board-up is the wall and the glass. We do both for houses, apartments, and commercial buildings when it is safe." },
-    { q: "Will you come during the storm?", a: "Not onto a roof in lightning or unsafe wind. Call and we will tell you the next safe step. The online form is a call-back request, not a guaranteed arrival." },
+    { q: "Will you come during the storm?", a: "Not onto a roof during lightning or unsafe wind. Call and we will tell you the next safe step. The online form asks us to call you back. It does not mean we are already driving." },
     { q: "Do you help after hurricanes, hail, wind, and freezes?", a: "Yes. They damage buildings differently. We document the one you have, dry what got wet, and estimate the repair. We do not promise the claim." },
     { q: "Is flood the same as storm damage?", a: "No. Rising water is often a different policy from wind or hail. Check your policies. We will not rename bayou water as a plumbing break." },
     { q: "Can property managers call?", a: "Yes, any time for an active emergency. Have the address, the access, and which units are wet. The commercial page is written for that call." },

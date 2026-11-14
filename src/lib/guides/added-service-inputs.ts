@@ -76,7 +76,7 @@ export const addedServiceInputs = [
       "A check that the fence is not damming water against the slab",
     ],
     faqs: [
-      { q: "Can you replace a few sections?", a: "Yes, when the posts beside them are sound and the style can still be matched. If the line is soft, we say the run wants more." },
+      { q: "Can you replace a few sections?", a: "Yes, when the posts beside them are sound and the style can still be matched. If the posts are soft, the fence needs more than a patch." },
       { q: "Do you handle HOA fences?", a: "We ask whether an association has to approve the style. We do not start until that answer is in, when a review applies." },
       { q: "What about the property line?", a: "We build where you show us. If the line is disputed, a survey comes before the holes." },
       { q: "Can you photograph a fence a storm knocked down?", a: "Yes. Photos and a rebuild estimate. Your insurer decides coverage. We do not promise payment." },
@@ -98,7 +98,7 @@ export const addedServiceInputs = [
       ],
       conditions: [
         { title: "Wind", body: "Hurricane season turns a tall privacy fence into a sail. The posts are the part that has to hold." },
-        { title: "Sun", body: "A west line splits. A shaded line stays damp. We do not finish them as if they were the same fence." },
+        { title: "Sun", body: "A fence in full west sun splits. A shaded fence stays damp. We do not finish them as if they were the same fence." },
         { title: "Gates", body: "The gate is where the fence gets used every day. Hardware is part of the scope." },
       ],
       neighborhoods: ["Houston", "Katy", "Sugar Land", "Bellaire", "Memorial", "The Woodlands", "Cinco Ranch", "Alief"],
@@ -148,7 +148,7 @@ export const addedServiceInputs = [
       body: [
         "Alief, Westchase, and much of Katy are flat. A gutter that overflows hits the slab and stays. Memorial and The Woodlands add oak and pine debris, so a run that was clear in March is full by June.",
         "Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that tests it. We hang gutters from 511 Crestwater Ct. Family-owned since 1993. Call " + phone + ". A quiet clog is a cleaning. A run the wind pulled off the fascia is the replacement we estimate.",
-        "Apartment and low commercial eaves are in scope when we can reach them. A manager can use the same number. We are not an insurer's vendor.",
+        "We also repair apartment and low commercial gutters when we can reach them safely. A manager can use the same number. We do not work for the insurance company.",
       ],
       conditions: [
         { title: "Slope", body: "A gutter that holds a pond overflows at the worst corner. The water has to move to the outlet." },
@@ -313,7 +313,7 @@ export const addedServiceInputs = [
       body: [
         "Live oaks in Memorial, Bellaire, and The Woodlands keep a deck damp. A west-facing deck in Katy or Sugar Land splits and fades. The frame still has to stay dry at the house wall either way.",
         "Clay footings move between drought and a tropical rain. Hurricane season, June 1 through November 30, tests a loose rail. We build from 511 Crestwater Ct, family-owned since 1993.",
-        "If a storm opened the wall at the ledger, call " + phone + " any time. A planned deck is a visit Monday through Saturday, 8:00 AM to 6:00 PM. You can text the same number. We serve houses across Greater Houston and we will say when the yard really wants a patio instead of a framed deck. Stairs, rails, and the ledger are in the price conversation from the first walk, not added after the boards are ordered. Composite and wood are priced as different surfaces on the same frame. A side gate that will not pass lumber changes how the material gets in, and we ask about that before we schedule the build.",
+        "If a storm opened the wall where the deck meets the house, call " + phone + " any time. A planned deck is a visit Monday through Saturday, 8:00 AM to 6:00 PM. You can text the same number. We serve houses across Greater Houston and we will say when a patio on the ground makes more sense than a raised deck. Stairs, rails, and the board that ties the deck to the house are priced on the first walk, not added after the boards are ordered. Composite and wood are priced as different walking surfaces on the same frame. If a side gate is too narrow for the lumber, we ask about that before we schedule the build.",
       ],
       conditions: [
         { title: "Ledger", body: "The connection to the house is where decks leak and where they pull away. We look there first." },

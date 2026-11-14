@@ -162,7 +162,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       q: "Will you come during the storm?",
-      a: "We do not put people against broken glass in lightning or in wind that makes the elevation unsafe. Call and we will tell you the next safe step. The form on this site is a request for a call back, not a guaranteed arrival time.",
+      a: "We do not send a crew to broken glass during lightning, or in wind that makes the wall unsafe. Call and we will tell you the next safe step. The form on this site asks us to call you back. It does not promise we are already on the way.",
     },
   ],
 };

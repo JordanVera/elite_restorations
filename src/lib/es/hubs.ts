@@ -40,7 +40,7 @@ function hub(
         eyebrow: "Cómo sigue",
         heading: "Qué puede esperar",
         paragraphs: [
-          `Vemos la casa o el edificio, decimos qué hace falta y qué no, y dejamos el alcance por escrito antes de abrir de más. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Elite Restorations es familiar desde 1993.`,
+          `Vemos la casa o el edificio, le decimos qué hace falta y qué no, y lo escribimos antes de tumbar de más. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Elite Restorations es una empresa familiar desde 1993.`,
           `Si hay seguro de por medio, ayudamos con fotos, un estimado de la reparación y, si usted quiere, a estar cuando llegue el ajustador. No somos ajustadores públicos y no prometemos que paguen. Revise su póliza. Llame o envíe un texto al ${phone}.`,
         ],
       },
@@ -72,7 +72,7 @@ export const esHubs: readonly EsHub[] = [
     "Una cocina en Houston se planea alrededor de cómo cocina y se reúne la casa, no alrededor de un catálogo.",
     "Medimos antes de prometer que un muro se puede mover. En casas viejas de The Heights o West University la plomería y la estructura deciden el diseño. En Katy, Cinco Ranch y The Woodlands la cocina suele ser el centro de un espacio abierto. Gabinetes, cubiertas, loseta y luz se cierran como un solo proyecto.",
     [
-      { q: "¿Hacen la cocina completa o solo una parte?", a: "Las dos. A veces es una renovación completa. A veces son cubiertas y backsplash, o el piso. El alcance es lo que la cocina necesita." },
+      { q: "¿Hacen la cocina completa o solo una parte?", a: "Sí, las dos. A veces es una renovación completa. A veces solo son cubiertas, el backsplash o el piso. Hacemos lo que esa cocina necesita." },
       { q: "¿Cuánto tarda?", a: "Depende del cambio de distribución y del tiempo de los materiales. Se lo decimos en la visita, antes de empezar." },
     ],
   ),
@@ -181,7 +181,7 @@ export const esHubs: readonly EsHub[] = [
     "Revestimos el frente, el hogar y a veces la repisa. No abrimos un conducto viejo y lo damos por seguro sin verlo. Si el proyecto es solo la pared, lo decimos.",
     [
       { q: "¿La chimenea se usa o es decorativa?", a: "Las dos existen aquí. El material cambia si de verdad hay fuego. Lo preguntamos antes de pedir piedra." },
-      { q: "¿Es un proyecto aparte de la sala?", a: "Puede serlo. También cierra una remodelación más grande. El alcance se escribe antes." },
+      { q: "¿Es un proyecto aparte de la sala?", a: "Puede ser solo la chimenea. También puede cerrar una remodelación más grande. Eso se acuerda antes de empezar." },
     ],
   ),
   hub(
@@ -192,7 +192,7 @@ export const esHubs: readonly EsHub[] = [
     "Un techo en Houston es la teja, la membrana, el flashing y la ventilación. Después de granizo o un huracán, a veces lo primero es una lona.",
     "Revisamos y decimos si una reparación aguanta o si el techo tiene que salir. No lo decimos desde la calle. Atendemos casas, apartamentos y techos comerciales bajos cuando se puede subir con seguridad. La temporada de huracanes es del 1 de junio al 30 de noviembre.",
     [
-      { q: "¿Reparan o solo cambian el techo?", a: "Las dos. La visita dice cuál. Un cambio incluye levantar lo viejo, ver la madera, membrana, flashing y ventilación." },
+      { q: "¿Reparan o solo cambian el techo?", a: "Las dos. En la visita le decimos cuál. Un cambio incluye quitar lo viejo, revisar la madera, la membrana, el flashing y la ventilación." },
       { q: "¿Ayudan con el reclamo?", a: "Con fotos y un estimado de la reparación. Su aseguradora decide. No somos ajustadores públicos." },
     ],
   ),
