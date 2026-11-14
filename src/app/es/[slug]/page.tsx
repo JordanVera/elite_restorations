@@ -76,7 +76,11 @@ export default async function SpanishServicePage({
           ...brandLinksForService(slug, "es"),
         ]}
         ctaTitle={emergency ? "¿Sigue entrando agua?" : `¿Planea ${hub.name.toLowerCase()}?`}
-        ctaBody={`Empresa familiar en Houston desde 1993. Llame al ${site.phone.display} o envíe un texto.`}
+        ctaBody={
+          emergency
+            ? `Si sigue entrando agua, llame al ${site.phone.display}. Somos una empresa familiar en Houston desde 1993.`
+            : `Somos una empresa familiar en Houston desde 1993. El estimado es gratis. Llame al ${site.phone.display} o envíe un texto.`
+        }
         serviceName={`${hub.name} en Houston`}
         description={hub.description}
         emergency={emergency}

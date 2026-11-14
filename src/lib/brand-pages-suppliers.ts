@@ -28,10 +28,10 @@ const abcEn = {
   esPath: "/es/abc-supply-roofing-siding-houston",
   metaTitle: "ABC Supply Roofing Houston",
   description:
-    "ABC Supply roofing and siding in Houston: we buy the materials and install roofs, repairs, hail work, siding, and gutters. Call (713) 909-0034.",
+    "ABC Supply roofing and siding in Houston. We buy the materials and install the roof, wall, or gutters. Free estimates. Call (713) 909-0034.",
   eyebrow: "ABC Supply",
   title: ["ABC Supply roofing", "and siding."],
-  lede: `ABC Supply roofing and siding in Houston is the material on the house and the work that puts it there: a roof replacement, a repair, a storm or hail job, new siding, or gutters. Elite Restorations buys these products from ABC Supply Co. and installs them. We have been family-owned in Houston since 1993. If water is coming in, call ${phone}.`,
+  lede: `ABC Supply roofing and siding in Houston is the material on the house and the work that puts it there: a replacement, a repair, new siding, or gutters. ABC Supply has been supplying those materials since 1982. Elite Restorations buys these products from ABC Supply Co. and installs them. We have been family-owned in Houston since 1993. Call ${phone} and we will look at the roof or the wall. The estimate is free.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Roofing", path: "/roofing" },
@@ -41,7 +41,7 @@ const abcEn = {
   serviceName: "ABC Supply roofing and siding in Houston",
   relatedHeading: "Neighborhoods and related exterior work",
   ctaTitle: "Planning a roof or siding from ABC Supply?",
-  ctaBody: `Call ${phone} and we will look at the roof or the wall. If water is coming in, call any time. We buy the materials from ABC Supply and install them. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the roof or the wall. The estimate is free. We buy the materials from ABC Supply and install them. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The supplier",
@@ -88,7 +88,7 @@ const abcEn = {
       heading: "Claims, timing, and where we work.",
       paragraphs: [
         "If you are filing, we photograph the roof, the siding, or the gutters before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: the tear-off or the repair, the materials we buy from ABC Supply, the flashing, the vents, the siding or the gutters, and any decking or fascia we can already see. It is not the amount the claim will pay. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.",
-        `A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If water is coming in, call ${phone} any time. We install these roofs, walls, and gutters across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these roofs, walls, and gutters across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
@@ -143,10 +143,10 @@ const fergusonEn = {
   esPath: "/es/ferguson-plumbing-fixtures-installation-houston",
   metaTitle: "Ferguson Fixtures Houston",
   description:
-    "Ferguson fixtures in Houston: we buy faucets, sinks, toilets, showers, tubs, and water heaters and install them. Call (713) 909-0034.",
+    "Ferguson fixture installation in Houston for kitchens and baths. We buy the fixtures and set them. Free estimates. Call (713) 909-0034.",
   eyebrow: "Ferguson",
   title: ["Ferguson fixtures", "in Houston."],
-  lede: `Ferguson fixtures installation in Houston is the faucet, the sink, the toilet, the shower, the tub, the water heater, or the appliance, set during a kitchen remodel, a bathroom remodel, or a repair after water damage. Elite Restorations buys these products from Ferguson and installs them. We have been family-owned in Houston since 1993. Call ${phone}.`,
+  lede: `Ferguson fixtures installation in Houston is the faucet, the sink, the toilet, the shower, the tub, the water heater, or the appliance you use every day, set during a kitchen remodel, a bathroom remodel, or after a leak has been dried out. Ferguson has been supplying plumbing products since 1953. Elite Restorations buys these products from Ferguson and installs them. We have been family-owned in Houston since 1993. Call ${phone} for a free estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Bathrooms", path: "/bathroom-remodeling" },
@@ -156,7 +156,7 @@ const fergusonEn = {
   serviceName: "Ferguson fixture installation in Houston",
   relatedHeading: "Neighborhoods and related remodel work",
   ctaTitle: "Planning Ferguson fixtures?",
-  ctaBody: `Call ${phone} and we will look at the kitchen or the bath. If water is coming in, call any time. We buy the fixtures from Ferguson and install them. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the kitchen or the bath. The estimate is free. We buy the fixtures from Ferguson and install them. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The supplier",
@@ -203,7 +203,7 @@ const fergusonEn = {
       heading: "How long the fixture work takes, and where we work.",
       paragraphs: [
         "A single faucet or a toilet reset is often part of a day once the fixture is here. A shower that needs a new valve, waterproofing, and tile is a sequence of days, and the tile cannot start until the waterproofing is ready. A kitchen sink waits on the counter. A water heater is often one visit after the old unit is out and the closet is dry, unless the vent, the pan drain, or the gas piping has to be rebuilt. We name those steps after we see the room, including what has to dry before anything new is set.",
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If water is coming in right now, call ${phone} any time. We install these fixtures across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these fixtures across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
@@ -257,10 +257,10 @@ const abcEs = {
   esPath: "/es/abc-supply-roofing-siding-houston",
   metaTitle: "Techos ABC Supply en Houston",
   description:
-    "Techos y siding ABC Supply en Houston: compramos el material e instalamos techos, granizo, siding y canaletas. Llame al (713) 909-0034.",
+    "Techos y siding ABC Supply en Houston. Compramos el material e instalamos el techo, el muro o las canaletas. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "ABC Supply",
   title: ["Techos y siding", "ABC Supply."],
-  lede: `Los techos y el siding ABC Supply en Houston son el material de la casa y el trabajo que lo pone: un cambio de techo, una reparación, un trabajo de tormenta o granizo, siding nuevo o canaletas. Elite Restorations compra estos productos en ABC Supply Co. y los instala. Somos una empresa familiar en Houston desde 1993. Si entra agua, llame al ${phone}.`,
+  lede: `Los techos y el siding ABC Supply en Houston son el material de la casa y el trabajo que lo deja puesto: un cambio de techo, una reparación, siding nuevo o canaletas. ABC Supply surte esos materiales desde 1982. Elite Restorations los compra en ABC Supply Co. y los instala. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y vemos el techo o el muro. El estimado es gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Techos", path: "/es/roofing" },
@@ -270,7 +270,7 @@ const abcEs = {
   serviceName: "Techos y siding ABC Supply en Houston",
   relatedHeading: "Vecindarios y exterior relacionado",
   ctaTitle: "¿Planea techo o siding de ABC Supply?",
-  ctaBody: `Llame al ${phone} y vemos el techo o el muro. Si entra agua, llame a cualquier hora. Compramos el material en ABC Supply y lo instalamos. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos el techo o el muro. El estimado es gratis. Compramos el material en ABC Supply y lo instalamos. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "El proveedor",
@@ -317,7 +317,7 @@ const abcEs = {
       heading: "Reclamos, tiempos y dónde trabajamos.",
       paragraphs: [
         "Si va a presentar un reclamo, fotografiamos el techo, el siding o las canaletas antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar o reparar, el material que compramos en ABC Supply, el metal, la ventilación, el siding o las canaletas, y la madera o la fascia que ya se puede ver. No es la cantidad que el reclamo va a pagar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.",
-        `Un deducible de viento o granizo en Texas suele ser un porcentaje en su página de declaraciones. No tenemos ese número y no lo inventamos. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si entra agua, llame al ${phone} a cualquier hora. Instalamos estos techos, muros y canaletas en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `Un deducible de viento o granizo en Texas suele ser un porcentaje en su página de declaraciones. No tenemos ese número y no lo inventamos. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estos techos, muros y canaletas en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
@@ -371,10 +371,10 @@ const fergusonEs = {
   esPath: "/es/ferguson-plumbing-fixtures-installation-houston",
   metaTitle: "Plomería Ferguson en Houston",
   description:
-    "Accesorios Ferguson en Houston: compramos llaves, lavabos, inodoros, regaderas y calentadores y los instalamos. Llame al (713) 909-0034.",
+    "Instalación de accesorios Ferguson en Houston para cocinas y baños. Compramos las piezas y las ponemos. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Ferguson",
   title: ["Accesorios Ferguson", "en Houston."],
-  lede: `La instalación de accesorios Ferguson en Houston es la llave, el fregadero, el inodoro, la regadera, la tina, el calentador o el aparato, puestos en una remodelación de cocina, una remodelación de baño o una reparación después de daño de agua. Elite Restorations compra estos productos en Ferguson y los instala. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}.`,
+  lede: `La instalación de accesorios Ferguson en Houston es la llave, el fregadero, el inodoro, la regadera, la tina, el calentador o el aparato que se usa todos los días, en una remodelación de cocina, de baño, o después de secar una fuga. Ferguson surte productos de plomería desde 1953. Elite Restorations compra estos productos en Ferguson y los instala. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}. El estimado es gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Baños", path: "/es/bathroom-remodeling" },
@@ -384,7 +384,7 @@ const fergusonEs = {
   serviceName: "Instalación de accesorios Ferguson en Houston",
   relatedHeading: "Vecindarios y remodelación relacionada",
   ctaTitle: "¿Planea accesorios Ferguson?",
-  ctaBody: `Llame al ${phone} y vemos la cocina o el baño. Si entra agua, llame a cualquier hora. Compramos los accesorios en Ferguson y los instalamos. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos la cocina o el baño. El estimado es gratis. Compramos los accesorios en Ferguson y los instalamos. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "El proveedor",
@@ -431,7 +431,7 @@ const fergusonEs = {
       heading: "Cuánto tarda el trabajo de accesorios, y dónde trabajamos.",
       paragraphs: [
         "Una sola llave o volver a sentar un inodoro suele ser parte de un día cuando el accesorio ya está. Una regadera que necesita válvula nueva, impermeabilización y loseta es una secuencia de días, y la loseta no empieza hasta que la impermeabilización está lista. Un fregadero de cocina espera a la cubierta. Un calentador suele ser una visita cuando la unidad vieja ya salió y el clóset está seco, a menos que el venteo, el desagüe de la charola o la tubería de gas haya que rehacerlos. Esos pasos los nombramos después de ver el cuarto, incluido lo que tiene que secar antes de poner algo nuevo.",
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si en este momento entra agua, llame al ${phone} a cualquier hora. Instalamos estos accesorios en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estos accesorios en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],

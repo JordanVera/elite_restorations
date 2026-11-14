@@ -29,10 +29,10 @@ const sherwinEn = {
   esPath: "/es/sherwin-williams-painting-houston",
   metaTitle: "Sherwin-Williams Painting Houston",
   description:
-    "Sherwin-Williams painting in Houston: Duration, Emerald, prep, and repaints after siding, storms, or water. Call (713) 909-0034.",
+    "Sherwin-Williams painting in Houston for walls, trim, and sun-faded siding. Family-owned since 1993. Free estimates. Call (713) 909-0034.",
   eyebrow: "Sherwin-Williams",
   title: ["Sherwin-Williams painting", "in Houston."],
-  lede: `Sherwin-Williams painting in Houston covers the walls and trim inside the house and the siding, stucco, doors, and fascia the sun hits outside. Elite Restorations uses these paints. We have been family-owned in Houston since 1993. If a storm or a leak has the wall open and water is still coming in, call ${phone}.`,
+  lede: `Sherwin-Williams painting in Houston is the color on the walls and trim inside, and on the siding, stucco, doors, and fascia the sun hits outside. Sherwin-Williams has been making paint since 1866. Elite Restorations uses these paints. We have been family-owned in Houston since 1993. If the color is tired, or a repair needs to disappear, call ${phone}. We will look at the rooms, and the estimate is free.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Painting", path: "/painting-drywall-repair" },
@@ -42,7 +42,7 @@ const sherwinEn = {
   serviceName: "Sherwin-Williams painting in Houston",
   relatedHeading: "Neighborhoods and related painting",
   ctaTitle: "Planning a Sherwin-Williams repaint?",
-  ctaBody: `Call ${phone} and we will look at the walls. If water is coming in, call any time. We use the paint. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the walls. The estimate is free. We use the paint. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The paints",
@@ -89,14 +89,14 @@ const sherwinEn = {
       heading: "Timing, claims, and where we paint.",
       paragraphs: [
         `A few rooms are often a day or two once the walls are ready. A whole interior, or a two-story exterior, takes longer, and drying, repairs, and rain add days we will name after we see the house. Exterior work pauses for storms. If you are filing a claim because wind or water damaged the walls, we photograph the damage and the repair. The estimate is the price of the prep and the Sherwin-Williams paint. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.`,
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If water is coming in, call ${phone} any time. We paint houses across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We paint houses across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
   faqs: [
     {
       q: "Do you use Sherwin-Williams paint in Houston?",
-      a: `Yes. We use Sherwin-Williams paints, including Duration, Emerald, SuperPaint, and ProClassic. We use the products. Call ${phone} to look at the walls.`,
+      a: `Yes. We use Sherwin-Williams paints, including Duration, Emerald, SuperPaint, and ProClassic. Call ${phone} and we will look at the walls. The estimate is free.`,
     },
     {
       q: "Which exterior line do Houston houses usually get?",
@@ -143,10 +143,10 @@ const floorEn = {
   esPath: "/es/floor-and-decor-flooring-installation-houston",
   metaTitle: "Floor & Decor Flooring Houston",
   description:
-    "Floor & Decor flooring in Houston: tile, LVP, wood, and laminate, with slab prep and moisture testing. Call (713) 909-0034.",
+    "Floor & Decor flooring installation in Houston: tile, luxury vinyl plank, wood, and laminate. Free estimates. Call (713) 909-0034.",
   eyebrow: "Floor & Decor",
   title: ["Floor & Decor flooring", "in Houston."],
-  lede: `Floor & Decor flooring installation in Houston is tile, luxury vinyl plank, wood, and laminate, set on the slab or the wood floor you actually have. Elite Restorations installs these products. We have been family-owned in Houston since 1993. If water is still standing, call ${phone}.`,
+  lede: `Floor & Decor flooring installation in Houston is tile, luxury vinyl plank, wood, and laminate, set on the slab or the wood floor you already have. Floor & Decor has been selling flooring since 2000. Elite Restorations installs these products. We have been family-owned in Houston since 1993. Call ${phone} and tell us about the room. We will come look, and the estimate is free.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Vinyl flooring", path: "/vinyl-flooring" },
@@ -156,7 +156,7 @@ const floorEn = {
   serviceName: "Floor & Decor flooring installation in Houston",
   relatedHeading: "Neighborhoods and related flooring",
   ctaTitle: "Planning a Floor & Decor install?",
-  ctaBody: `Call ${phone} and we will look at the floor and the slab. If water is standing, call any time. We install the flooring. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the floor and the slab. The estimate is free. We install the flooring. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The floors",
@@ -203,14 +203,14 @@ const floorEn = {
       heading: "How long a floor takes, and where we work.",
       paragraphs: [
         "A dry, flat room of click-together LVP is often a day once the old floor is out. Leveling, a moisture problem, tile, or a whole first floor adds days, and we separate the drying time from the install time so the calendar is honest. Furniture moving is part of the conversation before the day starts. Stairs and landings are their own pieces. We protect the rooms we are not flooring.",
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If water is still coming in or standing in the house, call ${phone} any time. We install these floors across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these floors across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
   faqs: [
     {
       q: "Do you install Floor & Decor flooring in Houston?",
-      a: `Yes. We install tile, LVP, wood, and laminate from Floor & Decor. We install the products. Call ${phone} to look at the floor you have.`,
+      a: `Yes. We install tile, LVP, wood, and laminate from Floor & Decor on the floor you already have. Call ${phone} and we will come look. The estimate is free.`,
     },
     {
       q: "Can I buy the flooring and have you install it?",
@@ -257,10 +257,10 @@ const stoneEn = {
   esPath: "/es/expo-stone-countertops-houston",
   metaTitle: "Expo Stone Countertops Houston",
   description:
-    "Expo Stone countertops in Houston: granite, quartz, quartzite, and marble, templated and installed. Call (713) 909-0034.",
+    "Expo Stone countertops in Houston: granite, quartz, quartzite, and marble, cut to your cabinets. Free estimates. Call (713) 909-0034.",
   eyebrow: "Expo Stone",
   title: ["Expo Stone countertops", "in Houston."],
-  lede: `Expo Stone countertops in Houston are granite, quartz, quartzite, and marble for kitchens and baths, cut to the cabinets you have. Elite Restorations uses this stone. We have been family-owned in Houston since 1993. Call ${phone} to look at the kitchen or the bath.`,
+  lede: `Expo Stone countertops in Houston are granite, quartz, quartzite, and marble for the kitchen or the bath, cut to the cabinets you already have. Elite Restorations uses this stone. We have been family-owned in Houston since 1993. Call ${phone}, tell us which room, and we will come measure. The estimate is free.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Countertops", path: "/countertops" },
@@ -270,7 +270,7 @@ const stoneEn = {
   serviceName: "Expo Stone countertops in Houston",
   relatedHeading: "Neighborhoods and related stone work",
   ctaTitle: "Planning Expo Stone countertops?",
-  ctaBody: `Call ${phone} and we will look at the cabinets. If water is coming in under the sink, call any time. We template and install the stone. Your insurer decides any claim.`,
+  ctaBody: `Call ${phone} and we will look at the cabinets. The estimate is free. We template and install the stone. If a claim is involved, your insurer decides it.`,
   sections: [
     {
       eyebrow: "The stone",
@@ -317,7 +317,7 @@ const stoneEn = {
       heading: "How long a counter takes, and where we work.",
       paragraphs: [
         "A straight kitchen is often one install day once the pieces are cut. The wait is the template appointment and the fabrication, and a seam, a waterfall, or a second bath adds to both. We tell you those steps after we see the cabinets. Removal of an old top is its own hour, and an old tile top that was mud-set can take longer than a screwed-down laminate top. We protect floors and appliances.",
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. If water is coming in under the sink right now, call ${phone} any time. We install these tops across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these tops across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
@@ -370,10 +370,10 @@ const sherwinEs = {
   esPath: "/es/sherwin-williams-painting-houston",
   metaTitle: "Pintura Sherwin-Williams en Houston",
   description:
-    "Pintura Sherwin-Williams en Houston: Duration, Emerald, preparación, y repintes tras siding, tormentas o agua. Llame al (713) 909-0034.",
+    "Pintura Sherwin-Williams en Houston para paredes, moldura y siding al sol. Empresa familiar desde 1993. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Sherwin-Williams",
   title: ["Pintura Sherwin-Williams", "en Houston."],
-  lede: `La pintura Sherwin-Williams en Houston cubre las paredes y la moldura de adentro, y el siding, el estuco, las puertas y la fascia que el sol pega afuera. Elite Restorations usa estas pinturas. Somos una empresa familiar en Houston desde 1993. Si una tormenta o una fuga dejó la pared abierta y sigue entrando agua, llame al ${phone}.`,
+  lede: `La pintura Sherwin-Williams en Houston es el color de las paredes y la moldura de adentro, y del siding, el estuco, las puertas y la fascia que el sol pega afuera. Sherwin-Williams fabrica pintura desde 1866. Elite Restorations usa estas pinturas. Somos una empresa familiar en Houston desde 1993. Si el color ya se ve cansado, o un parche tiene que desaparecer, llame al ${phone}. Vemos los cuartos y el estimado es gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Pintura", path: "/es/painting-drywall-repair" },
@@ -383,7 +383,7 @@ const sherwinEs = {
   serviceName: "Pintura Sherwin-Williams en Houston",
   relatedHeading: "Vecindarios y pintura relacionada",
   ctaTitle: "¿Planea pintura Sherwin-Williams?",
-  ctaBody: `Llame al ${phone} y vemos las paredes. Si entra agua, llame a cualquier hora. Usamos la pintura. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos las paredes. El estimado es gratis. Usamos la pintura. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "Las pinturas",
@@ -430,14 +430,14 @@ const sherwinEs = {
       heading: "Tiempos, reclamos y dónde pintamos.",
       paragraphs: [
         "Unos cuantos cuartos suelen ser un día o dos cuando las paredes están listas. Un interior completo, o un exterior de dos pisos, tarda más, y el secado, las reparaciones y la lluvia añaden días que nombramos después de ver la casa. El exterior se detiene con las tormentas. Si va a presentar un reclamo porque el viento o el agua dañó las paredes, fotografiamos el daño y la reparación. El estimado es el precio de la preparación y de la pintura Sherwin-Williams. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.",
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si entra agua, llame al ${phone} a cualquier hora. Pintamos casas en Houston, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Pintamos casas en Houston, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
   faqs: [
     {
       q: "¿Usan pintura Sherwin-Williams en Houston?",
-      a: `Sí. Usamos pinturas Sherwin-Williams, incluidas Duration, Emerald, SuperPaint y ProClassic. Usamos los productos. Llame al ${phone} para ver las paredes.`,
+      a: `Sí. Usamos pinturas Sherwin-Williams, incluidas Duration, Emerald, SuperPaint y ProClassic. Llame al ${phone} y vemos las paredes. El estimado es gratis.`,
     },
     {
       q: "¿Qué línea de exterior piden las casas de Houston?",
@@ -484,10 +484,10 @@ const floorEs = {
   esPath: "/es/floor-and-decor-flooring-installation-houston",
   metaTitle: "Pisos Floor & Decor en Houston",
   description:
-    "Pisos Floor & Decor en Houston: loseta, LVP, madera y laminado, con preparación de losa y prueba de humedad. Llame al (713) 909-0034.",
+    "Instalación de pisos Floor & Decor en Houston: loseta, duela de vinil, madera y laminado. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Floor & Decor",
   title: ["Pisos Floor & Decor", "en Houston."],
-  lede: `La instalación de pisos Floor & Decor en Houston es loseta, duela de vinil de lujo, madera y laminado, puestos sobre la losa o el piso de madera que usted tiene. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Si todavía hay agua en el piso, llame al ${phone}.`,
+  lede: `La instalación de pisos Floor & Decor en Houston es loseta, duela de vinil de lujo, madera y laminado, puestos sobre la losa o el piso de madera que ya tiene. Floor & Decor vende pisos desde 2000. Elite Restorations instala estos productos. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} y cuéntenos del cuarto. Pasamos a verlo, y el estimado es gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Pisos de vinil", path: "/es/vinyl-flooring" },
@@ -497,7 +497,7 @@ const floorEs = {
   serviceName: "Instalación de pisos Floor & Decor en Houston",
   relatedHeading: "Vecindarios y pisos relacionados",
   ctaTitle: "¿Planea pisos Floor & Decor?",
-  ctaBody: `Llame al ${phone} y vemos el piso y la losa. Si hay agua en el piso, llame a cualquier hora. Instalamos el piso. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos el piso y la losa. El estimado es gratis. Instalamos el piso. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "Los pisos",
@@ -544,14 +544,14 @@ const floorEs = {
       heading: "Cuánto tarda un piso, y dónde trabajamos.",
       paragraphs: [
         "Un cuarto seco y plano de LVP de ensamble suele ser un día cuando el piso viejo ya salió. Nivelar, un problema de humedad, loseta o toda una planta baja añaden días, y separamos el tiempo de secado del tiempo de instalación para que el calendario sea honesto. Mover los muebles se habla antes de que empiece el día. Las escaleras y los descansos son piezas aparte. Protegemos los cuartos que no estamos pisando.",
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si sigue entrando agua o hay agua en la casa, llame al ${phone} a cualquier hora. Instalamos estos pisos en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estos pisos en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
   faqs: [
     {
       q: "¿Instalan pisos Floor & Decor en Houston?",
-      a: `Sí. Instalamos loseta, LVP, madera y laminado de Floor & Decor. Instalamos los productos. Llame al ${phone} para ver el piso que tiene.`,
+      a: `Sí. Instalamos loseta, LVP, madera y laminado de Floor & Decor sobre el piso que ya tiene. Llame al ${phone} y pasamos a verlo. El estimado es gratis.`,
     },
     {
       q: "¿Puedo comprar el piso y ustedes lo instalan?",
@@ -598,10 +598,10 @@ const stoneEs = {
   esPath: "/es/expo-stone-countertops-houston",
   metaTitle: "Cubiertas Expo Stone en Houston",
   description:
-    "Cubiertas Expo Stone en Houston: granito, cuarzo, cuarcita y mármol, con plantilla e instalación. Llame al (713) 909-0034.",
+    "Cubiertas Expo Stone en Houston: granito, cuarzo, cuarcita y mármol, cortados a sus gabinetes. Estimado gratis. Llame al (713) 909-0034.",
   eyebrow: "Expo Stone",
   title: ["Cubiertas Expo Stone", "en Houston."],
-  lede: `Las cubiertas Expo Stone en Houston son granito, cuarzo, cuarcita y mármol para cocinas y baños, cortados a los gabinetes que usted tiene. Elite Restorations usa esta piedra. Somos una empresa familiar en Houston desde 1993. Llame al ${phone} para ver la cocina o el baño.`,
+  lede: `Las cubiertas Expo Stone en Houston son granito, cuarzo, cuarcita y mármol para la cocina o el baño, cortados a los gabinetes que ya tiene. Elite Restorations usa esta piedra. Somos una empresa familiar en Houston desde 1993. Llame al ${phone}, díganos cuál cuarto, y lo medimos. El estimado es gratis.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Cubiertas", path: "/es/countertops" },
@@ -611,7 +611,7 @@ const stoneEs = {
   serviceName: "Cubiertas Expo Stone en Houston",
   relatedHeading: "Vecindarios y piedra relacionada",
   ctaTitle: "¿Planea cubiertas Expo Stone?",
-  ctaBody: `Llame al ${phone} y vemos los gabinetes. Si entra agua debajo del fregadero, llame a cualquier hora. Hacemos la plantilla y la instalación. Su aseguradora decide el reclamo.`,
+  ctaBody: `Llame al ${phone} y vemos los gabinetes. El estimado es gratis. Hacemos la plantilla y la instalación. Si hay un reclamo, su aseguradora lo decide.`,
   sections: [
     {
       eyebrow: "La piedra",
@@ -658,14 +658,14 @@ const stoneEs = {
       heading: "Cuánto tarda una cubierta, y dónde trabajamos.",
       paragraphs: [
         "Una cocina recta suele ser un día de instalación cuando las piezas ya están cortadas. La espera es la cita de la plantilla y el trabajo del taller, y una unión, una cascada o un segundo baño alargan las dos cosas. Esos pasos se los decimos después de ver los gabinetes. Quitar una cubierta vieja es su propio tiempo, y una cubierta de loseta asentada en mezcla puede tardar más que un laminado atornillado. Protegemos pisos y aparatos.",
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Si en este momento entra agua debajo del fregadero, llame al ${phone} a cualquier hora. Instalamos estas cubiertas en Houston, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estas cubiertas en Houston, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
   faqs: [
     {
       q: "¿Instalan cubiertas Expo Stone en Houston?",
-      a: `Sí. Hacemos la plantilla e instalamos granito, cuarzo, cuarcita (quartzite) y mármol de Expo Stone. Usamos la piedra. Llame al ${phone} para ver la cocina o el baño.`,
+      a: `Sí. Hacemos la plantilla e instalamos granito, cuarzo, cuarcita (quartzite) y mármol de Expo Stone. Llame al ${phone} y vemos la cocina o el baño. El estimado es gratis.`,
     },
     {
       q: "¿Podemos elegir la placa en el patio de Expo Stone?",
