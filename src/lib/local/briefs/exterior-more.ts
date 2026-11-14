@@ -128,7 +128,7 @@ export const sidingBrief: Brief = {
   ],
   pier: [
     'Older houses in {name} may have wood siding or a later skin over it. We look at rot at the trim and at what the wall is doing underneath. Matching an original profile matters, and on a historic-district block the street elevation can be regulated. We check before we change what the sidewalk sees. Interior walls are not this scope.',
-    'A {name} cottage wall can take a section repair when the profile and the color can be matched. When the sun has faded the field and the new board would look pasted on, we say the wall wants more. Tight lots mean the scaffold and the dumpster are planned.',
+    'A {name} cottage wall can take a section repair when the profile and the color can be matched. When the sun has faded the field and the new board would look pasted on, we say the wall needs more. Tight lots mean the scaffold and the dumpster are planned.',
   ],
   slab: [
     'Slab-era {name} houses are often brick with siding accents, or a mix. We repair the siding that is there. A full replacement is recommended when the field is failing, not as a default. Trim at windows and soffits is included so the patch does not end in a raw joint.',
@@ -164,7 +164,7 @@ export const sidingBrief: Brief = {
       title: 'Match or replace',
       bodies: [
         'A {name} section is matched to the faded boards, not to the original chip.',
-        'We say when a {name} patch will blend and when the wall wants more.',
+        'We say when a {name} patch will blend and when the wall needs more.',
       ],
     },
     {

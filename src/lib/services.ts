@@ -946,8 +946,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       { href: '/emergency-board-up', label: 'Emergency board-up' },
     ],
     image: img(
-      '/images/services/roof-replacement.webp',
-      'Roofing on a brick Houston home with a finished shingle roof',
+      '/images/projects/roofing/brick-home-multi-gable.webp',
+      'Brick Houston home with a multi-gable shingle roof',
     ),
     local: {
       heading: 'The roof the house shows, and the one it needs.',
@@ -1277,7 +1277,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'A section that matches',
-          body: 'Sun-faded walls are matched to what is there, not to the original chip. We say when a patch will blend and when the wall wants more.',
+          body: 'Sun-faded walls are matched to what is there, not to the original chip. We say when a patch will blend and when the wall needs more.',
         },
         {
           title: 'Color on the elevation',
@@ -1337,6 +1337,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['siding', 'carpentry', 'roofing'],
+    image: img(
+      '/images/projects/siding/rear-deck-glass-doors.jpg',
+      'Rear deck and glass doors on a Houston home',
+    ),
     local: {
       heading: 'Outside the back door.',
       body: [
@@ -1602,8 +1606,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     image: img(
-      '/images/services/water-damage-restoration.jpg',
-      'Water damage drying in a Houston home before repairs and the insurance record',
+      '/images/projects/roofing/brick-house-missing-shingles.webp',
+      'Brick Houston house with missing roof shingles',
     ),
     local: {
       heading: 'A record of what the storm or the leak did.',

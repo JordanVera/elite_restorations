@@ -27,6 +27,7 @@ import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
+import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import { claimHelpFaqs } from '@/lib/claim-help';
 import { spanishPathFor } from '@/lib/i18n';
 import { absoluteUrl, languageAlternates, pageMetadata, servicePageTitle } from '@/lib/seo';
@@ -84,11 +85,15 @@ export async function generateMetadata({
   const landing = getLocalLanding(slug);
   if (landing) {
     const service = getService(landing.serviceSlug);
+    const pool =
+      cityHeroPools[landing.serviceSlug] ??
+      (service?.image ? [service.image] : []);
+    const hero = pickFromPool(pool, landing.photoShift, service?.image);
     return pageMetadata({
       title: landing.title,
       description: landing.description,
       path: landing.path,
-      image: service?.image?.src,
+      image: hero?.src ?? service?.image?.src,
     });
   }
   const area = getAreaPage(slug);

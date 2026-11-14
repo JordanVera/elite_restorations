@@ -163,7 +163,7 @@ export const restorationGuides: Article[] = [
     description:
       'How to spot hail and wind damage on a Houston roof, when to call for a repair, and how the insurance claim gets documented.',
     lede: 'Hail and a hard wind do not always leave a hole you can see from the curb. The leak often shows up on the next rain, in a ceiling that was fine last month.',
-    image: '/images/services/roof-replacement.webp',
+    image: '/images/projects/roofing/brick-house-missing-shingles.webp',
     service: 'roofing',
     ctaTitle: 'Not sure what the storm did?',
     ctaBody:
@@ -303,7 +303,7 @@ export const restorationGuides: Article[] = [
     description:
       'How a Texas home restoration claim usually proceeds, from the first notice to the adjuster visit, and what a contractor can and cannot do.',
     lede: 'A claim is a conversation with your insurer about your policy. The restoration is the work on the house. They happen at the same time, and they are not the same job.',
-    image: '/images/services/water-damage-restoration.jpg',
+    image: '/images/projects/roofing/brick-gable-attic-vent.jpg',
     service: 'insurance-claims',
     ctaTitle: 'Need the damage written down?',
     ctaBody:
@@ -460,7 +460,7 @@ export const restorationGuides: Article[] = [
     description:
       'A Houston hurricane-season checklist for the roof, windows, and drainage, plus what to do at the house after the storm passes.',
     lede: 'Hurricane season on the Gulf runs from June through November. The useful preparation is ordinary: the roof, the openings, the way water leaves the house, and a record made while the house is whole.',
-    image: '/images/services/roofing-emergency-tarp-repair.jpg',
+    image: '/images/projects/roofing/brick-home-multi-gable.webp',
     service: 'roofing',
     ctaTitle: 'Want the roof looked at while you can?',
     ctaBody:

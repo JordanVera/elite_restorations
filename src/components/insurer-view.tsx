@@ -5,6 +5,18 @@ import { LongformPage } from "@/components/longform-page";
 import { getInsurer, insurers } from "@/lib/insurers";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { roofs, tarps } from "@/lib/topic-photos";
+
+const insurerImages = {
+  "state-farm": roofs.missingShingles,
+  allstate: tarps.partial,
+  usaa: roofs.finishedBrick,
+  farmers: roofs.stoneGable,
+  "liberty-mutual": roofs.twoStoryStone,
+  travelers: roofs.underlayment,
+  nationwide: roofs.whiteSiding,
+  progressive: roofs.multiGable,
+} as const;
 
 export function insurerMetadata(slug: string): Metadata {
   const page = getInsurer(slug);
@@ -13,7 +25,7 @@ export function insurerMetadata(slug: string): Metadata {
     title: page.metaTitle,
     description: page.description,
     path: `/insurance-claims/companies/${page.slug}`,
-    image: "/images/services/water-damage-restoration.jpg",
+    image: insurerImages[slug as keyof typeof insurerImages]?.src,
   });
 }
 
@@ -32,6 +44,7 @@ export function InsurerView({ slug }: { slug: string }) {
         { name: page.name, path },
       ]}
       path={path}
+      image={insurerImages[page.slug as keyof typeof insurerImages]}
       claimHelp
       propertyScope
       sections={page.sections}

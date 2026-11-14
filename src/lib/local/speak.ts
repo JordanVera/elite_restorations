@@ -64,9 +64,9 @@ export function driveParagraph(
     ? `If water is still coming in, call ${phone} before you do anything else.`
     : `Call ${phone} or send the estimate form.`;
   const options = [
-    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${street}, ${zip}. The truck uses ${area.roads}. ${call} We put ${work} in ${area.name} on the schedule from that office, and traffic is why we do not promise a clock time.`,
+    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${street}, ${zip}. The drive follows ${area.roads}. ${call} We book ${work} in ${area.name} from the office on that street, and traffic is why we do not promise an exact time.`,
     `From ${street} to ${area.landmark} is about ${miles} miles as a straight line, ${area.direction}. ${area.roads} is the road the drive actually takes. ${call} ${work} in ${area.name} is booked from the 77082 office.`,
-    `${area.name} is on our list because we can get there from ${street}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} scope is still written at the address, not from the mileage.`,
+    `${area.name} is on our list because we can get there from ${street}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} plan is still based on the house, not on the mileage.`,
     `Schedule ${work} in ${area.name} at ${street}, Houston ${zip}. A straight line to ${area.landmark} is about ${miles} miles, ${area.direction}, and ${area.roads} is the normal route. ${call}`,
     `The 77082 office on ${street} is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} We will not invent a drive time.`,
     `${call} The office is ${street}, Houston, ${zip}. ${area.name} sits about ${miles} miles ${area.direction} of that door if you measure straight to ${area.landmark}. Day to day the route is ${area.roads}.`,
@@ -77,7 +77,7 @@ export function driveParagraph(
 export function nearbyParagraph(area: AreaProfile, work: string, salt: string) {
   const [a, b, c] = neighborNames(area);
   const options = [
-    `${work} nearby is listed for ${a}, ${b}, and ${c}. Each community has its own page because the houses are not interchangeable with ${area.name}. The links are at the bottom of this page. The visit is still this address.`,
+    `${work} nearby is listed for ${a}, ${b}, and ${c}. Each community has its own page because the houses are not interchangeable with ${area.name}. The links are at the bottom of this page. Work still happens at this house.`,
     `${a}, ${b}, and ${c} are the neighboring areas we publish for the same trade. Open those pages for the local differences. A scope written for ${area.name} does not move with you if the house is actually in one of them.`,
     `If the house is closer to ${a}, ${b}, or ${c}, use that city page. This one is ${area.name}: ${area.housingShort}, reached from our office along ${area.roads}.`,
   ];
@@ -98,7 +98,7 @@ export function permitSentence(area: AreaProfile, exterior: boolean) {
             : 'Many blocks have no association at all.'
       } ${interior} When a permit is required, it is a City of Houston permit unless the map says otherwise. We confirm that on the address.`;
     case 'zoned-city':
-      return `${area.name} issues its own permits. That counter is not the City of Houston’s. ${
+      return `${area.name} issues its own permits. That office is not the City of Houston’s. ${
         area.hoa === 'usual'
           ? 'Master-planned sections usually add an association review on top of the city.'
           : area.hoa === 'mixed'
@@ -106,7 +106,7 @@ export function permitSentence(area: AreaProfile, exterior: boolean) {
             : 'An association is the exception here, not the default.'
       } ${interior}`;
     case 'village':
-      return `${area.name} is its own city. Permits come from the village, not from Houston. ${interior} We confirm which counter this lot uses.`;
+      return `${area.name} is its own city. Permits come from the village, not from Houston. ${interior} We confirm which city permits this lot.`;
     case 'township':
       return `The Woodlands is a township, not a Houston neighborhood and not a single city hall. Village associations and deed covenants review a great deal of exterior work. ${interior} We ask which village and which review the address falls under before exterior materials are ordered.`;
     case 'mixed-cities':

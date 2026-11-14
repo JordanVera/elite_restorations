@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { LongformPage } from "@/components/longform-page";
-import { img } from "@/lib/images";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
+import { tarps } from "@/lib/topic-photos";
 import { latestStormUpdate } from "@/lib/storm-update";
 import { site } from "@/lib/site";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/es/houston-storm-damage",
   locale: "es",
   languages: languageAlternates("/houston-storm-damage", "/es/houston-storm-damage"),
-  image: "/images/services/roofing-emergency-tarp-repair.jpg",
+  image: "/images/projects/roofing/tarp-partial-roof.jpg",
 });
 
 export default function SpanishStormPage() {
@@ -27,10 +27,7 @@ export default function SpanishStormPage() {
       lede="Huracanes, granizo, viento y una helada fuerte dañan los edificios de Houston de formas distintas. Esta página se queda entre tormentas. Si acaba de pegar una, use los pasos y llame."
       crumbs={[{ name: "Tormenta", path: "/es/houston-storm-damage" }]}
       path="/es/houston-storm-damage"
-      image={img(
-        "/images/services/roofing-emergency-tarp-repair.jpg",
-        "Emergency roof tarp secured on a Houston home after storm damage",
-      )}
+      image={tarps.partial}
       claimHelp
       propertyScope
       sections={[

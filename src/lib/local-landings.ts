@@ -382,7 +382,7 @@ const angles: Record<string, readonly Angle[]> = {
       blurb: 'Siding installation, repair, or replacement, with trim and color.',
     },
     {
-      focus: 'whether a section can be matched or the wall wants a full replacement',
+      focus: 'whether a section can be matched or the wall needs a full replacement',
       before:
         'South and west walls fade faster. A repair is matched to the boards on the house now, not to the original chip.',
       onSite: 'We say when a patch will blend and when the elevation wants more.',
@@ -449,7 +449,7 @@ const angles: Record<string, readonly Angle[]> = {
       focus: 'a repair that disappears, and paint on a sound surface',
       before:
         'We feather, prime, and paint so a patch blends, including textured walls where a hard edge would show.',
-      onSite: 'We look at whether the wall wants a spot repair or the whole room painted so the sheen matches.',
+      onSite: 'We look at whether the wall needs a spot repair or the whole room painted so the sheen matches.',
       blurb: 'Drywall repair, primer, and interior paint that finish the room.',
     },
     {
