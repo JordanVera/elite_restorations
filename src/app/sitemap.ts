@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 import { areaPages } from '@/lib/area-pages';
+import { brandPages } from '@/lib/brand-pages';
 import { articlePath, articles } from '@/lib/articles';
 import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
@@ -96,6 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
     ...costGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
+    ...brandPages.map((page) => entry(page.path, page.locale === 'es' ? 0.6 : 0.7, builtAt)),
     ...caseStudies.map((study) => entry(study.path, 0.6, builtAt)),
   ];
 }

@@ -10,6 +10,7 @@ import { ScrollProgressLine } from '@/components/scroll-progress';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { brandServiceLinks } from '@/lib/brand-nav';
 import { esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
 import { LanguageSwitch } from '@/components/language-switch';
 import { isLocalLandingPath } from '@/lib/local-paths';
@@ -230,7 +231,8 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
     bare.startsWith('/services') ||
     isServicePagePath(bare) ||
     isLocalLandingPath(bare) ||
-    (es && isServicePagePath(bare));
+    (es && isServicePagePath(bare)) ||
+    brandServiceLinks.some((item) => pathname === item.href || pathname === item.esHref);
 
   return (
     <NavigationMenu.Item value="/services">
@@ -287,6 +289,28 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
                         </li>
                       );
                     })}
+                    {brandServiceLinks
+                      .filter((item) => item.group === group)
+                      .map((item) => {
+                        const href = es ? item.esHref : item.href;
+                        const current = pathname === href;
+                        return (
+                          <li key={item.href}>
+                            <NavigationMenu.Link asChild active={current}>
+                              <Link
+                                href={href}
+                                aria-current={current ? 'page' : undefined}
+                                className={cn(
+                                  'block py-1.5 text-sm leading-snug transition-colors hover:text-accent-ink',
+                                  current && 'text-accent-ink',
+                                )}
+                              >
+                                {es ? item.esLabel : item.label}
+                              </Link>
+                            </NavigationMenu.Link>
+                          </li>
+                        );
+                      })}
                   </ul>
                 </div>
               ))}

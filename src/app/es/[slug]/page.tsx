@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { LongformPage } from "@/components/longform-page";
 import { WaterCauseSections } from "@/components/water-cause-sections";
+import { brandLinksForService } from "@/lib/brand-nav";
 import { esHubs, getEsHub } from "@/lib/es/hubs";
 import { getService } from "@/lib/services";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
@@ -67,10 +68,13 @@ export default async function SpanishServicePage({
         propertyScope={slug === "water-damage-restoration" || slug === "roofing" || slug === "roofing-emergency-tarp-repair"}
         sections={hub.sections}
         faqs={hub.faqs}
-        related={service.related
-          .map((related) => getEsHub(related))
-          .filter((item) => item !== undefined)
-          .map((item) => ({ href: `/es/${item.slug}`, label: item.name }))}
+        related={[
+          ...service.related
+            .map((related) => getEsHub(related))
+            .filter((item) => item !== undefined)
+            .map((item) => ({ href: `/es/${item.slug}`, label: item.name })),
+          ...brandLinksForService(slug, "es"),
+        ]}
         ctaTitle={emergency ? "¿Sigue entrando agua?" : `¿Planea ${hub.name.toLowerCase()}?`}
         ctaBody={`Empresa familiar en Houston desde 1993. Llame al ${site.phone.display} o envíe un texto.`}
         serviceName={`${hub.name} en Houston`}

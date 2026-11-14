@@ -9,6 +9,7 @@ import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { brandServiceLinks } from '@/lib/brand-nav';
 import { isLocalLandingPath } from '@/lib/local-paths';
 import {
   isServicePagePath,
@@ -82,7 +83,10 @@ export function MobileNav({ className }: { className?: string }) {
                     : item.href === '/services'
                       ? pathname.startsWith('/services') ||
                         isServicePagePath(pathname) ||
-                        isLocalLandingPath(pathname)
+                        isLocalLandingPath(pathname) ||
+                        brandServiceLinks.some(
+                          (item) => pathname === item.href || pathname === item.esHref,
+                        )
                       : pathname.startsWith(item.href);
                 return (
                   <li
@@ -160,6 +164,25 @@ export function MobileNav({ className }: { className?: string }) {
                                   </li>
                                 );
                               })}
+                              {brandServiceLinks
+                                .filter((item) => item.group === group)
+                                .map((item) => {
+                                  const current = pathname === item.href;
+                                  return (
+                                    <li key={item.href}>
+                                      <Link
+                                        href={item.href}
+                                        aria-current={current ? 'page' : undefined}
+                                        className={cn(
+                                          'block py-1.5 text-sm transition-colors hover:text-accent-ink',
+                                          current && 'text-accent-ink',
+                                        )}
+                                      >
+                                        {item.label}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                             </ul>
                           </div>
                         ))}
