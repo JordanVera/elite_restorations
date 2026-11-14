@@ -1,4 +1,4 @@
-/** Product landing pages linked from the roofing and siding service lists. */
+/** Product landing pages linked from the service menus and Spanish service pages. */
 
 export const brandServiceLinks = [
   {
@@ -16,6 +16,49 @@ export const brandServiceLinks = [
     label: "James Hardie siding",
     esLabel: "Siding James Hardie",
     services: ["siding"] as const,
+  },
+  {
+    group: "Recovery" as const,
+    href: "/sherwin-williams-painting-houston",
+    esHref: "/es/sherwin-williams-painting-houston",
+    label: "Sherwin-Williams painting",
+    esLabel: "Pintura Sherwin-Williams",
+    services: [
+      "painting-drywall-repair",
+      "water-damage-restoration",
+      "kitchen-remodeling",
+      "bathroom-remodeling",
+    ] as const,
+  },
+  {
+    group: "Floors" as const,
+    href: "/floor-and-decor-flooring-installation-houston",
+    esHref: "/es/floor-and-decor-flooring-installation-houston",
+    label: "Floor & Decor flooring",
+    esLabel: "Pisos Floor & Decor",
+    services: [
+      "wood-flooring",
+      "tile-flooring",
+      "vinyl-flooring",
+      "laminate-flooring",
+      "water-damage-restoration",
+      "kitchen-remodeling",
+      "bathroom-remodeling",
+    ] as const,
+  },
+  {
+    group: "Interiors" as const,
+    href: "/expo-stone-countertops-houston",
+    esHref: "/es/expo-stone-countertops-houston",
+    label: "Expo Stone countertops",
+    esLabel: "Cubiertas Expo Stone",
+    services: [
+      "countertops",
+      "backsplash",
+      "kitchen-remodeling",
+      "bathroom-remodeling",
+      "water-damage-restoration",
+    ] as const,
   },
 ];
 
