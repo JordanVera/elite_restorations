@@ -141,6 +141,7 @@ export const addedServiceInputs = [
       { href: "/roof-replacement-cost-houston", label: "What changes a roof replacement cost" },
       { href: "/houston-storm-damage", label: "Houston storm damage help" },
       { href: "/insurance-claims", label: "Insurance claims help" },
+      { href: "/abc-supply-roofing-siding-houston", label: "ABC Supply roofing and siding in Houston" },
     ],
     image: img("/images/projects/roofing/shingles-white-siding.jpg", "Shingle roof meeting white siding on a Houston home"),
     local: {

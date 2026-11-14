@@ -1,3 +1,4 @@
+import { supplierBrandPages } from "@/lib/brand-pages-suppliers";
 import { site } from "@/lib/site";
 
 const phone = site.phone.display;
@@ -702,5 +703,13 @@ const stoneEs = {
   ],
 };
 
-export const productBrandPages = [sherwinEn, floorEn, stoneEn, sherwinEs, floorEs, stoneEs];
+export const productBrandPages = [
+  sherwinEn,
+  floorEn,
+  stoneEn,
+  sherwinEs,
+  floorEs,
+  stoneEs,
+  ...supplierBrandPages,
+];
 
