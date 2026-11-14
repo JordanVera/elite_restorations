@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { LongformPage } from "@/components/longform-page";
+import { esStormFaqs } from "@/lib/faqs/es";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { tarps } from "@/lib/topic-photos";
 import { latestStormUpdate } from "@/lib/storm-update";
@@ -68,6 +69,7 @@ export default function SpanishStormPage() {
         { q: "¿La oficina abre el domingo?", a: "El domingo la oficina está cerrada. Abre de lunes a sábado, de 8:00 AM a 6:00 PM. Las emergencias de agua y de tormenta se atienden por teléfono a cualquier hora." },
         { q: "¿Qué cuesta una lona?", a: "Como rango para planear, no como cotización, muchas aberturas en un techo donde se puede caminar andan de unos cientos de dólares a unos $2,000. Ese rango no es el precio de un techo nuevo." },
         { q: "¿Qué vecindarios cubren?", a: "El área de Houston, incluyendo Katy, Sugar Land, Memorial, The Woodlands, Clear Lake, Westchase y Alief. La visita es en la propiedad." },
+        ...esStormFaqs,
       ]}
       related={[
         { href: "/es/emergency", label: "Emergencia" },

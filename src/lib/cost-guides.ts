@@ -1,5 +1,7 @@
 import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
+import { duplicateQuestions } from '@/lib/faqs';
+import { costFaqs as extraCostFaqs } from '@/lib/faqs/pages';
 import type { GuideSection } from '@/lib/guides/types';
 import {
   bathroomCostFaqs,
@@ -70,7 +72,7 @@ export function formatPublishedRange(range: CostRange) {
 
 const phone = site.phone.display;
 
-export const costGuides: readonly CostGuide[] = [
+const costGuideInputs: readonly CostGuide[] = [
   {
     slug: 'kitchen-remodel-cost-houston',
     path: '/kitchen-remodel-cost-houston',
@@ -278,6 +280,17 @@ export const costGuides: readonly CostGuide[] = [
   },
 ];
 
+export const costGuides: readonly CostGuide[] = costGuideInputs.map((guide) => {
+  const extra = extraCostFaqs[guide.slug];
+  if (!extra) throw new Error(`Missing cost FAQs: ${guide.slug}`);
+  const faqs = [...guide.faqs, ...extra];
+  const repeated = duplicateQuestions(faqs);
+  if (repeated.length > 0) {
+    throw new Error(`Cost guide ${guide.slug} repeats FAQ: ${repeated.join(' | ')}`);
+  }
+  return { ...guide, faqs };
+});
+
 const bySlug = new Map(costGuides.map((guide) => [guide.slug, guide]));
 
 export function getCostGuide(slug: string) {
@@ -307,10 +320,10 @@ function costGuideWords(guide: CostGuide) {
 const costDepthErrors: string[] = [];
 for (const guide of costGuides) {
   const words = costGuideWords(guide);
-  if (words < 1500 || words > 1900) {
+  if (words < 1500 || words > 2800) {
     costDepthErrors.push(`Cost guide ${guide.slug} is ${words} words`);
   }
-  if (guide.faqs.length < 6 || guide.faqs.length > 10) {
+  if (guide.faqs.length < 14 || guide.faqs.length > 22) {
     costDepthErrors.push(`Cost guide ${guide.slug} has ${guide.faqs.length} FAQs`);
   }
 }

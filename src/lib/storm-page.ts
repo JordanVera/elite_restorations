@@ -1,3 +1,5 @@
+import { duplicateQuestions } from "@/lib/faqs";
+import { stormFaqs as extraStormFaqs } from "@/lib/faqs/pages";
 import type { GuideSection } from "@/lib/guides/types";
 import { wordCount } from "@/lib/words";
 
@@ -121,6 +123,7 @@ export const stormPage = {
     { q: "Are you public adjusters?", a: "No. We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. Your insurer decides coverage and payment." },
     { q: "Where are you, and when do you answer?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
     { q: "Which neighborhoods do you cover?", a: "Greater Houston, including Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, The Woodlands, Pearland, Clear Lake, and Galveston. The visit is at the property." },
+    ...extraStormFaqs,
   ],
 };
 
@@ -141,6 +144,10 @@ const stormWords = stormPageWords();
 if (stormWords < 1800) {
   throw new Error(`Storm page is ${stormWords} words, under 1800`);
 }
-if (stormPage.faqs.length < 10) {
-  throw new Error("Storm page needs 10 FAQs");
+if (stormPage.faqs.length < 18) {
+  throw new Error(`Storm page needs at least 18 FAQs, has ${stormPage.faqs.length}`);
+}
+const repeatedStormFaqs = duplicateQuestions(stormPage.faqs);
+if (repeatedStormFaqs.length > 0) {
+  throw new Error(`Storm page repeats FAQ: ${repeatedStormFaqs.join(" | ")}`);
 }

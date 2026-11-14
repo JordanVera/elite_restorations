@@ -1,3 +1,4 @@
+import { duplicateQuestions, extraServiceFaqs } from '@/lib/faqs';
 import { addedServiceInputs } from '@/lib/guides/added-service-inputs';
 import { serviceGuides } from '@/lib/guides/index';
 import type { ServiceGuide } from '@/lib/guides/types';
@@ -1749,7 +1750,9 @@ export function isCityIndexedService(slug: string) {
 export const services: Service[] = serviceInputs.map((service) => {
   const guide = serviceGuides[service.slug];
   if (!guide) throw new Error(`Missing service guide: ${service.slug}`);
-  return { ...service, guide };
+  const extra = extraServiceFaqs[service.slug];
+  if (!extra) throw new Error(`Missing customer FAQs: ${service.slug}`);
+  return { ...service, faqs: [...service.faqs, ...extra], guide };
 });
 
 const priorityServiceSlugs = new Set([
@@ -1791,16 +1794,31 @@ const serviceDepthErrors: string[] = [];
 for (const service of services) {
   const words = serviceMainWords(service);
   const faqs = service.faqs.length + service.guide.faqs.length;
-  if (words < 1500 || words > 2200) {
+  if (words < 1500 || words > 3200) {
     serviceDepthErrors.push(`${service.slug} main content is ${words} words`);
   }
-  if (faqs < 6 || faqs > 12) {
+  if (faqs < 14 || faqs > 24) {
     serviceDepthErrors.push(`${service.slug} has ${faqs} FAQs`);
+  }
+  const extra = extraServiceFaqs[service.slug] ?? [];
+  const originalFaqs = service.faqs.slice(0, service.faqs.length - extra.length);
+  const existingKeys = new Set(
+    [...originalFaqs, ...service.guide.faqs].map((item) => item.q.trim().toLowerCase()),
+  );
+  const repeated = [
+    ...duplicateQuestions(extra),
+    ...extra
+      .filter((item) => existingKeys.has(item.q.trim().toLowerCase()))
+      .map((item) => item.q),
+  ];
+  if (repeated.length > 0) {
+    serviceDepthErrors.push(`${service.slug} repeats FAQ: ${repeated.join(' | ')}`);
   }
   const blob = [
     service.tagline,
     ...service.intro,
     ...service.guide.sections.flatMap((section) => section.paragraphs),
+    ...service.faqs.map((faq) => `${faq.q} ${faq.a}`),
     ...service.guide.faqs.map((faq) => faq.a),
   ].join('\n');
   if (/\bGAF\b|\bIICRC\b/.test(blob)) {
