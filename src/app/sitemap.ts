@@ -8,7 +8,10 @@ import { legalEffectiveDate } from '@/lib/legal';
 import { localLandings } from '@/lib/local-landings';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
+import { insurers } from '@/lib/insurers';
+import { spanishServiceSlugs } from '@/lib/i18n';
 import { servicePath, services } from '@/lib/services';
+import { waterCauses } from '@/lib/water-causes';
 
 const MONTHS = {
   January: 0,
@@ -67,12 +70,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/emergency',
     '/insurance-log',
     '/blog',
+    '/houston-storm-damage',
+    '/insurance-claims/companies',
+  ];
+  const spanishRoutes = [
+    '/es',
+    '/es/restoration',
+    '/es/emergency',
+    '/es/contact',
+    '/es/houston-storm-damage',
+    ...spanishServiceSlugs.map((slug) => `/es/${slug}`),
   ];
   return [
     ...staticRoutes.map((path) =>
       entry(path, path === '/' ? 1 : path === '/restoration' ? 0.9 : 0.8, builtAt),
     ),
     ...services.map((s) => entry(servicePath(s.slug), 0.7, builtAt)),
+    ...spanishRoutes.map((path) => entry(path, 0.6, builtAt)),
+    ...waterCauses.map((cause) => entry(cause.path, 0.7, builtAt)),
+    ...insurers.map((insurer) => entry(`/insurance-claims/companies/${insurer.slug}`, 0.6, builtAt)),
     ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
     ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
     entry('/privacy', 0.3, builtAt),

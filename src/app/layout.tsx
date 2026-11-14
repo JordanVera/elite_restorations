@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Instrument_Serif } from 'next/font/google';
 
+import { CallTextBar } from '@/components/call-text-bar';
 import { Providers } from '@/components/providers';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
@@ -77,6 +78,12 @@ export default function RootLayout({
       className={cn(display.variable, body.variable)}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var p=location.pathname;if(p==="/es"||p.indexOf("/es/")===0)document.documentElement.lang="es"}catch(e){}',
+          }}
+        />
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;visibility:visible!important}`}</style>
         </noscript>
@@ -94,6 +101,7 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
+          <CallTextBar />
         </Providers>
         <JsonLd data={siteSchemaGraph()} />
       </body>

@@ -9,6 +9,7 @@ type PageHeroProps = {
   title: readonly string[];
   lede?: string;
   crumbs?: { name: string; path: string }[];
+  homeCrumb?: { name: string; path: string };
   headingId?: string;
   className?: string;
   children?: React.ReactNode;
@@ -19,6 +20,7 @@ export function PageHero({
   title,
   lede,
   crumbs,
+  homeCrumb,
   headingId = "page-heading",
   className,
   children,
@@ -35,7 +37,7 @@ export function PageHero({
       <div className="gutter mx-auto max-w-[120rem]">
         <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-b border-border pb-4">
           {crumbs ? (
-            <Breadcrumbs items={crumbs} />
+            <Breadcrumbs items={crumbs} home={homeCrumb} />
           ) : (
             <p className="eyebrow text-muted-foreground">{eyebrow}</p>
           )}

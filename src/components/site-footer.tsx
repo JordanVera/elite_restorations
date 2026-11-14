@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
+import { LanguageSwitch } from '@/components/language-switch';
+import { waterCauses } from '@/lib/water-causes';
 import { googleReviews } from '@/lib/testimonials';
 import { nav, site } from '@/lib/site';
 import { serviceGroups, servicePath, servicesInGroup } from '@/lib/services';
@@ -104,6 +106,28 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/houston-storm-damage" className={linkClass}>
+                  Storm damage
+                </Link>
+              </li>
+              <li>
+                <Link href="/commercial-storm-restoration" className={linkClass}>
+                  Commercial and apartments
+                </Link>
+              </li>
+              <li>
+                <Link href="/insurance-claims/companies" className={linkClass}>
+                  Insurer guides
+                </Link>
+              </li>
+              {waterCauses.map((cause) => (
+                <li key={cause.slug}>
+                  <Link href={cause.path} className={linkClass}>
+                    {cause.hubHeading}
+                  </Link>
+                </li>
+              ))}
+              <li>
                 <Link href="/testimonials" className={linkClass}>
                   Reviews
                 </Link>
@@ -190,7 +214,8 @@ export function SiteFooter() {
               &copy; {year} {site.name}. Family owned and operated in Houston
               since {site.founded}. Serving Greater Houston, Texas.
             </p>
-            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2 lg:justify-end">
+            <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 lg:justify-end">
+              <LanguageSwitch />
               <Link href="/privacy" className={linkClass}>
                 Privacy
               </Link>

@@ -4,7 +4,7 @@ import { Clock, Mail, MapPin } from 'lucide-react';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
@@ -12,6 +12,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Call (713) 909-0034 for Houston restoration or remodeling. Visit 511 Crestwater Ct, Houston, TX 77082, or request an estimate.',
   path: '/contact',
+  languages: languageAlternates('/contact', '/es/contact'),
 });
 
 type SearchParams = Promise<{
@@ -52,6 +53,12 @@ export default async function ContactPage({
               className="font-display mt-4 block text-[clamp(2rem,10vw,3.75rem)] leading-none transition-colors hover:text-accent-ink"
             >
               {site.phone.display}
+            </a>
+            <a
+              href={site.phone.sms}
+              className="mt-3 inline-flex text-sm underline decoration-foreground/30 underline-offset-[0.45em] hover:decoration-accent-ink"
+            >
+              Text us
             </a>
 
             <dl className="mt-12 space-y-8">

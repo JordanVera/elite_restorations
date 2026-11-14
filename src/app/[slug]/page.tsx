@@ -12,6 +12,9 @@ import { CostGuideView } from '@/components/cost-guide';
 import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
+import { InsuranceClaimHelp } from '@/components/insurance-claim-help';
+import { PropertyScopeNote } from '@/components/property-scope-note';
+import { WaterCauseSections } from '@/components/water-cause-sections';
 import { ProseSections } from '@/components/prose-sections';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
@@ -24,7 +27,9 @@ import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
-import { absoluteUrl, pageMetadata, servicePageTitle } from '@/lib/seo';
+import { claimHelpFaqs } from '@/lib/claim-help';
+import { spanishPathFor } from '@/lib/i18n';
+import { absoluteUrl, languageAlternates, pageMetadata, servicePageTitle } from '@/lib/seo';
 import {
   getService,
   servicePath,
@@ -125,13 +130,30 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
   const path = servicePath(service.slug);
+  const esPath = spanishPathFor(path);
   return pageMetadata({
     title: servicePageTitle(service),
     description: service.metaDescription,
     path,
     image: service.image?.src,
+    languages: esPath ? languageAlternates(path, esPath) : undefined,
   });
 }
+
+const claimHelpSlugs = new Set([
+  'water-damage-restoration',
+  'roofing',
+  'roofing-emergency-tarp-repair',
+  'emergency-board-up',
+  'commercial-storm-restoration',
+]);
+
+const propertyScopeSlugs = new Set([
+  'water-damage-restoration',
+  'roofing',
+  'roofing-emergency-tarp-repair',
+  'emergency-board-up',
+]);
 
 export default async function ServicePage({
   params,
@@ -164,7 +186,11 @@ export default async function ServicePage({
       title: step.title,
       body: `${step.lead} ${step.body}`,
     }));
-  const faqs = [...service.faqs, ...service.guide.faqs];
+  const faqs = [
+    ...service.faqs,
+    ...service.guide.faqs,
+    ...(claimHelpSlugs.has(service.slug) ? claimHelpFaqs('en') : []),
+  ];
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
@@ -218,6 +244,10 @@ export default async function ServicePage({
           </Reveal>
         )}
       </PageHero>
+
+      {propertyScopeSlugs.has(service.slug) ? <PropertyScopeNote /> : null}
+      {claimHelpSlugs.has(service.slug) ? <InsuranceClaimHelp /> : null}
+      {service.slug === 'water-damage-restoration' ? <WaterCauseSections /> : null}
 
       {service.image && (
         <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">

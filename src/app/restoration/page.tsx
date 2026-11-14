@@ -10,7 +10,7 @@ import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { landingsForService } from '@/lib/local-landings';
-import { absoluteUrl, localBusinessSchema, pageMetadata } from '@/lib/seo';
+import { absoluteUrl, languageAlternates, localBusinessSchema, pageMetadata } from '@/lib/seo';
 import { getService } from '@/lib/services';
 import { site } from '@/lib/site';
 
@@ -22,6 +22,7 @@ export const metadata: Metadata = pageMetadata({
   description,
   path: '/restoration',
   image: '/images/services/water-damage-restoration.jpg',
+  languages: languageAlternates('/restoration', '/es/restoration'),
 });
 
 const services = [
@@ -262,6 +263,24 @@ export default function RestorationPage() {
                   className="inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
                 >
                   Emergency tarping
+                  <ArrowUpRight className="size-4" aria-hidden />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/houston-storm-damage"
+                  className="inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                >
+                  Houston storm damage help
+                  <ArrowUpRight className="size-4" aria-hidden />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/commercial-storm-restoration"
+                  className="inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                >
+                  Commercial and apartment buildings
                   <ArrowUpRight className="size-4" aria-hidden />
                 </Link>
               </li>

@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight, ChevronDown } from 'lucide-react';
 
 import { Photo } from '@/components/photo';
 import { Reveal, SplitLines } from '@/components/motion';
+import { serviceHref } from '@/lib/i18n';
 import type { Img } from '@/lib/images';
 import { cn } from '@/lib/utils';
 
@@ -28,14 +29,29 @@ const PREVIEW_COUNT = 6;
 export function ServiceIndex({
   services,
   coreLinks = [],
+  heading = ["Twenty-five trades.", "One team."],
+  intro = "Planned remodels and unplanned emergencies use the same skills. That is why we do both. Pick a service to see how we approach it.",
+  locale = "en",
+  exploreLabel = "Explore",
+  moreLabel,
+  lessLabel = "Show fewer",
+  indexLabel = "Services",
 }: {
   services: IndexService[];
   coreLinks?: CoreLink[];
+  heading?: readonly [string, string];
+  intro?: string;
+  locale?: "en" | "es";
+  exploreLabel?: string;
+  moreLabel?: string;
+  lessLabel?: string;
+  indexLabel?: string;
 }) {
   const [activeSlug, setActiveSlug] = React.useState(services[0].slug);
   const [expanded, setExpanded] = React.useState(false);
   const listId = React.useId();
   const active = services.find((s) => s.slug === activeSlug) ?? services[0];
+  const hrefFor = (slug: string) => serviceHref(slug, locale);
   const canToggle = services.length > PREVIEW_COUNT;
   const hiddenCount = Math.max(services.length - PREVIEW_COUNT, 0);
   const preview = services.slice(0, PREVIEW_COUNT);
@@ -57,27 +73,26 @@ export function ServiceIndex({
         <div className="grid gap-y-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="eyebrow text-muted-foreground">Services</p>
+              <p className="eyebrow text-muted-foreground">{indexLabel}</p>
             </Reveal>
             <SplitLines
               as="h2"
               id="services-heading"
               className="t-xl mt-6"
               lines={[
-                'Eighteen trades.',
+                heading[0],
                 <span key="b">
-                  One <em className="text-accent-ink">team.</em>
+                  {heading[1].replace(" team.", "").replace(" equipo.", "")}{" "}
+                  <em className="text-accent-ink">
+                    {heading[1].includes("equipo") ? "equipo." : "team."}
+                  </em>
                 </span>,
               ]}
             />
           </div>
           <div className="flex items-end lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.15}>
-              <p className="text-muted-foreground">
-                Planned remodels and unplanned emergencies use the same skills.
-                That is why we do both. Pick a service to see how we approach
-                it.
-              </p>
+              <p className="text-muted-foreground">{intro}</p>
             </Reveal>
           </div>
         </div>
@@ -112,6 +127,7 @@ export function ServiceIndex({
                   index={i}
                   active={service.slug === activeSlug}
                   onActivate={setActiveSlug}
+                  hrefFor={hrefFor}
                 />
               </li>
             ))}
@@ -124,6 +140,7 @@ export function ServiceIndex({
                       index={i + PREVIEW_COUNT}
                       active={service.slug === activeSlug}
                       onActivate={setActiveSlug}
+                      hrefFor={hrefFor}
                     />
                   </div>
                 </li>
@@ -141,7 +158,7 @@ export function ServiceIndex({
                     {expanded ? '–' : '+'}
                   </span>
                   <span className="eyebrow transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3">
-                    {expanded ? 'Show fewer' : `Show ${hiddenCount} more`}
+                    {expanded ? lessLabel : (moreLabel ?? `Show ${hiddenCount} more`)}
                   </span>
                   <ChevronDown
                     className={cn(
@@ -186,10 +203,10 @@ export function ServiceIndex({
                   {active.summary}
                 </p>
                 <Link
-                  href={`/${active.slug}`}
+                  href={hrefFor(active.slug)}
                   className="eyebrow inline-flex shrink-0 items-center gap-2 border-b border-foreground/40 pb-1.5 transition-colors hover:border-accent-ink hover:text-accent-ink"
                 >
-                  Explore
+                  {exploreLabel}
                   <ArrowRight className="size-3.5" aria-hidden />
                 </Link>
               </div>
@@ -216,15 +233,17 @@ function ServiceRow({
   index,
   active,
   onActivate,
+  hrefFor,
 }: {
   service: IndexService;
   index: number;
   active: boolean;
   onActivate: (slug: string) => void;
+  hrefFor: (slug: string) => string;
 }) {
   return (
     <Link
-      href={`/${service.slug}`}
+      href={hrefFor(service.slug)}
       data-active={active}
       onMouseEnter={() => onActivate(service.slug)}
       onFocus={() => onActivate(service.slug)}

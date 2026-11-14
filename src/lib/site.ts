@@ -15,6 +15,7 @@ export const site = {
   phone: {
     display: '(713) 909-0034',
     href: 'tel:+17139090034',
+    sms: 'sms:+17139090034',
     e164: '+17139090034',
   },
   email: 'admin@eliterestorations.com',
