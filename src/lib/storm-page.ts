@@ -6,19 +6,19 @@ const phone = "(713) 909-0034";
 export const stormPage = {
   metaTitle: "Houston Storm Damage Help",
   description:
-    "Houston storm damage help after hurricanes, hail, wind, and freezes. Tarp, board-up, drying, and claim help for homes and buildings. Call (713) 909-0034.",
+    "Houston storm damage help after hurricanes, hail, wind, and freezes. We tarp, board up, dry the building, and help you document the claim. Call (713) 909-0034.",
   eyebrow: "After the storm",
   title: ["Houston storm", "damage help."] as const,
-  lede: "Hurricanes, hail, straight-line wind, and the occasional hard freeze do different things to a Houston building. This page stays up between storms. When one hits, use the steps, then call.",
+  lede: "Hurricanes, hail, straight-line wind, and the occasional hard freeze each do something different to a Houston building. This page stays up between storms. When one hits, follow the steps, then call.",
   sections: [
     {
       eyebrow: "First",
       heading: "The order that matters after the weather.",
       paragraphs: [
-        "People first. Stay out of a room with a sagging ceiling, broken glass, or standing water near outlets. Do not walk a wet roof to find the hole. If you smell gas, leave and call the utility. If the power is questionable, leave the breaker off and do not wade to it.",
+        "People come first. Stay out of a room with a sagging ceiling, broken glass, or standing water near outlets. Stay off a wet roof, and look for the hole from the ground or from inside. If you smell gas, leave and call the utility. If you are not sure the power is safe, leave the breaker off and stay out of the water.",
         "Then stop more water if you can do it safely from inside: a bucket under a drip, a towel at a door, the main shut off if a pipe burst in a freeze. Photograph wide and close before you throw belongings away or cover an opening. Call " +
           phone +
-          " and say whether the roof is open, a window is gone, or water is on the floor. Text the same number if you cannot talk. The form on the emergency page is a request for a call back, not a guaranteed arrival in a citywide storm.",
+          " and say whether the roof is open, a window is gone, or water is on the floor. Text the same number if you cannot talk. The form on the emergency page asks us to call you back. We'll call you back as soon as we can. A citywide storm can slow that down.",
       ],
       points: [
         { title: "Do not climb", body: "A wet slope after a Houston squall is how people get hurt. Look from the ground and from inside." },
@@ -31,12 +31,12 @@ export const stormPage = {
       heading: "Gulf storms, June through November.",
       paragraphs: [
         "Hurricane season runs June 1 through November 30. A Gulf storm can lift shingles from Galveston and Clear Lake inland through Pearland, Houston, and Katy, throw limbs through roofs in Memorial and The Woodlands, and push rain through flashing for days after the eye has gone. The first construction job, when the wind lets a crew up, is often a tarp so the next band stays outside. Board-up is the broken window or door. They are different tasks and a bad storm needs both.",
-        "We do not send a crew onto a roof during lightning or in wind that makes it unsafe. Waiting for daylight is the right call even when a ceiling is dripping. We do this for houses, apartment communities, and low commercial roofs. A property manager should have unit numbers and a way onto the roof ready. We work for the person who calls us. We are not a preferred vendor of any insurer.",
+        "A crew stays off the roof during lightning and in wind that is not safe. Waiting for daylight is the right call even when a ceiling is dripping. We do this for houses, apartment communities, and low commercial roofs. A property manager should have unit numbers and a way onto the roof ready. We work for the person who calls us. We are not a preferred vendor of any insurer.",
       ],
       points: [
         { title: "Tarp", body: "A cover buys time. It is not a roof and it is not a warranty. The roofing and tarp pages say what the permanent step is." },
         { title: "Board-up", body: "Glass and doors get a rigid cover. Plywood is temporary until the real closure is available." },
-        { title: "Interior", body: "Wet insulation does not pause because an adjuster has not visited. Drying can start while the roof decision is open." },
+        { title: "Interior", body: "Wet insulation does not wait for an adjuster to visit. Drying can start while the roof decision is still open." },
       ],
     },
     {
@@ -44,11 +44,11 @@ export const stormPage = {
       heading: "Spring squalls and hail on asphalt roofs.",
       paragraphs: [
         "Hail and straight-line wind are not only a hurricane problem. Spring and summer squalls mark roofs in Katy, Cypress, Sugar Land, and The Woodlands and still leave the house looking ordinary from the street. Bruised shingles, a cracked skylight, and gutters pulled off a corner are the clues. Interior stains may show up on the next rain, not the day of the hail. We inspect before we say a repair will hold or the roof needs to come off.",
-        "We photograph the roof and any wet rooms before a tarp hides the opening. We can meet an adjuster on site. We do not decide whether marks are hail or wear, and we do not promise the claim. Wind deductibles on Texas policies are often a percentage of the dwelling limit and they are not the same as a plumbing deductible. That sentence is a reason to read your policy, not a quote of your deductible. We will not invent the percentage.",
+        "We photograph the roof and any wet rooms before a tarp hides the opening. We can meet an adjuster on site. Your insurer decides whether the marks are hail or wear, and whether the claim pays. Wind deductibles on Texas policies are often a percentage of the amount the policy lists for the house, and they are not the same as a plumbing deductible. That is a reason to read your policy. It is not a quote of your deductible, and we will not invent the percentage.",
       ],
       points: [
         { title: "All slopes", body: "The front can look calm while the west slope took the hail. We look at the roof, not the curb." },
-        { title: "Gutters", body: "Dented runs and soft fascia are their own scope. A gutter full of leaves is maintenance." },
+        { title: "Gutters", body: "Dented gutters and the soft wood behind them are their own part of the work. A gutter full of leaves is maintenance." },
         { title: "Siding", body: "Wind cracks and lifted courses get photographed. A repair and a full re-side are different jobs." },
       ],
     },
@@ -76,7 +76,7 @@ export const stormPage = {
       ],
       points: [
         { title: "Top floors", body: "Apartment water shows in the highest ceilings first. We list units. We do not dry a whole building from one stain." },
-        { title: "Storefronts", body: "An open glass line is weather and security the same night. Board-up is that scope." },
+        { title: "Storefronts", body: "An open glass line is weather and security the same night. Board-up is that job." },
         { title: "One team", body: "Tarp, dry-out, and the rebuild can stay here so you are not hiring a second contractor to close the walls." },
       ],
     },
@@ -84,13 +84,13 @@ export const stormPage = {
       eyebrow: "Claims",
       heading: "Help with the claim, without a promise of payment.",
       paragraphs: [
-        "We help you document hurricane, hail, wind, tornado, and water damage, meet the adjuster on site if you want us there, and write a repair estimate. We assist through the repair with photos and notes you can share. We do not file the claim, interpret the policy, or promise approval. Flooding from rising water is often a different policy from wind. Check yours. Notice deadlines are in the policy. We will not invent 'you have 48 hours.'",
-        "Mitigation, a tarp, a board-up, extraction, drying, limits further damage. Many policies expect that. Whether this one pays for it is the carrier's decision. Keep claim numbers, dates, and names. The insurance claims page, the photo log, and the pages about major Texas insurers are there so you can see the limit of our role. We do not use their logos and we are not affiliated with them.",
+        "We help you document hurricane, hail, wind, tornado, and water damage, meet the adjuster on site if you want us there, and write a repair estimate. We stay with the repair and share photos and notes you can pass along. You file the claim. We do not interpret the policy or promise approval. Flooding from rising water is often a different policy from wind. Check yours. Any notice deadline is in the policy, so ask your insurer what it says.",
+        "A tarp, a board-up, water removal, and drying are the steps that limit more damage. Many policies expect you to take those steps. Whether this policy pays for them is your insurer's decision. Keep claim numbers, dates, and names. The insurance claims page, the photo log, and the pages about major Texas insurers show where our help stops. Their logos are not ours, and we are not affiliated with them.",
       ],
       points: [
         { title: "Photos before the cover", body: "Once the tarp is on, the opening is hidden. Shoot it first when it is safe." },
-        { title: "Estimate", body: "Our number is the construction. The claim payment is whatever the insurer allows." },
-        { title: "Tornado", body: "If the area is safe to enter, the work is still photos, temporary protection, and drying. Coverage is still not our decision." },
+        { title: "Estimate", body: "Our number is the price of the construction. The claim payment is whatever the insurer allows." },
+        { title: "Tornado", body: "If the area is safe to enter, the work is still photos, temporary protection, and drying. Your insurer still decides coverage." },
       ],
     },
     {
@@ -98,27 +98,27 @@ export const stormPage = {
       heading: "What a storm visit actually prices.",
       paragraphs: [
         "There is no flat storm price. A single tarp on a walkable one-story roof often plans around a few hundred dollars to about $2,000. A board-up of a ground-floor opening often plans in a similar band, a few hundred dollars to about $1,500, and more for a glass line or a second story. Drying one wet room often plans in the low thousands. A roof replacement, if the roof will not hold, is a different number. Many Houston houses plan a replacement around $12,000 to $24,000. Those are planning ranges, not quotes, and they are not deductibles.",
-        "We will not fold drying, glass, and a new roof into one small number to win the first call. We price what we can see. In a citywide storm, arrival is not guaranteed by the form. Call " +
+        "Drying, glass, and a new roof stay as separate prices. We price what we can see. In a citywide storm, the form does not reserve a truck. Call " +
           phone +
           ", tell us the address and whether water is still coming in, and we will say the next safe step.",
       ],
       points: [
-        { title: "Separate scopes", body: "Tarp, board-up, dry-out, and a new roof are different lines. We label them." },
-        { title: "The deductible", body: "We do not know yours. Read the declarations page or ask your agent." },
-        { title: "No lock-in", body: "A tarp is not an agreement to replace the roof. The permanent roof is a later decision." },
+        { title: "Separate jobs", body: "Tarp, board-up, dry-out, and a new roof are different jobs. We label them that way." },
+        { title: "The deductible", body: "Yours is on the declarations page, or you can ask your agent. We do not have that number." },
+        { title: "No lock-in", body: "A tarp buys time. Replacing the roof is a later decision, not part of the tarp." },
       ],
     },
   ] as const satisfies readonly GuideSection[],
   faqs: [
     { q: "What should I do first after a Houston storm?", a: "Stay off the roof, keep people out of sagging ceilings and water near power, photograph the damage, and call " + phone + " if the building is open or wet." },
     { q: "Do you tarp roofs and board up windows?", a: "Yes. A tarp is the roof. Board-up is the wall and the glass. We do both for houses, apartments, and commercial buildings when it is safe." },
-    { q: "Will you come during the storm?", a: "Not onto a roof during lightning or unsafe wind. Call and we will tell you the next safe step. The online form asks us to call you back. It does not mean we are already driving." },
-    { q: "Do you help after hurricanes, hail, wind, and freezes?", a: "Yes. They damage buildings differently. We document the one you have, dry what got wet, and estimate the repair. We do not promise the claim." },
-    { q: "Is flood the same as storm damage?", a: "No. Rising water is often a different policy from wind or hail. Check your policies. We will not rename bayou water as a plumbing break." },
+    { q: "Will you come during the storm?", a: "Not onto a roof during lightning or unsafe wind. Call and we will tell you the next safe step. The online form asks us to call you back. We'll call you back as soon as we can." },
+    { q: "Do you help after hurricanes, hail, wind, and freezes?", a: "Yes. They damage buildings differently. We document the one you have, dry what got wet, and estimate the repair. Your insurer decides the claim." },
+    { q: "Is flood the same as storm damage?", a: "No. Rising water is often a different policy from wind or hail. Check your policies. We write bayou water down as flooding, not as a plumbing break." },
     { q: "Can property managers call?", a: "Yes, any time for an active emergency. Have the address, the access, and which units are wet. The commercial page is written for that call." },
     { q: "How do I make a photo log?", a: "Wide shots, close shots, the source, and the belongings, before cleanup. The guide on this site walks through a room-by-room log. It does not create coverage." },
     { q: "What does emergency tarping usually cost?", a: "Many single openings on a walkable roof plan around a few hundred dollars to about $2,000. Steeper or larger openings cost more. That is a range, not a quote, and it is not a new roof." },
-    { q: "Are you public adjusters?", a: "No. We help with photos, mitigation, an on-site meeting, and a repair estimate. Your insurer decides coverage and payment." },
+    { q: "Are you public adjusters?", a: "No. We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. Your insurer decides coverage and payment." },
     { q: "Where are you, and when do you answer?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
     { q: "Which neighborhoods do you cover?", a: "Greater Houston, including Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, The Woodlands, Pearland, Clear Lake, and Galveston. The visit is at the property." },
   ],

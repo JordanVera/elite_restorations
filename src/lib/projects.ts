@@ -40,7 +40,7 @@ const altOverrides: Record<string, string> = {
   'roofing/brick-house-missing-shingles.webp':
     'Roofer repairing shingles on a brick Houston home',
   'roofing/roofer-ladder-underlayment.webp':
-    'Roofer on a ladder installing underlayment on a Houston roof',
+    'Roofer on a ladder installing the layer under the shingles on a Houston roof',
   'roofing/tarp-aerial-full-roof.jpg':
     'Aerial view of an emergency tarp covering a Houston roof',
   'restoration/air-movers-drying.jpg':
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     slug: 'coffered-ceilings-marble-islands',
     title: 'Coffered Ceilings & Marble Islands',
     category: 'Kitchens',
-    tagline: 'Architecture overhead, stone underfoot.',
+    tagline: 'The ceiling and the stone carry the room.',
     summary: [
       'A collection of kitchens where the ceiling does as much work as the cabinetry. Coffered grids frame the room, marble runs across islands and backsplashes, and pendants and chandeliers set the mood.',
       'These are rooms designed to be looked at and cooked in: layered lighting, generous islands and custom cabinetry with crown detail.',
@@ -253,7 +253,7 @@ export const projects: Project[] = [
     slug: 'timber-and-lantern-light',
     title: 'Timber & Lantern Light',
     category: 'Kitchens',
-    tagline: 'Warmth from wood, beams and glowing pendants.',
+    tagline: 'Wood, beams, and glowing pendants warm the room.',
     summary: [
       'Exposed beams, wood islands and lantern pendants give these kitchens a lived-in warmth that still feels considered.',
       'Wood is the through-line: on ceilings, on range hoods, and in islands with slatted or natural finishes.',
@@ -272,7 +272,7 @@ export const projects: Project[] = [
     slug: 'vaulted-rooms-waterfall-islands',
     title: 'Vaulted Rooms, Waterfall Islands',
     category: 'Kitchens',
-    tagline: 'Height, volume and stone that pours to the floor.',
+    tagline: 'Tall rooms, with stone that runs down to the floor.',
     summary: [
       'Open plans under vaulted ceilings, anchored by waterfall-edge islands where the counter material continues down the sides.',
       'Brass, black and glass pendants punctuate the space and pick up the finishes in the fixtures and hardware.',
@@ -292,7 +292,7 @@ export const projects: Project[] = [
     slug: 'hoods-ranges-and-cooking-walls',
     title: 'Hoods, Ranges & Cooking Walls',
     category: 'Kitchens',
-    tagline: 'The working wall, treated as a focal point.',
+    tagline: 'The cooking wall is the part of the room you notice.',
     summary: [
       'Statement range hoods, deep farmhouse sinks and colored cabinetry, from navy islands to dark lower cabinets.',
       'Details such as gooseneck faucets and woven shades show how much finish carries the design.',
@@ -311,7 +311,7 @@ export const projects: Project[] = [
     slug: 'marble-showers-and-patterned-floors',
     title: 'Marble Showers & Patterned Floors',
     category: 'Bathrooms',
-    tagline: 'Wet rooms built for the long haul.',
+    tagline: 'Showers and baths built to live with water.',
     summary: [
       'Showers in marble, pebble, herringbone and large-format tile, with niches, handheld and body-jet fixtures, and freestanding tubs.',
       'Patterned and hex floors add rhythm underfoot, and glass keeps the rooms open.',
@@ -331,7 +331,7 @@ export const projects: Project[] = [
     slug: 'vanities-gold-and-glass',
     title: 'Vanities in Gold & Glass',
     category: 'Bathrooms',
-    tagline: 'The piece you see first, done with restraint.',
+    tagline: 'The vanity is what you see first, kept simple.',
     summary: [
       'Double vanities in white, navy, taupe and light wood, framed by oval, arched and gold-trimmed mirrors.',
       'Marble counters, mosaic floors and gold or matte-black hardware give each room its own character.',
@@ -351,7 +351,7 @@ export const projects: Project[] = [
     slug: 'charcoal-cream-and-wallpaper-baths',
     title: 'Charcoal, Cream & Wallpaper Baths',
     category: 'Bathrooms',
-    tagline: 'Powder rooms and primary baths with a point of view.',
+    tagline: 'Powder rooms and primary baths with a clear point of view.',
     summary: [
       'Deep charcoal walls, patterned tile showers and wallpapered baths show how much personality a small room can hold.',
     ],
@@ -373,14 +373,14 @@ export const projects: Project[] = [
     slug: 'floors-that-hold-the-room',
     title: 'Floors That Hold the Room',
     category: 'Floors',
-    tagline: 'Plank, chevron, stone-look and encaustic.',
+    tagline: 'Plank, chevron, stone-look, and patterned tile.',
     summary: [
       'Wood, wood-look and tile floors in dark, light and patterned finishes: hallways, entries, stair landings and open rooms.',
       'Transitions between materials are handled cleanly, including tile flowing into a shower.',
     ],
     notes: [
       'Wide plank, chevron and hardwood floors',
-      'Encaustic-style and stone-look tile',
+      'Patterned tile and stone-look tile',
       'Stair landings and entries',
       'Clean transitions between materials',
     ],
@@ -398,7 +398,7 @@ export const projects: Project[] = [
     slug: 'hearths-in-stone-and-marble',
     title: 'Hearths in Stone & Marble',
     category: 'Details',
-    tagline: "Fireplaces as the room's anchor.",
+    tagline: "The fireplace is the room's anchor.",
     summary: [
       'Double-height marble, linear tile walls, herringbone surrounds and stone great-room fireplaces, some with lit shelving.',
     ],
@@ -416,7 +416,7 @@ export const projects: Project[] = [
     slug: 'tile-as-detail',
     title: 'Tile as Detail',
     category: 'Details',
-    tagline: 'Backsplashes with pattern and intent.',
+    tagline: 'Backsplashes with a pattern you can see across the room.',
     summary: [
       'Chevron, herringbone, geometric and ornate ceramic backsplashes behind ranges and above counters, with details like gold faucets to finish.',
     ],
@@ -433,12 +433,12 @@ export const projects: Project[] = [
     slug: 'stairs-beams-and-millwork',
     title: 'Stairs, Beams & Millwork',
     category: 'Details',
-    tagline: 'Carpentry you notice by how it feels.',
+    tagline: 'Carpentry you notice by the way it feels under your hand.',
     summary: [
-      'Geometric wall millwork along a stair, dark treads against paneling, and exposed beams over an open plan.',
+      'Geometric wood trim along a stair, dark treads against paneling, and exposed beams over an open plan.',
     ],
     notes: [
-      'Geometric wall millwork',
+      'Geometric wood trim',
       'Dark stair treads and paneling',
       'Exposed beams',
     ],
@@ -450,12 +450,12 @@ export const projects: Project[] = [
     slug: 'roofs-read-from-above',
     title: 'Roofs, Read From Above',
     category: 'Roof & exterior',
-    tagline: 'Brick, stone and siding homes, new roofing on top.',
+    tagline: 'New roofing on homes with brick, stone, and siding.',
     summary: [
-      'Roof work across brick, stone-veneer and siding homes, from underlayment going down to finished shingles and detailed gables.',
+      'Roof work on brick, stone, and siding homes, from the layer under the shingles through to the finished shingles and the gable details.',
     ],
     notes: [
-      'Underlayment and shingle installation',
+      'The layer under the shingles, then the shingles',
       'Multi-gable roofs on brick homes',
       'Stone-veneer and siding exteriors',
     ],
@@ -469,13 +469,13 @@ export const projects: Project[] = [
     category: 'Recovery',
     tagline: 'The first call is about stopping the damage.',
     summary: [
-      'Tarps secured over full and partial roofs to keep water out, and air movers drying a room after water intrusion.',
-      'This is the unglamorous, time-sensitive work that comes before any rebuilding.',
+      'Tarps secured over full and partial roofs to keep water out, and air movers drying a room after water got in.',
+      'This is the practical, time-sensitive work that comes before any rebuilding.',
     ],
     notes: [
       'Aerial tarp coverage of damaged roofs',
       'Partial-roof protection',
-      'Air movers for structural drying',
+      'Air movers drying out the wet room',
     ],
     services: ['roofing-emergency-tarp-repair', 'water-damage-restoration'],
     cover: response[0],
@@ -486,7 +486,7 @@ export const projects: Project[] = [
     slug: 'exteriors-renewed',
     title: 'Exteriors, Renewed',
     category: 'Roof & exterior',
-    tagline: 'Board-and-batten, clean corners and considered details.',
+    tagline: 'Board-and-batten siding, clean corners, and careful details.',
     summary: [
       'Farmhouse board-and-batten, finished corners, soffit and sconce details, a rear deck with glass doors, and an upgrade captured mid-project.',
     ],

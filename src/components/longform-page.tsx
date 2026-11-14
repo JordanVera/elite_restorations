@@ -81,7 +81,7 @@ export function LongformPage({
             href={site.phone.sms}
             className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] hover:decoration-accent-ink"
           >
-            {es ? "Envíanos un texto" : "Text us"}
+            {es ? "Envíenos un texto" : "Text us"}
           </a>
         </div>
       </PageHero>
@@ -100,7 +100,7 @@ export function LongformPage({
         <section className="border-b border-border py-12">
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 className="eyebrow text-muted-foreground">
-              {es ? "También en el sitio" : "Related on this site"}
+              {es ? "También le puede servir" : "More that may help"}
             </h2>
             <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
               {related.map((link) => (
@@ -136,7 +136,7 @@ export function LongformPage({
         buttonLabel={
           es ? (emergency ? "Pedir ayuda de emergencia" : "Pedir un estimado") : undefined
         }
-        textLabel={es ? "Envíanos un texto" : "Text us"}
+        textLabel={es ? "Envíenos un texto" : "Text us"}
       />
       <JsonLd
         data={{

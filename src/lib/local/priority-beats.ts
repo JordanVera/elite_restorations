@@ -30,7 +30,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'A townhome bath in the Energy Corridor shares a wall and a stack. A single-family bath nearby does not. We plan the one you have.',
     westchase:
       'Westchase baths are usually slab-era rooms, some original and some partly updated. We look at the pan, the valve, and the fan before we tile.',
-    alief: 'Alief baths, like the kitchens, are often partly updated. A new valve on an old drain is a different scope from a full retile.',
+    alief: 'Alief baths, like the kitchens, are often partly updated. A new valve on an old drain is a different job from a full retile.',
     'sugar-land':
       'Sugar Land primary baths were built as large rooms. The remodel is the shower, the vanity, and the light, with waterproofing behind the finish.',
     bellaire:
@@ -52,7 +52,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Westchase kitchens are not all the same length. We measure the wall and the outlet heights before we choose a pattern that needs a center.',
     alief: 'An Alief backsplash is often replacing tile added years after the cabinets. We protect the counter and see what the wall behind the old tile is.',
     'sugar-land':
-      'Sugar Land backsplashes usually face an open kitchen seen from the family room. The field has to read as one pattern from that doorway.',
+      'Sugar Land backsplashes usually face an open kitchen seen from the family room. The tile has to read as one pattern from that doorway.',
     bellaire:
       'Bellaire walls are often out of square, and a geometric tile makes that obvious. We adjust the layout instead of pretending the wall is straight.',
     'the-heights':
@@ -92,7 +92,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Westchase slabs from the 1970s through the 1990s are not always flat. Wood will show a ridge carpet hid. We check before we order planks.',
     alief: 'Alief floors are often the latest in a line of finishes. We see whether the subfloor, not just the surface you are tired of, can take wood.',
     'sugar-land':
-      'Sugar Land’s two-story plans mean stairs. A wood floor that stops awkwardly at the first tread looks unfinished, so that joint is part of the scope.',
+      'Sugar Land’s two-story plans mean stairs. A wood floor that stops awkwardly at the first tread looks unfinished, so that joint is part of the job.',
     bellaire:
       'Bellaire mixes pier-and-beam and slab on the same street. A cottage floor may need leveling. A rebuild may need a moisture check on concrete.',
     'the-heights':
@@ -102,7 +102,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
   },
   'tile-flooring': {
     houston:
-      'Tile in Houston is a flat-substrate job. Large porcelain shows every ridge, in a bungalow or a new slab house.',
+      'Tile in Houston is a flat-surface job. Large porcelain shows every ridge, in a bungalow or a new slab house.',
     katy: 'Katy tile often goes on a post-tension slab in an open first floor. We check flatness and moisture, and we do not cut the slab for decoration.',
     memorial:
       'Memorial slabs may have moved with the clay. Flatness is the prep. A thicker mortar bed is not how we hide a hump.',
@@ -112,9 +112,9 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Westchase tile often comes up off a 1980s slab. We see what is under the old floor before we promise the new one can go over it.',
     alief: 'Alief tile is often a kitchen or bath floor that was patched once. We say when a full floor is cleaner than another patch.',
     'sugar-land':
-      'Sugar Land open plans want the tile centered on a doorway you see from across the room. That line is set before the thinset.',
+      'Sugar Land open plans want the tile centered on a doorway you see from across the room. That line is set before the mortar.',
     bellaire:
-      'Bellaire floors meet tight doors. Tile thickness can keep a door from closing. We check the height before the field is set.',
+      'Bellaire floors meet tight doors. Tile thickness can keep a door from closing. We check the height before the tile is set.',
     'the-heights':
       'Heights tile often goes over a wood subfloor, not a slab. The prep is stiffening and flattening that floor.',
     'the-woodlands':
@@ -158,7 +158,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
     'the-heights':
       'Laminate in a Heights bedroom does not fix a bouncy subfloor. We walk it and say if the structure comes first.',
     'the-woodlands':
-      'Upstairs bedrooms in The Woodlands are a typical laminate scope. The boxes acclimate in the house, and the bath stays tile.',
+      'Upstairs bedrooms in The Woodlands are a typical laminate job. The boxes acclimate in the house, and the bath stays tile.',
   },
   carpentry: {
     houston:
@@ -172,7 +172,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Westchase trim from the 1980s is often plain. We match it if you want it matched, and we say so before we change the profile.',
     alief: 'Alief carpentry is often the casing and doors around a kitchen updated in pieces. We close the gaps the new cabinets opened.',
     'sugar-land':
-      'Sugar Land stairs and two-story entries are the carpentry you see first. Rails and the tall casing are one scope.',
+      'Sugar Land stairs and two-story entries are the carpentry you see first. Rails and the tall casing are one job.',
     bellaire:
       'Bellaire carpentry is scribing to an out-of-square wall, or a bookcase in a short wall. The wall that exists is the measurement.',
     'the-heights':
@@ -187,10 +187,10 @@ export const priorityBeats: Record<string, Record<string, string>> = {
     memorial:
       'A Memorial fireplace often anchors a tall room. Mantel, paneling, and tile are one composition, sized to the wall you have.',
     'energy-corridor':
-      'A corridor fireplace may be a short townhome wall or a two-story room. We measure before we promise a stone field.',
+      'A corridor fireplace may be a short townhome wall or a two-story room. We measure before we promise a stone face.',
     westchase:
       'Where a Westchase house has a fireplace, it is often a brick box from the 1980s. We say whether to retile, resurface, or rebuild after we see the face.',
-    alief: 'Alief living rooms are ordinary sizes. A new surround should fit that room. An oversized field can overwhelm a ranch.',
+    alief: 'Alief living rooms are ordinary sizes. A new surround should fit that room. An oversized face can overwhelm a ranch.',
     'sugar-land':
       'A Sugar Land fireplace is the wall you see from the kitchen. Heat-rated tile and a mantel in scale are the project.',
     bellaire:
@@ -212,17 +212,17 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Westchase roofs are often asphalt on 1970s-to-1990s houses and townhomes. We photograph the slopes you cannot see from the driveway.',
     alief: 'Alief roofs are typically asphalt on one- and two-story houses. South and west slopes age faster. We look at all of them.',
     'sugar-land':
-      'Sugar Land roofs repeat a suburban shape, and an association often has a color list. The deck under the shingles is still this house’s deck.',
+      'Sugar Land roofs repeat a suburban shape, and an association often has a color list. The wood under the shingles is still this house’s wood.',
     bellaire:
       'Bellaire roofs sit on tight lots, on mid-century houses and on new rebuilds. Access is part of the inspection, and so is the age of the roof that is up there.',
     'the-heights':
-      'Heights roofs are smaller and often cut up by dormers. A historic district may care what the street sees. We check the block and the deck.',
+      'Heights roofs are smaller and often cut up by dormers. A historic district may care what the street sees. We check the block and the wood.',
     'the-woodlands':
       'Woodlands roofs live under pines. A valley can fail while the street slope still looks fine. Covenants often review a replacement color.',
   },
   'roof-replacement': {
     houston:
-      'A Houston replacement is tear-off, a look at the deck, underlayment, flashing, vents, and the material. We do not sell a shingle from a brand poster.',
+      'A Houston replacement is tear-off, a look at the wood, underlayment, flashing, vents, and the material. We do not sell a shingle from a brand poster.',
     katy: 'A Katy replacement is usually architectural asphalt on a two-story roof, with an association color to confirm and attic ventilation to check.',
     memorial:
       'Replacing a Memorial roof means more squares, more valleys, and oaks in the way. Staging is for a two-story house, not a ranch.',
@@ -230,13 +230,13 @@ export const priorityBeats: Record<string, Record<string, string>> = {
       'Corridor replacements include townhome roofs and single-family roofs. The tear-off plan follows which one you have, including where the debris can sit.',
     westchase:
       'A Westchase replacement starts with photographs. When the whole roof comes off, a City of Houston permit is the normal path, and any townhome rule is checked before the color is ordered.',
-    alief: 'An Alief replacement is a suburban roof until the deck says otherwise. Soft decking is called out before the job grows past the roof we priced.',
+    alief: 'An Alief replacement is a suburban roof until the wood says otherwise. Soft boards are called out before the job grows past the roof we priced.',
     'sugar-land':
-      'Sugar Land replacements go through the city and, usually, an association color review. The install is still the deck, the underlayment, the flashing, and the vents.',
+      'Sugar Land replacements go through the city and, usually, an association color review. The install is still the wood, the underlayment, the flashing, and the vents.',
     bellaire:
       'A Bellaire replacement is permitted by the city of Bellaire, on a lot with little staging room. The tear-off is planned around that.',
     'the-heights':
-      'On a historic-district block, a Heights replacement has to respect what the street sees. The deck and the flashing underneath are still the structure.',
+      'On a historic-district block, a Heights replacement has to respect what the street sees. The wood and the flashing underneath are still the structure.',
     'the-woodlands':
       'A Woodlands replacement is often reviewed under the covenants. Pines over the roof affect staging and the way valleys are detailed.',
   },
@@ -263,20 +263,20 @@ export const priorityBeats: Record<string, Record<string, string>> = {
   siding: {
     houston:
       'Houston siding fades on south and west walls. A repair is matched to the boards on the house now, not to a chip from the year it was built.',
-    katy: 'Katy elevations are often brick with siding accents, or a fuller siding package in newer sections. Associations usually review a color change.',
+    katy: 'Katy fronts are often brick with siding accents, or a fuller siding package in newer sections. Associations usually review a color change.',
     memorial:
       'Memorial siding, where the house is not mostly brick, has to meet the trim, the oaks, and a larger wall. We say when a section will blend.',
     'energy-corridor':
       'Corridor siding shows up on houses and on townhome rear walls. An association may control the street side. We read that before boards are ordered.',
     westchase:
       'A Westchase siding repair is often a faded section on a 1980s house or townhome. We match the weathered color as closely as the material allows.',
-    alief: 'Alief exteriors are mostly brick with some siding and trim. We repair the siding that is there rather than inventing a new elevation.',
+    alief: 'Alief exteriors are mostly brick with some siding and trim. We repair the siding that is there rather than inventing a new front.',
     'sugar-land':
-      'Sugar Land siding is part of an elevation an association has often approved once. A new profile or color goes through that review.',
+      'Sugar Land siding is part of a front that an association has often approved once. A new profile or color goes through that review.',
     bellaire:
       'Bellaire siding sits close to the street, on older houses and new ones. The city permits a full replacement, and the profile is easy to see.',
     'the-heights':
-      'Heights siding and exterior trim on a historic-district block can be regulated. We check the district before the street elevation changes.',
+      'Heights siding and exterior trim on a historic-district block can be regulated. We check the district before the front wall changes.',
     'the-woodlands':
       'Woodlands siding is a covenants item. Color and profile are often reviewed. Corners, windows, and soffits are detailed so the wall looks finished after that.',
   },

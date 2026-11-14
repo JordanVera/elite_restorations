@@ -4,7 +4,7 @@ export const gazeboGuide: ServiceGuide = {
   process: [
     { title: "Place it in the yard", body: "We look at sun, wind, trees, the property line, and how you will walk to it from the door. A gazebo tight against a fence or under a weak limb is a placement problem, not a kit problem." },
     { title: "Check rules and structure", body: "Some HOAs in Cinco Ranch, The Woodlands, and townhome rows review outbuildings. A permit may be required depending on size and the city. We check the address. We do not assume Houston and Sugar Land use the same counter." },
-    { title: "Footings", body: "Posts need footings that suit clay soil and the wind this close to the Gulf. A gazebo set on loose pavers will rack in the first real storm." },
+    { title: "Footings", body: "Posts need footings that suit clay soil and the wind this close to the Gulf. A gazebo set on loose pavers will twist in the first real storm." },
     { title: "Frame and roof", body: "The roof of a gazebo is a small roof: framing, underlayment, and a surface that sheds water away from the posts and away from the house if it is close." },
     { title: "Rails and floor", body: "If the gazebo has a raised floor or rails, they are built with the frame, not screwed on after the photos. Screens, if you want them, change airflow and wind load. We say that before we build them." },
     { title: "Walk the yard", body: "We look at drainage around the footings after a hose test or the next rain plan. Family-owned in Houston since 1993. The office is 511 Crestwater Ct." },
@@ -28,11 +28,11 @@ export const gazeboGuide: ServiceGuide = {
       heading: "Posts, a small roof, and a floor that can get rained on.",
       paragraphs: [
         "Wood framing and timber posts are the usual structure, with a roof of shingles or metal sized to the span. The floor may be the patio that already exists, a new paver pad, or a framed deck floor. Each choice changes drainage and maintenance in this humidity. Metal roofs shed heat differently from shingles and still need the underlayment and the edge details. We do not treat the roof as decoration.",
-        "Rails, screens, and benches are optional and they change the wind. A screened gazebo in a mosquito-heavy yard near a bayou is a real request. Screens also catch wind. We will say if the opening should stay open. Hardware and fasteners are exterior grade. Paint and stain are a maintenance plan, not a one-time event in Houston sun.",
+        "Rails, screens, and benches are optional and they change the wind. A screened gazebo in a mosquito-heavy yard near a bayou is a real request. Screens also catch wind. We will say if the opening should stay open. Hardware and fasteners are made for the outdoors. Paint and stain are a maintenance plan, not a one-time event in Houston sun.",
       ],
       points: [
         { title: "Roof shape", body: "A hip, a gable, or a simple single slope sheds water differently. We pick it for the yard and the span, not for a picture." },
-        { title: "Attached or not", body: "If you want the roof tied to the house, that is a patio cover. The flashing at the wall becomes the important detail." },
+        { title: "Attached or not", body: "If you want the roof tied to the house, that is a patio cover. Metal that keeps water out is the detail that matters." },
         { title: "Floor", body: "An existing concrete pad can stay if it is sound and it drains. We will not set posts on a cracked slab that ponds." },
       ],
     },
@@ -45,7 +45,7 @@ export const gazeboGuide: ServiceGuide = {
       ],
       points: [
         { title: "Size", body: "An eight-foot shade and a twenty-foot dining pavilion are different roofs. The price follows the span and the footings." },
-        { title: "Floor and screens", body: "Adding a new patio and full screens is a second scope. We write it that way." },
+        { title: "Floor and screens", body: "Adding a new patio and full screens is a second job. We write it that way." },
         { title: "Access", body: "Material that cannot come through the gate has to come over the fence or the fence comes down for a day. We plan that." },
       ],
     },
@@ -59,7 +59,7 @@ export const gazeboGuide: ServiceGuide = {
       points: [
         { title: "Neighbors", body: "Height and placement near a property line are part of the first conversation, especially on small lots inside the Loop." },
         { title: "HOA", body: "If a review is required, we build after the answer. We do not start posts to save a week." },
-        { title: "House roof", body: "The gazebo roof and the house roof are separate. If both need work after hail, we can look at both. They stay two scopes." },
+        { title: "House roof", body: "The gazebo roof and the house roof are separate. If both need work after hail, we can look at both. They stay two jobs." },
       ],
     },
     {
@@ -67,7 +67,7 @@ export const gazeboGuide: ServiceGuide = {
       heading: "A storm-damaged gazebo, documented plainly.",
       paragraphs: [
         "We help with photos, a site meeting with the adjuster if you want us there, and a rebuild estimate. We are not public adjusters and we do not promise a claim will pay for an outbuilding. Hurricane, hail, wind, tornado, and flood do different things to a yard structure. Check your policy. A kit that was never anchored and then blew apart is a fact we will describe honestly.",
-        "Mitigation may mean taking down a leaning roof so it does not fall on the house or the fence. That is safety. It is not a coverage opinion. The photo log and the insurance claims page explain the records. Our role is the construction and the documentation of what we see.",
+        "Safety may mean taking down a leaning roof so it does not fall on the house or the fence. That is safety. It is not a coverage opinion. The photo log and the insurance claims page explain the records. Our role is the construction and the documentation of what we see.",
       ],
       points: [
         { title: "Do not stand under it", body: "A racked gazebo after wind is not a place to store the patio furniture. Call and stay clear." },
@@ -77,7 +77,7 @@ export const gazeboGuide: ServiceGuide = {
     },
   ],
   faqs: [
-    { q: "Do you build gazebos or only repair them?", a: "Both. New gazebos on footings, and repairs when a storm or rot damaged one that is still worth saving. If the frame is racked, we will say it wants to come down." },
+    { q: "Do you build gazebos or only repair them?", a: "Both. New gazebos on footings, and repairs when a storm or rot damaged one that is still worth saving. If the frame is twisted, we will say it wants to come down." },
     { q: "What does a gazebo usually cost in Houston?", a: "A modest wood gazebo often plans around $8,000 to $20,000. Larger roofs, metal, new floors, or screens often plan around $15,000 to $40,000. That is a planning range, not a quote." },
     { q: "Will it stand up to hurricane wind?", a: "We build it as a real structure with footings, not as a tent. We do not promise any outdoor roof will ignore a major hurricane. Placement, anchors, and the roof details are how we take the wind seriously." },
     { q: "Do I need a permit or HOA approval?", a: "Sometimes. It depends on the size and the city, and some associations review yard structures. We check the address. We do not guess." },

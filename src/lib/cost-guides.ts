@@ -88,11 +88,11 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Materials',
-        body: 'Painted cabinets and a quartz counter are a different scope from a custom box and a stone that needs more care. Hardware, the backsplash, and the lighting travel with that choice.',
+        body: 'Painted cabinets and a quartz counter are a different job from custom cabinets and a stone that needs more care. Hardware, the backsplash, and the lighting go with that choice.',
       },
       {
         title: 'Layout changes',
-        body: 'Keeping the sink and the range where they are is a smaller job than moving a wall, a drain, or the path through the room. Older Houston houses are often out of square, so the layout is measured before anyone promises a wall can move.',
+        body: 'Keeping the sink and the range where they are is a smaller job than moving a wall, a drain, or the path through the room. Older Houston houses are often not quite square, so the layout is measured before anyone promises a wall can move.',
       },
       {
         title: 'Permits',
@@ -119,7 +119,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         q: 'How do I get a number for my kitchen?',
-        a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
+        a: `Call ${phone} or request an estimate. The visit is how the work, and then the price, gets settled.`,
       },
       ...kitchenCostFaqs,
     ],
@@ -153,7 +153,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Materials',
-        body: 'A new vanity, mirror, and light is a different scope from a full tile shower, a tub, and a stone that has to be waterproofed behind the finish you see.',
+        body: 'A new vanity, mirror, and light is a different job from a full tile shower, a tub, and a stone that has to be waterproofed behind the finish you see.',
       },
       {
         title: 'Layout changes',
@@ -172,11 +172,11 @@ export const costGuides: readonly CostGuide[] = [
     faqs: [
       {
         q: 'Why can two bathroom remodels cost so differently?',
-        a: 'A new vanity in the same footprint is not a new shower in a new place. Tile, glass, waterproofing, and moved plumbing are the usual reasons the scope grows.',
+        a: 'A new vanity in the same place is not a new shower in a new place. Tile, glass, waterproofing, and moved plumbing are the usual reasons the work grows.',
       },
       {
         q: 'Is waterproofing part of the price?',
-        a: 'Yes, when the shower or the wet wall is in the job. It goes in before the finish tile. It is part of that scope, not a line you can skip and keep the same result.',
+        a: 'Yes, when the shower is part of the job. The waterproofing goes in before the finish tile. It is part of that work, not a step you can skip and keep the same result.',
       },
       {
         q: 'Do bathroom remodels need a permit in Houston?',
@@ -184,7 +184,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         q: 'How do I get a price?',
-        a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
+        a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that work.`,
       },
       ...bathroomCostFaqs,
     ],
@@ -207,13 +207,13 @@ export const costGuides: readonly CostGuide[] = [
     description:
       'Typical Houston roof replacement planning ranges for asphalt, metal, tile, or composite. The final price comes from an on-site estimate.',
     lines: ['Roof replacement cost', 'in Houston.'],
-    lede: 'A roof price is the house under it: the size, the pitch, what the deck looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
+    lede: 'A roof price is the house under it: the size, the slope, what the wood under the shingles looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
     serviceSlug: 'roof-replacement',
     serviceLabel: 'Roof replacement',
     factors: [
       {
         title: 'Size and shape',
-        body: 'Squares of roof are the start. Stories, pitch, valleys, and the number of penetrations change how long the crew is up there and how the flashing has to be detailed.',
+        body: 'The size of the roof is the start. Stories, slope, valleys, and the pipes and vents through the roof change how long the crew is up there and how the metal joints are finished.',
       },
       {
         title: 'Materials',
@@ -221,7 +221,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'What is under the shingles',
-        body: 'A replacement includes the tear-off and a look at the deck. Soft decking, bad flashing, or missing vents change the scope. We say so before the job grows past the roof we priced. Replacing a bad sheet of decking is typically about $75-$150 per 4x8 sheet.',
+        body: 'A replacement includes the tear-off and a look at the wood. Soft boards, bad metal joints, or missing vents change the work. We say so before the job grows past the priced roof. Replacing a bad sheet of wood is typically about $75-$150 per 4x8 sheet.',
       },
       {
         title: 'Permits',
@@ -229,22 +229,22 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Insurance coverage',
-        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. We do not negotiate the claim, and we are not a public adjuster.',
+        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. Your insurer handles the claim. We are not a public adjuster.',
       },
     ],
     ranges: [
       { label: 'Architectural asphalt replacement', low: 12000, high: 24000 },
       { label: 'Metal, tile, or composite', low: 20000, high: 45000 },
-      { label: 'Deck repairs found after tear-off', low: 500, high: 2000 },
+      { label: 'Board repairs found after tear-off', low: 500, high: 2000 },
     ],
     faqs: [
       {
         q: 'Why is there no single roof price per square?',
-        a: 'Pitch, stories, valleys, the deck under the shingles, and the material all change the job. A per-square number written before the inspection would leave those out.',
+        a: 'Slope, stories, valleys, the wood under the shingles, and the material all change the job. A size-only figure written before the inspection would leave those out.',
       },
       {
         q: 'Does insurance set the cost of the roof?',
-        a: 'No. Your insurer decides what the policy pays. The cost of the roof is the scope of the roof. We can document the conditions. We do not decide coverage and we do not negotiate the claim.',
+        a: 'No. Your insurer decides what the policy pays. The cost of the roof is the work on the roof. We can document the conditions. Coverage and the claim stay with your insurer.',
       },
       {
         q: 'What if the wood under the shingles is rotten?',
@@ -252,7 +252,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         q: 'How do I get a roof estimate?',
-        a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
+        a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that work.`,
       },
       ...roofCostFaqs,
     ],

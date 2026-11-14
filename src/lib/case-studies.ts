@@ -35,7 +35,7 @@ export const caseStudies: readonly CaseStudy[] = [
   {
     slug: 'water-heater-flood',
     path: '/water-heater-flood',
-    title: 'Water Heater Flood: Mitigation, Insurance Claim and Full Rebuild',
+    title: 'Water Heater Flood: Drying, the Claim, and the Rebuild',
     metaTitle: 'Water Heater Flood in Houston',
     description:
       'Christopher B. wrote about a water heater flood, the drying, and the rebuild. His words, plus the usual steps. No address, date, or cost.',
@@ -53,15 +53,15 @@ export const caseStudies: readonly CaseStudy[] = [
       },
       {
         title: 'Dry the structure',
-        body: 'Christopher wrote that a mitigation crew dried the house. On this kind of loss that means finding where the water traveled, extracting what is standing, and drying with air movers and dehumidifiers before anyone closes the walls.',
+        body: 'Christopher wrote that a crew dried the house. On this kind of loss that means finding where the water traveled, pulling up what is standing, and drying with air movers and dehumidifiers before anyone closes the walls.',
       },
       {
         title: 'A record for the insurer',
-        body: 'He wrote that the team communicated with the adjuster. That is his account. Your insurer still decides what the policy pays. We photograph conditions and the work. We are not a public adjuster, and we do not negotiate the claim.',
+        body: 'He wrote that the team communicated with the adjuster. That is his account. Your insurer still decides what the policy pays. We photograph conditions and the work. A public adjuster is a different license, and the claim stays with the insurer.',
       },
       {
         title: 'Rebuild after it is dry',
-        body: 'He wrote that the reconstruction came after the drying, and that the finished work replaced what the leak had damaged. Drywall, flooring, and the water heater itself are typical of that rebuild. We do not have a published list of what was replaced in this house.',
+        body: 'He wrote that the reconstruction came after the drying, and that the finished work replaced what the leak had damaged. Drywall, flooring, and the water heater itself are typical of that kind of rebuild. His review does not list the pieces in this house, so this page stays with his words.',
       },
     ],
     jobPhotos: [],
@@ -103,11 +103,11 @@ export const caseStudies: readonly CaseStudy[] = [
       },
       {
         title: 'One sequence',
-        body: 'A kitchen touches cabinets, counters, tile, flooring, electrical, and plumbing. Those are planned as one project. Shronda did not list which of those her kitchen included, so this page does not either.',
+        body: 'A kitchen can touch cabinets, counters, tile, flooring, electrical, and plumbing. Those are planned as one project. Shronda did not list which of those her kitchen included, so this page stays with what she wrote.',
       },
       {
         title: 'The walkthrough',
-        body: 'She wrote that the completed kitchen does not look the same, and that she loves it. The usual close of a remodel is a walkthrough of the finished room. We do not have a published punch list for this one.',
+        body: 'She wrote that the completed kitchen does not look the same, and that she loves it. The usual close of a remodel is a walkthrough of the finished room. Her review is the record for this one.',
       },
     ],
     jobPhotos: [],

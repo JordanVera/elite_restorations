@@ -11,9 +11,9 @@ export const patioBrief: Brief = {
     '{name} sun and rain are part of the material talk. Wood and composite ask different things of you. We say which before anything is ordered.',
   ],
   opener: [
-    'For a deck or patio, that housing tells us the yard, the door, and the rules. {name} lots run from a small urban yard to a suburban one with room. We measure the one you have.',
+    'For a deck or patio, these houses tell us the yard, the door, and the rules. {name} lots run from a small urban yard to a suburban one with room. We measure the one you have.',
     'Outdoor work there is structure first. In {name} clay soil and hard rain are why the footings and the ledger are inspected before boards or pavers are discussed.',
-    'We read that house type as drainage and as review. A {name} association often looks at decks, covers, and fences. Water still has to shed off the wall whether or not a committee is involved.',
+    'For us, that house type means drainage and the review. A {name} association often looks at decks, covers, and fences. Water still has to shed off the wall whether or not a committee is involved.',
   ],
   pier: [
     'Older houses in {name} often meet the yard at a step or a low porch. A new deck has to pick up that door height. The ledger, if it ties to the house, is inspected for rot. Pier-and-beam foundations do not replace deck footings. The yard still needs its own supports. Tight lots mean the stair and the landing are designed to fit, not copied from a wide suburban plan.',
@@ -32,7 +32,7 @@ export const patioBrief: Brief = {
     'Open back yards in {name} can take a larger patio. Size is still chosen, not assumed. Rain from a cover has to be collected and sent away from the wall. Composite and wood are compared for the sun on that yard.',
   ],
   raised: [
-    'A deck on a raised {name} house may be high off the ground. Rails, stairs, and the connection to the structure are the safety scope, not decorations. Wind and salt air affect fasteners and wood. We detail for that. Historic or dune rules, where they exist, can limit what is built. We check before we order.',
+    'A deck on a raised {name} house may be high off the ground. Rails, stairs, and the connection to the structure are the safety work, not decorations. Wind and salt air affect fasteners and wood. We detail for that. Historic or dune rules, where they exist, can limit what is built. We check before we order.',
     'Patios at grade in {name} still have to handle storm water. A low patio that traps water against pilings or a wall is the thing we design out. Access for materials on a raised lot is planned with the stair that already exists.',
   ],
   craft: [
@@ -76,7 +76,7 @@ export const patioBrief: Brief = {
       q: 'Can you rebuild a deck in {name} without replacing the whole frame?',
       answers: [
         'When the frame, the ledger, and the footings are sound. In {name} we look. Rotted posts and a soft ledger come out before a new surface goes down. New boards on a bad structure are not a rebuild. They are a delay.',
-        'The inspection separates what can stay from what cannot. A {name} deck that is ugly and a deck that is soft are different scopes. We say which one you have before we order decking.',
+        'The inspection separates what can stay from what cannot. A {name} deck that is ugly and a deck that is soft are different jobs. We say which one you have before we order decking.',
       ],
     },
     {
@@ -122,9 +122,9 @@ export const waterBrief: Brief = {
     '{name} walls that look dry can still be wet at the base or in the insulation. We meter them. Your insurer decides coverage. We dry and, if you hire us, rebuild.',
   ],
   opener: [
-    'For water damage, that housing tells us the likely sources and the way the house dries. {name} slabs, crawlspaces, and raised coastal floors are not the same cavity. We map the one that got wet.',
+    'For water damage, these houses tell us the likely sources and the way the house dries. {name} slabs, crawlspaces, and raised coastal floors are not the same cavity. We map the one that got wet.',
     'Restoration there is extract, dry, then rebuild. In {name} humidity slows drying, so air movers and dehumidifiers are the setup, not a upgrade.',
-    'We read that house type as source first. A {name} bayou lot and a second-floor supply leak are different jobs. The neighborhood name does not pick the equipment.',
+    'For us, that house type starts with the source. A {name} bayou lot and a second-floor supply leak are different jobs. The neighborhood name does not pick the equipment.',
   ],
   pier: [
     'A pier-and-beam house in {name} can hide water in the crawlspace and in the insulation under the floor. We map both the rooms and the crawl if the water reached them. Drying a crawlspace is a different setup from drying a slab house’s walls. A raised floor is not a reason to skip the meters. Joists that stayed wet are looked at before a new floor covers them.',
@@ -149,7 +149,7 @@ export const waterBrief: Brief = {
   craft: [
     'In {name} we use moisture meters to map past the stain you can see. Extraction removes standing water. Air movers and dehumidifiers dry the structure. Cleaning follows the affected area. Rebuild is the last step.',
     'Cabinets, floors, and drywall in {name} are saved only when the readings and the material say they can be. Swollen particle board is not a candidate. Solid wood might be. We look.',
-    'Photos in {name} record the conditions and the scope of drying. They are for you and, if you choose, your insurer. We do not decide the claim.',
+    'Photos in {name} record the conditions and the work of drying. They are for you and, if you choose, your insurer. We do not decide the claim.',
   ],
   sequence: [
     'The {name} order is make the scene safe, stop more water if we can, map, extract, dry, then repair what you hire. If the roof is open, the cover comes before a long dry-out of a room that is still being rained on.',
@@ -207,14 +207,14 @@ export const waterBrief: Brief = {
     {
       q: 'Can you rebuild after the dry-out in {name}?',
       answers: [
-        'Yes. Drywall, flooring, and cabinets can stay with the same team once the structure is dry. In {name} that rebuild is a separate scope from the drying, written when we know what was lost. We do not demolish rooms that can be saved, and we do not save materials that have failed.',
+        'Yes. Drywall, flooring, and cabinets can stay with the same team once the structure is dry. In {name} that rebuild is a separate job from the drying, written when we know what was lost. We do not demolish rooms that can be saved, and we do not save materials that have failed.',
         'The rebuild is optional in the sense that you hire it. The drying is what stops the loss from spreading. If you want both in {name}, we sequence them so paint and floors are not installed on wet framing.',
       ],
     },
     {
       q: 'How do you schedule water damage help in {name}?',
       answers: [
-        'Call {phone} first if water is still coming in. {name} is dispatched from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The emergency form works when you cannot call. We do not promise a drive time in traffic or in a storm.',
+        'Call {phone} first if water is still coming in. {name} is dispatched from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The emergency form works when you cannot call. Your arrival time stays a short window in traffic or in a storm.',
         'Call {phone} and describe the source if you know it. The {name} visit maps the water and sets drying. Photos can go to your insurer. We will not tell you the claim is approved.',
       ],
     },

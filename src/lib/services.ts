@@ -64,15 +64,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'kitchen-remodeling',
     name: 'Kitchen Remodeling',
     group: 'Interiors',
-    tagline: 'The room everything happens in, rebuilt around how you live.',
+    tagline: 'The room where everything happens, rebuilt around how you live.',
     summary:
-      'Layouts, cabinetry, counters, lighting and finishes, planned and built as one project.',
+      'We plan and build the layout, cabinets, counters, lighting and finishes as one job.',
     metaTitle: 'Houston Kitchen Remodeling',
     metaDescription:
       'Kitchen remodeling in Houston: layouts, cabinets, counters, and lighting, built as one project. Call (713) 909-0034.',
     intro: [
-      'A Houston kitchen remodel touches nearly every trade at once: cabinetry, counters, tile, flooring, electrical and plumbing. We manage that choreography so you talk to one team, not six.',
-      'We walk the space with you, measure, and talk through how you cook, gather and store. Layout, cabinets and finishes are settled before demolition, so the room that comes back matches the way the house is lived in.',
+      'A Houston kitchen remodel touches nearly every trade at once: cabinets, counters, tile, flooring, electrical and plumbing. We coordinate those trades so you talk to one team, not six.',
+      'We walk the space with you, measure, and talk through how you cook, gather and store. Layout, cabinets and finishes are settled before any walls come out, so the room that comes back matches how you live.',
     ],
     includes: [
       'Layout planning and design support',
@@ -80,20 +80,20 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Countertops and backsplash',
       'Flooring transitions and repairs',
       'Lighting, including pendants and under-cabinet',
-      'Full gut renovations or focused refreshes',
+      'Full renovations or smaller refreshes',
     ],
     faqs: [
       {
         q: 'Can you handle the whole kitchen, or only parts of it?',
-        a: 'Both. Some clients want a full renovation. Others want new counters and a backsplash, or new flooring. We scope the work to what you actually need.',
+        a: 'Both. Some clients want a full renovation. Others want new counters and a backsplash, or new flooring. We set the work to what you actually need.',
       },
       {
         q: 'How long will a Houston kitchen remodel take?',
-        a: 'It depends on the layout change and the lead time of the materials you choose. We give you a realistic sequence during the consultation, before work starts.',
+        a: 'It depends on the layout change and how long the materials you choose will take. We give you a clear timeline during the consultation, before work starts.',
       },
       {
         q: 'Can you open the kitchen to the rest of the house?',
-        a: 'Often, yes. In Katy, Cinco Ranch and The Woodlands the kitchen is already the center of an open plan, and the work is the island, the sightlines and the lighting. In Heights, Bellaire and West University houses we measure structure and plumbing before we promise a wall can move.',
+        a: 'Often, yes. In Katy, Cinco Ranch and The Woodlands the kitchen is already the center of an open plan, and the work is the island, the view and the lighting. In Heights, Bellaire and West University houses we measure structure and plumbing before we promise a wall can move.',
       },
       {
         q: 'Do you remodel kitchens inside the Loop and in the suburbs?',
@@ -118,8 +118,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'A kitchen planned around how you live.',
       body: [
-        'A lot of the kitchens we walk were built for a different routine: a closed Heights bungalow, a Memorial two-story, a Katy or Woodlands plan where the island has to hold the whole room. The remodel starts there.',
-        'We settle the layout, the cabinets and the stone with you, then build it as one project. Cabinet boxes are specified so doors still close through a Houston summer. That is a materials choice inside the design.',
+        'A lot of the kitchens we visit were built for a different routine: a closed Heights bungalow, a Memorial two-story, a Katy or Woodlands plan where the island has to hold the whole room. The remodel starts there.',
+        'We settle the layout, the cabinets and the stone with you, then build it as one project. Cabinet boxes are chosen so the doors still close through a Houston summer. That choice is part of the design.',
       ],
       conditions: [
         {
@@ -128,7 +128,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'Open suburban plans',
-          body: 'In Katy, Cinco Ranch and The Woodlands the kitchen is often the center of one large room. Islands, sightlines and lighting have to work for all of it.',
+          body: 'In Katy, Cinco Ranch and The Woodlands the kitchen is often the center of one large room. Islands, the view and lighting have to work for all of it.',
         },
         {
           title: 'Tight older kitchens',
@@ -153,13 +153,13 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Interiors',
     tagline: 'A quieter room, finished with the tile and fixtures you want.',
     summary:
-      'Showers, vanities, tile and lighting, planned as one bathroom and built with waterproofing behind the walls.',
+      'Showers, vanities, tile and lighting, planned as one bathroom, with waterproofing done before the tile.',
     metaTitle: 'Houston Bathroom Remodeling',
     metaDescription:
       'Bathroom remodeling in Houston, TX: showers, vanities, tile and lighting, from a powder-room refresh to a full primary bath planned for how you use it.',
     intro: [
       'A bathroom remodel is a small room with a lot of decisions: the shower, the vanity, the tile and the light. We plan those with you and build them as one project.',
-      'Waterproofing goes in before the finish tile, so the marble or porcelain you chose has a sound wall behind it. What you live with is the shower, the vanity and a room that finally works.',
+      'Waterproofing goes in before the finish tile, so the marble or porcelain you chose has a solid wall behind it. What you live with is the shower, the vanity and a room that finally works.',
     ],
     includes: [
       'Design guidance and fixture selection',
@@ -167,7 +167,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Vanities, tubs and shower systems',
       'Lighting and mirrors',
       'Plumbing and electrical preparation',
-      'Waterproofing, plus accessibility-minded layout changes',
+      'Waterproofing and easier-to-use layouts',
     ],
     faqs: [
       {
@@ -176,11 +176,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Do you install large-format and patterned tile?',
-        a: 'Yes. Large-format porcelain, mosaics, herringbone and encaustic-style patterns need careful layout and a flat substrate, and our tile work spans showers, floors and feature walls.',
+        a: 'Yes. Large-format porcelain, mosaics, herringbone and encaustic-style patterns need careful layout and a flat surface under the tile, and our tile work covers showers, floors and accent walls.',
       },
       {
         q: 'What is the difference between a refresh and a full remodel?',
-        a: 'A refresh might be a new vanity, mirror and light. A full remodel moves the shower or tub, retiles the room and changes the layout. We scope it to the bathroom you have, from a West University powder room to a Memorial primary.',
+        a: 'A refresh might be a new vanity, mirror and light. A full remodel moves the shower or tub, retiles the room and changes the layout. We set the work to the bathroom you have, from a West University powder room to a Memorial primary.',
       },
       {
         q: 'Do you help choose fixtures and tile?',
@@ -206,17 +206,17 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'The bath you use every day, rebuilt.',
       body: [
-        'Houston baths we remodel range from a tight powder room in West University to a primary suite in Memorial or The Woodlands. The square footage changes. The sequence does not: layout, fixtures, tile, then the finish you live with.',
+        'Houston baths we remodel range from a tight powder room in West University to a primary suite in Memorial or The Woodlands. The size changes. The order of the work does not: layout, fixtures, tile, then the finish you live with.',
         'Waterproofing is part of that sequence, done before the tile goes on. The project itself is the room: the shower you step into, the vanity, and the light.',
       ],
       conditions: [
         {
           title: 'Shower, tub, or both',
-          body: 'We help you choose the fixture and the tile, then build the enclosure so niches, glass and the floor read as one design.',
+          body: 'We help you choose the fixture and the tile, then build the shower so niches, glass and the floor feel like one design.',
         },
         {
           title: 'Vanities and light',
-          body: 'Mirrors, sconces and storage are planned with the vanity, so a small powder room still feels finished.',
+          body: 'Mirrors, wall lights and storage are planned with the vanity, so a small powder room still feels finished.',
         },
         {
           title: 'Primary and powder',
@@ -242,13 +242,13 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     tagline:
       'The smallest surface in the kitchen that gets the most attention.',
     summary:
-      'Ceramic, porcelain, glass, marble and stone tile, laid out, grouted and sealed with care.',
+      'We lay out, grout and seal ceramic, porcelain, glass, marble and stone tile.',
     metaTitle: 'Houston Backsplash Installation',
     metaDescription:
       'Backsplash installation in Houston: ceramic, porcelain, glass, and stone, laid out before it is set. Call (713) 909-0034.',
     intro: [
-      'A backsplash is the wall that finishes the kitchen. Chevron, herringbone, geometric and hand-finished tile all live or die by their layout.',
-      'We dry-lay patterns before setting them, so cuts land where they should and the design centers on the range, the hood or the window. Grout and sealer are chosen so a working kitchen can be wiped down.',
+      'A backsplash is the wall that finishes the kitchen. Chevron, herringbone, geometric and hand-finished tile all depend on a careful layout.',
+      'We lay the pattern out on the wall before we set it, so cuts land where they should and the design centers on the range, the hood or the window. Grout and sealer are chosen so a working kitchen can be wiped down.',
     ],
     includes: [
       'New backsplash installation',
@@ -258,7 +258,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Waterproofing where needed',
     ],
     materials: {
-      label: 'Materials we set',
+      label: 'Tile we install',
       items: [
         'Ceramic',
         'Porcelain',
@@ -270,7 +270,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Can you replace a backsplash without replacing my countertops?',
-        a: 'Usually, yes. We remove the old tile carefully and protect the counters and cabinets. The condition of the wall behind the tile can change the scope.',
+        a: 'Usually, yes. We remove the old tile carefully and protect the counters and cabinets. The condition of the wall behind the tile can change the job.',
       },
       {
         q: 'Do you do herringbone, chevron and geometric layouts?',
@@ -278,11 +278,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Which tile works on a short kitchen wall?',
-        a: 'Chevron, herringbone and geometric tile all can. On a short Heights or West University run we plan the repeat so the cuts do not pile up at the end, and the pattern centers on the range or the hood.',
+        a: 'Chevron, herringbone and geometric tile all can. On a short Heights or West University wall we plan the repeat so the end of the wall gets a clean cut, and the pattern centers on the range or the hood.',
       },
       {
         q: 'Can a backsplash be part of a larger remodel?',
-        a: 'Yes. It is often the last visible layer of a kitchen project, set after counters are templated so the tile meets the stone cleanly.',
+        a: 'Yes. It is often the last visible layer of a kitchen project, set after the counters are measured so the tile meets the stone cleanly.',
       },
     ],
     related: ['kitchen-remodeling', 'countertops', 'tile-fireplaces'],
@@ -294,7 +294,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'The wall that finishes the kitchen.',
       body: [
         'In a Houston kitchen the backsplash is often the surface people notice from the doorway: the pattern behind the range, the stone against the counter, the line where tile meets cabinet.',
-        'We set the field so that pattern reads, then grout and finish the edges. A sealer suited to a working kitchen is part of the install, so the wall you chose can be wiped down.',
+        'We set the main area so the pattern shows, then grout and finish the edges. A sealer suited to a working kitchen is part of the install, so the wall you chose can be wiped down.',
       ],
       conditions: [
         {
@@ -303,11 +303,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'Pattern on a short wall',
-          body: 'Older inside-the-Loop kitchens often have a short run. Chevron and herringbone have to be planned so the cuts do not pile up at the end.',
+          body: 'Older inside-the-Loop kitchens often have a short stretch of wall. Chevron and herringbone have to be planned so the end gets a clean cut.',
         },
         {
           title: 'Stone against stone',
-          body: 'Marble counters and a stone backsplash need joints and sealers that agree. We coordinate that with the countertop work.',
+          body: 'Marble counters and a stone backsplash need joints and sealers that work together. We coordinate that with the countertop work.',
         },
       ],
       neighborhoods: [
@@ -328,19 +328,19 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Interiors',
     tagline: 'Surfaces chosen to be lived on, and cut to fit exactly.',
     summary:
-      'Granite, quartz, marble and solid-surface counters with custom edges and precise fabrication.',
+      'Granite, quartz, marble and solid-surface counters with custom edges, cut to fit.',
     metaTitle: 'Houston Countertops',
     metaDescription:
-      'Countertop installation in Houston, TX: granite, quartz, marble and solid surface, templated on site for islands, edges and the kitchen you use every day.',
+      'Countertops in Houston: granite, quartz, marble and solid surface, measured on site for the kitchen you use every day. Call (713) 909-0034.',
     intro: [
-      'Countertops are the surface you touch most in a kitchen or bath. The material, the edge and the seams all matter, and so does a template taken from the cabinets that are actually in the room.',
-      'We help you compare granite, quartz, marble and solid surface for how they look and how you want to live with them, then handle measurement, fabrication and installation.',
+      'Countertops are the surface you touch most in a kitchen or bath. The material, the edge and the seams all matter, and so does a measurement taken from the cabinets that are actually in the room.',
+      'We help you compare granite, quartz, marble and solid surface for how they look and how you want to live with them, then measure, cut and install the counters.',
     ],
     includes: [
       'Installation and replacement',
       'Repairs to existing counters',
-      'Custom edge profiles',
-      'Precise templating and fabrication',
+      'Custom edge shapes',
+      'On-site measuring and cutting',
       'Sink and cooktop cutouts',
     ],
     materials: {
@@ -361,8 +361,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         a: 'It depends on the look you want and how much care you want to give it. Quartz and granite ask less day to day than marble. We walk through the tradeoffs in your kitchen or bath, including how stone marks if that matters to you.',
       },
       {
-        q: 'Do you template before the old counters come out?',
-        a: 'Templating happens when the cabinets are set and level. In a remodel, that is its own step, scheduled so fabrication does not start on a guess.',
+        q: 'Do you measure before the old counters come out?',
+        a: 'Measuring happens when the cabinets are set and level. In a remodel, that is its own step, scheduled so we cut from the real kitchen, not a guess.',
       },
     ],
     related: ['kitchen-remodeling', 'bathroom-remodeling', 'backsplash'],
@@ -374,20 +374,20 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'Stone cut to the kitchen you have.',
       body: [
         'A slab looks one way in a showroom and another once it is the island in a Memorial kitchen or the counter in a Heights bungalow. The edge, the overhang and the seam are what make it feel built for the room.',
-        'We template to the cabinets that are actually set, including out-of-square older houses in Bellaire, the Heights and West University, where a factory rectangle rarely fits.',
+        'We measure the cabinets that are actually set, including older houses in Bellaire, the Heights and West University, where a factory rectangle rarely fits.',
       ],
       conditions: [
         {
           title: 'Material for the way you cook',
-          body: 'Quartz, granite, marble and solid surface wear differently. We talk through care and the edge profile before the slab is ordered.',
+          body: 'Quartz, granite, marble and solid surface wear differently. We talk through care and the edge shape before the stone is ordered.',
         },
         {
           title: 'Islands and edges',
-          body: 'Waterfall edges, eased corners and sink cutouts are decided with the layout, so the island reads as one piece.',
+          body: 'Waterfall edges, softened corners and sink cutouts are decided with the layout, so the island looks like one piece.',
         },
         {
           title: 'Out-of-square rooms',
-          body: 'Inside-the-Loop kitchens are seldom perfectly square. Templating on site is what makes the seams and the overhangs look intentional.',
+          body: 'Inside-the-Loop kitchens are seldom perfectly square. Measuring on site is what makes the seams and the overhangs look intentional.',
         },
       ],
       neighborhoods: [
@@ -413,8 +413,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     metaDescription:
       'Wood flooring in Houston: hardwood installation, refinishing, and dustless sanding. Call (713) 909-0034 for an estimate.',
     intro: [
-      'Wood floors change how a Houston house looks and sounds, from a sunlit living room to a stair landing. Getting them right depends on a flat subfloor and a finish chosen for the room.',
-      'We install hardwood and engineered planks, replace damaged sections, and refinish existing floors, including dustless sanding so the rest of the house stays cleaner. Material is acclimated in the house before it is fastened down.',
+      'Wood floors change how a Houston house looks and sounds, from a sunlit living room to a stair landing. Getting them right depends on a flat layer under the floor and a finish chosen for the room.',
+      'We install hardwood and engineered planks, replace damaged sections, and refinish existing floors, including dustless sanding so the rest of the house stays cleaner. The wood adjusts in the house before it is fastened down.',
     ],
     includes: [
       'Hardwood and engineered wood installation',
@@ -426,7 +426,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Should I refinish or replace my hardwood?',
-        a: 'If the boards are sound and thick enough to sand, refinishing can renew the floor for much less disruption than replacement. We inspect the boards and the subfloor first and tell you which path fits.',
+        a: 'If the boards are sound and thick enough to sand, refinishing can renew the floor for much less disruption than replacement. We inspect the boards and the layer underneath first and tell you which path fits.',
       },
       {
         q: 'What is dustless sanding?',
@@ -434,7 +434,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Do you install hardwood on stairs and in whole houses?',
-        a: 'Yes. Planks, landings and stair treads are part of the same floor. We also talk through engineered versus solid where the room and the subfloor make one the better choice, and we acclimate the wood in the house before it goes down.',
+        a: 'Yes. Planks, landings and stair treads are part of the same floor. We also talk through engineered versus solid where the room and the layer underneath make one the better choice, and we let the wood adjust in the house before it goes down.',
       },
       {
         q: 'Can you match new boards to an existing floor?',
@@ -454,17 +454,17 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'A floor that holds the whole house.',
       body: [
-        'Hardwood in a Houston house is usually a whole-room decision: the living room, the hall, the stair. Species, width and stain are what you see. The subfloor underneath is what makes the floor stay flat.',
-        'We install new planks and refinish floors that still have life in them. Wood is acclimated in the house before it is fastened, which is how a new floor belongs in a Memorial, Heights or Woodlands home instead of arriving from a warehouse and cupping later.',
+        'Hardwood in a Houston house is usually a whole-room decision: the living room, the hall, the stair. Wood type, width and stain are what you see. The layer underneath is what makes the floor stay flat.',
+        'We install new planks and refinish floors that still have life in them. The wood adjusts in the house before it is fastened, which is how a new floor belongs in a Memorial, Heights or Woodlands home instead of arriving from a warehouse and warping later.',
       ],
       conditions: [
         {
           title: 'Refinish or replace',
-          body: 'Sound boards can be sanded, stained and sealed. Worn-through or mismatched floors are better replaced. We inspect and say which.',
+          body: 'Sound boards can be sanded, stained and sealed. Worn-through or mismatched floors are better replaced. We inspect and tell you which.',
         },
         {
           title: 'Stairs and landings',
-          body: 'Treads, landings and the floor they meet are detailed so the wood reads as one run through the house.',
+          body: 'Treads, landings and the floor they meet are finished so the wood feels like one stretch through the house.',
         },
         {
           title: 'The finish you live with',
@@ -487,15 +487,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'tile-flooring',
     name: 'Tile Flooring',
     group: 'Floors',
-    tagline: 'Pattern, stone and porcelain, laid flat and true.',
+    tagline: 'Pattern, stone and porcelain, laid flat and even.',
     summary:
       'Residential and commercial tile floors, with careful layout, grout and sealing.',
     metaTitle: 'Houston Tile Flooring',
     metaDescription:
       'Tile flooring in Houston: porcelain, stone-look, and patterned floors for homes and businesses. Call (713) 909-0034.',
     intro: [
-      'Tile is the floor that can carry a pattern, a stone look, or a quiet large-format field through an entry, a kitchen or a bath. It still has to be flat, and the layout has to be right from the first row.',
-      'We install tile in homes and commercial spaces across Houston, prepare the substrate, and finish with grout and sealer suited to the room. Wet areas are waterproofed before the finish tile goes on.',
+      'Tile is the floor that can carry a pattern, a stone look, or a quiet span of large tile through an entry, a kitchen or a bath. It still has to be flat, and the layout has to be right from the first row.',
+      'We install tile in homes and commercial spaces across Houston, prepare the surface underneath, and finish with grout and sealer suited to the room. Wet areas are waterproofed before the finish tile goes on.',
     ],
     includes: [
       'Residential and commercial installation',
@@ -507,7 +507,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Can tile be laid over my existing floor?',
-        a: 'Sometimes, if what is underneath is sound, flat and not too high for the doors and transitions. We check the substrate before recommending it.',
+        a: 'Sometimes, if what is underneath is sound, flat and not too high for the doors and transitions. We check that surface before recommending it.',
       },
       {
         q: 'Do you handle patterned and encaustic-style tile?',
@@ -515,7 +515,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Where does patterned tile work best?',
-        a: 'Entries, kitchens and baths, where the pattern can be centered on a doorway or a room. We plan the layout so the design repeats instead of dying in a cut at the wall.',
+        a: 'Entries, kitchens and baths, where the pattern can be centered on a doorway or a room. We plan the layout so the design repeats instead of ending in a thin cut at the wall.',
       },
       {
         q: 'Do you tile floors in baths and showers as well as living areas?',
@@ -530,21 +530,21 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'Pattern and stone, laid for the room.',
       body: [
-        'Houston tile floors show up as encaustic-style entries, stone-look kitchens, and large-format porcelain that runs from a hall into a bath. The design is the part you live with. The flat substrate is what makes large tile look intentional.',
-        'We flatten first, then set the layout so the pattern meets the doorway. In showers and baths the waterproofing is in place before the finish tile. In living areas the work is the field, the grout and the transitions.',
+        'Houston tile floors show up as encaustic-style entries, stone-look kitchens, and large porcelain tile that runs from a hall into a bath. The design is the part you live with. A flat surface underneath is what makes large tile look right.',
+        'We flatten first, then set the layout so the pattern meets the doorway. In showers and baths the waterproofing is in place before the finish tile. In living areas the work is the main floor, the grout and the transitions.',
       ],
       conditions: [
         {
           title: 'Large-format fields',
-          body: 'Big porcelain makes every ridge in the floor obvious. Prep is the long part of the job, and it is what the finished room depends on.',
+          body: 'Big porcelain makes every ridge in the floor obvious. Leveling is the long part of the job, and the finished room depends on it.',
         },
         {
           title: 'Patterned entries',
-          body: 'Encaustic-style and geometric floors are centered on the room so the repeat reads from the front door.',
+          body: 'Encaustic-style and geometric floors are centered on the room so the pattern shows from the front door.',
         },
         {
           title: 'Kitchens and baths',
-          body: 'Stone-look kitchens and tiled baths are set with grout and, in wet rooms, a membrane under the finish you see.',
+          body: 'Stone-look kitchens and tiled baths are set with grout and, in wet rooms, a waterproof layer under the finish you see.',
         },
       ],
       neighborhoods: [
@@ -565,13 +565,13 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Floors',
     tagline: 'The look of wood or stone, in a floor made for daily life.',
     summary:
-      'Luxury vinyl plank, sheet and tile, installed as click-lock, glue-down or floating floors.',
+      'Luxury vinyl plank, sheet and tile, clicked together, glued down or laid loose.',
     metaTitle: 'Houston Vinyl Flooring',
     metaDescription:
       'Vinyl flooring in Houston: luxury vinyl plank with a wood or stone look for kitchens and living areas. Call (713) 909-0034.',
     intro: [
       'Luxury vinyl plank gives a Houston house the look of wood or stone in kitchens, playrooms and first floors where you want a durable finish and a straightforward install.',
-      'We install LVP, sheet and vinyl tile with the method that fits your subfloor, and we repair or replace worn sections when a full floor is more than you need.',
+      'We install vinyl plank, sheet and vinyl tile with the method that fits the layer underneath, and we repair or replace worn sections when a full floor is more than you need.',
     ],
     includes: [
       'Luxury vinyl plank (LVP)',
@@ -582,19 +582,19 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Is vinyl a good choice for a kitchen or playroom?',
-        a: 'Yes. It is a common upgrade where you want the look of wood and a floor that handles daily traffic. For a shower, tile is still the right assembly, and we will say so.',
+        a: 'Yes. It is a common upgrade where you want the look of wood and a floor that handles daily traffic. For a shower, tile is still the right choice, and we will say so.',
       },
       {
         q: 'Can vinyl go over my current floor?',
-        a: 'Often, if the surface is flat, dry and sound. A wavy slab or a soft spot will telegraph through. We check before we recommend it.',
+        a: 'Often, if the surface is flat, dry and sound. A wavy slab or a soft spot will show through. We check before we recommend it.',
       },
       {
         q: 'Can you replace a worn section without redoing the whole floor?',
-        a: 'Often, if matching material is available and the subfloor is flat. If the wear is even across the room, a full replacement usually looks cleaner.',
+        a: 'Often, if matching material is available and the layer underneath is flat. If the wear is even across the room, a full replacement usually looks cleaner.',
       },
       {
         q: 'Click-lock, glue-down or floating: which do you use?',
-        a: 'Whichever the product and the subfloor call for. Glue-down is often steadier on a slab. We explain the choice before materials are ordered.',
+        a: 'Whichever the product and the layer underneath call for. Glue-down is often steadier on a slab. A floating floor is not fastened down. We explain the choice before materials are ordered.',
       },
     ],
     related: ['laminate-flooring', 'wood-flooring', 'tile-flooring'],
@@ -606,12 +606,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'Wood look, chosen for the room.',
       body: [
         'Vinyl shows up in Houston as a kitchen floor, a playroom, or a first-floor upgrade in Katy, Pearland and Spring Branch, where families want the look of plank without committing the whole house to hardwood.',
-        'We install it click-lock, glue-down or floating, whichever the product and the subfloor call for. The floor is flat before the first plank goes down.',
+        'We install it click-lock, glue-down or laid loose, whichever the product and the layer underneath call for. The floor is flat before the first plank goes down.',
       ],
       conditions: [
         {
           title: 'Kitchens and living areas',
-          body: 'Plank that reads as wood or stone, run through the rooms you use most, with transitions handled at the doorways.',
+          body: 'Plank that looks like wood or stone, laid through the rooms you use most, with transitions handled at the doorways.',
         },
         {
           title: 'Over an existing floor',
@@ -640,13 +640,13 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Floors',
     tagline: 'A clean, affordable look with a quick turnaround.',
     summary:
-      'Laminate installation, repair and replacement, including underlayment, for a clean wood look.',
+      'Laminate installation, repair and replacement, including the pad underneath, for a clean wood look.',
     metaTitle: 'Houston Laminate Flooring',
     metaDescription:
-      'Laminate flooring in Houston: wood-look floors with underlayment for bedrooms, halls, and living rooms. Call (713) 909-0034.',
+      'Laminate flooring in Houston: wood-look floors for bedrooms, halls, and living rooms. Call (713) 909-0034.',
     intro: [
       'Laminate gives a Houston house the look of wood with straightforward upkeep, which makes it a practical upgrade for bedrooms, halls and living rooms.',
-      'We install click-lock or glued laminate over a flat subfloor with the right underlayment, and we replace damaged planks when a full floor is more than you need.',
+      'We install click-lock or glued laminate over a flat floor with the right pad underneath, and we replace damaged planks when a full floor is more than you need.',
     ],
     includes: [
       'Laminate installation',
@@ -662,15 +662,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Can you replace just the damaged planks?',
-        a: 'In many cases, yes, if matching material is still available and the subfloor underneath is dry.',
+        a: 'In many cases, yes, if matching material is still available and the layer underneath is dry.',
       },
       {
         q: 'Where in a Houston house should I use laminate?',
         a: 'Bedrooms, halls and living rooms in newer houses in Katy, Cinco Ranch, Pearland and Magnolia are the usual fit. Kitchens can work with the right product. Baths are better in tile.',
       },
       {
-        q: 'What does underlayment do here?',
-        a: 'It smooths minor variation and quiets the floor over concrete. It does not fix a badly uneven slab. We check the floor before the planks arrive.',
+        q: 'What does the pad underneath do?',
+        a: 'It smooths small bumps and quiets the floor over concrete. A badly uneven slab still needs leveling. We check the floor before the planks arrive.',
       },
     ],
     related: ['vinyl-flooring', 'wood-flooring', 'tile-flooring'],
@@ -682,16 +682,16 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'A wood look with a quicker install.',
       body: [
         'Laminate is the floor we install when a Houston family wants the look of wood in bedrooms, halls and living rooms, and wants the work finished without a full sanding project.',
-        'In newer houses in Cinco Ranch, Katy, Pearland and Magnolia we set it over prepared concrete with underlayment specified for that floor, not a generic roll chosen only for price.',
+        'In newer houses in Cinco Ranch, Katy, Pearland and Magnolia we set it over prepared concrete with a pad chosen for that floor, not a generic roll chosen only for price.',
       ],
       conditions: [
         {
           title: 'Bedrooms and living rooms',
-          body: 'The usual fit. The plank, the underlayment and the transitions are planned so the floor meets the doors cleanly.',
+          body: 'The usual fit. The plank, the pad and the transitions are planned so the floor meets the doors cleanly.',
         },
         {
           title: 'A flat start',
-          body: 'The subfloor is checked and leveled where it needs it. Underlayment quiets the floor. It does not hide a bad slab.',
+          body: 'The layer underneath is checked and leveled where it needs it. The pad quiets the floor. A bad slab still gets fixed first.',
         },
         {
           title: 'Repairs that match',
@@ -716,12 +716,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Interiors',
     tagline: 'The structure and trim that make a room feel finished.',
     summary:
-      'Framing, trim, built-ins, stairs and millwork, from repairs to custom pieces.',
+      'Framing, trim, built-ins, stairs and woodwork, from repairs to custom pieces.',
     metaTitle: 'Houston Carpentry',
     metaDescription:
-      'Carpentry in Houston, TX: finish trim, built-ins, stairs and millwork, matched to older Heights and West University profiles or built new for the room.',
+      'Carpentry in Houston: trim, built-ins, and stairs, matched to an older house or built new for the room. Call (713) 909-0034.',
     intro: [
-      'Good carpentry is what makes a remodel feel finished: square framing, tight joints, and trim that belongs to the house. It is also the built-ins, stairs and millwork people notice.',
+      'Good carpentry is what makes a remodel feel finished: square framing, tight joints, and trim that belongs to the house. It is also the built-ins, stairs and woodwork people notice.',
       'We handle structural framing and finish carpentry, including shelving, stair work and wall paneling sized to the room you have.',
     ],
     includes: [
@@ -739,11 +739,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Can you match trim in an older home?',
-        a: 'In Heights, West University and Bellaire houses we can usually match profiles and proportions, or blend new trim so it reads as part of the room.',
+        a: 'In Heights, West University and Bellaire houses we can usually match the shape and size, or blend new trim so it looks like part of the room.',
       },
       {
         q: 'Can you add built-ins to a room that was never designed for them?',
-        a: 'Yes. Alcoves in older Heights and West University houses, and plain walls in newer Memorial or Woodlands rooms, are both places we size shelving, closets and paneling to the wall that is there. Wood is acclimated in the house before it is cut.',
+        a: 'Yes. Alcoves in older Heights and West University houses, and plain walls in newer Memorial or Woodlands rooms, are both places we size shelving, closets and paneling to the wall that is there. The wood adjusts to the house before it is cut.',
       },
       {
         q: 'Do you do carpentry as part of a kitchen or bath remodel?',
@@ -762,20 +762,20 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'Trim that belongs to the house.',
       body: [
-        "Houston's older neighborhoods still have casing, stairs and panel profiles worth keeping. Newer houses in Memorial, Katy and The Woodlands often need the opposite: millwork that gives a plain room a point of view.",
-        'We match what should stay and build what the room is missing. Material is acclimated in the house before it is cut, so new trim sits with the old instead of fighting it.',
+        "Houston's older neighborhoods still have trim, stairs and panel shapes worth keeping. Newer houses in Memorial, Katy and The Woodlands often need the opposite: woodwork that gives a plain room a finished look.",
+        'We match what should stay and build what the room is missing. The wood adjusts in the house before it is cut, so new trim sits with the old instead of fighting it.',
       ],
       conditions: [
         {
-          title: 'Older profiles',
-          body: 'Heights, Rice Village and West University trim is often worth matching. We look at the existing profile before we recommend new.',
+          title: 'Trim shapes',
+          body: 'Heights, Rice Village and West University trim is often worth matching. We look at the existing shape before we recommend new.',
         },
         {
           title: 'Built-ins and stairs',
           body: 'Shelving, closets, stair treads and railings are sized to the opening, whether the house is a bungalow or a two-story.',
         },
         {
-          title: 'Structure you do not see',
+          title: 'Framing behind the walls',
           body: 'Opening a wall in a 1940s bungalow is different from framing in a 2000s two-story. We inspect before we cut.',
         },
       ],
@@ -797,12 +797,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Interiors',
     tagline: 'A hearth that anchors the room.',
     summary:
-      'Tile and stone fireplace surrounds, new or refreshed, set with heat-appropriate materials.',
+      'Tile and stone fireplace surrounds, new or refreshed, using materials that can handle the heat.',
     metaTitle: 'Houston Tile Fireplaces',
     metaDescription:
-      'Tile fireplace installation in Houston, TX: heat-rated surrounds, retiling and sealing for living rooms that anchor the Houston house through the year.',
+      'Tile fireplaces in Houston: new surrounds and retiling, with materials safe next to the fire. Call (713) 909-0034.',
     intro: [
-      'In Houston a fireplace is usually the anchor of the room, not the heat source. A linear marble wall or a herringbone surround still has to be built with materials rated for the firebox.',
+      'In Houston a fireplace is usually the anchor of the room, not the heat source. A linear marble wall or a herringbone surround still has to be built with materials that are safe beside the fire.',
       'We install new surrounds and retile existing ones in living rooms from Memorial to The Woodlands, using appropriate tile, mortar and grout, then seal for protection.',
     ],
     includes: [
@@ -819,11 +819,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'What tile is suitable around a fireplace?',
-        a: 'Heat-resistant tile set with fire-safe mortar. We help you choose materials that look right and are appropriate next to the firebox, even if the fireplace is used only a few nights a year.',
+        a: 'Heat-resistant tile set with fire-safe mortar. We help you choose materials that look right and are appropriate next to the fire, even if the fireplace is used only a few nights a year.',
       },
       {
         q: 'Can the fireplace be mostly a design piece?',
-        a: 'Yes. Many Houston hearths are the visual center of the room and are lit only occasionally. The tile and mortar next to the opening are still specified for heat.',
+        a: 'Yes. Many Houston hearths are the visual center of the room and are lit only occasionally. The tile and mortar next to the opening are still chosen for heat.',
       },
       {
         q: 'Can the surround be part of a larger living-room remodel?',
@@ -839,7 +839,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'The wall the living room is built around.',
       body: [
         'In Houston the fireplace is usually the anchor of the living room: the wall you see from the kitchen and the sofa. Updating it is a finish project, whether the surround is linear marble, herringbone tile or a stone great-room hearth.',
-        'We still build it for fire. Heat-rated tile and mortar, a sound substrate, and a mantel or panel detail sized to the room, from a Memorial great room to a smaller West University living room.',
+        'We still build it for a real fire. Heat-rated tile and mortar, a solid base, and a mantel or panel sized to the room, from a Memorial great room to a smaller West University living room.',
       ],
       conditions: [
         {
@@ -848,7 +848,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'Scale of the wall',
-          body: 'Two-story rooms in The Woodlands and Katy can swallow a small surround. We size the tile field to the volume.',
+          body: 'Two-story rooms in The Woodlands and Katy can swallow a small surround. We size the tiled area to the room.',
         },
         {
           title: 'Older brick boxes',
@@ -872,20 +872,20 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'roofing',
     name: 'Roofing',
     group: 'Roof & exterior',
-    tagline: 'Repair or replacement, detailed for the house under the roof.',
+    tagline: 'Repair or replacement, chosen for the house under the roof.',
     summary:
       'Inspections, repairs, tear-offs and new roofs, plus a tarp when a storm opens the roof.',
     metaTitle: 'Houston Roof Repair & Replacement',
     metaDescription:
       'Roofing in Houston, TX: inspections, repairs, tear-off and replacement in asphalt, metal, tile or composite, and emergency tarping after storms.',
     intro: [
-      'A Houston roof is the material, the underlayment, the flashing and the ventilation, planned as one system. We inspect it and say whether a repair will hold or the roof needs to come off.',
+      'A Houston roof is one system: the shingles, the layer beneath, the metal joints and the vents. We inspect it and say whether a repair will hold or the roof needs to come off.',
       'After a storm, the first job is often a tarp so the next round of weather stays outside. We photograph what we find for your records and any insurance claim. Your insurer decides coverage. The permanent roof is the step after the house is covered.',
     ],
     includes: [
       'Roof assessment and photographs',
       'Repairs when the roof can be saved',
-      'Tear-off, underlayment, flashing and vents',
+      'Tear-off, underlayment, metal joints and vents',
       'New roofs in asphalt, metal, tile or composite',
       'Emergency tarping when the roof is open',
       'Help with insurance documentation',
@@ -903,7 +903,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Do you repair roofs, or only replace them?',
-        a: 'Both. We inspect the roof and say whether a repair will hold or the roofing needs to come off. A replacement includes the tear-off, a look at the deck, new underlayment, flashing, vents and the material you chose.',
+        a: 'Both. We inspect the roof and say whether a repair will hold or the roof needs to come off. A replacement includes the tear-off, a look at the wood under the shingles, new underlayment, metal joints, vents and the material you chose.',
       },
       {
         q: 'What roofing material makes sense in Houston?',
@@ -952,7 +952,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'The roof the house shows, and the one it needs.',
       body: [
-        'Brick houses in Memorial and Bellaire and newer roofs in Katy, Pearland and The Woodlands get the same sequence: look, document, then repair or replace. Ventilation, valleys and flashing go in with the roofing, not as an afterthought.',
+        'Brick houses in Memorial and Bellaire and newer roofs in Katy, Pearland and The Woodlands get the same order: look, document, then repair or replace. Vents, valleys and metal joints go in with the roofing, not as an afterthought.',
         'Hurricane season and the squalls that come with it are a Houston fact. When a limb or lifted shingles open the roof, we tarp it when it is safe to be up there, then talk through the permanent roof with the pictures already in hand.',
       ],
       conditions: [
@@ -962,7 +962,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'The whole system',
-          body: 'Underlayment, valleys, pipe boots and attic vents are part of a replacement, along with the shingles or metal you see from the street.',
+          body: 'Underlayment, valleys, vent-pipe collars and attic vents are part of a replacement, along with the shingles or metal you see from the street.',
         },
         {
           title: 'The first dry night',
@@ -985,15 +985,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'roof-replacement',
     name: 'Roof Replacement',
     group: 'Roof & exterior',
-    tagline: 'A new roof, detailed for the house underneath it.',
+    tagline: 'A new roof, built for the house underneath it.',
     summary:
       'Assessment, tear-off and replacement in asphalt, metal, tile, slate and composite materials.',
     metaTitle: 'Houston Roof Replacement',
     metaDescription:
-      'Roof replacement in Houston, TX: tear-off and a new roof in asphalt, metal, tile or composite, detailed with flashing, vents and a finished site cleanup.',
+      'Roof replacement in Houston: tear-off, a new asphalt, metal, tile or composite roof, metal joints, vents and cleanup. Call (713) 909-0034.',
     intro: [
-      'A roof replacement is the chance to put the right system on the house: the material, the underlayment, the flashing and the ventilation, planned as one roof rather than a patchwork of repairs.',
-      'We inspect, say whether the roof can be repaired or needs to come off, and install the new one. Material, color and profile change how the house reads from the street.',
+      'A roof replacement is the chance to put the right system on the house: the shingles, the layer beneath, metal at the joints and the vents, as one roof rather than a patchwork of repairs.',
+      'We inspect, say whether the roof can be repaired or needs to come off, and install the new one. Material, color and shape change how the house looks from the street.',
     ],
     includes: [
       'Roof assessment and damage documentation',
@@ -1028,11 +1028,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         title: 'Remove',
-        body: 'The old roofing comes off and the deck is inspected.',
+        body: 'The old roofing comes off and the wood under the shingles is inspected.',
       },
       {
         title: 'Install',
-        body: 'Underlayment and new roofing go on, with flashing and vents detailed.',
+        body: 'Underlayment and new roofing go on, with metal joints and vents finished.',
       },
       {
         title: 'Inspect',
@@ -1050,11 +1050,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'What does a full roof replacement include?',
-        a: 'Tear-off of the old roofing, a look at the deck, new underlayment, flashing, vents and the roofing material you chose, then a final inspection and cleanup.',
+        a: 'Tear-off of the old roofing, a look at the wood below, new underlayment, metal joints, vents and the roofing material you chose, then a final inspection and cleanup.',
       },
       {
         q: 'Can you replace the roof and update the way the house looks?',
-        a: 'Yes. Material, color and profile change how a brick Memorial house or a newer Katy or Woodlands roof reads from the street. We compare asphalt, metal, tile and composite for appearance, weight and the structure you have.',
+        a: 'Yes. Material, color and shape change how a brick Memorial house or a newer Katy or Woodlands roof looks from the street. We compare asphalt, metal, tile and composite for appearance, weight and the structure you have.',
       },
     ],
     related: [
@@ -1084,21 +1084,21 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'The roof the house shows, and the one it needs.',
       body: [
-        'Replacing a Houston roof is both a street-facing upgrade and a full system: shingles or metal, underlayment, flashing and vents, detailed together. Brick houses in Memorial and Bellaire and newer roofs in Katy, Pearland and The Woodlands all get that same sequence.',
-        'We photograph what we find, say whether repair or replacement makes sense, and install the new roof. Ventilation is part of the replacement, and the color and profile are chosen for the elevation you see from the street.',
+        'Replacing a Houston roof is both a street-facing upgrade and a system: shingles or metal, underlayment, metal joints and vents, detailed together. Brick houses in Memorial and Bellaire and newer roofs in Katy, Pearland and The Woodlands all get that same sequence.',
+        'We photograph what we find, say whether repair or replacement makes sense, and install the new roof. Airflow is part of the replacement, and the color and shape are chosen for the front of the house.',
       ],
       conditions: [
         {
-          title: 'Material and profile',
+          title: 'Material and shape',
           body: 'Architectural asphalt is common. Metal, tile and composite are options when the look and the structure call for them.',
         },
         {
           title: 'The whole system',
-          body: 'Underlayment, valleys, pipe boots and attic vents go in with the new roofing, not as an afterthought.',
+          body: 'Underlayment, valleys, vent-pipe collars and attic vents go in with the new roofing, not as an afterthought.',
         },
         {
-          title: 'How the house reads',
-          body: 'A brick Memorial roof and a newer Katy or Woodlands roof can take different color and profile. We choose both with the elevation.',
+          title: 'How the house looks',
+          body: 'A brick Memorial roof and a newer Katy or Woodlands roof can take different color and shape. We choose both for the front of the house.',
         },
       ],
       neighborhoods: [
@@ -1126,7 +1126,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     emergency: true,
     intro: [
       'After a Houston storm or a fallen limb, the priority is keeping water out of the house. A properly anchored tarp buys time to plan the permanent repair.',
-      'We inspect the damage, photograph it for your records and any claim, tarp the exposed area, and coordinate the repair once the weather allows a real look at the deck.',
+      'We inspect the damage, photograph it for your records and any claim, tarp the exposed area, and plan the repair once the weather allows a real look at the wood under the shingles.',
     ],
     includes: [
       'Safety inspection of the roof',
@@ -1146,11 +1146,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         title: 'Select',
-        body: 'We choose tarp material and sizing for the opening and the weather.',
+        body: 'We choose the tarp and the size for the opening and the weather.',
       },
       {
         title: 'Anchor',
-        body: 'The tarp is secured so wind will not lift it.',
+        body: 'The tarp is secured so it stays put in the wind.',
       },
       { title: 'Divert', body: 'We direct water away from the opening.' },
       {
@@ -1193,7 +1193,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'The first dry night after a storm.',
       body: [
         'Hurricane season and the squalls that come with it are a Houston fact. Limbs, lifted shingles and wind-driven rain show up from Clear Lake and Galveston to Katy and The Woodlands, often on roofs that were ordinary the day before.',
-        'We get on the roof when it is safe, photograph what happened, and anchor a tarp so the next band of weather stays outside. The permanent roof is the following conversation, with the pictures already in hand.',
+        'We get on the roof when it is safe, photograph what happened, and anchor a tarp so the next band of weather stays outside. Then we talk through the permanent roof, with the pictures already in hand.',
       ],
       conditions: [
         {
@@ -1230,10 +1230,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Siding installation, repair and full replacement, including trim and color matching.',
     metaTitle: 'Houston Siding Repair & Replacement',
     metaDescription:
-      'Siding installation and replacement in Houston, TX: board-and-batten, lap and other profiles, with trim, corners and color matched to the street elevation.',
+      'Siding in Houston: board-and-batten, lap and other styles, with trim and color matched to the front of the house. Call (713) 909-0034.',
     intro: [
-      'Siding is the face the house shows the street. Board-and-batten, lap and other profiles each need different detailing at corners, windows and trim, which is what makes a new elevation look finished.',
-      'We install and replace siding, repair sections that can be matched, and finish the trim. The project is the wall itself: the profile, the color and the corners.',
+      'Siding is the face the house shows the street. Board-and-batten, lap and other styles each need different detailing at corners, windows and trim, which is what makes the front of the house look finished.',
+      'We install and replace siding, repair sections that can be matched, and finish the trim. The project is the wall itself: the style, the color and the corners.',
     ],
     includes: [
       'Installation and full replacement',
@@ -1247,12 +1247,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         a: 'Often, yes. It depends on matching the material and the color after Houston sun has faded what is already on the house. We assess that before we recommend a full replacement.',
       },
       {
-        q: 'Can a new siding profile change the elevation?',
-        a: 'Yes. Board-and-batten, lap and other profiles, plus the trim at corners and windows, change how a Cinco Ranch, Woodlands or Memorial house reads from the curb.',
+        q: 'Can a new siding style change the front of the house?',
+        a: 'Yes. Board-and-batten, lap and other styles, plus the trim at corners and windows, change how a Cinco Ranch, Woodlands or Memorial house looks from the curb.',
       },
       {
-        q: 'What siding profiles do you install?',
-        a: 'Board-and-batten, lap and other common profiles, including fiber cement and engineered wood. We talk through how each one finishes at corners, windows and soffits, and which one fits the house.',
+        q: 'What siding styles do you install?',
+        a: 'Board-and-batten, lap and other common styles, including fiber cement and engineered wood. We talk through how each one finishes at corners, windows and the roof overhang, and which one fits the house.',
       },
       {
         q: 'Can siding repairs be documented for insurance?',
@@ -1265,9 +1265,9 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Board-and-batten siding on a Houston home',
     ),
     local: {
-      heading: 'An elevation, not just a wall covering.',
+      heading: 'The front of the house, not just a wall covering.',
       body: [
-        'A siding project in Houston is usually about how the house reads from the curb: board-and-batten on a newer Cinco Ranch or Woodlands elevation, or a matched repair on an older Memorial exterior that only needs a section.',
+        'A siding project in Houston is usually about how the house looks from the curb: board-and-batten on a newer Cinco Ranch or Woodlands house, or a matched repair on an older Memorial exterior that only needs a section.',
         'We detail corners, soffits and window trim so the new work looks deliberate. South and west walls fade faster here, so a repair is matched to the boards that are on the house now.',
       ],
       conditions: [
@@ -1280,8 +1280,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
           body: 'Sun-faded walls are matched to what is there, not to the original chip. We say when a patch will blend and when the wall needs more.',
         },
         {
-          title: 'Color on the elevation',
-          body: 'The new boards and the trim are finished together, so the wall reads as one elevation rather than a patch of a different shade.',
+          title: 'Color on the front',
+          body: 'The new boards and the trim are finished together, so the front is one color rather than a patch of a different shade.',
         },
       ],
       neighborhoods: [
@@ -1302,10 +1302,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     group: 'Roof & exterior',
     tagline: 'The outdoor room the house opens onto.',
     summary:
-      'Decks, patios, and patio covers, built or rebuilt after a look at the framing, the ledger, and how the yard meets the house.',
+      'Decks, patios, and patio covers, built or rebuilt after a look at the framing and how the yard meets the house.',
     metaTitle: 'Houston Patios & Decks',
     metaDescription:
-      'Patios and decks in Houston, TX: new decks, rebuilds, patios, and covers, scoped from the framing and the yard you have. Call (713) 909-0034.',
+      'Patios and decks in Houston: new decks, rebuilds, patios, and covers, based on the framing and the yard you have. Call (713) 909-0034.',
     intro: [
       'A deck or a patio is the room outside the back door. We build new ones and rebuild ones that have worn out, starting with what is actually holding them up.',
       'Houston sun and rain decide the materials and the drainage. A cover, the rails, and the stairs are planned with the surface, so water sheds away from the house and the walk down is solid.',
@@ -1316,12 +1316,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Patios',
       'Patio covers',
       'Rails, stairs, and gates',
-      'A check of the ledger, footings, and posts before new boards go down',
+      'A check of the board that ties the deck to the house, plus footings and posts, before new boards go down',
     ],
     faqs: [
       {
         q: 'Can you repair a deck instead of replacing it?',
-        a: 'Sometimes. We look at the framing, the ledger where the deck meets the house, and the footings first. Sound structure can take new decking and rails. Rotted structure comes out.',
+        a: 'Sometimes. We look at the framing, the board where the deck meets the house, and the footings first. Sound structure can take new decking and rails. Rotted structure comes out.',
       },
       {
         q: 'Do you build patio covers?',
@@ -1344,13 +1344,13 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'Outside the back door.',
       body: [
-        'The useful question is what the yard and the door are asking for: a ground-level patio, an elevated deck, or a cover that keeps the rain off the part you use.',
-        'We measure the house side, the slope, and what is already there. A rebuild starts by opening up the framing. A new patio starts from the grade and the door it has to meet.',
+        'We start with what the yard and the door need: a ground-level patio, an elevated deck, or a cover that keeps the rain off the part you use.',
+        'We measure the house side, the slope, and what is already there. A rebuild starts by opening up the framing. A new patio starts from the ground and the door it has to meet.',
       ],
       conditions: [
         {
           title: 'What is still sound',
-          body: 'Ledger, posts, and footings are inspected before new decking goes down. What can stay, stays. What cannot is replaced.',
+          body: 'The board that ties the deck to the house, the posts, and the footings are inspected before new decking goes down. What can stay, stays. What cannot is replaced.',
         },
         {
           title: 'Rain and sun',
@@ -1358,7 +1358,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'How it meets the house',
-          body: 'The door, the siding, the stairs, and the rails are detailed together so the outdoor room belongs to the elevation.',
+          body: 'The door, the siding, the stairs, and the rails are finished together so the outdoor room belongs with the house.',
         },
       ],
       neighborhoods: [
@@ -1433,11 +1433,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'How quickly can mold become a concern here?',
-        a: 'In Houston humidity, damp materials do not get a long grace period. Drying is time-sensitive. We map moisture and keep air movers and dehumidifiers running until the readings say the structure is dry.',
+        a: 'In Houston humidity, damp materials need drying right away. We track the moisture and keep air movers and dehumidifiers running until the readings say the structure is dry.',
       },
       {
         q: 'Do you help with insurance documentation?',
-        a: 'We photograph conditions and the scope of drying and repair. Coverage decisions belong to your insurer. Our insurance photo log is available if you want a room-by-room record of your own.',
+        a: 'We photograph the rooms and the drying and repair work. Coverage decisions belong to your insurer. Our insurance photo log is available if you want a room-by-room record of your own.',
       },
     ],
     related: [
@@ -1497,8 +1497,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'Dry the structure before you rebuild it.',
       body: [
-        'Houston water damage is usually a supply line, an appliance, a roof opening after a storm, or water that came in at grade. The houses sit in humid air, so a room that looks dry can still hold moisture in the slab, the insulation or the bottom of the drywall.',
-        'We measure before we demolish more than we have to, extract what is standing, and dry with air movers and dehumidification. Repairs to drywall, floors and cabinets start when the readings support it.',
+        'Houston water damage is usually a supply line, an appliance, a roof opening after a storm, or water that came in at ground level. The houses sit in humid air, so a room that looks dry can still hold moisture in the slab, the insulation or the bottom of the drywall.',
+        'We measure before we remove more than we have to, extract what is standing, and dry with air movers and dehumidifiers. Repairs to drywall, floors and cabinets start when the readings say it is dry.',
       ],
       conditions: [
         {
@@ -1537,8 +1537,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     metaDescription:
       'Insurance claims help in Houston, TX: damage photos and documentation for water and storm losses. Your insurer decides coverage. Call (713) 909-0034.',
     intro: [
-      'When a roof or a pipe lets water in, a clear record helps the conversation with your insurer. We photograph the damage, note where the water went, and put that documentation with the repair scope.',
-      'We do not decide what your policy covers. Your insurer does. If you want a room-by-room record of your own before anything is moved, the insurance photo log on this site is free to use.',
+      'When a roof or a pipe lets water in, a clear record helps the conversation with your insurer. We photograph the damage, note where the water went, and put that documentation with the repair plan.',
+      'Your insurer decides what your policy covers. If you want a room-by-room record of your own before anything is moved, the insurance photo log on this site is free to use.',
     ],
     includes: [
       'Inspection photos of roof, water and storm damage',
@@ -1550,7 +1550,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Do you file the claim or decide what is covered?',
-        a: 'No. We provide inspection photos and documentation. Coverage decisions belong to your insurer.',
+        a: 'You file the claim, and your insurer decides coverage. We provide inspection photos and documentation.',
       },
       {
         q: 'Should I clean up before the photos?',
@@ -1612,8 +1612,8 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     local: {
       heading: 'A record of what the storm or the leak did.',
       body: [
-        'Houston claims we document usually start with a roof opening, a supply line, an appliance, or water that came in at grade. We photograph the conditions and the scope of drying and repair.',
-        'The photo log is yours to use whether or not you hire us for the work. It is a room-by-room packet, not a promise about what the policy will pay.',
+        'Houston claims we document usually start with a roof opening, a supply line, an appliance, or water that came in at ground level. We photograph what happened and the drying and repair work.',
+        'The photo log is yours to use whether or not you hire us for the work. It is a room-by-room record you can share. What the policy pays is up to your insurer.',
       ],
       conditions: [
         {
@@ -1626,7 +1626,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         },
         {
           title: 'The building, separately',
-          body: 'Stopping more water and drying the structure do not wait on a coverage decision. We say which work is protection and which work is the rebuild.',
+          body: 'Stopping more water and drying the structure happen before a coverage decision. We say which work is protection and which work is the rebuild.',
         },
       ],
       neighborhoods: [
@@ -1645,14 +1645,14 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'painting-drywall-repair',
     name: 'Painting & Drywall Repair',
     group: 'Recovery',
-    tagline: 'The color and the smooth wall a remodel ends on.',
+    tagline: 'The color and the smooth walls that finish a remodel.',
     summary:
       'Drywall patching and replacement, priming and interior painting, with the cleanup done.',
     metaTitle: 'Houston Painting & Drywall Repair',
     metaDescription:
       'Painting and drywall repair in Houston: patches, texture, primer, and interior paint. Call (713) 909-0034.',
     intro: [
-      'Paint is how a Houston remodel actually finishes: new drywall in a kitchen, a patched wall in a living room, a powder room taken to a deeper color. The repair has to disappear, and the paint has to sit on a sound surface.',
+      'Paint is how a Houston remodel actually finishes: new drywall in a kitchen, a patched wall in a living room, a powder room taken to a deeper color. The repair has to disappear, and the paint has to sit on a solid surface.',
       'We patch or replace drywall, prime, and paint, then clean up. Texture is blended so the new work meets the walls already in the house.',
     ],
     includes: [
@@ -1665,11 +1665,11 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     faqs: [
       {
         q: 'Will the repair be visible after painting?',
-        a: 'A good repair should disappear. We feather, prime and paint so the patch blends into the wall, including textured Houston interiors where a hard edge would show.',
+        a: 'A good repair should disappear. We soften the edges, prime and paint so the patch blends into the wall, including textured Houston interiors where a hard edge would show.',
       },
       {
         q: 'Do you paint whole rooms, or only the patched wall?',
-        a: 'Both. A small patch is feathered and painted so it disappears. A kitchen, bath or living room that changed is usually painted as a whole so the color and sheen match.',
+        a: 'Both. A small patch is blended and painted so it disappears. A kitchen, bath or living room that changed is usually painted as a whole so the color and sheen match.',
       },
       {
         q: 'Can you match texture in an older Houston house?',
@@ -1686,10 +1686,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Painted powder room in a Houston home after drywall repair',
     ),
     local: {
-      heading: 'The finish the remodel is judged by.',
+      heading: 'The finish you notice when the work is done.',
       body: [
         'New drywall and paint are what make a kitchen, a bath or a living room feel done. In Heights, Bellaire and West University houses that often means blending into texture and trim that were already there.',
-        'We patch, prime and paint so the new work disappears into the room. Color is matched to the walls around it. If a wall was opened because of a leak, it is confirmed dry before it is closed. That check is part of the sequence, not the reason for the project.',
+        'We patch, prime and paint so the new work disappears into the room. Color is matched to the walls around it. If a wall was opened because of a leak, we make sure it is dry before we close it. That check is just part of the job.',
       ],
       conditions: [
         {

@@ -11,16 +11,16 @@ export const countertopsBrief: Brief = {
     '{name} counters are a repair or a replacement only after we see the top that is there. A chip and a failed seam are different jobs.',
   ],
   opener: [
-    'For countertops, that housing tells us about access and about how square the room is. {name} runs from tight lots to long islands. Both get a template. Neither gets a slab ordered from a drawing alone.',
+    'For countertops, these houses tell us about access and about how square the room is. {name} runs from tight lots to long islands. Both get a template. Neither gets a slab ordered from a drawing alone.',
     'Counter work there is the surface you work on every day. In {name} the edge, the seam, and the sink hole are decided with the cabinets in place, because older rooms lie about their dimensions.',
-    'We read that house type as a delivery problem and a layout problem. A {name} driveway can take a slab the way a narrow inside-the-Loop street cannot. The template still happens at the cabinets.',
+    'For us, that house type means a delivery problem and a layout problem. A {name} driveway can take a slab the way a narrow inside-the-Loop street cannot. The template still happens at the cabinets.',
   ],
   pier: [
     'Pier-and-beam kitchens in {name} are often out of square and out of level. A stone top will not forgive that. We level the cabinets and template the room that exists, including a short bungalow run where a thick edge can look heavy. The crawlspace is not the counter. It is a clue the house has moved.',
     'In {name} an old floor can rock a cabinet run. We fix the plane before the template, or the seam opens later. Marble and a soft stone get a care talk. Quartz does too, in plainer words: heat and the sink cut still matter.',
   ],
   slab: [
-    'Slab kitchens in {name} often have longer runs. Seams are planned so they miss the worst light and the main prep zone. We template after the cabinets are set and level. The concrete slab under the house is not a reason to skip that. It is a reason the sink cutout has to match the drain that is already there unless plumbing is also in the scope.',
+    'Slab kitchens in {name} often have longer runs. Seams are planned so they miss the worst light and the main prep zone. We template after the cabinets are set and level. The concrete slab under the house is not a reason to skip that. It is a reason the sink cutout has to match the drain that is already there unless plumbing is also in the job.',
     'A {name} top that replaces laminate is measured to the cabinets that stay. We do not trace the old laminate and call it a template. Overhangs at an island or a snack bar are drawn, including the support they need.',
   ],
   mixed: [
@@ -28,11 +28,11 @@ export const countertopsBrief: Brief = {
     'Mixed eras in {name} mean the sink might be on an old drain in a new cabinet. The cutout follows the bowl you chose and the drain that exists. We reconcile those before the slab is cut at the shop.',
   ],
   post: [
-    'Newer {name} kitchens often have long islands on post-tension slabs. The counter seam on that island is what you see from the room. We place it on purpose. Moving the sink is a slab question, cables included. A new top on the existing sink location is not. We keep those scopes separate so a template visit does not become a plumbing surprise.',
+    'Newer {name} kitchens often have long islands on post-tension slabs. The counter seam on that island is what you see from the room. We place it on purpose. Moving the sink is a slab question, cables included. A new top on the existing sink location is not. We keep those jobs separate so a template visit does not become a plumbing surprise.',
     'Open plans in {name} want the island to read as one piece. Slab size, seam location, and the overhang for stools are the drawing. Delivery fits a suburban driveway more often than not. We still confirm the path from the truck to the kitchen.',
   ],
   raised: [
-    'Getting a slab up to a {name} kitchen is part of the scope. Stairs and landings limit piece size, which can force a seam you would not need on a slab house at grade. We plan the carry before the material is cut. Salt air does not pick the stone. How you cook does.',
+    'Getting a slab up to a {name} kitchen is part of the job. Stairs and landings limit piece size, which can force a seam you would not need on a slab house at grade. We plan the carry before the material is cut. Salt air does not pick the stone. How you cook does.',
     'Raised homes in {name} still get a template of the cabinets that are set. Out-of-level runs happen here too. We will not carry a full slab up a stair that cannot take it and call that a site problem discovered on install day.',
   ],
   craft: [
@@ -82,7 +82,7 @@ export const countertopsBrief: Brief = {
     {
       q: 'Can you repair a countertop in {name} instead of replacing it?',
       answers: [
-        'Sometimes. A small chip is a different scope from a failed seam or a top that is loose on the cabinets. In {name} we look before we choose. Replacement is the honest answer when the damage or the layout has moved past a patch.',
+        'Sometimes. A small chip is a different job from a failed seam or a top that is loose on the cabinets. In {name} we look before we choose. Replacement is the honest answer when the damage or the layout has moved past a patch.',
         'We do not sell a new {name} top by default. If the cabinets are sound and the damage is local, a repair can be the job. If the sink or the seam is the problem, we say replacement and template the cabinets that are staying.',
       ],
     },
@@ -90,7 +90,7 @@ export const countertopsBrief: Brief = {
       q: 'Does a {name} association review countertops?',
       answers: [
         'No. Counters are inside. {name} reviews, when they exist, hit roofs, paint, and the street. A permit enters if the sink move becomes plumbing, not because of the stone color.',
-        'Interior stone is not an elevation. In {name} the real limits are the cabinets, the drain, and the path from the truck. Those are construction limits, not design-review limits.',
+        'Interior stone is not the front. In {name} the real limits are the cabinets, the drain, and the path from the truck. Those are construction limits, not design-review limits.',
       ],
     },
     {

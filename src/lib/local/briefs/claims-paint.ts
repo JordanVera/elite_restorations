@@ -11,12 +11,12 @@ export const insuranceBrief: Brief = {
     '{name} documentation can sit beside drying and repairs if you hire those too. The paperwork and the construction stay separate.',
   ],
   opener: [
-    'For claims help, that housing tells us which kinds of damage are worth separating in the photos. {name} trees, bayous, and ordinary supply lines produce different pictures. We label what we see.',
+    'For claims help, these houses tell us which kinds of damage are worth separating in the photos. {name} trees, bayous, and ordinary supply lines produce different pictures. We label what we see.',
     'Documentation there is for you and your adjuster. In {name} we write down the rooms, the roof, and the source as far as the visit can show it. Coverage is not our sentence to finish.',
-    'We read that house type as a reason to be specific. A {name} limb through a roof and water at the front door may be two conversations with your insurer. The file should let you tell them apart.',
+    'For us, that house type means a reason to be specific. A {name} limb through a roof and water at the front door may be two conversations with your insurer. The file should let you tell them apart.',
   ],
   pier: [
-    'Older houses in {name} often claim a roof leak into plaster or a bath leak into a crawlspace. We photograph the opening, the rooms, and, when it is part of the loss, the crawlspace. Those are different cavities. A historic district does not change who pays. It can change the later repair of the street elevation. We do not mix that into the claim decision.',
+    'Older houses in {name} often claim a roof leak into plaster or a bath leak into a crawlspace. We photograph the opening, the rooms, and, when it is part of the loss, the crawlspace. Those are different cavities. A historic district does not change who pays. It can change the later repair of the front wall. We do not mix that into the claim decision.',
     'A {name} cottage loss is documented room by room if that is how far the water went. We do not shoot three dramatic photos and skip the closet that is actually wet. Notes say what was wet. They do not say what your policy owes.',
   ],
   slab: [
@@ -121,9 +121,9 @@ export const paintBrief: Brief = {
     '{name} drywall that was opened for a leak is confirmed dry before it is closed. Paint does not go on a damp wall.',
   ],
   opener: [
-    'For paint and drywall, that housing tells us the texture and the trim. {name} plaster, orange peel, and smooth new board are different blends. We match the wall you have.',
+    'For paint and drywall, these houses tell us the texture and the trim. {name} plaster, orange peel, and smooth new board are different blends. We match the wall you have.',
     'Painting there finishes the remodel or the repair. In {name} humidity is why we prime. Texture is why we feather instead of leaving a ridge you see at an angle.',
-    'We read that house type as room size. A {name} stair hall and a small powder room are different amounts of paint. The prep is the same idea: a sound surface.',
+    'For us, that house type means room size. A {name} stair hall and a small powder room are different amounts of paint. The prep is the same idea: a sound surface.',
   ],
   pier: [
     'Older houses in {name} often have plaster or a mix of plaster and drywall. A patch has to feather into that surface, and the trim is often original, so the paint line has to stop cleanly. We do not skim the whole room unless the wall needs it. If a leak opened the wall, the cavity is dry before we close it. Crawlspace moisture is noted when it is what wet the floor wall.',
@@ -139,10 +139,10 @@ export const paintBrief: Brief = {
   ],
   post: [
     'Newer {name} houses are often smooth or lightly textured. Paint is the last step of a kitchen or a bath, and open plans mean the sheen has to match where two rooms are visible at once. We prime new drywall. We do not cut the slab to fix a wall. If a leak repair needs drying first, paint waits.',
-    'Tall walls and stair halls in {name} are more area than a single bedroom patch. We measure that instead of calling everything a spot repair. Color is chosen for the light in the room. Covenants, if any, are about the exterior. This scope is inside.',
+    'Tall walls and stair halls in {name} are more area than a single bedroom patch. We measure that instead of calling everything a spot repair. Color is chosen for the light in the room. Covenants, if any, are about the exterior. This work is inside.',
   ],
   raised: [
-    'Interior paint in {name} follows the same rule as inland: dry substrate, primer, then finish. Salt air matters more for exterior coatings and metals. If you want the exterior painted, that is a different exposure and we say so. Interior walls that were wet from a storm are metered before they are closed. Historic interiors can have plaster worth blending rather than replacing.',
+    'Interior paint in {name} follows the same rule as inland: dry surface, primer, then finish. Salt air matters more for exterior coatings and metals. If you want the exterior painted, that is a different exposure and we say so. Interior walls that were wet from a storm are metered before they are closed. Historic interiors can have plaster worth blending rather than replacing.',
     'Access in a raised {name} house affects how we protect floors and stairs while sanding mud. The paint itself is ordinary: feather the repair, prime, and coat. We do not paint over a damp coastal wall to make a schedule.',
   ],
   craft: [
@@ -169,7 +169,7 @@ export const paintBrief: Brief = {
     {
       title: 'Prime, then paint',
       bodies: [
-        'New drywall in {name} is primed. Humidity is why that step stays in the scope.',
+        'New drywall in {name} is primed. Humidity is why that step stays in the job.',
         'Sheen is matched across a {name} room when a spot repair would flash.',
       ],
     },
@@ -177,7 +177,7 @@ export const paintBrief: Brief = {
       title: 'Dry first',
       bodies: [
         'A {name} wall opened for a leak is confirmed dry before it is closed and painted.',
-        'Paint is not a dryer. If the {name} cavity is wet, the water scope comes before the color.',
+        'Paint is not a dryer. If the {name} cavity is wet, the water work comes before the color.',
       ],
     },
   ],
@@ -199,7 +199,7 @@ export const paintBrief: Brief = {
     {
       q: 'Can you match texture in an older {name} house?',
       answers: [
-        'Yes. Many walls are textured or meet plaster. We blend the patch so the paint has one plane. In {name} the sample is the wall next to the repair, not a national texture name. If the existing texture is failing everywhere, we say a broader skim is the real scope.',
+        'Yes. Many walls are textured or meet plaster. We blend the patch so the paint has one plane. In {name} the sample is the wall next to the repair, not a national texture name. If the existing texture is failing everywhere, we say a broader skim is the real job.',
         'Matching is done in the room light. {name} cottages and mid-century houses do not share one texture. We look at yours. New smooth board in a rebuild is a simpler paint job, and we will not invent texture you do not have.',
       ],
     },

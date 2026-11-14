@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = pageMetadata({
   title: 'Contact Houston Restoration',
   description:
-    'Call (713) 909-0034 for Houston restoration or remodeling. Visit 511 Crestwater Ct, Houston, TX 77082, or request an estimate.',
+    'Call (713) 909-0034 for restoration or remodeling in Houston. The office is at 511 Crestwater Ct, Houston, TX 77082, or you can request an estimate.',
   path: '/contact',
   languages: languageAlternates('/contact', '/es/contact'),
 });
@@ -37,7 +37,7 @@ export default async function ContactPage({
       <PageHero
         eyebrow="Contact"
         title={['Start a conversation.']}
-        lede="Call, email or send a request. If water is coming in or a roof is open to the weather, call first, then tell us what happened."
+        lede="Call, email, or send a note. If water is coming in, or the roof is open to the weather, call first. Then tell us what happened."
         crumbs={[{ name: 'Contact', path: '/contact' }]}
       />
 
@@ -111,9 +111,9 @@ export default async function ContactPage({
                     {site.phone.display}
                   </a>
                   <p className="mt-4">
-                    Serving Greater Houston, including{' '}
-                    {site.serviceArea.slice(0, 8).join(', ')} and surrounding
-                    communities.
+                    We come to homes across Greater Houston, including{' '}
+                    {site.serviceArea.slice(0, 8).join(', ')}, and the
+                    neighborhoods around them.
                   </p>
                 </dd>
               </div>
@@ -123,7 +123,7 @@ export default async function ContactPage({
           <Reveal className="lg:col-span-7" delay={0.1}>
             <p className="eyebrow text-accent-ink">Request an estimate</p>
             <h2 className="font-display t-md mt-4 max-w-[20ch]">
-              Tell us what you need.
+              Tell us about the property.
             </h2>
             <div className="relative mt-10">
               <LeadForm

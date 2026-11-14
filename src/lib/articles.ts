@@ -72,7 +72,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Remodels take longer to decide and usually longer to build. Permits show up when walls, plumbing, or electrical move. The cost is yours, not a claim, so the scope should be settled before demolition.',
+            text: 'Remodels take longer to decide and usually longer to build. Permits show up when walls, plumbing, or electrical move. The cost is yours, not a claim, so the work should be settled before demolition.',
           },
         ],
       },
@@ -89,7 +89,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Mixing them too early is how a repair turns into an open-ended remodel, or a remodel starts on a wet subfloor. We separate the two so the urgent work is finished and the optional work is chosen.',
+            text: 'Mixing them too early is how a repair turns into an open-ended remodel, or a remodel starts on a wet layer under the floor. We separate the two so the urgent work is finished and the optional work is chosen.',
           },
         ],
       },
@@ -102,7 +102,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Doing both with one crew keeps the drying, the carpentry, and the finishes on the same plan. You are not handing a half-dried kitchen from a mitigation company to a remodeler who has not seen the loss.',
+            text: 'Doing both with one crew keeps the drying, the carpentry, and the finishes on the same plan. You are not handing a half-dried kitchen from a drying crew to a remodeler who has not seen the loss.',
           },
         ],
       },
@@ -116,7 +116,7 @@ export const articles: Article[] = [
     lines: ['Stop the leak', 'before the tear-out.'],
     description:
       'Practical checks for supply lines, roofs, and wet rooms that keep a Houston house from a water-damage restoration.',
-    lede: 'Most of the water jobs we see started as something small: a supply line, a pan, a flashing detail, a clogged gutter. The expensive part is how long it sat.',
+    lede: 'Most of the water jobs we see started as something small: a supply line, a pan, a metal joint, a clogged gutter. The expensive part is how long it sat.',
     image: '/images/services/water-damage-restoration.jpg',
     service: 'water-damage-restoration',
     emergency: true,
@@ -151,7 +151,7 @@ export const articles: Article[] = [
               'The water-heater pan and the drain it is supposed to use. A pan full of water is already a leak.',
               'Under-sink cabinets and the floor in front of the dishwasher. Swollen particle board is a record of a leak, not a stain.',
               'Gutter outlets, downspouts, and the ground next to the foundation. Water should leave the house, not sit against it.',
-              'Attic and ceiling stains after a hard rain, especially under roof penetrations and valleys.',
+              'Attic and ceiling stains after a hard rain, especially under vents, pipes, and valleys.',
             ],
           },
         ],
@@ -178,7 +178,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'If the water came from a sudden break or a storm, call your insurer and a restoration crew the same day. The longer gypsum, insulation, and wood stay wet, the more of the room has to come out.',
+            text: 'If the water came from a sudden break or a storm, call your insurer and a restoration crew the same day. The longer drywall, insulation, and wood stay wet, the more of the room has to come out.',
           },
         ],
       },
@@ -238,7 +238,7 @@ export const articles: Article[] = [
               'Charred or melted finishes and furniture',
               'Smoke on ceilings and inside cabinets',
               'Broken glass, open roofs, and missing doors',
-              'Wet drywall and flooring from suppression',
+              'Wet drywall and flooring from firefighting water',
             ],
           },
         ],
@@ -248,7 +248,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'An open roof, a broken window, or a door that will not lock will turn one loss into two. Board-up and tarping are there to keep rain out and the house secure until repairs are scoped. If utilities were not already shut off by the fire department, ask them before anyone else touches gas or the panel.',
+            text: 'An open roof, a broken window, or a door that will not lock will turn one loss into two. Board-up and tarping are there to keep rain out and the house secure until the repairs are planned. If utilities were not already shut off by the fire department, ask them before anyone else touches gas or the panel.',
           },
         ],
       },
@@ -257,7 +257,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Soot is acidic. The longer it stays on metal, stone, and finished wood, the more of those surfaces are lost. A fire cleanup is not a weekend of household cleaner. It is removal of what cannot be saved, cleaning of what can, and drying wherever suppression water went.',
+            text: 'Soot is acidic. The longer it stays on metal, stone, and finished wood, the more of those surfaces are lost. A fire cleanup is not a weekend of household cleaner. It is removal of what cannot be saved, cleaning of what can, and drying wherever the firefighting water went.',
           },
           {
             type: 'p',
@@ -291,7 +291,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Soft flooring at the tub, stained grout, a caulk joint that has pulled away, and a fan that does not actually move air tell a buyer the wet areas have been ignored. Fix those before you spend money on a new mirror. A clean, dry, ordinary bath beats a styled one with a soft subfloor.',
+            text: 'Soft flooring at the tub, stained grout, a caulk joint that has pulled away, and a fan that does not actually move air tell a buyer the wet areas have been ignored. Fix those before you spend money on a new mirror. A clean, dry, ordinary bath beats a styled one with soft wood under the floor.',
           },
         ],
       },
@@ -352,7 +352,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A soft spot, a bounce, or a tile that clicks means the problem may be under the finish: a wet subfloor, a loose board, or mortar that let go. Covering that with new material without opening it up is how the next floor fails in the same place.',
+            text: 'A soft spot, a bounce, or a tile that clicks means the problem may be under the finish: a wet layer under the floor, a loose board, or mortar that let go. Covering that with new material without opening it up is how the next floor fails in the same place.',
           },
         ],
       },
@@ -361,7 +361,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Cupped hardwood, swollen laminate edges, bubbled vinyl, and dark stains that return after drying are water history. In a kitchen, bath, or laundry room, ask what got wet before you pick a new color. If the subfloor is compromised, replacement includes that repair.',
+            text: 'Cupped hardwood, swollen laminate edges, bubbled vinyl, and dark stains that return after drying are water history. In a kitchen, bath, or laundry room, ask what got wet before you pick a new color. If the layer under the floor is damaged, replacement includes that repair.',
           },
         ],
       },
@@ -393,7 +393,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Kitchens and baths want a surface that can take spills. Living areas can take wood or a wood-look product if the slab or subfloor is suitable. We look at the room, the moisture, and how you live in it before recommending a material.',
+            text: 'Kitchens and baths want a surface that can take spills. Living areas can take wood or a wood-look product if the slab or the layer under the floor is suitable. We look at the room, the moisture, and how you live in it before recommending a material.',
           },
         ],
       },
@@ -450,7 +450,7 @@ export const articles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Stone, paint-grade cabinets, and a straightforward backsplash will look right in most Houston houses. The expensive version is not automatically the better daily kitchen. Choose materials you are willing to live with: a counter that can take a hot pan or cannot, a floor that can take a spill, a cabinet finish you can touch up.',
+            text: 'Stone, painted cabinets, and a straightforward backsplash will look right in most Houston houses. The expensive version is not automatically the better daily kitchen. Choose materials you are willing to live with: a counter that can take a hot pan or cannot, a floor that can take a spill, a cabinet finish you can touch up.',
           },
         ],
       },
@@ -483,7 +483,7 @@ export const articles: Article[] = [
     emergency: true,
     ctaTitle: 'Water still coming in?',
     ctaBody:
-      'Call (713) 909-0034. If you cannot call, the emergency form reaches the same team. We dry and repair. We do not decide what an insurance policy pays.',
+      'Call (713) 909-0034. If you cannot call, the emergency form reaches the same team. We dry and repair. Your insurer decides what the policy pays.',
     related: [
       'water-damage-insurance-claims-in-texas',
       'how-to-prevent-water-damage-in-your-home',
@@ -528,7 +528,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Your insurer decides what the policy covers. We do not. The photos are for your records and for whoever you ask to dry the house. If you want a room-by-room packet you can fill out yourself, the insurance photo log on this site is free to use.',
+            text: 'Your insurer decides what the policy covers. The photos are for your records and for whoever you ask to dry the house. If you want a room-by-room packet you can fill out yourself, the insurance photo log on this site is free to use.',
           },
           {
             type: 'links',
@@ -540,7 +540,7 @@ export const articles: Article[] = [
         ],
       },
       {
-        heading: 'When to call for water mitigation',
+        heading: 'When to call for drying help',
         blocks: [
           {
             type: 'p',
@@ -558,7 +558,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Mitigation is the work that stops more damage: extract the water, dry the structure, and keep a record. In Houston humidity, a room that looks dry can still hold moisture in the wall or the slab. Drying is a different job from the rebuild, and it should happen first.',
+            text: 'The work that limits more damage is straightforward: pull the water, dry the structure, and keep a record. In Houston humidity, a room that looks dry can still hold moisture in the wall or the slab. Drying is a different job from the rebuild, and it should happen first.',
           },
           {
             type: 'links',
@@ -584,7 +584,7 @@ export const articles: Article[] = [
     service: 'insurance-claims',
     ctaTitle: 'Need the damage written down?',
     ctaBody:
-      'We photograph what got wet and what was dried or repaired. Your insurer decides coverage. We are a contractor, not a public adjuster, and we do not negotiate the claim.',
+      'We photograph what got wet and what was dried or repaired. Your insurer decides coverage. We are the contractor. A public adjuster is a different license, and the claim stays with your insurer.',
     related: [
       'frozen-and-burst-pipes-in-houston',
       'how-to-prevent-water-damage-in-your-home',
@@ -645,7 +645,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license: someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We are the contractor. We can photograph the conditions and do the drying and the repairs. We do not negotiate the claim, and we do not tell you what the policy owes.',
+            text: 'A public adjuster is a separate license: someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We are the contractor. We can photograph the conditions and do the drying and the repairs. The claim and the payment stay with your insurer.',
           },
         ],
       },

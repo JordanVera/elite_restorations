@@ -15,7 +15,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = pageMetadata({
   title: 'Emergency Roof & Water Help in Houston',
   description:
-    'Roof leak, missing shingles, or a flood in Houston? Call (713) 909-0034 for emergency tarping and water-damage help.',
+    'A roof leak, missing shingles, or water on the floor in Houston? Call (713) 909-0034. We can tarp the roof and help with the water damage.',
   path: '/emergency',
   image: '/images/services/roofing-emergency-tarp-repair.jpg',
   languages: languageAlternates('/emergency', '/es/emergency'),
@@ -28,11 +28,11 @@ const steps = [
   },
   {
     title: 'Photograph before you clean up',
-    body: 'Wide shots of each room, close-ups of the damage, and anything that is wet. Your insurer will ask for them, and they show us what we are walking into.',
+    body: 'A wide shot of each room, a close-up of the damage, and anything that is wet. Your insurer will ask for the pictures, and they show us what we are walking into.',
   },
   {
-    title: 'Send the short request',
-    body: 'Tell us what happened and where. Photos are optional but help. We call you back and plan the tarp, extraction or drying from there.',
+    title: 'Send a short note',
+    body: "Tell us what happened and where. Photos are optional, and they help. We'll call you back as soon as we can and plan the tarp, the water removal, or the drying from there.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function EmergencyPage() {
       <PageHero
         eyebrow="Water & storm damage"
         title={['Water coming in?', 'Start here.']}
-        lede="Roof open to the weather, a burst pipe, or water on the floor. Call first if you can. Otherwise, send the request below and we will call you back."
+        lede="The roof is open to the weather, a pipe burst, or there is water on the floor. Call first if you can. If you cannot, send the note below. We'll call you back as soon as we can."
         crumbs={[{ name: 'Emergency', path: '/emergency' }]}
       >
         <Reveal delay={0.5} className="mt-10">
@@ -104,12 +104,12 @@ export default function EmergencyPage() {
 
             <div className="mt-10 border border-border p-6">
               <p className="font-display text-2xl">
-                Text a list to whoever is there.
+                Text this list to whoever is at the house.
               </p>
               <p className="mt-2 max-w-[42ch] leading-relaxed text-muted-foreground">
-                A short first-night checklist for an active leak or an open
-                roof. It saves on the phone and feeds the claim packet your
-                adjuster can take.
+                A short first-night list for a leak that is still going, or a
+                roof that is open. It stays on the phone, and it becomes the
+                packet you can hand to your adjuster.
               </p>
               <Link
                 href="/insurance-log#first-night"
@@ -135,7 +135,7 @@ export default function EmergencyPage() {
                 href="/slab-moisture-after-a-supply-line-break-houston"
                 className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
               >
-                Slab moisture after a supply-line break
+                Moisture in the slab after a water line breaks
               </Link>
               <Link
                 href="/houston-storm-damage"
@@ -180,8 +180,8 @@ export default function EmergencyPage() {
       >
         <div className="gutter mx-auto flex max-w-[120rem] flex-wrap items-center justify-between gap-6">
           <p className="max-w-[46ch] text-muted-foreground">
-            Once the emergency is handled, we rebuild what was damaged, and we
-            also plan kitchens, baths and floors.
+            After the emergency is under control, we rebuild what was damaged.
+            We also plan kitchens, baths, and floors.
           </p>
           <Link
             href="/services"

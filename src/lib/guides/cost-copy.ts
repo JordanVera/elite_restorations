@@ -3,9 +3,9 @@ import type { GuideSection } from '@/lib/guides/types';
 export const kitchenCostSections: readonly GuideSection[] = [
   {
     eyebrow: 'How to read this',
-    heading: 'Three scopes, not one Houston price.',
+    heading: 'Three kinds of work, not one Houston price.',
     paragraphs: [
-      'A kitchen number that ignores the room is fiction. The bands on this page are planning ranges for three different scopes. Same layout, new finishes is typically about $25,000 to $55,000. A layout change is typically about $40,000 to $80,000. A full gut is typically about $70,000 to $135,000. They overlap on purpose. A small layout change in a simple room can land near a generous finish update. A gut of a large room with custom boxes can sit at the top of its band or past it. The estimate after a visit is the price. These ranges are how you plan before that visit.',
+      'A kitchen number that ignores the room is fiction. The bands on this page are planning ranges for three different jobs. Same layout, new finishes is typically about $25,000 to $55,000. A layout change is typically about $40,000 to $80,000. A full gut is typically about $70,000 to $135,000. They overlap on purpose. A small layout change in a simple room can land near a generous finish update. A gut of a large room with custom cabinets can sit at the top of its band or past it. The estimate after a visit is the price. These ranges are how you plan before that visit.',
       'The low end of each band assumes a straightforward house, standard finishes, and no surprise in the walls. The high end is still not a ceiling for a very large or highly custom kitchen. River Oaks and a modest bungalow are not priced by the neighborhood name. They are priced by cabinet length, stone, and whether the plumbing and the structure move. Bring the ranges to the conversation. Do not treat the low number as a bid.',
     ],
   },
@@ -13,13 +13,13 @@ export const kitchenCostSections: readonly GuideSection[] = [
     eyebrow: 'The house',
     heading: 'What a Houston kitchen does to the budget.',
     paragraphs: [
-      'Older kitchens inside the Loop, especially in the Heights, Bellaire, and West University, are often small, out of square, and sitting on pier and beam. A new layout may mean a bearing wall, tired wiring, and a drain that can be rerouted in a crawl space. That crawl space is an advantage only if it is accessible and dry. If it is not, access and repair become part of the kitchen. Newer open plans in Katy, Cinco Ranch, and The Woodlands are usually slab. Moving the sink means cutting concrete. Leaving the sink where it is keeps you in a lower band even when the island, the stone, and the lights are new.',
-      'Humidity shows up in the cabinet spec. Plywood boxes and a finish that can live through a Houston summer cost more than the cheapest particle box, and they are the ones that still close in August. Stone is templated after the cabinets are set because the walls are rarely square. That sequence is time, and time is money, and skipping it is how a counter is recut. None of this is a surcharge for “old house.” It is the work the house asks for.',
+      'Older kitchens inside the Loop, especially in the Heights, Bellaire, and West University, are often small, a little crooked, and sitting on pier and beam. A new layout may mean a wall that holds the house up, tired wiring, and a drain that can be rerouted in a crawl space. That crawl space is an advantage only if it is accessible and dry. If it is not, access and repair become part of the kitchen. Newer open plans in Katy, Cinco Ranch, and The Woodlands are usually slab. Moving the sink means cutting concrete. Leaving the sink where it is keeps you in a lower band even when the island, the stone, and the lights are new.',
+      'Humidity shows up in the cabinet choice. Plywood cabinets and a finish that can live through a Houston summer cost more than the cheapest particle-board box, and they are the ones that still close in August. Stone is measured after the cabinets are set because the walls are rarely square. That sequence is time, and time is money, and skipping it is how a counter gets recut. None of this is a surcharge for “old house.” It is the work the house asks for.',
     ],
     points: [
       { title: 'Keep the drain', body: 'The cheapest layout is the one the plumbing already has. A new island with power but no sink stays simpler than an island with a prep sink cut into a slab.' },
-      { title: 'Cabinet length', body: 'A galley with two runs is less box and less stone than a kitchen open to a family room with a long island. Square footage of the room is a weak predictor. Linear feet of cabinet is a better one.' },
-      { title: 'What is soft', body: 'A swollen sink base or a wet subfloor is repair before the new kitchen. Finding it on the visit is cheaper than finding it on demo day, and it still changes the number.' },
+      { title: 'Cabinet length', body: 'A narrow kitchen with two walls of cabinets is less cabinet and less stone than a kitchen open to a family room with a long island. The room’s square footage is a weak predictor. The length of cabinet is a better one.' },
+      { title: 'What is soft', body: 'A swollen sink base, or a wet layer under the floor, is repair before the new kitchen. Finding it on the visit is cheaper than finding it on demo day, and it still changes the number.' },
     ],
   },
   {
@@ -27,7 +27,7 @@ export const kitchenCostSections: readonly GuideSection[] = [
     heading: 'Where the material bill actually moves.',
     paragraphs: [
       'Painted shaker cabinets and a straightforward quartz top are the middle of the finish range for a lot of Houston kitchens. Custom boxes, a furniture-style island, a thick stone edge, or marble you are willing to maintain move the same layout up. Appliances you keep are not in the construction number. Panels and a built-in refrigerator are. The backsplash can be a few thousand dollars or most of a separate budget if it is full-height stone. Lighting is easy to forget and visible every night. Under-cabinet light, a general layer, and pendants are three lines, not one fixture.',
-      'Flooring that stops at the kitchen door costs less than flooring that runs through the hall and the living room so the levels match. That run is often the right scope and it is not “the kitchen” in a casual conversation. We split it out so you can see it. Hardware, the hood duct to the exterior, and a small change to a window are the same kind of line. They are real. They are not where a $70,000 gut becomes a $40,000 refresh. The layout and the boxes do that.',
+      'Flooring that stops at the kitchen door costs less than flooring that runs through the hall and the living room so the levels match. That stretch is often the right work, and it is not “the kitchen” in a casual conversation. We split it out so you can see it. Hardware, the hood duct to the exterior, and a small change to a window are the same kind of line. They are real. They are not where a $70,000 gut becomes a $40,000 refresh. The layout and the cabinets do that.',
     ],
   },
   {
@@ -44,7 +44,7 @@ export const kitchenCostSections: readonly GuideSection[] = [
 export const kitchenCostFaqs = [
   {
     q: 'Why do the ranges overlap?',
-    a: 'Because a small layout change and a large finish update can cost similar money. The labels describe the kind of work, not a guaranteed bracket. Your kitchen lands where the scope lands.',
+    a: 'Because a small layout change and a large finish update can cost similar money. The labels describe the kind of work, not a guaranteed bracket. Your kitchen lands where the work lands.',
   },
   {
     q: 'Does an island always mean the layout-change range?',
@@ -52,7 +52,7 @@ export const kitchenCostFaqs = [
   },
   {
     q: 'Are these ranges for cabinets only?',
-    a: 'No. They are planning ranges for the construction scope described: finishes on the same layout, a layout change, or a gut. Appliances you buy yourself, and a floor that runs through the rest of the house, may be outside the way you are reading the band. The estimate lists them.',
+    a: 'No. They are planning ranges for the work described: finishes on the same layout, a layout change, or a gut. Appliances you buy yourself, and a floor that runs through the rest of the house, may be outside the way you are reading the band. The estimate lists them.',
   },
   {
     q: 'Do older Houston houses cost more by default?',
@@ -66,7 +66,7 @@ export const bathroomCostSections: readonly GuideSection[] = [
     heading: 'The drain decides more than the tile.',
     paragraphs: [
       'Bathroom prices in Houston diverge at the plumbing, not at the paint color. A vanity and finish refresh on the same layout is typically about $6,000 to $15,000. A shower rebuild that keeps the drain is typically about $12,000 to $25,000. A full remodel that moves plumbing is typically about $30,000 to $65,000. A powder room and a primary bath are not interchangeable inside those words. Glass, stone, and a second wet wall in the same house can push a project up. The visit places it.',
-      'Waterproofing sits inside the shower number. It is not a way to get from the top of a band to the bottom. Skipping it does not produce the same shower. If someone’s lower price is the same tile photo without a membrane and a sloped pan, it is a different scope. Ask what is behind the tile before you compare the two numbers.',
+      'Waterproofing sits inside the shower number. It is not a way to get from the top of a band to the bottom. Skipping it does not produce the same shower. If someone’s lower price is the same tile photo without a waterproof layer and a sloped pan, it is a different job. Ask what is behind the tile before you compare the two numbers.',
     ],
   },
   {
@@ -74,7 +74,7 @@ export const bathroomCostSections: readonly GuideSection[] = [
     heading: 'Slab, crawl space, and a window in the shower.',
     paragraphs: [
       'On a slab, typical of newer Katy, Memorial, Sugar Land, and Woodlands houses, the shower drain is in the concrete. Moving it means cutting the slab, patching it, and building the pan on that repair. On a pier-and-beam house, more common in older Heights bungalows, the drain is often in the crawl space. It is still plumbing. It is not a concrete saw. That difference alone can move a bath from the middle band toward the top, or keep a new shower in the middle because the drain stayed put.',
-      'A window in the wet wall, common in older baths, has to be detailed into the waterproofing or removed. A ceiling below that is already stained means the bath and the room under it may be one repair. Houston humidity is why the fan should exhaust outdoors and why a wall is dry before it is closed. Those are scope, not mood. They belong in the price.',
+      'A window in the shower wall, common in older baths, has to be built into the waterproofing or removed. A ceiling below that is already stained means the bath and the room under it may be one repair. Houston humidity is why the fan should exhaust outdoors and why a wall is dry before it is closed. Those are part of the work. They belong in the price.',
     ],
     points: [
       { title: 'Same footprint', body: 'New tile, a new valve, and new glass on the old drain are the shower-rebuild band. The moment the drain, the toilet, or the vanity supply moves, you are in a different project.' },
@@ -86,8 +86,8 @@ export const bathroomCostSections: readonly GuideSection[] = [
     eyebrow: 'Finishes',
     heading: 'Tile, glass, and the vanity are the visible money.',
     paragraphs: [
-      'A porcelain field and a framed door are a different material bill from book-matched stone and frameless glass. Large-format tile needs a flatter wall, which is labor before any luxury shows up. Mosaic on the shower floor is slower than a single-pitch pan with a linear drain, and the linear drain is its own hardware. Niches, a bench, and a curb versus a curbless entry each change the waterproofing. Curbless on a slab is only real if the floor can slope to a drain. If it cannot, we will not price a picture of it.',
-      'The vanity, the top, the mirror, and the light are one elevation. A furniture-style vanity and a stone top move a refresh toward the top of its band without moving a single drain. That is still not a full remodel. Keeping a tub and retiling the surround is less than removing the tub and building a shower, even when the tile sample is the same. Compare scopes. The sample is not the scope.',
+      'A plain porcelain wall and a framed door are a different material bill from matched stone slabs and frameless glass. Large tile needs a flatter wall, which is labor before any luxury shows up. Mosaic on the shower floor is slower than a pan that slopes one way to a long drain, and that drain is its own hardware. A shelf, a bench, and a curb versus an entry with no curb each change the waterproofing. A no-curb shower on a slab is only real if the floor can slope to a drain. If it cannot, we price the shower the floor can actually do.',
+      'The vanity, the top, the mirror, and the light are one wall. A furniture-style vanity and a stone top move a refresh toward the top of its band without moving a single drain. That is still not a full remodel. Keeping a tub and retiling the surround is less than removing the tub and building a shower, even when the tile sample is the same. Compare the work. The sample is not the job.',
     ],
   },
     {
@@ -95,7 +95,7 @@ export const bathroomCostSections: readonly GuideSection[] = [
       heading: 'What the out-of-service days are worth.',
       paragraphs: [
         'A powder room you can close off is a different project from the only bath in the house. The construction price does not include a hotel, and we will not pretend it does. It does include the sequence: how many days the water is off, whether a tub can stay in use while a shower is rebuilt, and whether the hall bath has to be finished before the primary is opened. That sequence is why two baths are not twice one bath in a simple way. They share trips, and they still cannot both be demoed if you have nowhere to shower.',
-        'Material lead time sits in the same conversation. A stock vanity and an in-stock porcelain can start sooner than a stone top and frameless glass, which are measured after the walls are real. We do not print a week count here because those lead times move. We do put them on the estimate, next to the band the scope actually falls in. If you are choosing between a shower rebuild on the same drain and a layout that cuts the slab, the calendar is part of the price even when the labor is the line you notice first.',
+        'Material lead time sits in the same conversation. A stock vanity and an in-stock porcelain can start sooner than a stone top and frameless glass, which are measured after the walls are real. Lead times move, so this page does not print a week count. The estimate does, next to the band the work actually falls in. If you are choosing between a shower rebuild on the same drain and a layout that cuts the slab, the calendar is part of the price even when the labor is the line you notice first.',
       ],
     },
     {
@@ -120,20 +120,20 @@ export const bathroomCostFaqs = [
   },
   {
     q: 'Are fixtures included in the ranges?',
-    a: 'The ranges describe the construction scope. A special-order valve, frameless glass, or a stone you have already picked can move the material bill. The estimate names what is included. The bands are for planning, not a package of fixtures.',
+    a: 'The ranges describe the construction work. A special-order valve, frameless glass, or a stone you have already picked can move the material bill. The estimate names what is included. The bands are for planning, not a package of fixtures.',
   },
   {
     q: 'Can two bathrooms share one budget band?',
-    a: 'Only if you add them. A powder room and a primary are two rooms. Doing them together saves some trips. It does not make the second shower free. We scope each wet wall.',
+    a: 'Only if you add them. A powder room and a primary are two rooms. Doing them together saves some trips. It does not make the second shower free. We price each shower wall.',
   },
 ];
 
 export const roofCostSections: readonly GuideSection[] = [
   {
     eyebrow: 'How to read this',
-    heading: 'The range is a roof shape, not a price per square.',
+    heading: 'The range is a roof shape, not a price by size alone.',
     paragraphs: [
-      'Architectural asphalt replacement on many Houston houses is typically about $12,000 to $24,000. Metal, tile, or composite is typically about $20,000 to $45,000 when the structure can carry it. Deck repairs found after tear-off are often about $500 to $2,000, at about $75 to $150 for a 4x8 sheet. A one-story roof with a simple hip and a two-story roof with steep fronts and a lot of valleys are not the same square. A per-square number written before the inspection leaves pitch, height, and the deck out. We do not use one.',
+      'Architectural asphalt replacement on many Houston houses is typically about $12,000 to $24,000. Metal, tile, or composite is typically about $20,000 to $45,000 when the structure can carry it. Repairs to the wood under the shingles, found after tear-off, are often about $500 to $2,000, at about $75 to $150 for a 4x8 sheet. A one-story roof with a simple hip and a two-story roof with steep fronts and a lot of valleys are not the same size. A size-only number written before the inspection leaves slope, height, and that wood out. We price the roof we see.',
       'The low end is a straightforward asphalt tear-off on a house the crew can walk and stage. The high end of the asphalt band is still not a steep, cut-up, or very large roof, and it is not tile. If your house is those things, expect the estimate to say so. The bands are for planning a conversation. The contract is the roof we measured.',
     ],
   },
@@ -141,13 +141,13 @@ export const roofCostSections: readonly GuideSection[] = [
     eyebrow: 'The roof',
     heading: 'What on the house moves the number.',
     paragraphs: [
-      'Stories, pitch, and cuts are the labor. Skylights, chimneys, and wall flashing are the details that leak when they are reused brittle. Pipe boots and vents are part of a replacement, not add-ons we remember later. A low-slope porch or addition is not a shingle detail. It is a different system tied into the steep roof, and it is a common place Houston houses leak. Older plank decking in Heights and other pre-war houses is a different tear-off from plywood on a 2000s Katy roof. We price the deck we expect, then confirm it when the covering is off.',
-      'Two layers left in place, soft eaves, and rotten fascia show up at tear-off. We stop and show you before that wood is added. Gutters are not automatically in the roof price. If they are crushed or pitched back toward the fascia, we say so and scope them only when they are part of the job. Trees that block the driveway change the day. They do not change the shingle. They change the access.',
+      'Stories, slope, and cuts are the labor. Skylights, chimneys, and the metal at walls leak when brittle pieces are reused. Rubber collars and vents are part of a replacement, not add-ons we remember later. A low-slope porch or addition is not a shingle detail. It is a different system tied into the steep roof, and it is a common place Houston houses leak. Older wood planks in Heights and other pre-war houses are a different tear-off from plywood on a 2000s Katy roof. We price the wood we expect, then confirm it when the shingles are off.',
+      'Two layers left in place, soft eaves, and a rotten roof-edge board show up at tear-off. We stop and show you before that wood is added. Gutters are not automatically in the roof price. If they are crushed or sloped back toward the edge, we say so and include them only when they are part of the job. Trees that block the driveway change the day. The shingle stays the same. The access is what changes.',
     ],
     points: [
       { title: 'Weight', body: 'Asphalt replacing asphalt is the usual structural case. Tile or slate is a weight question we answer on the house before it is a material you can choose.' },
-      { title: 'Ventilation', body: 'Intake and exhaust are part of a Houston roof because the attic runs hot. Blocked soffits are a finding. They are fixed as part of making the system work, not as a mystery line.' },
-      { title: 'Partial versus full', body: 'A repair of a boot or a valley is not priced off this replacement table. Many localized repairs plan around $400 to $2,500. A replacement is the whole covering, off to the deck.' },
+      { title: 'Ventilation', body: 'Air in and air out are part of a Houston roof because the attic runs hot. Blocked panels under the overhang are a finding. They are fixed so the system works, not as a mystery line.' },
+      { title: 'Partial versus full', body: 'A repair of a vent collar or a valley is not priced off this replacement table. Many local repairs plan around $400 to $2,500. A replacement is the whole covering, off to that wood.' },
     ],
   },
   {
@@ -155,7 +155,7 @@ export const roofCostSections: readonly GuideSection[] = [
     heading: 'The deductible is not the estimate.',
     paragraphs: [
       'Your insurer decides what the policy pays. Many Texas policies, especially in Harris County and closer to the coast, use a wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common. On a higher limit, two percent is a large deductible, and it is not the deductible on a kitchen leak. Whether this storm clears it is your question for the carrier. Our estimate is the cost to do the roof. Those numbers are allowed to be different.',
-      'Some policies pay actual cash value first and release recoverable depreciation after the work. Some do not. We do not calculate that for you, and we are not a public adjuster. We photograph the roof and install the one you hire. We do not rewrite the scope to match a check. If you are paying for the roof yourself, ignore the claim story and read the scope. Temporary tarping, when the roof is open and it is safe to be up there, is a separate small project, often a few hundred dollars to about $2,000 for a single walkable opening, not a down payment that locks you into a replacement.',
+      'Some policies pay the depreciated value first and release the rest after the work. Some do not. We do not calculate that for you, and we are not public adjusters. We photograph the roof and install the one you hire. We do not rewrite the work to match a check. If you are paying for the roof yourself, read the work, not the claim story. Temporary tarping, when the roof is open and it is safe to be up there, is a separate small project, often a few hundred dollars to about $2,000 for a single walkable opening. It is not a down payment that locks you into a replacement.',
     ],
   },
   {
@@ -163,24 +163,24 @@ export const roofCostSections: readonly GuideSection[] = [
     heading: 'Which office, and why tear-off day is not a surprise.',
     paragraphs: [
       'A full replacement in the City of Houston is typically permitted. A small repair often is not. If the mailing city says Houston, you may still be in Bellaire, West University Place, Southside Place, or a Memorial village, each with its own building department. Sugar Land and Pearland issue their own permits. Much of Katy is the City of Katy, Harris County, or Fort Bend County. The Woodlands is not a municipality. An address there is usually Montgomery County or Harris County. We match the permit to the legal address before the tear-off is scheduled.',
-      'Debris, the permit, and the underlayment are part of planning the job. They are not invented after the new shingles are on. Weather is the other schedule fact. Hurricane season is June 1 through November 30. We do not open a roof into a storm, and we tarp an opening when it is safe rather than leave the deck bare. Call (713) 909-0034. We inspect, say whether repair or replacement is the honest scope, and price that roof.',
-      'If you are comparing two estimates, compare tear-off, deck repair, flashing, ventilation, and the permit, not only the shingle name. A lower number that leaves the old covering in place is a different roof. The ranges above assume the covering comes off so the deck can be seen.',
+      'Debris, the permit, and the underlayer are part of planning the job. They are not invented after the new shingles are on. Weather is the other schedule fact. Hurricane season is June 1 through November 30. If a storm is close, the roof stays closed, and we tarp an opening when it is safe rather than leave the wood bare. Call (713) 909-0034. We inspect, say whether repair or replacement is the honest job, and price that roof.',
+      'If you are comparing two estimates, compare tear-off, wood repair, flashing, ventilation, and the permit, not only the shingle name. A lower number that leaves the old covering in place is a different roof. The ranges above assume the covering comes off so that wood can be seen.',
     ],
   },
 ];
 
 export const roofCostFaqs = [
   {
-    q: 'Why will a roofer’s per-square price not match this page?',
-    a: 'Because a square does not include pitch, stories, valleys, the deck, or the flashing. Two roofs with the same area can be different jobs. We price the roof we inspected, inside or outside these planning ranges as the house requires.',
+    q: 'Why will a roofer’s price-by-size not match this page?',
+    a: 'A square is 100 square feet, and size alone still leaves out slope, stories, valleys, the roof wood, and the flashing metal. Two roofs with the same area can be different jobs. We price the roof we inspected, inside or outside these planning ranges as the house requires.',
   },
   {
     q: 'Does the asphalt range include tear-off?',
-    a: 'Yes. A replacement, as we scope it, comes off to the deck, with new underlayment, flashing, and vents. A recover over old shingles is not this range. Soft decking is the extra sheet price, not a hidden second roof.',
+    a: 'Yes. A replacement, as we plan it, comes off to the roof wood, with new underlayer, flashing, and vents. A layer over old shingles is not this range. Soft wood is the extra sheet price, not a hidden second roof.',
   },
   {
     q: 'What if my deductible is higher than the roof?',
-    a: 'Then the policy may not fund the work, and the roof still costs what it costs if you choose to replace it. We do not decide whether to file. We also do not cut the roof down so the invoice matches a deductible.',
+    a: 'Then the policy may not fund the work, and the roof still costs what it costs if you choose to replace it. Whether to file is your decision. The roof stays the roof we estimated, even if that is more than the deductible.',
   },
   {
     q: 'Are metal and tile always in the higher band?',

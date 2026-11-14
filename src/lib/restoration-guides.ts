@@ -34,11 +34,11 @@ export const restorationGuides: Article[] = [
       },
       {
         q: 'Does a musty smell mean the house is unsafe to live in?',
-        a: 'A musty smell means something is still damp. Find that material and dry it or remove it. We do not make medical judgments. If anyone feels ill, that question belongs with a doctor.',
+        a: 'A musty smell means something is still damp. Find that material and dry it or remove it. If anyone feels ill, that question belongs with a doctor.',
       },
       {
         q: 'Who decides what the insurance company pays?',
-        a: 'Your insurer. We record what got wet and what was dried or repaired. We are a contractor, not a public adjuster, and we do not negotiate the claim.',
+        a: 'Your insurer. We record what got wet and what was dried or repaired. We are the contractor. Your insurer handles the claim, and a public adjuster is a different license.',
       },
     ],
     sections: [
@@ -64,7 +64,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'A lot of Houston houses sit on a slab. Water runs under the flooring and wicks up the wall. You see the paint. The paper on the drywall above the floor is what stays wet. Cabinet boxes made of particle board swell at the toe kick. Hardwood cups. Laminate lifts at the joints. In a two-story house in Memorial or Bellaire, the same leak often stains the ceiling below, and the stain is not always under the fixture that failed. If it is safe, move furniture off the wet floor and open the cabinet doors.',
+            text: 'A lot of Houston houses sit on a slab. Water runs under the flooring and wicks up the wall. You see the paint. The paper on the drywall above the floor is what stays wet. Cabinet boxes made of particle board swell at the bottom. Hardwood cups. Laminate lifts at the joints. In a two-story house in Memorial or Bellaire, the same leak often stains the ceiling below, and the stain is not always under the fixture that failed. If it is safe, move furniture off the wet floor and open the cabinet doors.',
           },
         ],
       },
@@ -73,7 +73,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'We do not put a clock on mold. What we see here is simpler. Houston humidity does not give wet materials much help. A room can feel drier to the hand and still be wet inside the wall, the insulation, or the carpet pad. Those are the places a musty smell starts, usually out of sight. Waiting through a weekend because the surface looks better is how a small release becomes a tear-out.',
+            text: 'A mold countdown would not help. What we see here is simpler. Houston humidity does not give wet materials much help. A room can feel drier to the hand and still be wet inside the wall, the insulation, or the carpet pad. Those are the places a musty smell starts, usually out of sight. Waiting through a weekend because the surface looks better is how a small release becomes a tear-out.',
           },
           {
             type: 'p',
@@ -103,15 +103,15 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'The calls are ordinary until the water sits. A washing-machine hose, an ice-maker line, a water heater in a closet, a shower that has been wetting the wall, a valley or a pipe boot after a storm. On a one-story slab in Spring Branch or Katy, that water has a flat path under the floor. Near Clear Lake, wind-driven rain can find the windows in the same week. The first steps do not change with the neighborhood. How much has to come out depends on how long it stayed wet.',
+            text: 'The calls are ordinary until the water sits. A washing-machine hose, an ice-maker line, a water heater in a closet, a shower that has been wetting the wall, a valley or a vent-pipe collar after a storm. On a one-story slab in Spring Branch or Katy, that water has a flat path under the floor. Near Clear Lake, wind-driven rain can find the windows in the same week. The first steps do not change with the neighborhood. How much has to come out depends on how long it stayed wet.',
           },
           {
             type: 'p',
-            text: 'Call the company that wrote the policy as soon as you reasonably can. Ask how they want notice, and whether an adjuster should see the damage before permanent work. Write down the claim number. Notice timing is in the policy. It is not the same on every Texas form, so we do not quote a deadline.',
+            text: 'Call the company that wrote the policy as soon as you reasonably can. Ask how they want notice, and whether an adjuster should see the damage before permanent work. Write down the claim number. Notice timing is in the policy. It is not the same on every Texas form, so ask the insurer what the deadline is.',
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild. We do not negotiate the claim, and we do not tell you what the policy owes.',
+            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild. The claim and the amount paid stay with your insurer.',
           },
         ],
       },
@@ -120,7 +120,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Mitigation stops more damage: extract standing water, run air movers and dehumidifiers, and record what the meters say. Drywall, flooring, cabinets, and paint start when the structure is dry. Painting a damp wall is how the stain comes back. If you also want to remodel that kitchen or bath, dry it first. A new cabinet run on a wet wall is a second loss.',
+            text: 'The first steps stop more damage: pull standing water, run air movers and dehumidifiers, and record what the meters say. Drywall, flooring, cabinets, and paint start when the structure is dry. Painting a damp wall is how the stain comes back. If you also want to remodel that kitchen or bath, dry it first. A new cabinet run on a wet wall is a second loss.',
           },
           {
             type: 'links',
@@ -175,11 +175,11 @@ export const restorationGuides: Article[] = [
     faqs: [
       {
         q: 'Can I climb up and check the shingles myself?',
-        a: 'Stay on the ground. Wet shingles, a bruised deck, and a slope you do not walk in ordinary weather are how people get hurt after a storm. Tell us what you can see from the yard. We will look at the roof.',
+        a: 'Stay on the ground. Wet shingles, bruised wood under the shingles, and a slope you do not walk in ordinary weather are how people get hurt after a storm. Tell us what you can see from the yard. We will look at the roof.',
       },
       {
         q: 'Does a ceiling stain mean the whole roof has to be replaced?',
-        a: 'No. A stain can be one flashing detail, one lifted shingle, or a wider problem. The inspection says which. Replacing a roof that can be repaired is the wrong job, and patching a roof that is finished is the wrong job too.',
+        a: 'No. A stain can be metal at one joint, one lifted shingle, or a wider problem. The inspection says which. Replacing a roof that can be repaired is the wrong job, and patching a roof that is finished is the wrong job too.',
       },
       {
         q: 'Should I repair the roof before the adjuster visits?',
@@ -196,7 +196,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'After a storm, walk the house in daylight once the wind has dropped. Stay on the ground. A wet or bruised roof is not a place to inspect from. Binoculars help. You are looking for shingles that are missing, cracked, or lifted at the edges, for exposed underlayment, and for debris that punched through. Check the ground and the gutters for piles of granules. A few granules in a downspout are ordinary on an older roof. A fresh scatter of grit after hail is a reason to have the roof looked at.',
+            text: 'After a storm, walk the house in daylight once the wind has dropped. Stay on the ground. A wet or bruised roof is not a place to inspect from. Binoculars help. You are looking for shingles that are missing, cracked, or lifted at the edges, for the layer showing under them, and for debris that punched through. Check the ground and the gutters for piles of granules. A few granules in a downspout are ordinary on an older roof. A fresh scatter of grit after hail is a reason to have the roof looked at.',
           },
           {
             type: 'p',
@@ -209,11 +209,11 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Architectural asphalt is the roof we see most, on brick houses in Memorial and Bellaire and on newer roofs in Katy, Pearland, and The Woodlands. Hail bruises the mat and knocks the granules off. The shingle can look only spotted until water finds the bruise. Tile can crack. Metal can dent. A membrane on a flatter section can puncture. The marks are often on the slope that faced the storm, and along hips and ridges, not spread like a paint stain.',
+            text: 'Architectural asphalt is the roof we see most, on brick houses in Memorial and Bellaire and on newer roofs in Katy, Pearland, and The Woodlands. Hail bruises the shingle and knocks the granules off. The shingle can look only spotted until water finds the bruise. Tile can crack. Metal can dent. A membrane on a flatter section can puncture. The marks are often on the slope that faced the storm, and along hips and ridges, not spread like a paint stain.',
           },
           {
             type: 'p',
-            text: 'Flashing is the other place storms show up. Pipe boots, valley metal, and the metal where a roof meets a wall can lift or split even when the field of shingles looks calm. That is a common source of the ceiling stain that appears a week later, under a bathroom or a chimney, with no missing shingle in sight. If you can see a lifted edge or a cracked boot from the ground, say so when you call. Do not pull on it.',
+            text: 'Metal that keeps water out is the other place storms show up. Rubber collars, valley metal, and the metal where a roof meets a wall can lift or split even when the main roof looks calm. That is a common source of the ceiling stain that appears a week later, under a bathroom or a chimney, with no missing shingle in sight. If you can see a lifted edge or a cracked collar from the ground, say so when you call. Do not pull on it.',
           },
           {
             type: 'list',
@@ -249,7 +249,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'You do not need to know whether the roof can be repaired. That is the inspection. Some bruises can be repaired. A roof that is bruised across a slope, or that is already near the end of its life, often needs to come off. Age, the deck underneath, and how the water is getting in all matter. We photograph what we find so you have that record either way. Repairing a roof that can be saved, and replacing one that cannot, are both honest answers. The visit is how we tell them apart.',
+            text: 'You do not need to know whether the roof can be repaired. That is the inspection. Some bruises can be repaired. A roof that is bruised across a slope, or that is already near the end of its life, often needs to come off. Age, the wood under the shingles, and how the water is getting in all matter. We photograph what we find so you have that record either way. Repairing a roof that can be saved, and replacing one that cannot, are both honest answers. The visit is how we tell them apart.',
           },
         ],
       },
@@ -258,7 +258,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'If you are going to ask your insurer about the storm, photograph before anything is repaired. Include each side of the house, the roof slopes you can see from the ground, the soft-metal dents, the gutters, and any interior stains. Note the date of the storm. Then call the company that wrote the policy and ask how they want the loss reported. Write down the claim number. Ask whether the wind or hail deductible is different from the deductible on a plumbing leak. We do not know your form.',
+            text: 'If you are going to ask your insurer about the storm, photograph before anything is repaired. Include each side of the house, the roof slopes you can see from the ground, the soft-metal dents, the gutters, and any interior stains. Note the date of the storm. Then call the company that wrote the policy and ask how they want the loss reported. Write down the claim number. Ask whether the wind or hail deductible is different from the deductible on a plumbing leak. Your policy is the form to check.',
           },
           {
             type: 'p',
@@ -266,7 +266,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'We provide inspection photos and a scope for the work you hire us to do. Your insurer decides coverage. We are not a public adjuster, and we do not negotiate the claim or tell you what the policy owes. A repair quote is not a claim. Keep those two papers separate.',
+            text: 'We provide inspection photos and a written plan for the work you hire us to do. Your insurer decides coverage. A public adjuster is a different license, and the claim stays with your insurer. A repair quote is not a claim. Keep those two papers separate.',
           },
           {
             type: 'links',
@@ -307,7 +307,7 @@ export const restorationGuides: Article[] = [
     service: 'insurance-claims',
     ctaTitle: 'Need the damage written down?',
     ctaBody:
-      'Call (713) 909-0034, or use the contact form. We will look at the house. We will not tell you what the policy pays.',
+      'Call (713) 909-0034, or use the contact form. We will look at the house. Your insurer decides what the policy pays.',
     related: [
       'water-damage-insurance-claims-in-texas',
       'storm-and-hail-roof-repair-houston',
@@ -315,11 +315,11 @@ export const restorationGuides: Article[] = [
     faqs: [
       {
         q: 'Do I have to hire the contractor who looked at the house?',
-        a: 'No. A visit does not lock you into the work. Hiring is your choice. Ask for the scope in writing before anything starts.',
+        a: 'No. A visit does not lock you into the work. Hiring is your choice. Ask for the plan in writing before anything starts.',
       },
       {
         q: 'Can you meet the adjuster with me?',
-        a: 'Yes, if you want us there. We can speak to the damage and the repair. We do not negotiate the claim, and we are not a public adjuster.',
+        a: 'Yes, if you want us there. We can speak to the damage and the repair. The claim stays with your insurer, and we are not a public adjuster.',
       },
       {
         q: 'Should I wait to dry the house until the claim is approved?',
@@ -340,7 +340,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'Then call the company on the policy, or the agent who can open the report. Ask how they want notice, what they want you to save, and whether they want an adjuster to see the damage before permanent repairs. Write down the claim number, the date, and the name of anyone you speak with. Notice language is in your policy. It is not identical on every Texas policy, so we do not quote a deadline. Ask the insurer to point you to the wording, and keep that answer with the claim number.',
+            text: 'Then call the company on the policy, or the agent who can open the report. Ask how they want notice, what they want you to save, and whether they want an adjuster to see the damage before permanent repairs. Write down the claim number, the date, and the name of anyone you speak with. Notice language is in your policy. It is not identical on every Texas policy, so ask the insurer what the deadline is. Ask the insurer to point you to the wording, and keep that answer with the claim number.',
           },
         ],
       },
@@ -360,12 +360,12 @@ export const restorationGuides: Article[] = [
               'Tarp, board, or dry what would get worse if it waited, and keep receipts',
               'Meet the adjuster with your photos and ask what was measured',
               'Compare what the insurer sends with the house, and ask about gaps in writing',
-              'Hire the repair when you are ready, with a scope you have read',
+              'Hire the repair when you are ready, with a plan you have read',
             ],
           },
           {
             type: 'p',
-            text: 'Keep a simple file. Photos, the claim number, names, receipts for temporary protection, and notes of what was removed. The insurance photo log on this site is a free way to keep the room-by-room part of that file. Bring it to the adjuster meeting. It does not decide coverage. It keeps the facts in one place. Water that rose from outside is often a different conversation than a burst supply line or a roof leak. We do not sort policies. Ask your insurer which policy, if any, applies to the water you had.',
+            text: 'Keep a simple file. Photos, the claim number, names, receipts for temporary protection, and notes of what was removed. The insurance photo log on this site is a free way to keep the room-by-room part of that file. Bring it to the adjuster meeting. It does not decide coverage. It keeps the facts in one place. Water that rose from outside is often a different conversation than a burst supply line or a roof leak. Ask your insurer which policy, if any, applies to the water you had.',
           },
         ],
       },
@@ -378,7 +378,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. They are not there to argue your policy for you. A public adjuster is different. That is a separate license a homeowner can hire to represent them with the insurer. Elite Restorations is not a public adjuster. If you hire one, that is your decision. We still do not negotiate the claim.',
+            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. They are not there to argue your policy for you. A public adjuster is different. That is a separate license a homeowner can hire to represent them with the insurer. Elite Restorations is not a public adjuster. If you hire one, that is your decision. The claim stays with your insurer.',
           },
         ],
       },
@@ -387,7 +387,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A contractor can photograph visible damage, tarp an opening when it is safe, extract water, and dry the structure. A contractor can write down what was wet, what was removed, and what was rebuilt. A contractor can give you a scope and a price for the work you hire: roofing, drywall, flooring, siding, paint. A contractor can meet the adjuster at the house and answer questions about those materials. That is the help. It is practical, and it stops at the building.',
+            text: 'A contractor can photograph visible damage, tarp an opening when it is safe, extract water, and dry the structure. A contractor can write down what was wet, what was removed, and what was rebuilt. A contractor can give you a plan and a price for the work you hire: roofing, drywall, flooring, siding, paint. A contractor can meet the adjuster at the house and answer questions about those materials. That is the help. It is practical, and it stops at the building.',
           },
           {
             type: 'p',
@@ -400,7 +400,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A contractor cannot decide what your policy covers. A contractor cannot tell you the insurer owes a certain amount. A contractor cannot sign the claim for you, and should not ask you to sign away a question you have not read. We do not interpret the policy, and we do not give legal advice. If you need someone to explain your rights under a statute or a form, that question belongs with your insurer or with a lawyer you choose. We are not those offices.',
+            text: 'A contractor cannot decide what your policy covers. A contractor cannot tell you the insurer owes a certain amount. A contractor cannot sign the claim for you, and should not ask you to sign away a question you have not read. What the policy means, and any legal advice, belong with your insurer or with a lawyer you choose. If you need your rights explained under a statute or a form, start with those offices. We are the contractor, and we stay with the building.',
           },
           {
             type: 'p',
@@ -413,7 +413,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'When the insurer sends an estimate or a letter, compare it with your photos and with what you can see in the house. If a wet room is missing, or a roof slope was not mentioned, ask the insurer in writing. If you hire us, our scope describes the work we are pricing. It is not a substitute for their estimate, and the two will not always match. The difference is a question for the insurer. We do not settle it.',
+            text: 'When the insurer sends an estimate or a letter, compare it with your photos and with what you can see in the house. If a wet room is missing, or a roof slope was not mentioned, ask the insurer in writing. If you hire us, our plan describes the work we are pricing. It is not a substitute for their estimate, and the two will not always match. The difference is a question for the insurer. Your insurer is the one to ask about that gap.',
           },
           {
             type: 'p',
@@ -445,7 +445,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Call (713) 909-0034, or use the contact form. Tell us what was damaged and whether you have already opened a claim. We will look at the house, photograph the conditions, and talk through the repair. We will not tell you what the policy pays.',
+            text: 'Call (713) 909-0034, or use the contact form. Tell us what was damaged and whether you have already opened a claim. We will look at the house, photograph the conditions, and talk through the repair. Your insurer decides what the policy pays.',
           },
         ],
       },
@@ -484,7 +484,7 @@ export const restorationGuides: Article[] = [
       },
       {
         q: 'Who pays for the tarp or the drying?',
-        a: 'Your insurer decides what the policy pays. Keep the photos and the receipts. We do the protection and the repairs you hire. We do not decide coverage.',
+        a: 'Your insurer decides what the policy pays. Keep the photos and the receipts. We do the protection and the repairs you hire. Your insurer decides coverage.',
       },
     ],
     sections: [
@@ -493,7 +493,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Before a storm is forecast to arrive, look at the roof from the ground. You want missing or lifted shingles, cracked tile, debris already sitting in a valley, and limbs close enough to fall on the house. Pipe boots and the metal where a roof meets a wall are worth a look with binoculars. If you can see a lifted edge, get it repaired while the weather is ordinary. A small opening is much easier to close on a clear day than in the wind.',
+            text: 'Before a storm is forecast to arrive, look at the roof from the ground. You want missing or lifted shingles, cracked tile, debris already sitting in a valley, and limbs close enough to fall on the house. Rubber collars on the vent pipes, and the metal where a roof meets a wall, are worth a look with binoculars. If you can see a lifted edge, get it repaired while the weather is ordinary. A small opening is much easier to close on a clear day than in the wind.',
           },
           {
             type: 'p',
@@ -501,7 +501,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'We repair what can be repaired and say so when the roof needs to come off. Underlayment, flashing, and vents go with a replacement. The goal before a storm is a roof that is already closed, not a promise about a future claim. Your insurer decides coverage if a later storm damages the house.',
+            text: 'We repair what can be repaired and say so when the roof needs to come off. The layer under the shingles, metal joints, and vents go with a replacement. The goal before a storm is a roof that is already closed, not a promise about a future claim. Your insurer decides coverage if a later storm damages the house.',
           },
         ],
       },
@@ -510,7 +510,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Close and latch windows and doors, including the garage, before the wind is up. Know which side of the house takes the weather. If you choose to board openings, do it while you can still work safely, and follow the instructions that came with the panels or the plywood you are using. We do not publish a fastening pattern here. A board put on after the rain has started is how people get hurt.',
+            text: 'Close and latch windows and doors, including the garage, before the wind is up. Know which side of the house takes the weather. If you choose to board openings, do it while you can still work safely, and follow the instructions that came with the panels or the plywood you are using. Use the fastening instructions that came with your boards. A board put on after the rain has started is how people get hurt.',
           },
           {
             type: 'p',
@@ -531,7 +531,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'Newer streets in Katy, Pearland, and The Woodlands often move water in swales and curb inlets. Older lots inside the Loop rely on shorter gutters and flatter yards. When the rain is heavy, it still has to move away from the house. If it does not on an ordinary thunderstorm, fix the downspout and the grade you can reach while the ground is dry.',
+            text: 'Newer streets in Katy, Pearland, and The Woodlands often move water in swales and curb inlets. Older lots inside the Loop rely on shorter gutters and flatter yards. When the rain is heavy, it still has to move away from the house. If it does not on an ordinary thunderstorm, fix the downspout and the ground you can reach while it is dry.',
           },
         ],
       },
@@ -571,7 +571,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'Call your insurer to open or update the claim, and keep receipts for temporary protection. Siding, drywall, and paint follow the dry-out. They are not the first hour. Do not assume a homeowners policy and a flood policy are the same conversation. We do not sort that. We can dry the house and repair what you hire us to repair.',
+            text: 'Call your insurer to open or update the claim, and keep receipts for temporary protection. Siding, drywall, and paint follow the dry-out. They are not the first hour. A homeowners policy and a flood policy are different conversations. Check your policy, or ask your insurer which one applies. We can dry the house and repair what you hire us to repair.',
           },
           {
             type: 'links',

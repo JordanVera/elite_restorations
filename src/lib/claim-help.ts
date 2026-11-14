@@ -5,37 +5,37 @@ const phone = "(713) 909-0034";
 export const claimHelpEn = {
   eyebrow: "Insurance claim help",
   title: "We help you with your insurance claim",
-  lede: "Elite Restorations helps Houston homeowners, property managers, and building owners document storm and water damage and keep the repair moving. We are not public adjusters. We do not file claims for you, give legal advice, or promise that a claim will be approved or paid. Your insurer decides coverage. Check your policy.",
+  lede: "Elite Restorations helps Houston homeowners, property managers, and building owners document storm and water damage and keep the repair moving. We photograph the damage and do the work you hire. We are not public adjusters. You file the claim. We do not give legal advice, and we cannot promise that a claim will be approved or paid. Your insurer decides coverage. Check your policy.",
   disastersTitle: "The disasters we document most often",
   disasters: [
     {
       title: "Flooding",
-      body: "Water that rises from the street, a bayou, or a reservoir is often a different policy from a homeowners or dwelling policy. We photograph where the water entered and how high it went. We do not rename rising water as a plumbing break.",
+      body: "Water that rises from the street, a bayou, or a reservoir is often a different policy from a homeowners or dwelling policy. We photograph where the water entered and how high it went. We write that down as rising water. Check your policy before treating it as a plumbing break.",
     },
     {
       title: "Hurricanes",
-      body: "After a hurricane we help secure openings, photograph the roof and wet rooms, and write down the drying and repair scope. Hurricane season on the Gulf runs June 1 through November 30. Notice rules are in your policy. We do not invent a deadline.",
+      body: "After a hurricane we help secure openings, photograph the roof and the wet rooms, and write down the drying and the repair. Hurricane season on the Gulf runs June 1 through November 30. Any notice deadline is in your policy. Ask your insurer what yours says.",
     },
     {
       title: "Hail",
-      body: "Hail bruises roofs and can crack skylights and light fixtures. We photograph the roof and any interior wetting before a cover hides the opening, then help with a repair estimate. The carrier decides what is hail and what is wear.",
+      body: "Hail bruises roofs and can crack skylights and light fixtures. We photograph the roof and any water inside before a cover hides the opening, then help with a repair estimate. Your insurer decides what is hail and what is ordinary wear.",
     },
     {
       title: "Storms and wind",
-      body: "Straight-line wind and severe thunderstorms lift shingles, throw limbs, and drive rain into ceilings from Clear Lake to Katy and The Woodlands. We document the opening and the rooms underneath.",
+      body: "Straight-line wind and severe thunderstorms lift shingles, throw limbs, and drive rain into ceilings from Clear Lake to Katy and The Woodlands. We photograph the opening and the rooms underneath.",
     },
     {
       title: "Tornadoes",
-      body: "A tornado can take a roof, a wall, or a run of windows. The first work is safety, then photos, then a tarp or board-up when it is safe to do that. We assist with the estimate and the repair record. We do not promise a payout.",
+      body: "A tornado can take a roof, a wall, or a run of windows. The first work is safety, then photos, then a tarp or board-up when it is safe to do that. We help with the estimate and the repair record. Your insurer decides whether there is a payout.",
     },
   ],
   helpTitle: "What we actually do on the claim",
   help: [
     "Photograph the damage, including wide shots and close shots, before cleanup when that is safe.",
-    "Emergency mitigation to limit further damage: tarping a roof, boarding an opening, extracting water, and drying. Many policies expect you to limit further damage. That work is not a promise of reimbursement.",
+    "Emergency work that limits more damage: tarping a roof, boarding an opening, removing water, and drying. Many policies expect you to limit further damage. That work is not a promise you will be paid back.",
     "Meet the adjuster on site when you want us there, and walk through what we saw of the building.",
-    "Prepare a detailed repair estimate for the construction. The estimate is not the claim payment.",
-    "Stay with the repair and share photos and notes with you so you can share them with the insurer.",
+    "Prepare a detailed repair estimate for the construction. The estimate is the price of the work. It is not the claim payment.",
+    "Stay with the repair and share photos and notes with you, so you can share them with the insurer.",
   ],
   links: [
     { href: "/insurance-claims", label: "Insurance claims help" },
@@ -48,37 +48,37 @@ export const claimHelpEn = {
 export const claimHelpEs = {
   eyebrow: "Ayuda con el reclamo",
   title: "Le ayudamos con su reclamo de seguro",
-  lede: "Elite Restorations ayuda a documentar el daño por tormenta o por agua en Houston y a seguir con la reparación. No somos ajustadores públicos. No presentamos el reclamo por usted, no damos consejo legal y no prometemos que el reclamo se apruebe o se pague. Su aseguradora decide la cobertura. Revise su póliza.",
+  lede: "Elite Restorations ayuda a dueños de casa, administradores y dueños de edificios en Houston a documentar el daño por tormenta o por agua y a seguir adelante con la reparación. Tomamos las fotos y hacemos el trabajo que usted contrate. No somos ajustadores públicos. El reclamo lo presenta usted. No damos consejo legal ni prometemos que se lo aprueben o se lo paguen. La cobertura la decide su aseguradora. Revise su póliza.",
   disastersTitle: "Los desastres que más documentamos",
   disasters: [
     {
       title: "Inundación",
-      body: "El agua que sube de la calle, de un bayou o de un embalse suele corresponder a otra póliza, no a la de homeowners. Fotografiamos por dónde entró y hasta dónde llegó. No cambiamos el nombre de una inundación para que suene a fuga de plomería.",
+      body: "Cuando el agua sube de la calle, de un bayou o de un embalse, casi siempre entra por otra póliza, no por el seguro de la casa. Tomamos fotos de por dónde entró y hasta dónde llegó. Lo anotamos como inundación. Revise su póliza antes de tratarlo como una fuga.",
     },
     {
       title: "Huracanes",
-      body: "Después de un huracán ayudamos a cerrar aberturas, fotografiar el techo y los cuartos mojados, y anotar el secado y la reparación. La temporada de huracanes en el Golfo va del 1 de junio al 30 de noviembre. Los plazos están en su póliza. No inventamos uno.",
+      body: "Después de un huracán le ayudamos a cubrir las aberturas, a fotografiar el techo y los cuartos mojados, y a anotar el secado y la reparación. La temporada de huracanes en el Golfo va del 1 de junio al 30 de noviembre. El plazo para avisar está en su póliza. Pregúntele a su aseguradora cuál es el suyo.",
     },
     {
       title: "Granizo",
-      body: "El granizo marca techos y puede romper tragaluces. Fotografiamos el techo y la humedad interior antes de cubrir la abertura, y ayudamos con un estimado de reparación. La aseguradora decide qué es granizo y qué es desgaste.",
+      body: "El granizo marca los techos y puede quebrar tragaluces y lámparas. Fotografiamos el techo y cualquier humedad adentro antes de tapar la abertura, y le ayudamos con el estimado de la reparación. Su aseguradora decide qué es granizo y qué es desgaste normal.",
     },
     {
       title: "Tormentas y viento",
-      body: "El viento levanta tejas, tira ramas y mete lluvia a los plafones, de Clear Lake a Katy y The Woodlands. Documentamos la abertura y los cuartos de abajo.",
+      body: "Los vientos fuertes y las tormentas severas levantan las tejas, tiran ramas y meten la lluvia por los plafones, desde Clear Lake hasta Katy y The Woodlands. Fotografiamos la abertura y los cuartos de abajo.",
     },
     {
       title: "Tornados",
-      body: "Un tornado puede llevarse un techo, una pared o una hilera de ventanas. Primero la seguridad, luego las fotos, luego la lona o el board-up cuando se puede hacer sin riesgo. Ayudamos con el estimado y el registro de la reparación. No prometemos un pago.",
+      body: "Un tornado puede llevarse el techo, una pared o una hilera de ventanas. Primero vemos que la gente esté a salvo, luego tomamos fotos, y después ponemos lona o cubrimos con madera cuando ya se puede hacer sin riesgo. Le ayudamos con el estimado y con el registro de la reparación. Si hay pago, lo decide su aseguradora.",
     },
   ],
   helpTitle: "Lo que sí hacemos en el reclamo",
   help: [
-    "Fotografiar el daño, en toma abierta y en detalle, antes de limpiar cuando es seguro.",
-    "Mitigación de emergencia para limitar más daño: lona en el techo, board-up, extracción de agua y secado. Muchas pólizas piden limitar el daño adicional. Ese trabajo no promete un reembolso.",
-    "Estar en la propiedad cuando llega el ajustador, si usted quiere, y explicar lo que vimos del edificio.",
-    "Preparar un estimado detallado de la reparación. El estimado no es el pago del reclamo.",
-    "Seguir en la reparación y compartirle fotos y notas para que usted las comparta con la aseguradora.",
+    "Fotografiar el daño, de lejos y de cerca, antes de limpiar, cuando sea seguro.",
+    "Trabajo de emergencia para que el daño no siga: lona en el techo, cubrir la abertura, sacar el agua y secar. Muchas pólizas piden que usted evite que el daño aumente. Ese trabajo no significa que se lo vayan a reembolsar.",
+    "Estar en la propiedad cuando llegue el ajustador, si usted quiere, y explicarle lo que vimos en el edificio.",
+    "Preparar un estimado detallado de la reparación. El estimado es el precio del trabajo. No es el pago del reclamo.",
+    "Seguir con la reparación y compartirle fotos y notas para que usted se las pase a la aseguradora.",
   ],
   links: [
     { href: "/es/insurance-claims", label: "Ayuda con reclamos de seguro" },
@@ -91,7 +91,7 @@ export const claimHelpEs = {
 export const claimFaqsEn: ClaimFaq[] = [
   {
     q: "Do you help with a flood claim the same way as a homeowners claim?",
-    a: "We help document what happened and we dry and repair what you hire us to do. Flooding from rising water is often a different policy from a homeowners or dwelling policy. Check your policy or ask your insurer which one applies. We will not tell you that a bayou flood is a sudden plumbing leak, and we do not promise payment.",
+    a: "We help document what happened, and we dry and repair what you hire us to do. Flooding from rising water is often a different policy from a homeowners or dwelling policy. Check your policy or ask your insurer which one applies. A bayou flood stays a flood in our notes. We cannot promise payment.",
   },
   {
     q: "Can you help after a hurricane?",
@@ -99,11 +99,11 @@ export const claimFaqsEn: ClaimFaq[] = [
   },
   {
     q: "How do you help with a hail claim?",
-    a: "We inspect and photograph the roof and any interior water before a tarp covers the opening, then we can meet the adjuster on site and prepare a repair estimate. We do not decide whether the marks are hail or wear, and we do not promise the claim will be approved.",
+    a: "We inspect and photograph the roof and any water inside before a tarp covers the opening. Then we can meet the adjuster on site and prepare a repair estimate. Your insurer decides whether the marks are hail or wear. We cannot promise the claim will be approved.",
   },
   {
     q: "What about wind and severe storms?",
-    a: "We document lifted shingles, broken openings, and wet rooms, and we do emergency mitigation to limit further damage when it is safe. Working with the insurer through the repair means sharing photos and a clear scope. It does not mean we negotiate your settlement or give legal advice.",
+    a: "We document lifted shingles, broken openings, and wet rooms, and we do the emergency work that limits more damage when it is safe. Helping you during the repair means sharing photos and a clear list of the work. We do not negotiate your settlement or give legal advice.",
   },
   {
     q: "Can you help after a tornado?",
@@ -113,24 +113,24 @@ export const claimFaqsEn: ClaimFaq[] = [
 
 export const claimFaqsEs: ClaimFaq[] = [
   {
-    q: "¿Ayudan igual con una inundación que con un reclamo de homeowners?",
-    a: "Ayudamos a documentar lo que pasó y secamos y reparamos lo que usted nos contrate. El agua que sube de la calle o del bayou suele ser otra póliza, distinta a la de la casa. Revise su póliza o pregunte a su aseguradora cuál aplica. No vamos a llamar fuga de plomería a una inundación, y no prometemos un pago.",
+    q: "¿Ayudan igual con una inundación que con el seguro de la casa?",
+    a: "Documentamos lo que pasó, y secamos y reparamos lo que usted nos contrate. El agua que sube de la calle o del bayou casi siempre va en otra póliza, distinta a la de la casa. Revise su póliza o pregúntele a su aseguradora cuál aplica. Una inundación se queda como inundación en nuestras notas. No prometemos un pago.",
   },
   {
     q: "¿Pueden ayudar después de un huracán?",
-    a: `Sí. Llame al ${phone} si hay una abertura o agua dentro de una casa, un edificio de apartamentos o un local comercial. Fotografiamos el daño, ponemos lona o board-up cuando es seguro, y ayudamos con el secado y el estimado. No somos ajustadores públicos. Su aseguradora decide el reclamo.`,
+    a: `Sí. Llame al ${phone} si hay una abertura o agua dentro de una casa, un edificio de apartamentos o un local. Fotografiamos el daño, ponemos lona o cubrimos la abertura con madera cuando es seguro, y ayudamos con el secado y el estimado. No somos ajustadores públicos. Su aseguradora decide el reclamo del huracán.`,
   },
   {
     q: "¿Cómo ayudan con un reclamo por granizo?",
-    a: "Revisamos y fotografiamos el techo y el agua interior antes de cubrir la abertura. Podemos estar cuando llegue el ajustador y preparar un estimado de reparación. No decidimos si las marcas son granizo o desgaste, y no prometemos que aprueben el reclamo.",
+    a: "Revisamos y fotografiamos el techo y el agua de adentro antes de cubrir la abertura. Podemos estar cuando llegue el ajustador y preparar el estimado de la reparación. Su aseguradora decide si las marcas son granizo o desgaste. No prometemos que le aprueben el reclamo.",
   },
   {
-    q: "¿Y el viento o una tormenta fuerte?",
-    a: "Documentamos tejas levantadas, aberturas rotas y cuartos mojados, y hacemos mitigación de emergencia para limitar más daño cuando es seguro. Trabajar con la aseguradora durante la reparación significa compartir fotos y un alcance claro. No negociamos su acuerdo ni damos consejo legal.",
+    q: "¿Y si fue el viento o una tormenta fuerte?",
+    a: "Documentamos tejas levantadas, aberturas rotas y cuartos mojados, y hacemos el trabajo de emergencia para que el daño no siga, cuando es seguro. Ayudarle durante la reparación quiere decir compartirle fotos y una lista clara del trabajo. No negociamos el arreglo con la aseguradora ni damos consejo legal.",
   },
   {
     q: "¿Pueden ayudar después de un tornado?",
-    a: "Cuando ya se puede entrar, ayudamos con fotos, protección temporal, extracción de agua y un estimado para casas, comercios y apartamentos. La cobertura, el deducible y el pago los decide su aseguradora. Revise su póliza.",
+    a: "Cuando ya se puede entrar sin riesgo, ayudamos con fotos, una protección temporal, sacar el agua y un estimado para casas, locales y apartamentos. La cobertura, el deducible y el pago los decide su aseguradora. Revise su póliza.",
   },
 ];
 

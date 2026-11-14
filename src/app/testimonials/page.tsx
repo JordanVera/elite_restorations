@@ -18,7 +18,7 @@ function linksFor(item: Testimonial) {
 
 export const metadata: Metadata = pageMetadata({
   title: "Houston Remodeling Reviews",
-  description: `Google reviews for Elite Restorations in Houston: ${googleReviews.score} stars across ${googleReviews.count} reviews.`,
+  description: `Google reviews for Elite Restorations in Houston. ${googleReviews.score} stars across ${googleReviews.count} reviews.`,
   path: "/testimonials",
   image: "/images/projects/kitchens/coffered-ceiling-island.jpg",
 });
@@ -30,7 +30,7 @@ export default function TestimonialsPage() {
         eyebrow="Reviews"
         headingId="reviews-page-heading"
         title={["Five stars,", "in their words."]}
-        lede={`${googleReviews.score} stars across ${googleReviews.count} Google reviews. These are the five-star notes, from kitchens and baths to the night the pipes burst.`}
+        lede={`${googleReviews.score} stars across ${googleReviews.count} Google reviews. Homeowners wrote these five-star notes, from kitchens and baths to the night the pipes burst.`}
         crumbs={[{ name: "Reviews", path: "/testimonials" }]}
       >
         <p className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
@@ -65,8 +65,8 @@ export default function TestimonialsPage() {
             ))}
           </ul>
           <p className="mt-10 text-sm text-muted-foreground">
-            Showing {testimonials.length} five-star reviews. The Google listing
-            also includes a handful of lower ratings, which is why the overall
+            These are the {testimonials.length} five-star reviews. The Google
+            listing also has a few lower ratings, which is why the overall
             score is {googleReviews.score}.{" "}
             <Link href="/contact" className="underline decoration-foreground/30 underline-offset-[0.4em] hover:decoration-accent-ink">
               Start a project
@@ -77,7 +77,7 @@ export default function TestimonialsPage() {
       </section>
 
       <CtaBand
-        title="If the reviews sound like the job you have, call."
+        title="If this sounds like your house, call."
         body="Tell us what happened, or what you want the house to become. We will look at it with you."
       />
     </>

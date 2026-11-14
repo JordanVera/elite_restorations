@@ -34,10 +34,10 @@ const notes: Record<
     description:
       'Westchase, TX, a short drive from the Elite Restorations office at 511 Crestwater Ct, Houston 77082. Remodeling, roofing, and restoration.',
     paragraphs: [
-      'Westchase is the district of offices, townhomes, and single-family houses along Westheimer, Richmond, and the Sam Houston Tollway. It is not one floor plan. A townhome with a shared wall and a single-family house from the late 1970s can sit a few blocks apart, and the scope follows the building.',
+      'Westchase is the district of offices, townhomes, and single-family houses along Westheimer, Richmond, and the Sam Houston Tollway. It is not one floor plan. A townhome with a shared wall and a single-family house from the late 1970s can sit a few blocks apart, and the work follows the building.',
       'Most of that housing went up from the 1970s through the 1990s. On this side of Houston that usually means a concrete slab rather than a crawlspace. Kitchens and baths have often been updated once already. We look at what is there before we assume the drains, the floor, or the roof match the year on the outside.',
       'Townhome sections often have an association that reviews exterior color, fences, and sometimes a roof. Single-family streets are less uniform. A kitchen or a bath inside the house is usually outside that review. A permit, when the work needs one, is a City of Houston permit. We confirm the address.',
-      'The office is not in the middle of the district. Crestwater Court is in 77082, near George Bush Park and the east side of Barker Reservoir, about 7 miles west of the Westchase core along Richmond in a straight line. The drive is Westheimer or Richmond. Traffic on the tollway changes the time. We do not quote one.',
+      'The office is not in the middle of the district. Crestwater Court is in 77082, near George Bush Park and the east side of Barker Reservoir, about 7 miles west of the Westchase core along Richmond in a straight line. The drive is Westheimer or Richmond. Traffic on the tollway changes the time, so we agree on a visit window when we talk.',
       'This side of town drains toward the reservoir and the local bayous. Heavy rain ponds on flat streets. Low ground near the reservoir pools has taken storm water in past tropical storms. Higher pads have not all seen the same water. A water-heater leak and water that rose from outside are different visits, and sometimes different insurance policies. Your insurer decides coverage. We document and, if you hire us, dry and repair.',
       'Hail and wind are the same regional weather as the rest of west Houston. Roofs here are often asphalt on one or two stories. We inspect before we say a repair will hold. South and west walls fade first when the house has siding. Yards are usually modest, so a deck or a patio is sized to the lot and sloped away from the slab.',
       'There is no separate Westchase storefront. The visit is at the property. The links below open each service as it applies in Westchase, from kitchens and baths to roofs, water damage, and the notes that go with a claim.',
@@ -53,11 +53,11 @@ const notes: Record<
       },
       {
         q: 'Does Westchase flood?',
-        a: 'Some low ground near Barker Reservoir and the bayou drainage has taken storm water in past tropical storms. Many streets only see ponding in heavy rain. We do not treat the district as one elevation. A water visit starts with where the water entered this house. Wind and hail are separate from rising water, and your insurer decides which policy applies.',
+        a: 'Some low ground near Barker Reservoir and the bayou drainage has taken storm water in past tropical storms. Many streets only see ponding in heavy rain. We look at this house, not the district as one ground height. A water visit starts with where the water entered this house. Wind and hail are separate from rising water, and your insurer decides which policy applies.',
       },
       {
         q: 'Which services do you schedule in Westchase?',
-        a: 'The same list as the rest of our Houston work: kitchens, baths, counters, backsplashes, flooring, carpentry, fireplaces, roofs, tarping, siding, decks and patios, painting and drywall, water damage, and claim documentation. Each has its own Westchase page. The scope still comes from the visit.',
+        a: 'The same list as the rest of our Houston work: kitchens, baths, counters, backsplashes, flooring, carpentry, fireplaces, roofs, tarping, siding, decks and patios, painting and drywall, water damage, and claim documentation. Each has its own Westchase page. The work still comes from the visit.',
       },
     ],
   },
@@ -67,18 +67,18 @@ const notes: Record<
     description:
       'Alief, TX, just south of the Elite Restorations office in Houston 77082. Remodeling, roofing, and restoration scheduled from 511 Crestwater Ct.',
     paragraphs: [
-      'Alief runs along Bellaire Boulevard south of the office: ranch houses and two-story homes, not a high-rise district. Most of the houses date from the 1970s through the 1990s and sit on slabs. Kitchens and baths have often been updated one piece at a time, so one room can mix decades. We scope what you want replaced.',
+      'Alief runs along Bellaire Boulevard south of the office: ranch houses and two-story homes, not a high-rise district. Most of the houses date from the 1970s through the 1990s and sit on slabs. Kitchens and baths have often been updated one piece at a time, so one room can mix decades. We look at what you want replaced.',
       'Bellaire Boulevard at Dairy Ashford is about 4 miles south of 511 Crestwater Ct in a straight line. Beechnut and Bellaire are the usual drives. There is no Alief office. The visit is at the property.',
       'Alief is part of Houston, not a separate city hall. Associations exist in some subdivisions and not in others. When a permit is required, it is typically a City of Houston permit. Interior remodeling is rarely an association review. Roofs, paint, and fences are the items an association is more likely to care about, and only where one exists.',
-      'Keegans Bayou and the wider Brays Bayou drainage run through this part of southwest Houston. Heavy rain floods streets. Some low blocks have taken storm water. A supply-line leak on a slab is still the more ordinary call, and it shows up at the base of the drywall. We meter before we dry, and we do not close a wall that is still wet. Humidity is why dehumidifiers are part of a dry-out here.',
+      'Keegans Bayou and the wider Brays Bayou drainage run through this part of southwest Houston. Heavy rain floods streets. Some low blocks have taken storm water. A supply-line leak on a slab is still the more ordinary call, and it shows up at the base of the drywall. We meter before we dry, and a wall stays open until it is dry. Humidity is why dehumidifiers are part of a dry-out here.',
       'Roofs are typically asphalt on one and two stories. South and west slopes age faster. We look at all of them before we recommend a repair. Exteriors are often brick with some siding and trim. A siding repair is matched to the faded board, not to a chip from the year the house was built. Yards are ordinary suburban lots, which makes staging easier than on a street inside the Loop, and a patio still has to slope away from the slab.',
       'Lots have driveways. That matters for a dumpster, a stone delivery, or a roof tear-off. It does not make the house square, and it does not tell us whether the slab is flat enough for new flooring. Vinyl and laminate will show a ridge that carpet hid. Wood has to acclimate in the house. Tile needs a flat substrate, and a shower is waterproofed before the finish.',
-      'The service list below is everything we schedule in Alief, each linked to the page for that trade in this community. The neighborhood name does not pick the scope.',
+      'The service list below is everything we schedule in Alief, each linked to the page for that trade in this community. The neighborhood name does not pick the work.',
     ],
     faqs: [
       {
         q: 'How far is Alief from the office?',
-        a: 'The office is at 511 Crestwater Ct, Houston, TX 77082, just north of Alief. Bellaire Boulevard at Dairy Ashford is about 4 miles south in a straight line. The drive is Bellaire Boulevard or Beechnut. We do not keep a separate Alief office, and we do not quote a single drive time, because traffic changes it.',
+        a: 'The office is at 511 Crestwater Ct, Houston, TX 77082, just north of Alief. Bellaire Boulevard at Dairy Ashford is about 4 miles south in a straight line. The drive is Bellaire Boulevard or Beechnut. Work in Alief is scheduled from the 77082 office, and traffic changes the drive time.',
       },
       {
         q: 'Are Alief houses usually pier-and-beam?',
@@ -86,7 +86,7 @@ const notes: Record<
       },
       {
         q: 'What should a roof inspection cover in Alief?',
-        a: 'All the slopes, not only the front. South and west faces age faster. Pipe boots, valleys, and flashing fail while the field still looks calm from the street. We photograph the roof and say whether a repair will hold. If you are filing a claim, your insurer decides coverage. We do not.',
+        a: 'All the slopes, not only the front. South and west faces age faster. Rubber collars, valleys, and metal joints fail while the main roof still looks calm from the street. We photograph the roof and say whether a repair will hold. If you are filing a claim, your insurer decides coverage.',
       },
       {
         q: 'Do you only remodel kitchens in Alief?',
@@ -100,12 +100,12 @@ const notes: Record<
     description:
       'Energy Corridor, TX, along Interstate 10 near the Houston office in 77082. Remodeling, roofing, and restoration scheduled from 511 Crestwater Ct.',
     paragraphs: [
-      'The Energy Corridor is the I-10 district from the office parks near Eldridge toward Highway 6, with houses, townhomes, and apartments between the towers. A townhome with a shared wall and a single-family house on the next block are different scopes. The district name does not choose.',
-      'Residential stock mixes 1960s and 1970s houses, later townhomes, and newer infill. Slabs are the normal foundation. Moving a shower or a sink means cutting concrete unless the fixture stays on its drain. Newer slabs are often post-tension, with cables that have to be located before anyone cuts. We do not assume every corridor house is from the same decade.',
+      'The Energy Corridor is the I-10 district from the office parks near Eldridge toward Highway 6, with houses, townhomes, and apartments between the towers. A townhome with a shared wall and a single-family house on the next block are different jobs. The district name does not choose the work.',
+      'Residential stock mixes 1960s and 1970s houses, later townhomes, and newer houses on older lots. Slabs are the normal foundation. Moving a shower or a sink means cutting concrete unless the fixture stays on its drain. Newer slabs are often post-tension, with cables that have to be located before anyone cuts. The corridor mixes decades, and we treat each house on its own.',
       'Interstate 10 at Eldridge Parkway is about 6 miles north of 511 Crestwater Ct in a straight line. The drive is Highway 6 north to the freeway. The office is in Crestwater, near George Bush Park, south of the corridor. There is no corridor showroom.',
       'Terry Hershey Park and Buffalo Bayou run through the district. Low ground along the bayou has flooded in past tropical storms, including when the upstream reservoirs released. Houses and apartments on higher ground did not all take water. A second-floor supply leak is a different problem from bayou water. We ask which one happened. Wind and hail still belong in any roof conversation, separate from rising water. Your insurer decides which policy applies.',
       'Many townhome communities have an association that reviews exterior changes: roof color, siding, fences, and sometimes a deck. A kitchen or a bath inside the house is usually outside that review. This is Houston, so there is no zoning, and a permit depends on whether plumbing, electrical, or structure changes. We confirm the address before we treat a townhome rule as if it were the city.',
-      'Roofs sit on houses and on townhomes, so staging and debris are planned for the one you have. Siding shows up on house walls and on townhome rear elevations. Patios may be a court or a yard, and water still has to leave the wall, especially on lower ground near the bayou. Interior floors need a flat slab. A ridge will show through vinyl or large tile. Wood acclimates in the house. Showers are waterproofed before the finish tile.',
+      'Roofs sit on houses and on townhomes, so staging and debris are planned for the one you have. Siding shows up on house walls and on the back of townhomes. Patios may be a court or a yard, and water still has to leave the wall, especially on lower ground near the bayou. Interior floors need a flat slab. A ridge will show through vinyl or large tile. Wood acclimates in the house. Showers are waterproofed before the finish tile.',
       'Every service we schedule in the corridor has its own page in the list below. Use those for the trade. Use this page for where the office sits relative to the district and for the housing the visits actually see.',
     ],
     faqs: [
@@ -115,11 +115,11 @@ const notes: Record<
       },
       {
         q: 'Are Energy Corridor homes all the same age?',
-        a: 'No. The district mixes 1960s and 1970s houses, later townhomes, and newer infill. Slabs are the usual foundation. Some newer slabs are post-tension, which changes whether a drain can move. Townhomes add shared walls and, often, an association that reviews the exterior. We identify the building on the visit.',
+        a: 'No. The district mixes 1960s and 1970s houses, later townhomes, and newer houses on older lots. Slabs are the usual foundation. Some newer slabs are post-tension, which changes whether a drain can move. Townhomes add shared walls and, often, an association that reviews the exterior. We identify the building on the visit.',
       },
       {
         q: 'How does Buffalo Bayou affect restoration in the Energy Corridor?',
-        a: 'Low ground along the bayou has flooded in past tropical storms, including after reservoir releases. That is not every house in the district. We start with where water entered this building. A roof leak, a supply line, and bayou water are different scopes, and they can be different insurance policies. Your insurer decides coverage. We map, dry, and repair what you hire.',
+        a: 'Low ground along the bayou has flooded in past tropical storms, including after reservoir releases. That is not every house in the district. We start with where water entered this building. A roof leak, a supply line, and bayou water are different jobs, and they can be different insurance policies. Your insurer decides coverage. We map, dry, and repair what you hire.',
       },
       {
         q: 'Do you work on Energy Corridor townhomes?',

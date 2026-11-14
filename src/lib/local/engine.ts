@@ -100,9 +100,9 @@ export function miles(area: AreaProfile) {
 function padParagraph(work: string, area: AreaProfile, pad: number) {
   const phone = site.phone.display;
   const options = [
-    `A note on ${area.name}: the visit is where we confirm foundation, access, and whether any review applies to this address. ${area.housingShort} is a fair description of the area and a poor description of one house. We write the scope after we see the property, including the detail that does not show up in a listing photo. Call ${phone} when you want ${work} scheduled.`,
-    `If you are comparing ${area.name} with a neighboring community, use the links below for ${work} and keep this page for this address. The work does not travel unchanged. Doors, drains, roof planes, and association rules are local to the lot. We would rather measure them than copy them from the next community.`,
-    `${area.landmark} is a landmark, not a floor plan. Houses within a short drive of it still differ in age, foundation, and what the last remodel left behind. For ${work} in ${area.name}, those differences decide the scope. Bring the history of leaks or repairs, and any rule you already know applies.`,
+    `A note on ${area.name}: the visit is where we confirm foundation, access, and whether any review applies to this address. ${area.housingShort} is a fair description of the area and a poor description of one house. We write the plan after we see the property, including the detail that does not show up in a listing photo. Call ${phone} when you want ${work} scheduled.`,
+    `If you are comparing ${area.name} with a neighboring community, use the links below for ${work} and keep this page for this address. The work does not travel unchanged. Doors, drains, roof slopes, and association rules are local to the lot. We would rather measure them than copy them from the next community.`,
+    `${area.landmark} is a landmark, not a floor plan. Houses within a short drive of it still differ in age, foundation, and what the last remodel left behind. For ${work} in ${area.name}, those differences decide the job. Bring the history of leaks or repairs, and any rule you already know applies.`,
   ];
   return options[(pad + area.name.length + work.length) % options.length] ?? options[0];
 }
