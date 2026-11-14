@@ -247,8 +247,8 @@ export const costGuides: readonly CostGuide[] = [
         a: 'No. Your insurer decides what the policy pays. The cost of the roof is the scope of the roof. We can document the conditions. We do not decide coverage and we do not negotiate the claim.',
       },
       {
-        q: 'What if the deck is damaged?',
-        a: 'We find that after the old roofing comes off. Soft decking is extra work. We tell you before we expand the job past the roof that was priced.',
+        q: 'What if the wood under the shingles is rotten?',
+        a: 'We find that after the old roofing comes off. Soft boards under the shingles are extra work. We tell you before the job grows past the roof that was priced.',
       },
       {
         q: 'How do I get a roof estimate?',

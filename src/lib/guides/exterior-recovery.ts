@@ -32,7 +32,7 @@ export const siding: ServiceGuide = {
       heading: 'Lap, board-and-batten, and what is behind them.',
       paragraphs: [
         'Fiber cement and engineered wood are the profiles we install most, in lap, board-and-batten, and other common patterns. Fiber cement handles Houston sun and humidity better than untreated wood, and it still wants the flashing, the clearance off the roof and the grade, and the paint or finish the manufacturer expects. Engineered wood wants the same respect for water at the ends and the bottom edge. We talk through which profile fits the house, from a newer Cinco Ranch elevation to an older Memorial wall that only needs a matched section.',
-        'The weather barrier and the flashing at windows and doors are the wall you do not see. New siding over a torn barrier is a short-term look. Trim, corners, and soffits are finished with the field so the elevation reads as one job. Color is chosen in the daylight on that wall. A sample in a showroom lies.',
+        'The weather barrier and the flashing at windows and doors are the wall you do not see. New siding over a torn barrier will not last. Trim, corners, and soffits are finished with the boards so the front of the house looks like one job. Color is chosen in daylight on that wall. A sample indoors will not match the sun outside.',
       ],
       points: [
         { title: 'Profile changes the house', body: 'Board-and-batten and lap are different shadows and different trim. We decide that with the elevation, not after the first course is up.' },
@@ -50,7 +50,7 @@ export const siding: ServiceGuide = {
       points: [
         { title: 'Sheathing', body: 'Soft plywood or a failed barrier behind the siding is extra work. We open enough to know, and we stop to show you before the job grows.' },
         { title: 'Height', body: 'A one-story ranch and a two-story with a tall gable are different access. The price follows the wall, not the neighborhood name.' },
-        { title: 'Trim and openings', body: 'Every window and door is a flashing detail. A house with more openings takes longer. That is the job, not a complication.' },
+        { title: 'Trim and openings', body: 'Every window and door needs flashing. A house with more openings takes longer. That extra time is part of the work.' },
       ],
     },
     {
@@ -173,7 +173,7 @@ export const patiosDecks: ServiceGuide = {
 export const emergencyTarp: ServiceGuide = {
   process: steps([
     ['Take the call', 'Tell us what happened, where in the Houston area, and whether water is still coming in. If you cannot call (713) 909-0034, the emergency form is a request for a call back, not a guaranteed arrival time.'],
-    ['Make it safe', 'Stay off a wet or damaged roof. We do not put a crew up in lightning or in wind that makes the roof unsafe. If the ceiling is sagging, stay out of that room.'],
+    ['Make it safe', 'Stay off a wet or damaged roof. We do not send a crew up during lightning or in wind that makes the roof unsafe. If the ceiling is sagging, stay out of that room.'],
     ['Photograph', 'We document the opening, the surrounding roof, and interior wetting we can see before the tarp covers the evidence. Your insurer decides what those photos are worth.'],
     ['Anchor the cover', 'The tarp is sized to the opening and secured so the next wind does not turn it into a sail. A loose cover is the next leak.'],
     ['Divert water', 'Water is directed off the cover and away from the opening. A tarp that holds a pond will find its way inside.'],
@@ -202,7 +202,7 @@ export const emergencyTarp: ServiceGuide = {
       ],
       points: [
         { title: 'Anchored, not draped', body: 'A tarp that is laid on and weighted with a few boards becomes the next opening. We fasten it for the wind that is still in the forecast.' },
-        { title: 'Bigger than the hole', body: 'The cover has to reach sound roof and shed water past the damaged deck. A postage-stamp patch over a split valley will not.' },
+        { title: 'Bigger than the hole', body: 'The cover has to reach solid roof and send water past the damaged boards. A tiny patch over a split valley will not hold.' },
         { title: 'Then the real roof', body: 'Repair or replacement is the next conversation, with the photos in hand. The cost guide for replacement is the planning tool for that step, not for the tarp.' },
       ],
     },
@@ -215,7 +215,7 @@ export const emergencyTarp: ServiceGuide = {
       ],
       points: [
         { title: 'Access', body: 'Two stories, a steep front, and trees against the eave change the day. A one-story ranch with a clear yard does not.' },
-        { title: 'How open it is', body: 'A cracked skylight and a limb through three squares are not the same cover. We size it to the damage, not to a standard package.' },
+        { title: 'How open it is', body: 'A cracked skylight and a limb through a wide section of roof are not the same cover. We size the tarp to the damage, not to a package.' },
         { title: 'The claim is not the price', body: 'Some policies pay for temporary covering that limits further damage. Some do not pay what you hoped. We do not set that. We also do not wait to cover a house that is taking on water if it is safe to be up there.' },
       ],
     },
@@ -261,7 +261,7 @@ export const emergencyTarp: ServiceGuide = {
     },
     {
       q: 'Will you come during the storm?',
-      a: 'We do not put people on a roof in lightning or in wind that makes it unsafe. Call (713) 909-0034 and we will tell you the next safe step. The online form is a request for a call back, not a guaranteed arrival time.',
+      a: 'We do not send anyone onto a roof during lightning or in wind that makes it unsafe. Call (713) 909-0034 and we will tell you the next safe step. The online form asks us to call you back. It does not mean a crew is already on the way.',
     },
     {
       q: 'Do you tarp apartment and commercial roofs?',

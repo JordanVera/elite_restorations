@@ -92,7 +92,7 @@ export const moreWaterCauses: readonly Cause[] = [
         points: [
           { title: "One company for both steps", body: "Elite Restorations is family-owned in Houston since 1993. Drying the rooms and repairing the drywall and floors can stay with the same crew." },
           { title: "Do not close the wall early", body: "A closet can smell fine and still be wet where the wall meets the floor. We check with a moisture meter before we close it up." },
-          { title: "Photograph what was stored there", body: "Boxes in a garage or closet are easy to forget. Take pictures of them before they go to the curb." },
+          { title: "Photograph what was stored there", body: "Boxes in a garage or closet are easy to forget. Take pictures of them before you throw them away." },
         ],
       },
       {

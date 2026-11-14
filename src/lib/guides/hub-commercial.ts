@@ -3,7 +3,7 @@ import type { ServiceGuide } from "@/lib/guides/types";
 export const commercialGuide: ServiceGuide = {
   process: [
     { title: "Take the building facts", body: "Unit count or suite count, where water is showing, gate or roof access, and who can authorize the work. A house and a 40-unit building do not start the same way. Call (713) 909-0034 any time for an active storm or water emergency." },
-    { title: "Make it safer", body: "We do not put people on a commercial roof in lightning or in wind that makes it unsafe. Broken glass and a sagging ceiling are reasons to keep occupants out of that area." },
+    { title: "Make it safer", body: "We do not send anyone onto a commercial roof during lightning, or in wind that makes the roof unsafe. Broken glass and a sagging ceiling are reasons to keep people out of that area." },
     { title: "Photograph by unit", body: "Wide shots, close shots, and a note of which unit or suite is wet. Managers need a record they can hand to an owner and to an insurer. We take that set before covers and drywall hide it." },
     { title: "Stop more water", body: "Tarp a roof opening when it is safe. Board a broken storefront or stairwell. Extract standing water. Those are mitigation steps. They are not a promise the policy will reimburse them." },
     { title: "Dry what got wet", body: "Air movers and dehumidifiers on a Houston slab or a top-floor ceiling. We map moisture. We do not close a wall that is still wet because a tenant wants the paint back tonight." },
@@ -54,7 +54,7 @@ export const commercialGuide: ServiceGuide = {
       heading: "Why a building price is not a house price.",
       paragraphs: [
         "There is no flat rate for a complex. The number follows how many openings, how much roof, how many units are wet, the height, and whether we can work while people live there. As a planning range, not a quote, boarding a ground-floor storefront opening often falls in the same band as a house board-up, a few hundred dollars to about $1,500 for a straightforward opening, and more for a glass line. Drying one apartment often plans in the low thousands to well above that if the water crossed floors. A roof tarp or a partial roof repair is its own number. We will not give you a building-wide figure from a phone description.",
-        "What we will do is separate mitigation from rebuild, and separate our invoice from the claim. Some policies pay for reasonable steps that limit further damage. Some delay, and some deny. We do not front a story about payment. A manager can call (713) 909-0034, text that number, or use the emergency form for a call back. None of those is a guaranteed arrival time in a citywide storm, when many roofs open at once.",
+        "We keep the emergency work, such as tarping and drying, separate from the rebuild. Our bill is for the work you hire. It is not the insurance payment. Some policies pay for reasonable steps that limit further damage. Some take longer, and some say no. We do not promise what they will pay. A manager can call (713) 909-0034, text that number, or use the emergency form for a call back. None of those is a guaranteed arrival time in a citywide storm, when many roofs open at once.",
       ],
       points: [
         { title: "Authorization", body: "A clear scope beats a blank check. We stop and show you when the wet area is larger than the first call described." },

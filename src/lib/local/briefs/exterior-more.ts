@@ -84,7 +84,7 @@ export const tarpBrief: Brief = {
       q: 'What if it is still storming in {name}?',
       answers: [
         'We go up when it is safe. A wet, windy roof is not a place to prove urgency. Call {phone}, tell us what {name} looks like, and we will say whether the climb can happen now or at the next safe window. Meanwhile, keep people off the wet ceiling and away from wet electrical gear.',
-        'Safety sets the clock. In {name} a limb still on the roof or lightning in the area is a reason to wait. The photos and the cover happen as soon as the roof can be worked. We would rather arrive a little later than put a crew on a moving slope.',
+        'Safety sets the timing. In {name} a limb still on the roof or lightning in the area is a reason to wait. The photos and the cover happen as soon as the roof can be walked. We would rather arrive a little later than send a crew up a moving slope.',
       ],
     },
     {
