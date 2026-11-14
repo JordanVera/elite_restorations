@@ -266,6 +266,14 @@ export const costGuides: readonly CostGuide[] = [
         href: '/roof-replacement-the-woodlands-tx',
         label: 'Roof replacement in The Woodlands',
       },
+      {
+        href: '/what-to-do-after-a-roof-leak-in-houston',
+        label: 'What to do after a roof leak in Houston',
+      },
+      {
+        href: '/hail-damage-vs-normal-wear-houston-roof',
+        label: 'Hail damage vs normal wear on a Houston roof',
+      },
     ],
   },
 ];

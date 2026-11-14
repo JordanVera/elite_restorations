@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Dialog } from 'radix-ui';
+import * as Dialog from 'radix-ui/dialog';
 import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 
 import { SiteLogo } from '@/components/site-logo';

@@ -3,7 +3,9 @@
 .kitchen-slideshow{overflow:hidden;background:#171717}
 .kitchen-slide{opacity:0;animation:kitchen-crossfade 36s linear infinite}
 .kitchen-slide-image{animation:kitchen-pan 36s linear infinite;will-change:transform}
-.kitchen-slide-0,.kitchen-slide-0 .kitchen-slide-image{animation-delay:-1.8s}
+/* The first frame stays fully opaque, with no opacity animation, so it can be the LCP image. */
+.kitchen-slide-0{opacity:1;animation:none}
+.kitchen-slide-0 .kitchen-slide-image{animation:none;will-change:auto;transform:none}
 .kitchen-slide-1,.kitchen-slide-1 .kitchen-slide-image{animation-delay:-25.8s}
 .kitchen-slide-2,.kitchen-slide-2 .kitchen-slide-image{animation-delay:-13.8s}
 .kitchen-slide-1 .kitchen-slide-image{transform-origin:65% 40%}

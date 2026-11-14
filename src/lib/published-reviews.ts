@@ -1,4 +1,4 @@
-import { googleReviews } from '@/lib/testimonials';
+import { googleReviews, testimonials } from '@/lib/testimonials';
 
 /** Quotes from the Nov 13, 2026 Google export. George has not approved these for the site yet. */
 export type PublishedReview = {
@@ -81,12 +81,7 @@ export const publishedReviews: readonly PublishedReview[] = [
     rating: 4,
     detail: 'LVT flooring',
     source: reviewSource,
-    services: [
-      'wood-flooring',
-      'tile-flooring',
-      'vinyl-flooring',
-      'laminate-flooring',
-    ],
+    services: ['vinyl-flooring'],
     quote:
       'I am pleased with the new flooring job done by Elite Restorations! The team worked quickly and cleanly to replace my second floor with LVT and the staff returned calls quickly and sent quotes promptly! I would definitely use them again.',
   },
@@ -94,8 +89,22 @@ export const publishedReviews: readonly PublishedReview[] = [
 
 export const homepageReviews = publishedReviews;
 
+/**
+ * Abbreviated copies of notes that already appear in full in `testimonials`.
+ * The service hubs use the full wording. These stay on the homepage marquee,
+ * which already reads this export.
+ */
+const abbreviatedAuthors = new Set(['Catricia R.', 'Shronda A.', 'Patrick P.']);
+
 export function reviewsForService(serviceSlug: string) {
-  return publishedReviews.filter((review) => review.services.includes(serviceSlug));
+  const fromTestimonials = testimonials.filter((review) =>
+    review.services.includes(serviceSlug),
+  );
+  const fromExport = publishedReviews.filter(
+    (review) =>
+      review.services.includes(serviceSlug) && !abbreviatedAuthors.has(review.author),
+  );
+  return [...fromTestimonials, ...fromExport];
 }
 
 export const googleReviewSummary = {

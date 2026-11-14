@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { ArrowRight, ArrowUpRight, ChevronDown } from 'lucide-react';
 
 import { Photo } from '@/components/photo';
@@ -25,7 +24,6 @@ export type CoreLink = {
 };
 
 const PREVIEW_COUNT = 6;
-const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const;
 
 export function ServiceIndex({
   services,
@@ -36,7 +34,6 @@ export function ServiceIndex({
 }) {
   const [activeSlug, setActiveSlug] = React.useState(services[0].slug);
   const [expanded, setExpanded] = React.useState(false);
-  const reduceMotion = useReducedMotion();
   const listId = React.useId();
   const active = services.find((s) => s.slug === activeSlug) ?? services[0];
   const canToggle = services.length > PREVIEW_COUNT;
@@ -118,47 +115,19 @@ export function ServiceIndex({
                 />
               </li>
             ))}
-            <AnimatePresence initial={false}>
-              {expanded &&
-                rest.map((service, i) => (
-                  <motion.li
-                    key={service.slug}
-                    className="overflow-hidden"
-                    custom={i}
-                    initial={reduceMotion ? false : 'collapsed'}
-                    animate="open"
-                    exit="collapsed"
-                    variants={{
-                      collapsed: {
-                        height: 0,
-                        opacity: 0,
-                        transition: {
-                          duration: reduceMotion ? 0 : 0.4,
-                          ease: EASE_OUT_EXPO,
-                        },
-                      },
-                      open: (index: number) => ({
-                        height: 'auto',
-                        opacity: 1,
-                        transition: {
-                          duration: reduceMotion ? 0 : 0.55,
-                          delay: reduceMotion ? 0 : index * 0.03,
-                          ease: EASE_OUT_EXPO,
-                        },
-                      }),
-                    }}
-                  >
-                    <div className="border-t border-border">
-                      <ServiceRow
-                        service={service}
-                        index={i + PREVIEW_COUNT}
-                        active={service.slug === activeSlug}
-                        onActivate={setActiveSlug}
-                      />
-                    </div>
-                  </motion.li>
-                ))}
-            </AnimatePresence>
+            {expanded &&
+              rest.map((service, i) => (
+                <li key={service.slug}>
+                  <div className="border-t border-border">
+                    <ServiceRow
+                      service={service}
+                      index={i + PREVIEW_COUNT}
+                      active={service.slug === activeSlug}
+                      onActivate={setActiveSlug}
+                    />
+                  </div>
+                </li>
+              ))}
             {canToggle && (
               <li className="border-t border-b border-border">
                 <button
@@ -189,34 +158,22 @@ export function ServiceIndex({
           <div className="hidden lg:col-span-5 lg:block">
             <div className="sticky top-28">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface-2">
-                <AnimatePresence initial={false}>
-                  <motion.div
-                    key={active.slug}
-                    className="absolute inset-0"
-                    initial={{ clipPath: 'inset(0% 0% 100% 0%)', scale: 1.08 }}
-                    animate={{ clipPath: 'inset(0% 0% 0% 0%)', scale: 1 }}
-                    exit={{
-                      opacity: 0.99,
-                      transition: { delay: 0.9, duration: 0.01 },
-                    }}
-                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                  >
-                    {active.image ? (
-                      <Photo
-                        image={active.image}
-                        sizes="(min-width: 1024px) 36vw, 100vw"
-                      />
-                    ) : (
-                      <div className="flex h-full items-end bg-foreground p-8 text-background">
-                        <p className="font-display text-5xl leading-none">{active.name}</p>
-                      </div>
-                    )}
-                    <div
-                      aria-hidden
-                      className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+                <div key={active.slug} className="absolute inset-0">
+                  {active.image ? (
+                    <Photo
+                      image={active.image}
+                      sizes="(min-width: 1024px) 36vw, 100vw"
                     />
-                  </motion.div>
-                </AnimatePresence>
+                  ) : (
+                    <div className="flex h-full items-end bg-foreground p-8 text-background">
+                      <p className="font-display text-5xl leading-none">{active.name}</p>
+                    </div>
+                  )}
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
+                  />
+                </div>
                 <p className="eyebrow absolute left-6 top-6 z-10 bg-background px-3 py-2">
                   {active.group}
                 </p>

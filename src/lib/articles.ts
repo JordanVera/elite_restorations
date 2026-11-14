@@ -1,3 +1,4 @@
+import { fieldNotes } from '@/lib/field-notes';
 import { restorationGuides } from '@/lib/restoration-guides';
 
 export type ArticleBlock =
@@ -651,6 +652,7 @@ export const articles: Article[] = [
     ],
   },
   ...restorationGuides,
+  ...fieldNotes,
 ];
 
 const articlesBySlug = new Map(

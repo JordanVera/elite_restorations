@@ -3,7 +3,6 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { motion, useReducedMotion } from 'motion/react';
 
 import { Button } from '@/components/ui/button';
 import { site } from '@/lib/site';
@@ -25,8 +24,6 @@ const Y_BATH = 520;
 
 const WIDTH_FT = 42;
 const DEPTH_FT = 36;
-
-const drawEase = [0.65, 0, 0.35, 1] as const;
 
 type Box = { x: number; y: number; w: number; h: number };
 
@@ -199,10 +196,8 @@ const cloud = revisionCloud(
 
 function Ink({
   d,
-  delay = 0,
   width = 3.5,
   cap = 'square',
-  reduce,
   className,
 }: {
   d: string;
@@ -213,7 +208,7 @@ function Ink({
   className?: string;
 }) {
   return (
-    <motion.path
+    <path
       d={d}
       fill="none"
       stroke="currentColor"
@@ -221,13 +216,6 @@ function Ink({
       strokeLinecap={cap}
       strokeLinejoin="miter"
       className={className}
-      initial={{ pathLength: reduce ? 1 : 0 }}
-      animate={{ pathLength: 1 }}
-      transition={{
-        duration: reduce ? 0 : 1.35,
-        delay: reduce ? 0 : delay,
-        ease: drawEase,
-      }}
     />
   );
 }
@@ -327,14 +315,11 @@ function FloorPlan({
           className="text-foreground/55"
         />
 
-        <motion.g
+        <g
           fill="none"
           stroke="currentColor"
           strokeWidth="1.6"
           className="text-foreground/40"
-          initial={{ opacity: reduce ? 1 : 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: reduce ? 0 : 0.7, delay: reduce ? 0 : 0.75 }}
         >
           <rect x="384" y="118" width="42" height="108" />
           <path d="M392 128 v88 M384 128 h8 M384 216 h8" />
@@ -345,12 +330,9 @@ function FloorPlan({
           <ellipse cx="824" cy="408" rx="62" ry="32" />
           <ellipse cx="824" cy="408" rx="42" ry="16" />
           <rect x="600" y="848" width="200" height="16" />
-        </motion.g>
+        </g>
 
-        <motion.g
-          initial={{ opacity: reduce ? 1 : 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: reduce ? 0 : 0.6, delay: reduce ? 0 : 0.85 }}
+        <g
           fill="none"
           stroke="currentColor"
           strokeWidth="1.15"
@@ -400,7 +382,7 @@ function FloorPlan({
               N
             </text>
           </g>
-        </motion.g>
+        </g>
 
         <rect
           x={voidBox.x + 28}
@@ -484,20 +466,7 @@ function FloorPlan({
         <p className="font-display text-[clamp(3.1rem,7vw,6.4rem)] leading-[0.8] tracking-[-0.045em]">
           404
         </p>
-        <motion.div
-          className="mt-2 border-2 border-accent p-[3px] text-accent sm:mt-4"
-          initial={
-            reduce
-              ? { opacity: 1, scale: 1, rotate: -12 }
-              : { opacity: 0, scale: 1.5, rotate: -28 }
-          }
-          animate={{ opacity: 1, scale: 1, rotate: -12 }}
-          transition={{
-            duration: reduce ? 0 : 0.32,
-            delay: reduce ? 0 : 1.15,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
+        <div className="mt-2 -rotate-12 border-2 border-accent p-[3px] text-accent sm:mt-4">
           <div className="border border-accent px-2 py-1 sm:px-2.5">
             <p className="eyebrow text-[0.52rem] leading-tight sm:text-[0.64rem]">
               Not in
@@ -505,7 +474,7 @@ function FloorPlan({
               scope
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
@@ -570,7 +539,7 @@ function Crop({ className }: { className: string }) {
 }
 
 export function MissingRoom() {
-  const reduce = useReducedMotion();
+  const reduce = true;
   const hatchId = React.useId().replace(/:/g, '');
   const planRef = React.useRef<HTMLDivElement>(null);
   const readoutRef = React.useRef<HTMLSpanElement>(null);

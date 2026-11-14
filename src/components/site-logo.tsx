@@ -31,7 +31,6 @@ export function SiteLogo({
       width={light ? 880 : 743}
       height={light ? 398 : 336}
       sizes="220px"
-      priority
       className={cn('h-11 w-auto', className)}
     />
   );

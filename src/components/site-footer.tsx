@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
+import { googleReviews } from '@/lib/testimonials';
 import { nav, site } from '@/lib/site';
 import { serviceGroups, servicePath, servicesInGroup } from '@/lib/services';
 import { SiteLogo } from './site-logo';
@@ -171,6 +172,17 @@ export function SiteFooter() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href={googleReviews.reviewHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-foreground"
+                >
+                  Leave us a Google review
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </li>
             </ul>
           </div>
           <div className="text-xs leading-relaxed text-muted-foreground lg:text-right">
