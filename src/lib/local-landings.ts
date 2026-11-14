@@ -1,11 +1,14 @@
 import 'server-only';
 
 import { getArticle } from '@/lib/articles';
+import { getAreaProfile } from '@/lib/local/areas';
+import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
 import { localLandingSlug } from '@/lib/local-paths';
 import { documentTitle, fitDescription, servicePageTitle, titleFits } from '@/lib/seo';
 import { getService, services, type Service } from '@/lib/services';
 import { getServiceArea, serviceAreas, type ServiceArea } from '@/lib/service-areas';
 import { site } from '@/lib/site';
+import { wordCount } from '@/lib/words';
 
 type Angle = {
   /** Noun phrase. */
@@ -477,6 +480,9 @@ export type LocalLanding = {
   lede: string;
   paragraphs: readonly string[];
   notes: readonly { title: string; body: string }[];
+  faqs: readonly { q: string; a: string }[];
+  nearby: readonly { href: string; label: string; areaName: string }[];
+  costGuide?: { href: string; label: string };
   photoShift: number;
 };
 
@@ -493,10 +499,6 @@ function rotate<T>(items: readonly T[], amount: number) {
   if (items.length === 0) return [];
   const start = amount % items.length;
   return [...items.slice(start), ...items.slice(0, start)];
-}
-
-function lowerFirst(value: string) {
-  return value.charAt(0).toLowerCase() + value.slice(1);
 }
 
 function pageTitle(service: Service, area: ServiceArea) {
@@ -527,76 +529,26 @@ function pageDescription(service: Service, area: ServiceArea, blurb: string, n: 
   return text.length <= 155 ? text : fitDescription(text);
 }
 
-function officeLine(service: Service, area: ServiceArea) {
-  const reach = service.emergency
-    ? `If water is still coming in, call ${site.phone.display} first. The emergency form is there when you cannot call.`
-    : `Call ${site.phone.display} or request an estimate.`;
-  return `${reach} Elite Restorations is family-owned in Houston since ${site.founded}, at ${site.address.streetAddress}, ${site.address.addressLocality}, ${site.address.addressRegion} ${site.address.postalCode}. We schedule ${service.name.toLowerCase()} in ${area.name} from that office.`;
-}
-
-function compose(service: Service, area: ServiceArea, angle: Angle, variant: number, n: number) {
-  const includes = rotate(service.includes, n).slice(0, 3).map(lowerFirst);
-  const condition = service.local.conditions[n % service.local.conditions.length];
-  const next = service.local.conditions[(n + 1) % service.local.conditions.length];
-  const place = `${area.name}, TX`;
-  const office = officeLine(service, area);
-  const thirdInclude = includes[2] ?? includes[0];
-
-  if (variant === 0) {
-    return {
-      lede: `${service.name} in ${place}, planned around ${angle.focus}.`,
-      paragraphs: [
-        `${area.setting} ${lowerFirst(service.name)} in ${place} starts with ${angle.focus}. ${angle.before}`,
-        `${angle.onSite} The scope can include ${includes[0]}, plus ${includes[1]}.`,
-        `${condition.title} is part of the same visit. ${condition.body}`,
-        office,
-      ],
-    };
-  }
-
-  if (variant === 1) {
-    return {
-      lede: `Houses in ${area.name}: ${area.clause}. We scope ${service.name.toLowerCase()} from the house in front of us.`,
-      paragraphs: [
-        `${area.setting} For ${service.name.toLowerCase()} in ${place}, the first conversation is ${angle.focus}.`,
-        `${angle.onSite} ${angle.before}`,
-        `${next.title}: ${next.body} Depending on the house, the work also includes ${thirdInclude}.`,
-        office,
-      ],
-    };
-  }
-
-  return {
-    lede: `${angle.before} That is how a ${service.name.toLowerCase()} visit in ${area.name} starts.`,
-    paragraphs: [
-      `A request for ${service.name.toLowerCase()} in ${area.name}, TX, is a visit, not a package priced from the city name. ${area.setting}`,
-      `${angle.onSite} We are looking at ${angle.focus}.`,
-      `${angle.before} ${condition.title} comes up on these jobs: ${lowerFirst(condition.body)}`,
-      `The work can include ${includes[0]}, ${includes[1]}, and ${thirdInclude}. ${office}`,
-    ],
-  };
-}
-
-function notesFor(service: Service, area: ServiceArea, n: number) {
-  return service.local.conditions.map((condition, index) => ({
-    title: condition.title,
-    body:
-      index === n % service.local.conditions.length
-        ? `${condition.body} In ${area.name}, that is checked at the house.`
-        : condition.body,
-  }));
-}
-
 function buildLanding(service: Service, area: ServiceArea): LocalLanding {
   const serviceAngles = angles[service.slug];
   if (!serviceAngles || serviceAngles.length < 2) {
     throw new Error(`Missing local copy angles for ${service.slug}`);
   }
+  const profile = getAreaProfile(area.slug);
+  if (!profile) throw new Error(`Missing area profile for ${area.slug}`);
   const n = hashString(`${service.slug}:${area.slug}`);
   const angle = serviceAngles[n % serviceAngles.length];
-  const variant = n % 3;
-  const copy = compose(service, area, angle, variant, n);
+  const copy = buildLocalCopy(service, profile);
   const slug = localLandingSlug(service.slug, area.slug);
+  const nearby = profile.neighbors.map((neighborSlug) => {
+    const neighbor = getAreaProfile(neighborSlug);
+    if (!neighbor) throw new Error(`Missing neighbor ${neighborSlug}`);
+    return {
+      href: `/${localLandingSlug(service.slug, neighborSlug)}`,
+      label: `${service.name} in ${neighbor.name}`,
+      areaName: neighbor.name,
+    };
+  });
   return {
     slug,
     path: `/${slug}`,
@@ -607,7 +559,10 @@ function buildLanding(service: Service, area: ServiceArea): LocalLanding {
     description: pageDescription(service, area, angle.blurb, n),
     lede: copy.lede,
     paragraphs: copy.paragraphs,
-    notes: notesFor(service, area, n),
+    notes: copy.notes,
+    faqs: copy.faqs,
+    nearby,
+    costGuide: costGuideForService[service.slug],
     photoShift: n % 11,
   };
 }
@@ -620,6 +575,12 @@ const banned = [
   /testimonial/i,
   /\b\d+\s+(homes|kitchens|baths|roofs|jobs|projects)\b/i,
   /5-star|five-star/i,
+  /\bGAF\b/,
+  /\bIICRC\b/,
+  /\bwarranty\b/i,
+  /\bguarantee\b/i,
+  /\bcertified\b/i,
+  /\baward\b/i,
 ];
 
 function assertLandings(pages: readonly LocalLanding[]) {
@@ -628,6 +589,7 @@ function assertLandings(pages: readonly LocalLanding[]) {
   const ledes = new Set<string>();
   const openings = new Set<string>();
   const slugs = new Set<string>();
+  const wordErrors: string[] = [];
 
   for (const page of pages) {
     if (slugs.has(page.slug)) throw new Error(`Duplicate landing slug ${page.slug}`);
@@ -650,7 +612,14 @@ function assertLandings(pages: readonly LocalLanding[]) {
     const opening = page.paragraphs[0];
     if (!opening || openings.has(opening)) throw new Error(`Duplicate opening for ${page.path}`);
     openings.add(opening);
-    const blob = [page.title, page.description, page.lede, ...page.paragraphs, ...page.notes.map((note) => note.body)].join('\n');
+    const blob = [
+      page.title,
+      page.description,
+      page.lede,
+      ...page.paragraphs,
+      ...page.notes.flatMap((note) => [note.title, note.body]),
+      ...page.faqs.flatMap((faq) => [faq.q, faq.a]),
+    ].join('\n');
     for (const pattern of banned) {
       if (pattern.test(blob)) {
         throw new Error(`Banned phrase ${pattern} on ${page.path}`);
@@ -659,6 +628,41 @@ function assertLandings(pages: readonly LocalLanding[]) {
     if (!page.paragraphs.some((paragraph) => paragraph.includes(page.areaName))) {
       throw new Error(`City name missing from body: ${page.path}`);
     }
+    const profile = getAreaProfile(page.areaSlug);
+    const faqCount = page.faqs.length;
+    if (faqCount < 3 || faqCount > 5) {
+      throw new Error(`${page.path} has ${faqCount} FAQs`);
+    }
+    if (profile?.priority && faqCount !== 5) {
+      throw new Error(`${page.path} should have 5 FAQs`);
+    }
+    if (!profile?.priority && faqCount !== 4) {
+      throw new Error(`${page.path} should have 4 FAQs`);
+    }
+    if (page.nearby.length < 2 || page.nearby.length > 3) {
+      throw new Error(`${page.path} should link 2 or 3 nearby areas`);
+    }
+    const expectsCost = Boolean(costGuideForService[page.serviceSlug]);
+    if (expectsCost && !page.costGuide) {
+      throw new Error(`${page.path} is missing its cost guide`);
+    }
+    if (!expectsCost && page.costGuide) {
+      throw new Error(`${page.path} has an unexpected cost guide`);
+    }
+    const words = wordCount([
+      page.lede,
+      ...page.paragraphs,
+      ...page.notes.flatMap((note) => [note.title, note.body]),
+      ...page.faqs.flatMap((faq) => [faq.q, faq.a]),
+    ]);
+    const minimum = profile?.priority ? 900 : 750;
+    const maximum = profile?.priority ? 1350 : 1200;
+    if (words < minimum || words > maximum) {
+      wordErrors.push(`${page.path} ${words} ${profile?.priority ? 'priority' : 'standard'}`);
+    }
+  }
+  if (wordErrors.length > 0) {
+    throw new Error(`${wordErrors.length} word-count misses: ${wordErrors.slice(0, 12).join('; ')}`);
   }
 }
 
@@ -723,17 +727,6 @@ export function getLocalLanding(slug: string) {
 
 export function landingsForService(serviceSlug: string) {
   return localLandings.filter((page) => page.serviceSlug === serviceSlug);
-}
-
-export function nearbyLandings(page: LocalLanding, count = 8) {
-  const all = landingsForService(page.serviceSlug);
-  const index = all.findIndex((item) => item.slug === page.slug);
-  const out: LocalLanding[] = [];
-  if (index < 0) return out;
-  for (let step = 1; out.length < count && step < all.length; step += 1) {
-    out.push(all[(index + step * 5) % all.length]);
-  }
-  return out;
 }
 
 export function relatedCityLandings(page: LocalLanding) {
