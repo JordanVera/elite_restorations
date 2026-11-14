@@ -9,7 +9,9 @@ describe("Spanish contact form", () => {
     const form = readFileSync("src/components/lead-form.tsx", "utf8");
     const client = readFileSync("src/trpc/client.ts", "utf8");
     assert.match(spanish, /<LeadForm/);
+    assert.match(spanish, /locale="es"/);
     assert.match(english, /<LeadForm/);
+    assert.doesNotMatch(english, /locale="es"/);
     assert.match(form, /trpc\.contact\.submit\.mutate/);
     assert.match(client, /url:\s*"\/api\/trpc"/);
   });

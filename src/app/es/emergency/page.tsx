@@ -78,7 +78,12 @@ export default function SpanishEmergencyPage() {
               El formulario está en inglés, el mismo de la página en inglés, y la solicitud llega al mismo lugar.
             </p>
             <div className="mt-8">
-              <LeadForm idPrefix="es-emergency" defaultService="storm-hail" submitLabel="Pedir que me llamen" />
+              <LeadForm
+                locale="es"
+                idPrefix="es-emergency"
+                defaultService="storm-hail"
+                submitLabel="Pedir que me llamen"
+              />
             </div>
           </div>
         </div>
