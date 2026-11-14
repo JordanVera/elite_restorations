@@ -5,7 +5,11 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { pageMetadata } from '@/lib/seo';
+import { Faq } from '@/components/faq';
+import { InsuranceClaimHelp } from '@/components/insurance-claim-help';
+import { claimHelpFaqs } from '@/lib/claim-help';
+import { PropertyScopeNote } from '@/components/property-scope-note';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
@@ -14,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
     'Roof leak, missing shingles, or a flood in Houston? Call (713) 909-0034 for emergency tarping and water-damage help.',
   path: '/emergency',
   image: '/images/services/roofing-emergency-tarp-repair.jpg',
+  languages: languageAlternates('/emergency', '/es/emergency'),
 });
 
 const steps = [
@@ -50,8 +55,24 @@ export default function EmergencyPage() {
               {site.phone.display}
             </span>
           </a>
+          <a
+            href={site.phone.sms}
+            className="mt-4 inline-flex text-sm underline decoration-foreground/30 underline-offset-[0.45em] hover:decoration-accent-ink"
+          >
+            Text us
+          </a>
         </Reveal>
       </PageHero>
+      <PropertyScopeNote />
+      <InsuranceClaimHelp />
+      <section className="border-b border-border py-16">
+        <div className="gutter mx-auto max-w-[120rem]">
+          <h2 className="font-display text-4xl">Claim questions</h2>
+          <div className="mt-8">
+            <Faq items={claimHelpFaqs("en")} />
+          </div>
+        </div>
+      </section>
 
       <section
         aria-label="What to do and request form"
@@ -115,6 +136,18 @@ export default function EmergencyPage() {
                 className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
               >
                 Slab moisture after a supply-line break
+              </Link>
+              <Link
+                href="/houston-storm-damage"
+                className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                Houston storm damage help
+              </Link>
+              <Link
+                href="/commercial-storm-restoration"
+                className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                Commercial and apartment buildings
               </Link>
               <Link
                 href="/how-to-build-an-insurance-photo-log"

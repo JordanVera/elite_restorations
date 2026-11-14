@@ -2,7 +2,7 @@ import { getArticle } from '@/lib/articles';
 import { localLandingSlug, parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { getServiceArea } from '@/lib/service-areas';
-import { getService, servicePath, services } from '@/lib/services';
+import { getService, isCityIndexedService, servicePath, services } from '@/lib/services';
 
 /** Neighborhoods beside the 77082 office. Slugs match `site.serviceArea`. */
 export const nearOfficeSlugs = ['westchase', 'alief', 'energy-corridor'] as const;
@@ -144,7 +144,7 @@ function buildAreaPage(areaSlug: (typeof nearOfficeSlugs)[number]): AreaPage {
     lede: note.lede,
     paragraphs: note.paragraphs,
     faqs: note.faqs,
-    services: services.map((service) => ({
+    services: services.filter((service) => isCityIndexedService(service.slug)).map((service) => ({
       href: servicePath(service.slug),
       label: service.name,
       cityHref: `/${localLandingSlug(service.slug, area.slug)}`,

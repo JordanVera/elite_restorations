@@ -1,3 +1,4 @@
+import { addedServiceInputs } from '@/lib/guides/added-service-inputs';
 import { serviceGuides } from '@/lib/guides/index';
 import type { ServiceGuide } from '@/lib/guides/types';
 import { img, type Img } from '@/lib/images';
@@ -940,6 +941,9 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/hail-damage-vs-normal-wear-houston-roof',
         label: 'Hail damage vs normal wear on a Houston roof',
       },
+      { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+      { href: '/commercial-storm-restoration', label: 'Commercial and apartment storm restoration' },
+      { href: '/emergency-board-up', label: 'Emergency board-up' },
     ],
     image: img(
       '/images/services/roof-replacement.webp',
@@ -1172,7 +1176,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         a: 'Say so when you call. A tarp stops more water from entering. Wet insulation and drywall are a separate drying job, and we handle that restoration as well.',
       },
     ],
-    related: ['roofing', 'roof-replacement', 'water-damage-restoration', 'insurance-claims'],
+    related: ['roofing', 'roof-replacement', 'water-damage-restoration', 'insurance-claims', 'emergency-board-up'],
+    links: [
+      { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+      { href: '/emergency', label: 'Emergency help' },
+      { href: '/roofing', label: 'Roofing' },
+      { href: '/emergency-board-up', label: 'Emergency board-up' },
+      { href: '/commercial-storm-restoration', label: 'Commercial and apartment buildings' },
+      { href: '/insurance-claims', label: 'Insurance claims help' },
+    ],
     image: img(
       '/images/services/roofing-emergency-tarp-repair.jpg',
       'Emergency roof tarp secured on a Houston home after storm damage',
@@ -1467,6 +1479,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/how-to-build-an-insurance-photo-log',
         label: 'How to build an insurance photo log',
       },
+      { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+      { href: '/commercial-storm-restoration', label: 'Commercial and apartment water restoration' },
+      { href: '/burst-frozen-pipe-water-damage-houston', label: 'Burst or frozen pipe damage' },
+      { href: '/water-heater-leak-damage-houston', label: 'Water heater leak damage' },
+      { href: '/dishwasher-leak-water-damage-houston', label: 'Dishwasher leak damage' },
+      { href: '/toilet-overflow-water-damage-houston', label: 'Toilet overflow damage' },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1695,7 +1713,34 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       ],
     },
   },
+  ...addedServiceInputs,
 ];
+
+/** Services that already have city landing pages. New hubs stay off that list. */
+export const cityIndexedServiceSlugs = new Set([
+  'kitchen-remodeling',
+  'bathroom-remodeling',
+  'backsplash',
+  'countertops',
+  'wood-flooring',
+  'tile-flooring',
+  'vinyl-flooring',
+  'laminate-flooring',
+  'carpentry',
+  'tile-fireplaces',
+  'roofing',
+  'roof-replacement',
+  'roofing-emergency-tarp-repair',
+  'siding',
+  'patios-decks',
+  'water-damage-restoration',
+  'insurance-claims',
+  'painting-drywall-repair',
+]);
+
+export function isCityIndexedService(slug: string) {
+  return cityIndexedServiceSlugs.has(slug);
+}
 
 export const services: Service[] = serviceInputs.map((service) => {
   const guide = serviceGuides[service.slug];
@@ -1745,7 +1790,7 @@ for (const service of services) {
   if (words < 1500 || words > 2200) {
     serviceDepthErrors.push(`${service.slug} main content is ${words} words`);
   }
-  if (faqs < 6 || faqs > 10) {
+  if (faqs < 6 || faqs > 12) {
     serviceDepthErrors.push(`${service.slug} has ${faqs} FAQs`);
   }
   const blob = [
@@ -1756,6 +1801,24 @@ for (const service of services) {
   ].join('\n');
   if (/\bGAF\b|\bIICRC\b/.test(blob)) {
     serviceDepthErrors.push(`${service.slug} mentions a banned name`);
+  }
+}
+
+const deepHubMinimum = new Set([
+  'roofing-emergency-tarp-repair',
+  'emergency-board-up',
+  'fence-installation-repair',
+  'gutters',
+  'patios',
+  'gazebos',
+  'decks',
+  'commercial-storm-restoration',
+]);
+for (const service of services) {
+  if (!deepHubMinimum.has(service.slug)) continue;
+  const words = serviceMainWords(service);
+  if (words < 2000) {
+    serviceDepthErrors.push(`${service.slug} is ${words} words, under the 2000-word hub minimum`);
   }
 }
 

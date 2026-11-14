@@ -10,7 +10,7 @@ import {
   type IndexService,
 } from '@/components/home/service-index';
 import { services } from '@/lib/services';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Restoration & Remodeling',
@@ -18,6 +18,7 @@ export const metadata: Metadata = pageMetadata({
     'Water and storm damage restoration, remodeling, and insurance claims help in Houston. Family-owned since 1993. Call (713) 909-0034.',
   path: '/',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
+  languages: languageAlternates('/', '/es'),
 });
 
 export default function HomePage() {
@@ -27,6 +28,8 @@ export default function HomePage() {
     { href: '/roofing', label: 'Roofing' },
     { href: '/restoration', label: 'Houston restoration services' },
     { href: '/insurance-claims', label: 'Insurance claims help' },
+    { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+    { href: '/commercial-storm-restoration', label: 'Commercial and apartment emergencies' },
   ];
 
   const indexServices: IndexService[] = services.map((s) => ({

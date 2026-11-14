@@ -5,7 +5,7 @@ import { getAreaProfile } from '@/lib/local/areas';
 import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
 import { localLandingSlug } from '@/lib/local-paths';
 import { documentTitle, fitDescription, servicePageTitle, titleFits } from '@/lib/seo';
-import { getService, services, type Service } from '@/lib/services';
+import { getService, isCityIndexedService, services, type Service } from '@/lib/services';
 import { getServiceArea, serviceAreas, type ServiceArea } from '@/lib/service-areas';
 import { site } from '@/lib/site';
 import { wordCount } from '@/lib/words';
@@ -666,9 +666,9 @@ function assertLandings(pages: readonly LocalLanding[]) {
   }
 }
 
-export const localLandings: readonly LocalLanding[] = services.flatMap((service) =>
-  serviceAreas.map((area) => buildLanding(service, area)),
-);
+export const localLandings: readonly LocalLanding[] = services
+  .filter((service) => isCityIndexedService(service.slug))
+  .flatMap((service) => serviceAreas.map((area) => buildLanding(service, area)));
 
 assertLandings(localLandings);
 

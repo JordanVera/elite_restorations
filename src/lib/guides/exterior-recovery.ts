@@ -232,6 +232,19 @@ export const emergencyTarp: ServiceGuide = {
         { title: 'Check the cover', body: 'After the next wind, a tarp can loosen. We tell you what to look for and when it needs another visit. It is still temporary.' },
       ],
     },
+    {
+      eyebrow: 'Buildings',
+      heading: 'Houses, apartments, and low commercial roofs.',
+      paragraphs: [
+        'The same storm that opens a house in Katy can open a stairwell roof on an apartment building in the Energy Corridor or a low commercial roof in Westchase. The sequence does not change because the building is bigger: stay off it until it is safe, photograph the opening, cover what we can reach, and note which ceilings are wet. A property manager usually needs those photos the same day.',
+        'Board-up is the wall and the glass. A tarp is the roof. A limb can make both true. We say which openings we can secure on that visit. Flat roofs pond, so a loose cover is worse than none. Call (713) 909-0034 any time for an active storm or water emergency. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit.',
+      ],
+      points: [
+        { title: 'Many units', body: 'Water in a top-floor ceiling can be one unit or a stack. We ask which ceilings are wet before we treat the building as a single room.' },
+        { title: 'Access', body: 'A roof hatch, a gate code, and whether people are still inside belong on the first call.' },
+        { title: 'Who we work for', body: 'We work for the owner or the manager who calls. We are not a preferred vendor of any insurer, and the carrier still decides the claim.' },
+      ],
+    },
   ],
   faqs: [
     {
@@ -249,6 +262,18 @@ export const emergencyTarp: ServiceGuide = {
     {
       q: 'Will you come during the storm?',
       a: 'We do not put people on a roof in lightning or in wind that makes it unsafe. Call (713) 909-0034 and we will tell you the next safe step. The online form is a request for a call back, not a guaranteed arrival time.',
+    },
+    {
+      q: 'Do you tarp apartment and commercial roofs?',
+      a: 'Yes. Houses, apartment buildings, and low commercial roofs in Greater Houston, when we can reach them safely. Tell us the access and whether water is already in a ceiling.',
+    },
+    {
+      q: 'How is a tarp different from board-up?',
+      a: 'A tarp covers a roof opening. Board-up closes a broken window, door, or wall. Some storms need both. The board-up page is the wall. This page is the roof cover.',
+    },
+    {
+      q: 'Can a manager reach you after office hours?',
+      a: 'For an active storm or water emergency, call (713) 909-0034 any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. You can also text that number.',
     },
   ],
 };

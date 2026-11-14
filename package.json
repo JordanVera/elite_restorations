@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --import ./scripts/register-test-hooks.mjs --test src/lib/lead-checks.test.ts src/server/jobber/*.test.ts src/server/leads/*.test.ts",
+    "test": "node --experimental-strip-types --import ./scripts/register-test-hooks.mjs --test src/lib/lead-checks.test.ts src/lib/es-contact-form.test.ts src/server/jobber/*.test.ts src/server/leads/*.test.ts",
     "images:manifest": "node scripts/build-image-manifest.mjs"
   },
   "dependencies": {
