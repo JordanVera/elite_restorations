@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { LanguageSwitch } from '@/components/language-switch';
+import { brandServiceLinks } from '@/lib/brand-nav';
 import { waterCauses } from '@/lib/water-causes';
 import { googleReviews } from '@/lib/testimonials';
 import { nav, site } from '@/lib/site';
@@ -73,6 +74,15 @@ export function SiteFooter() {
                     </Link>
                   </li>
                 ))}
+                {brandServiceLinks
+                  .filter((item) => item.group === group)
+                  .map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className={linkClass}>
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </nav>
           ))}

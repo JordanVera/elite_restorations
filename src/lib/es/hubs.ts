@@ -192,7 +192,7 @@ const esHubInputs: readonly EsHub[] = [
     "Techos",
     "Techo",
     "Un techo en Houston es la teja, la membrana de abajo, el metal que sella el agua y la ventilación. Después de granizo o un huracán, a veces lo primero es una lona.",
-    "Revisamos el techo y le decimos si una reparación aguanta o si hay que cambiarlo. Para decirlo hay que subir. Desde la calle no se ve. Atendemos casas, apartamentos y techos comerciales bajos cuando se puede subir con seguridad. La temporada de huracanes es del 1 de junio al 30 de noviembre.",
+    "Revisamos el techo y le decimos si una reparación aguanta o si hay que cambiarlo. Para decirlo hay que subir. Desde la calle no se ve. Atendemos casas, apartamentos y techos comerciales bajos cuando se puede subir con seguridad. La temporada de huracanes es del 1 de junio al 30 de noviembre. Si el techo va a ser CertainTeed, hay una página sobre las líneas Landmark, el granizo y el tiempo de un cambio.",
     [
       { q: "¿Reparan o solo cambian el techo?", a: "Las dos. En la visita le decimos cuál. Un cambio incluye quitar lo viejo, revisar la madera de abajo, la membrana, el metal que sella el agua y la ventilación." },
       { q: "¿Ayudan con el reclamo?", a: "Con fotos y un estimado de la reparación. Su aseguradora decide. No somos ajustadores públicos." },
@@ -228,7 +228,7 @@ const esHubInputs: readonly EsHub[] = [
     "Siding",
     "Exterior",
     "El siding es el forro de afuera, la cara que la casa le enseña a la calle. El sol del oeste y la lluvia lo envejecen por lados, no parejo.",
-    "Reparamos un tramo cuando el perfil se consigue y el color se puede acercar. Si el parche se va a notar siempre, se lo decimos. Si detrás de las tablas hay humedad, la secamos antes de cubrirlas.",
+    "Reparamos un tramo cuando el perfil se consigue y el color se puede acercar. Si el parche se va a notar siempre, se lo decimos. Si detrás de las tablas hay humedad, la secamos antes de cubrirlas. Si el forro va a ser James Hardie, hay una página sobre HardiePlank, HardieTrim y ColorPlus.",
     [
       { q: "¿Cambian solo un tramo?", a: "A menudo, si el perfil se consigue. El lado sur no va a combinar con una tabla nueva del color de fábrica. Igualamos la pared como está hoy." },
       { q: "¿Después de un huracán?", a: "Fotografiamos lo que el viento se llevó y reparamos o cambiamos ese lado de la casa. La aseguradora decide la cobertura." },

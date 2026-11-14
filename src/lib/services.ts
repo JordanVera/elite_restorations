@@ -945,6 +945,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       { href: '/houston-storm-damage', label: 'Houston storm damage help' },
       { href: '/commercial-storm-restoration', label: 'Commercial and apartment storm restoration' },
       { href: '/emergency-board-up', label: 'Emergency board-up' },
+      {
+        href: '/certainteed-roofing-houston',
+        label: 'CertainTeed shingle roofing in Houston',
+      },
     ],
     image: img(
       '/images/projects/roofing/brick-home-multi-gable.webp',
@@ -1077,6 +1081,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/hail-damage-vs-normal-wear-houston-roof',
         label: 'Hail damage vs normal wear on a Houston roof',
       },
+      {
+        href: '/certainteed-roofing-houston',
+        label: 'CertainTeed shingle roofing in Houston',
+      },
     ],
     image: img(
       '/images/services/roof-replacement.webp',
@@ -1185,6 +1193,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       { href: '/emergency-board-up', label: 'Emergency board-up' },
       { href: '/commercial-storm-restoration', label: 'Commercial and apartment buildings' },
       { href: '/insurance-claims', label: 'Insurance claims help' },
+      {
+        href: '/certainteed-roofing-houston',
+        label: 'CertainTeed shingle roofing in Houston',
+      },
     ],
     image: img(
       '/images/services/roofing-emergency-tarp-repair.jpg',
@@ -1261,6 +1273,12 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
     ],
     related: ['patios-decks', 'roof-replacement', 'roofing-emergency-tarp-repair', 'carpentry'],
+    links: [
+      {
+        href: '/james-hardie-siding-houston',
+        label: 'James Hardie siding in Houston',
+      },
+    ],
     image: img(
       '/images/services/siding.jpg',
       'Board-and-batten siding on a Houston home',

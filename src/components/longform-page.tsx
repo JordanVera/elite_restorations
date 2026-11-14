@@ -31,6 +31,7 @@ export function LongformPage({
   sections,
   faqs,
   related,
+  relatedHeading,
   ctaTitle,
   ctaBody,
   serviceName,
@@ -51,6 +52,7 @@ export function LongformPage({
   sections: readonly GuideSection[];
   faqs: readonly { q: string; a: string }[];
   related: readonly LinkItem[];
+  relatedHeading?: string;
   ctaTitle: string;
   ctaBody: string;
   serviceName: string;
@@ -100,7 +102,7 @@ export function LongformPage({
         <section className="border-b border-border py-12">
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 className="eyebrow text-muted-foreground">
-              {es ? "También le puede servir" : "More that may help"}
+              {relatedHeading ?? (es ? "También le puede servir" : "More that may help")}
             </h2>
             <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
               {related.map((link) => (

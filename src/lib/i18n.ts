@@ -29,6 +29,8 @@ const staticSpanishPaths: Record<string, string> = {
   "/emergency": "/es/emergency",
   "/contact": "/es/contact",
   "/houston-storm-damage": "/es/houston-storm-damage",
+  "/certainteed-roofing-houston": "/es/certainteed-roofing-houston",
+  "/james-hardie-siding-houston": "/es/james-hardie-siding-houston",
 };
 
 export function isSpanishPath(pathname: string) {

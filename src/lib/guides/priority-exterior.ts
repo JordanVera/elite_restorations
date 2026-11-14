@@ -54,7 +54,7 @@ export const roofing: ServiceGuide = {
       eyebrow: 'Materials',
       heading: 'Asphalt, metal, tile, and the layers under them.',
       paragraphs: [
-        'Architectural asphalt is the common Houston roof because it fits the houses and the weight the frame already carries. Metal, concrete or clay tile, slate, and composite are real options when the look and the frame agree. Tile and slate are heavy. They go on only when the roof was built for that weight, and we check the frame on the house. Cool-roof membranes show up on low-slope porches and additions. A house often has more than one roof section and more than one system.',
+        'Architectural asphalt is the common Houston roof because it fits the houses and the weight the frame already carries. Metal, concrete or clay tile, slate, and composite are real options when the look and the frame agree. Tile and slate are heavy. They go on only when the roof was built for that weight, and we check the frame on the house. Cool-roof membranes show up on low-slope porches and additions. A house often has more than one roof section and more than one system. When the shingle is architectural asphalt, one product we install is CertainTeed, including the Landmark lines. The CertainTeed page on this site is the closer read on colors, hail, and a replacement.',
         'The shingles are the layer you see from the street. The underlayer, a sticky waterproof sheet where a joint needs it, the metal drip edge, valley metal, wall flashing, vent collars, and attic vents are the roof as a system. A Houston attic runs much hotter than the rooms below. Air in and air out are part of a replacement so heat and moisture have a path out. We plan them with the shingles, not after.',
       ],
       points: [
