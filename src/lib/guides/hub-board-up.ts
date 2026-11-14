@@ -46,7 +46,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "Roof versus wall",
-          body: "A hole in the roof wants a tarp when the roof is safe to walk. A hole in the wall wants board-up. Some storms create both.",
+          body: "A hole in the roof needs a tarp when the roof is safe to walk. A hole in the wall needs board-up. Some storms create both.",
         },
       ],
     },

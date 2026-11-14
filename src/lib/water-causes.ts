@@ -69,9 +69,9 @@ export const waterCauses: readonly WaterCause[] = [
           "After the main is off, open a faucet on the lowest floor, hot and cold if you do not know which line failed. If the pipe is frozen and has not burst, an open faucet gives the thaw somewhere to go. Do not use a torch. A hair dryer on a reachable frozen spot, kept off the water, is enough. If the supply is off, turn the water heater off so it is not heating an empty tank. That is a separate failure we see the same week as a freeze.",
         ],
         points: [
-          { title: "Power", body: "Standing water near outlets, appliances, or a breaker panel is a reason to leave the room. Do not wade through it to reach a valve you are unsure of." },
-          { title: "Attic lines", body: "Houston houses often run supplies through the attic. A freeze there shows up as a ceiling stain, not as a pipe you can see." },
-          { title: "Hose bibs", body: "An exterior bib that was left charged will split. The leak may be inside the wall, not at the handle." },
+          { title: "Stay out of the water", body: "If water is near outlets, appliances, or the breaker panel, leave the room. Do not walk through it to reach a valve you are not sure about." },
+          { title: "Pipes in the attic", body: "Many Houston houses run water lines through the attic. When one freezes, you usually see a stain on the ceiling, not the pipe itself." },
+          { title: "Outdoor hose bibs", body: "A hose bib left under pressure can split in a freeze. The leak may be inside the wall, not at the handle you can see outside." },
         ],
       },
       {
@@ -82,9 +82,9 @@ export const waterCauses: readonly WaterCause[] = [
           "In an apartment building the same break can wet the unit below and the corridor. We list the units. We do not dry a whole stack because one ceiling spotted. Commercial buildings add ceiling tile, a server closet, or a stock room under the line. Tell us what is underneath. Hurricane season is a different calendar. A hard freeze in Houston is a winter event, often one or two nights, and the calls come the morning the pipes thaw.",
         ],
         points: [
-          { title: "Insulation", body: "Wet insulation in a ceiling will not dry because the drip stopped. It has to come out or be dried in place, and we say which." },
-          { title: "Floors", body: "Vinyl and laminate can trap water on a slab. Wood swells. Carpet padding holds it. The floor is part of the dry-out, not a later surprise." },
-          { title: "Neighbors", body: "If you hear water and you are not the top floor, the pipe may not be yours. Call anyway. The building still has to be dried." },
+          { title: "Wet insulation", body: "Insulation in a ceiling does not dry just because the drip stopped. It has to come out or be dried in place. We will tell you which." },
+          { title: "Floors hold water", body: "Vinyl and laminate can trap water on the concrete. Wood swells. Carpet padding stays wet. The floor is part of the dry-out, not a surprise we mention later." },
+          { title: "The unit below", body: "If you hear water and you are not on the top floor, the broken pipe may be in the unit above you. Call anyway. That ceiling still has to be dried." },
         ],
       },
       {
@@ -95,9 +95,9 @@ export const waterCauses: readonly WaterCause[] = [
           "Repairs start when the structure is dry. Drywall, insulation, flooring, and cabinets that swelled are the rebuild. We can do that work. We do not hang new board over a wet cavity to make a unit look finished for a showing. Homes, apartments, and commercial spaces follow the same sequence. Access and who can authorize the openings are the difference, not the physics of the water.",
         ],
         points: [
-          { title: "One team", body: "Drying and the rebuild can stay with Elite Restorations, family-owned in Houston since 1993." },
-          { title: "Readings", body: "We do not guess dryness from the color of the paint. Meters decide when a wall can close." },
-          { title: "Contents", body: "Furniture and a soaked mattress are not the same as the structure. We will say what we are drying and what we are not." },
+          { title: "Same crew for the rebuild", body: "Drying and the rebuild can stay with Elite Restorations, family-owned in Houston since 1993." },
+          { title: "We measure before we close a wall", body: "Paint that looks dry does not mean the wall is dry. A moisture meter tells us when it is safe to close it." },
+          { title: "Furniture is separate", body: "A soaked mattress or a wet sofa is not the same as the wall and the floor. We will tell you what we are drying and what we are not." },
         ],
       },
       {
@@ -109,9 +109,9 @@ export const waterCauses: readonly WaterCause[] = [
             " We photograph the break if it is visible, the rooms, and the moisture, and we can meet the adjuster on site. The repair estimate is the construction price. It is not the claim payment. Use the photo log if you want a room-by-room record before anything is thrown away. The slab-moisture guide is the closer read when water stayed in the concrete after a supply line failed.",
         ],
         points: [
-          { title: "Keep the failed piece", body: "If you can do it safely, keep the split pipe or the fitting. Do not haul it off before it is photographed." },
-          { title: "Notice", body: "Call the company on the policy and write down the claim number. We do not invent a deadline. The policy does." },
-          { title: "Mitigation", body: "Stopping the water and drying limit further damage. Whether this policy reimburses that work is not our decision." },
+          { title: "Keep the broken piece", body: "If you can do it safely, keep the split pipe or the fitting. Do not throw it away before someone photographs it." },
+          { title: "Call your insurer", body: "Call the company on the policy and write down the claim number. We will not guess a deadline. That wording is in your policy." },
+          { title: "Stopping more damage", body: "Shutting off the water and starting the dry-out keeps the loss from spreading. Whether this policy pays you back for that work is your insurer's decision." },
         ],
       },
       {
@@ -124,9 +124,9 @@ export const waterCauses: readonly WaterCause[] = [
             " any time for an active water emergency at a house, an apartment community, or a commercial building. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. You can text that number. Elite Restorations has been family-owned here since 1993. We dry and repair. We do not claim a certification this site does not state, and we do not represent your insurer.",
         ],
         points: [
-          { title: "After the thaw", body: "A pipe can hold until the ice melts. If the forecast just broke, walk the house and look at ceilings before you leave for work." },
-          { title: "Hose bibs", body: "Disconnect hoses before a freeze. A hose left on the bib is a failure we see every cold snap." },
-          { title: "Not a hurricane", body: "Freeze losses are plumbing. Hurricane losses are usually the roof and wind. We will not mix the stories in the notes." },
+          { title: "Check after the ice melts", body: "A frozen pipe can stay closed until the ice melts, then let go. If the freeze just broke, walk the house and look at the ceilings before you leave." },
+          { title: "Take hoses off the bibs", body: "Disconnect garden hoses before a freeze. A hose left on the outdoor faucet is a split we see every cold snap." },
+          { title: "This is not a hurricane claim", body: "A freeze is a plumbing problem. A hurricane is usually the roof and the wind. We write down which one actually happened." },
         ],
       },
     ],

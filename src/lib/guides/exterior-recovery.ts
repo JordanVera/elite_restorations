@@ -22,7 +22,7 @@ export const siding: ServiceGuide = {
         'If you can see the sheathing, or the wall feels soft, water is already behind the siding. Covering that with new boards without drying and flashing it repeats the rot. We look behind the damage before we order a match.',
       ],
       points: [
-        { title: 'Fade on the sunny side', body: 'A new board next to ten-year-old south-facing siding will not match the original chip. We match the wall as it is, or we say the wall wants more than a patch.' },
+        { title: 'Fade on the sunny side', body: 'A new board next to ten-year-old south-facing siding will not match the original chip. We match the wall as it is, or we say the wall needs more than a patch.' },
         { title: 'Bottom courses', body: 'The lowest boards see sprinklers, soil, and splashback. Rot there is often drainage and grade, not only a bad board. The grade is part of the look.' },
         { title: 'Storm hits', body: 'Wind-lifted courses and impact cracks are documented. A storm repair and a full re-side are different scopes. The inspection says which.' },
       ],
@@ -36,7 +36,7 @@ export const siding: ServiceGuide = {
       ],
       points: [
         { title: 'Profile changes the house', body: 'Board-and-batten and lap are different shadows and different trim. We decide that with the elevation, not after the first course is up.' },
-        { title: 'Clearances', body: 'Siding that dies into the roof, the soil, or a deck ledger stays wet. We keep the clearances that let the wall dry.' },
+        { title: 'Clearances', body: 'Siding that runs into the roof, the soil, or a deck ledger stays wet. We keep the gaps that let the wall dry.' },
         { title: 'Paint with the boards', body: 'Cut ends and field finish are done as the wall goes up, not months later. Raw cuts in this humidity are how the next peel starts.' },
       ],
     },
@@ -48,7 +48,7 @@ export const siding: ServiceGuide = {
         'Paint-only on sound boards is a different project from a re-side. If the boards are sound and the paint has failed, we will say so. If the boards are soft, paint is a waste. Storm documentation, when you are filing, is photos of the damage and of the completed repair. Your insurer decides coverage. We do not.',
       ],
       points: [
-        { title: 'Sheathing', body: 'Soft plywood or a failed barrier behind the siding is extra scope. We open enough to know, and we stop to show you before the wall grows.' },
+        { title: 'Sheathing', body: 'Soft plywood or a failed barrier behind the siding is extra work. We open enough to know, and we stop to show you before the job grows.' },
         { title: 'Height', body: 'A one-story ranch and a two-story with a tall gable are different access. The price follows the wall, not the neighborhood name.' },
         { title: 'Trim and openings', body: 'Every window and door is a flashing detail. A house with more openings takes longer. That is the job, not a complication.' },
       ],
@@ -61,7 +61,7 @@ export const siding: ServiceGuide = {
         'A full re-side in the City of Houston can require a permit. A small repair often does not. Bellaire, West University Place, Sugar Land, Pearland, and the counties that cover much of Katy and The Woodlands are different counters. We check the address. If the wall was opened by wind or hail, we photograph it before we cover it. Hurricane season is June 1 through November 30. That is when a lot of these calls come, and it is not the only time sun and irrigation rot a bottom course.',
       ],
       points: [
-        { title: 'With the roof', body: 'Step flashing where a roof meets a wall has to be right before new siding dies into it. If both are in the project, we sequence them.' },
+        { title: 'With the roof', body: 'Step flashing where a roof meets a wall has to be right before new siding meets that wall. If both are in the project, we plan them together.' },
         { title: 'Older walls', body: 'Some older Houston houses have layers. What is under the siding changes the scope. We do not assume one layer of plank on plywood.' },
         { title: 'Records', body: 'Photos of storm damage and of the repair are yours to share. A planned re-side is not a claim. We do not describe it as one.' },
       ],
@@ -70,7 +70,7 @@ export const siding: ServiceGuide = {
   faqs: [
     {
       q: 'Can you replace a section instead of the whole wall?',
-      a: 'Often, if the profile exists and the sun fade can be blended. If a patch will always show, we say the wall wants more. We decide that on the house, not from a photo of the sunny side only.',
+      a: 'Often, if the profile exists and the sun fade can be blended. If a patch will always show, we say the wall needs more. We decide that on the house, not from a photo of the sunny side only.',
     },
     {
       q: 'What is a planning range for siding?',

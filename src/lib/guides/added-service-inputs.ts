@@ -142,7 +142,7 @@ export const addedServiceInputs = [
       { href: "/houston-storm-damage", label: "Houston storm damage help" },
       { href: "/insurance-claims", label: "Insurance claims help" },
     ],
-    image: img("/images/projects/siding/soffit-and-sconce-detail.jpg", "Soffit and eave detail on a Houston home"),
+    image: img("/images/projects/roofing/shingles-white-siding.jpg", "Shingle roof meeting white siding on a Houston home"),
     local: {
       heading: "Hard rain on flat lots and tree-filled yards.",
       body: [
@@ -198,7 +198,7 @@ export const addedServiceInputs = [
       { href: "/gutters", label: "Gutters" },
       { href: "/insurance-claims", label: "Insurance claims help" },
     ],
-    image: img("/images/projects/siding/rear-deck-glass-doors.jpg", "Rear of a Houston home with outdoor living space and glass doors"),
+    image: img("/images/projects/roofing/roof-over-backyard-pool.webp", "Shingle roof above a backyard pool at a Houston home"),
     local: {
       heading: "Flat lots, clay, and a door that has to stay dry.",
       body: [
@@ -361,7 +361,7 @@ export const addedServiceInputs = [
       { href: "/insurance-claims", label: "Insurance claims help" },
       { href: "/how-to-build-an-insurance-photo-log", label: "How to build an insurance photo log" },
     ],
-    image: img("/images/services/water-damage-restoration.jpg", "Drying equipment in a Houston building during water restoration"),
+    image: img("/images/projects/roofing/tarp-aerial-complex-roof.jpg", "Aerial view of a tarp on a complex Houston roof"),
     local: {
       heading: "One building, many ceilings.",
       body: [

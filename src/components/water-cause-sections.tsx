@@ -13,8 +13,8 @@ const esHub: Record<string, { heading: string; body: string; first: string; dry:
   },
   "water-heater-leak-damage-houston": {
     heading: "Fugas del calentador de agua",
-    body: "El tanque falla en las conexiones, en la válvula de alivio o en el propio tanque. En una losa el agua se queda. En un clóset de arriba se vuelve el plafón de abajo.",
-    first: "Cierre la válvula de agua fría del calentador si gira. Si no, cierre la principal. Corte el breaker si es eléctrico. Si huele a gas, salga y llame.",
+    body: "El tanque puede fallar en los tubos de arriba, en la válvula de alivio o en el tanque mismo. Si el calentador está en el garaje, el agua puede pasar por debajo de la puerta hacia la casa. Revise el piso, los zoclos y el drywall del lado de la casa, no solo la charola.",
+    first: "Cierre la válvula de agua fría del calentador si gira. Si no gira, cierre el agua de toda la casa. Corte el breaker si es eléctrico. Si huele a gas, salga y llame.",
     dry: "Seguimos el agua fuera del clóset, la extraemos y secamos los huecos. Un charco en la charola no es lo mismo que un tanque que se abrió.",
     claim: "Un tanque que se vacía en un día y un goteo de meses son hechos distintos. Revise su póliza. No escogemos la frase ni prometemos el pago.",
   },

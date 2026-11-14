@@ -14,6 +14,7 @@ export const fieldNotes: Article[] = [
     description:
       'What to do after a roof leak in a Houston home: stay off the roof, limit the water, photograph the opening, and plan the repair.',
     lede: 'A stain on the ceiling is often the first sign. In Houston the next rain can be the same day, so the useful moves are the ones that keep more water out and leave a clear record of what already came in.',
+    image: '/images/projects/roofing/gable-stone-veneer.jpg',
     service: 'roofing',
     emergency: true,
     ctaTitle: 'Water coming through the ceiling?',
@@ -185,6 +186,7 @@ export const fieldNotes: Article[] = [
     description:
       'What to do when a supply line breaks in a Houston slab home: stop the water, find how far it traveled, and dry before you rebuild.',
     lede: 'A supply line that lets go on a slab does not stay in a puddle. The water runs under the flooring, wicks up the wall, and sits in a house where the outside air is already humid.',
+    image: '/images/services/water-damage-restoration.jpg',
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: 'A supply line let go?',
@@ -343,6 +345,7 @@ export const fieldNotes: Article[] = [
     description:
       'How hail damage and ordinary wear differ on a Houston roof, what you can see from the ground, and when a repair or a replacement is the real question.',
     lede: 'A hard storm and a roof that is simply old can both leave a ceiling stain on the next rain. They are not the same condition, and you should not have to climb up to start telling them apart.',
+    image: '/images/projects/roofing/two-story-stone-home.jpg',
     service: 'roofing',
     ctaTitle: 'Not sure what the storm did?',
     ctaBody: `Call ${phone}, or use the contact form. If water is coming inside, say so at the start. We look at the roof. We do not decide what an insurance policy pays.`,
@@ -502,6 +505,7 @@ export const fieldNotes: Article[] = [
     description:
       'How to build a room-by-room photo log after storm or water damage in Houston: what to shoot, what to write down, and how to keep it in one packet.',
     lede: 'A claim goes better when the photos are a record of the house, not a pile of close-ups with no room name. You can build that log the day of the loss, before anything is thrown away.',
+    image: '/images/projects/roofing/brick-home-shingles.jpg',
     service: 'insurance-claims',
     ctaTitle: 'Want the damage written down with you?',
     ctaBody: `Call ${phone} if water is still coming in or the roof is open. We photograph the conditions as part of the work. The log on this site is yours either way. Your insurer decides coverage.`,
@@ -693,8 +697,8 @@ const allowedStatic = new Set([
 const noteSlugs = new Set(fieldNotes.map((article) => article.slug));
 
 for (const article of fieldNotes) {
-  if (article.image) {
-    throw new Error(`Field note should not add an image: ${article.slug}`);
+  if (article.image && !article.image.startsWith('/images/')) {
+    throw new Error(`Field note image is not a site photo: ${article.slug}`);
   }
   if (!titleFits(article.metaTitle)) {
     throw new Error(`Field note meta title does not fit: ${article.metaTitle}`);

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import { LongformPage } from "@/components/longform-page";
-import { img } from "@/lib/images";
 import { latestStormUpdate } from "@/lib/storm-update";
+import { tarps } from "@/lib/topic-photos";
 import { stormPage } from "@/lib/storm-page";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata({
   title: stormPage.metaTitle,
   description: stormPage.description,
   path: "/houston-storm-damage",
-  image: "/images/services/roofing-emergency-tarp-repair.jpg",
+  image: "/images/projects/roofing/tarp-aerial-complex-roof.jpg",
   languages: languageAlternates("/houston-storm-damage", "/es/houston-storm-damage"),
 });
 
@@ -25,10 +25,7 @@ export default function HoustonStormDamagePage() {
       lede={stormPage.lede}
       crumbs={[{ name: "Storm damage", path: "/houston-storm-damage" }]}
       path="/houston-storm-damage"
-      image={img(
-        "/images/services/roofing-emergency-tarp-repair.jpg",
-        "Emergency roof tarp secured on a Houston home after storm damage",
-      )}
+      image={tarps.complex}
       claimHelp
       propertyScope
       sections={[

@@ -117,7 +117,7 @@ export const paintBrief: Brief = {
   lede: [
     'Painting and drywall repair in {name}, TX, is a patch that disappears and paint on a sound, dry surface.',
     'A {name} wall is feathered, primed, and painted so the repair blends, including texture where a hard edge would show.',
-    'In {name} a small patch and a whole room are different scopes. We say which one the wall wants so the sheen matches.',
+    'In {name} a small patch and a whole room are different jobs. We say which one the wall needs so the sheen matches.',
     '{name} drywall that was opened for a leak is confirmed dry before it is closed. Paint does not go on a damp wall.',
   ],
   opener: [

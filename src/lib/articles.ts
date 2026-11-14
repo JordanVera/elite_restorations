@@ -193,7 +193,7 @@ export const articles: Article[] = [
     description:
       'The first steps after a house fire in Houston: stay out until it is safe, start the claim, document the loss, secure the building, and begin cleanup.',
     lede: 'Once everyone is out and the fire department is on scene, the next decisions are about safety, the claim, and keeping a damaged building from getting worse overnight.',
-    image: '/images/services/roofing-emergency-tarp-repair.jpg',
+    image: '/images/projects/siding/siding-upgrade-in-progress.jpg',
     emergency: true,
     ctaTitle: 'Need the building secured?',
     ctaBody:

@@ -1,5 +1,6 @@
 import type { GuideSection } from "@/lib/guides/types";
-import { img, type Img } from "@/lib/images";
+import type { Img } from "@/lib/images";
+import { dryOut, rooms } from "@/lib/topic-photos";
 
 const phone = "(713) 909-0034";
 const note =
@@ -23,13 +24,12 @@ type Cause = {
   image: Img;
 };
 
-const image = img(
-  "/images/services/water-damage-restoration.jpg",
-  "Air movers drying a Houston property during water damage restoration",
-);
-
-function page(input: Omit<Cause, "path" | "image">): Cause {
-  return { ...input, path: `/${input.slug}`, image };
+function page(input: Omit<Cause, "path"> & { image?: Img }): Cause {
+  return {
+    ...input,
+    path: `/${input.slug}`,
+    image: input.image ?? dryOut,
+  };
 }
 
 export const moreWaterCauses: readonly Cause[] = [
@@ -40,16 +40,17 @@ export const moreWaterCauses: readonly Cause[] = [
       "Water heater leak damage in Houston: tank and supply failures in homes, apartments, and commercial closets. Drying and claim help. Call (713) 909-0034.",
     eyebrow: "Water heater leaks",
     title: ["Houston water heater", "leak damage."],
-    lede: "A water heater leak in Houston usually starts in a closet, a garage, or an upstairs mechanical closet and then finds the slab or the ceiling below. Stop the supply, kill the power or the gas only if you know how, and photograph the closet before you mop.",
+    lede: "A water heater leak in Houston usually starts in a closet, a garage, or an upstairs closet, then runs across the concrete floor or into the ceiling below. Shut off the water. Turn off the power or the gas only if you know how. Take photos of the closet before you mop.",
     hubHeading: "Water heater leaks",
     hubBody:
-      "Tanks fail at the fittings, the T&P line, or the tank itself. On a slab the water sits. In an upstairs closet it becomes the ceiling of the room below.",
+      "The tank can fail at the pipes on top, at the relief valve and its discharge pipe, or in the tank itself. On a concrete slab the water stays on the floor. A heater in an upstairs closet can soak the ceiling of the room below.",
     firstSteps:
-      "Shut the cold-water valve on top of the heater if it will turn. If it will not, shut the house main. Switch the breaker off for an electric heater. If you smell gas or you are unsure of the gas valve, leave it and call.",
+      "Shut the cold-water valve on top of the heater if it will turn. If it will not, shut off the water to the whole house. Turn off the breaker for an electric heater. If you smell gas, or you are not sure which gas valve is which, leave and call.",
     drying:
-      "We follow the water out of the closet, across the slab or through the ceiling, extract it, and dry the cavities. A pan that overflowed is not the same as a tank that split.",
+      "We follow the water out of the closet, across the floor or through the ceiling, remove what is standing, and dry the wet walls and floors. A drain pan that overflowed is not the same job as a tank that split open.",
     claim:
       "A tank that ruptures in a day and a drip at a fitting that has been staining the closet for months are different facts. Many policies care about that difference. Check your policy. We will not pick the label, and we will not promise payment.",
+    image: dryOut,
     sections: [
       {
         eyebrow: "First hour",
@@ -61,22 +62,22 @@ export const moreWaterCauses: readonly Cause[] = [
           "A pan under the heater is there to catch a drip and send it to a drain. In a lot of Houston closets the drain was never connected, or it clogs, and the pan becomes a pond that overflows onto the slab. Photograph the pan, the fittings, and the path across the floor before you shop-vac it. Apartment heaters in a stacked closet can wet the unit below even when the pan looks empty by the time you open the door.",
         ],
         points: [
-          { title: "Do not refill yet", body: "Turning the water back on to 'see if it stopped' refills the ceiling. Leave it off until someone has seen the fittings or the tank." },
-          { title: "Age is not a diagnosis", body: "An old tank can fail suddenly. A new tank can leak at a supply line. We describe the part that failed. We do not sell you a replacement as the dry-out." },
-          { title: "Commercial closets", body: "A break-room or mechanical-room heater in a small commercial building follows the same shutoff. Tell us what is stored on the floor." },
+          { title: "Leave the water off", body: "Turning the water back on to see if the leak stopped can fill the ceiling again. Leave it off until someone has looked at the pipes on top of the tank." },
+          { title: "Old or new, look at the part", body: "An old tank can fail all at once. A new tank can leak at a supply line. We say which part failed. Replacing the tank is not the same job as drying the room." },
+          { title: "Heaters in a business", body: "A water heater in a break room or mechanical room shuts off the same way. Tell us what is stored on the floor so we know what the water reached." },
         ],
       },
       {
         eyebrow: "The path",
         heading: "Closets, garages, and the ceiling underneath.",
         paragraphs: [
-          "First-floor heaters in Houston houses often sit in a garage or an interior closet on the slab. Water runs to the nearest low spot, which may be the hallway or a bedroom, and wicks into drywall and under vinyl or wood. There is rarely a crawlspace to save you. Second-floor heaters, common in some two-story plans in Katy, Sugar Land, and The Woodlands, dump into the kitchen or the living room ceiling. We open only what the meters justify.",
-          "Apartment water heaters in a utility closet can discharge into the corridor and the neighbor below. A property manager needs the unit number and whether the drain stack is involved. That is a different note from a roof leak, even if both stain a ceiling. We will not write 'roof' because the ceiling is wet. The closet tells the cause.",
+          "First-floor heaters in Houston houses often sit in a garage or an interior closet on the concrete slab. Water runs to the lowest spot, which may be the hallway or a bedroom, then soaks into drywall and under vinyl or wood floors. Most of these houses do not have a crawlspace for the water to fall into. Second-floor heaters, common in some two-story plans in Katy, Sugar Land, and The Woodlands, drop water into the kitchen or living-room ceiling. We open a wall or ceiling only where a moisture meter shows it is still wet.",
+          "An apartment water heater in a utility closet can wet the hallway and the neighbor below. A property manager should tell us the unit number and whether water is coming down through more than one floor. A wet ceiling is not automatically a roof leak. If the heater closet above is the source, that is what we write down.",
         ],
         points: [
-          { title: "Slab edge", body: "Water that sits on concrete moves laterally. The wet wall may be a room away from the heater." },
-          { title: "T&P line", body: "A temperature-and-pressure discharge that has been dripping is not the same event as a tank seam that let go this morning." },
-          { title: "Flooring", body: "Padding and laminate lock water against the slab. We look under the floor at the closet door, not only at the stain." },
+          { title: "Water travels on the floor", body: "Water on a concrete slab does not stay in a puddle by the heater. It can run sideways and wet a wall in the next room." },
+          { title: "Relief valve versus a split tank", body: "A relief valve that has been dripping for months is not the same event as a tank that opened this morning. Tell us which one you are seeing." },
+          { title: "Floors hide the water", body: "Carpet pad, vinyl, and laminate can hold water against the concrete. We look under the floor at the closet door, not only at the stain you can see." },
         ],
       },
       {
@@ -89,9 +90,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " any time if water is still moving. Office hours at 511 Crestwater Ct are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
         points: [
-          { title: "One company", body: "Elite Restorations is family-owned in Houston since 1993. Drying and the interior repair can stay here." },
-          { title: "Do not close early", body: "A closet that smells dry can still read wet at the base plate. We wait on the meter." },
-          { title: "Contents", body: "Stored boxes in a garage or closet are often the loss people forget to photograph. Shoot them before they go to the curb." },
+          { title: "One company for both steps", body: "Elite Restorations is family-owned in Houston since 1993. Drying the rooms and repairing the drywall and floors can stay with the same crew." },
+          { title: "Do not close the wall early", body: "A closet can smell fine and still be wet where the wall meets the floor. We check with a moisture meter before we close it up." },
+          { title: "Photograph what was stored there", body: "Boxes in a garage or closet are easy to forget. Take pictures of them before they go to the curb." },
         ],
       },
       {
@@ -103,9 +104,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " We can meet the adjuster at the closet, show the path, and give you a repair estimate for the building. The estimate is not a settlement. The photo log is useful for the rooms. The slab-moisture page is the one to read if the concrete stayed wet after the closet was mopped.",
         ],
         points: [
-          { title: "Photograph the fittings", body: "The top of the heater, the pan, and the ceiling below. Wide shots and close shots." },
-          { title: "Keep the part", body: "If a supply line or a nipple failed, do not throw it away before it is in a photo." },
-          { title: "Mitigation", body: "Shutting the valve and starting dry-out limit further damage. Reimbursement is the carrier's decision." },
+          { title: "Photograph the heater", body: "Take a wide shot of the closet, a close shot of the pipes on top of the tank, a shot of the drain pan, and a shot of any ceiling below." },
+          { title: "Keep the failed part", body: "If a supply line or a short connector at the top of the tank failed, do not throw it away until it is in a photo." },
+          { title: "Stopping more damage", body: "Shutting the valve and starting the dry-out keeps the loss from spreading. Whether your policy pays for that work is your insurer's decision." },
         ],
       },
       {
@@ -118,9 +119,9 @@ export const moreWaterCauses: readonly Cause[] = [
             ". Family-owned since 1993. We are not a preferred vendor of any insurer and we do not claim a certification the site does not already state. For the wider water-damage process, start at the water damage hub. For a freeze that also broke a line, the burst-pipe page is the other half of that week.",
         ],
         points: [
-          { title: "Garage slabs", body: "A garage heater can wet the house through the door undercut. Look inside, not only at the pan." },
-          { title: "Upstairs closets", body: "If the heater is on the second floor, check the ceiling below before you decide the loss is 'just the closet.'" },
-          { title: "After a freeze", body: "A heater that was drained or left heating an empty tank is a different repair from a leak. Tell us which one you did." },
+          { title: "Water heaters in the garage", body: "When a garage water heater leaks, water can run under the door into the house. Check the floor, baseboards, and drywall on the house side, not just the drain pan." },
+          { title: "Upstairs closets", body: "If the heater is on the second floor, look at the ceiling in the room below before you decide the damage stopped in the closet." },
+          { title: "After a freeze", body: "A heater you drained, or left running with no water in the tank, needs a different repair than a tank that simply leaked. Tell us which one happened." },
         ],
       },
     ],
@@ -155,6 +156,7 @@ export const moreWaterCauses: readonly Cause[] = [
       "We pull the toe kick and the wet cabinet bottoms as far as the moisture goes, dry the slab and the walls, and rebuild the cabinet parts that swelled. A slow drip and a supply line that blew off are different notes.",
     claim:
       "Policies often treat a sudden supply failure differently from a gasket that has been weeping. Check your policy. We photograph the hose, the cabinet, and the floor. We do not promise the claim pays for cabinets.",
+    image: rooms.farmhouseSink,
     sections: [
       {
         eyebrow: "First hour",
@@ -166,9 +168,9 @@ export const moreWaterCauses: readonly Cause[] = [
           "Photograph the open dishwasher, the hose, the cabinet floor, and the room beside the kitchen before you towel it. A drain hose that popped off the disposal and a door gasket that drips only on the dry cycle look similar once everything is mopped. Apartment kitchens and break-room dishwashers in a small commercial suite are the same first steps. A full commercial dishwashing machine in a restaurant is a different piece of equipment. Tell us which one you have.",
         ],
         points: [
-          { title: "Under the sink", body: "The supply and the drain often live in the cabinet next door, not inside the dishwasher tub. Look there." },
-          { title: "Disposal", body: "A drain hose that is off the disposal dumps every cycle into the cabinet. Do not glue it back and hide the wet shelf." },
-          { title: "Power", body: "A wet toe kick and a live outlet are a bad combination. Stay out of the water." },
+          { title: "Look under the sink", body: "The water line and the drain hose are often in the cabinet next to the dishwasher, not inside the tub. Open that door and look." },
+          { title: "The hose at the disposal", body: "If the drain hose has popped off the disposal, every cycle dumps into the cabinet. Do not glue it back on and cover a wet shelf." },
+          { title: "Stay away from the outlet", body: "Water at the kick plate under the cabinets and a live outlet do not mix. Stay out of that water." },
         ],
       },
       {
@@ -179,9 +181,9 @@ export const moreWaterCauses: readonly Cause[] = [
           "An upstairs kitchen, less common but real in some Houston plans, puts that water in the ceiling below. A dishwasher overflow from a clogged air gap or a backed-up drain is a different volume from a pinhole supply. We say which evidence we find. We do not call every wet kitchen a 'flood.' Rising water from outside is a separate cause and often a separate policy.",
         ],
         points: [
-          { title: "Cabinets", body: "Pressed-wood bottoms swell and do not return. Solid wood may dry. We look before we promise either." },
-          { title: "Floors", body: "Laminate and vinyl hide water on the slab. The slab-moisture guide is the right companion when the concrete stayed wet." },
-          { title: "Neighbors", body: "In an apartment, the unit below may see the ceiling first. Call the manager and call us." },
+          { title: "Cabinet bottoms swell", body: "Particle-board cabinet bottoms swell and do not go back to flat. Solid wood sometimes can dry. We look before we tell you which one you have." },
+          { title: "The floor can hide it", body: "Laminate and vinyl can hide water on the concrete. If the slab stayed wet, the slab-moisture guide on this site explains what happens next." },
+          { title: "The apartment below", body: "In an apartment, the unit under you may see the ceiling stain first. Call the manager and call us." },
         ],
       },
       {
@@ -194,9 +196,9 @@ export const moreWaterCauses: readonly Cause[] = [
             ". Active leaks are answered any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
         points: [
-          { title: "Toe kick", body: "If we cannot see the floor under the cabinet, we cannot say it is dry. The kick usually comes off." },
-          { title: "Appliance", body: "We move the dishwasher when that is required to dry. Reconnecting water and power is coordinated, not guessed." },
-          { title: "Scope", body: "A wet shelf is not automatically new cabinets for the whole kitchen. We show you the line." },
+          { title: "The kick plate comes off", body: "If we cannot see the floor under the cabinet, we cannot say it is dry. The board at the bottom of the cabinet usually has to come off." },
+          { title: "Moving the dishwasher", body: "We pull the dishwasher out when that is what it takes to dry the floor. Hooking the water and power back up is a planned step, not a guess at the end." },
+          { title: "Not a whole new kitchen", body: "One wet shelf does not mean every cabinet in the kitchen has to be replaced. We show you where the damage stops." },
         ],
       },
       {
@@ -208,9 +210,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " Photos before cleanup matter here because a mopped kitchen looks like a small spill. We can meet the adjuster and estimate the cabinet and floor repair. That estimate is construction, not a payment promise. The photo log walks a kitchen room by room. The insurance claims hub explains what we will and will not do on the claim.",
         ],
         points: [
-          { title: "Save the hose", body: "If a braided line failed, keep it. Photograph the connection it came off." },
-          { title: "One cycle", body: "Note whether it failed while running or you found it hours later. That timeline helps you. We still do not interpret the policy." },
-          { title: "Not flood", body: "A dishwasher on the second floor is not a flood from the street. If both happened, say both." },
+          { title: "Keep the hose", body: "If a braided supply line failed, keep it. Photograph the fitting it came off of." },
+          { title: "Write down when it happened", body: "Note whether it failed while the dishwasher was running or you found the water hours later. That timeline helps you. We still do not read the policy for you." },
+          { title: "This is not street flooding", body: "A dishwasher on the second floor is not floodwater from the street. If both happened, say so. They are different problems." },
         ],
       },
       {
@@ -223,9 +225,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " or text. For the full drying process, use the water damage page. For a heater in the same kitchen closet, use the water heater page. They can fail in the same room and still be two sources.",
         ],
         points: [
-          { title: "Older cabinets", body: "Heights and West University kitchens often have cabinet boxes that have already been wet once. We do not assume they can take another soak." },
-          { title: "New builds", body: "A newer Katy or Cinco Ranch kitchen can still hide a loose drain hose. Age of the house is not the diagnosis." },
-          { title: "Commercial break rooms", body: "A small office dishwasher is in scope. Say if it is a residential machine or a larger commercial one." },
+          { title: "Older kitchens", body: "Kitchens in the Heights and West University often have cabinets that were wet once already. We do not assume those boxes can take another soaking." },
+          { title: "Newer kitchens too", body: "A newer kitchen in Katy or Cinco Ranch can still hide a loose drain hose. The age of the house does not tell us what failed." },
+          { title: "Office break rooms", body: "We also dry a small dishwasher in an office break room. Tell us if it is a home-style machine or a larger commercial one." },
         ],
       },
     ],
@@ -260,6 +262,7 @@ export const moreWaterCauses: readonly Cause[] = [
       "We find how far water went under the flooring and into the wall behind the toilet, extract it, and dry the slab. Sewage-contaminated overflows need a more careful clean than a clean supply-line break.",
     claim:
       "A sudden overflow or a supply line that fails is a different history from a wax ring that has been damp for months. Check your policy. We document what we see. We do not promise coverage.",
+    image: rooms.bathVanity,
     sections: [
       {
         eyebrow: "First hour",
@@ -271,9 +274,9 @@ export const moreWaterCauses: readonly Cause[] = [
           "Water on a bathroom floor moves fast on a Houston slab. It goes under the door, into the closet, and under the vanity. In an apartment it can reach the corridor and the unit below. Commercial restrooms add multiple fixtures and a floor drain that may already be overwhelmed. Tell us which room and whether the water is clear or contaminated. Do not use a fan to blow contaminated water further across the floor.",
         ],
         points: [
-          { title: "Stop the flush", body: "One more flush is how a contained clog becomes the bedroom carpet." },
-          { title: "Supply versus bowl", body: "Spray from the hose behind the tank is a supply failure. Water from the bowl is an overflow or a clog. Say which." },
-          { title: "Base of the toilet", body: "A chronic drip at the floor is often the seal, not today's overflow. Do not caulk it and hide the stain before it is photographed." },
+          { title: "Do not flush again", body: "Flushing one more time is how a clog that was still in the bowl ends up in the bedroom carpet." },
+          { title: "Hose or bowl", body: "Water spraying from the hose behind the tank is a supply-line failure. Water coming over the bowl is an overflow or a clog. Tell us which one you saw." },
+          { title: "A slow drip at the floor", body: "A long-running drip at the base is often a bad seal, not today's overflow. Do not caulk over the stain before it is photographed." },
         ],
       },
       {
@@ -284,9 +287,9 @@ export const moreWaterCauses: readonly Cause[] = [
           "Upstairs bathrooms in two-story houses in Katy, Sugar Land, Cinco Ranch, and The Woodlands put the ceiling below at risk. Apartment stacks do the same between units. We open the ceiling below only when moisture says it is wet, not because a bathroom overflow 'always' ruins the downstairs. A wax-ring seep can be a smaller, longer wet spot at the flange. That history matters for the building and for the policy. We describe it. We do not choose the coverage word.",
         ],
         points: [
-          { title: "Vanity and closet", body: "Look next door. Bathroom water rarely respects the doorway." },
-          { title: "Flange", body: "Rocking toilets and stains at the bolts are a seal problem. An overflow today does not erase that older clue." },
-          { title: "Commercial restrooms", body: "A failed flush valve can run longer than a house tank. Shut the stop and tell us how many fixtures." },
+          { title: "Check the next room", body: "Look in the closet and at the vanity next to the bathroom. Water from a toilet does not stop at the doorway." },
+          { title: "A rocking toilet", body: "A toilet that rocks, or stains around the bolts, usually means the seal at the floor is bad. Today's overflow does not erase that older problem." },
+          { title: "Commercial restrooms", body: "A failed flush valve in a public restroom can run longer than a house tank. Shut the valve and tell us how many fixtures are involved." },
         ],
       },
       {
@@ -299,9 +302,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " any time when water is still spreading. Scheduled walks are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
         points: [
-          { title: "Do not bleach-and-hope", body: "Pouring cleaner on a wet floor and covering it with a rug traps the moisture in the slab." },
-          { title: "Toilet reset", body: "Setting the toilet back on a wet, soft floor repeats the leak. The floor comes first." },
-          { title: "Downstairs ceiling", body: "If the bath is upstairs, we check below. A stain there is part of this loss until the meter says otherwise." },
+          { title: "Cleaner and a rug will not dry it", body: "Pouring cleaner on a wet floor and covering it with a rug traps the moisture in the concrete." },
+          { title: "Dry the floor before you reset the toilet", body: "Setting the toilet back on a wet, soft floor starts the leak again. The floor has to dry first." },
+          { title: "Look at the ceiling below", body: "If the bathroom is upstairs, we check the ceiling underneath. A stain there stays part of this loss until a moisture meter says the ceiling is dry." },
         ],
       },
       {
@@ -313,9 +316,9 @@ export const moreWaterCauses: readonly Cause[] = [
             " We photograph the bath, the path, and the ceiling below, and we can meet the adjuster. The estimate is for the repair. It is not a payout. The photo log is a simple way to record the bathroom before cleanup. The slab guide matters when the water left the tile and stayed in the concrete. The insurance hub explains the limit of our role.",
         ],
         points: [
-          { title: "Timeline", body: "Write down when you noticed it and whether the toilet had been rocking. Those are facts. Coverage is not." },
-          { title: "Contaminated water", body: "Say if the overflow included waste. It changes the cleanup. It does not, by itself, decide the claim." },
-          { title: "Mitigation", body: "Stopping the valve and drying limit further damage. Ask your insurer what they want saved. We do not invent a deadline." },
+          { title: "Write down the time", body: "Write down when you noticed the water and whether the toilet had been rocking. Those are facts about the house. They are not a coverage decision." },
+          { title: "Say if it was sewage", body: "Tell us if the overflow included waste from the bowl. That changes how we clean. It does not, by itself, decide what the policy pays." },
+          { title: "Stop the water, then ask", body: "Closing the valve and drying the room limit further damage. Ask your insurer what they want you to save. We will not invent a deadline." },
         ],
       },
       {
@@ -328,9 +331,9 @@ export const moreWaterCauses: readonly Cause[] = [
             ". We are not public adjusters and we are not a carrier's vendor. Use the water damage hub for the wider dry-out, and the burst-pipe page if the supply failure was part of a freeze. They should not be written up as the same cause.",
         ],
         points: [
-          { title: "Valve habit", body: "Know where the toilet stop is before you need it. A painted-over valve is a common Houston bathroom surprise." },
-          { title: "Apartments", body: "Tell the office so the unit below is checked. We still need access to the bath that overflowed." },
-          { title: "Commercial", body: "Restroom overflows in a retail or office building are in scope. Say how many stalls and whether a floor drain exists." },
+          { title: "Find the valve now", body: "Know where the shutoff behind the toilet is before you need it. A valve painted over is a common surprise in a Houston bathroom." },
+          { title: "Tell the apartment office", body: "Call the office so someone checks the unit below. We still need to get into the bathroom that overflowed." },
+          { title: "Office and store restrooms", body: "We also handle a restroom overflow in a store or an office. Tell us how many stalls overflowed and whether the room has a floor drain." },
         ],
       },
     ],
