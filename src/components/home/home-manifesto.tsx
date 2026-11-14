@@ -1,5 +1,5 @@
 import { ScrollWords } from '@/components/home/scroll-words';
-import { ImageReveal, Parallax, Reveal } from '@/components/motion';
+import { ImageReveal, Reveal } from '@/components/motion';
 import { Photo } from '@/components/photo';
 import { img } from '@/lib/images';
 import { SiteLogo } from '../site-logo';
@@ -76,11 +76,9 @@ export function HomeManifesto() {
         <div className="relative mt-24 grid items-start gap-16 lg:mt-40 lg:grid-cols-12">
           <div className="relative z-10 hidden lg:col-span-3 lg:col-start-1 lg:block">
             <ImageReveal from="left" className="aspect-[4/5]">
-              <Parallax offset={50} className="size-full" scale={1.12}>
-                <div className="relative size-full">
-                  <Photo image={tile} sizes="24vw" />
-                </div>
-              </Parallax>
+              <div className="relative size-full">
+                <Photo image={tile} sizes="24vw" />
+              </div>
             </ImageReveal>
             <p className="eyebrow mt-4 text-muted-foreground">
               Freestanding tub and marble shower

@@ -6,7 +6,15 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { ReviewCard } from "@/components/ui/infinite-review-cards";
 import { pageMetadata } from "@/lib/seo";
-import { googleReviews, testimonials } from "@/lib/testimonials";
+import { getService, servicePath } from "@/lib/services";
+import { googleReviews, testimonials, type Testimonial } from "@/lib/testimonials";
+
+function linksFor(item: Testimonial) {
+  return item.services.flatMap((slug) => {
+    const service = getService(slug);
+    return service ? [{ href: servicePath(service.slug), label: service.name }] : [];
+  });
+}
 
 export const metadata: Metadata = pageMetadata({
   title: "Houston Remodeling Reviews",
@@ -25,7 +33,7 @@ export default function TestimonialsPage() {
         lede={`${googleReviews.score} stars across ${googleReviews.count} Google reviews. These are the five-star notes, from kitchens and baths to the night the pipes burst.`}
         crumbs={[{ name: "Reviews", path: "/testimonials" }]}
       >
-        <p className="mt-8">
+        <p className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
           <a
             href={googleReviews.href}
             target="_blank"
@@ -33,6 +41,15 @@ export default function TestimonialsPage() {
             className="inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.2em] underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             See all {googleReviews.count} on Google
+            <ArrowUpRight className="size-4" aria-hidden />
+          </a>
+          <a
+            href={googleReviews.reviewHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.2em] underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+          >
+            Leave us a Google review
             <ArrowUpRight className="size-4" aria-hidden />
           </a>
         </p>
@@ -43,7 +60,7 @@ export default function TestimonialsPage() {
           <ul className="columns-1 gap-4 md:columns-2 xl:columns-3">
             {testimonials.map((item) => (
               <li key={item.author} className="mb-4 break-inside-avoid">
-                <ReviewCard item={item} />
+                <ReviewCard item={item} links={linksFor(item)} />
               </li>
             ))}
           </ul>

@@ -4,6 +4,8 @@ export type Testimonial = {
   detail: string;
   source: string;
   rating: number;
+  /** Service hubs this note is about. Empty when it does not name a service. */
+  services: readonly string[];
 };
 
 /** Google listing for Elite Restorations, 511 Crestwater Ct, Houston. */
@@ -11,6 +13,7 @@ export const googleReviews = {
   score: 4.8,
   count: 87,
   href: "https://www.google.com/maps/place/?q=place_id:ChIJxXXLtHLBQIYRoQotAZs5SWw",
+  reviewHref: "https://g.page/r/CaEKLQGbOUlsEBE/review",
 } as const;
 
 export const testimonials: Testimonial[] = [
@@ -21,6 +24,7 @@ export const testimonials: Testimonial[] = [
     detail: "Water damage and renovations",
     source: "Google",
     rating: 5,
+    services: ["water-damage-restoration"],
   },
   {
     quote:
@@ -29,6 +33,7 @@ export const testimonials: Testimonial[] = [
     detail: "Bathroom remodel",
     source: "Google",
     rating: 5,
+    services: ["bathroom-remodeling"],
   },
   {
     quote:
@@ -37,6 +42,7 @@ export const testimonials: Testimonial[] = [
     detail: "Kitchen remodel",
     source: "Google",
     rating: 5,
+    services: ["kitchen-remodeling"],
   },
   {
     quote:
@@ -45,6 +51,7 @@ export const testimonials: Testimonial[] = [
     detail: "Repeat home projects",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -53,6 +60,7 @@ export const testimonials: Testimonial[] = [
     detail: "Dining room to home office",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -61,6 +69,7 @@ export const testimonials: Testimonial[] = [
     detail: "Repeat customer",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -69,6 +78,7 @@ export const testimonials: Testimonial[] = [
     detail: "Finished remodel",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote: "Very happy with how it came out! Excellent work!",
@@ -76,6 +86,7 @@ export const testimonials: Testimonial[] = [
     detail: "Home project",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -84,6 +95,7 @@ export const testimonials: Testimonial[] = [
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -92,6 +104,7 @@ export const testimonials: Testimonial[] = [
     detail: "Water restoration · June 2025",
     source: "Google",
     rating: 5,
+    services: ["water-damage-restoration"],
   },
   {
     quote: "Exceptional service and very fast. Their team is very knowledgeable.",
@@ -99,6 +112,7 @@ export const testimonials: Testimonial[] = [
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote: "Very knowledgable and professional!",
@@ -106,5 +120,6 @@ export const testimonials: Testimonial[] = [
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
 ];

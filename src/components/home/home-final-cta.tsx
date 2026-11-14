@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 
-import { LeadForm } from "@/components/lead-form";
+import { DeferredLeadForm } from "@/components/deferred-lead-form";
 import { RoofLinework } from "@/components/home/roof-linework";
 import { Reveal, SplitLines } from "@/components/motion";
 import { BackgroundBeams } from "@/components/ui/background-beams";
@@ -40,7 +40,7 @@ export function HomeFinalCta() {
 
         <div className="mt-20 grid gap-y-16 lg:grid-cols-12">
           <div className="dark text-[#efe9dd] lg:col-span-7">
-            <LeadForm
+            <DeferredLeadForm
               idPrefix="home"
               density="compact"
               showPhotos={false}

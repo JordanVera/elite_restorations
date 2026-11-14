@@ -25,6 +25,7 @@ export function Photo({ image, sizes, priority, className, quality = 78, intrins
         height={image.height}
         sizes={sizes}
         priority={priority}
+        fetchPriority={priority ? "high" : undefined}
         quality={quality}
         unoptimized={unoptimized}
         className={cn("h-auto w-full", className)}
@@ -39,6 +40,7 @@ export function Photo({ image, sizes, priority, className, quality = 78, intrins
       fill
       sizes={sizes}
       priority={priority}
+      fetchPriority={priority ? "high" : undefined}
       quality={quality}
       unoptimized={unoptimized}
       className={cn("object-cover", className)}

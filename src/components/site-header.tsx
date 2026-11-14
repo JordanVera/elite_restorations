@@ -3,11 +3,10 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
-import { NavigationMenu } from 'radix-ui';
+import * as NavigationMenu from 'radix-ui/navigation-menu';
 import { MobileNav } from '@/components/mobile-nav';
-import { ScrollProgressLine } from '@/components/motion';
+import { ScrollProgressLine } from '@/components/scroll-progress';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
@@ -23,24 +22,30 @@ import { cn } from '@/lib/utils';
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const { scrollY } = useScroll();
   const [scrolled, setScrolled] = React.useState(false);
   const [hidden, setHidden] = React.useState(false);
   const [menuValue, setMenuValue] = React.useState('');
   const overHomeHero = pathname === '/' && !scrolled && !menuValue;
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    const previous = scrollY.getPrevious() ?? 0;
-    setScrolled(latest > 40);
-    setHidden(latest > 480 && latest > previous);
-  });
+  React.useEffect(() => {
+    let previous = window.scrollY;
+    const onScroll = () => {
+      const latest = window.scrollY;
+      setScrolled(latest > 40);
+      setHidden(latest > 480 && latest > previous);
+      previous = latest;
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <motion.header
+    <header
       onFocusCapture={() => setHidden(false)}
-      animate={{ y: hidden && !menuValue ? '-100%' : '0%' }}
-      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
+        'transition-transform duration-500 ease-out-expo',
+        hidden && !menuValue && '-translate-y-full',
         'fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,color] duration-500',
         menuValue
           ? 'border-b border-border bg-background'
@@ -103,7 +108,7 @@ export function SiteHeader() {
         </div>
       </div>
       <ScrollProgressLine className="absolute inset-x-0 bottom-0" />
-    </motion.header>
+    </header>
   );
 }
 

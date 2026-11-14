@@ -1,8 +1,3 @@
-"use client";
-
-import * as React from "react";
-import { motion, useReducedMotion } from "motion/react";
-
 import { cn } from "@/lib/utils";
 
 const PATH_COUNT = 26;
@@ -26,13 +21,7 @@ const paths = Array.from({ length: PATH_COUNT }, (_, i) => ({
   end: 93 + seeded(i, 3) * 8,
 }));
 
-export const BackgroundBeams = React.memo(function BackgroundBeams({
-  className,
-}: {
-  className?: string;
-}) {
-  const reduce = useReducedMotion();
-
+export function BackgroundBeams({ className }: { className?: string }) {
   return (
     <div
       aria-hidden
@@ -56,43 +45,7 @@ export const BackgroundBeams = React.memo(function BackgroundBeams({
             strokeWidth="0.5"
           />
         ))}
-        {!reduce &&
-          paths.map((path, index) => (
-            <path
-              key={`beam-${index}`}
-              d={path.d}
-              stroke={`url(#beam-${index})`}
-              strokeOpacity="0.55"
-              strokeWidth="0.6"
-            />
-          ))}
-        <defs>
-          {paths.map((path, index) => (
-            <motion.linearGradient
-              id={`beam-${index}`}
-              key={`gradient-${index}`}
-              initial={{ x1: "0%", x2: "0%", y1: "0%", y2: "0%" }}
-              animate={{
-                x1: ["0%", "100%"],
-                x2: ["0%", "95%"],
-                y1: ["0%", "100%"],
-                y2: ["0%", `${path.end}%`],
-              }}
-              transition={{
-                duration: path.duration,
-                ease: "easeInOut",
-                repeat: Infinity,
-                delay: path.delay,
-              }}
-            >
-              <stop stopColor="#d93e39" stopOpacity="0" />
-              <stop stopColor="#f2665d" />
-              <stop offset="35%" stopColor="#efe9dd" />
-              <stop offset="100%" stopColor="#efe9dd" stopOpacity="0" />
-            </motion.linearGradient>
-          ))}
-        </defs>
       </svg>
     </div>
   );
-});
+}

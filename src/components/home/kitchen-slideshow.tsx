@@ -15,21 +15,26 @@ export function KitchenSlideshow() {
   const [paused, setPaused] = useState(false);
   return (
     <>
-      <div
-        className="kitchen-slideshow"
-        data-paused={paused}
-        aria-hidden="true"
-      >
+      <div className="kitchen-slideshow" data-paused={paused}>
         {slides.map((slide, i) => (
-          <div className={`kitchen-slide kitchen-slide-${i}`} key={slide.src}>
+          <div
+            className={`kitchen-slide kitchen-slide-${i}`}
+            key={slide.src}
+            {...(i === 0 ? {} : { 'aria-hidden': true })}
+          >
             <div className="kitchen-slide-image">
               <Image
                 src={`/images/projects/${slide.src}`}
-                alt=""
+                alt={
+                  i === 0
+                    ? 'Kitchen remodel in Houston: vaulted waterfall island'
+                    : ''
+                }
                 fill
                 sizes="100vw"
                 quality={75}
                 priority={i === 0}
+                fetchPriority={i === 0 ? 'high' : 'low'}
                 style={{ objectFit: 'cover', objectPosition: slide.position }}
               />
             </div>

@@ -240,6 +240,12 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

@@ -104,6 +104,24 @@ export default function EmergencyPage() {
                 Frozen or burst pipe: what to do first
                 <ArrowUpRight className="size-4" aria-hidden />
               </Link>
+              <Link
+                href="/what-to-do-after-a-roof-leak-in-houston"
+                className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                What to do after a roof leak
+              </Link>
+              <Link
+                href="/slab-moisture-after-a-supply-line-break-houston"
+                className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                Slab moisture after a supply-line break
+              </Link>
+              <Link
+                href="/how-to-build-an-insurance-photo-log"
+                className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+              >
+                How to build an insurance photo log
+              </Link>
             </div>
           </Reveal>
 

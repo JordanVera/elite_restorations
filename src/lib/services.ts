@@ -932,6 +932,14 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/storm-and-hail-roof-repair-houston',
         label: 'Storm and hail roof repair in Houston',
       },
+      {
+        href: '/what-to-do-after-a-roof-leak-in-houston',
+        label: 'What to do after a roof leak in Houston',
+      },
+      {
+        href: '/hail-damage-vs-normal-wear-houston-roof',
+        label: 'Hail damage vs normal wear on a Houston roof',
+      },
     ],
     image: img(
       '/images/services/roof-replacement.webp',
@@ -1055,6 +1063,14 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/roof-replacement-cost-houston',
         label: 'What changes a roof replacement cost',
+      },
+      {
+        href: '/what-to-do-after-a-roof-leak-in-houston',
+        label: 'What to do after a roof leak in Houston',
+      },
+      {
+        href: '/hail-damage-vs-normal-wear-houston-roof',
+        label: 'Hail damage vs normal wear on a Houston roof',
       },
     ],
     image: img(
@@ -1439,6 +1455,18 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/how-insurance-claims-work-texas-restoration',
         label: 'How insurance claims work for Texas restoration',
       },
+      {
+        href: '/what-to-do-after-a-roof-leak-in-houston',
+        label: 'What to do after a roof leak in Houston',
+      },
+      {
+        href: '/slab-moisture-after-a-supply-line-break-houston',
+        label: 'Slab moisture after a supply-line break',
+      },
+      {
+        href: '/how-to-build-an-insurance-photo-log',
+        label: 'How to build an insurance photo log',
+      },
     ],
     image: img(
       '/images/services/water-damage-restoration.jpg',
@@ -1541,6 +1569,18 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       {
         href: '/storm-and-hail-roof-repair-houston',
         label: 'Storm and hail roof repair in Houston',
+      },
+      {
+        href: '/how-to-build-an-insurance-photo-log',
+        label: 'How to build an insurance photo log',
+      },
+      {
+        href: '/hail-damage-vs-normal-wear-houston-roof',
+        label: 'Hail damage vs normal wear on a Houston roof',
+      },
+      {
+        href: '/slab-moisture-after-a-supply-line-break-houston',
+        label: 'Slab moisture after a supply-line break',
       },
     ],
     image: img(
