@@ -1,4 +1,6 @@
+import { assertCopyAllowed } from '@/lib/copy-guards';
 import { humanize, img, type Img } from '@/lib/images';
+import { fitDescription, titleFits } from '@/lib/seo';
 
 export type ProjectCategory =
   | 'Kitchens'
@@ -19,6 +21,13 @@ export type Project = {
   cover: Img;
   gallery: Img[];
   featured?: boolean;
+  /** Closing line for the estimate band. Other projects keep the shared line. */
+  cta?: string;
+  /**
+   * One finished job. Its photos are added on the related service pages
+   * after the existing sample, so those samples stay put.
+   */
+  story?: boolean;
 };
 
 export const projectCategories: ProjectCategory[] = [
@@ -45,6 +54,22 @@ const altOverrides: Record<string, string> = {
     'Aerial view of an emergency tarp covering a Houston roof',
   'restoration/air-movers-drying.jpg':
     'Air movers drying a water-damaged room in a Houston home',
+  'cypress/01-before-floors-torn-out.jpg':
+    'Downstairs in a Cypress home with the old flooring torn out and the slab exposed',
+  'cypress/02-during-room-prepped.jpg':
+    'Downstairs room in a Cypress home, prepped and contained, with air movers set out',
+  'cypress/03-during-self-leveler.jpg':
+    'Self-leveling compound poured on a Cypress slab to flatten it',
+  'cypress/04-after-dining-room-flooring.jpg':
+    'Dining room in a Cypress home with new wood-look luxury vinyl plank flooring',
+  'cypress/05-after-living-room-flooring.jpg':
+    'Living room in a Cypress home with new wood-look luxury vinyl plank flooring',
+  'cypress/06-after-kitchen.jpg':
+    'Cypress kitchen with new shaker-style cabinets, quartz countertops, and a backsplash',
+  'cypress/07-after-kitchen-counters.jpg':
+    'Cypress kitchen counter with quartz, an undermount stainless sink, and shaker-style cabinets',
+  'cypress/08-after-stairs.jpg':
+    'Stair treads in a Cypress home, finished in the same wood-look as the new flooring',
 };
 
 const projectSeoNames: Record<string, string> = {
@@ -62,6 +87,7 @@ const projectSeoNames: Record<string, string> = {
   'roofs-read-from-above': 'Roofing Project Photos',
   'storm-and-water-response': 'Storm and Water Repair',
   'exteriors-renewed': 'Siding Project',
+  'blackhorse-ranch-cypress': 'Cypress Floors & Kitchen',
 };
 
 export function projectSeoName(slug: string) {
@@ -219,6 +245,17 @@ const response = [
     'air-movers-drying.jpg',
   ]),
 ];
+
+const cypressJob = gallery('cypress', 'Cypress project', [
+  '01-before-floors-torn-out.jpg',
+  '02-during-room-prepped.jpg',
+  '03-during-self-leveler.jpg',
+  '04-after-dining-room-flooring.jpg',
+  '05-after-living-room-flooring.jpg',
+  '06-after-kitchen.jpg',
+  '07-after-kitchen-counters.jpg',
+  '08-after-stairs.jpg',
+]);
 
 const exteriors = gallery('siding', 'Siding', [
   'farmhouse-board-and-batten.jpg',
@@ -499,6 +536,29 @@ export const projects: Project[] = [
     cover: exteriors[0],
     gallery: exteriors,
   },
+  {
+    slug: 'blackhorse-ranch-cypress',
+    title: 'Downstairs flooring, stairs and kitchen in BlackHorse Ranch, Cypress',
+    category: 'Floors',
+    tagline: 'Wood-look vinyl, stair treads, and a kitchen, finished October 2026.',
+    summary: [
+      'In October 2026 we finished the downstairs of a house in the BlackHorse Ranch South neighborhood of Cypress, TX 77433, taking out the old flooring, prepping and containing the rooms with air movers, and pouring self-leveling compound to flatten the slab.',
+      'Wood-look luxury vinyl plank went into the dining room and living room, the stairs got new treads in the same wood-look finish, and the kitchen got new shaker-style cabinets, quartz countertops and backsplash, and an undermount stainless sink.',
+    ],
+    notes: [
+      'Old flooring torn out across the downstairs',
+      'Rooms prepped and contained, with air movers',
+      'Self-leveling compound poured to flatten the slab',
+      'Wood-look luxury vinyl plank in the dining room and living room',
+      'New stair treads in the same wood-look finish',
+      'Shaker-style cabinets, quartz countertops and backsplash, and an undermount stainless sink',
+    ],
+    services: ['vinyl-flooring', 'kitchen-remodeling', 'countertops', 'backsplash'],
+    cover: cypressJob[3],
+    gallery: cypressJob,
+    cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
+    story: true,
+  },
 ];
 
 export const projectsBySlug = new Map(projects.map((p) => [p.slug, p]));
@@ -516,11 +576,11 @@ export type ServiceGalleryItem = {
   project: Project;
 };
 
-/** Unique project photographs for a service, in project order. */
-export function imagesForService(serviceSlug: string): ServiceGalleryItem[] {
+function galleryItemsForService(serviceSlug: string, story: boolean): ServiceGalleryItem[] {
   const seen = new Set<string>();
   const items: ServiceGalleryItem[] = [];
   for (const project of projectsForService(serviceSlug)) {
+    if (Boolean(project.story) !== story) continue;
     for (const image of project.gallery) {
       if (seen.has(image.src)) continue;
       seen.add(image.src);
@@ -528,4 +588,50 @@ export function imagesForService(serviceSlug: string): ServiceGalleryItem[] {
     }
   }
   return items;
+}
+
+/**
+ * Sample photographs for a service, in project order.
+ * A story job is left out of this list so the sample on each page stays as it was.
+ */
+export function imagesForService(serviceSlug: string): ServiceGalleryItem[] {
+  return galleryItemsForService(serviceSlug, false);
+}
+
+/** Photographs from a finished job, linked after the sample on a service page. */
+export function storyItemsForService(serviceSlug: string): ServiceGalleryItem[] {
+  return galleryItemsForService(serviceSlug, true);
+}
+
+const phone = '(713) 909-0034';
+
+for (const project of projects) {
+  const lead = projectSeoName(project.slug) ?? project.title;
+  if (projectSeoName(project.slug) && !titleFits(lead)) {
+    throw new Error(`Project SEO name does not fit: ${project.slug}`);
+  }
+  if (project.story) {
+    const seo = projectSeoName(project.slug);
+    if (!seo) throw new Error(`Story needs an SEO name: ${project.slug}`);
+    const description = `${project.title} in Houston. ${project.tagline}`;
+    if (description.length > 155 || fitDescription(description) !== description) {
+      throw new Error(
+        `Story description is ${description.length} characters and would be trimmed: ${project.slug}`,
+      );
+    }
+    if (!project.cta?.includes(phone) || !/contact page/i.test(project.cta)) {
+      throw new Error(`Story CTA needs the phone and the contact page: ${project.slug}`);
+    }
+  }
+  assertCopyAllowed(
+    `/projects/${project.slug}`,
+    [
+      project.title,
+      project.tagline,
+      project.cta ?? '',
+      ...project.summary,
+      ...project.notes,
+      ...project.gallery.map((image) => image.alt),
+    ].join('\n'),
+  );
 }
