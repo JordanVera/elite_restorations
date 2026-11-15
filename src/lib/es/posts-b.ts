@@ -137,7 +137,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Un inodoro que se filtró, una válvula que se partió, o una regadera que nunca se impermeabilizó pueden ser la razón de la remodelación. Seque el contrapiso y el cielo de abajo antes de que suba loseta nueva. Si va a reclamar, fotografíe la falla y los materiales mojados. No somos ajustadores públicos. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
+            text: 'A veces la remodelación empieza porque un inodoro se filtró, una válvula se partió o la regadera nunca estuvo impermeabilizada. Seque el contrapiso y el cielo de abajo antes de poner loseta nueva. Si va a reclamar, fotografíe la falla y los materiales mojados. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
           },
           {
             type: 'p',
@@ -280,7 +280,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'La gente quiere el piso nuevo agendado el día que salen los muebles. El medidor es el calendario. Una losa de Meyerland que recibió agua del bayou, un hueco de Garden Oaks que recibió una fuga de suministro, y un cielo de Kingwood que tiró agua del ático al piso de abajo son tres secados distintos. El tablón nuevo es el mismo catálogo. La espera no. No somos ajustadores públicos. Si hay un reclamo abierto, su aseguradora decide el pago. Instalamos cuando el piso está listo y usted contrató el trabajo.',
+            text: 'Casi siempre nos piden el piso nuevo para el día en que salen los muebles. Nosotros nos guiamos por el medidor de humedad, no por las ganas de terminar el cuarto. Una losa de Meyerland que recibió agua del bayou, un hueco de Garden Oaks con una fuga de suministro y un cielo de Kingwood que dejó caer agua del ático son tres secados distintos. El tablón nuevo puede salir del mismo catálogo, pero la espera no es la misma. Si el reclamo sigue abierto, su aseguradora decide el pago. Instalamos cuando el piso está listo y usted ya contrató el trabajo.',
           },
           {
             type: 'p',
@@ -310,7 +310,7 @@ export const esPostsB: Article[] = [
     image: '/images/projects/roofing/brick-home-shingles.jpg',
     service: 'roof-replacement',
     ctaTitle: '¿El techo ya se tiene que cambiar?',
-    ctaBody: `Llame al ${phone}. Caminamos las pendientes y decimos si una reparación aguanta. Empresa familiar en Houston desde 1993. No somos ajustadores públicos.`,
+    ctaBody: `Llame al ${phone}. Caminamos las pendientes y le decimos si una reparación aguanta. Somos una empresa familiar en Houston desde 1993.`,
     related: ['houston-hail-storm-roof-claims', 'emergency-tarp-and-board-up-houston'],
     faqs: [
       {
@@ -336,7 +336,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'La teja se cuartea, pierde gránulo y se enrosca bajo el sol de Houston. Las pendientes sur y oeste van primero. El granizo magulla la teja en todo un campo. El viento levanta las orillas y el caballete. Una pestaña faltante no es un techo nuevo. Un techo que se ve cansado en cada pendiente, o golpeado en cada pendiente, sí. Subimos. Los techos bajos de Meyerland y Oak Forest esconden la cara mala desde la banqueta. Los techos largos de Kingwood esconden un valle bajo los pinos. Vemos eso, no una foto del driveway.',
+            text: 'Así distinguimos un techo cansado de uno golpeado. La teja se cuartea, pierde gránulo y se enrosca bajo el sol de Houston, y las pendientes sur y oeste van primero. El granizo magulla la teja en todo un paño, y el viento levanta las orillas y el caballete. Una pestaña faltante no justifica un techo nuevo, pero un techo cansado o golpeado en cada pendiente sí lo justifica. Por eso subimos. Los techos bajos de Meyerland y Oak Forest esconden la cara mala desde la banqueta, y los techos largos de Kingwood esconden un valle bajo los pinos. Vemos eso, no una foto tomada desde el driveway.',
           },
           {
             type: 'p',
@@ -394,7 +394,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Muchos reemplazos empiezan después del granizo o del viento. También puede cambiar un techo gastado sin reclamo alguno. Si va a reclamar, fotografíe las pendientes antes de que una lona esconda una abertura, cuando sea seguro. Esté con el ajustador si puede. Nosotros podemos estar para señalar lo que encontramos. No somos ajustadores públicos. El estimado que escribimos es el precio de construir el techo. No es el monto que va a pagar la póliza. Su aseguradora decide la cobertura, la depreciación y el deducible.',
+            text: 'Muchos reemplazos empiezan después del granizo o del viento, aunque también se puede cambiar un techo gastado sin abrir un reclamo. Si va a reclamar, fotografíe las pendientes antes de que una lona esconda una abertura, cuando sea seguro, y esté con el ajustador si puede. Nosotros podemos estar para señalar lo que encontramos. No somos ajustadores públicos. El estimado que escribimos es el precio de construir el techo, no el monto que va a pagar la póliza. Su aseguradora decide la cobertura, la depreciación y el deducible.',
           },
           {
             type: 'p',
@@ -452,7 +452,7 @@ export const esPostsB: Article[] = [
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: '¿Necesita a alguien el primer día?',
-    ctaBody: `Llame al ${phone} si el agua llegó a los muros o a los pisos. No somos ajustadores públicos. Su aseguradora decide la cobertura. Empresa familiar desde 1993.`,
+    ctaBody: `Llame al ${phone} si el agua llegó a los muros o a los pisos. Su aseguradora decide la cobertura. Somos una empresa familiar desde 1993.`,
     related: ['houston-leaks-pipes-heater-dishwasher-toilet', 'houston-flood-damage-repair'],
     faqs: [
       {
@@ -504,7 +504,7 @@ export const esPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Llame a su aseguradora si la pérdida fue repentina y quiere un reclamo. Dígales qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo, o agua que subió de afuera. Son distintos. No somos ajustadores públicos. No vamos a elegir un nombre más bonito para el agua. Puede llamarnos el mismo día para empezar a secar. Esperar un fin de semana a que llegue el ajustador es la forma en que un zoclo mojado se vuelve un muro mojado.',
+            text: 'Si la pérdida fue repentina y quiere un reclamo, llame a su aseguradora y dígales qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo o agua que subió de afuera. No es lo mismo, y no le vamos a poner un nombre más bonito al agua. Puede llamarnos el mismo día para empezar a secar. Si espera el fin de semana a que llegue el ajustador, un zoclo mojado se convierte en un muro mojado.',
           },
           {
             type: 'links',
@@ -569,7 +569,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'No compre gabinetes. No pinte una mancha. No prenda el aire con un filtro empapado y espere. No firme un contrato que no ha leído porque alguien tocó y dijo que el camión estaba en la calle. Puede contratar una cuadrilla hoy. Debe saber que trabajamos para usted. No somos ajustadores públicos. Su aseguradora sigue decidiendo el reclamo. Pregunte qué se va a secar, qué se va a quitar y cuánto cuesta el siguiente paso.',
+            text: 'El primer día no es para comprar gabinetes, pintar una mancha o prender el aire con un filtro empapado a ver si se compone. Tampoco firme un contrato que no ha leído solo porque alguien tocó y dijo que el camión ya estaba en la calle. Puede contratar una cuadrilla hoy. Trabajamos para usted, y su aseguradora sigue decidiendo el reclamo. Pregunte qué se va a secar, qué se va a quitar y cuánto cuesta el siguiente paso.',
           },
           {
             type: 'p',

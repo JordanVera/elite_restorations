@@ -108,8 +108,9 @@ for (const post of esPosts) {
   } catch (error) {
     errors.push(error instanceof Error ? error.message : String(error));
   }
-  if (!blob.includes('No somos ajustadores públicos.')) {
-    errors.push(`${post.path} is missing the Spanish insurance sentence`);
+  const phraseCount = blob.split('No somos ajustadores públicos.').length - 1;
+  if (phraseCount < 1 || phraseCount > 2) {
+    errors.push(`${post.path} uses the insurance sentence ${phraseCount} times`);
   }
 }
 

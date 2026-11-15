@@ -16,12 +16,12 @@ export const esPostsA: Article[] = [
     service: 'roofing',
     emergency: true,
     ctaTitle: '¿Hay que ver el techo?',
-    ctaBody: `Llame al ${phone}. Fotografiamos las pendientes y ponemos lona si hay una abertura y es seguro. No somos ajustadores públicos. Su aseguradora decide el reclamo.`,
+    ctaBody: `Llame al ${phone}. Fotografiamos las pendientes y ponemos lona si hay una abertura y es seguro subir. Su aseguradora decide el reclamo.`,
     related: ['emergency-tarp-and-board-up-houston', 'houston-roof-replacement-guide'],
     faqs: [
       {
         q: '¿El granizo se ve desde el suelo?',
-        a: 'A veces se ven pestañas faltantes o metal abollado. Muchas veces no se ve nada. Los golpes en la teja aparecen arriba. Un techo también puede estar gastado sin granizo. Son frases distintas en un reclamo.',
+        a: 'A veces se ven pestañas faltantes o metal abollado, y muchas veces no se ve nada desde el suelo. Los golpes en la teja aparecen cuando alguien está arriba. Un techo también puede estar gastado sin que haya caído granizo, y en un reclamo esas son dos historias distintas.',
       },
       {
         q: '¿Firmo con la primera persona que toca la puerta?',
@@ -42,7 +42,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Las tormentas de primavera cruzan el condado de Harris y dejan granizo en techos de asfalto, de Meyerland a Tomball. La piedra pega en la teja, la magulla y le quita gránulo. Desde la calle el techo puede seguir viéndose parejo. Las ventilas de metal, las canaletas y los mosquiteros enseñan las abolladuras que la teja esconde. El viento de la misma tormenta levanta orillas y caballetes. Eso es una marca distinta del golpe.',
+            text: 'Las tormentas de primavera cruzan el condado de Harris y dejan granizo en techos de asfalto, desde Meyerland hasta Tomball. La piedra pega en la teja, la magulla y le quita el gránulo, aunque desde la calle el techo puede seguir viéndose parejo. Las ventilas de metal, las canaletas y los mosquiteros suelen enseñar las abolladuras que la teja esconde. El viento de esa misma tormenta levanta orillas y caballetes, y esa marca es distinta del golpe del granizo.',
           },
           {
             type: 'p',
@@ -50,7 +50,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'La edad importa, y lo decimos. Un techo de veinte años, cuarteado y pelón, puede fallar sin una sola piedra. Granizo en un techo más joven es otra historia. Mezclar las dos en una sola frase no le ayuda a usted ni a quien lee las fotos. Describimos lo que hay en el techo que tenemos enfrente.',
+            text: 'La edad también importa, y se lo decimos cuando es el caso. Un techo de veinte años, cuarteado y sin gránulo, puede fallar sin una sola piedra, mientras que el granizo en un techo más joven es otra historia. Juntar las dos cosas en la misma explicación no le ayuda a usted ni a quien lee las fotos. Describimos lo que de verdad hay en el techo que tenemos enfrente.',
           },
         ],
       },
@@ -120,7 +120,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Una reparación es honesta cuando el daño es limitado y el resto del techo todavía tiene vida. Un reemplazo es la frase correcta cuando los golpes, las cuarteaduras o la teja gastada recorren las pendientes. Lo decimos después de la inspección. Una lona puede quedarse en una abertura mientras espera al ajustador. No es un acabado, y no debería pasar una temporada si la madera está abierta.',
+            text: 'Una reparación es la respuesta honesta cuando el daño es limitado y el resto del techo todavía tiene vida. El reemplazo corresponde cuando los golpes, las cuarteaduras o la teja gastada recorren las pendientes, y lo decimos después de la inspección. Una lona puede quedarse en una abertura mientras espera al ajustador, pero no es un acabado y no debería pasar una temporada ahí si la madera está abierta.',
           },
           {
             type: 'p',
@@ -165,7 +165,7 @@ export const esPostsA: Article[] = [
     service: 'roofing-emergency-tarp-repair',
     emergency: true,
     ctaTitle: '¿La casa está abierta al clima?',
-    ctaBody: `Llame al ${phone}. Ponemos lona y tablas cuando es seguro. No somos ajustadores públicos. Su aseguradora decide cualquier reclamo.`,
+    ctaBody: `Llame al ${phone}. Ponemos lona y tablas cuando es seguro trabajar. Su aseguradora decide cualquier reclamo.`,
     related: ['houston-hail-storm-roof-claims', 'first-24-hours-water-damage-houston'],
     faqs: [
       {
@@ -191,7 +191,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'La lona va en el techo. La madera va en una ventana, una puerta corrediza o una abertura en la pared. Después de una tormenta la gente mezcla las palabras porque las dos significan “cerrar la casa”. La cuadrilla, la escalera y el material no son los mismos. Díganos cuál está viendo cuando llame. Si no está seguro, diga lo que ve: cielo a través del cielo raso, vidrio en el piso, o una puerta colgando.',
+            text: 'La lona va en el techo, y la madera va en una ventana, una puerta corrediza o una abertura de la pared. Después de una tormenta es fácil mezclar las dos, porque las dos quieren decir que hay que cerrar la casa, pero la cuadrilla, la escalera y el material no son los mismos. Cuando llame, díganos cuál está viendo. Si no está seguro, describa lo que ve: cielo a través del plafón, vidrio en el piso o una puerta colgando.',
           },
           {
             type: 'p',
@@ -306,7 +306,7 @@ export const esPostsA: Article[] = [
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: '¿El agua sigue avanzando?',
-    ctaBody: `Llame al ${phone}. Cierre el suministro si puede hacerlo con seguridad. No somos ajustadores públicos. Su aseguradora decide la cobertura.`,
+    ctaBody: `Llame al ${phone}. Cierre el suministro si puede hacerlo sin riesgo. Su aseguradora decide la cobertura.`,
     related: ['first-24-hours-water-damage-houston', 'houston-flood-damage-repair'],
     faqs: [
       {
@@ -395,7 +395,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Cierre la válvula de la pared detrás del inodoro si el problema es el suministro. Si la taza se está desbordando, deje de usar todos los drenajes de esa línea hasta que se quite el tapón. El agua limpia y el agua del drenaje no son el mismo desastre. Diga cuál fue. Las pólizas preguntan. No somos ajustadores públicos. No le cambiamos el nombre a una filtración lenta para que suene a una inundación repentina. Secamos lo que está mojado y reparamos lo que usted contrata.',
+            text: 'Si el problema es el suministro, cierre la válvula de la pared detrás del inodoro. Si la taza se está desbordando, deje de usar todos los drenajes de esa línea hasta que se quite el tapón. El agua limpia y el agua del drenaje no son el mismo desastre, así que diga cuál fue, porque las pólizas lo preguntan. No le cambiamos el nombre a una filtración lenta para que suene a una inundación repentina. Secamos lo que está mojado y reparamos lo que usted contrata.',
           },
           {
             type: 'links',
@@ -457,7 +457,7 @@ export const esPostsA: Article[] = [
     service: 'water-damage-restoration',
     emergency: true,
     ctaTitle: '¿Subió agua a la casa?',
-    ctaBody: `Llame al ${phone}. Diga que vino de afuera. No somos ajustadores públicos. Su aseguradora decide qué póliza aplica.`,
+    ctaBody: `Llame al ${phone}. Díganos si el agua vino de afuera. Su aseguradora decide qué póliza aplica.`,
     related: ['houston-leaks-pipes-heater-dishwasher-toilet', 'first-24-hours-water-damage-houston'],
     faqs: [
       {
@@ -483,7 +483,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Houston se inunda de más de una manera. Brays Bayou ha metido agua en casas bajas de Meyerland. Clear Creek lo ha hecho en Friendswood. Cypress Creek y Spring Creek han mojado calles del noroeste y del norte. El San Jacinto y Lake Houston han llegado a terreno bajo en Humble y Kingwood. Una casa tres cuadras más arriba, en el mismo vecindario, puede quedarse seca en la misma tormenta. No tratamos un código postal como si fuera una línea de agua.',
+            text: 'En Houston el agua entra de más de una manera. Brays Bayou ha metido agua en las casas bajas de Meyerland, Clear Creek lo ha hecho en Friendswood, y Cypress Creek y Spring Creek han mojado calles del noroeste y del norte. El San Jacinto y Lake Houston han llegado al terreno bajo de Humble y Kingwood. Una casa tres cuadras más arriba, en el mismo vecindario, puede quedarse seca en la misma tormenta, así que no tratamos un código postal como si fuera una línea de agua.',
           },
           {
             type: 'p',
@@ -500,7 +500,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Llame a su aseguradora y pregunte bajo qué póliza quieren el aviso. Después llame al (713) 909-0034 si quiere que el edificio se seque y que salgan los acabados mojados. No somos ajustadores públicos. No le decimos que el reclamo va a pagar. Sacamos lo que no puede quedarse, ponemos equipo de secado y llevamos una lista de lo que salió.',
+            text: 'Llame a su aseguradora y pregunte bajo qué póliza quieren el aviso. Después llame al (713) 909-0034 si quiere que sequemos el edificio y que salgan los acabados mojados. No le decimos que el reclamo va a pagar. Sacamos lo que no puede quedarse, ponemos el equipo de secado y llevamos una lista de lo que salió.',
           },
           {
             type: 'list',
@@ -623,7 +623,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Los ranchos de Meyerland y Oak Forest a menudo todavía tienen la cocina encerrada, separada de la sala. La gente quiere que ese muro desaparezca para que quien cocina no esté solo. A veces el muro está cargando el cielo. A veces solo estorba. Lo vemos antes de prometer una abertura. El fregadero y el lavavajillas están sobre drenajes en la losa. Moverlos a una isla nueva es trabajo de concreto, y tiene que estar en el precio antes de demoler, no después.',
+            text: 'En los ranchos de Meyerland y Oak Forest la cocina muchas veces sigue encerrada, separada de la sala, y la gente quiere quitar ese muro para no cocinar sola. A veces el muro carga el cielo y a veces solo estorba, así que lo vemos antes de prometer una abertura. El fregadero y el lavavajillas están sobre drenajes en la losa. Moverlos a una isla nueva es trabajo de concreto, y ese costo tiene que estar en el precio antes de demoler, no después.',
           },
           {
             type: 'p',

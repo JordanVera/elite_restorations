@@ -14,24 +14,24 @@ export const houstonPostsB: Article[] = [
     service: 'bathroom-remodeling',
     ctaTitle: 'Planning a bath?',
     ctaBody:
-      'Call (713) 909-0034. We measure the room before we promise a layout. Family-owned in Houston since 1993. The estimate is free.',
+      'Call (713) 909-0034. We measure the room before we promise a layout. We\'ve been family-owned in Houston since 1993, and the estimate is free.',
     related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
     faqs: [
       {
         q: 'Can a tub become a shower?',
-        a: 'Often, yes. The drain, the curb, and the waterproofing decide it. A pretty tile picture does not. We look at the flange and the floor before we say the tub can go.',
+        a: 'Often, yes. The drain, the curb, and the waterproofing decide it, not a pretty tile picture. We look at the flange and the floor before we say the tub can go.',
       },
       {
         q: 'Why does the fan matter so much here?',
-        a: 'Houston humidity does not leave a new shower alone. The fan needs to vent outside, not into the attic. A fogged mirror every morning is a clue the old fan is not doing the job.',
+        a: 'Houston humidity doesn\'t leave a new shower alone. The fan needs to vent outside, not into the attic. A fogged mirror every morning is a clue the old fan isn\'t doing the job.',
       },
       {
         q: 'Do you remodel one hall bath?',
-        a: 'Yes. A lot of the work in older Houston houses is exactly that room. A powder room is a smaller version. A primary suite is a larger one. The waterproofing steps do not get skipped because the room is small.',
+        a: 'Yes. A lot of the work in older Houston houses is exactly that room. A powder room is a smaller version, and a primary suite is a larger one. We don\'t skip the waterproofing because the room is small.',
       },
       {
         q: 'What if the bath leaked first?',
-        a: 'We dry it before we tile it. If you are filing a claim, photograph the damage and keep that repair separate from any extra layout changes. We are not public adjusters. Your insurer decides the claim.',
+        a: 'We dry it before we tile it. If you\'re filing a claim, photograph the damage and keep that repair separate from any extra layout changes. We are not public adjusters. Your insurer decides the claim.',
       },
     ],
     sections: [
@@ -40,15 +40,15 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Oak Forest, Meyerland, and a lot of Humble’s older streets have a hall bath with a tub, a small vanity, and a door that barely clears the toilet. People want a shower they can walk into and a vanity that holds more than a cup. The room does not get bigger because we wish it would. We measure the door swing, the window, and the drain. Sometimes the tub stays and the surround is the project. Sometimes the tub comes out and a curb shower fits. We say which one the plumbing allows.',
+            text: 'Oak Forest, Meyerland, and a lot of Humble’s older streets have a hall bath with a tub, a small vanity, and a door that barely clears the toilet. People want a shower they can walk into and a vanity that holds more than a cup. The room doesn\'t get bigger because we wish it would. We measure the door swing, the window, and the drain. Sometimes the tub stays and the surround is the project. Sometimes the tub comes out and a curb shower fits. We say which one the plumbing allows.',
           },
           {
             type: 'p',
-            text: 'Kingwood, Cypress, and newer Tomball houses often already have a primary bath with room for a glass panel and a double vanity. The failure there is usually the pan, the corners, or a fan that dumps steam into the attic. A remodel can be new tile and a real waterproofing layer without moving a single wall. Moving the shower to the window wall is a different project, and on a post-tension slab it may not be worth the cut.',
+            text: 'Kingwood, Cypress, and newer Tomball houses often already have a primary bath with room for a glass panel and a double vanity. The failure there\'s usually the pan, the corners, or a fan that dumps steam into the attic. A remodel can be new tile and a real waterproofing layer without moving a single wall. Moving the shower to the window wall is a different project, and on a post-tension slab it may not be worth the cut.',
           },
           {
             type: 'p',
-            text: 'Montrose and Garden Oaks add pier-and-beam floors and rooms that are out of square. A glass panel that was ordered square will show the gap. We template from the room. Original trim outside the bath is worth matching if the rest of the house still has it. A plastic surround in a bungalow can be the right cheap fix, or it can be the thing you are tired of. Both are honest conversations.',
+            text: 'Montrose and Garden Oaks add pier-and-beam floors and rooms that are out of square. A glass panel ordered square will show the gap, so we template from the room. Original trim outside the bath is worth matching if the rest of the house still has it. A plastic surround in a bungalow can be the right simple fix, or it can be the thing you\'re tired of. Both are honest conversations.',
           },
         ],
       },
@@ -57,11 +57,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Tile is not waterproof. The layer behind it is. We put that layer on the walls and the pan, we treat the corners and the niche, and then we set the tile. A niche that is just a hole in the studs will leak behind your shampoo bottles. The curb gets the same attention. This is the part of the job you will not see in a photograph, and it is the part that decides whether the ceiling below stays dry.',
+            text: 'Tile isn\'t waterproof. The layer behind it is. We put that layer on the walls and the pan, we treat the corners and the niche, and then we set the tile. A niche that\'s just a hole in the studs will leak behind your shampoo bottles, and the curb gets the same attention. This is the part of the job you won\'t see in a photograph, and it\'s the part that decides whether the ceiling below stays dry.',
           },
           {
             type: 'p',
-            text: 'Second-floor baths in Spring and Cypress need the ceiling underneath in the plan. If the old pan already stained that ceiling, we open what is wet, dry it, and rebuild it as part of the job. Closing a pretty shower over a wet ceiling is how you buy the same repair twice. Ground-floor baths on a slab need the floor flat enough for the tile. A hump at the door shows up in the grout lines.',
+            text: 'Second-floor baths in Spring and Cypress need the ceiling underneath in the plan. If the old pan already stained that ceiling, we open what is wet, dry it, and rebuild it as part of the job. Closing a pretty shower over a wet ceiling is how you buy the same repair twice. Ground-floor baths on a slab need the floor flat enough for the tile, because a hump at the door shows up in the grout lines.',
           },
           {
             type: 'list',
@@ -79,11 +79,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Paint in a bath wants a finish you can wipe. A matte ceiling that never dries will spot. We vent the room and we give the waterproofing time before the door is closed up for a week. Grout in a shower gets dirty. A grout that can be sealed, or a grout joint you are willing to clean, belongs in the choice of tile. Tiny tiles mean more grout. Large tiles mean a flatter wall.',
+            text: 'Paint in a bath wants a finish you can wipe. A matte ceiling that never dries will spot. We vent the room and we give the waterproofing time before the door is closed up for a week. Grout in a shower gets dirty, so a grout you can seal, or a joint you\'re willing to clean, belongs in the tile choice. Tiny tiles mean more grout. Large tiles mean a flatter wall.',
           },
           {
             type: 'p',
-            text: 'Vanities made of raw particle board swell at the sink. We have opened enough of them. A plywood box or a well-built cabinet with a top that protects the edge survives the splash. The top itself can be stone, a cultured top, or a simpler solid surface. We talk about the sink you use, not a showroom photo. In a narrow hall bath, a smaller vanity with a real medicine cabinet beats a wide cabinet that blocks the door.',
+            text: 'Vanities made of raw particle board swell at the sink. We\'ve opened enough of them. A plywood box, or a well-built cabinet with a top that protects the edge, survives the splash. The top itself can be stone, a cultured top, or a simpler solid surface. We talk about the sink you use, not a showroom photo. In a narrow hall bath, a smaller vanity with a real medicine cabinet beats a wide cabinet that blocks the door.',
           },
           {
             type: 'links',
@@ -97,15 +97,15 @@ export const houstonPostsB: Article[] = [
         ],
       },
       {
-        heading: 'Plumbing that will not move',
+        heading: 'Plumbing that won\'t move',
         blocks: [
           {
             type: 'p',
-            text: 'On a slab, the toilet flange and the shower drain are in concrete. Moving them is a cut, a patch, and a dust day. Keeping them and rebuilding the room around them is often the better remodel. On a pier-and-beam house we can sometimes reroute under the floor, which is messy in a different way and still has to be supported. We do not promise a freestanding tub on a new wall until we have seen the drain and the joists.',
+            text: 'On a slab, the toilet flange and the shower drain are in concrete. Moving them is a cut, a patch, and a dusty day. Keeping them and rebuilding the room around them is often the better remodel. On a pier-and-beam house we can sometimes reroute under the floor, which is messy in a different way and still has to be supported. We don\'t promise a freestanding tub on a new wall until we\'ve seen the drain and the joists.',
           },
           {
             type: 'p',
-            text: 'Supply lines in older Garden Oaks and Montrose houses may be a mix of old and new. If we are opening the wall, that is the time to replace a crusty valve, not the week after the tile is up. Shutoffs that do not shut are part of the scope when we find them. We would rather add them while the wall is open than leave you with a single main valve for the whole house.',
+            text: 'Supply lines in older Garden Oaks and Montrose houses may be a mix of old and new. If we\'re opening the wall, that\'s the time to replace a crusty valve, not the week after the tile is up. Shutoffs that don\'t shut are part of the scope when we find them. We would rather add them while the wall is open than leave you with a single main valve for the whole house.',
           },
         ],
       },
@@ -114,11 +114,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Protect the rest of the house. Demo the wet finishes. Repair the framing we can now see. Waterproof. Tile. Set the vanity, the glass, and the accessories. Paint when the dust is actually gone. A bath that is painted before the tile is cut will wear that dust in the finish. We sequence it so you have one working bath in the house if you have a second one. If this is the only bath, we say how many days the water will be off and we stick to that plan.',
+            text: 'Here is the order we actually use. We protect the rest of the house, demo the wet finishes, and repair the framing we can now see. Then we waterproof, tile, and set the vanity, the glass, and the accessories. Paint waits until the dust is actually gone, because a bath painted before the tile is cut will wear that dust in the finish. If you\'ve a second bath, we sequence the work so one stays usable. If this is the only bath, we tell you how many days the water will be off, and we stick to that plan.',
           },
           {
             type: 'p',
-            text: 'Permits show up when plumbing moves. The city or the county follows the address. Friendswood is not Houston. Tomball is not unincorporated Harris County on every street. We check. Call (713) 909-0034 with the address and a photo of the bath as it is. Family-owned since 1993. If the only problem is a soft spot in the floor, say that. A remodel on a rotten subfloor is a repair first.',
+            text: 'Permits show up when plumbing moves, and the city or the county follows the address. Friendswood isn\'t Houston. Tomball isn\'t unincorporated Harris County on every street. We check. Call (713) 909-0034 with the address and a photo of the bath as it is. We\'ve been family-owned since 1993. If the only problem is a soft spot in the floor, say that. A remodel on a rotten subfloor is a repair first.',
           },
           {
             type: 'links',
@@ -136,11 +136,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you are remodeling. Dry the subfloor and the ceiling below before new tile goes on. If you are filing, photograph the failure and the wet materials. We are not public adjusters. The insurer decides whether the leak is covered. The new glass, if it was not there before, is a choice you are making, and it should be written that way.',
+            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you\'re remodeling. Dry the subfloor and the ceiling below before new tile goes on. If you\'re filing, photograph the failure and the wet materials. The insurer decides whether the leak is covered. The new glass, if it wasn\'t there before, is a choice you\'re making, and it should be written that way.',
           },
           {
             type: 'p',
-            text: 'We will tell you if the room only needs a pan and a surround. Not every tired bath needs to be taken to the studs. Not every stained ceiling is a full remodel. The visit is how we tell those apart. Bring the list of what annoys you on a Tuesday morning. That list is more useful than a folder of photos from a house with a different floor plan.',
+            text: 'We\'ll tell you if the room only needs a pan and a surround. Not every tired bath needs to be taken to the studs, and not every stained ceiling is a full remodel. The visit is how we tell those apart. Bring the list of what annoys you on a Tuesday morning. That list is more useful than a folder of photos from a house with a different floor plan.',
           },
         ],
       },
@@ -154,29 +154,29 @@ export const houstonPostsB: Article[] = [
     lines: ['The floor,', 'and the moisture under it.'],
     description:
       'Vinyl plank, tile, and wood in Houston humidity: what belongs on a slab, what needs to acclimate, and what waits until the floor is dry.',
-    lede: 'Houston floors fail from moisture more often than from foot traffic. The product matters. The slab or the crawlspace under it matters more.',
+    lede: 'Houston floors fail from moisture more often than from foot traffic. The product matters, and the slab or the crawlspace under it matters more.',
     image: '/images/projects/flooring/light-plank-empty-room.jpg',
     service: 'vinyl-flooring',
     ctaTitle: 'Not sure which floor fits?',
     ctaBody:
-      'Call (713) 909-0034. We look at the slab or the subfloor before we recommend vinyl, tile, or wood. Family-owned in Houston since 1993.',
+      'Call (713) 909-0034. We look at the slab or the subfloor before we recommend vinyl, tile, or wood. We\'ve been family-owned in Houston since 1993.',
     related: ['houston-bathroom-remodel-guide', 'houston-flood-damage-repair'],
     faqs: [
       {
         q: 'Will vinyl hide a wavy slab?',
-        a: 'No. It shows the ridge carpet hid. Large tile shows it too. Leveling is a real step when the floor needs it. We say so before the material is ordered.',
+        a: 'No. It shows the ridge the carpet hid, and large tile shows it too. Leveling is a real step when the floor needs it. We say so before the material is ordered.',
       },
       {
         q: 'Can I put wood on a slab?',
-        a: 'Sometimes, with a product meant for that slab and a dry concrete surface. The wood has to sit in the house and get used to the humidity before it is fastened. We do not install it off the truck.',
+        a: 'Sometimes, with a product meant for that slab and a dry concrete surface. The wood has to sit in the house and get used to the humidity before it\'s fastened. We don\'t install it off the truck.',
       },
       {
         q: 'Is laminate a good wet-room floor?',
-        a: 'No. Laminate belongs in dry rooms. A bath, a laundry room that floods, and a slab that just took on water are the wrong places. Tile or a vinyl plank rated for water are the usual answers there.',
+        a: 'No. Laminate belongs in dry rooms. A bath, a laundry room that floods, and a slab that just took on water are the wrong places. Tile, or a vinyl plank rated for water, is the usual answer there.',
       },
       {
         q: 'What if the old floor got wet in a claim?',
-        a: 'Dry the structure first. Photograph what came out if you are filing. We are not public adjusters. Your insurer decides payment. The new floor is installed when the meter says the slab or the subfloor is ready.',
+        a: 'Dry the structure first, and photograph what came out if you\'re filing. We are not public adjusters. Your insurer decides payment. The new floor goes in when the meter says the slab or the subfloor is ready.',
       },
     ],
     sections: [
@@ -185,11 +185,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Air conditioning runs most of the year, then a front drops the indoor humidity, then a week of rain pushes it back up. Wood moves. A crawlspace that is open to the outside, common under Montrose and Garden Oaks bungalows, feeds that movement from below. A slab does not breathe the same way, but it can hold water from a leak or from a flood long after the room smells fine. Any floor conversation in this city starts with where the moisture is.',
+            text: 'The air conditioner runs most of the year, then a front drops the indoor humidity, then a week of rain pushes it back up. Wood moves with that swing. A crawlspace open to the outside, which is common under Montrose and Garden Oaks bungalows, feeds that movement from below. A slab doesn\'t breathe the same way, but it can hold water from a leak or a flood long after the room smells fine. Any floor conversation in this city starts with where the moisture is.',
           },
           {
             type: 'p',
-            text: 'Friendswood and the lake side of Humble and Kingwood stay humid even when the rest of the house feels cool. Tile and vinyl handle that better in kitchens and baths. Wood can still be the living-room floor if it is the right product and the substrate is dry. We do not pick one floor for every room because a sample looked good in the store.',
+            text: 'Friendswood, and the lake side of Humble and Kingwood, stay humid even when the rest of the house feels cool. Tile and vinyl handle that better in kitchens and baths. Wood can still be the living-room floor if it\'s the right product and the substrate is dry. We don\'t pick one floor for every room because a sample looked good in the store.',
           },
         ],
       },
@@ -198,11 +198,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Vinyl plank is the floor a lot of Houston ranches choose when carpet comes out of Oak Forest, Meyerland, or an older Humble house. It can take a splash better than wood. It does not forgive a hump. If you can feel a ridge through the old carpet, you will see it through the plank. We check the slab with a straightedge, not with optimism. Leveling compound is part of the job when the floor needs it.',
+            text: 'Vinyl plank is the floor a lot of Houston ranches choose when carpet comes out of Oak Forest, Meyerland, or an older Humble house. It can take a splash better than wood, but it doesn\'t forgive a hump. If you can feel a ridge through the old carpet, you\'ll see it through the plank. We check the slab with a straightedge, not with optimism, and leveling compound is part of the job when the floor needs it.',
           },
           {
             type: 'p',
-            text: 'The plank also needs a dry slab. Installing it over a slow leak locks the water in and smells like it. After a dishwasher leak or a supply break, we meter first. Transitions at the tile bath and at the exterior door are planned so the heights meet. A beautiful field with a bad reducer at the hall is what people trip on. We order the plank after the rooms are measured, including the closets you actually want covered.',
+            text: 'The plank also needs a dry slab. Installing it over a slow leak locks the water in, and then the room smells like it. After a dishwasher leak or a supply break, we meter first. Transitions at the tile bath and at the exterior door are planned so the heights meet. A beautiful field with a bad reducer in the hall is what people trip on. We order the plank after the rooms are measured, including the closets you actually want covered.',
           },
           {
             type: 'links',
@@ -219,11 +219,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Tile is the Houston floor that has always made sense in a bath, a kitchen, and a laundry room. It also works across a whole first floor if you like it and the slab is flat enough for the size you picked. Large rectangles show every dip. Smaller tile and a joint hide more. Clay soil moves slabs. A joint and a proper set reduce the risk of a crack telegraphing. We cannot promise a slab will never move. We can install the tile so it has a fair chance.',
+            text: 'Tile is the Houston floor that has always made sense in a bath, a kitchen, and a laundry room. It also works across a whole first floor if you like it and the slab is flat enough for the size you picked. Large rectangles show every dip. Smaller tile and a joint hide more. Clay soil moves slabs, and a joint with a proper set reduces the chance of a crack telegraphing through. We can\'t promise a slab will never move. We can install the tile so it has a fair chance.',
           },
           {
             type: 'p',
-            text: 'Shower floors are a different tile job from a hallway. The slope, the drain, and the waterproofing come before the mosaic you chose. A kitchen backsplash is a wall, not a floor, and it gets its own layout so the pattern centers. If the house flooded, tile that is still stuck down may stay. Tile that sounds hollow or sits on a wet mud bed comes up. We listen and we meter. Friendswood houses with a Clear Creek history are a place we have this conversation often.',
+            text: 'A shower floor is a different tile job from a hallway. The slope, the drain, and the waterproofing come before the mosaic you chose. A kitchen backsplash is a wall, not a floor, and it gets its own layout so the pattern centers. If the house flooded, tile that\'s still stuck down may stay, and tile that sounds hollow or sits on a wet mud bed comes up. We listen and we meter. Friendswood houses with a Clear Creek history are a place we have this conversation often.',
           },
           {
             type: 'links',
@@ -240,11 +240,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Solid pine in Garden Oaks and Montrose can often be sanded if the boards are thick enough and the crawlspace is not soaking them. Cupping that comes back every August is a moisture problem, not a finish problem. We look under the house. New solid or engineered wood in a living room needs to acclimate in that house, with the air conditioning running the way you live. Fastening it the day it arrives is how you get gaps in January or a buckle in August.',
+            text: 'Solid pine in Garden Oaks and Montrose can often be sanded if the boards are thick enough and the crawlspace isn\'t soaking them. Cupping that comes back every August is a moisture problem, not a finish problem, so we look under the house. New solid or engineered wood in a living room needs to acclimate in that house, with the air conditioning running the way you live. Fastening it the day it arrives is how you get gaps in January or a buckle in August.',
           },
           {
             type: 'p',
-            text: 'Wood on a slab is a product question. Some engineered floors are made for it, with a moisture barrier the maker expects. Some are not. A flooded slab is not ready for either until it is dry. We will not cover a damp slab with wood to make a closing date. Cypress and Kingwood living rooms can take wood over a dry slab. A kitchen that sees a constant splash is usually a better tile or vinyl room, with wood starting at the doorway.',
+            text: 'Wood on a slab is a product question. Some engineered floors are made for it, with the moisture barrier the maker expects, and some are not. A flooded slab isn\'t ready for either until it\'s dry. We won\'t cover a damp slab with wood to make a closing date. Cypress and Kingwood living rooms can take wood over a dry slab. A kitchen that sees a constant splash is usually a better tile or vinyl room, with the wood starting at the doorway.',
           },
           {
             type: 'links',
@@ -257,11 +257,11 @@ export const houstonPostsB: Article[] = [
         ],
       },
       {
-        heading: 'Laminate, and where it does not belong',
+        heading: 'Laminate, and where it doesn\'t belong',
         blocks: [
           {
             type: 'p',
-            text: 'Laminate can be a dry-room floor. It is not a bath floor, and it is not what you put back after flood water. The core swells and does not return. If a previous owner clicked it into a laundry room, we will tell you when it is time for it to leave. A small spill wiped up immediately is not the same as a pad that stayed wet all weekend.',
+            text: 'Laminate can be a dry-room floor. It isn\'t a bath floor, and it isn\'t what you put back after flood water, because the core swells and doesn\'t return. If a previous owner clicked it into a laundry room, we\'ll tell you when it\'s time for it to leave. A small spill wiped up immediately isn\'t the same as a pad that stayed wet all weekend.',
           },
           {
             type: 'list',
@@ -270,7 +270,7 @@ export const houstonPostsB: Article[] = [
               'Acclimate wood in the house.',
               'Level where vinyl or large tile would show the ridge.',
               'Keep laminate out of the wet rooms.',
-              'Photograph a wet floor before it comes up if you are filing a claim.',
+              'Photograph a wet floor before it comes up if you\'re filing a claim.',
             ],
           },
         ],
@@ -280,11 +280,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'People want the new floor scheduled the day the furniture leaves. The meter is the schedule. A slab in Meyerland that took bayou water, a crawlspace in Garden Oaks that took a supply leak, and a Kingwood ceiling that dropped attic water onto the downstairs floor are three different drying jobs. The new plank is the same catalog. The wait is not. We are not public adjusters. If a claim is open, your insurer decides payment. We install when the floor is ready and you have hired the work.',
+            text: 'People want the new floor scheduled the day the furniture leaves. We go by the moisture meter, not by how soon you want the room finished. A slab in Meyerland that took bayou water, a crawlspace in Garden Oaks that took a supply leak, and a Kingwood ceiling that dropped attic water onto the downstairs floor are three different drying jobs. The new plank may come from the same catalog, but the wait isn\'t the same. If a claim is open, your insurer decides payment. We install when the floor is ready and you\'ve hired the work.',
           },
           {
             type: 'p',
-            text: 'Call (713) 909-0034 and tell us what is down now and what room it is. Family-owned since 1993. If you already have samples, bring them. If you are choosing between vinyl and tile for a whole first floor, we can say which one the slab will allow before you buy a pallet.',
+            text: 'Call (713) 909-0034 and tell us what is down now and what room it is. We\'ve been family-owned since 1993. If you already have samples, bring them. If you\'re choosing between vinyl and tile for a whole first floor, we can say which one the slab will allow before you buy a pallet.',
           },
           {
             type: 'links',
@@ -306,21 +306,21 @@ export const houstonPostsB: Article[] = [
     lines: ['A new roof,', 'in this weather.'],
     description:
       'What a Houston roof replacement includes: decking, flashing, ventilation, hail, wind, and the questions to settle before tear-off.',
-    lede: 'A roof replacement in Houston is tear-off, a look at the wood, and a new roof that can take sun, wind, and the next hailstorm. The shingle color is the last choice, not the first.',
+    lede: 'A roof replacement in Houston is a tear-off, a look at the wood, and a new roof that can take sun, wind, and the next hailstorm. The shingle color is the last choice, not the first.',
     image: '/images/projects/roofing/brick-home-shingles.jpg',
     service: 'roof-replacement',
     ctaTitle: 'Is the roof ready to be replaced?',
     ctaBody:
-      'Call (713) 909-0034. We walk the slopes and say whether a repair will hold. Family-owned in Houston since 1993. We are not public adjusters.',
+      'Call (713) 909-0034. We walk the slopes and say whether a repair will hold. We\'ve been family-owned in Houston since 1993.',
     related: ['houston-hail-storm-roof-claims', 'emergency-tarp-and-board-up-houston'],
     faqs: [
       {
         q: 'Do you replace a roof that could be repaired?',
-        a: 'No. If the damage is limited and the rest of the roof still has life, we say repair. Replacement is for a roof that is worn or bruised across the slopes. The inspection comes before the recommendation.',
+        a: 'No. If the damage is limited and the rest of the roof still has life, we say repair. Replacement is for a roof that\'s worn or bruised across the slopes. The inspection comes before the recommendation.',
       },
       {
         q: 'What if the wood underneath is soft?',
-        a: 'We replace the decking that is soft or rotten. Some of it is visible before tear-off. Some shows up when the shingles come off. We stop and show you rather than covering it.',
+        a: 'We replace the decking that\'s soft or rotten. Some of it\'s visible before tear-off, and some shows up when the shingles come off. We stop and show you rather than covering it.',
       },
       {
         q: 'Does an association pick the color?',
@@ -328,7 +328,7 @@ export const houstonPostsB: Article[] = [
       },
       {
         q: 'Is the replacement the same as the insurance payment?',
-        a: 'No. We are not public adjusters. The price we write is the construction. Your insurer decides what the policy pays. You can hire the roof whether or not a claim is open.',
+        a: 'No. We are not public adjusters. The price we write is the construction. Your insurer decides what the policy pays, and you can hire the roof whether or not a claim is open.',
       },
     ],
     sections: [
@@ -337,11 +337,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Shingles crack, lose granules, and curl under Houston sun. South and west slopes go first. Hail bruises the mat across a whole field. Wind lifts the edges and the ridge. One missing tab is not a new roof. A roof that looks tired on every slope, or bruised on every slope, is. We get up there. Low Meyerland and Oak Forest roofs hide the bad face from the curb. Long Kingwood roofs hide a valley under the pines. We look at those, not at a driveway photo.',
+            text: 'Here is how we tell a tired roof from a bruised one. Shingles crack, lose granules, and curl under the Houston sun, and the south and west slopes go first. Hail bruises the mat across a whole field. Wind lifts the edges and the ridge. One missing tab isn\'t a new roof. A roof that looks tired on every slope, or bruised on every slope, is. We get up there. Low Meyerland and Oak Forest roofs hide the bad face from the curb, and long Kingwood roofs hide a valley under the pines. We look at those, not at a driveway photo.',
           },
           {
             type: 'p',
-            text: 'A repair is a few slopes, a boot, a flashing, a ridge. It is the right job when the rest of the roof matches. Patching a worn-out field one square at a time costs more and leaks between the visits. We will say “repair” when that is true. We will say “replace” when it is not. Age alone is not the sentence. A younger roof with hail across it can be done. An old roof with one lifted shingle might not be.',
+            text: 'A repair is a few slopes, a boot, a piece of flashing, or a ridge. It\'s the right job when the rest of the roof still matches. Patching a worn-out field one square at a time costs more and leaks between the visits. We\'ll say repair when that\'s true, and we\'ll say replace when it\'s not. Age alone isn\'t the answer. A younger roof with hail across it can be done, and an old roof with one lifted shingle might not be.',
           },
         ],
       },
@@ -350,17 +350,17 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Tear-off down to the deck. New underlayment. New field shingles. Flashing at the walls and chimneys. Boots at the vents. Ridge and hip details that match the system. Drip edge. The pipe jacks and the attic vents are part of the roof, not an errand for later. If gutters are crushed from the same hail, that is a separate line, and we say so. Covering a bad valley with a pretty shingle is how the ceiling stain comes back.',
+            text: 'The job is a tear-off down to the deck, then new underlayment, new field shingles, flashing at the walls and chimneys, and boots at the vents. Ridge and hip details match the system, and the drip edge goes on with them. Pipe jacks and attic vents are part of the roof, not an errand for later. If gutters are crushed from the same hail, that\'s a separate line, and we say so. Covering a bad valley with a pretty shingle is how the ceiling stain comes back.',
           },
           {
             type: 'p',
-            text: 'Decking that is soft, delaminated, or stained through gets replaced. We can sometimes see it from the attic before tear-off. We can always see it when the shingles are gone. That is a change in the price, and we show the wood before we cover it. Ventilation matters in this heat. A roof with no way for attic air to move cooks the shingles from below and bakes the rooms. We look at the intake and the exhaust you already have.',
+            text: 'Decking that\'s soft, delaminated, or stained through gets replaced. We can sometimes see it from the attic before tear-off, and we can always see it when the shingles are gone. That changes the price, so we show the wood before we cover it. Ventilation matters in this heat. A roof with no way for attic air to move cooks the shingles from below and bakes the rooms, so we look at the intake and the exhaust you already have.',
           },
           {
             type: 'list',
             items: [
               'Walk every slope before recommending replacement.',
-              'Photograph hail or wear if you are filing.',
+              'Photograph hail or wear if you\'re filing.',
               'Replace soft decking when it shows up.',
               'Flash the walls and the penetrations with the new roof.',
               'Confirm association color rules before the order.',
@@ -373,11 +373,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A Houston roof lives in UV, sudden wind, and hail that may not come every year but comes hard when it does. Asphalt is the usual residential roof we install. The specific line is a conversation about weight, color, and what the deck can carry, not a badge. We do not dress that up. Cypress, Tomball, and Spring take a lot of hail. Friendswood takes more coastal wind. The install details change with the exposure. Nails, starter, and the edge metal are where wind gets in if they are skipped.',
+            text: 'A Houston roof lives in strong sun, sudden wind, and hail that may not come every year but comes hard when it does. Asphalt is the usual residential roof we install. The specific line is a conversation about weight, color, and what the deck can carry, not a badge, and we don\'t dress that up. Cypress, Tomball, and Spring take a lot of hail. Friendswood takes more coastal wind. The install details change with that exposure, because nails, starter, and the edge metal are where wind gets in if they\'re skipped.',
           },
           {
             type: 'p',
-            text: 'Oaks in Garden Oaks and Meyerland drop limbs and leaves into valleys. Pines in Kingwood and parts of Spring do the same with needles. A new roof under those trees still needs the valleys clear, and it still needs a path for the crew that does not tear the yard apart. We plan the drop. Tight Montrose streets mean a smaller staging plan. A Tomball lot with a driveway is easier, and the roof may be larger. Both get the same flashing standard.',
+            text: 'Oaks in Garden Oaks and Meyerland drop limbs and leaves into valleys. Pines in Kingwood and parts of Spring do the same with needles. A new roof under those trees still needs the valleys clear, and it still needs a path for the crew that doesn\'t tear the yard apart. We plan the drop. Tight Montrose streets mean a smaller staging plan. A Tomball lot with a driveway is easier, and the roof may be larger. Both get the same flashing standard.',
           },
           {
             type: 'links',
@@ -391,15 +391,15 @@ export const houstonPostsB: Article[] = [
         ],
       },
       {
-        heading: 'The claim, if there is one',
+        heading: 'The claim, if there\'s one',
         blocks: [
           {
             type: 'p',
-            text: 'Many replacements start after hail or wind. You can also replace a worn roof with no claim at all. If you are filing, photograph the slopes before a tarp hides an opening, when that is safe. Meet the adjuster if you can. We can be there to point at what we found. We are not public adjusters. The estimate we write is the price to build the roof. It is not the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
+            text: 'Many replacements start after hail or wind, and you can also replace a worn roof with no claim at all. If you\'re filing, photograph the slopes before a tarp hides an opening, when that\'s safe, and meet the adjuster if you can. We can be there to point at what we found. The estimate we write is the price to build the roof. It isn\'t the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
           },
           {
             type: 'p',
-            text: 'Do not sign a contract that says the price will be “whatever insurance pays” without a scope you understand. Ask what is included if the deck is bad. Ask what happens if the insurer pays less than the construction. We would rather have that talk on the driveway than halfway through tear-off. Call (713) 909-0034. If the roof is open tonight, say that first. A tarp is not the replacement.',
+            text: 'Don\'t sign a contract that says the price will be whatever insurance pays, unless you understand the scope. Ask what is included if the deck is bad, and ask what happens if the insurer pays less than the construction. We would rather have that talk on the driveway than halfway through tear-off. Call (713) 909-0034. If the roof is open tonight, say that first. A tarp isn\'t the replacement.',
           },
         ],
       },
@@ -408,11 +408,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Furniture in the attic gets covered or moved. Cars leave the driveway. Plants you love get a conversation, because debris finds them. We watch the weather. Tear-off in a pop-up storm is how a house gets wet on purpose. If the deck is open and rain is coming, we dry the house in and cover it. Interior ceilings that were already stained get checked again after the new roof, because a new roof does not undo a wet insulation bay.',
+            text: 'On tear-off day, furniture in the attic gets covered or moved, and cars leave the driveway. Plants you love get a conversation, because debris finds them. We watch the weather. Opening a roof into a pop-up storm is how a house gets wet on purpose. If the deck is open and rain is coming, we dry the house in and cover it. Ceilings that were already stained get checked again after the new roof, because a new roof doesn\'t undo wet insulation.',
           },
           {
             type: 'p',
-            text: 'Permits follow the city. Houston, Friendswood, Humble, and Tomball each have their own. Some Spring addresses are the county. We pull what the address requires. An association letter, if you need one, should be in hand before the shingles land. Family-owned since 1993. The crew is scheduled from 511 Crestwater Ct, not from a storm trailer that will be gone next month.',
+            text: 'Permits follow the city. Houston, Friendswood, Humble, and Tomball each have their own, and some Spring addresses are the county. We pull what the address requires. An association letter, if you need one, should be in hand before the shingles land. We\'ve been family-owned since 1993. The crew is scheduled from 511 Crestwater Ct, not from a storm trailer that will be gone next month.',
           },
           {
             type: 'links',
@@ -430,11 +430,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Walk the attic on the next hard rain if you can do it safely. Look at the old stain. A dry stain is history. A new drip is a call. Gutters should discharge away from the slab, especially on flat lots in Meyerland and Oak Forest. We can talk about gutters as their own item. They are not automatically new because the shingles are.',
+            text: 'Walk the attic on the next hard rain if you can do it safely, and look at the old stain. A dry stain is history. A new drip is a call. Gutters should discharge away from the slab, especially on flat lots in Meyerland and Oak Forest. We can talk about gutters as their own item. They aren\'t automatically new because the shingles are.',
           },
           {
             type: 'p',
-            text: 'Keep the invoice and the photos. If a claim is still open, those papers are for you and your insurer. We keep our scope. If something we installed is wrong, call us. If a limb falls next spring, that is a new event, and we look at it as a new event. The roof is a wearing surface in this climate. It is also the thing that keeps the rest of the remodel dry.',
+            text: 'Keep the invoice and the photos. If a claim is still open, those papers are for you and your insurer. We keep our scope. If something we installed is wrong, call us. If a limb falls next spring, that\'s a new event, and we look at it as a new event. The roof is a wearing surface in this climate, and it\'s also the thing that keeps the rest of the remodel dry.',
           },
         ],
       },
@@ -454,7 +454,7 @@ export const houstonPostsB: Article[] = [
     emergency: true,
     ctaTitle: 'Need someone in the first day?',
     ctaBody:
-      'Call (713) 909-0034 if water reached the walls or the floors. We are not public adjusters. Your insurer decides coverage. Family-owned since 1993.',
+      'Call (713) 909-0034 if water reached the walls or the floors. Your insurer decides coverage. We\'ve been family-owned since 1993.',
     related: [
       'houston-leaks-pipes-heater-dishwasher-toilet',
       'houston-flood-damage-repair',
@@ -463,7 +463,7 @@ export const houstonPostsB: Article[] = [
     faqs: [
       {
         q: 'Should I wait for the adjuster before I dry anything?',
-        a: 'Do not wait to stop more damage. Photograph first, then dry. Policies commonly expect you to protect the property. Ask your insurer how they want notice given. A wet wall does not pause for a calendar.',
+        a: 'Don\'t wait to stop more damage. Photograph first, then dry. Policies commonly expect you to protect the property, so ask your insurer how they want notice given. A wet wall doesn\'t pause for a calendar.',
       },
       {
         q: 'Are household fans enough?',
@@ -471,11 +471,11 @@ export const houstonPostsB: Article[] = [
       },
       {
         q: 'What do I photograph?',
-        a: 'The source if you can see it, the path, and each wet room. Wide shots and close shots. Do it before you throw flooring or cabinets away.',
+        a: 'The source if you can see it, the path, and each wet room, in wide shots and close shots. Do it before you throw flooring or cabinets away.',
       },
       {
         q: 'Who pays?',
-        a: 'Your insurer, if the policy covers it. We are not public adjusters. We dry and repair what you hire. A sudden pipe break and rising flood water are often different coverages. Say which one happened.',
+        a: 'Your insurer, if the policy covers it. We are not public adjusters. We dry and repair what you hire. A sudden pipe break and rising flood water are often different coverages, so say which one happened.',
       },
     ],
     sections: [
@@ -484,18 +484,18 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'If water is near outlets, the panel, or a fallen ceiling, get people out of that room. Shut the main water valve if you can reach it from a dry floor. If the leak is one toilet or one heater and that valve still works, shut that one. Do not wade. Do not flip breakers while you are standing wet. If you smell gas or you cannot find the shutoff, leave and call for help.',
+            text: 'If water is near outlets, the panel, or a fallen ceiling, get people out of that room. Shut the main water valve if you can reach it from a dry floor. If the leak is one toilet or one heater and that valve still works, shut that one instead. Don\'t wade, and don\'t flip breakers while you\'re standing in water. If you smell gas, or you can\'t find the shutoff, leave and call for help.',
           },
           {
             type: 'p',
-            text: 'Open a faucet after the main is off so the lines can drain. If a pipe is frozen and has not split, an open faucet gives the thaw somewhere to go. Do not use a torch. A hair dryer on a reachable frozen spot, kept out of the water, is enough. Most Houston “frozen pipe” calls are already a burst by the time someone notices the ceiling. Treat the water you can see as the emergency.',
+            text: 'After the main is off, open a faucet so the lines can drain. If a pipe is frozen and hasn\'t split, an open faucet gives the thaw somewhere to go. Don\'t use a torch. A hair dryer on a reachable frozen spot, kept out of the water, is enough. Most Houston frozen-pipe calls are already a burst by the time someone notices the ceiling, so treat the water you can see as the emergency.',
           },
           {
             type: 'list',
             items: [
               'People and pets out of the wet room if power is involved.',
               'Shut the supply.',
-              'Do not use a flame on a frozen pipe.',
+              'Don\'t use a flame on a frozen pipe.',
               'Call (713) 909-0034 if the water is in the building, not just on a tile floor.',
             ],
           },
@@ -506,11 +506,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Photograph the source, the ceilings, the floors, and the bottoms of the cabinets. A short note of which room is as useful as another twenty blurry shots. If you can use the photo log on this site, it keeps the rooms in order. Then move what you can save to a dry room. Lift drapes. Get electronics up. Leave soaked drywall and flooring until they are documented if you plan to file.',
+            text: 'Photograph the source, the ceilings, the floors, and the bottoms of the cabinets. A short note of which room is as useful as another twenty blurry shots. If you can use the photo log on this site, it keeps the rooms in order. Then move what you can save to a dry room. Lift drapes, get electronics up, and leave soaked drywall and flooring until they\'re documented if you plan to file.',
           },
           {
             type: 'p',
-            text: 'Call your insurer if the loss was sudden and you want a claim. Tell them what failed: a supply line, a heater, a dishwasher, a toilet, a roof, or water that rose from outside. Those are different. We are not public adjusters. We will not pick a nicer name for the water. You can call us the same day to start drying. Waiting a weekend because you hope the adjuster comes first is how a wet baseboard becomes a wet wall.',
+            text: 'Call your insurer if the loss was sudden and you want a claim. Tell them what failed: a supply line, a heater, a dishwasher, a toilet, a roof, or water that rose from outside. Those are different, and we won\'t pick a nicer name for the water. You can call us the same day to start drying. Waiting a weekend because you hope the adjuster comes first is how a wet baseboard becomes a wet wall.',
           },
           {
             type: 'links',
@@ -527,11 +527,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Standing water should be out. Wet carpet pad should be out if it is soaked. The air should be moving, and a dehumidifier should be pulling moisture out of that air if the walls or the slab got wet. Windows open in July do not do this job. The outdoor air is wet. Set the air conditioning to run. Close the rooms that stayed dry so you are not trying to dry the whole house for one bath.',
+            text: 'By the end of the day, standing water should be out, and wet carpet pad should be out if it\'s soaked. The air should be moving, and a dehumidifier should be pulling moisture out of that air if the walls or the slab got wet. Opening windows in July doesn\'t do this job, because the outdoor air is wet. Set the air conditioning to run, and close the rooms that stayed dry so you aren\'t trying to dry the whole house for one bath.',
           },
           {
             type: 'p',
-            text: 'On a slab in Oak Forest, Cypress, or Friendswood, the water is in the concrete and the drywall base. On a pier-and-beam house in Montrose or Garden Oaks, check the crawlspace or have us check it. A dry living room over a wet joist bay is a common miss. In a two-story Kingwood or Spring house, look up. Attic water lands in the ceiling. The stain grows for a day after the valve is shut because the insulation is still draining.',
+            text: 'On a slab in Oak Forest, Cypress, or Friendswood, the water is in the concrete and the base of the drywall. On a pier-and-beam house in Montrose or Garden Oaks, check the crawlspace, or have us check it. A dry living room over a wet joist bay is a common miss. In a two-story Kingwood or Spring house, look up. Attic water lands in the ceiling, and the stain can keep growing for a day after the valve is shut because the insulation is still draining.',
           },
         ],
       },
@@ -540,11 +540,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Leave the drying equipment running. Do not turn it off because it is loud. Check that drains from dehumidifiers are actually going into a sink or outside, not back onto the floor. If a ceiling is still dripping, the source is not done. A tarp on an open roof belongs in this same night if the water came from above. Board a broken window so the next rain does not join the first leak.',
+            text: 'Leave the drying equipment running overnight. Don\'t turn it off because it\'s loud, and check that dehumidifier drains are actually going into a sink or outside, not back onto the floor. If a ceiling is still dripping, the source isn\'t done. A tarp on an open roof belongs in this same night if the water came from above. Board a broken window so the next rain doesn\'t join the first leak.',
           },
           {
             type: 'p',
-            text: 'Sleep somewhere dry. A wet room with open walls is not a bedroom. If the power is uncertain, do not spend the night guessing at the panel. Write down what you shut off, what you moved, and who you called. That note is worth more tomorrow than you think. Keep receipts for towels, plywood, and the dumpster if you already needed one.',
+            text: 'Sleep somewhere dry. A wet room with open walls isn\'t a bedroom, and if the power is uncertain, don\'t spend the night guessing at the panel. Write down what you shut off, what you moved, and who you called. That note is worth more tomorrow than you think. Keep receipts for towels, plywood, and a dumpster if you already needed one.',
           },
           {
             type: 'links',
@@ -562,11 +562,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Walk the house in daylight. New stains, a soft seam in the floor, and a musty closet are the edges of the water you already know about. Pull a toe kick only if you are ready to see the cabinet bottom, and photograph it. Do not start a kitchen remodel today. Do not buy flooring today. Dry first. If an adjuster is coming, be there. Show the photos. Show what you already removed and why.',
+            text: 'In the morning, walk the house in daylight. New stains, a soft seam in the floor, and a musty closet are the edges of the water you already know about. Pull a toe kick only if you\'re ready to see the cabinet bottom, and photograph it. Don\'t start a kitchen remodel today, and don\'t buy flooring today. Dry first. If an adjuster is coming, be there, show the photos, and show what you already removed and why.',
           },
           {
             type: 'p',
-            text: 'We meter the walls and the floors and we tell you what has to come out. Some drywall can dry in place. Some cannot. Insulation that held flood water comes out. Insulation that got a cup of clean water might be a smaller cut. The difference is the visit, not a rule shouted from the sidewalk. Call (713) 909-0034 if you have not already. Family-owned in Houston since 1993.',
+            text: 'We meter the walls and the floors and tell you what has to come out. Some drywall can dry in place, and some can\'t. Insulation that held flood water comes out. Insulation that got a cup of clean water might be a smaller cut. The difference is the visit, not a rule shouted from the sidewalk. Call (713) 909-0034 if you haven\'t already. We\'ve been family-owned in Houston since 1993.',
           },
         ],
       },
@@ -575,11 +575,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Do not shop for cabinets. Do not paint a stain. Do not run the HVAC with a soaked filter and hope. Do not sign a contract you have not read because someone knocked and said the truck was on the street. You can hire a crew today. You should know that we work for you. We are not public adjusters. Your insurer still decides the claim. Ask what will be dried, what will be removed, and what the next step costs.',
+            text: 'Don\'t spend the first day shopping for cabinets, painting a stain, or running the air conditioner on a soaked filter and hoping. Don\'t sign a contract you haven\'t read because someone knocked and said the truck was on the street. You can hire a crew today. You should know that we work for you, and that your insurer still decides the claim. Ask what will be dried, what will be removed, and what the next step costs.',
           },
           {
             type: 'p',
-            text: 'Meyerland floods, Kingwood attics, and a Tomball supply line all deserve the same first day: safety, shutoff, photos, drying. The rebuild is day two or week two. The blog can wait. The wet wall cannot. If you want the longer checklist after the emergency is stable, the water-damage guide on this site sits next to this one on purpose.',
+            text: 'Meyerland floods, Kingwood attics, and a Tomball supply line all deserve the same first day: safety, a shutoff, photos, and drying. The rebuild is day two or week two. The blog can wait. The wet wall can\'t. If you want the longer checklist after the emergency is stable, the water-damage guide on this site sits next to this one on purpose.',
           },
           {
             type: 'links',
@@ -602,25 +602,25 @@ export const houstonPostsB: Article[] = [
     lines: ['The ranch,', 'one room at a time.'],
     description:
       'How to remodel a one-story Houston ranch: closed kitchens, hall baths, slab drains, low roofs, and floors that show every ridge.',
-    lede: 'Houston’s one-story brick ranches are a specific kind of remodel. The rooms are honest, the slab is in the way of the plumbing, and the roof is lower than it looks in a photo.',
+    lede: 'Houston’s one-story brick ranches are a specific kind of remodel. The rooms are honest, the slab is in the way of the plumbing, and the roof sits lower than it looks in a photo.',
     image: '/images/projects/kitchens/range-hood-cooking-wall.jpg',
     service: 'kitchen-remodeling',
     ctaTitle: 'Have a ranch to walk through?',
     ctaBody:
-      'Call (713) 909-0034. We measure the kitchen, the bath, and the roof you actually have. Family-owned in Houston since 1993. The visit is free.',
+      'Call (713) 909-0034. We measure the kitchen, the bath, and the roof you actually have. We\'ve been family-owned in Houston since 1993, and the visit is free.',
     related: ['houston-kitchen-remodel-ideas', 'houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
     faqs: [
       {
         q: 'Can you open the kitchen without adding a second story?',
-        a: 'Sometimes. The wall between the kitchen and the living room may be holding the roof structure on a low ranch. We look. A kitchen that stays closed can still be a full remodel of cabinets, light, and the floor.',
+        a: 'Sometimes. The wall between the kitchen and the living room may be holding the roof on a low ranch, so we look. A kitchen that stays closed can still be a full remodel of cabinets, light, and the floor.',
       },
       {
         q: 'Are these houses all slabs?',
-        a: 'Meyerland and Oak Forest ranches usually are. Some older Humble and Tomball houses mix a slab with an addition, or sit on piers. We confirm this house. A slab means a moved sink is concrete. A crawlspace means we look underneath.',
+        a: 'Meyerland and Oak Forest ranches usually are. Some older Humble and Tomball houses mix a slab with an addition, or they sit on piers. We confirm this house. On a slab, a moved sink means concrete. If there\'s a crawlspace, we look underneath.',
       },
       {
         q: 'Should the roof be done with the kitchen?',
-        a: 'If the roof is worn or it leaked into the ceiling you are about to open, yes, talk about it in the same visit. They are different trades and different prices. Doing the roof after the new ceiling is painted is the wrong order.',
+        a: 'If the roof is worn, or it leaked into the ceiling you\'re about to open, talk about it in the same visit. They\'re different trades and different prices. Doing the roof after the new ceiling is painted is the wrong order.',
       },
       {
         q: 'What if a storm or a leak started the project?',
@@ -633,11 +633,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Picture a one-story brick house, a low roof, a carport or a later garage, and a floor plan that puts the kitchen at the back. That is Meyerland. It is also a lot of Oak Forest. Pieces of older Humble and the original streets of Tomball rhyme with it, even when the year and the foundation shift. The rooms were built for a family that did not cook in front of the television. The remodel is usually an attempt to let those rooms see each other without pretending the house is a new two-story.',
+            text: 'Picture a one-story brick house, a low roof, a carport or a later garage, and a floor plan that puts the kitchen at the back. That\'s Meyerland, and it\'s also a lot of Oak Forest. Pieces of older Humble and the original streets of Tomball rhyme with it, even when the year and the foundation shift. The rooms were built for a family that didn\'t cook in front of the television. The remodel is usually an attempt to let those rooms see each other without pretending the house is a new two-story.',
           },
           {
             type: 'p',
-            text: 'Ceilings are not tall. A cabinet that looked perfect in a showroom with ten-foot walls will press on an eight-foot ranch. Light fixtures need room to hang. A range hood needs a path for the duct that does not eat the only attic space above the cooktop. We measure the ceiling and the attic before we draw a tall cabinet run. The brick on the outside stays. The remodel is mostly an interior job unless the roof or a window is part of the leak that started the call.',
+            text: 'Ceilings aren\'t tall. A cabinet that looked perfect in a showroom with ten-foot walls will crowd an eight-foot ranch, and light fixtures need room to hang. A range hood needs a duct path that doesn\'t eat the only attic space above the cooktop. We measure the ceiling and the attic before we draw a tall cabinet run. The brick on the outside stays. The remodel is mostly an interior job, unless the roof or a window is part of the leak that started the call.',
           },
         ],
       },
@@ -646,11 +646,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'The closed kitchen is the project people call about. Opening it means knowing whether that wall is a partition or part of the roof structure. On a low ranch, the ceiling joists and the rafters are right there. We look in the attic. If the wall can open, we talk about the beam and the posts it needs. If it cannot, we spend the money on cabinets, a window, light, and a floor that makes the closed room good. Both are finished kitchens. Only one of them is an open plan.',
+            text: 'The closed kitchen is the project people call about. Opening it means knowing whether that wall is only a partition or part of the roof structure. On a low ranch, the ceiling joists and the rafters are right there, so we look in the attic. If the wall can open, we talk about the beam and the posts it needs. If it can\'t, we spend the money on cabinets, a window, light, and a floor that makes the closed room good. Both are finished kitchens. Only one of them is an open plan.',
           },
           {
             type: 'p',
-            text: 'Sinks stay put more often than people expect, because the drain is in the slab. A new island that needs a sink is a cut. A new island that is only a table and a power outlet is simpler. Dishwashers that leaked have often swollen the cabinet next to the sink. That box is not a candidate for new doors. Replace it, dry the floor, and then match the rest. Call (713) 909-0034 if you want that walk-through before you demo on a Saturday.',
+            text: 'Sinks stay put more often than people expect, because the drain is in the slab. A new island that needs a sink is a cut. A new island that\'s only a table and a power outlet is simpler. Dishwashers that leaked have often swollen the cabinet next to the sink, and that box isn\'t a candidate for new doors. Replace it, dry the floor, and then match the rest. Call (713) 909-0034 if you want that walk-through before you demo on a Saturday.',
           },
           {
             type: 'links',
@@ -667,11 +667,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'The hall bath is the other phone call. A tub, a small vanity, a fan that wheezes into the attic. Turning the tub into a shower is possible when the drain and the curb fit. Waterproofing is the work. The tile is the part your guests notice. A window over the tub has to stay waterproof when the surround changes. We do not bury the window in tile and hope. If this is the only bath, we plan the days without a shower so you are not surprised.',
+            text: 'The hall bath is the other phone call: a tub, a small vanity, and a fan that wheezes into the attic. Turning the tub into a shower is possible when the drain and the curb fit, and waterproofing is the work. The tile is the part your guests notice. A window over the tub has to stay waterproof when the surround changes, so we don\'t bury the window in tile and hope. If this is the only bath, we plan the days without a shower so you aren\'t surprised.',
           },
           {
             type: 'p',
-            text: 'Primary baths in these ranches are larger but not Kingwood-large. A double vanity may not fit. One good vanity, a real light, and a shower that does not leak will change the morning more than a crowded second sink. Floor tile runs out to the bedroom only if the heights work. A transition that sticks up is a toe-stubber for the life of the floor.',
+            text: 'Primary baths in these ranches are larger, but they aren\'t Kingwood-large, and a double vanity may not fit. One good vanity, a real light, and a shower that doesn\'t leak will change the morning more than a crowded second sink. Floor tile runs out to the bedroom only if the heights work. A transition that sticks up is a toe-stubber for the life of the floor.',
           },
           {
             type: 'links',
@@ -688,18 +688,18 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Carpet hid a lot of these slabs. Vinyl plank and tile will not. We check flatness. Clay movement and an old pour mean ridges. Leveling is ordinary, not an upsell speech. Wood is possible in the living room when the slab is dry and the product belongs there. It acclimates in the house. After a flood, and Meyerland has streets where that sentence matters, nothing new goes down until the concrete is dry.',
+            text: 'Carpet hid a lot of these slabs. Vinyl plank and tile will not. We check how flat the floor is, because clay movement and an old pour leave ridges. Leveling is ordinary work, not a sales pitch. Wood is possible in the living room when the slab is dry and the product belongs there, and it acclimates in the house. After a flood, and Meyerland has streets where that matters, nothing new goes down until the concrete is dry.',
           },
           {
             type: 'p',
-            text: 'Bedrooms can stay carpet if you want quiet. Kitchens and baths should not. A single floor through the main rooms makes a small ranch feel longer. That is a design choice we can price. It is not required. Door swings and closet thresholds are where a “whole house floor” gets expensive or gets sloppy. We count them.',
+            text: 'Bedrooms can stay carpet if you want them quiet. Kitchens and baths should not. One floor through the main rooms makes a small ranch feel longer, and that\'s a design choice we can price. It isn\'t required. Door swings and closet thresholds are where a whole-house floor gets expensive or sloppy, so we count them.',
           },
           {
             type: 'list',
             items: [
               'Meter a slab that has been wet before any new floor.',
               'Level where the new floor would show the ridge.',
-              'Keep the drains that do not need to move.',
+              'Keep the drains that don\'t need to move.',
               'Match transitions so doors still clear.',
             ],
           },
@@ -710,11 +710,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Ranch roofs are broad and low. Hail sits on them. Leaves sit in the valleys. A kitchen skylight someone added in 1998 is often the leak. If we are opening ceilings for a remodel, we want the roof honest first. Replacing drywall under a dripping vent is a loop. We will walk the roof on the same visit as the kitchen if you ask. Repair when a repair will hold. Replace when the slopes are done. A tarp is only for an opening.',
+            text: 'Ranch roofs are broad and low. Hail sits on them, and leaves sit in the valleys. A kitchen skylight someone added years ago is often the leak. If we\'re opening ceilings for a remodel, we want the roof honest first, because replacing drywall under a dripping vent is a loop. We\'ll walk the roof on the same visit as the kitchen if you ask. Repair when a repair will hold, and replace when the slopes are done. A tarp is only for an opening.',
           },
           {
             type: 'p',
-            text: 'Gutters on a low ranch dump next to the slab if the extensions are missing. That water is not a dramatic flood. It is a wet flower bed against the brick and, sometimes, a damp floor at the back door. Point the downspouts out. It is a small job that protects the floor you are about to pay for. Associations are uncommon on the older ranch streets and common if the ranch sits in a later section. We ask.',
+            text: 'Gutters on a low ranch dump next to the slab if the extensions are missing. That water isn\'t a dramatic flood. It\'s a wet flower bed against the brick and, sometimes, a damp floor at the back door. Point the downspouts out. It\'s a small job that protects the floor you\'re about to pay for. Associations are uncommon on the older ranch streets and common if the ranch sits in a later section. We ask.',
           },
           {
             type: 'links',
@@ -732,11 +732,11 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'You do not have to remodel the kitchen, the bath, and the roof in one contract. You do have to pick an order. Water and an open roof go first. Then the room you use most. Then the floor that ties the hall together. Doing all three with one crew keeps the dust in one season instead of three. Doing one of them well is better than starting all three and stalling when the cabinets are late.',
+            text: 'You don\'t have to remodel the kitchen, the bath, and the roof in one contract, but you do have to pick an order. Water and an open roof go first, then the room you use most, then the floor that ties the hall together. Doing all three with one crew keeps the dust in one season instead of three. Doing one of them well is better than starting all three and stalling when the cabinets are late.',
           },
           {
             type: 'p',
-            text: 'If a storm or a burst pipe is why the walls are open, document that damage before the new layout eats the evidence. We are not public adjusters. Your insurer decides the claim. The beam in the former kitchen wall, if you want it, is a remodel. We can write them as separate scopes so you can see which dollars are which. Family-owned in Houston since 1993. The office is at 511 Crestwater Ct. The ranch is wherever you send us.',
+            text: 'If a storm or a burst pipe is why the walls are open, document that damage before the new layout covers the evidence. Your insurer decides the claim. The beam in the former kitchen wall, if you want it, is a remodel. We can write them as separate scopes so you can see which dollars are which. We\'ve been family-owned in Houston since 1993. The office is at 511 Crestwater Ct, and the ranch is wherever you send us.',
           },
         ],
       },

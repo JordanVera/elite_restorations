@@ -102,6 +102,10 @@ for (const article of houstonPosts) {
   } catch (error) {
     errors.push(error instanceof Error ? error.message : String(error));
   }
+  const phraseCount = blob.split('We are not public adjusters.').length - 1;
+  if (phraseCount > 2) {
+    errors.push(`${article.slug} says the insurance sentence ${phraseCount} times`);
+  }
 }
 
 if (errors.length > 0) {
