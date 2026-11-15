@@ -12,6 +12,7 @@ import { CostGuideView } from '@/components/cost-guide';
 import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
+import { HoustonFactors, ServiceGuide } from '@/components/service-depth-sections';
 import { InsuranceClaimHelp } from '@/components/insurance-claim-help';
 import { PropertyScopeNote } from '@/components/property-scope-note';
 import { WaterCauseSections } from '@/components/water-cause-sections';
@@ -28,6 +29,7 @@ import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
+import { getServiceDepth } from '@/lib/service-depth';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import { claimHelpFaqs } from '@/lib/claim-help';
 import { spanishPathFor } from '@/lib/i18n';
@@ -211,6 +213,9 @@ export default async function ServicePage({
   const service = getService(slug);
   if (!service) notFound();
 
+  const depth = getServiceDepth(service.slug);
+  const intro = depth ? [...service.intro, ...depth.moreIntro] : service.intro;
+  const localBody = depth ? [...service.local.body, ...depth.moreLocal] : service.local.body;
   const steps =
     service.process ??
     service.guide.process ??
@@ -218,11 +223,18 @@ export default async function ServicePage({
       title: step.title,
       body: `${step.lead} ${step.body}`,
     }));
+  const seenQuestions = new Set<string>();
   const faqs = [
     ...service.faqs,
     ...service.guide.faqs,
+    ...(depth?.faqs ?? []),
     ...(claimHelpSlugs.has(service.slug) ? claimHelpFaqs('en') : []),
-  ];
+  ].filter((item) => {
+    if (seenQuestions.has(item.q)) return false;
+    seenQuestions.add(item.q);
+    return true;
+  });
+  const costLinks = (service.links ?? []).filter((link) => link.href.includes('cost'));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
@@ -308,7 +320,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="mt-6 space-y-7">
-              {service.intro.map((p, i) => (
+              {intro.map((p, i) => (
                 <Reveal key={i} delay={i * 0.08}>
                   <p
                     className={
@@ -396,7 +408,7 @@ export default async function ServicePage({
               </h2>
             </Reveal>
             <div className="mt-8 space-y-6">
-              {service.local.body.map((paragraph) => (
+              {localBody.map((paragraph) => (
                 <p
                   key={paragraph}
                   className="measure text-lg leading-relaxed text-muted-foreground"
@@ -430,6 +442,8 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {depth ? <HoustonFactors depth={depth} /> : null}
 
       <section
         aria-labelledby="steps-heading"
@@ -466,6 +480,7 @@ export default async function ServicePage({
         </div>
       </section>
 
+      {depth ? <ServiceGuide depth={depth} costLinks={costLinks} /> : null}
       <ProseSections sections={service.guide.sections} />
 
       {masonry.length > 0 && (

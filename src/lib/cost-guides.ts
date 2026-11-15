@@ -1,5 +1,7 @@
 import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
+import { assertCopyAllowed } from '@/lib/copy-guards';
+import { costGuideExtras, extraGuideSections } from '@/lib/cost-guide-copy';
 import { duplicateQuestions } from '@/lib/faqs';
 import { costFaqs as extraCostFaqs } from '@/lib/faqs/pages';
 import type { GuideSection } from '@/lib/guides/types';
@@ -124,8 +126,9 @@ const costGuideInputs: readonly CostGuide[] = [
         a: `Call ${phone} or request an estimate. The visit is how the work, and then the price, gets settled.`,
       },
       ...kitchenCostFaqs,
+      ...costGuideExtras['kitchen-remodel-cost-houston'].faqs,
     ],
-    sections: kitchenCostSections,
+    sections: [...kitchenCostSections, ...extraGuideSections('kitchen-remodel-cost-houston')],
     related: [
       { href: '/kitchen-remodeling', label: 'Houston kitchen remodeling' },
       { href: '/kitchen-remodeling-houston-tx', label: 'Kitchen remodeling in Houston' },
@@ -189,8 +192,9 @@ const costGuideInputs: readonly CostGuide[] = [
         a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that work.`,
       },
       ...bathroomCostFaqs,
+      ...costGuideExtras['bathroom-remodel-cost-houston'].faqs,
     ],
-    sections: bathroomCostSections,
+    sections: [...bathroomCostSections, ...extraGuideSections('bathroom-remodel-cost-houston')],
     related: [
       { href: '/bathroom-remodeling', label: 'Houston bathroom remodeling' },
       { href: '/bathroom-remodeling-houston-tx', label: 'Bathroom remodeling in Houston' },
@@ -257,8 +261,9 @@ const costGuideInputs: readonly CostGuide[] = [
         a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that work.`,
       },
       ...roofCostFaqs,
+      ...costGuideExtras['roof-replacement-cost-houston'].faqs,
     ],
-    sections: roofCostSections,
+    sections: [...roofCostSections, ...extraGuideSections('roof-replacement-cost-houston')],
     related: [
       { href: '/roof-replacement', label: 'Houston roof replacement' },
       { href: '/roof-replacement-houston-tx', label: 'Roof replacement in Houston' },
@@ -320,10 +325,24 @@ function costGuideWords(guide: CostGuide) {
 const costDepthErrors: string[] = [];
 for (const guide of costGuides) {
   const words = costGuideWords(guide);
-  if (words < 1500 || words > 2800) {
+  assertCopyAllowed(
+    guide.path,
+    [
+      guide.lede,
+      ...guide.factors.flatMap((factor) => [factor.title, factor.body]),
+      ...guide.sections.flatMap((section) => [
+        section.eyebrow,
+        section.heading,
+        ...section.paragraphs,
+        ...(section.points ?? []).flatMap((point) => [point.title, point.body]),
+      ]),
+      ...guide.faqs.flatMap((faq) => [faq.q, faq.a]),
+    ].join('\n'),
+  );
+  if (words < 1500 || words > 4000) {
     costDepthErrors.push(`Cost guide ${guide.slug} is ${words} words`);
   }
-  if (guide.faqs.length < 14 || guide.faqs.length > 22) {
+  if (guide.faqs.length < 14 || guide.faqs.length > 24) {
     costDepthErrors.push(`Cost guide ${guide.slug} has ${guide.faqs.length} FAQs`);
   }
 }
