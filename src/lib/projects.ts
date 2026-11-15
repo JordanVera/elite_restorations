@@ -70,6 +70,24 @@ const altOverrides: Record<string, string> = {
     'Cypress kitchen counter with quartz, an undermount stainless sink, and shaker-style cabinets',
   'cypress/08-after-stairs.jpg':
     'Stair treads in a Cypress home, finished in the same wood-look as the new flooring',
+  'crosby/01-before-kitchen-water-damage.jpg':
+    'Kitchen in a Crosby home with the flooring torn out down to a stained, water-damaged subfloor',
+  'crosby/02-before-bathroom-subfloor.jpg':
+    'Bathroom in a Crosby home with the floor torn out to a stained, water-damaged subfloor, and a stained hallway floor',
+  'crosby/03-before-damaged-rafters.jpg':
+    'Badly water-stained, damaged wood rafters overhead in a Crosby home',
+  'crosby/04-during-bathroom-drying.jpg':
+    'A dehumidifier and an air mover drying the bathroom in a Crosby home',
+  'crosby/05-during-kitchen-drying.jpg':
+    'A dehumidifier drying the kitchen in a Crosby home',
+  'crosby/06-after-kitchen.jpg':
+    'Crosby kitchen with new gray shaker-style cabinets, a built-in microwave cabinet, light granite countertops, and a white subway tile backsplash',
+  'crosby/07-after-kitchen-wide.jpg':
+    'Crosby kitchen with gray shaker-style cabinets, light granite countertops, a white subway tile backsplash, and wood-look flooring',
+  'crosby/08-after-shower.jpg':
+    'New tub in a Crosby bathroom with a white marble-look wall surround and matte black shower fixtures',
+  'crosby/09-after-bathroom.jpg':
+    'Crosby bathroom with a new vanity, a granite top, wood-look flooring, a new tub, and a white marble-look wall surround',
 };
 
 const projectSeoNames: Record<string, string> = {
@@ -88,6 +106,7 @@ const projectSeoNames: Record<string, string> = {
   'storm-and-water-response': 'Storm and Water Repair',
   'exteriors-renewed': 'Siding Project',
   'blackhorse-ranch-cypress': 'Cypress Floors & Kitchen',
+  'crosby-water-damage': 'Crosby Water Damage Repair',
 };
 
 export function projectSeoName(slug: string) {
@@ -255,6 +274,18 @@ const cypressJob = gallery('cypress', 'Cypress project', [
   '06-after-kitchen.jpg',
   '07-after-kitchen-counters.jpg',
   '08-after-stairs.jpg',
+]);
+
+const crosbyJob = gallery('crosby', 'Crosby project', [
+  '01-before-kitchen-water-damage.jpg',
+  '02-before-bathroom-subfloor.jpg',
+  '03-before-damaged-rafters.jpg',
+  '04-during-bathroom-drying.jpg',
+  '05-during-kitchen-drying.jpg',
+  '06-after-kitchen.jpg',
+  '07-after-kitchen-wide.jpg',
+  '08-after-shower.jpg',
+  '09-after-bathroom.jpg',
 ]);
 
 const exteriors = gallery('siding', 'Siding', [
@@ -556,6 +587,38 @@ export const projects: Project[] = [
     services: ['vinyl-flooring', 'kitchen-remodeling', 'countertops', 'backsplash'],
     cover: cypressJob[3],
     gallery: cypressJob,
+    cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
+    story: true,
+  },
+  {
+    slug: 'crosby-water-damage',
+    title: 'Water damage repair and rebuilt kitchen and bath in Crosby',
+    category: 'Recovery',
+    tagline: 'Gray shaker kitchen, marble-look bath, and wood-look floors, finished April 2025.',
+    summary: [
+      'Water damage was found in January 2025 at a house in Crosby, TX 77532.',
+      'The kitchen flooring was torn out down to a stained, water-damaged subfloor. The bathroom and hallway floors were stained and water-damaged. The wood framing overhead was badly water-stained and damaged.',
+      'Drying and repairs ran from February to March 2025. Dehumidifiers and air movers dried the bathroom and the kitchen.',
+      'The work was finished in April 2025. The kitchen was finished with gray shaker-style cabinets, light granite countertops, a white subway tile backsplash, a built-in microwave cabinet, and wood-look luxury vinyl plank flooring. The bathroom was finished with a new tub, a white marble-look wall surround, matte black shower fixtures, a new vanity with a granite top, and wood-look flooring.',
+    ],
+    notes: [
+      'Took out the water-damaged kitchen flooring down to the subfloor',
+      'Dried out the kitchen and bathroom with dehumidifiers and air movers',
+      'Repaired the water damage from February to March 2025',
+      'Installed gray shaker-style cabinets, a built-in microwave cabinet, light granite countertops, and a white subway tile backsplash in the kitchen',
+      'Put down wood-look luxury vinyl plank flooring',
+      'Rebuilt the bathroom with a new tub, a white marble-look wall surround, matte black shower fixtures, and a new vanity with a granite top',
+    ],
+    services: [
+      'water-damage-restoration',
+      'kitchen-remodeling',
+      'bathroom-remodeling',
+      'vinyl-flooring',
+      'countertops',
+      'backsplash',
+    ],
+    cover: crosbyJob[6],
+    gallery: crosbyJob,
     cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
     story: true,
   },
