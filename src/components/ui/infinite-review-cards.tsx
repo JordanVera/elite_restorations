@@ -1,10 +1,13 @@
 "use client";
 
-import { useReducedMotion } from "motion/react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 
 import type { Testimonial } from "@/lib/testimonials";
 import { cn } from "@/lib/utils";
+
+export type ReviewLink = { href: string; label: string };
 
 const durationForSpeed = {
   fast: "25s",
@@ -29,7 +32,7 @@ export function InfiniteReviewCards({
   pauseOnHover?: boolean;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
+  const reduce = usePrefersReducedMotion();
 
   if (reduce) {
     return (
@@ -89,9 +92,11 @@ export function InfiniteReviewCards({
 export function ReviewCard({
   item,
   clamped = false,
+  links = [],
 }: {
   item: Testimonial;
   clamped?: boolean;
+  links?: readonly ReviewLink[];
 }) {
   return (
     <figure className="flex h-full flex-col border border-border bg-background px-6 py-6 md:px-7 md:py-7">
@@ -110,9 +115,35 @@ export function ReviewCard({
       <figcaption className="mt-6 border-t border-border pt-4">
         <p className="text-sm">{item.author}</p>
         <p className="mt-1 text-sm text-muted-foreground">{item.detail}</p>
+        {links.length > 0 ? (
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-foreground underline decoration-foreground/30 underline-offset-[0.35em] transition-colors hover:decoration-accent-ink"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </figcaption>
     </figure>
   );
+}
+
+function usePrefersReducedMotion() {
+  const [reduce, setReduce] = useState(false);
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => setReduce(media.matches);
+    apply();
+    media.addEventListener("change", apply);
+    return () => media.removeEventListener("change", apply);
+  }, []);
+  return reduce;
 }
 
 function Stars({ rating }: { rating: number }) {

@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { motion, useReducedMotion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -15,8 +14,6 @@ export type TabItem = {
   value: string;
   content?: React.ReactNode;
 };
-
-const easeOutExpo = [0.16, 1, 0.3, 1] as const;
 
 export function Tabs({
   tabs,
@@ -34,7 +31,6 @@ export function Tabs({
   contentClassName?: string;
 }) {
   const [active, setActive] = React.useState(0);
-  const reduce = useReducedMotion();
   const baseId = React.useId();
   const listRef = React.useRef<HTMLDivElement>(null);
   const current = tabs[Math.min(active, Math.max(tabs.length - 1, 0))] ?? tabs[0];
@@ -90,13 +86,7 @@ export function Tabs({
               className={cn("group relative cursor-pointer bg-transparent text-left", tabClassName)}
             >
               {selected ? (
-                <motion.span
-                  layoutId={`${baseId}-indicator`}
-                  transition={
-                    reduce
-                      ? { duration: 0 }
-                      : { type: "spring", bounce: 0.16, duration: 0.55 }
-                  }
+                <span
                   className={cn(
                     "absolute inset-x-0 -bottom-px z-10 h-px bg-accent",
                     activeTabClassName,
@@ -109,22 +99,14 @@ export function Tabs({
         })}
       </div>
 
-      <motion.div
-        className="relative mt-8 lg:mt-11 lg:pt-6"
-        initial="rest"
-        whileHover={reduce ? undefined : "fan"}
-      >
-        <motion.div
+      <div className="group relative mt-8 lg:mt-11 lg:pt-6">
+        <div
           aria-hidden
-          variants={{ rest: { y: 0 }, fan: { y: -18 } }}
-          transition={{ duration: 0.6, ease: easeOutExpo }}
-          className="pointer-events-none absolute inset-x-10 top-0 hidden h-16 border border-border bg-surface-2 lg:block"
+          className="pointer-events-none absolute inset-x-10 top-0 hidden h-16 border border-border bg-surface-2 transition-transform duration-500 ease-out-expo group-hover:-translate-y-4 lg:block"
         />
-        <motion.div
+        <div
           aria-hidden
-          variants={{ rest: { y: 0 }, fan: { y: -9 } }}
-          transition={{ duration: 0.6, ease: easeOutExpo }}
-          className="pointer-events-none absolute inset-x-5 top-3 hidden h-16 border border-border bg-surface lg:block"
+          className="pointer-events-none absolute inset-x-5 top-3 hidden h-16 border border-border bg-surface transition-transform duration-500 ease-out-expo group-hover:-translate-y-2 lg:block"
         />
 
         <div
@@ -136,26 +118,23 @@ export function Tabs({
           {tabs.map((tab) => {
             const selected = tab.value === current.value;
             return (
-              <motion.div
+              <div
                 key={tab.value}
                 aria-hidden={selected ? undefined : true}
                 inert={selected ? undefined : true}
-                initial={false}
-                animate={{ opacity: selected ? 1 : 0 }}
-                transition={{ duration: reduce ? 0.01 : 0.45, ease: easeOutExpo }}
                 className={cn(
                   selected
                     ? "relative z-10"
-                    : "pointer-events-none absolute inset-0 z-0",
+                    : "pointer-events-none absolute inset-0 z-0 opacity-0",
                   contentClassName,
                 )}
               >
                 {tab.content}
-              </motion.div>
+              </div>
             );
           })}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

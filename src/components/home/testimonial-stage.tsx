@@ -4,7 +4,7 @@ import * as React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Star } from "lucide-react";
 
-import { Parallax } from "@/components/motion";
+import { Parallax } from "@/components/parallax";
 import { Photo } from "@/components/photo";
 import type { Img } from "@/lib/images";
 import type { Testimonial } from "@/lib/testimonials";

@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/lsa-leads",
+      "schedule": "*/30 * * * *"
+    }
+  ]
+}

@@ -1,41 +1,68 @@
 import type { MetadataRoute } from 'next';
 
 import { areaPages } from '@/lib/area-pages';
+import { esNeighborhoods } from '@/lib/es/neighborhoods';
+import { esPosts } from '@/lib/es/posts';
+import { neighborhoods } from '@/lib/neighborhoods';
+import { brandPages } from '@/lib/brand-pages';
 import { articlePath, articles } from '@/lib/articles';
 import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
+import { legalEffectiveDate } from '@/lib/legal';
 import { localLandings } from '@/lib/local-landings';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
+import { insurers } from '@/lib/insurers';
+import { spanishServiceSlugs } from '@/lib/i18n';
 import { servicePath, services } from '@/lib/services';
+import { waterCauses } from '@/lib/water-causes';
+
+const MONTHS = {
+  January: 0,
+  February: 1,
+  March: 2,
+  April: 3,
+  May: 4,
+  June: 5,
+  July: 6,
+  August: 7,
+  September: 8,
+  October: 9,
+  November: 10,
+  December: 11,
+} as const;
 
 /**
- * Prefer a real publish or update date on the content record.
- * Articles, projects, cost guides, and case studies have none today, so those
- * entries — and every page without a date — use the time this sitemap is built.
+ * Privacy and terms name an effective date. Everything else is stamped with
+ * the time this sitemap is generated, which is the production build.
  */
-function contentDate(entry: object, buildTime: Date): Date {
-  const record = entry as Record<string, unknown>;
-  const raw =
-    record.updated ??
-    record.updatedAt ??
-    record.dateModified ??
-    record.published ??
-    record.publishedAt ??
-    record.datePublished ??
-    record.date;
-  if (raw instanceof Date && !Number.isNaN(raw.getTime())) return raw;
-  if (typeof raw === 'string' || typeof raw === 'number') {
-    const parsed = new Date(raw);
-    if (!Number.isNaN(parsed.getTime())) return parsed;
+function publishedDate(value: string) {
+  const match = /^([A-Za-z]+) (\d{1,2}), (\d{4})$/.exec(value.trim());
+  const month = match ? MONTHS[match[1] as keyof typeof MONTHS] : undefined;
+  if (!match || month === undefined) {
+    throw new Error(`Sitemap could not parse a published date: ${value}`);
   }
-  return buildTime;
+  return new Date(Date.UTC(Number(match[3]), month, Number(match[2])));
+}
+
+const datedPaths = new Map<string, Date>([
+  ['/privacy', publishedDate(legalEffectiveDate)],
+  ['/terms', publishedDate(legalEffectiveDate)],
+]);
+
+function entry(path: string, priority: number, builtAt: Date): MetadataRoute.Sitemap[number] {
+  return {
+    url: absoluteUrl(path),
+    lastModified: datedPaths.get(path) ?? builtAt,
+    priority,
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const buildTime = new Date();
+  const builtAt = new Date();
   const staticRoutes = [
     '/',
+    '/restoration',
     '/services',
     '/projects',
     '/resources',
@@ -47,49 +74,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/emergency',
     '/insurance-log',
     '/blog',
+    '/es/blog',
+    '/houston-storm-damage',
+    '/insurance-claims/companies',
+  ];
+  const spanishRoutes = [
+    '/es',
+    '/es/restoration',
+    '/es/emergency',
+    '/es/contact',
+    '/es/houston-storm-damage',
+    ...spanishServiceSlugs.map((slug) => `/es/${slug}`),
   ];
   return [
-    ...staticRoutes.map((path) => ({
-      url: absoluteUrl(path),
-      lastModified: buildTime,
-      priority: path === '/' ? 1 : 0.8,
-    })),
-    ...services.map((service) => ({
-      url: absoluteUrl(servicePath(service.slug)),
-      lastModified: buildTime,
-      priority: 0.7,
-    })),
-    ...projects.map((project) => ({
-      url: absoluteUrl(`/projects/${project.slug}`),
-      lastModified: contentDate(project, buildTime),
-      priority: 0.6,
-    })),
-    ...articles.map((article) => ({
-      url: absoluteUrl(articlePath(article.slug)),
-      lastModified: contentDate(article, buildTime),
-      priority: 0.5,
-    })),
-    { url: absoluteUrl('/privacy'), lastModified: buildTime, priority: 0.3 },
-    { url: absoluteUrl('/terms'), lastModified: buildTime, priority: 0.3 },
-    ...localLandings.map((page) => ({
-      url: absoluteUrl(page.path),
-      lastModified: buildTime,
-      priority: 0.5,
-    })),
-    ...areaPages.map((page) => ({
-      url: absoluteUrl(page.path),
-      lastModified: buildTime,
-      priority: 0.6,
-    })),
-    ...costGuides.map((guide) => ({
-      url: absoluteUrl(guide.path),
-      lastModified: contentDate(guide, buildTime),
-      priority: 0.6,
-    })),
-    ...caseStudies.map((study) => ({
-      url: absoluteUrl(study.path),
-      lastModified: contentDate(study, buildTime),
-      priority: 0.6,
-    })),
+    ...staticRoutes.map((path) =>
+      entry(path, path === '/' ? 1 : path === '/restoration' ? 0.9 : 0.8, builtAt),
+    ),
+    ...services.map((s) => entry(servicePath(s.slug), 0.7, builtAt)),
+    ...spanishRoutes.map((path) => entry(path, 0.6, builtAt)),
+    ...waterCauses.map((cause) => entry(cause.path, 0.7, builtAt)),
+    ...insurers.map((insurer) => entry(`/insurance-claims/companies/${insurer.slug}`, 0.6, builtAt)),
+    ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
+    ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
+    entry('/privacy', 0.3, builtAt),
+    entry('/terms', 0.3, builtAt),
+    ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
+    ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
+    ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esNeighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esPosts.map((post) => entry(post.path, 0.5, builtAt)),
+    ...costGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
+    ...brandPages.map((page) => entry(page.path, page.locale === 'es' ? 0.6 : 0.7, builtAt)),
+    ...caseStudies.map((study) => entry(study.path, 0.6, builtAt)),
   ];
 }

@@ -101,7 +101,7 @@ export function FeaturedTrack({ projects }: { projects: TrackProject[] }) {
           >
             <p className="eyebrow text-muted-foreground">Selected work</p>
             <h2 id="featured-heading" className="t-xl mt-6">
-              Rooms, roofs
+              Rooms, roofs{' '}
               <br />
               and everything <em className="text-accent-ink">between.</em>
             </h2>

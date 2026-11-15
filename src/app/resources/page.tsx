@@ -9,7 +9,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling Resources',
   description:
-    'Step-by-step remodel sequences for Houston homeowners, and a page for realtors who refer work to Elite Restorations.',
+    'Step-by-step remodel notes for Houston homeowners, and a page for realtors who send work to Elite Restorations.',
   path: '/resources',
 });
 
@@ -18,15 +18,15 @@ const portals = [
     index: '01',
     href: '/resources/homeowners',
     eyebrow: 'Homeowners',
-    title: 'Research the project.',
-    body: 'How a remodel is sequenced, from the first visit through the walkthrough, then how to ask for an estimate.',
+    title: 'Look at the project.',
+    body: 'How a remodel moves, from the first visit through the walkthrough, and how to ask for an estimate.',
   },
   {
     index: '02',
     href: '/resources/realtors',
     eyebrow: 'Realtors',
-    title: 'Refer the work.',
-    body: 'The same project steps, plus a direct way to send a flip or an introduction.',
+    title: 'Send the work.',
+    body: 'The same project steps, plus a direct way to send a flip or introduce a client.',
   },
 ];
 
@@ -34,8 +34,8 @@ export default function ResourcesPage() {
   return (
     <PageHero
       eyebrow="Resources"
-      title={['Two ways in.']}
-      lede="Homeowners researching a remodel, and realtors who refer the work. Same crews. A different starting point."
+      title={['Two places to start.']}
+      lede="Homeowners looking at a remodel, and realtors who send us the work. The same crews. You just start in a different place."
       crumbs={[{ name: 'Resources', path: '/resources' }]}
       className="pb-20 md:pb-28"
     >

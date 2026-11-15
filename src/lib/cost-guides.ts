@@ -1,9 +1,21 @@
 import { getArticle } from '@/lib/articles';
 import { getAreaPage } from '@/lib/area-pages';
+import { duplicateQuestions } from '@/lib/faqs';
+import { costFaqs as extraCostFaqs } from '@/lib/faqs/pages';
+import type { GuideSection } from '@/lib/guides/types';
+import {
+  bathroomCostFaqs,
+  bathroomCostSections,
+  kitchenCostFaqs,
+  kitchenCostSections,
+  roofCostFaqs,
+  roofCostSections,
+} from '@/lib/guides/cost-copy';
 import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
 import { site } from '@/lib/site';
+import { wordCount } from '@/lib/words';
 
 export type CostRange = {
   label: string;
@@ -27,6 +39,8 @@ export type CostGuide = {
   /** Hidden until every row has a low and a high. */
   ranges: readonly CostRange[];
   faqs: readonly { q: string; a: string }[];
+  related: readonly { href: string; label: string }[];
+  sections: readonly GuideSection[];
 };
 
 export function rangesArePublishable(ranges: readonly CostRange[]) {
@@ -58,7 +72,7 @@ export function formatPublishedRange(range: CostRange) {
 
 const phone = site.phone.display;
 
-export const costGuides: readonly CostGuide[] = [
+const costGuideInputs: readonly CostGuide[] = [
   {
     slug: 'kitchen-remodel-cost-houston',
     path: '/kitchen-remodel-cost-houston',
@@ -76,11 +90,11 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Materials',
-        body: 'Painted cabinets and a quartz counter are a different scope from a custom box and a stone that needs more care. Hardware, the backsplash, and the lighting travel with that choice.',
+        body: 'Painted cabinets and a quartz counter are a different job from custom cabinets and a stone that needs more care. Hardware, the backsplash, and the lighting go with that choice.',
       },
       {
         title: 'Layout changes',
-        body: 'Keeping the sink and the range where they are is a smaller job than moving a wall, a drain, or the path through the room. Older Houston houses are often out of square, so the layout is measured before anyone promises a wall can move.',
+        body: 'Keeping the sink and the range where they are is a smaller job than moving a wall, a drain, or the path through the room. Older Houston houses are often not quite square, so the layout is measured before anyone promises a wall can move.',
       },
       {
         title: 'Permits',
@@ -107,7 +121,20 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         q: 'How do I get a number for my kitchen?',
-        a: `Call ${phone} or request an estimate. The visit is how the scope, and then the price, gets decided.`,
+        a: `Call ${phone} or request an estimate. The visit is how the work, and then the price, gets settled.`,
+      },
+      ...kitchenCostFaqs,
+    ],
+    sections: kitchenCostSections,
+    related: [
+      { href: '/kitchen-remodeling', label: 'Houston kitchen remodeling' },
+      { href: '/kitchen-remodeling-houston-tx', label: 'Kitchen remodeling in Houston' },
+      { href: '/kitchen-remodeling-the-heights-tx', label: 'Kitchen remodeling in The Heights' },
+      { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
+      { href: '/kitchen-remodeling-the-woodlands-tx', label: 'Kitchen remodeling in The Woodlands' },
+      {
+        href: '/kitchen-remodel-case-study',
+        label: "A kitchen remodel, in a customer's words",
       },
     ],
   },
@@ -128,7 +155,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Materials',
-        body: 'A new vanity, mirror, and light is a different scope from a full tile shower, a tub, and a stone that has to be waterproofed behind the finish you see.',
+        body: 'A new vanity, mirror, and light is a different job from a full tile shower, a tub, and a stone that has to be waterproofed behind the finish you see.',
       },
       {
         title: 'Layout changes',
@@ -147,11 +174,11 @@ export const costGuides: readonly CostGuide[] = [
     faqs: [
       {
         q: 'Why can two bathroom remodels cost so differently?',
-        a: 'A new vanity in the same footprint is not a new shower in a new place. Tile, glass, waterproofing, and moved plumbing are the usual reasons the scope grows.',
+        a: 'A new vanity in the same place is not a new shower in a new place. Tile, glass, waterproofing, and moved plumbing are the usual reasons the work grows.',
       },
       {
         q: 'Is waterproofing part of the price?',
-        a: 'Yes, when the shower or the wet wall is in the job. It goes in before the finish tile. It is part of that scope, not a line you can skip and keep the same result.',
+        a: 'Yes, when the shower is part of the job. The waterproofing goes in before the finish tile. It is part of that work, not a step you can skip and keep the same result.',
       },
       {
         q: 'Do bathroom remodels need a permit in Houston?',
@@ -159,7 +186,19 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         q: 'How do I get a price?',
-        a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that scope.`,
+        a: `Call ${phone} or request an estimate. We look at the bathroom you have and price that work.`,
+      },
+      ...bathroomCostFaqs,
+    ],
+    sections: bathroomCostSections,
+    related: [
+      { href: '/bathroom-remodeling', label: 'Houston bathroom remodeling' },
+      { href: '/bathroom-remodeling-houston-tx', label: 'Bathroom remodeling in Houston' },
+      { href: '/bathroom-remodeling-memorial-tx', label: 'Bathroom remodeling in Memorial' },
+      { href: '/bathroom-remodeling-bellaire-tx', label: 'Bathroom remodeling in Bellaire' },
+      {
+        href: '/bathroom-remodeling-west-university-tx',
+        label: 'Bathroom remodeling in West University',
       },
     ],
   },
@@ -170,13 +209,13 @@ export const costGuides: readonly CostGuide[] = [
     description:
       'Typical Houston roof replacement planning ranges for asphalt, metal, tile, or composite. The final price comes from an on-site estimate.',
     lines: ['Roof replacement cost', 'in Houston.'],
-    lede: 'A roof price is the house under it: the size, the pitch, what the deck looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
+    lede: 'A roof price is the house under it: the size, the slope, what the wood under the shingles looks like after the old roof comes off, and the material you choose. An insurance claim does not set that price.',
     serviceSlug: 'roof-replacement',
     serviceLabel: 'Roof replacement',
     factors: [
       {
         title: 'Size and shape',
-        body: 'Squares of roof are the start. Stories, pitch, valleys, and the number of penetrations change how long the crew is up there and how the flashing has to be detailed.',
+        body: 'The size of the roof is the start. Stories, slope, valleys, and the pipes and vents through the roof change how long the crew is up there and how the metal joints are finished.',
       },
       {
         title: 'Materials',
@@ -184,7 +223,7 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'What is under the shingles',
-        body: 'A replacement includes the tear-off and a look at the deck. Soft decking, bad flashing, or missing vents change the scope. We say so before the job grows past the roof we priced. Replacing a bad sheet of decking is typically about $75-$150 per 4x8 sheet.',
+        body: 'A replacement includes the tear-off and a look at the wood. Soft boards, bad metal joints, or missing vents change the work. We say so before the job grows past the priced roof. Replacing a bad sheet of wood is typically about $75-$150 per 4x8 sheet.',
       },
       {
         title: 'Permits',
@@ -192,34 +231,65 @@ export const costGuides: readonly CostGuide[] = [
       },
       {
         title: 'Insurance coverage',
-        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. We do not negotiate the claim, and we are not a public adjuster.',
+        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. Your insurer handles the claim. We are not public adjusters.',
       },
     ],
     ranges: [
       { label: 'Architectural asphalt replacement', low: 12000, high: 24000 },
       { label: 'Metal, tile, or composite', low: 20000, high: 45000 },
-      { label: 'Deck repairs found after tear-off', low: 500, high: 2000 },
+      { label: 'Board repairs found after tear-off', low: 500, high: 2000 },
     ],
     faqs: [
       {
         q: 'Why is there no single roof price per square?',
-        a: 'Pitch, stories, valleys, the deck under the shingles, and the material all change the job. A per-square number written before the inspection would leave those out.',
+        a: 'Slope, stories, valleys, the wood under the shingles, and the material all change the job. A size-only figure written before the inspection would leave those out.',
       },
       {
         q: 'Does insurance set the cost of the roof?',
-        a: 'No. Your insurer decides what the policy pays. The cost of the roof is the scope of the roof. We can document the conditions. We do not decide coverage and we do not negotiate the claim.',
+        a: 'No. Your insurer decides what the policy pays. The cost of the roof is the work on the roof. We can document the conditions. Coverage and the claim stay with your insurer.',
       },
       {
-        q: 'What if the deck is damaged?',
-        a: 'We find that after the old roofing comes off. Soft decking is extra work. We tell you before we expand the job past the roof that was priced.',
+        q: 'What if the wood under the shingles is rotten?',
+        a: 'We find that after the old roofing comes off. Soft boards under the shingles are extra work. We tell you before the job grows past the roof that was priced.',
       },
       {
         q: 'How do I get a roof estimate?',
-        a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that scope.`,
+        a: `Call ${phone}. We inspect the roof you have and say whether a repair will hold or it needs to come off, then price that work.`,
+      },
+      ...roofCostFaqs,
+    ],
+    sections: roofCostSections,
+    related: [
+      { href: '/roof-replacement', label: 'Houston roof replacement' },
+      { href: '/roof-replacement-houston-tx', label: 'Roof replacement in Houston' },
+      { href: '/roof-replacement-katy-tx', label: 'Roof replacement in Katy' },
+      { href: '/roof-replacement-memorial-tx', label: 'Roof replacement in Memorial' },
+      {
+        href: '/roof-replacement-the-woodlands-tx',
+        label: 'Roof replacement in The Woodlands',
+      },
+      {
+        href: '/what-to-do-after-a-roof-leak-in-houston',
+        label: 'What to do after a roof leak in Houston',
+      },
+      {
+        href: '/hail-damage-vs-normal-wear-houston-roof',
+        label: 'Hail damage vs normal wear on a Houston roof',
       },
     ],
   },
 ];
+
+export const costGuides: readonly CostGuide[] = costGuideInputs.map((guide) => {
+  const extra = extraCostFaqs[guide.slug];
+  if (!extra) throw new Error(`Missing cost FAQs: ${guide.slug}`);
+  const faqs = [...guide.faqs, ...extra];
+  const repeated = duplicateQuestions(faqs);
+  if (repeated.length > 0) {
+    throw new Error(`Cost guide ${guide.slug} repeats FAQ: ${repeated.join(' | ')}`);
+  }
+  return { ...guide, faqs };
+});
 
 const bySlug = new Map(costGuides.map((guide) => [guide.slug, guide]));
 
@@ -229,6 +299,36 @@ export function getCostGuide(slug: string) {
 
 export function estimateHref(serviceSlug: string) {
   return `/contact?service=${encodeURIComponent(serviceSlug)}`;
+}
+
+function costGuideWords(guide: CostGuide) {
+  return wordCount([
+    guide.lede,
+    ...guide.factors.flatMap((factor) => [factor.title, factor.body]),
+    ...guide.ranges.flatMap((range) => [range.label, String(range.low), String(range.high)]),
+    'These are typical planning ranges, not quotes. The final price comes from an on-site estimate.',
+    ...guide.sections.flatMap((section) => [
+      section.eyebrow,
+      section.heading,
+      ...section.paragraphs,
+      ...(section.points ?? []).flatMap((point) => [point.title, point.body]),
+    ]),
+    ...guide.faqs.flatMap((faq) => [faq.q, faq.a]),
+  ]);
+}
+
+const costDepthErrors: string[] = [];
+for (const guide of costGuides) {
+  const words = costGuideWords(guide);
+  if (words < 1500 || words > 2800) {
+    costDepthErrors.push(`Cost guide ${guide.slug} is ${words} words`);
+  }
+  if (guide.faqs.length < 14 || guide.faqs.length > 22) {
+    costDepthErrors.push(`Cost guide ${guide.slug} has ${guide.faqs.length} FAQs`);
+  }
+}
+if (costDepthErrors.length > 0) {
+  throw new Error(costDepthErrors.join('\n'));
 }
 
 for (const guide of costGuides) {
@@ -249,5 +349,31 @@ for (const guide of costGuides) {
   if (!getService(guide.serviceSlug)) {
     throw new Error(`Cost guide service missing: ${guide.serviceSlug}`);
   }
-  servicePath(guide.serviceSlug);
+  const hub = servicePath(guide.serviceSlug);
+  if (!guide.related.some((link) => link.href === hub)) {
+    throw new Error(`Cost guide ${guide.slug} does not link its service hub`);
+  }
+  const cityLinks = guide.related.filter((link) => parseLocalLandingSlug(link.href.slice(1)));
+  if (cityLinks.length < 3 || cityLinks.length > 4) {
+    throw new Error(`Cost guide ${guide.slug} should link 3 or 4 city pages`);
+  }
+  if (
+    guide.serviceSlug === 'kitchen-remodeling' &&
+    !guide.related.some((link) => link.href === '/kitchen-remodel-case-study')
+  ) {
+    throw new Error(`Cost guide ${guide.slug} should link the kitchen case study`);
+  }
+  const seen = new Set<string>();
+  for (const link of guide.related) {
+    if (!link.label.trim()) throw new Error(`Cost guide ${guide.slug} has an empty anchor`);
+    if (seen.has(link.href)) throw new Error(`Cost guide ${guide.slug} repeats ${link.href}`);
+    seen.add(link.href);
+    const slug = link.href.replace(/^\//, '');
+    const known =
+      Boolean(getService(slug)) ||
+      Boolean(getArticle(slug)) ||
+      Boolean(parseLocalLandingSlug(slug)) ||
+      slug === 'kitchen-remodel-case-study';
+    if (!known) throw new Error(`Cost guide ${guide.slug} links an unknown path: ${link.href}`);
+  }
 }

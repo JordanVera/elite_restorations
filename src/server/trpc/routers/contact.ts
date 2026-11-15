@@ -2,7 +2,9 @@ import "server-only";
 
 import { TRPCError } from "@trpc/server";
 
+import { websiteLeadContactError } from "@/lib/contact-identity";
 import { leadSchema } from "@/lib/inquiry-schema";
+import { submitTiming } from "@/lib/lead-timing";
 import { deliverLead } from "@/server/delivery";
 import { resolveLead } from "@/server/leads/resolve";
 import { isRateLimited } from "@/server/rate-limit";
@@ -10,10 +12,28 @@ import { publicProcedure, router } from "@/server/trpc/init";
 
 export const contactRouter = router({
   submit: publicProcedure.input(leadSchema).mutation(async ({ input, ctx }) => {
+    const identityError = websiteLeadContactError(input.name, input.phone);
+    if (identityError) {
+      throw new TRPCError({ code: "BAD_REQUEST", message: identityError });
+    }
+
     if (isRateLimited(`inquiry:${ctx.ip}`)) {
       throw new TRPCError({
         code: "TOO_MANY_REQUESTS",
         message: "Too many requests. Please wait a few minutes or call us.",
+      });
+    }
+
+    if (input.website.trim()) {
+      console.info("[leads] dropped honeypot submission");
+      return { delivered: true as const, photosSaved: 0, photosMissing: 0 };
+    }
+
+    const timing = submitTiming(input.startedAt);
+    if (timing !== "ok") {
+      throw new TRPCError({
+        code: "PRECONDITION_FAILED",
+        message: timing === "expired" ? "expired" : "too-fast",
       });
     }
 

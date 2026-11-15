@@ -1,5 +1,5 @@
 import { ScrollWords } from '@/components/home/scroll-words';
-import { ImageReveal, Parallax, Reveal } from '@/components/motion';
+import { ImageReveal, Reveal } from '@/components/motion';
 import { Photo } from '@/components/photo';
 import { img } from '@/lib/images';
 import { SiteLogo } from '../site-logo';
@@ -19,13 +19,13 @@ const principles = [
   {
     n: 'ii.',
     title: 'Rebuild honestly.',
-    body: 'You get a clear scope, a clear price, and a team that picks up the phone, from the first walkthrough to the last.',
+    body: 'You get a written list of the work, a clear price, and a team that picks up the phone, from the first visit to the last.',
     offset: 'lg:mt-24',
   },
   {
     n: 'iii.',
     title: 'Remodel with intent.',
-    body: 'A kitchen, a bath, a floor. Every material, every seam, every trim line is a decision. We help you make them, then we build them cleanly.',
+    body: 'A kitchen, a bath, a floor. Every material, every joint, and every piece of trim is a choice. We help you make those choices, then we build them cleanly.',
     offset: 'lg:mt-10',
   },
 ];
@@ -58,7 +58,7 @@ export function HomeManifesto() {
               className="relative z-30 t-lg font-normal text-[clamp(2rem,4.9vw,4.9rem)]! leading-[1.04]!"
               segments={[
                 {
-                  text: 'Some jobs in Houston start with storm damage or a leaking roof. Others start with a kitchen that no longer works. Either way, the same family shows up. We',
+                  text: 'Some jobs in Houston start with storm damage or a leaking roof. Others start with a kitchen that no longer works. Either way, the same family comes to the house. We',
                 },
                 { text: 'restore', emphasis: true },
                 { text: 'what should stay,' },
@@ -76,11 +76,9 @@ export function HomeManifesto() {
         <div className="relative mt-24 grid items-start gap-16 lg:mt-40 lg:grid-cols-12">
           <div className="relative z-10 hidden lg:col-span-3 lg:col-start-1 lg:block">
             <ImageReveal from="left" className="aspect-[4/5]">
-              <Parallax offset={50} className="size-full" scale={1.12}>
-                <div className="relative size-full">
-                  <Photo image={tile} sizes="24vw" />
-                </div>
-              </Parallax>
+              <div className="relative size-full">
+                <Photo image={tile} sizes="24vw" />
+              </div>
             </ImageReveal>
             <p className="eyebrow mt-4 text-muted-foreground">
               Freestanding tub and marble shower

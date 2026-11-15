@@ -9,12 +9,13 @@ export const site = {
   name: 'Elite Restorations',
   tagline: 'Remodeling and restoration for Greater Houston',
   description:
-    'Family-owned remodeling, restoration and roofing contractor in Houston since 1993. Kitchens, baths, roofs, siding and water-damage recovery.',
+    'Family-owned Houston restoration and remodeling company since 1993. Water, storm, and fire damage, insurance claims help, kitchens, baths, and roofs.',
   url: 'https://eliterestorations.com',
   founded: 1993,
   phone: {
     display: '(713) 909-0034',
     href: 'tel:+17139090034',
+    sms: 'sms:+17139090034',
     e164: '+17139090034',
   },
   email: 'admin@eliterestorations.com',
@@ -127,6 +128,7 @@ export const nav: readonly NavItem[] = [
     ],
   },
   { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
   { href: '/emergency', label: 'Emergency' },
 ];

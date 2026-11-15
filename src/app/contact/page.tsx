@@ -4,21 +4,20 @@ import { Clock, Mail, MapPin } from 'lucide-react';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { isKnownService } from '@/lib/inquiry';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact a Houston Remodeler',
+  title: 'Contact Houston Restoration',
   description:
-    'Call (713) 909-0034 or visit Elite Restorations at 511 Crestwater Ct, Houston, TX 77082. Free estimates for remodeling, roofing and restoration.',
+    'Call (713) 909-0034 for restoration or remodeling in Houston. The office is at 511 Crestwater Ct, Houston, TX 77082, or you can request an estimate.',
   path: '/contact',
+  languages: languageAlternates('/contact', '/es/contact'),
 });
 
 type SearchParams = Promise<{
   service?: string | string[];
   note?: string | string[];
-  path?: string | string[];
 }>;
 
 const first = (value: string | string[] | undefined) =>
@@ -32,14 +31,13 @@ export default async function ContactPage({
   const params = await searchParams;
   const service = first(params.service);
   const note = first(params.note)?.slice(0, 500);
-  const path = first(params.path);
 
   return (
     <>
       <PageHero
         eyebrow="Contact"
         title={['Start a conversation.']}
-        lede="Call, email or send a request. If water is coming in or a roof is open to the weather, call first, then tell us what happened."
+        lede="Call, email, or send a note. If water is coming in, or the roof is open to the weather, call first. Then tell us what happened."
         crumbs={[{ name: 'Contact', path: '/contact' }]}
       />
 
@@ -55,6 +53,12 @@ export default async function ContactPage({
               className="font-display mt-4 block text-[clamp(2rem,10vw,3.75rem)] leading-none transition-colors hover:text-accent-ink"
             >
               {site.phone.display}
+            </a>
+            <a
+              href={site.phone.sms}
+              className="mt-3 inline-flex text-sm underline decoration-foreground/30 underline-offset-[0.45em] hover:decoration-accent-ink"
+            >
+              Text us
             </a>
 
             <dl className="mt-12 space-y-8">
@@ -107,9 +111,9 @@ export default async function ContactPage({
                     {site.phone.display}
                   </a>
                   <p className="mt-4">
-                    Serving Greater Houston, including{' '}
-                    {site.serviceArea.slice(0, 8).join(', ')} and surrounding
-                    communities.
+                    We come to homes across Greater Houston, including{' '}
+                    {site.serviceArea.slice(0, 8).join(', ')}, and the
+                    neighborhoods around them.
                   </p>
                 </dd>
               </div>
@@ -119,14 +123,13 @@ export default async function ContactPage({
           <Reveal className="lg:col-span-7" delay={0.1}>
             <p className="eyebrow text-accent-ink">Request an estimate</p>
             <h2 className="font-display t-md mt-4 max-w-[20ch]">
-              Tell us what you need.
+              Tell us about the property.
             </h2>
             <div className="relative mt-10">
               <LeadForm
-                key={`${service ?? ''}|${note ?? ''}|${path ?? ''}`}
-                defaultService={isKnownService(service) ? service : undefined}
+                key={`${service ?? ''}|${note ?? ''}`}
+                defaultService={service}
                 defaultMessage={note}
-                defaultPath={path}
               />
             </div>
           </Reveal>

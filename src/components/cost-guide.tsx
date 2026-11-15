@@ -3,6 +3,7 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
+import { ProseSections } from '@/components/prose-sections';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import {
@@ -122,6 +123,8 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
         </div>
       </section>
 
+      <ProseSections sections={guide.sections} />
+
       <section aria-labelledby="cost-faq-heading" className="border-t border-border py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-4">
@@ -135,6 +138,32 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
           </div>
         </div>
       </section>
+
+      {guide.related.length > 0 && (
+        <section
+          aria-labelledby="cost-related-heading"
+          className="border-t border-border py-16 md:py-20"
+        >
+          <div className="gutter mx-auto max-w-[120rem]">
+            <h2 id="cost-related-heading" className="eyebrow text-muted-foreground">
+              Related guides
+            </h2>
+            <ul className="mt-6 max-w-2xl space-y-3">
+              {guide.related.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                  >
+                    {link.label}
+                    <ArrowUpRight className="size-4" aria-hidden />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       <CtaBand
         title={`Planning ${guide.serviceLabel.toLowerCase()}?`}

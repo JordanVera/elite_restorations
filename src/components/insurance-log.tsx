@@ -27,7 +27,6 @@ import {
   checklistProgress,
   checklistShareText,
   formatWhen,
-  incidentForSituation,
   getClaimPacketServerSnapshot,
   getClaimPacketSnapshot,
   materialLabels,
@@ -79,8 +78,8 @@ type Status =
 type Handoff = {
   name: string;
   address: string;
-  incident: string;
-  waterActive: string;
+  service: string;
+  carrier: string;
   message: string;
   photos: { blob: Blob; name: string }[];
 };
@@ -174,7 +173,7 @@ function PhotoSlot({
       </div>
       {failed && (
         <p role="alert" className="mt-2 text-sm text-accent-ink">
-          We could not read that file. Try a JPEG or PNG.
+          We could not read that photo. Try a JPEG or PNG.
         </p>
       )}
     </div>
@@ -316,7 +315,7 @@ export function InsuranceLog() {
       if (typeof navigator.share === 'function') {
         try {
           await navigator.share({ title: 'First-night checklist', text, url });
-          setShareStatus('Share sheet opened.');
+          setShareStatus('The share menu is open.');
           return;
         } catch (error) {
           if (error instanceof DOMException && error.name === 'AbortError')
@@ -324,7 +323,7 @@ export function InsuranceLog() {
         }
       }
       window.location.href = `sms:?&body=${encodeURIComponent(text)}`;
-      setShareStatus('Opening a text message with the list.');
+      setShareStatus('Opening a text with the list.');
     } finally {
       sharing.current = false;
     }
@@ -383,12 +382,21 @@ export function InsuranceLog() {
   }
 
   function openEstimate() {
+    const water = waterActiveForLoss(loss);
+    const lines: string[] = [];
+    if (water === 'yes') lines.push('Water is still coming in.');
+    if (water === 'no') lines.push('Water has stopped.');
+    if (cover.claimNumber.trim()) {
+      lines.push(`Claim number: ${cover.claimNumber.trim()}`);
+    }
+    const details = recoveryMessage(loss);
+    if (details) lines.push(details);
     setHandoff({
       name: cover.owner,
       address: cover.address,
-      incident: incidentForSituation(situation),
-      waterActive: waterActiveForLoss(loss),
-      message: recoveryMessage(loss),
+      service: situation === 'roof' ? 'storm-hail' : 'water-damage',
+      carrier: cover.insurer,
+      message: lines.join('\n'),
       photos: photosForEstimate(rooms),
     });
   }
@@ -410,8 +418,9 @@ export function InsuranceLog() {
           If water is coming in right now.
         </h2>
         <p className="mt-3 text-muted-foreground">
-          A short list for an active leak or an open roof. Text it to whoever is
-          at the house. It saves on this phone and fills the claim packet below.
+          A short list for a leak that is still going, or a roof that is open.
+          Text it to whoever is at the house. It stays on this phone, and it
+          fills in the packet below.
         </p>
 
         <div
@@ -492,8 +501,8 @@ export function InsuranceLog() {
           About the property.
         </h2>
         <p className="mt-3 max-w-[52ch] text-muted-foreground">
-          These details go on the cover page. Add what you have; everything here
-          is optional.
+          These details go on the first page of the PDF. Add what you have.
+          Everything here is optional.
         </p>
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
           <Field id="log-owner" label="Property owner" optional>
@@ -547,9 +556,9 @@ export function InsuranceLog() {
           What happened.
         </h2>
         <p className="mt-3 max-w-[52ch] text-muted-foreground">
-          When the water started and stopped, what was moved, and which
-          materials got wet. The list above writes these too. Everything here is
-          optional.
+          When the water started and stopped, what you moved, and which
+          materials got wet. The checklist above fills these in too. Everything
+          here is optional.
         </p>
         <LossFacts idPrefix="loss" loss={loss} onChange={patchLoss} />
       </section>
@@ -623,7 +632,7 @@ export function InsuranceLog() {
                     id={`room-note-${room.id}`}
                     rows={3}
                     maxLength={NOTE_LIMIT}
-                    placeholder="What you see, how far it spreads, what was affected."
+                    placeholder="What you see, how far it spread, and what got wet."
                     value={room.note}
                     onChange={(e) =>
                       updateRoom(room.id, { note: e.target.value })
@@ -656,10 +665,10 @@ export function InsuranceLog() {
           Download your record.
         </h2>
         <p className="mt-3 max-w-[56ch] leading-relaxed text-muted-foreground">
-          The PDF is built in your browser. Your photos stay on this device and
-          are not uploaded anywhere. Keep this page open until you have
-          downloaded the file. It includes the loss summary and the room photos.
-          It is a record you can hand to your adjuster, not a filing with your
+          The PDF is made in your browser. Your photos stay on this device.
+          They are not uploaded. Keep this page open until the file has
+          downloaded. It includes what happened and the photos of each room.
+          You can hand it to your adjuster. It is not a claim filed with your
           insurer.
         </p>
 
@@ -678,14 +687,14 @@ export function InsuranceLog() {
               </>
             ) : (
               <>
-                Download claim packet
+                Download the PDF
                 <Download aria-hidden />
               </>
             )}
           </Button>
           <p className={cn('text-sm text-muted-foreground')} aria-live="polite">
             {total === 0
-              ? 'Add at least one photo to enable the download.'
+              ? 'Add at least one photo, and the download will turn on.'
               : `${total} ${total === 1 ? 'photo' : 'photos'} across ${rooms.length} ${rooms.length === 1 ? 'room' : 'rooms'}.`}
           </p>
         </div>
@@ -693,13 +702,13 @@ export function InsuranceLog() {
         <div role="status" aria-live="polite" className="mt-6">
           {status.kind === 'done' && (
             <p className="max-w-[56ch] leading-relaxed">
-              Downloaded {status.filename}. Send it to your adjuster, and keep a
-              copy with your claim paperwork.
+              Saved {status.filename}. Send it to your adjuster, and keep a
+              copy with your claim papers.
             </p>
           )}
           {status.kind === 'error' && (
             <p role="alert" className="text-accent-ink">
-              We could not build the PDF. Please try again.
+              We could not build the PDF. Try again in a moment.
             </p>
           )}
         </div>
@@ -712,12 +721,12 @@ export function InsuranceLog() {
       >
         <p className="eyebrow text-accent-ink">After the packet</p>
         <h2 id="log-estimate" className="font-display t-md mt-4">
-          Send the photos with a recovery request.
+          Send the photos with a request for help.
         </h2>
         <p className="mt-3 max-w-[56ch] leading-relaxed text-muted-foreground">
-          The request can include 6 photos. Close-ups and wet materials go
-          first. The PDF keeps every photo. Nothing is sent until you submit the
-          form.
+          The form can include 6 photos. Close-ups, and photos of what got wet,
+          go first. The PDF keeps every photo. Nothing is sent until you
+          submit the form.
         </p>
         <p className="mt-3 text-sm text-muted-foreground">
           {carrySummary(total, carried.length)}
@@ -726,11 +735,12 @@ export function InsuranceLog() {
         {handoff ? (
           <div className="mt-10 max-w-3xl">
             <LeadForm
-              lockPath="recovery"
+              idPrefix="log"
               defaultName={handoff.name}
               defaultAddress={handoff.address}
-              defaultIncident={handoff.incident}
-              defaultWaterActive={handoff.waterActive}
+              defaultService={handoff.service}
+              defaultClaim="yes"
+              defaultCarrier={handoff.carrier}
               defaultMessage={handoff.message}
               initialPhotos={handoff.photos}
             />
@@ -743,7 +753,7 @@ export function InsuranceLog() {
             className="mt-8"
             onClick={openEstimate}
           >
-            Continue to the request
+            Continue to the form
           </Button>
         )}
       </section>
