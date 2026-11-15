@@ -5,8 +5,14 @@ import { breadcrumbSchema } from "@/lib/seo";
 
 type Crumb = { name: string; path: string };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
-  const trail: Crumb[] = [{ name: "Home", path: "/" }, ...items];
+export function Breadcrumbs({
+  items,
+  home = { name: "Home", path: "/" },
+}: {
+  items: Crumb[];
+  home?: Crumb;
+}) {
+  const trail: Crumb[] = [home, ...items];
   return (
     <>
       <nav aria-label="Breadcrumb">

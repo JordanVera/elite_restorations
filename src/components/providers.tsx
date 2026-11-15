@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { ThemeProvider } from 'next-themes';
-import { MotionConfig } from 'motion/react';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -13,7 +12,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
       storageKey="elite-theme"
     >
-      <MotionConfig reducedMotion="user">{children}</MotionConfig>
+      {children}
     </ThemeProvider>
   );
 }

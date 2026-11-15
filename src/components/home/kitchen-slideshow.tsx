@@ -11,25 +11,31 @@ const slides = [
   // { src: 'brass-dome-waterfall-island.jpg', position: '58% 50%' },
 ];
 
-export function KitchenSlideshow() {
+export function KitchenSlideshow({ locale = "en" }: { locale?: "en" | "es" }) {
   const [paused, setPaused] = useState(false);
+  const es = locale === "es";
   return (
     <>
-      <div
-        className="kitchen-slideshow"
-        data-paused={paused}
-        aria-hidden="true"
-      >
+      <div className="kitchen-slideshow" data-paused={paused}>
         {slides.map((slide, i) => (
-          <div className={`kitchen-slide kitchen-slide-${i}`} key={slide.src}>
+          <div
+            className={`kitchen-slide kitchen-slide-${i}`}
+            key={slide.src}
+            {...(i === 0 ? {} : { 'aria-hidden': true })}
+          >
             <div className="kitchen-slide-image">
               <Image
                 src={`/images/projects/${slide.src}`}
-                alt=""
+                alt={
+                  i === 0
+                    ? 'Kitchen remodel in Houston: vaulted waterfall island'
+                    : ''
+                }
                 fill
                 sizes="100vw"
                 quality={75}
                 priority={i === 0}
+                fetchPriority={i === 0 ? 'high' : 'low'}
                 style={{ objectFit: 'cover', objectPosition: slide.position }}
               />
             </div>
@@ -40,7 +46,13 @@ export function KitchenSlideshow() {
         className="kitchen-motion"
         type="button"
         aria-label={
-          paused ? 'Resume background slideshow' : 'Pause background slideshow'
+          paused
+            ? es
+              ? "Reanudar el carrusel de fondo"
+              : "Resume background slideshow"
+            : es
+              ? "Pausar el carrusel de fondo"
+              : "Pause background slideshow"
         }
         aria-pressed={paused}
         onClick={() => setPaused(!paused)}
@@ -50,7 +62,7 @@ export function KitchenSlideshow() {
         ) : (
           <Pause size={13} aria-hidden />
         )}
-        <span>{paused ? 'Resume' : 'Pause'}</span>
+        <span>{paused ? (es ? "Reanudar" : "Resume") : es ? "Pausa" : "Pause"}</span>
       </button>
     </>
   );

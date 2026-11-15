@@ -5,13 +5,14 @@ import { ArrowUpRight } from 'lucide-react';
 import { CtaBand } from '@/components/cta-band';
 import { PageHero } from '@/components/page-hero';
 import { articlePath, articles } from '@/lib/articles';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling Guides',
   description:
-    'Houston guides from Elite Restorations on water damage, fire recovery, kitchen and bathroom remodeling, and flooring.',
+    'Houston guides from Elite Restorations on water damage, fire recovery, kitchen and bathroom remodeling, and floors.',
   path: '/blog',
+  languages: languageAlternates('/blog', '/es/blog'),
   image: '/images/services/kitchen-remodeling.jpg',
 });
 
@@ -21,7 +22,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title={['Notes from', 'the job site.']}
-        lede="Guides on restoration and remodeling, kept at the same addresses as the previous site."
+        lede="Plain guides on restoration and remodeling in Houston: water, fire, kitchens, baths, and floors."
         crumbs={[{ name: 'Blog', path: '/blog' }]}
       />
       <section aria-label="Guides" className="pb-20 md:pb-28">

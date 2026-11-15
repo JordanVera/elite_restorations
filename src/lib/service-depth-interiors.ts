@@ -703,14 +703,14 @@ export const interiorDepth: Record<string, ServiceDepth> = {
     ranges: [
       { label: 'Interior door and casing, each', range: '$400 to $900' },
       { label: 'Finish trim for one room', range: '$1,200 to $3,500' },
-      { label: 'Built-in in one alcove', range: '$1,800 to $6,000' },
+      { label: 'One alcove built-in', range: '$1,800 to $6,000' },
       { label: 'Stair repair, treads and rail', range: '$1,500 to $5,000' },
     ],
     rangeNote: rangeNote('carpentry'),
     faqs: [
       {
         q: 'What does finish carpentry typically cost in Houston?',
-        a: 'A door and casing often plans at $400 to $900 each. Trim for one room often plans at $1,200 to $3,500. A built-in in one alcove often plans at $1,800 to $6,000. Stair tread and rail repair often plans at $1,500 to $5,000. Opening a bearing wall is a separate scope, priced after we see the structure. These are typical planning ranges, not a quote.',
+        a: 'A door and casing often plans at $400 to $900 each. Trim for one room often plans at $1,200 to $3,500. A built-in for one alcove often plans at $1,800 to $6,000. Stair tread and rail repair often plans at $1,500 to $5,000. Opening a bearing wall is a separate scope, priced after we see the structure. These are typical planning ranges, not a quote.',
       },
       {
         q: 'Do I need a permit to remove a wall?',

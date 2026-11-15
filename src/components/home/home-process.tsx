@@ -21,7 +21,7 @@ const visuals = [
   ),
   img(
     '/images/projects/bathrooms/charcoal-bath-patterned-shower.jpg',
-    'Roofer on a ladder installing underlayment on a roof deck',
+    'Roofer on a ladder laying the felt on the wood under the shingles',
   ),
   img(
     '/images/projects/backsplash/gold-faucet-detail.webp',
@@ -92,9 +92,9 @@ export function HomeProcess() {
           <div className="flex items-end lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.15}>
               <p className="text-muted-foreground">
-                Whether it is a bathroom or a roof, the sequence is the same:
-                look closely, agree on the plan, prepare, build, finish, and
-                walk it together.
+                A bathroom and a roof follow the same order. We look closely,
+                agree on the plan, get ready, build, finish, and walk the
+                work with you.
               </p>
             </Reveal>
           </div>

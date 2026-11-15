@@ -8,14 +8,12 @@ import { ProcessRail } from '@/components/about/process-rail';
 import { TeamGrid } from '@/components/about/team-grid';
 import { WorkHighlights } from '@/components/about/work-highlights';
 import { CtaBand } from '@/components/cta-band';
-import { JsonLd } from '@/components/json-ld';
 import { pageMetadata } from '@/lib/seo';
-import { teamSchema } from '@/lib/team';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About Our Houston Restoration Team',
   description:
-    'Family-owned Houston restoration and remodeling since 1993. Meet the team that answers the phone. Call (713) 909-0034.',
+    'Family-owned restoration and remodeling in Houston since 1993. Meet the people who answer the phone. Call (713) 909-0034.',
   path: '/about',
   image: '/images/about/george_family.jpeg',
 });
@@ -27,13 +25,12 @@ export default function AboutPage() {
       <FamilyEssay />
       <HabitCards />
       <TeamGrid />
-      <JsonLd data={teamSchema()} />
       <WorkHighlights />
       <ProcessRail />
       <AreaMarquee />
       <CtaBand
-        title="Let us look at your project."
-        body="Whether it is a planned remodel or something that went wrong overnight, the first step is a conversation."
+        title="Let us look at the house with you."
+        body="A kitchen you have been planning, or a leak that showed up overnight. Either way, it starts with a conversation."
       />
     </>
   );

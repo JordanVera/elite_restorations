@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
+import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
@@ -106,6 +107,22 @@ export function AreaPageView({ page }: { page: AreaPage }) {
           </ul>
         </div>
       </section>
+
+      {page.faqs.length > 0 && (
+        <section aria-labelledby="area-faq-heading" className="border-t border-border py-20 md:py-28">
+          <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-4">
+              <p className="eyebrow text-accent-ink">Questions</p>
+              <h2 id="area-faq-heading" className="font-display t-lg mt-4">
+                About {page.name}.
+              </h2>
+            </Reveal>
+            <div className="lg:col-span-8">
+              <Faq items={[...page.faqs]} />
+            </div>
+          </div>
+        </section>
+      )}
 
       {others.length > 0 && (
         <section aria-labelledby="nearby-office-heading" className="border-t border-border py-16 md:py-20">

@@ -10,6 +10,9 @@ type CtaBandProps = {
   body?: string;
   service?: string;
   emergency?: boolean;
+  href?: string;
+  buttonLabel?: string;
+  textLabel?: string;
 };
 
 export function CtaBand({
@@ -17,12 +20,17 @@ export function CtaBand({
   body = "Tell us what you have in mind, or what went wrong. We will take it from there.",
   service,
   emergency,
+  href,
+  buttonLabel,
+  textLabel = "Text us",
 }: CtaBandProps) {
-  const href = emergency
-    ? emergencyHref
-    : service
-      ? `${ctaHref}?service=${encodeURIComponent(service)}`
-      : ctaHref;
+  const destination =
+    href ??
+    (emergency
+      ? emergencyHref
+      : service
+        ? `${ctaHref}?service=${encodeURIComponent(service)}`
+        : ctaHref);
   return (
     <section
       aria-label="Request an estimate"
@@ -35,8 +43,9 @@ export function CtaBand({
         </Reveal>
         <Reveal delay={0.15} className="flex flex-col items-start gap-6 md:items-end">
           <Button asChild size="xl" variant="accent">
-            <Link href={href}>
-              {emergency ? "Request emergency help" : "Request a free estimate"}
+            <Link href={destination}>
+              {buttonLabel ??
+                (emergency ? "Request emergency help" : "Request a free estimate")}
               <ArrowUpRight className="arrow" aria-hidden />
             </Link>
           </Button>
@@ -46,6 +55,12 @@ export function CtaBand({
           >
             <Phone className="size-4" aria-hidden />
             {site.phone.display}
+          </a>
+          <a
+            href={site.phone.sms}
+            className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+          >
+            {textLabel}
           </a>
         </Reveal>
       </div>

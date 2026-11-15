@@ -2,6 +2,7 @@ import "server-only";
 
 import { TRPCError } from "@trpc/server";
 
+import { websiteLeadContactError } from "@/lib/contact-identity";
 import { leadSchema } from "@/lib/inquiry-schema";
 import { submitTiming } from "@/lib/lead-timing";
 import { deliverLead } from "@/server/delivery";
@@ -11,6 +12,11 @@ import { publicProcedure, router } from "@/server/trpc/init";
 
 export const contactRouter = router({
   submit: publicProcedure.input(leadSchema).mutation(async ({ input, ctx }) => {
+    const identityError = websiteLeadContactError(input.name, input.phone);
+    if (identityError) {
+      throw new TRPCError({ code: "BAD_REQUEST", message: identityError });
+    }
+
     if (isRateLimited(`inquiry:${ctx.ip}`)) {
       throw new TRPCError({
         code: "TOO_MANY_REQUESTS",

@@ -1,5 +1,6 @@
 import "server-only";
 
+import { websiteLeadContactError } from "@/lib/contact-identity";
 import type { DeliverableLead } from "@/server/leads/types";
 import { jobberCredentialsReady } from "@/server/jobber/config";
 import { assertNoUserErrors, jobberGraphql } from "@/server/jobber/graphql";
@@ -164,6 +165,11 @@ function fromJobberError(error: unknown): JobberSyncResult {
 }
 
 export async function syncEstimateToJobber(lead: DeliverableLead): Promise<JobberSyncResult> {
+  if (websiteLeadContactError(lead.name, lead.phone)) {
+    console.error("[jobber] refused a lead without a valid name and phone");
+    return { status: "failed" };
+  }
+
   const estimate = asEstimate(lead);
   if (!estimate) return { status: "skipped" };
   if (!jobberCredentialsReady()) return { status: "not-configured" };

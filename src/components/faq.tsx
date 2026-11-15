@@ -4,7 +4,13 @@ import { JsonLd } from "@/components/json-ld";
 
 type Item = { q: string; a: string };
 
-export function Faq({ items }: { items: Item[] }) {
+export function Faq({
+  items,
+  inLanguage,
+}: {
+  items: Item[];
+  inLanguage?: string;
+}) {
   if (items.length === 0) return null;
   return (
     <>
@@ -26,6 +32,7 @@ export function Faq({ items }: { items: Item[] }) {
         data={{
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          ...(inLanguage ? { inLanguage } : {}),
           mainEntity: items.map((item) => ({
             "@type": "Question",
             name: item.q,

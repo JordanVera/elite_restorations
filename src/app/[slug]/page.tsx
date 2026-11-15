@@ -13,18 +13,28 @@ import { ServiceReviews } from '@/components/service-reviews';
 import { LocalLandingView } from '@/components/local-landing';
 import { Faq } from '@/components/faq';
 import { HoustonFactors, ServiceGuide } from '@/components/service-depth-sections';
+import { InsuranceClaimHelp } from '@/components/insurance-claim-help';
+import { PropertyScopeNote } from '@/components/property-scope-note';
+import { WaterCauseSections } from '@/components/water-cause-sections';
+import { ProseSections } from '@/components/prose-sections';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { getNeighborhood, neighborhoods } from '@/lib/neighborhoods';
 import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
+import { processSteps } from '@/lib/process';
 import { imagesForService } from '@/lib/projects';
 import { getServiceDepth } from '@/lib/service-depth';
-import { absoluteUrl, pageMetadata, servicePageTitle } from '@/lib/seo';
+import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
+import { claimHelpFaqs } from '@/lib/claim-help';
+import { spanishPathFor } from '@/lib/i18n';
+import { NeighborhoodPageView } from '@/components/neighborhood-page';
+import { absoluteUrl, languageAlternates, pageMetadata, servicePageTitle } from '@/lib/seo';
 import {
   getService,
   servicePath,
@@ -65,6 +75,7 @@ export function generateStaticParams(): Params[] {
     ...articles.map((article) => ({ slug: article.slug })),
     ...localLandings.map((page) => ({ slug: page.slug })),
     ...areaPages.map((page) => ({ slug: page.slug })),
+    ...neighborhoods.map((page) => ({ slug: page.slug })),
     ...costGuides.map((guide) => ({ slug: guide.slug })),
     ...caseStudies.map((study) => ({ slug: study.slug })),
   ];
@@ -79,11 +90,15 @@ export async function generateMetadata({
   const landing = getLocalLanding(slug);
   if (landing) {
     const service = getService(landing.serviceSlug);
+    const pool =
+      cityHeroPools[landing.serviceSlug] ??
+      (service?.image ? [service.image] : []);
+    const hero = pickFromPool(pool, landing.photoShift, service?.image);
     return pageMetadata({
       title: landing.title,
       description: landing.description,
       path: landing.path,
-      image: service?.image?.src,
+      image: hero?.src ?? service?.image?.src,
     });
   }
   const area = getAreaPage(slug);
@@ -92,6 +107,16 @@ export async function generateMetadata({
       title: area.title,
       description: area.description,
       path: area.path,
+    });
+  }
+  const neighborhood = getNeighborhood(slug);
+  if (neighborhood) {
+    const esPath = spanishPathFor(neighborhood.path);
+    return pageMetadata({
+      title: neighborhood.title,
+      description: neighborhood.description,
+      path: neighborhood.path,
+      languages: esPath ? languageAlternates(neighborhood.path, esPath) : undefined,
     });
   }
   const guide = getCostGuide(slug);
@@ -115,23 +140,43 @@ export async function generateMetadata({
   }
   const article = getArticle(slug);
   if (article) {
+    const path = articlePath(article.slug);
+    const esPath = spanishPathFor(path);
     return pageMetadata({
       title: article.metaTitle,
       description: article.description,
-      path: articlePath(article.slug),
+      path,
       image: article.image,
+      languages: esPath ? languageAlternates(path, esPath) : undefined,
     });
   }
   const service = getService(slug);
   if (!service) return {};
   const path = servicePath(service.slug);
+  const esPath = spanishPathFor(path);
   return pageMetadata({
     title: servicePageTitle(service),
     description: service.metaDescription,
     path,
     image: service.image?.src,
+    languages: esPath ? languageAlternates(path, esPath) : undefined,
   });
 }
+
+const claimHelpSlugs = new Set([
+  'water-damage-restoration',
+  'roofing',
+  'roofing-emergency-tarp-repair',
+  'emergency-board-up',
+  'commercial-storm-restoration',
+]);
+
+const propertyScopeSlugs = new Set([
+  'water-damage-restoration',
+  'roofing',
+  'roofing-emergency-tarp-repair',
+  'emergency-board-up',
+]);
 
 export default async function ServicePage({
   params,
@@ -144,6 +189,17 @@ export default async function ServicePage({
 
   const area = getAreaPage(slug);
   if (area) return <AreaPageView page={area} />;
+
+  const neighborhood = getNeighborhood(slug);
+  if (neighborhood) {
+    return (
+      <NeighborhoodPageView
+        page={neighborhood}
+        others={neighborhoods.filter((item) => item.slug !== neighborhood.slug)}
+        locale="en"
+      />
+    );
+  }
 
   const article = getArticle(slug);
   if (article) return <ArticleView article={article} />;
@@ -158,10 +214,26 @@ export default async function ServicePage({
   if (!service) notFound();
 
   const depth = getServiceDepth(service.slug);
-  const intro = [...service.intro, ...depth.moreIntro];
-  const localBody = [...service.local.body, ...depth.moreLocal];
-  const steps = depth.process;
-  const faqs = [...service.faqs, ...depth.faqs];
+  const intro = depth ? [...service.intro, ...depth.moreIntro] : service.intro;
+  const localBody = depth ? [...service.local.body, ...depth.moreLocal] : service.local.body;
+  const steps =
+    service.process ??
+    service.guide.process ??
+    processSteps.map((step) => ({
+      title: step.title,
+      body: `${step.lead} ${step.body}`,
+    }));
+  const seenQuestions = new Set<string>();
+  const faqs = [
+    ...service.faqs,
+    ...service.guide.faqs,
+    ...(depth?.faqs ?? []),
+    ...(claimHelpSlugs.has(service.slug) ? claimHelpFaqs('en') : []),
+  ].filter((item) => {
+    if (seenQuestions.has(item.q)) return false;
+    seenQuestions.add(item.q);
+    return true;
+  });
   const costLinks = (service.links ?? []).filter((link) => link.href.includes('cost'));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
   const { localPhoto, masonry } = photographsFor(service);
@@ -179,8 +251,10 @@ export default async function ServicePage({
           { name: service.name, path },
         ]}
       >
-        <p className="mt-8 text-[0.72rem] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Serving Houston since {site.founded}
+        <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
+          {service.emergency
+            ? `Family-owned in Houston since ${site.founded}. If water is still coming in, call ${site.phone.display}.`
+            : `Family-owned in Houston since ${site.founded}. Call ${site.phone.display} for a free estimate.`}
         </p>
         {service.emergency && (
           <Reveal
@@ -216,6 +290,10 @@ export default async function ServicePage({
           </Reveal>
         )}
       </PageHero>
+
+      {propertyScopeSlugs.has(service.slug) ? <PropertyScopeNote /> : null}
+      {claimHelpSlugs.has(service.slug) ? <InsuranceClaimHelp /> : null}
+      {service.slug === 'water-damage-restoration' ? <WaterCauseSections /> : null}
 
       {service.image && (
         <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
@@ -365,7 +443,7 @@ export default async function ServicePage({
         </div>
       </section>
 
-      <HoustonFactors depth={depth} />
+      {depth ? <HoustonFactors depth={depth} /> : null}
 
       <section
         aria-labelledby="steps-heading"
@@ -402,7 +480,8 @@ export default async function ServicePage({
         </div>
       </section>
 
-      <ServiceGuide depth={depth} costLinks={costLinks} />
+      {depth ? <ServiceGuide depth={depth} costLinks={costLinks} /> : null}
+      <ProseSections sections={service.guide.sections} />
 
       {masonry.length > 0 && (
         <section aria-labelledby="projects-heading" className="py-20 md:py-28">
@@ -451,7 +530,7 @@ export default async function ServicePage({
         </section>
       )}
 
-      {service.faqs.length > 0 && (
+      {faqs.length > 0 && (
         <section
           aria-labelledby="faq-heading"
           className="border-t border-border py-20 md:py-28"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { site } from "@/lib/site";
+import { employeeRefs, personSchemaNodes } from "@/lib/team";
 
 const TITLE_MAX = 60;
 const DESCRIPTION_MAX = 155;
@@ -12,6 +13,8 @@ type PageMetaInput = {
   description: string;
   path: string;
   image?: string;
+  locale?: "en" | "es";
+  languages?: Record<string, string>;
 };
 
 /**
@@ -46,6 +49,13 @@ const serviceLedTitleSlugs = new Set([
   "roofing",
   "roof-replacement",
   "roofing-emergency-tarp-repair",
+  "emergency-board-up",
+  "fence-installation-repair",
+  "gutters",
+  "patios",
+  "gazebos",
+  "decks",
+  "commercial-storm-restoration",
   "siding",
   "patios-decks",
   "painting-drywall-repair",
@@ -108,11 +118,21 @@ export function fitDescription(text: string) {
   return cut.endsWith(".") ? cut : `${cut}.`;
 }
 
+export function languageAlternates(enPath: string, esPath: string) {
+  return {
+    "en-US": absoluteUrl(enPath),
+    "es-US": absoluteUrl(esPath),
+    "x-default": absoluteUrl(enPath),
+  };
+}
+
 export function pageMetadata({
   title,
   description,
   path,
   image,
+  locale = "en",
+  languages,
 }: PageMetaInput): Metadata {
   const fullTitle = documentTitle(title);
   const desc = fitDescription(description);
@@ -121,14 +141,17 @@ export function pageMetadata({
   return {
     title: { absolute: fullTitle },
     description: desc,
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      ...(languages ? { languages } : {}),
+    },
     openGraph: {
       title: fullTitle,
       description: desc,
       url: canonical,
       type: "website",
       siteName: site.name,
-      locale: "en_US",
+      locale: locale === "es" ? "es_US" : "en_US",
       images: [{ url: ogImage, alt: fullTitle }],
     },
     twitter: {
@@ -190,7 +213,17 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
       },
     ],
     sameAs: [...site.sameAs],
+    employee: employeeRefs(),
     ...extra,
+  };
+}
+
+/** Organization plus the people on the about page, linked by @id. */
+export function siteSchemaGraph() {
+  const { "@context": context, ...businessNode } = localBusinessSchema();
+  return {
+    "@context": context,
+    "@graph": [businessNode, ...personSchemaNodes()],
   };
 }
 

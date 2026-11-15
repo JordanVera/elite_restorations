@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Instrument_Serif } from 'next/font/google';
+import { headers } from 'next/headers';
 
+import { CallTextBar } from '@/components/call-text-bar';
 import { Providers } from '@/components/providers';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { JsonLd } from '@/components/json-ld';
-import { documentTitle, localBusinessSchema } from '@/lib/seo';
+import { documentTitle, siteSchemaGraph } from '@/lib/seo';
 import { site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
@@ -65,18 +67,26 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = (await headers()).get('x-pathname') ?? '';
+  const es = pathname === '/es' || pathname.startsWith('/es/');
   return (
     <html
-      lang="en"
+      lang={es ? 'es' : 'en'}
       suppressHydrationWarning
       className={cn(display.variable, body.variable)}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var p=location.pathname;if(p==="/es"||p.indexOf("/es/")===0)document.documentElement.lang="es"}catch(e){}',
+          }}
+        />
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important;visibility:visible!important}`}</style>
         </noscript>
@@ -87,15 +97,16 @@ export default function RootLayout({
             href="#main"
             className="fixed left-4 top-4 z-[100] -translate-y-24 bg-foreground px-4 py-3 text-xs font-medium uppercase tracking-[0.2em] text-background transition-transform focus:translate-y-0"
           >
-            Skip to content
+            {es ? 'Saltar al contenido' : 'Skip to content'}
           </a>
           <SiteHeader />
           <main id="main" tabIndex={-1} className="outline-none">
             {children}
           </main>
           <SiteFooter />
+          <CallTextBar />
         </Providers>
-        <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={siteSchemaGraph()} />
       </body>
     </html>
   );

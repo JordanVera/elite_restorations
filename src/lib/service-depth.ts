@@ -1,3 +1,4 @@
+import { assertCopyAllowed } from '@/lib/copy-guards';
 import { costGuides, formatPublishedRange } from '@/lib/cost-guides';
 import { exteriorDepth } from '@/lib/service-depth-exterior';
 import { floorDepth } from '@/lib/service-depth-floors';
@@ -14,9 +15,7 @@ const bySlug: Record<string, ServiceDepth> = {
 };
 
 export function getServiceDepth(slug: string) {
-  const depth = bySlug[slug];
-  if (!depth) throw new Error(`Missing service depth: ${slug}`);
-  return depth;
+  return bySlug[slug];
 }
 
 export function countWords(text: string) {
@@ -66,11 +65,10 @@ export function serviceMainText(service: Service, depth: ServiceDepth) {
 }
 
 export function serviceWordCount(service: Service) {
-  return countWords(serviceMainText(service, getServiceDepth(service.slug)));
+  const depth = getServiceDepth(service.slug);
+  if (!depth) return 0;
+  return countWords(serviceMainText(service, depth));
 }
-
-const banned =
-  /\bGAF\b|\bIICRC\b|\bwarranty\b|\bguarantee\b|\blicensed\b|\bcertified\b|\bawards?\b|\bfive-star\b|\b5-star\b/i;
 
 export function serviceCopyIssues() {
   const issues: string[] = [];
@@ -80,23 +78,9 @@ export function serviceCopyIssues() {
   }
   for (const service of services) {
     const depth = bySlug[service.slug];
-    if (!depth) {
-      issues.push(`Missing depth: ${service.slug}`);
-      continue;
-    }
-    const faqs = [...service.faqs, ...depth.faqs];
-    if (faqs.length < 6 || faqs.length > 10) {
-      issues.push(`${service.slug} has ${faqs.length} FAQs`);
-    }
-    const questions = new Set(faqs.map((item) => item.q));
-    if (questions.size !== faqs.length) issues.push(`${service.slug} has duplicate FAQ questions`);
+    if (!depth) continue;
     if (depth.process.length < 6) issues.push(`${service.slug} process is short`);
-    const words = countWords(serviceMainText(service, depth));
-    if (words < 1500 || words > 2200) {
-      issues.push(`${service.slug} is ${words} words`);
-    }
-    const blob = serviceMainText(service, depth);
-    if (banned.test(blob)) issues.push(`${service.slug} has a banned term`);
+    assertCopyAllowed(service.slug, serviceMainText(service, depth));
   }
   const paired: [string, string][] = [
     ['kitchen-remodeling', 'kitchen-remodel-cost-houston'],

@@ -1,3 +1,6 @@
+import type { GuideSection } from '@/lib/guides/types';
+import { assertCopyAllowed } from '@/lib/copy-guards';
+
 export const costGuideExtras = {
   'kitchen-remodel-cost-houston': {
     sections: [
@@ -75,7 +78,7 @@ export const costGuideExtras = {
       {
         heading: 'A powder room and a primary bath are not one price',
         paragraphs: [
-          'The three ranges separate a finish refresh, a shower rebuilt in the same place, and a remodel that moves plumbing. A new vanity, mirror, and light in a West University powder room is the small job. A primary bath in Memorial or The Woodlands that moves the shower, retile the room, and changes the glass is the large one. The square footage of the room matters less than the wet wall.',
+          'The three ranges separate a finish refresh, a shower rebuilt in the same place, and a remodel that moves plumbing. A new vanity, mirror, and light in a West University powder room is the small job. A primary bath in Memorial or The Woodlands that moves the shower, retiles the room, and changes the glass is the large one. The square footage of the room matters less than the wet wall.',
           'People compare bathrooms by the fixture they want. The cost is usually in the wall behind that fixture: the membrane, the mortar bed, the valve, and whether the drain stays. A freestanding tub in the same footprint is not the same number as a curbless shower in a new place.',
         ],
       },
@@ -183,7 +186,7 @@ export const costGuideExtras = {
         heading: 'Insurance pays what the policy pays',
         paragraphs: [
           'Your insurer decides coverage, the deductible, and any depreciation the form holds back. Many Texas policies treat wind and hail under a deductible that is different from a plumbing leak, sometimes a percentage of the dwelling limit. We do not know your form. A claim payment and our price are different numbers, and we do not close the gap by calling it coverage.',
-          'We photograph the roof and we build the roof you hire. We can speak to the condition if you want us there with an adjuster. We are not a public adjuster and we do not negotiate the claim. Call (713) 909-0034 for an inspection. The range on this page will not be the contract.',
+          'We photograph the roof and we build the roof you hire. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment. Call (713) 909-0034 for an inspection. The range on this page will not be the contract.',
         ],
       },
       {
@@ -205,7 +208,7 @@ export const costGuideExtras = {
       },
       {
         q: 'How much does a sheet of bad decking add?',
-        a: 'Typically about $75 to $150 for a 4x8 sheet, inside the broader deck-repair range of $500 to $2,000 when only some sheets are bad. Widespread rot is priced when we see it, not guessed from the curb.',
+        a: 'Typically about $75 to $150 for a 4x8 sheet. Board repairs found after tear-off often add $500 to $2,000 when only some sheets are bad. Widespread rot is priced when we see it, not guessed from the curb.',
       },
       {
         q: 'Will an HOA change the price?',
@@ -214,3 +217,21 @@ export const costGuideExtras = {
     ],
   },
 } as const;
+
+export function extraGuideSections(slug: keyof typeof costGuideExtras): GuideSection[] {
+  return costGuideExtras[slug].sections.map((section) => ({
+    eyebrow: 'In Houston',
+    heading: section.heading,
+    paragraphs: [...section.paragraphs],
+  }));
+}
+
+assertCopyAllowed(
+  'cost guide extras',
+  Object.values(costGuideExtras)
+    .flatMap((extra) => [
+      ...extra.sections.flatMap((section) => [section.heading, ...section.paragraphs]),
+      ...extra.faqs.flatMap((item) => [item.q, item.a]),
+    ])
+    .join('\n'),
+);

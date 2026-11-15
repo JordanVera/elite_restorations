@@ -20,13 +20,17 @@ describe("address or ZIP", () => {
 });
 
 describe("phone", () => {
-  it("accepts 10 digits and a leading 1", () => {
+  it("accepts 10 digits with formatting and a leading 1", () => {
     assert.equal(isUsablePhone("(713) 909-0034"), true);
     assert.equal(isUsablePhone("1-713-909-0034"), true);
+    assert.equal(isUsablePhone("+1 713 909 0034"), true);
+    assert.equal(isUsablePhone("713-909-0034"), true);
   });
 
   it("rejects a short number", () => {
     assert.equal(isUsablePhone("909-0034"), false);
+    assert.equal(isUsablePhone("713-909-003"), false);
+    assert.equal(isUsablePhone("   "), false);
   });
 });
 

@@ -132,7 +132,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
       heading: 'Photos, a repair price, and the claim.',
       paragraphs: [
         'If you are going to ask your insurer about a storm, photograph the slopes, the soft metal, and any interior stains before the repair covers them. We do that on the inspection. Note the date of the storm. Many Texas policies treat wind and hail under a deductible that is different from a plumbing leak, sometimes a percentage of the dwelling limit. Your form controls that. We do not know it.',
-        'A repair quote is not a claim, and a claim payment is not our bid. We can meet an adjuster and speak to what we see and to the work you hire. We do not argue the policy.',
+        'A repair price is not a claim, and a claim payment is not our bid. We can meet an adjuster, speak to what we see, and send our estimate to the insurance company for approval.',
         notAPublicAdjuster,
       ],
       links: roofInsuranceLinks,
@@ -178,7 +178,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
     factors: [
       {
         title: 'What the tear-off reveals',
-        body: 'Soft decking, skipped sheathing, and rotten eaves show up when the shingles come off. Replacing a bad 4x8 sheet is typically about $75 to $150. We tell you before that work expands past the roof that was priced. A few sheets and a field of bad deck are different conversations.',
+        body: 'Soft decking, skipped sheathing, and rotten eaves show up when the shingles come off. Replacing a bad 4x8 sheet is typically about $75 to $150 per 4x8 sheet. We tell you before that work expands past the roof that was priced. A few sheets and a field of bad deck are different conversations.',
       },
       {
         title: 'Wind and hail',
@@ -204,7 +204,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'Document',
-        body: 'Photos and a written scope are yours. If a claim is open, you can share them. We do not turn the scope into a coverage decision, and we do not negotiate the claim.',
+        body: 'Photos and a written scope are yours. If a claim is open, you can share them. We send our estimate to your insurance company for approval and work it out with the adjuster. Your insurer decides coverage and payment.',
       },
       {
         title: 'Remove',
@@ -281,14 +281,14 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
     ranges: [
       { label: 'Architectural asphalt replacement', range: '$12,000 to $24,000' },
       { label: 'Metal, tile, or composite', range: '$20,000 to $45,000' },
-      { label: 'Deck repairs found after tear-off', range: '$500 to $2,000' },
+      { label: 'Board repairs found after tear-off', range: '$500 to $2,000' },
     ],
     rangeNote: rangeNote('a roof replacement'),
     insurance: {
       heading: 'The claim and the contract are different papers.',
       paragraphs: [
         'A replacement after hail or wind often happens beside an insurance claim. We photograph the roof and we build the roof you hire. The payment, the deductible, and any depreciation the policy holds back are between you and the insurer. Many coastal Texas policies use a wind or hail deductible that is not the same as the deductible on a kitchen leak. Ask the company that wrote the policy which one applies.',
-        'We can be on site when an adjuster looks at the roof and speak to the condition and the scope. We are not there to negotiate.',
+        'We can be on site when an adjuster looks at the roof and speak to the condition and the scope. We send our estimate to the insurance company for approval and work it out with the adjuster.',
         notAPublicAdjuster,
       ],
       links: roofInsuranceLinks,
@@ -296,7 +296,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
     faqs: [
       {
         q: 'What does a full roof replacement typically cost in Houston?',
-        a: 'Architectural asphalt on a typical house often plans at $12,000 to $24,000. Metal, tile, or composite often plans at $20,000 to $45,000. Deck repairs found after tear-off often add $500 to $2,000, and a bad sheet of decking is typically about $75 to $150. These are typical planning ranges, not a quote. Pitch and size move them.',
+        a: 'Architectural asphalt on a typical house often plans at $12,000 to $24,000. Metal, tile, or composite often plans at $20,000 to $45,000. Board repairs found after tear-off often add $500 to $2,000, and a bad sheet of decking is typically about $75 to $150 per 4x8 sheet. These are typical planning ranges, not a quote. Pitch and size move them.',
       },
       {
         q: 'Why is there no price per square on this page?',
@@ -304,7 +304,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
       },
       {
         q: 'Does insurance set the price of the new roof?',
-        a: 'No. Your insurer decides what the policy pays. We price the replacement. Those numbers can differ, including when a deductible or depreciation is involved. We do not close that gap by calling it coverage, and we do not negotiate the claim.',
+        a: 'No. Your insurer decides what the policy pays. We price the replacement and send that estimate to your insurance company for approval, then work it out with the adjuster. Those numbers can differ, including when a deductible or depreciation is involved. We do not close that gap by calling it coverage.',
       },
       {
         q: 'What if the deck is rotten after the shingles come off?',

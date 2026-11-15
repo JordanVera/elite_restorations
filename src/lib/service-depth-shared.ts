@@ -3,4 +3,4 @@ export function rangeNote(work: string) {
 }
 
 export const notAPublicAdjuster =
-  'We photograph the conditions and the scope of the work. We are not a public adjuster, we do not negotiate the claim, and we do not tell you what the policy owes. Your insurer decides coverage.';
+  'We photograph the conditions and the scope of the work. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.';

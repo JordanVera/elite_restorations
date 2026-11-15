@@ -30,7 +30,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'Time and mold',
-        body: 'Damp drywall, carpet pad, and insulation do not get a long grace period in this climate. Mold can start on wet materials within a day or two. That is a property of a warm, wet house, not a scare line. We dry and we remove what will not dry. We do not promise a mold-free house, and we do not sell a certification in place of moisture readings.',
+        body: 'Damp drywall, carpet pad, and insulation do not get a long grace period in this climate. Mold can start on wet materials within a day or two. That is a property of a warm, wet house, not a scare line. We dry and we remove what will not dry. We do not promise a mold-free house. Moisture readings decide what stays.',
       },
       {
         title: 'Storm water and plumbing water',
@@ -140,7 +140,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     faqs: [
       {
         q: 'What does water damage restoration typically cost in Houston?',
-        a: 'One room of extraction, drying, and limited drywall often plans at $1,800 to $5,000. Several rooms with drying and drywall often plan at $5,000 to $14,000. Drying plus a flooring and cabinet rebuild often plans at $10,000 to $35,000. These are typical planning ranges, not a quote. The readings and the materials that have to come out set the real number. Insurance may pay some, all, or none of it.',
+        a: 'One room of extraction, drying, and limited drywall often plans at $1,800 to $5,000. Several rooms with drying and drywall often land at $5,000 to $14,000. Drying plus a flooring and cabinet rebuild often plans at $10,000 to $35,000. These are typical planning ranges, not a quote. The readings and the materials that have to come out set the real number. Insurance may pay some, all, or none of it.',
       },
       {
         q: 'Why can you not just open the windows?',
@@ -166,7 +166,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
   },
   'insurance-claims': {
     moreIntro: [
-      'Insurance claims help, on this site, means photographs, notes, and a clear scope of the drying or the repair. It does not mean we file the claim, argue the estimate, or tell you what the policy owes. Elite Restorations is the contractor. A public adjuster is a separate license a homeowner can hire. We are not one.',
+      'Insurance claims help, on this site, means photographs, notes, and a clear scope of the drying or the repair. You file the claim. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.',
       'The free insurance photo log is a room-by-room packet you can fill out whether or not you hire us. Use it before things are thrown away. If you hire us for the building, our inspection photos and the scope of the work sit beside that record. Coverage is still your insurer’s decision.',
     ],
     moreLocal: [
@@ -212,7 +212,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'Finish',
-        body: 'You have photos and a scope of the work performed. You can share them with an adjuster. If we meet the adjuster, we speak to the building and the repair. We do not negotiate the number.',
+        body: 'You have photos and a scope of the work performed. You can share them with an adjuster. If we meet the adjuster, we send our estimate to the insurance company for approval and work it out with them.',
       },
       {
         title: 'Walk through',
@@ -235,7 +235,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'You have an adjuster visit scheduled',
-        body: 'You can ask us to be there. We will talk about the damage and the repair. You do not have to agree to a figure in the driveway. We will not agree to one for you.',
+        body: 'You can ask us to be there. We send our estimate to your insurance company for approval and work it out with the adjuster. You do not have to accept a figure in the driveway. Your insurer decides coverage and payment.',
       },
     ],
     materialsHeading: 'The tools are a camera, a meter, and a scope.',
@@ -261,7 +261,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     ],
     costHeading: 'What this help costs, and what it does not.',
     costIntro: [
-      'We do not sell claim negotiation, and we do not publish a fee for filing a claim, because we do not file or negotiate claims. Documentation is part of the inspection and the repair you hire. If you only need the photo log, that page is free to use.',
+      'Documentation is part of the inspection and the repair you hire. You file the claim. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. There is no separate fee for that. If you only need the photo log, that page is free to use.',
       'The money in a loss is the building work. The planning ranges below are the same ones we publish for that work. They are not a prediction of the claim payment. Your deductible and your coverage can make the check different from the invoice.',
     ],
     costFactors: [
@@ -275,7 +275,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'What we will not price',
-        body: 'We will not price a promise that a claim will be approved, a deductible will be waived, or a public-adjuster negotiation will be included. Those are not services we offer.',
+        body: 'We will not price a promise that a claim will be approved or that a deductible will be waived. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.',
       },
     ],
     ranges: [
@@ -288,7 +288,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     insurance: {
       heading: 'What we will say to an adjuster, and what we will not.',
       paragraphs: [
-        'If you want us at the inspection, we can describe the damage and the repair we would do. You can ask questions later, in writing, about anything you do not understand. You do not have to settle the figure on the spot. If you hire a public adjuster, that is your decision and a different license. We still do not negotiate.',
+        'If you want us at the inspection, we describe the damage and the repair we would do. You can ask questions later, in writing, about anything you do not understand. You do not have to settle the figure on the spot.',
         'We also cannot promise approval, a waived deductible, or a particular timing from the carrier. Deadlines on your policy are your insurer’s to explain. For a legal question, talk with a lawyer you choose.',
         notAPublicAdjuster,
       ],
@@ -306,8 +306,8 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     },
     faqs: [
       {
-        q: 'Do you charge to negotiate my claim?',
-        a: 'No. We do not negotiate claims, so there is no fee for that work. We are not a public adjuster. Photos and notes are part of the inspection and the repair you hire. The photo log on this site is free.',
+        q: 'Do you charge a separate fee to work with the adjuster?',
+        a: 'No. Sending our estimate to your insurance company and working it out with the adjuster is part of the repair you hire. We are not public adjusters. Your insurer decides coverage and payment. The photo log on this site is free.',
       },
       {
         q: 'What should I photograph in a Houston house?',
@@ -319,7 +319,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         q: 'Can you meet the adjuster?',
-        a: 'Yes, if you want us there. We will speak to the condition of the building and the work. We will not argue the policy or agree to a number on your behalf. You can also ask follow-up questions of the insurer in writing.',
+        a: 'Yes, if you want us there. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment. You can also ask follow-up questions of the insurer in writing.',
       },
       {
         q: 'Should cleanup wait until the claim is approved?',
@@ -457,7 +457,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     faqs: [
       {
         q: 'What does drywall repair and painting typically cost in Houston?',
-        a: 'A patch and a paint blend often plan at $300 to $900. One room of walls often plans at $450 to $1,400. Several rooms after a remodel often plan at $2,000 to $6,000. Interior walls of a typical house often plan at $3,500 to $9,000. Texture, plaster, and tall ceilings move the number. These are typical planning ranges, not a quote.',
+        a: 'A patch and a paint blend often land at $300 to $900. One room of walls often plans at $450 to $1,400. Several rooms after a remodel often land at $2,000 to $6,000. Interior walls of a typical house often land at $3,500 to $9,000. Texture, plaster, and tall ceilings move the number. These are typical planning ranges, not a quote.',
       },
       {
         q: 'Can you match texture in an older house?',

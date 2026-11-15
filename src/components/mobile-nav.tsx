@@ -3,27 +3,45 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Dialog } from 'radix-ui';
+import * as Dialog from 'radix-ui/dialog';
 import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 
+import { LanguageSwitch } from '@/components/language-switch';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
+import { brandServiceLinks } from '@/lib/brand-nav';
+import { esGroupNames, esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
 import { isLocalLandingPath } from '@/lib/local-paths';
 import {
   isServicePagePath,
   serviceGroups,
-  servicePath,
   servicesInGroup,
 } from '@/lib/services';
 import { ctaHref, emergencyHref, nav, site } from '@/lib/site';
 import { cn } from '@/lib/utils';
 
+const esNavLabels: Record<string, string> = {
+  '/': 'Inicio',
+  '/services': 'Servicios',
+  '/projects': 'Proyectos',
+  '/resources': 'Recursos',
+  '/resources/homeowners': 'Propietarios',
+  '/resources/realtors': 'Agentes inmobiliarios',
+  '/about': 'Nosotros',
+  '/blog': 'Blog',
+  '/contact': 'Contacto',
+  '/emergency': 'Emergencia',
+};
+
 export function MobileNav({ className }: { className?: string }) {
-  const pathname = usePathname();
+  const pathname = usePathname() || '/';
+  const es = isSpanishPath(pathname);
   const [openOn, setOpenOn] = React.useState<string | null>(null);
   const [servicesOpen, setServicesOpen] = React.useState(false);
   const open = openOn === pathname;
+  const homeHref = es ? '/es' : '/';
+  const estimateHref = es ? '/es/contact' : ctaHref;
 
   return (
     <Dialog.Root
@@ -36,12 +54,13 @@ export function MobileNav({ className }: { className?: string }) {
       <Dialog.Trigger asChild>
         <button
           type="button"
+          aria-label={es ? 'Abrir el menú' : 'Open menu'}
           className={cn(
             'group inline-flex h-11 items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em]',
             className,
           )}
         >
-          Menu
+          {es ? 'Menú' : 'Menu'}
           <span aria-hidden className="flex w-6 flex-col gap-[6px]">
             <span className="h-px w-full bg-current transition-all group-hover:w-4" />
             <span className="h-px w-4 bg-current transition-all group-hover:w-full" />
@@ -54,9 +73,11 @@ export function MobileNav({ className }: { className?: string }) {
           aria-describedby={undefined}
           className="fixed inset-0 z-[80] flex flex-col overflow-y-auto bg-background outline-none data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0 duration-300"
         >
-          <Dialog.Title className="sr-only">Site navigation</Dialog.Title>
+          <Dialog.Title className="sr-only">
+            {es ? 'Navegación del sitio' : 'Site navigation'}
+          </Dialog.Title>
           <div className="gutter flex h-20 shrink-0 items-center justify-between">
-            <Link href="/" aria-label="Elite Restorations home">
+            <Link href={homeHref} aria-label="Elite Restorations, home">
               <SiteLogo />
             </Link>
             <Dialog.Close asChild>
@@ -64,10 +85,14 @@ export function MobileNav({ className }: { className?: string }) {
                 type="button"
                 className="inline-flex h-11 items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em]"
               >
-                Close
+                {es ? 'Cerrar' : 'Close'}
                 <X className="size-5" aria-hidden />
               </button>
             </Dialog.Close>
+          </div>
+          <div className="gutter border-b border-border pb-4">
+            <p className="eyebrow text-muted-foreground">{es ? 'Idioma' : 'Language'}</p>
+            <LanguageSwitch labels="full" className="mt-1" />
           </div>
 
           <nav
@@ -76,14 +101,37 @@ export function MobileNav({ className }: { className?: string }) {
           >
             <ul className="flex flex-col">
               {[{ href: '/', label: 'Home' }, ...nav].map((item, i) => {
+                const bare = es
+                  ? pathname === '/es'
+                    ? '/'
+                    : pathname.startsWith('/es/')
+                      ? pathname.slice(3)
+                      : pathname
+                  : pathname;
+                const href =
+                  es && item.href === '/'
+                    ? '/es'
+                    : es && item.href === '/contact'
+                      ? '/es/contact'
+                      : es && item.href === '/emergency'
+                        ? '/es/emergency'
+                        : es && item.href === '/services'
+                          ? '/es'
+                          : es && item.href === '/blog'
+                            ? '/es/blog'
+                            : item.href;
+                const label = es ? (esNavLabels[item.href] ?? item.label) : item.label;
                 const active =
                   item.href === '/'
-                    ? pathname === '/'
+                    ? bare === '/'
                     : item.href === '/services'
-                      ? pathname.startsWith('/services') ||
-                        isServicePagePath(pathname) ||
-                        isLocalLandingPath(pathname)
-                      : pathname.startsWith(item.href);
+                      ? bare.startsWith('/services') ||
+                        isServicePagePath(bare) ||
+                        isLocalLandingPath(bare) ||
+                        brandServiceLinks.some(
+                          (brand) => pathname === brand.href || pathname === brand.esHref,
+                        )
+                      : bare.startsWith(item.href);
                 return (
                   <li
                     key={item.href}
@@ -95,7 +143,7 @@ export function MobileNav({ className }: { className?: string }) {
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <Link
-                        href={item.href}
+                        href={href}
                         aria-current={active ? 'page' : undefined}
                         className="group flex min-w-0 flex-1 items-baseline py-5"
                       >
@@ -107,7 +155,7 @@ export function MobileNav({ className }: { className?: string }) {
                             active && 'italic',
                           )}
                         >
-                          {item.label}
+                          {label}
                         </span>
                       </Link>
                       {item.href === '/services' && (
@@ -126,7 +174,13 @@ export function MobileNav({ className }: { className?: string }) {
                             )}
                           />
                           <span className="sr-only">
-                            {servicesOpen ? 'Hide services' : 'Show services'}
+                            {servicesOpen
+                              ? es
+                                ? 'Ocultar servicios'
+                                : 'Hide services'
+                              : es
+                                ? 'Mostrar servicios'
+                                : 'Show services'}
                           </span>
                         </button>
                       )}
@@ -138,15 +192,21 @@ export function MobileNav({ className }: { className?: string }) {
                       >
                         {serviceGroups.map((group) => (
                           <div key={group}>
-                            <p className="eyebrow text-accent-ink">{group}</p>
+                            <p className="eyebrow text-accent-ink">
+                              {es ? (esGroupNames[group] ?? group) : group}
+                            </p>
                             <ul className="mt-2">
                               {servicesInGroup(group).map((service) => {
-                                const href = servicePath(service.slug);
-                                const current = pathname === href;
+                                const serviceLink = serviceHref(service.slug, es ? 'es' : 'en');
+                                const current = pathname === serviceLink;
+                                const serviceLabel =
+                                  es && service.slug in esServiceNames
+                                    ? esServiceNames[service.slug as keyof typeof esServiceNames]
+                                    : service.name;
                                 return (
                                   <li key={service.slug}>
                                     <Link
-                                      href={href}
+                                      href={serviceLink}
                                       aria-current={
                                         current ? 'page' : undefined
                                       }
@@ -155,11 +215,31 @@ export function MobileNav({ className }: { className?: string }) {
                                         current && 'text-accent-ink',
                                       )}
                                     >
-                                      {service.name}
+                                      {serviceLabel}
                                     </Link>
                                   </li>
                                 );
                               })}
+                              {brandServiceLinks
+                                .filter((brand) => brand.group === group)
+                                .map((brand) => {
+                                  const brandHref = es ? brand.esHref : brand.href;
+                                  const current = pathname === brandHref;
+                                  return (
+                                    <li key={brand.href}>
+                                      <Link
+                                        href={brandHref}
+                                        aria-current={current ? 'page' : undefined}
+                                        className={cn(
+                                          'block py-1.5 text-sm transition-colors hover:text-accent-ink',
+                                          current && 'text-accent-ink',
+                                        )}
+                                      >
+                                        {es ? brand.esLabel : brand.label}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
                             </ul>
                           </div>
                         ))}
@@ -179,7 +259,7 @@ export function MobileNav({ className }: { className?: string }) {
                                   childActive && 'text-accent-ink',
                                 )}
                               >
-                                {child.label}
+                                {es ? (esNavLabels[child.href] ?? child.label) : child.label}
                               </Link>
                             </li>
                           );
@@ -194,8 +274,8 @@ export function MobileNav({ className }: { className?: string }) {
 
           <div className="gutter flex flex-col gap-6 pb-10">
             <Button asChild variant="accent" size="xl" className="w-full">
-              <Link href={ctaHref}>
-                Request an estimate
+              <Link href={estimateHref}>
+                {es ? 'Pedir un estimado' : 'Request an estimate'}
                 <ArrowUpRight className="arrow" aria-hidden />
               </Link>
             </Button>

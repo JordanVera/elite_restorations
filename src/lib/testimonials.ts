@@ -4,6 +4,8 @@ export type Testimonial = {
   detail: string;
   source: string;
   rating: number;
+  /** Service hubs this note is about. Empty when it does not name a service. */
+  services: readonly string[];
 };
 
 /** Google listing for Elite Restorations, 511 Crestwater Ct, Houston. */
@@ -11,6 +13,7 @@ export const googleReviews = {
   score: 4.8,
   count: 87,
   href: "https://www.google.com/maps/place/?q=place_id:ChIJxXXLtHLBQIYRoQotAZs5SWw",
+  reviewHref: "https://g.page/r/CaEKLQGbOUlsEBE/review",
 } as const;
 
 export const testimonials: Testimonial[] = [
@@ -21,6 +24,7 @@ export const testimonials: Testimonial[] = [
     detail: "Water damage and renovations",
     source: "Google",
     rating: 5,
+    services: ["water-damage-restoration"],
   },
   {
     quote:
@@ -29,14 +33,16 @@ export const testimonials: Testimonial[] = [
     detail: "Bathroom remodel",
     source: "Google",
     rating: 5,
+    services: ["bathroom-remodeling"],
   },
   {
     quote:
-      "I can't say enough about the great job that the Elite Restorations' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were fanominal! Their customer service, communication, & promptness was by far the best experience I've ever had during a home remodel job! I have other work down the line & I'm looking forward to working withthem again, very soon! My kitchen doesn't look the same, I love it!\n\nThanks George, Douglas, Juan, the pleasant lady in the office, who I spoke with prior to the start of the job, & the amazing install guys!",
+      "I can't say enough about the great job that the Elite Restorations' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were phenomenal! Their customer service, communication, & promptness was by far the best experience I've ever had during a home remodel job! I have other work down the line & I'm looking forward to working with them again, very soon! My kitchen doesn't look the same, I love it!\n\nThanks George, Douglas, Juan, the pleasant lady in the office, who I spoke with prior to the start of the job, & the amazing install guys!",
     author: "Shronda Allen",
     detail: "Kitchen remodel",
     source: "Google",
     rating: 5,
+    services: ["kitchen-remodeling"],
   },
   {
     quote:
@@ -45,6 +51,7 @@ export const testimonials: Testimonial[] = [
     detail: "Repeat home projects",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -53,6 +60,7 @@ export const testimonials: Testimonial[] = [
     detail: "Dining room to home office",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -61,6 +69,7 @@ export const testimonials: Testimonial[] = [
     detail: "Repeat customer",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -69,6 +78,7 @@ export const testimonials: Testimonial[] = [
     detail: "Finished remodel",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote: "Very happy with how it came out! Excellent work!",
@@ -76,6 +86,7 @@ export const testimonials: Testimonial[] = [
     detail: "Home project",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -84,6 +95,7 @@ export const testimonials: Testimonial[] = [
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
     quote:
@@ -92,6 +104,7 @@ export const testimonials: Testimonial[] = [
     detail: "Water restoration · June 2025",
     source: "Google",
     rating: 5,
+    services: ["water-damage-restoration"],
   },
   {
     quote: "Exceptional service and very fast. Their team is very knowledgeable.",
@@ -99,12 +112,14 @@ export const testimonials: Testimonial[] = [
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
   {
-    quote: "Very knowledgable and professional!",
+    quote: "Very knowledgeable and professional!",
     author: "Geovanna Arvizu",
     detail: "June 2025",
     source: "Google",
     rating: 5,
+    services: [],
   },
 ];

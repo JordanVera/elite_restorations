@@ -3,14 +3,15 @@ import { notFound } from 'next/navigation';
 import { ArrowUpRight, Check, Phone } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
+import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { imagesForService, type ServiceGalleryItem } from '@/lib/projects';
+import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import {
   getArea,
-  nearbyLandings,
   relatedCityLandings,
   type LocalLanding,
 } from '@/lib/local-landings';
@@ -48,12 +49,25 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
 
   const path = landing.path;
   const serviceHref = servicePath(service.slug);
+  const galleryPool =
+    cityHeroPools[service.slug] ??
+    imagesForService(service.slug).map((item) => item.image);
+  const hero =
+    pickFromPool(
+      galleryPool.length > 0
+        ? galleryPool
+        : service.image
+          ? [service.image]
+          : [],
+      landing.photoShift,
+      service.image,
+    ) ?? service.image;
   const photos = landingPhotos(
     service.slug,
-    service.image?.src ?? '',
+    hero?.src ?? '',
     landing.photoShift,
   );
-  const nearby = nearbyLandings(landing);
+  const nearby = landing.nearby;
   const related = relatedCityLandings(landing);
   const estimateHref = service.emergency
     ? emergencyHref
@@ -105,14 +119,14 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         )}
       </PageHero>
 
-      {service.image && (
+      {hero && (
         <div className="gutter mx-auto max-w-[120rem] pt-8 md:pt-12">
           <ImageReveal
             immediate
             className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]"
           >
             <Photo
-              image={service.image}
+              image={hero}
               sizes="(min-width: 1920px) 1800px, 96vw"
               priority
             />
@@ -173,6 +187,20 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 ))}
               </ul>
             )}
+            {landing.costGuide &&
+              !(service.links ?? []).some((link) => link.href === landing.costGuide?.href) && (
+                <ul className="mt-8 space-y-3">
+                  <li>
+                    <Link
+                      href={landing.costGuide.href}
+                      className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+                    >
+                      {landing.costGuide.label}
+                      <ArrowUpRight className="size-4" aria-hidden />
+                    </Link>
+                  </li>
+                </ul>
+              )}
           </Reveal>
         </div>
       </section>
@@ -209,9 +237,12 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 The kind of work.
               </h2>
               <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-                Photographs from our projects. They show the kind of{' '}
-                {service.name.toLowerCase()} we do. They are not labeled as a
-                house in {area.name}.
+                Photos from our past {service.name.toLowerCase()} projects around Houston.
+              </p>
+              <p className="font-display mt-8 text-3xl leading-snug">
+                {photos.every((item) => item.project.title === photos[0]?.project.title)
+                  ? photos[0]?.project.title
+                  : service.name}
               </p>
             </Reveal>
             <ul className="mt-12 grid gap-8 sm:grid-cols-2">
@@ -225,13 +256,29 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                         className="transition-transform duration-[1400ms] ease-out-expo group-hover:scale-[1.02]"
                       />
                     </ImageReveal>
-                    <p className="font-display mt-4 text-2xl leading-snug transition-colors group-hover:text-accent-ink">
-                      {item.project.title}
-                    </p>
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+      )}
+
+      {landing.faqs.length > 0 && (
+        <section
+          aria-labelledby="local-faq-heading"
+          className="border-t border-border py-20 md:py-28"
+        >
+          <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-4">
+              <p className="eyebrow text-accent-ink">Questions</p>
+              <h2 id="local-faq-heading" className="font-display t-lg mt-4">
+                In {area.name}.
+              </h2>
+            </Reveal>
+            <div className="lg:col-span-8">
+              <Faq items={[...landing.faqs]} />
+            </div>
           </div>
         </section>
       )}
@@ -276,16 +323,16 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="nearby-heading" className="font-display text-3xl md:text-4xl">
-              {service.name} in other Houston-area communities
+              {service.name} nearby
             </h2>
             <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               {nearby.map((item) => (
-                <li key={item.slug}>
+                <li key={item.href}>
                   <Link
-                    href={item.path}
+                    href={item.href}
                     className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                   >
-                    {item.areaName}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -325,7 +372,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
           serviceType: service.name,
           description: landing.description,
           url: absoluteUrl(path),
-          ...(service.image ? { image: absoluteUrl(service.image.src) } : {}),
+          ...(hero ? { image: absoluteUrl(hero.src) } : {}),
           areaServed: {
             '@type': 'Place',
             name: `${area.name}, Texas`,

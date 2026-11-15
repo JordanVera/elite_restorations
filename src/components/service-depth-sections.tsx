@@ -76,6 +76,26 @@ export function ServiceGuide({
 }) {
   return (
     <>
+      <section aria-labelledby="sequence-heading" className="border-b border-border py-20 md:py-28">
+        <div className="gutter mx-auto max-w-[120rem]">
+          <Reveal>
+            <p className="eyebrow text-accent-ink">On the job</p>
+            <h2 id="sequence-heading" className="font-display t-lg mt-4 max-w-[16ch]">
+              How the work moves.
+            </h2>
+          </Reveal>
+          <ol className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {depth.process.map((step, index) => (
+              <li key={step.title} className="border-t border-border pt-5">
+                <p className="eyebrow text-accent-ink">{String(index + 1).padStart(2, '0')}</p>
+                <h3 className="font-display mt-3 text-2xl leading-snug">{step.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section aria-labelledby="signs-heading" className="border-b border-border bg-surface py-20 md:py-28">
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>

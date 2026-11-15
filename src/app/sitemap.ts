@@ -1,6 +1,10 @@
 import type { MetadataRoute } from 'next';
 
 import { areaPages } from '@/lib/area-pages';
+import { esNeighborhoods } from '@/lib/es/neighborhoods';
+import { esPosts } from '@/lib/es/posts';
+import { neighborhoods } from '@/lib/neighborhoods';
+import { brandPages } from '@/lib/brand-pages';
 import { articlePath, articles } from '@/lib/articles';
 import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
@@ -8,7 +12,10 @@ import { legalEffectiveDate } from '@/lib/legal';
 import { localLandings } from '@/lib/local-landings';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
+import { insurers } from '@/lib/insurers';
+import { spanishServiceSlugs } from '@/lib/i18n';
 import { servicePath, services } from '@/lib/services';
+import { waterCauses } from '@/lib/water-causes';
 
 const MONTHS = {
   January: 0,
@@ -67,19 +74,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/emergency',
     '/insurance-log',
     '/blog',
+    '/es/blog',
+    '/houston-storm-damage',
+    '/insurance-claims/companies',
+  ];
+  const spanishRoutes = [
+    '/es',
+    '/es/restoration',
+    '/es/emergency',
+    '/es/contact',
+    '/es/houston-storm-damage',
+    ...spanishServiceSlugs.map((slug) => `/es/${slug}`),
   ];
   return [
     ...staticRoutes.map((path) =>
       entry(path, path === '/' ? 1 : path === '/restoration' ? 0.9 : 0.8, builtAt),
     ),
     ...services.map((s) => entry(servicePath(s.slug), 0.7, builtAt)),
+    ...spanishRoutes.map((path) => entry(path, 0.6, builtAt)),
+    ...waterCauses.map((cause) => entry(cause.path, 0.7, builtAt)),
+    ...insurers.map((insurer) => entry(`/insurance-claims/companies/${insurer.slug}`, 0.6, builtAt)),
     ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
     ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
     entry('/privacy', 0.3, builtAt),
     entry('/terms', 0.3, builtAt),
     ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
+    ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esNeighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esPosts.map((post) => entry(post.path, 0.5, builtAt)),
     ...costGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
+    ...brandPages.map((page) => entry(page.path, page.locale === 'es' ? 0.6 : 0.7, builtAt)),
     ...caseStudies.map((study) => entry(study.path, 0.6, builtAt)),
   ];
 }

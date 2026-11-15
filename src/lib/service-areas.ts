@@ -18,7 +18,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Westchase: {
     setting:
-      'Westchase sits on the west side of Houston, with townhomes and single-family houses, many of them built from the 1970s through the 1990s. Our office at 511 Crestwater Ct is in 77082, in this part of town.',
+      'Westchase is the west Houston district of offices, townhomes, and houses along Westheimer and the Beltway. Our office at 511 Crestwater Ct is in 77082, a short drive west near George Bush Park.',
     clause: 'townhomes and single-family houses around the 77082 office',
   },
   Alief: {
@@ -43,28 +43,28 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Bellaire: {
     setting:
-      'Bellaire sits inside the Loop on smaller lots, with mid-century houses and newer rebuilds. Rooms are often tight, and older walls are not always square.',
+      'Bellaire sits on both sides of the West Loop, on smaller lots, with mid-century houses and newer rebuilds. Rooms are often tight, and older walls are not always square.',
     clause: 'smaller lots, mid-century houses, and newer rebuilds',
   },
   Memorial: {
     setting:
-      'Memorial is known for larger lots and two-story houses. Kitchens, primary baths, and roof planes are often bigger than in a bungalow closer to downtown.',
+      'Memorial is known for larger lots and two-story houses. Kitchens, primary baths, and roofs are often bigger than in a bungalow closer to downtown.',
     clause: 'larger lots and two-story houses',
   },
   'Spring Branch': {
     setting:
-      'Spring Branch mixes postwar ranch houses and newer infill west of the Loop, much of it on concrete slabs.',
-    clause: 'postwar ranch houses and newer infill on slabs',
+      'Spring Branch mixes postwar ranch houses and newer houses on older lots west of the Loop, much of it on concrete slabs.',
+    clause: 'postwar ranch houses and newer houses on slabs',
   },
   'The Heights': {
     setting:
-      'The Heights is mostly older bungalows and cottages, plus some newer infill. Rooms are often small, and the plumbing and structure decide how far a wall can move.',
-    clause: 'older bungalows, cottages, and some newer infill',
+      'The Heights is mostly older bungalows and cottages, plus some newer houses tucked between them. Rooms are often small, and the plumbing and the structure decide how far a wall can move.',
+    clause: 'older bungalows, cottages, and some newer houses',
   },
   'River Oaks': {
     setting:
-      'River Oaks houses tend to be larger, with more formal rooms, bigger baths, and more millwork than a typical suburban plan.',
-    clause: 'larger houses with formal rooms and more millwork',
+      'River Oaks houses tend to be larger, with more formal rooms, bigger baths, and more trim and woodwork than a typical suburban plan.',
+    clause: 'larger houses with formal rooms and more wood trim',
   },
   'West University': {
     setting:
@@ -78,7 +78,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   'Upper Kirby': {
     setting:
-      'Upper Kirby is inside the Loop, with older houses and newer townhomes on smaller lots.',
+      'Upper Kirby is inside the Loop, with older houses and newer townhomes sitting on smaller lots.',
     clause: 'older houses and newer townhomes on smaller lots',
   },
   'Rice Village': {
@@ -98,8 +98,8 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   'Piney Point': {
     setting:
-      'Piney Point Village is a small city of large-lot houses west of the Loop, often with long roof planes and larger baths.',
-    clause: 'large-lot houses with long roof planes',
+      'Piney Point Village is a small city of large-lot houses west of the Loop, often with long roofs and larger baths.',
+    clause: 'large-lot houses with long roofs',
   },
   'Hunters Creek': {
     setting:
@@ -153,7 +153,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   'The Woodlands': {
     setting:
-      'The Woodlands is a master-planned community north of Houston, with larger houses, open kitchens, and roof planes under a tree canopy.',
+      'The Woodlands is a master-planned community north of Houston, with larger houses, open kitchens, and roofs under a tree canopy.',
     clause: 'larger master-planned houses under a tree canopy',
   },
   Magnolia: {
