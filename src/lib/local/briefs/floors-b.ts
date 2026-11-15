@@ -12,7 +12,7 @@ export const vinylBrief: Brief = {
   ],
   opener: [
     'For vinyl, these houses tell us slab or wood subfloor, and whether the room is a spill zone or a bath. {name} baths stay tile. Kitchens and playrooms are where this floor earns its place.',
-    'Vinyl there is only as flat as what is under it. In {name} we reject the idea that a pad hides a ridge. Glue-down is often steadier on a slab. We explain that before the planks arrive.',
+    'In {name}, vinyl is only as flat as what is under it. We do not treat a pad as a way to hide a ridge. Glue-down is often steadier on a slab. We explain that before the planks arrive.',
     'For us, that house type means access and moisture too. A {name} slab in a humid month gets a meter. A wood subfloor gets a flatness check. The picture on the box does not replace either one.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const vinylBrief: Brief = {
     'Pattern direction in {name} is planned so the planks do not end in a sliver at the only doorway. Underlayment is what the product asks for, not a pad stacked until the floor feels soft.',
   ],
   sequence: [
-    'The {name} order is test moisture and flatness, choose the install method, acclimate the boxes, then install and set transitions. Furniture moves before the first plank, not during it.',
+    'Here is the order we work in: test moisture and flatness, choose the install method, acclimate the boxes, then install and set transitions. Furniture moves before the first plank, not during it.',
     'We do not order {name} vinyl for a floor we have not checked. The visit is the flatness, the doors, and the wet-room limit. Install day is the method we already explained.',
   ],
   coda: [
@@ -122,7 +122,7 @@ export const laminateBrief: Brief = {
   ],
   opener: [
     'For laminate, these houses tell us where the floor is dry enough and flat enough. {name} bedrooms and halls are the usual rooms. We check the subfloor before the planks arrive.',
-    'Laminate there is underlayment, transitions, and a honest limit on wet rooms. In {name} we set the floor so it meets the doors instead of catching on them.',
+    'In {name}, laminate means underlayment, transitions, and an honest limit on wet rooms. We set the floor so it meets the doors instead of catching on them.',
     'For us, that house type means stairs and flatness too. A {name} two-story hall shows a bad stair edge immediately. A ridge under the plank ticks when you walk.',
   ],
   pier: [
@@ -151,7 +151,7 @@ export const laminateBrief: Brief = {
     'We check {name} flatness, door height, and whether the room is actually dry. Those three answers pick the product more honestly than a color alone.',
   ],
   sequence: [
-    'The {name} order is inspect the subfloor, confirm the room is appropriate, acclimate the boxes, install with the right underlayment, and set transitions. Baseboard or shoe is put back so the edge is finished.',
+    'Here is the order we work in: inspect the subfloor, confirm the room is appropriate, acclimate the boxes, install with the right underlayment, and set transitions. Baseboard or shoe is put back so the edge is finished.',
     'We do not deliver {name} laminate before the floor is checked. Install day follows the method already explained, including how the stairs or the bath doorway will be treated.',
   ],
   coda: [

@@ -120,7 +120,7 @@ export const kitchenRemodeling: ServiceGuide = {
       eyebrow: 'Records',
       heading: 'When a kitchen is also a leak.',
       paragraphs: [
-        'A planned remodel is paid as construction. It is not a claim, and we describe it as construction. A kitchen that is open because a supply line, an ice maker, or a roof leak wet the room is a different start. Drying and photographs come before new cabinets, and those records stay separate from the stone and the paint. Your insurer decides what the policy pays. We are not public adjusters, and we do not negotiate the claim.',
+        'A planned remodel is paid as construction. It is not a claim, and we describe it as construction. A kitchen that is open because a supply line, an ice maker, or a roof leak wet the room is a different start. Drying and photographs come before new cabinets, and those records stay separate from the stone and the paint. Your insurer decides what the policy pays. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters.',
       ],
       points: [
         {

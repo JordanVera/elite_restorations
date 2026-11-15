@@ -120,7 +120,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       eyebrow: "Claims",
       heading: "Photos, the adjuster, and the repair that follows.",
       paragraphs: [
-        "We help you with the insurance claim by documenting the opening, meeting the adjuster on site if you want us there, and writing a repair estimate. We assist. We are not public adjusters, we do not give legal advice, and we do not promise approval or a payout. Flooding from rising water, a hurricane, hail, straight-line wind, and a tornado can all break glass. They are not the same coverage story. Check your policy.",
+        "We help you with the insurance claim by documenting the opening, meeting the adjuster on site if you want us there, and writing a repair estimate. We assist. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not give legal advice, and we do not promise approval or a payout. Flooding from rising water, a hurricane, hail, straight-line wind, and a tornado can all break glass. They are not the same coverage story. Check your policy.",
         "Steps that limit more damage, including a board-up, are something many policies expect. Whether this policy pays for them is a question for the insurer. Link the photos to the claim number, keep the broken hardware if you can do that safely, and use the photo log on this site if you want a room-by-room record of your own. The permanent glass or door is construction. The claim payment is whatever the insurer allows.",
       ],
       points: [
@@ -130,7 +130,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "Adjuster visit",
-          body: "We can walk the building with the adjuster and show what was open and what we secured. We do not negotiate the dollar figure.",
+          body: "We can walk the building with the adjuster and show what was open and what we secured. We send our estimate to the insurance company for approval and work through it with the adjuster. We are not public adjusters.",
         },
         {
           title: "Sudden or not",
@@ -158,7 +158,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       q: "Can you help with a hurricane, hail, wind, or tornado claim?",
-      a: "We help with photos, emergency protection, an on-site meeting if you want us there, and a repair estimate. We are not public adjusters and we do not promise a payout. Flooding from rising water may be a different policy. Check your policy.",
+      a: "We help with photos, emergency protection, an on-site meeting if you want us there, and a repair estimate. We are not public adjusters. We do not promise a payout. Flooding from rising water may be a different policy. Check your policy.",
     },
     {
       q: "Will you come during the storm?",

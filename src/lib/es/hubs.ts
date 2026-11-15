@@ -52,7 +52,7 @@ function hub(
         paragraphs: [
           `Vemos la casa o el edificio, le decimos qué hace falta y qué puede quedarse, y lo escribimos antes de quitar de más. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Elite Restorations es una empresa familiar desde 1993.`,
           claimHubs.has(slug)
-            ? `Si hay seguro de por medio, ayudamos con fotos, un estimado de la reparación y, si usted quiere, estamos cuando llegue el ajustador. La aseguradora decide si paga. Nosotros no somos ajustadores públicos. Revise su póliza, y llame o envíe un texto al ${phone}.`
+            ? `Si hay seguro de por medio, ayudamos con fotos, un estimado de la reparación y, si usted quiere, estamos cuando llegue el ajustador. La aseguradora decide si paga. No somos ajustadores públicos. Revise su póliza, y llame o envíe un texto al ${phone}.`
             : `El estimado es gratis. Llame o envíe un texto al ${phone} y agendamos la visita, de lunes a sábado. Si el trabajo no le conviene, se lo decimos en la casa, antes de empezar.`,
         ],
       },
@@ -275,7 +275,7 @@ const esHubInputs: readonly EsHub[] = [
     "Reclamos de seguro en Houston",
     "Ayuda con reclamos de seguro",
     "Seguro",
-    "Ayudamos a documentar el daño de agua o de tormenta. La póliza la decide su aseguradora. Nosotros no somos ajustadores públicos.",
+    "Ayudamos a documentar el daño de agua o de tormenta. La póliza la decide su aseguradora. No somos ajustadores públicos.",
     "Tomamos fotos, anotamos la humedad, preparamos un estimado de la reparación y, si usted quiere, estamos cuando llegue el ajustador. Huracanes, granizo, viento, tornados e inundación no son la misma cobertura. El agua que sube de la calle suele ser otra póliza. No le cambiamos el nombre al daño para que suene a otra cosa. Hay guías, en inglés, sobre aseguradoras grandes de Texas. No trabajamos para ninguna de ellas.",
     [
       { q: "¿Presentan el reclamo por mí?", a: "Usted avisa a su aseguradora. Nosotros documentamos el edificio y reparamos lo que usted contrata." },

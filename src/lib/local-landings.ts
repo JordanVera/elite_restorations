@@ -2,6 +2,7 @@ import 'server-only';
 
 import { getArticle } from '@/lib/articles';
 import { getAreaProfile } from '@/lib/local/areas';
+import { mentionsArea } from '@/lib/local/prose';
 import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
 import { localLandingSlug } from '@/lib/local-paths';
 import { documentTitle, fitDescription, servicePageTitle, titleFits } from '@/lib/seo';
@@ -625,7 +626,7 @@ function assertLandings(pages: readonly LocalLanding[]) {
         throw new Error(`Banned phrase ${pattern} on ${page.path}`);
       }
     }
-    if (!page.paragraphs.some((paragraph) => paragraph.includes(page.areaName))) {
+    if (!page.paragraphs.some((paragraph) => mentionsArea(paragraph, page.areaName))) {
       throw new Error(`City name missing from body: ${page.path}`);
     }
     const profile = getAreaProfile(page.areaSlug);

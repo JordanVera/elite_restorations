@@ -5,13 +5,14 @@ import { ArrowUpRight } from 'lucide-react';
 import { CtaBand } from '@/components/cta-band';
 import { PageHero } from '@/components/page-hero';
 import { articlePath, articles } from '@/lib/articles';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling Guides',
   description:
     'Houston guides from Elite Restorations on water damage, fire recovery, kitchen and bathroom remodeling, and floors.',
   path: '/blog',
+  languages: languageAlternates('/blog', '/es/blog'),
   image: '/images/services/kitchen-remodeling.jpg',
 });
 

@@ -191,7 +191,7 @@ const raw: Record<
     hoa: 'light',
     housingShort: 'rebuilds on small lots',
     lines: [
-      'Bellaire is its own city inside the Loop, with mid-century houses and a long run of teardowns and custom rebuilds on smaller lots.',
+      'Bellaire is its own city on both sides of the West Loop, with mid-century houses and a long run of teardowns and custom rebuilds on smaller lots.',
       'Older houses may be pier-and-beam or early slabs, and a rebuilt house is often a new slab. An addition sometimes joins the two.',
       'The city has zoning and its own permits, which is different from Houston next door. The city code can touch a street elevation.',
       'Brays Bayou runs along the area, and parts of Bellaire have flooded in tropical storms. Blocks farther from the bayou did not all take the same water.',
@@ -301,7 +301,7 @@ const raw: Record<
     hoa: 'light',
     housingShort: 'cottages and rebuilds',
     lines: [
-      'West University Place is its own zoned city south of the Loop, with small lots, older cottages, and many rebuilt houses.',
+      'West University Place is its own zoned city inside the Loop, next to Rice Village, with small lots, older cottages, and many rebuilt houses.',
       'Original houses may be pier-and-beam. The rebuilds are commonly slab. Kitchens and powder rooms stay compact even when the new house is bigger than the cottage it replaced.',
       'The city issues its own permits, separate from Houston. Exterior work follows that code. Older interior trim is often worth matching when it still belongs to the house.',
       'The city is near Brays Bayou. Flood history here is block by block, not a single West University story.',

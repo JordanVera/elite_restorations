@@ -20,6 +20,15 @@ export function NeighborhoodPageView({
   locale: 'en' | 'es';
 }) {
   const es = locale === 'es';
+  const cities = new Set([
+    'kingwood-tx',
+    'cypress-tx',
+    'spring-tx',
+    'humble-tx',
+    'friendswood-tx',
+    'tomball-tx',
+  ]);
+  const place = cities.has(page.slug) ? page.name : `${page.name}, Houston`;
   const serviceName = es
     ? `Restauración y remodelación en ${page.name}`
     : `Restoration and remodeling in ${page.name}`;
@@ -27,8 +36,20 @@ export function NeighborhoodPageView({
   return (
     <>
       <PageHero
-        eyebrow={es ? 'Vecindario de Houston' : 'Houston neighborhood'}
-        title={[`${page.name},`, 'TX']}
+        eyebrow={
+          cities.has(page.slug)
+            ? es
+              ? 'Ciudad'
+              : 'City'
+            : es
+              ? 'Vecindario de Houston'
+              : 'Houston neighborhood'
+        }
+        title={
+          es
+            ? ['Remodelación y restauración', `en ${place}`]
+            : ['Remodeling & Restoration', `in ${place}`]
+        }
         lede={page.lede}
         crumbs={[
           {

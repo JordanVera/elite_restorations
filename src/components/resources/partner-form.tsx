@@ -5,7 +5,7 @@ export function PartnerForm() {
     <LeadForm
       intent="partner"
       idPrefix="partner"
-      submitLabel="Become a partner"
+      submitLabel="Join the Realtor program"
       showPhotos={false}
     />
   );

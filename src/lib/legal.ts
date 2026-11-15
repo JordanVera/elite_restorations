@@ -21,7 +21,7 @@ export const privacySections: LegalSection[] = [
   {
     heading: 'Information we collect',
     paragraphs: [
-      'The contact form, the emergency form, and the realtor partner form are how most information reaches us. Depending on the form, you may send:',
+      'The contact form, the emergency form, and the Realtor program form are how most information reaches us. Depending on the form, you may send:',
     ],
     items: [
       'Your name',
@@ -103,7 +103,7 @@ export const termsSections: LegalSection[] = [
   {
     heading: 'Emergency requests',
     paragraphs: [
-      `If water is coming in or a roof is open, call ${site.phone.display}. The online form reaches the same team, and it is a request for a call back, not a guaranteed arrival time.`,
+      `If water is coming in or a roof is open, call ${site.phone.display}. The online form reaches the same team, and it is a request for a call back, not a promised arrival time.`,
       `Office hours are ${site.hours[0].days}, ${site.hours[0].time}. ${site.hours[1].days}: ${site.hours[1].time}.`,
     ],
   },

@@ -12,7 +12,7 @@ export const patioBrief: Brief = {
   ],
   opener: [
     'For a deck or patio, these houses tell us the yard, the door, and the rules. {name} lots run from a small urban yard to a suburban one with room. We measure the one you have.',
-    'Outdoor work there is structure first. In {name} clay soil and hard rain are why the footings and the ledger are inspected before boards or pavers are discussed.',
+    'In {name}, outdoor work starts with the structure. Clay soil and hard rain are why the footings and the ledger are inspected before boards or pavers are discussed.',
     'For us, that house type means drainage and the review. A {name} association often looks at decks, covers, and fences. Water still has to shed off the wall whether or not a committee is involved.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const patioBrief: Brief = {
     'Wood or composite in {name} is a maintenance conversation. Houston sun and rain are the reason. We say what each asks of you before the order.',
   ],
   sequence: [
-    'The {name} order is measure the door and the grade, inspect what exists, confirm reviews, then footings, frame, surface, rails, and stairs. Drainage is in that sequence, not a gutter added after the first flood against the wall.',
+    'Here is the order we work in: measure the door and the grade, inspect what exists, confirm reviews, then footings, frame, surface, rails, and stairs. Drainage is in that sequence, not a gutter added after the first flood against the wall.',
     'We do not skin a {name} deck that has a soft ledger. The inspection decides what stays. Materials are ordered after the size and the rules are known.',
   ],
   coda: [
@@ -123,7 +123,7 @@ export const waterBrief: Brief = {
   ],
   opener: [
     'For water damage, these houses tell us the likely sources and the way the house dries. {name} slabs, crawlspaces, and raised coastal floors are not the same cavity. We map the one that got wet.',
-    'Restoration there is extract, dry, then rebuild. In {name} humidity slows drying, so air movers and dehumidifiers are the setup, not a upgrade.',
+    'In {name}, restoration means extract, dry, then rebuild. Humidity slows drying, so air movers and dehumidifiers are the setup, not an upgrade.',
     'For us, that house type starts with the source. A {name} bayou lot and a second-floor supply leak are different jobs. The neighborhood name does not pick the equipment.',
   ],
   pier: [
@@ -152,7 +152,7 @@ export const waterBrief: Brief = {
     'Photos in {name} record the conditions and the work of drying. They are for you and, if you choose, your insurer. We do not decide the claim.',
   ],
   sequence: [
-    'The {name} order is make the scene safe, stop more water if we can, map, extract, dry, then repair what you hire. If the roof is open, the cover comes before a long dry-out of a room that is still being rained on.',
+    'Here is the order we work in: make the scene safe, stop more water if we can, map, extract, dry, then repair what you hire. If the roof is open, the cover comes before a long dry-out of a room that is still being rained on.',
     'We do not close {name} drywall because the surface feels dry to a hand. Meters and the drying log say when. Paint and new flooring wait on that, even when the calendar is impatient.',
   ],
   coda: [

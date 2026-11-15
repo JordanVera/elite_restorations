@@ -54,7 +54,7 @@ export default function SpanishStormPage() {
           heading: "Huracanes, granizo, viento y heladas.",
           paragraphs: [
             "La temporada de huracanes va del 1 de junio al 30 de noviembre. El granizo y el viento de primavera golpean techos desde Katy hasta The Woodlands. Una helada fuerte, que aquí es rara, revienta los tubos del ático y las llaves de la manguera. Eso no es lo mismo que un techo abierto, aunque las dos cosas pueden llegar la misma semana.",
-            "La lona es para el techo. Las tablas son para ventanas y puertas. El secado es para lo que ya se mojó. Son trabajos distintos. Atendemos casas, apartamentos y edificios comerciales. La aseguradora decide si paga. Nosotros no somos ajustadores públicos.",
+            "La lona es para el techo. Las tablas son para ventanas y puertas. El secado es para lo que ya se mojó. Son trabajos distintos. Atendemos casas, apartamentos y edificios comerciales. La aseguradora decide si paga. No somos ajustadores públicos.",
           ],
         },
       ]}

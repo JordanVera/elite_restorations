@@ -13,7 +13,7 @@ export const tarpBrief: Brief = {
   ],
   opener: [
     'For a tarp, these houses tell us the height, the trees, and how we reach the opening. {name} two-story roofs and cut-up cottage roofs are different climbs. Both get photos before the cover.',
-    'Tarping there is protection, not a roof. In {name} we photograph the puncture or the missing shingles, then anchor the cover. Your insurer decides coverage. We document it.',
+    'In {name}, a tarp is protection, not a roof. We photograph the puncture or the missing shingles, then anchor the cover. Your insurer decides coverage. We document it.',
     'For us, that house type means access and real urgency. A {name} lot with no place to land a ladder is part of the plan. So is a limb still on the roof. We do not climb what is not safe.',
   ],
   pier: [
@@ -42,7 +42,7 @@ export const tarpBrief: Brief = {
     'If the {name} ceiling is wet, we separate the tarp from the drying. One stops water. The other removes what already got in. Both can be the same team. They are not the same task.',
   ],
   sequence: [
-    'The {name} order is your call, a safety look, photos, the cover, then a conversation about the permanent roof and any interior drying. We do not schedule a full replacement in the same breath as the tarp unless the roof is obviously done and you want that planned.',
+    'Here is the order we work in: your call, a safety look, photos, the cover, then a conversation about the permanent roof and any interior drying. We do not schedule a full replacement in the same breath as the tarp unless the roof is obviously done and you want that planned.',
     'We answer {name} tarp calls from the 77082 office. Distance changes arrival. It does not change the order: photos, then cover, then the real roof.',
   ],
   coda: [
@@ -90,7 +90,7 @@ export const tarpBrief: Brief = {
     {
       q: 'Do you photograph {name} storm damage before covering it?',
       answers: [
-        'Yes. The photos are taken before the tarp hides the opening. You can share them with your insurer. We do not decide what the policy pays, and we do not negotiate the claim. In {name} that is true for wind, hail, and limbs.',
+        'Yes. The photos are taken before the tarp hides the opening. You can share them with your insurer. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides what the policy pays. In {name} that is true for wind, hail, and limbs.',
         'Documentation first, then the cover. A {name} opening that is wrapped before anyone looks is harder to explain later. We take the pictures while the damage is visible.',
       ],
     },
@@ -123,7 +123,7 @@ export const sidingBrief: Brief = {
   ],
   opener: [
     'For siding, these houses tell us brick versus board, and whether an association or a district will see the color. {name} fronts are not all the same material. We look at the wall from close up.',
-    'Siding there is corners, windows, and soffits as much as the wall. In {name} that detailing is what makes a new front look finished instead of bare.',
+    'In {name}, siding work includes the corners, the windows, and the soffits as much as the wall. That detailing is what makes a new front look finished instead of bare.',
     'For us, that house type means sun and local rules. South and west walls in {name} fade first. A repair is matched to the faded board, not to a chip from the year it was installed.',
   ],
   pier: [
@@ -152,7 +152,7 @@ export const sidingBrief: Brief = {
     'Storm pieces in {name} are photographed. The repair is the wall. The claim, if you file one, is your insurer’s decision.',
   ],
   sequence: [
-    'The {name} order is look at the wall up close, decide repair or replacement, confirm color rules, then install with the trim detailed. Paint or the factory finish is part of that plan, not a later guess.',
+    'Here is the order we work in: look at the wall up close, decide repair or replacement, confirm color rules, then install with the trim detailed. Paint or the factory finish is part of that plan, not a later guess.',
     'We do not order {name} siding before the profile and the review path are known. Tear-off of the old skin, when it happens, is when we see the wall behind. Rot found there is discussed before it is covered.',
   ],
   coda: [
@@ -194,7 +194,7 @@ export const sidingBrief: Brief = {
       q: 'Which siding profiles do you install in {name}?',
       answers: [
         'Board-and-batten, lap, and other common profiles, including fiber cement and engineered wood. In {name} the choice is how the wall finishes at corners and windows, and what the rules allow. We do not lead with a brand.',
-        'The profile has to fit the house. A {name} ranch, a two-story suburban front, and a cottage do not want the same board. We talk through the trim and the paint with the profile.',
+        'The profile has to fit the house. A one-story ranch, a two-story suburban front, and a cottage do not want the same board. We talk through the trim and the paint with the profile.',
       ],
     },
     {
@@ -208,7 +208,7 @@ export const sidingBrief: Brief = {
       q: 'Can you document storm-damaged siding in {name}?',
       answers: [
         'Yes. We photograph the wall and, if you hire the repair, the completed work. Your insurer decides coverage. In {name} wind can take a section without destroying the roof. We record what we see and we repair what you hire.',
-        'Photos are the record. A {name} claim is not something we negotiate. The wall repair is the construction. Those stay separate even when they happen in the same week.',
+        'Photos are the record. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. In {name} the wall repair is the construction. Those stay separate even when they happen in the same week.',
       ],
     },
     {

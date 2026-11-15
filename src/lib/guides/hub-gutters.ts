@@ -54,7 +54,7 @@ export const gutterGuide: ServiceGuide = {
       heading: "Hard rain, flat lots, and trees that never stop.",
       paragraphs: [
         "Houston rain often arrives as a heavy burst. A gutter that is a little low or a little clogged overflows in minutes, and the water hits the slab. On flat lots in Alief, Westchase, and parts of Katy, that splash stays against the brick. Houses in Memorial and The Woodlands add live oak and pine debris, so a gutter that was clear in March is full by June. Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that actually tests it.",
-        "We work from 511 Crestwater Ct, Houston, TX 77082. Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer any time. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are not a preferred vendor of any insurer.",
+        "We work from 511 Crestwater Ct, Houston, TX 77082. Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer any time. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are independent of every insurer.",
       ],
       points: [
         { title: "Slab splash", body: "Downspouts should discharge away from the foundation. A pretty stretch that dumps at the corner still wets the slab." },

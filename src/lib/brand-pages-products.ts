@@ -88,7 +88,7 @@ const sherwinEn = {
       eyebrow: "The visit",
       heading: "Timing, claims, and where we paint.",
       paragraphs: [
-        `A few rooms are often a day or two once the walls are ready. A whole interior, or a two-story exterior, takes longer, and drying, repairs, and rain add days we will name after we see the house. Exterior work pauses for storms. If you are filing a claim because wind or water damaged the walls, we photograph the damage and the repair. The estimate is the price of the prep and the Sherwin-Williams paint. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.`,
+        `A few rooms are often a day or two once the walls are ready. A whole interior, or a two-story exterior, takes longer, and drying, repairs, and rain add days we will name after we see the house. Exterior work pauses for storms. If you are filing a claim because wind or water damaged the walls, we photograph the damage and the repair. The estimate is the price of the prep and the Sherwin-Williams paint. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.`,
         `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We paint houses across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
@@ -179,7 +179,7 @@ const floorEn = {
       heading: "Replacing a floor after a leak or a flood.",
       paragraphs: [
         "Wet carpet, swollen laminate, and cupped wood come out. The water path is mapped first, because a stain at the baseboard often means the slab or the wall cavity is wet past the room you can see. Drying is its own job: extraction, air movers, and dehumidifiers until the readings say the structure is dry. A new floor is the step after that, not the step that hides the water. Houston humidity is why a room that feels dry to your hand can still be wet on a meter.",
-        "What goes back depends on the room. Tile and a vinyl plank rated for water are the usual kitchen and bath floors. Laminate that sat in floodwater is replaced, not dried and clicked back in. Engineered wood can return to a living room once the slab is dry and the maker allows that slab. If you are filing a claim, we photograph the wet floor before it comes up and the new floor after. The estimate is the price of the removal, the prep, and the installation. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.",
+        "What goes back depends on the room. Tile and a vinyl plank rated for water are the usual kitchen and bath floors. Laminate that sat in floodwater is replaced, not dried and clicked back in. Engineered wood can return to a living room once the slab is dry and the maker allows that slab. If you are filing a claim, we photograph the wet floor before it comes up and the new floor after. The estimate is the price of the removal, the prep, and the installation. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.",
       ],
     },
     {
@@ -309,7 +309,7 @@ const stoneEn = {
       heading: "Replacing a top after a leak.",
       paragraphs: [
         "A sink leak, a supply line, or a dishwasher can swell the particle-board box under a stone top while the stone still looks fine. The box is the problem. We do not set a new slab on a soft cabinet. The room is dried, the damaged cabinet is rebuilt or replaced, and then the top is templated. If the stone itself cracked at the sink or the seam opened, that piece is replaced. A crack that was only filled usually opens again.",
-        "If you are filing a claim, we photograph the cabinet, the leak path, and the stone. The estimate is the price of the cabinet repair and the new top. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice. A planned remodel with no leak is construction, and we describe it that way.",
+        "If you are filing a claim, we photograph the cabinet, the leak path, and the stone. The estimate is the price of the cabinet repair and the new top. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice. A planned remodel with no leak is construction, and we describe it that way.",
       ],
     },
     {
@@ -429,7 +429,7 @@ const sherwinEs = {
       eyebrow: "La visita",
       heading: "Tiempos, reclamos y dónde pintamos.",
       paragraphs: [
-        "Unos cuantos cuartos suelen ser un día o dos cuando las paredes están listas. Un interior completo, o un exterior de dos pisos, tarda más, y el secado, las reparaciones y la lluvia añaden días que nombramos después de ver la casa. El exterior se detiene con las tormentas. Si va a presentar un reclamo porque el viento o el agua dañó las paredes, fotografiamos el daño y la reparación. El estimado es el precio de la preparación y de la pintura Sherwin-Williams. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.",
+        "Unos cuantos cuartos suelen ser un día o dos cuando las paredes están listas. Un interior completo, o un exterior de dos pisos, tarda más, y el secado, las reparaciones y la lluvia añaden días que nombramos después de ver la casa. El exterior se detiene con las tormentas. Si va a presentar un reclamo porque el viento o el agua dañó las paredes, fotografiamos el daño y la reparación. El estimado es el precio de la preparación y de la pintura Sherwin-Williams. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
         `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Pintamos casas en Houston, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
@@ -520,7 +520,7 @@ const floorEs = {
       heading: "Cambiar un piso después de una fuga o una inundación.",
       paragraphs: [
         "La alfombra mojada, el laminado hinchado y la madera acopada salen. Primero se traza por dónde entró el agua, porque una mancha en el zoclo muchas veces quiere decir que la losa o el hueco de la pared están mojados más allá del cuarto que se ve. El secado es otro trabajo: extracción, ventiladores y deshumidificadores hasta que las lecturas dicen que la estructura está seca. El piso nuevo es el paso de después, no el paso que esconde el agua. La humedad de Houston explica por qué un cuarto que se siente seco en la mano sigue húmedo en el medidor.",
-        "Lo que regresa depende del cuarto. La loseta y una duela de vinil hecha para el agua son los pisos usuales de cocina y baño. El laminado que estuvo en agua de inundación se reemplaza. No se seca para volver a ensamblarlo. La madera de ingeniería puede volver a una sala cuando la losa está seca y el fabricante permite esa losa. Si va a presentar un reclamo, fotografiamos el piso mojado antes de quitarlo y el piso nuevo después. El estimado es el precio de quitar, preparar e instalar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.",
+        "Lo que regresa depende del cuarto. La loseta y una duela de vinil hecha para el agua son los pisos usuales de cocina y baño. El laminado que estuvo en agua de inundación se reemplaza. No se seca para volver a ensamblarlo. La madera de ingeniería puede volver a una sala cuando la losa está seca y el fabricante permite esa losa. Si va a presentar un reclamo, fotografiamos el piso mojado antes de quitarlo y el piso nuevo después. El estimado es el precio de quitar, preparar e instalar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
       ],
     },
     {
@@ -650,7 +650,7 @@ const stoneEs = {
       heading: "Cambiar una cubierta después de una fuga.",
       paragraphs: [
         "Una fuga del fregadero, de un tubo de suministro o del lavavajillas puede hinchar la caja de aglomerado debajo de una cubierta de piedra mientras la piedra se ve bien. La caja es el problema. No asentamos una placa nueva sobre un gabinete blando. El cuarto se seca, el gabinete dañado se reconstruye o se cambia, y entonces se hace la plantilla de la cubierta. Si la piedra se quebró en el fregadero o la unión se abrió, esa pieza se reemplaza. Una grieta solo rellenada suele volverse a abrir.",
-        "Si va a presentar un reclamo, fotografiamos el gabinete, el camino de la fuga y la piedra. El estimado es el precio de la reparación del gabinete y de la cubierta nueva. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal. Una remodelación planeada, sin fuga, es construcción, y así la describimos.",
+        "Si va a presentar un reclamo, fotografiamos el gabinete, el camino de la fuga y la piedra. El estimado es el precio de la reparación del gabinete y de la cubierta nueva. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal. Una remodelación planeada, sin fuga, es construcción, y así la describimos.",
       ],
     },
     {

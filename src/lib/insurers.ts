@@ -15,15 +15,15 @@ export type InsurerPage = {
 const phone = "(713) 909-0034";
 
 function disclaimer(name: string) {
-  return `Elite Restorations is not affiliated with, endorsed by, or a preferred vendor of ${name}. We work for whoever hires us, not for ${name}, and their logo is not ours to use. We help Houston homeowners, property managers, and building owners who are insured by ${name} document water, storm, or roof damage. ${name} decides coverage, deductibles, and payment under the policy. Check that policy. We are not public adjusters. Only ${name} can say whether a claim will be approved or paid.`;
+  return `Elite Restorations is an independent contractor and is not affiliated with ${name}. We work for whoever hires us, not for ${name}, and their logo is not ours to use. We help Houston homeowners, property managers, and building owners who are insured by ${name} document water, storm, or roof damage. ${name} decides coverage, deductibles, and payment under the policy. Check that policy. We are not public adjusters. Only ${name} can say whether a claim will be approved or paid.`;
 }
 
 function faqs(name: string, extra: { q: string; a: string }[]): { q: string; a: string }[] {
   return [
     ...extra,
     {
-      q: `Are you a ${name} preferred vendor or partner?`,
-      a: `No. We are independent, and we are not affiliated with ${name}. You hire Elite Restorations. ${name} decides the claim.`,
+      q: `Do you work with ${name} customers?`,
+      a: `Yes. Elite Restorations is an independent contractor and is not affiliated with ${name}. You hire us. ${name} decides the claim.`,
     },
     {
       q: "Do you promise the claim will be paid?",
@@ -157,7 +157,7 @@ export const insurers: readonly InsurerPage[] = [
     faqs: faqs("Allstate", [
       { q: "Do I have to use an Allstate contractor?", a: "We are not an Allstate contractor. Whether your policy says anything about who may repair the house is a question for Allstate and the policy. We will not invent a rule that is not written there." },
       { q: "Can you start drying before Allstate inspects?", a: "If the building is wet, drying should not wait. We photograph first. Ask Allstate what they want to see before anything is thrown away." },
-      { q: "Will you argue the Allstate estimate?", a: "No. We can explain the repair work. We do not negotiate the claim or act as public adjusters." },
+      { q: "Will you argue the Allstate estimate?", a: "We explain the repair work. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters." },
       { q: "What losses do you document?", a: "Roof and storm openings, hail, wind, and indoor water from pipes and appliances. Rising water is written down as flood. Check your policy." },
     ]),
   },
@@ -171,7 +171,7 @@ export const insurers: readonly InsurerPage[] = [
     sections: [
       {
         eyebrow: "Not affiliated",
-        heading: "A membership insurer is still not our partner.",
+        heading: "A membership insurer is still a separate company.",
         paragraphs: [disclaimer("USAA"), "USAA membership is generally tied to the military community. That is public, and it matters on a loss because the person on the policy may not be the person standing in the wet room. A spouse, a parent, or a property manager may be the one who calls us. We still need the claim number from whoever opens it with USAA, and we still will not speak for USAA."],
       },
       {
@@ -180,7 +180,7 @@ export const insurers: readonly InsurerPage[] = [
         paragraphs: [
           "If the member is not in Houston, the first useful thing is a clear record: which rooms, where the water entered, whether the roof is open, and whether anyone has shut the main. We can photograph that set and send the facts to the person who has to talk to USAA. We do not log into a member account and we do not file the claim.",
           "The Houston building problems are the same ones we see on other policies. Hurricane season runs June through November. Hail bruises roofs in the suburbs. A freeze splits attic lines on slabs. A water heater in a garage, a dishwasher supply, or a toilet overflow does not wait for someone to fly home. Mitigation limits further damage. USAA decides what, if anything, it reimburses.",
-          "When an adjuster visits, we can meet them if the person responsible for the house asks us to. We walk the damage we saw. We do not negotiate a member's settlement and we do not give legal advice. The repair estimate names the construction. It is not a USAA payment.",
+          "When an adjuster visits, we can meet them if the person responsible for the house asks us to. We walk the damage we saw. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not give legal advice. The repair estimate names the construction. It is not a USAA payment.",
         ],
       },
       {

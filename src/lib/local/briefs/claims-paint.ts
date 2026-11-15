@@ -6,13 +6,13 @@ export const insuranceBrief: Brief = {
   exterior: false,
   lede: [
     'Insurance claims help in {name}, TX, is photographs and notes on what got wet or what the storm did. Your insurer decides coverage.',
-    'A {name} record is taken before cleanup throws the evidence away. We do not decide what a policy pays, and we do not negotiate the claim.',
+    'A {name} record is taken before cleanup throws the evidence away. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides what the policy pays.',
     'In {name} wind, hail, roof openings, and rising water are not the same event. The photos should not blur them.',
     '{name} documentation can sit beside drying and repairs if you hire those too. The paperwork and the construction stay separate.',
   ],
   opener: [
     'For claims help, these houses tell us which kinds of damage are worth separating in the photos. {name} trees, bayous, and ordinary supply lines produce different pictures. We label what we see.',
-    'Documentation there is for you and your adjuster. In {name} we write down the rooms, the roof, and the source as far as the visit can show it. Coverage is not our sentence to finish.',
+    'In {name}, the documentation is for you and your adjuster. We write down the rooms, the roof, and the source as far as the visit can show it. Your insurer decides coverage.',
     'For us, that house type means a reason to be specific. A {name} limb through a roof and water at the front door may be two conversations with your insurer. The file should let you tell them apart.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const insuranceBrief: Brief = {
     'Drying and rebuilding in {name} can follow the documentation. We keep the invoice for construction separate from the idea that we approved a claim. We cannot approve a claim.',
   ],
   sequence: [
-    'The {name} order is make the house safe, photograph before cleanup removes the evidence, then dry or tarp if you hire that work. Meetings with your insurer are yours. We can be on site for the conditions. We are not your adjuster.',
+    'Here is the order we work in: make the house safe, photograph before cleanup removes the evidence, then dry or tarp if you hire that work. We can be on site for the conditions. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters.',
     'We do not wait to protect a {name} house for a coverage letter. Stopping water and documenting it happen because the house needs them. What gets paid is decided elsewhere.',
   ],
   coda: [
@@ -67,7 +67,7 @@ export const insuranceBrief: Brief = {
       title: 'Repairs stay separate',
       bodies: [
         'Drying and rebuilds in {name} can be hired. They do not mean we accepted the claim.',
-        'We are not a public adjuster in {name} or anywhere else. Your insurer decides coverage.',
+        'We are not public adjusters. Your insurer decides coverage in {name} and everywhere else.',
       ],
     },
   ],
@@ -75,7 +75,7 @@ export const insuranceBrief: Brief = {
     {
       q: 'Do you file the claim or decide coverage in {name}?',
       answers: [
-        'No. We provide inspection photos and notes. In {name} that might be a roof, a wet room, or both. Coverage decisions belong to your insurer. We are not a public adjuster and we do not negotiate the claim. You can share the file we build.',
+        'No. We provide inspection photos and notes. In {name} that might be a roof, a wet room, or both. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage. You can share the file we build.',
         'Filing is your choice and your insurer’s process. Our {name} work is the record and, if hired, the drying or the repair. Those are not an approval. Anyone who tells you a contractor can promise the claim is overstating the role.',
       ],
     },
@@ -151,7 +151,7 @@ export const paintBrief: Brief = {
     'Color and sheen in {name} are chosen for the room: a deeper powder-room color, or a living room that should disappear back into the wall that was already there.',
   ],
   sequence: [
-    'The {name} order is confirm the wall is dry and sound, repair and texture, prime, then paint. Protection of floors and trim comes before the first coat of mud.',
+    'Here is the order we work in: confirm the wall is dry and sound, repair and texture, prime, then paint. Protection of floors and trim comes before the first coat of mud.',
     'We do not paint a {name} wall the same day it was soaked. Drying is a different service when the loss is large. For a small, already-dry patch, the sequence is simply repair, prime, and finish.',
   ],
   coda: [

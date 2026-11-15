@@ -11,7 +11,7 @@ import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { brandServiceLinks } from '@/lib/brand-nav';
-import { esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
+import { esGroupNames, esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
 import { LanguageSwitch } from '@/components/language-switch';
 import { isLocalLandingPath } from '@/lib/local-paths';
 import {
@@ -252,7 +252,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
         <div className="border-b border-border bg-background shadow-[0_28px_50px_-32px_rgba(22,19,15,0.7)]">
           <div className="gutter mx-auto max-w-[120rem] py-8">
             <div className="flex items-center justify-between gap-6">
-              <p className="eyebrow text-muted-foreground">All services</p>
+              <p className="eyebrow text-muted-foreground">{es ? 'Todos los servicios' : 'All services'}</p>
               <NavigationMenu.Link asChild>
                 <Link
                   href={es ? '/es' : '/services'}
@@ -266,7 +266,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
             <div className="mt-7 grid grid-cols-4 gap-x-10 gap-y-8">
               {serviceGroups.map((group) => (
                 <div key={group}>
-                  <p className="eyebrow text-accent-ink">{group}</p>
+                  <p className="eyebrow text-accent-ink">{es ? (esGroupNames[group] ?? group) : group}</p>
                   <ul className="mt-4">
                     {servicesInGroup(group).map((service) => {
                       const href = serviceHref(service.slug, es ? 'es' : 'en');

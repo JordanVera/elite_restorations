@@ -81,7 +81,7 @@ export default async function SpanishServicePage({
       <LongformPage
         locale="es"
         eyebrow={hub.eyebrow}
-        title={["Houston", hub.name]}
+        title={[hub.name, "en Houston"]}
         lede={hub.lede}
         crumbs={[
           { name: "Servicios", path: "/es" },

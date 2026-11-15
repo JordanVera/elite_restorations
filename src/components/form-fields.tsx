@@ -11,6 +11,7 @@ export function Field({
   optional,
   required,
   requiredLabel = "required",
+  optionalLabel = "optional",
   hint,
   children,
 }: {
@@ -23,6 +24,7 @@ export function Field({
   /** Shows an asterisk and a visible required label. Does not set the input attribute. */
   required?: boolean;
   requiredLabel?: string;
+  optionalLabel?: string;
   hint?: string;
   children: React.ReactNode;
 }) {
@@ -40,7 +42,9 @@ export function Field({
             <span className="opacity-70">({requiredLabel})</span>
           </span>
         ) : (
-          optional && <span className="normal-case tracking-normal opacity-70">(optional)</span>
+          optional && (
+            <span className="normal-case tracking-normal opacity-70">({optionalLabel})</span>
+          )
         )}
       </Label>
       {hint && (

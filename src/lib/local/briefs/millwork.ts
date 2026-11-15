@@ -12,7 +12,7 @@ export const carpentryBrief: Brief = {
   ],
   opener: [
     'For carpentry, these houses tell us whether we are matching old casing or building new millwork for a room that never had it. {name} has both. We measure the profiles that should stay.',
-    'Carpentry there is stairs, built-ins, and the trim that finishes a kitchen or a bath. In {name} that work stays with the same team as the remodel instead of arriving as a stranger at the end.',
+    'In {name}, carpentry means stairs, built-ins, and trim. That work stays with the same team as the remodel instead of arriving as a stranger at the end.',
     'For us, that house type means square-ness and the rules. Out-of-square walls in {name} get fitted. Street-facing trim on a regulated block gets checked before it changes.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const carpentryBrief: Brief = {
     'Framing in {name} for a new opening is inspected first. Soffits and cabinet modifications that belong to a kitchen stay with that remodel instead of being handed off at the end.',
   ],
   sequence: [
-    'The {name} order is measure the existing profiles and the structure, acclimate new wood, cut and fit, then finish or leave the wood ready for paint as the plan says. Site protection matters because trim is the last thing people touch.',
+    'Here is the order we work in: measure the existing profiles and the structure, acclimate new wood, cut and fit, then finish or leave the wood ready for paint as the plan says. Site protection matters because trim is the last thing people touch.',
     'We do not remove {name} casing we intended to match until the new knives or the new stock are confirmed. Openings are checked for what they carry before the drywall comes off.',
   ],
   coda: [
@@ -122,7 +122,7 @@ export const fireplaceBrief: Brief = {
   ],
   opener: [
     'For a fireplace, these houses tell us the scale of the wall. {name} great rooms and {name} bungalow parlors are not the same surround. We measure before we promise a stone face.',
-    'Fireplace tile there is a finish and a heat assembly. In {name} we check what is behind the face before a new surface is promised.',
+    'In {name}, fireplace tile is a finish and a heat assembly. We check what is behind the face before a new surface is promised.',
     'For us, that house type means room size. An oversized surround swallows a small {name} living room. A tiny one looks lost on a two-story wall. The visit sets the proportion.',
   ],
   pier: [
@@ -151,7 +151,7 @@ export const fireplaceBrief: Brief = {
     'Updating a brick face in {name} starts with what is behind it. Retile, resurface, or rebuild are different jobs. We pick after we see the box.',
   ],
   sequence: [
-    'The {name} order is inspect the firebox and the face, confirm the hearth size, draw the surround, then set heat-rated materials and the mantel. The room stays protected because mortar and stone dust travel.',
+    'Here is the order we work in: inspect the firebox and the face, confirm the hearth size, draw the surround, then set heat-rated materials and the mantel. The room stays protected because mortar and stone dust travel.',
     'We do not order {name} stone before the wall is measured and the firebox is looked at. If the chimney or the cap is a separate exterior problem, we say so instead of tiling past it.',
   ],
   coda: [

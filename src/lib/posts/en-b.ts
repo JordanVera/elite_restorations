@@ -114,7 +114,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Here is the order we actually use. We protect the rest of the house, demo the wet finishes, and repair the framing we can now see. Then we waterproof, tile, and set the vanity, the glass, and the accessories. Paint waits until the dust is actually gone, because a bath painted before the tile is cut will wear that dust in the finish. If you\'ve a second bath, we sequence the work so one stays usable. If this is the only bath, we tell you how many days the water will be off, and we stick to that plan.',
+            text: 'Here is the order we actually use. We protect the rest of the house, demo the wet finishes, and repair the framing we can now see. Then we waterproof, tile, and set the vanity, the glass, and the accessories. Paint waits until the dust is actually gone, because a bath painted before the tile is cut will wear that dust in the finish. If you have a second bath, we sequence the work so one stays usable. If this is the only bath, we tell you how many days the water will be off, and we stick to that plan.',
           },
           {
             type: 'p',
@@ -320,7 +320,7 @@ export const houstonPostsB: Article[] = [
       },
       {
         q: 'What if the wood underneath is soft?',
-        a: 'We replace the decking that\'s soft or rotten. Some of it\'s visible before tear-off, and some shows up when the shingles come off. We stop and show you rather than covering it.',
+        a: 'We replace the decking that\'s soft or rotten. Some of it is visible before tear-off, and some shows up when the shingles come off. We stop and show you rather than covering it.',
       },
       {
         q: 'Does an association pick the color?',
@@ -408,7 +408,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'On tear-off day, furniture in the attic gets covered or moved, and cars leave the driveway. Plants you love get a conversation, because debris finds them. We watch the weather. Opening a roof into a pop-up storm is how a house gets wet on purpose. If the deck is open and rain is coming, we dry the house in and cover it. Ceilings that were already stained get checked again after the new roof, because a new roof doesn\'t undo wet insulation.',
+            text: 'On tear-off day, furniture in the attic gets covered or moved, and cars leave the driveway. Tell us about plants you want protected. Roofing debris falls on them. We watch the weather. Opening a roof into a pop-up storm is how a house gets wet on purpose. If the deck is open and rain is coming, we dry the house in and cover it. Ceilings that were already stained get checked again after the new roof, because a new roof doesn\'t undo wet insulation.',
           },
           {
             type: 'p',
@@ -671,7 +671,7 @@ export const houstonPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Primary baths in these ranches are larger, but they aren\'t Kingwood-large, and a double vanity may not fit. One good vanity, a real light, and a shower that doesn\'t leak will change the morning more than a crowded second sink. Floor tile runs out to the bedroom only if the heights work. A transition that sticks up is a toe-stubber for the life of the floor.',
+            text: 'Primary baths in these ranches are larger, but not as big as a newer Kingwood primary bath, and a double vanity may not fit. One good vanity, a real light, and a shower that doesn\'t leak will change the morning more than a crowded second sink. Floor tile runs out to the bedroom only if the heights work. A transition that sticks up is a toe-stubber for the life of the floor.',
           },
           {
             type: 'links',

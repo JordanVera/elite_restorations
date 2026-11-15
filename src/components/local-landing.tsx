@@ -237,9 +237,12 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 The kind of work.
               </h2>
               <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-                Photographs from our projects. They show the kind of{' '}
-                {service.name.toLowerCase()} we do. They are not labeled as a
-                house in {area.name}.
+                Photos from our past {service.name.toLowerCase()} projects around Houston.
+              </p>
+              <p className="font-display mt-8 text-3xl leading-snug">
+                {photos.every((item) => item.project.title === photos[0]?.project.title)
+                  ? photos[0]?.project.title
+                  : service.name}
               </p>
             </Reveal>
             <ul className="mt-12 grid gap-8 sm:grid-cols-2">
@@ -253,9 +256,6 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                         className="transition-transform duration-[1400ms] ease-out-expo group-hover:scale-[1.02]"
                       />
                     </ImageReveal>
-                    <p className="font-display mt-4 text-2xl leading-snug transition-colors group-hover:text-accent-ink">
-                      {item.project.title}
-                    </p>
                   </Link>
                 </li>
               ))}

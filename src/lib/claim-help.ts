@@ -103,7 +103,7 @@ export const claimFaqsEn: ClaimFaq[] = [
   },
   {
     q: "What about wind and severe storms?",
-    a: "We document lifted shingles, broken openings, and wet rooms, and we do the emergency work that limits more damage when it is safe. Helping you during the repair means sharing photos and a clear list of the work. We do not negotiate your settlement or give legal advice.",
+    a: "We document lifted shingles, broken openings, and wet rooms, and we do the emergency work that limits more damage when it is safe. Helping you during the repair means sharing photos and a clear list of the work. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not give legal advice.",
   },
   {
     q: "Can you help after a tornado?",
@@ -126,7 +126,7 @@ export const claimFaqsEs: ClaimFaq[] = [
   },
   {
     q: "¿Y si fue el viento o una tormenta fuerte?",
-    a: "Documentamos tejas levantadas, aberturas rotas y cuartos mojados, y hacemos el trabajo de emergencia para que el daño no siga, cuando es seguro. Ayudarle durante la reparación quiere decir compartirle fotos y una lista clara del trabajo. No negociamos el arreglo con la aseguradora ni damos consejo legal.",
+    a: "Documentamos tejas levantadas, aberturas rotas y cuartos mojados, y hacemos el trabajo de emergencia para que el daño no siga, cuando es seguro. Ayudarle durante la reparación quiere decir compartirle fotos y una lista clara del trabajo. Enviamos nuestro estimado a su aseguradora para que lo apruebe y lo trabajamos con el ajustador. No somos ajustadores públicos. No damos consejo legal.",
   },
   {
     q: "¿Pueden ayudar después de un tornado?",

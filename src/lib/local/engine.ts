@@ -1,5 +1,6 @@
 import { areaMiles, type AreaProfile, type Foundation } from '@/lib/local/areas';
 import { beatFor } from '@/lib/local/priority-beats';
+import { finishLocal } from '@/lib/local/prose';
 import { driveParagraph, nearbyParagraph, permitSentence, pick, placeLine } from '@/lib/local/speak';
 import { visitParagraph } from '@/lib/local/visit';
 import { site } from '@/lib/site';
@@ -71,25 +72,29 @@ export function assemble(area: AreaProfile, spec: TradeSpec): LocalCopy {
     title: note.title,
     body: pick(note.bodies, `${salt}:note:${index}:${area.slug}`)(area),
   }));
-  const lede = pick(spec.ledes, `${salt}:lede:${area.slug}`)(area);
+  const say = (text: string) => finishLocal(text, area);
+  const spokenParagraphs = paragraphs.map(say);
+  const spokenNotes = notes.map((note) => ({ title: note.title, body: say(note.body) }));
+  const spokenFaqs = faqs.map((faq) => ({ q: say(faq.q), a: say(faq.a) }));
+  const lede = say(pick(spec.ledes, `${salt}:lede:${area.slug}`)(area));
   const count = () =>
     wordCount([
       lede,
-      ...paragraphs,
-      ...notes.flatMap((note) => [note.title, note.body]),
-      ...faqs.flatMap((faq) => [faq.q, faq.a]),
+      ...spokenParagraphs,
+      ...spokenNotes.flatMap((note) => [note.title, note.body]),
+      ...spokenFaqs.flatMap((faq) => [faq.q, faq.a]),
     ]);
   const minimum = area.priority ? 900 : 750;
   let pad = 0;
   while (count() < minimum && pad < 2) {
-    paragraphs.push(padParagraph(spec.work, area, pad));
+    spokenParagraphs.push(say(padParagraph(spec.work, area, pad)));
     pad += 1;
   }
   return {
     lede,
-    paragraphs,
-    notes,
-    faqs,
+    paragraphs: spokenParagraphs,
+    notes: spokenNotes,
+    faqs: spokenFaqs,
   };
 }
 

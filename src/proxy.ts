@@ -38,17 +38,16 @@ export function proxy(request: NextRequest) {
     return response;
   }
 
-  return NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', pathname);
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {
   matcher: [
-    '/',
-    '/wp-admin',
-    '/wp-admin/:path*',
-    // `:path*` only matches extra slash segments, so `/wp-login.php` needs
-    // the filename before `.php` as its own parameter.
-    '/wp-:name.php',
-    '/xmlrpc.php',
+    // Skip files and Next internals. Spanish pages need the pathname so the
+    // root layout can set <html lang="es">. WordPress leftovers stay in this
+    // proxy and still return 410.
+    '/((?!_next/static|_next/image|images/|favicon.ico|.*\\..*).*)',
   ],
 };

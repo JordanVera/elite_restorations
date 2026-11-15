@@ -66,13 +66,13 @@ export const fenceGuide: ServiceGuide = {
       eyebrow: "Claims",
       heading: "Wind damage, photos, and what we will not call covered.",
       paragraphs: [
-        "If a storm laid the fence down, we help document it: photos of the posts, the direction they fell, and the rebuild estimate. We can meet an adjuster on site. We are not public adjusters and we do not promise the claim will pay. A fence that failed from rot over years is a maintenance fact. A fence a hurricane or a straight-line wind pushed over is a different fact. Hail rarely destroys a wood fence by itself. Tornado debris can. Flooding can leave a fence standing and still ruin the bottoms. Check your policy. Flood and wind are often different coverages.",
+        "If a storm laid the fence down, we help document it: photos of the posts, the direction they fell, and the rebuild estimate. We can meet an adjuster on site. We are not public adjusters. We do not promise the claim will pay. A fence that failed from rot over years is a maintenance fact. A fence a hurricane or a straight-line wind pushed over is a different fact. Hail rarely destroys a wood fence by itself. Tornado debris can. Flooding can leave a fence standing and still ruin the bottoms. Check your policy. Flood and wind are often different coverages.",
         "Emergency help on a fence usually means making a fallen stretch safe, keeping a pool yard from sitting wide open if we can close it temporarily, and not leaving nails in the grass. That is help. It is not a coverage opinion. The photo log on this site is useful if you want your own record before the debris is stacked.",
       ],
       points: [
         { title: "Photograph the lean", body: "Take the wide shot before the posts are stood back up. Afterward it looks like an ordinary fence." },
-        { title: "Pool yards", body: "An open pool fence is a safety problem the same day. Say so when you call. We still do not certify the barrier." },
-        { title: "No vendor claim", body: "We work for the homeowner or the association that hires us. We are not a preferred vendor of any insurer." },
+        { title: "Pool yards", body: "An open pool fence is a safety problem the same day. Say so when you call. We are not the city inspector." },
+        { title: "No vendor claim", body: "We work for the homeowner or the association that hires us. We are independent of every insurer." },
       ],
     },
   ],

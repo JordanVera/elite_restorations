@@ -33,7 +33,7 @@ export const patioGuide: ServiceGuide = {
       points: [
         { title: "Joints", body: "Concrete cracks. Joints tell it where. Pavers need joint sand that will not wash out in the first storm." },
         { title: "Shade and sun", body: "A north patio stays damp and grows mildew. A west patio cooks. The surface can be the same product and still want a different conversation." },
-        { title: "Pool decks", body: "We will build a patio beside a pool. We do not certify the pool barrier or the equipment." },
+        { title: "Pool decks", body: "We will build a patio beside a pool. We are not the city inspector for the pool barrier or the equipment." },
       ],
     },
     {
@@ -66,7 +66,7 @@ export const patioGuide: ServiceGuide = {
       eyebrow: "Claims",
       heading: "Storm damage to flatwork, stated carefully.",
       paragraphs: [
-        "We help document a patio that a storm actually damaged: undermined soil, a cover that wind took, impact from debris. Photos, a meeting with an adjuster if you want us there, and a repair estimate are the help. We are not public adjusters and we do not promise payment. Flooding that deposits mud is a different story from wind. Check your policy. A crack that has been growing for years is not something we will rename.",
+        "We help document a patio that a storm actually damaged: undermined soil, a cover that wind took, impact from debris. Photos, a meeting with an adjuster if you want us there, and a repair estimate are the help. We are not public adjusters. We do not promise payment. Flooding that deposits mud is a different story from wind. Check your policy. A crack that has been growing for years is not something we will rename.",
         "Hail, hurricane wind, a tornado, and rising water are different events. The insurance claims page and the photo log explain how we keep records. Our work is the outdoor floor and, when it is in the work, the cover. The claim decision stays with your insurer.",
       ],
       points: [

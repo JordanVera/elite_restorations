@@ -82,7 +82,7 @@ export const siding: ServiceGuide = {
     },
     {
       q: 'Do you document storm damage?',
-      a: 'Yes. We photograph the damage and the repair. Your insurer decides coverage. We are not a public adjuster.',
+      a: 'Yes. We photograph the damage and the repair. Your insurer decides coverage. We are not public adjusters.',
     },
   ],
 };
@@ -242,7 +242,7 @@ export const emergencyTarp: ServiceGuide = {
       points: [
         { title: 'Many units', body: 'Water in a top-floor ceiling can be one unit or a stack. We ask which ceilings are wet before we treat the building as a single room.' },
         { title: 'Access', body: 'A roof hatch, a gate code, and whether people are still inside belong on the first call.' },
-        { title: 'Who we work for', body: 'We work for the owner or the manager who calls. We are not a preferred vendor of any insurer, and the carrier still decides the claim.' },
+        { title: 'Who we work for', body: 'We work for the owner or the manager who calls. We are independent of every insurer, and the carrier still decides the claim.' },
       ],
     },
   ],
@@ -292,7 +292,7 @@ export const insuranceClaims: ServiceGuide = {
       eyebrow: 'What this is',
       heading: 'Photos and a clear record. Not a coverage decision.',
       paragraphs: [
-        'When we help with a claim, we mean photos and notes of the water or storm damage, tied to the work if you hire us to dry or rebuild. Filing the claim, reading the policy, and the numbers with the adjuster stay with you and your insurer. Your insurer decides what is covered. We are not a public adjuster. The free insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
+        'When we help with a claim, we mean photos and notes of the water or storm damage, tied to the work if you hire us to dry or rebuild. Filing the claim, reading the policy, and the numbers with the adjuster stay with you and your insurer. Your insurer decides what is covered. We are not public adjusters. The free insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
         'The losses we document most often start with a roof opening, a supply line, an appliance, or water that came in at ground level. Those are different facts. A homeowners policy often treats them differently, and flood from rising water is often a different policy entirely. We describe what we can see. If the water rose into the house, we write it that way. Check your policy before calling it a burst pipe.',
       ],
       points: [
@@ -343,8 +343,8 @@ export const insuranceClaims: ServiceGuide = {
   ],
   faqs: [
     {
-      q: 'Do you file claims or negotiate with the insurer?',
-      a: 'We photograph and note the damage and the work. Coverage, payment, and any holdback belong to your insurer. We are not a public adjuster, and the claim stays yours.',
+      q: 'Do you handle my insurance claim?',
+      a: 'We photograph and note the damage and the work. Coverage, payment, and any holdback belong to your insurer. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. The claim stays yours.',
     },
     {
       q: 'Is there a fee for the documentation?',

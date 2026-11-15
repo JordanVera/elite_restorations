@@ -4,7 +4,7 @@ import { dryOut, rooms } from "@/lib/topic-photos";
 
 const phone = "(713) 909-0034";
 const note =
-  "We photograph the damage and do the work you hire. Your insurer decides coverage. We are not public adjusters and we do not give legal advice.";
+  "We photograph the damage and do the work you hire. Your insurer decides coverage. We are not public adjusters. We do not give legal advice.";
 
 type Cause = {
   slug: string;
@@ -116,7 +116,7 @@ export const moreWaterCauses: readonly Cause[] = [
           "Water heaters here work hard. Incoming water is warm for much of the year, tanks sit in hot garages, and a hard freeze is the week everyone remembers because pipes and heaters fail together. Sediment and failed valves are ordinary. There is no single number for how long a tank lasts. We look at the one that leaked. Neighborhoods we see this in include Houston, Westchase, Alief, Katy, Sugar Land, Memorial, and The Woodlands, from the office in 77082.",
           "If the leak is active, call or text " +
             phone +
-            ". Family-owned since 1993. We are not a preferred vendor of any insurer. This site does not list a certification, and we do not claim one. For the wider water-damage process, start at the water damage hub. For a freeze that also broke a line, the burst-pipe page is the other half of that week.",
+            ". Family-owned since 1993. We are independent of every insurer. For the wider water-damage process, start at the water damage hub. For a freeze that also broke a line, the burst-pipe page is the other half of that week.",
         ],
         points: [
           { title: "Water heaters in the garage", body: "When a garage water heater leaks, water can run under the door into the house. Check the floor, baseboards, and drywall on the house side, not just the drain pan." },
@@ -283,7 +283,7 @@ export const moreWaterCauses: readonly Cause[] = [
         eyebrow: "The path",
         heading: "Under the flooring and through the bathroom wall.",
         paragraphs: [
-          "Bathrooms here sit on slabs or, upstairs, over a ceiling. Overflow water follows the grout, gets under vinyl and floating floors, and wicks into the drywall behind the tank. The paint at the baseboard is the clue an hour later. A supply-line failure is usually clean water. An overflow that includes waste is not. We treat those cleanups differently and we say so in the notes. We do not add a certification this site does not state.",
+          "Bathrooms here sit on slabs or, upstairs, over a ceiling. Overflow water follows the grout, gets under vinyl and floating floors, and wicks into the drywall behind the tank. The paint at the baseboard is the clue an hour later. A supply-line failure is usually clean water. An overflow that includes waste is not. We treat those cleanups differently and we say so in the notes. We are not the city inspector.",
           "Upstairs bathrooms in two-story houses in Katy, Sugar Land, Cinco Ranch, and The Woodlands put the ceiling below at risk. Apartment stacks do the same between units. We open the ceiling below only when a moisture meter says it is wet, not because a bathroom overflow always ruins the downstairs. A wax-ring seep can be a smaller, longer wet spot where the toilet meets the floor. That history matters for the building and for the policy. We describe it. Your insurer decides how to classify it.",
         ],
         points: [
@@ -328,7 +328,7 @@ export const moreWaterCauses: readonly Cause[] = [
           "From West University and Bellaire bungalows to newer baths in Katy and The Woodlands, the toilet sits close to a wall and a slab or a second-floor ceiling. Hard freezes can split the supply line the same week they split an attic pipe. Ordinary weeks are clogs and aging connectors. Hurricane rain does not cause a toilet to overflow by itself, but a drained city line can. If the street was flooding and the tub gurgled, say that. It may be a different policy from a clogged toilet on a dry day.",
           "We schedule this work from 511 Crestwater Ct. Family-owned since 1993. Call or text " +
             phone +
-            ". We are not public adjusters, and we are not a vendor for any insurer. Use the water damage hub for the wider dry-out, and the burst-pipe page if the supply failure was part of a freeze. We write those up as separate causes.",
+            ". We are not public adjusters. We are not a vendor for any insurer. Use the water damage hub for the wider dry-out, and the burst-pipe page if the supply failure was part of a freeze. We write those up as separate causes.",
         ],
         points: [
           { title: "Find the valve now", body: "Know where the shutoff behind the toilet is before you need it. A valve painted over is a common surprise in a Houston bathroom." },
@@ -344,7 +344,7 @@ export const moreWaterCauses: readonly Cause[] = [
       { q: "Do you replace the toilet?", a: "We can reset or replace a toilet as part of the bathroom repair after the floor is dry. The dry-out comes first." },
       { q: "Will the apartment below be wet?", a: "Often, if you are not on the ground floor. Look, tell the manager, and we will meter the ceiling rather than guess." },
       { q: "Does insurance pay for a toilet overflow?", a: "Sometimes, and sometimes not. Sudden releases and long-term seepage are often treated differently. Check your policy. Your insurer decides payment." },
-      { q: "Can you meet the adjuster?", a: "Yes. We walk the bath and any ceiling below. We are not public adjusters, and legal advice is outside our work." },
+      { q: "Can you meet the adjuster?", a: "Yes. We walk the bath and any ceiling below. We are not public adjusters. Legal advice is outside our work." },
       { q: "What does the drying usually cost?", a: "A single bath with wet flooring often plans in the low thousands. A ceiling below and several rooms cost more. That is a planning range, not a quote." },
       { q: "Do you dry commercial restrooms?", a: "Yes, along with houses and apartments. Call " + phone + " any time if water is still spreading." },
       { q: "How is this different from a slab leak?", a: "A toilet supply or overflow starts at the fixture. Water still ends up in the slab and under the floor. The slab-moisture guide covers what the concrete does next." },

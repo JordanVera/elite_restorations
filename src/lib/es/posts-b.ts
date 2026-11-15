@@ -176,7 +176,7 @@ export const esPostsB: Article[] = [
       },
       {
         q: '¿Y si el piso viejo se mojó en un reclamo?',
-        a: 'Seque la estructura primero. Fotografie lo que salió si va a reclamar. No somos ajustadores públicos. Su aseguradora decide el pago. El piso nuevo se instala cuando el medidor dice que la losa o el contrapiso están listos.',
+        a: 'Seque la estructura primero. Fotografíe lo que salió si va a reclamar. No somos ajustadores públicos. Su aseguradora decide el pago. El piso nuevo se instala cuando el medidor dice que la losa o el contrapiso están listos.',
       },
     ],
     sections: [
@@ -270,7 +270,7 @@ export const esPostsB: Article[] = [
               'Acostumbre la madera en la casa.',
               'Nivele donde el vinil o la loseta grande enseñarían el lomo.',
               'Deje el laminado fuera de los cuartos mojados.',
-              'Fotografie un piso mojado antes de levantarlo si va a reclamar.',
+              'Fotografíe un piso mojado antes de levantarlo si va a reclamar.',
             ],
           },
         ],
@@ -457,7 +457,7 @@ export const esPostsB: Article[] = [
     faqs: [
       {
         q: '¿Espero al ajustador antes de secar?',
-        a: 'No espere para detener más daño. Fotografie primero, y después seque. Las pólizas suelen esperar que usted proteja la propiedad. Pregúntele a su aseguradora cómo quieren el aviso. Un muro mojado no se pausa por un calendario.',
+        a: 'No espere para detener más daño. Fotografíe primero, y después seque. Las pólizas suelen esperar que usted proteja la propiedad. Pregúntele a su aseguradora cómo quieren el aviso. Un muro mojado no se pausa por un calendario.',
       },
       {
         q: '¿Bastan los ventiladores de la casa?',
@@ -500,7 +500,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Fotografie la fuente, los cielos, los pisos y la base de los gabinetes. Una nota corta del cuarto sirve tanto como otras veinte fotos borrosas. Si puede usar el registro de fotos del seguro de este sitio, mantiene los cuartos en orden. Está en inglés. Después mueva lo que pueda salvar a un cuarto seco. Levante las cortinas. Suba los aparatos. Deje la tablaroca y el piso empapados hasta que estén documentados si va a reclamar.',
+            text: 'Fotografíe la fuente, los cielos, los pisos y la base de los gabinetes. Una nota corta del cuarto sirve tanto como otras veinte fotos borrosas. Si puede usar el registro de fotos del seguro de este sitio, mantiene los cuartos en orden. Está en inglés. Después mueva lo que pueda salvar a un cuarto seco. Levante las cortinas. Suba los aparatos. Deje la tablaroca y el piso empapados hasta que estén documentados si va a reclamar.',
           },
           {
             type: 'p',
@@ -525,7 +525,7 @@ export const esPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'En una losa de Oak Forest, Cypress o Friendswood, el agua está en el concreto y en la base de la tablaroca. En una casa sobre pilotes de Montrose o Garden Oaks, revise el hueco o deje que lo revisemos. Una sala seca sobre un bahía de vigas mojado es un olvido común. En una casa de dos pisos de Kingwood o Spring, mire arriba. El agua del ático cae en el cielo. La mancha crece un día después de cerrar la válvula porque el aislamiento sigue escurriendo.',
+            text: 'En una losa de Oak Forest, Cypress o Friendswood, el agua está en el concreto y en la base de la tablaroca. En una casa sobre pilotes de Montrose o Garden Oaks, revise el hueco o deje que lo revisemos. Una sala seca sobre un espacio entre vigas mojado es un olvido común. En una casa de dos pisos de Kingwood o Spring, mire arriba. El agua del ático cae en el cielo. La mancha crece un día después de cerrar la válvula porque el aislamiento sigue escurriendo.',
           },
         ],
       },

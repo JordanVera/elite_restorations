@@ -327,7 +327,7 @@ export const priorityBeats: Record<string, Record<string, string>> = {
     memorial:
       'Memorial claims are often wind, hail, or a limb, and sometimes bayou water on a low lot. Those can be different policies. We keep the photos straight.',
     'energy-corridor':
-      'Corridor storm claims sometimes involve bayou water and sometimes a hole in the roof. We photograph the conditions. We do not negotiate the claim.',
+      'Corridor storm claims sometimes involve bayou water and sometimes a hole in the roof. We photograph the conditions. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters.',
     westchase:
       'Westchase documentation starts close to the office, which helps when more rain is coming. Photos still come before cleanup throws the evidence away.',
     alief: 'An Alief record is the house in front of us: the roof, the wet drywall, the floor. We do not estimate what the carrier will pay.',

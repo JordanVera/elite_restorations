@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "I can't say enough about the great job that the Elite Restorations' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were fanominal! Their customer service, communication, & promptness was by far the best experience I've ever had during a home remodel job! I have other work down the line & I'm looking forward to working withthem again, very soon! My kitchen doesn't look the same, I love it!\n\nThanks George, Douglas, Juan, the pleasant lady in the office, who I spoke with prior to the start of the job, & the amazing install guys!",
+      "I can't say enough about the great job that the Elite Restorations' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were phenomenal! Their customer service, communication, & promptness was by far the best experience I've ever had during a home remodel job! I have other work down the line & I'm looking forward to working with them again, very soon! My kitchen doesn't look the same, I love it!\n\nThanks George, Douglas, Juan, the pleasant lady in the office, who I spoke with prior to the start of the job, & the amazing install guys!",
     author: "Shronda Allen",
     detail: "Kitchen remodel",
     source: "Google",
@@ -115,7 +115,7 @@ export const testimonials: Testimonial[] = [
     services: [],
   },
   {
-    quote: "Very knowledgable and professional!",
+    quote: "Very knowledgeable and professional!",
     author: "Geovanna Arvizu",
     detail: "June 2025",
     source: "Google",

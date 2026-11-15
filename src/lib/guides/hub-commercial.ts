@@ -78,7 +78,7 @@ export const commercialGuide: ServiceGuide = {
   ],
   faqs: [
     { q: "Do you respond to apartment communities and commercial buildings?", a: "Yes. Property managers, HOAs, and building owners can call (713) 909-0034 any time for an active storm or water emergency. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM." },
-    { q: "Are you a preferred vendor for insurance companies?", a: "No. We work for the owner or the manager who hires us. We do not represent the insurer and we are not a public adjuster." },
+    { q: "Do you work with insurance-company customers?", a: "Yes. We work for the owner or the manager who hires us. We do not represent the insurer. We are not public adjusters." },
     { q: "Can you tarp a low-slope roof and board up glass on the same building?", a: "Yes, when both are damaged and it is safe. They are different tasks. We will say which openings we can secure on that visit." },
     { q: "How do you handle water in more than one unit?", a: "We list the units that are wet, extract and dry those areas, and we do not assume the whole building is involved. You get photos tied to the locations." },
     { q: "Will you promise the claim will be paid?", a: "We document the damage, limit more damage, estimate, and repair what you hire. Coverage, deductibles, and payment belong to the insurer. Check the policies, including whether flood is separate." },

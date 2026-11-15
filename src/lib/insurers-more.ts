@@ -13,13 +13,13 @@ type Page = {
 };
 
 function disclaimer(name: string) {
-  return `Elite Restorations is not affiliated with, endorsed by, or a preferred vendor of ${name}. We work for whoever hires us, not for ${name}, and their logo is not ours to use. We help Houston homeowners, property managers, and building owners who are insured by ${name} document water, storm, or roof damage. ${name} decides coverage, deductibles, and payment under the policy. Check that policy. We are not public adjusters. Only ${name} can say whether a claim will be approved or paid.`;
+  return `Elite Restorations is an independent contractor and is not affiliated with ${name}. We work for whoever hires us, not for ${name}, and their logo is not ours to use. We help Houston homeowners, property managers, and building owners who are insured by ${name} document water, storm, or roof damage. ${name} decides coverage, deductibles, and payment under the policy. Check that policy. We are not public adjusters. Only ${name} can say whether a claim will be approved or paid.`;
 }
 
 function tail(name: string, extras: { q: string; a: string }[]) {
   return [
     ...extras,
-    { q: `Are you a ${name} partner?`, a: `No. We are independent and not affiliated with ${name}. You hire Elite Restorations. ${name} decides the claim.` },
+    { q: `Do you work with ${name} customers?`, a: `Yes. Elite Restorations is an independent contractor and is not affiliated with ${name}. You hire us. ${name} decides the claim.` },
     { q: "Do you promise payment?", a: `We take photos, limit further damage, write an estimate, and meet the adjuster if you want us there. ${name} decides coverage. Check your policy.` },
     { q: "Is flooding a different policy?", a: "Rising water is often a different policy from wind, hail, or a sudden pipe break. We keep those causes separate. Ask your insurer." },
     { q: "Hurricane, hail, wind, or tornado damage?", a: `We document the damage, protect the building when it is safe, dry it, and estimate repairs. You file the ${name} claim. We do not give legal advice.` },
@@ -75,7 +75,7 @@ export const moreInsurers: readonly Page[] = [
     description: "Houston storm and water damage help for people insured by Liberty Mutual. Not affiliated. Call (713) 909-0034.",
     lede: "Liberty Mutual is a national name on a lot of Houston policies. The name does not pick your contractor. Elite Restorations documents and repairs the building. Liberty Mutual decides the claim.",
     sections: [
-      { eyebrow: "Not affiliated", heading: "National brand, local building, no partnership.", paragraphs: [disclaimer("Liberty Mutual"), "Liberty Mutual's slogans, deductibles, and claim-center scripts are not ours to quote. You call the number on your policy for notice. You call " + phone + " for the open roof or the wet floor. Both calls can happen the same hour."] },
+      { eyebrow: "Not affiliated", heading: "National brand, local building, separate companies.", paragraphs: [disclaimer("Liberty Mutual"), "Liberty Mutual's slogans, deductibles, and claim-center scripts are not ours to quote. You call the number on your policy for notice. You call " + phone + " for the open roof or the wet floor. Both calls can happen the same hour."] },
       { eyebrow: "The path", heading: "What usually happens, without pretending it is your form.", paragraphs: [
         "Homeowners in Texas generally give notice, protect the property, meet an inspection, and then repair. Your Liberty Mutual policy may describe that differently. Read it or ask them. Where the policy is quiet, we leave it quiet.",
         "The Houston events are concrete. Hail and wind on asphalt roofs. Hurricane rain through a lifted valley between June and November. A burst pipe or water heater on a slab after a freeze or on an ordinary Tuesday. A dishwasher or toilet that crosses a hallway. We photograph the one you have. Apartments and commercial buildings insured by Liberty Mutual get a unit or suite list, not a guess.",
@@ -101,7 +101,7 @@ export const moreInsurers: readonly Page[] = [
     ],
     faqs: tail("Liberty Mutual", [
       { q: "Can you tell me if Liberty Mutual will approve the roof?", a: "No. We can say what the roof needs as construction. Approval is Liberty Mutual's decision after they see the policy and the damage." },
-      { q: "Do you match a Liberty Mutual estimate?", a: "We price the work we recommend. If their figure is different, we explain our work. We do not rewrite it to chase their number, and we do not negotiate the claim." },
+      { q: "Do you match a Liberty Mutual estimate?", a: "We price the work we recommend. If their figure is different, we explain our work. We do not rewrite it to chase their number, and we send our estimate to your insurance company for approval and work through it with the adjuster." },
       { q: "Is a percentage deductible automatic?", a: "We do not know what your policy says. Many Texas wind or hail deductibles work that way. Yours might not. Check it." },
       { q: "Can a property manager use this page?", a: "Yes, if the building is insured by Liberty Mutual. We are still not their vendor. Call " + phone + " with the address and the access." },
     ]),
@@ -113,11 +113,11 @@ export const moreInsurers: readonly Page[] = [
     description: "Help for Houston homeowners and building owners insured by Travelers. Documentation and repairs. Not affiliated. Call (713) 909-0034.",
     lede: "Travelers shows up on Houston houses and on some commercial policies. We do not know which one you have, and we are not a Travelers contractor. We repair buildings. Travelers handles claims.",
     sections: [
-      { eyebrow: "Not affiliated", heading: "House policy or building policy, still not our partner.", paragraphs: [disclaimer("Travelers"), "A homeowner and a commercial certificate are different documents. Tell us which you think you have, and then confirm it with Travelers. We will not treat a shop policy and a house policy as the same claim just because the roof leaked."] },
+      { eyebrow: "Not affiliated", heading: "House policy or building policy, still a separate company.", paragraphs: [disclaimer("Travelers"), "A homeowner and a commercial certificate are different documents. Tell us which you think you have, and then confirm it with Travelers. We will not treat a shop policy and a house policy as the same claim just because the roof leaked."] },
       { eyebrow: "The path", heading: "The sequence we see, not a Travelers manual.", paragraphs: [
         "Notice to Travelers, protection of the property, an inspection, and a repair. That is the ordinary Texas path. Travelers may ask for notice in a specific way. Ask them. Keep the claim number. You file the claim. Their timelines are theirs to quote.",
         "On site in Houston we tarp storm openings, board broken glass, and dry water from roofs, pipes, heaters, dishwashers, and toilets. Slabs hold moisture. Hurricane season runs June 1 through November 30. Hail is a spring and summer problem inland. A freeze is occasional and brutal on attic lines. We write the cause we can see.",
-        "Commercial and apartment losses need a list of suites or units and a person who can approve openings. We can meet a Travelers adjuster on site. We explain the building. Travelers negotiates the loss.",
+        "Commercial and apartment losses need a list of suites or units and a person who can approve openings. We can meet a Travelers adjuster on site. We explain the building. Travelers decides the loss.",
       ] },
       { eyebrow: "Documentation", heading: "Two files: yours and the construction.", paragraphs: [
         "Your file is the claim number, the photos you took, and what Travelers told you to save. Our file is the moisture, the materials we remove, and the repair estimate. You may attach ours to yours. Together they are a record, not a demand.",
@@ -151,7 +151,7 @@ export const moreInsurers: readonly Page[] = [
     description: "Houston water and storm damage help for Nationwide policyholders. Not affiliated with Nationwide. Call (713) 909-0034.",
     lede: "Nationwide policyholders choose their own repair company. Elite Restorations is one option in Houston. We are not Nationwide, and we do not borrow their name.",
     sections: [
-      { eyebrow: "Not affiliated", heading: "No shared brand, no shared authority.", paragraphs: [disclaimer("Nationwide"), "We will not use Nationwide's advertising language or imply the company sent us. If an agent recommended you call a contractor, that is the agent's suggestion, not a partnership. You can hire us or not. Nationwide still decides the claim."] },
+      { eyebrow: "Not affiliated", heading: "No shared brand, no shared authority.", paragraphs: [disclaimer("Nationwide"), "We will not use Nationwide's advertising language or imply the company sent us. If an agent recommended you call a contractor, that is the agent's suggestion. You can hire us or not. Nationwide still decides the claim."] },
       { eyebrow: "The path", heading: "A Houston loss beside a Nationwide policy.", paragraphs: [
         "Give Nationwide notice the way they ask. Their script is theirs. Keep the claim number. Protect the house the same day if water is entering: tarp, board-up, shut the main, and remove the water.",
         "The building facts are local. Slab foundations in Houston, Westchase, Alief, and Katy. Hail on roofs in the northern and western suburbs. Coastal wind toward Galveston and Clear Lake. Hurricane season from June 1 through November 30. Indoor water from heaters, dishwashers, toilets, and freeze-broken pipes any month a failure happens. We document those as we find them.",
@@ -170,13 +170,13 @@ export const moreInsurers: readonly Page[] = [
         "Call " + phone + " if you are staring at an open ceiling. Text photos if that is easier. We will tell you what not to do before we arrive, including staying off the roof.",
       ] },
       { eyebrow: "After the call", heading: "The visit, without a Nationwide script.", paragraphs: [
-        "We show up as Elite Restorations. If an agent suggested a contractor, that suggestion is not a dispatch from us and it is not a partnership. On the property we look at the cause: a roof opening, hail, a broken window, a pipe, a heater, a dishwasher, a toilet. We photograph it, protect what is safe to protect, and dry what the water reached. Apartment stacks get a list of wet ceilings, not a blanket 'whole building' story. Commercial restrooms and break rooms are part of the job when that is where the water is.",
+        "We show up as Elite Restorations. If an agent suggested a contractor, that suggestion is not a dispatch from us. On the property we look at the cause: a roof opening, hail, a broken window, a pipe, a heater, a dishwasher, a toilet. We photograph it, protect what is safe to protect, and dry what the water reached. Apartment stacks get a list of wet ceilings, not a blanket 'whole building' story. Commercial restrooms and break rooms are part of the job when that is where the water is.",
         "Cost stays approximate until we see it. A walkable tarp often plans from a few hundred dollars to about $2,000. Drying one room often plans in the low thousands. A full roof is a different range, often $12,000 to $24,000 for many asphalt houses, and only a bid after the wood under the shingles is seen. Those are planning ranges, not quotes, and they are not your Nationwide deductible. That deductible is on your policy, so we will not guess it.",
         "Greater Houston from the 77082 office, family-owned since 1993. Call " + phone + " any time for water that is still moving. A Tuesday estimate is Monday through Saturday, 8:00 AM to 6:00 PM. Text us either way. If Nationwide has already sent an adjuster, we can still walk the same rooms and explain what we dried. If they have not, the photos from today are what you will wish you had. Either way we stay the contractor, not the insurance company, and their name stays off our estimate. A Nationwide policyholder in a Houston slab house gets the same moisture map as any other customer: where the water went, not a story written to match a form. Westchase, Alief, Katy, and Sugar Land slabs all hold water the same way. The neighborhood does not pick the coverage, and we do not pick it either. We describe the water. They decide the policy. Call (713) 909-0034 if the ceiling is still dripping. A property manager with a Nationwide building policy uses that same number and should have the unit list ready before we arrive, including which ceilings are already wet. Bring that list so we open the right doors.",
       ] },
     ],
     faqs: tail("Nationwide", [
-      { q: "Did Nationwide send you?", a: "No. If you found this page, you found our site. We are not a Nationwide vendor or partner." },
+      { q: "Did Nationwide send you?", a: "No. If you found this page, you found our site. We are independent of Nationwide." },
       { q: "Can my agent require a specific contractor?", a: "Ask Nationwide and read the policy. We will not claim the policy says something it may not say. You can still ask us to look at the building." },
       { q: "Do you know Nationwide claim time limits?", a: "No. They are in the policy or in Nationwide's answer when you ask. We will not invent one." },
       { q: "Can you start without a claim number?", a: "Yes, if you hire us to stop the damage. Get the claim number for your file as soon as Nationwide opens it. Opening the claim is your call to them." },
@@ -197,7 +197,7 @@ export const moreInsurers: readonly Page[] = [
       ] },
       { eyebrow: "Documentation", heading: "Photos of the house, not the bumper.", paragraphs: [
         "Photograph rooms, the roof from the ground, and the source of water. The photo log is built for a house. Use it. Keep damaged plumbing parts. Do not send only a picture of a car and expect it to explain a ceiling.",
-        "Our drying and repair photos can be shared with the property claim. They are not an authorization. Limiting further damage is often expected. Reimbursement is not guaranteed. We bill the person who hires us.",
+        "Our drying and repair photos can be shared with the property claim. They are not an authorization. Limiting further damage is often expected. Your insurer decides whether it is reimbursed. We bill the person who hires us.",
       ] },
       { eyebrow: "Houston", heading: "Houses and buildings, from 77082.", paragraphs: [
         "We are family-owned at 511 Crestwater Ct, Houston, TX 77082 since 1993. We dry and rebuild houses, apartments, and commercial buildings across Houston, Katy, Sugar Land, The Woodlands, Clear Lake, and the neighborhoods beside the office. A Progressive homeowners policy does not change the slab or the humidity.",

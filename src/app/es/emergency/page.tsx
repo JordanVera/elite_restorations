@@ -27,7 +27,7 @@ const steps = [
     body: "Si es una fuga de plomería, cierre la llave principal. No camine en agua que esté junto a contactos. No se suba a un techo mojado.",
   },
   {
-    title: "Fotografie antes de limpiar",
+    title: "Fotografíe antes de limpiar",
     body: "Tome fotos amplias de cada cuarto y detalles del daño. Su aseguradora las va a pedir. A nosotros también nos sirven para ver a qué llegamos.",
   },
   {
@@ -74,15 +74,13 @@ export default function SpanishEmergencyPage() {
           </ol>
           <div className="lg:col-span-7">
             <h2 className="font-display text-4xl">Cuéntenos qué pasó.</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              El formulario está en inglés, el mismo de la página en inglés, y la solicitud llega al mismo lugar.
-            </p>
             <div className="mt-8">
               <LeadForm
                 locale="es"
                 idPrefix="es-emergency"
                 defaultService="storm-hail"
                 submitLabel="Pedir que me llamen"
+                timing="emergency"
               />
             </div>
           </div>

@@ -38,7 +38,7 @@ export const restorationGuides: Article[] = [
       },
       {
         q: 'Who decides what the insurance company pays?',
-        a: 'Your insurer. We record what got wet and what was dried or repaired. We are the contractor. Your insurer handles the claim, and a public adjuster is a different license.',
+        a: 'Your insurer. We record what got wet and what was dried or repaired. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer handles the claim.',
       },
     ],
     sections: [
@@ -111,7 +111,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild. The claim and the amount paid stay with your insurer.',
+            text: ' We are not public adjusters. We photograph, dry, and rebuild. The claim and the amount paid stay with your insurer.',
           },
         ],
       },
@@ -266,7 +266,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'We provide inspection photos and a written plan for the work you hire us to do. Your insurer decides coverage. A public adjuster is a different license, and the claim stays with your insurer. A repair quote is not a claim. Keep those two papers separate.',
+            text: 'We provide inspection photos and a written plan for the work you hire us to do. Your insurer decides coverage. A repair quote is not a claim. Keep those two papers separate.',
           },
           {
             type: 'links',
@@ -319,7 +319,7 @@ export const restorationGuides: Article[] = [
       },
       {
         q: 'Can you meet the adjuster with me?',
-        a: 'Yes, if you want us there. We can speak to the damage and the repair. The claim stays with your insurer, and we are not a public adjuster.',
+        a: 'Yes, if you want us there. We can speak to the damage and the repair. The claim stays with your insurer, and We are not public adjusters.',
       },
       {
         q: 'Should I wait to dry the house until the claim is approved?',
@@ -378,7 +378,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. They are not there to argue your policy for you. A public adjuster is different. That is a separate license a homeowner can hire to represent them with the insurer. Elite Restorations is not a public adjuster. If you hire one, that is your decision. The claim stays with your insurer.',
+            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. They are not there to argue your policy for you. That is a separate license a homeowner can hire to represent them with the insurer. We are not public adjusters. If you hire one, that is your decision. The claim stays with your insurer.',
           },
         ],
       },

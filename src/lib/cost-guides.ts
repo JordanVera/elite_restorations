@@ -231,7 +231,7 @@ const costGuideInputs: readonly CostGuide[] = [
       },
       {
         title: 'Insurance coverage',
-        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. Your insurer handles the claim. We are not a public adjuster.',
+        body: 'Your insurer decides what the policy pays. A claim is not a bid, and it is not a promise that the roof is covered. We photograph the roof and install the one you hire us to build. Your insurer handles the claim. We are not public adjusters.',
       },
     ],
     ranges: [

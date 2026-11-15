@@ -69,7 +69,7 @@ export function driveParagraph(
     `${area.name} is on our list because we can get there from ${street}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} plan is still based on the house, not on the mileage.`,
     `Schedule ${work} in ${area.name} at ${street}, Houston ${zip}. A straight line to ${area.landmark} is about ${miles} miles, ${area.direction}, and ${area.roads} is the normal route. ${call}`,
     `The 77082 office on ${street} is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} Traffic makes that drive time a window.`,
-    `${call} The office is ${street}, Houston, ${zip}. ${area.name} sits about ${miles} miles ${area.direction} of that door if you measure straight to ${area.landmark}. Day to day the route is ${area.roads}.`,
+    `${call} The office is ${street}, Houston, ${zip}. ${area.name} is about ${miles} miles ${area.direction.replace(/ of the office$/, '')} of our office, measured to ${area.landmark}. The usual route is ${area.roads}.`,
   ];
   return pick(options, `${salt}:drive:${area.slug}`);
 }

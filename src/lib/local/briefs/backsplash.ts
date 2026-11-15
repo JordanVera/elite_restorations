@@ -12,7 +12,7 @@ export const backsplashBrief: Brief = {
   ],
   opener: [
     'For a backsplash, these houses tell us if the wall is long and open or short and out of square. {name} kitchens do both. A geometric pattern on a wavy wall shows every error, so the layout comes first.',
-    'Backsplash work there is the tile people see from the doorway. In {name} we measure the counter edge, the window trim, and the outlet heights before mortar goes on the wall.',
+    'In {name}, a backsplash is the tile people see from the doorway. We measure the counter edge, the window trim, and the outlet heights before mortar goes on the wall.',
     'For us, that house type means a wall condition. Plaster, old drywall, and a later board are different surfaces in {name}. Tile sticks to the wall we find, not to a neighborhood story.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const backsplashBrief: Brief = {
     'Replacing a {name} backsplash usually keeps the counters, protected. If the wall behind the tile is damaged, we stop and show you before new tile hides it.',
   ],
   sequence: [
-    'The {name} order is measure the run, pick the center, check the wall, set the tile, then grout and finish the edges. Outlets go back into the layout, not across a cut, when the box can sit in the module.',
+    'Here is the order we work in: measure the run, pick the center, check the wall, set the tile, then grout and finish the edges. Outlets go back into the layout, not across a cut, when the box can sit in the module.',
     'We do not start mortar in {name} until the center is marked. On a short wall that is the whole craft. On a long wall it keeps the pattern from drifting by the refrigerator.',
   ],
   coda: [
