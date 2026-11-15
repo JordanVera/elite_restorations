@@ -2,6 +2,7 @@ import { assertCopyAllowed } from '@/lib/copy-guards';
 import { neighborhoodSlugs, type NeighborhoodSlug } from '@/lib/locale-paths';
 import type { NeighborhoodPage } from '@/lib/neighborhood-types';
 import { parseLocalLandingSlug } from '@/lib/local-paths';
+import { getProject } from '@/lib/projects';
 import { titleFits } from '@/lib/seo';
 import { getService } from '@/lib/services';
 import { wordCount } from '@/lib/words';
@@ -388,6 +389,10 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      {
+        href: '/projects/blackhorse-ranch-cypress',
+        label: 'Flooring and kitchen in BlackHorse Ranch',
+      },
       { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
       { href: '/roofing-energy-corridor-tx', label: 'Roofing in the Energy Corridor' },
       { href: '/energy-corridor-tx', label: 'Energy Corridor' },
@@ -604,6 +609,7 @@ function linkOk(href: string) {
   if (knownStatic.has(slug) || getService(slug)) return true;
   if (parseLocalLandingSlug(slug)) return true;
   if ((neighborhoodSlugs as readonly string[]).includes(slug)) return true;
+  if (href.startsWith('/projects/')) return Boolean(getProject(href.slice('/projects/'.length)));
   return false;
 }
 

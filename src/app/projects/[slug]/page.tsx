@@ -163,7 +163,10 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
 
       <CtaBand
         title="Want something like this?"
-        body="Tell us what caught your eye and we will talk through what it would take."
+        body={
+          project.cta ??
+          'Tell us what caught your eye and we will talk through what it would take.'
+        }
         service={project.services[0]}
       />
     </>

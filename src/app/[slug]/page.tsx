@@ -28,7 +28,7 @@ import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
-import { imagesForService } from '@/lib/projects';
+import { imagesForService, storyItemsForService } from '@/lib/projects';
 import { getServiceDepth } from '@/lib/service-depth';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import { claimHelpFaqs } from '@/lib/claim-help';
@@ -66,7 +66,11 @@ function photographsFor(service: Service) {
     [heroSrc, localPhoto?.image.src].filter((src): src is string => Boolean(src)),
   );
   const masonry = rest.filter((item) => !used.has(item.image.src)).slice(0, 6);
-  return { localPhoto, masonry };
+  const shown = new Set(masonry.map((item) => item.image.src));
+  const stories = storyItemsForService(service.slug).filter(
+    (item) => !shown.has(item.image.src) && !used.has(item.image.src),
+  );
+  return { localPhoto, masonry: [...masonry, ...stories] };
 }
 
 export function generateStaticParams(): Params[] {
