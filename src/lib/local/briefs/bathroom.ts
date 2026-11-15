@@ -42,7 +42,7 @@ export const bathroomBrief: Brief = {
   ],
   sequence: [
     'The {name} sequence is protect the rest of the house, open what the plan requires, set the drain and the pan, waterproof, then tile and set the vanity. Paint and glass close the room. Fixtures are not a substitute for the layer you cannot see.',
-    'When {name} has a second bath, we say how the house stays usable. When it does not, we say that too. Either way the pan comes before the finish, so the shower is not built backward.',
+    'If your house has a second bath, we plan the work so one stays usable. If it does not, we say that too. Either way the pan comes before the finish, so the shower is not built backward.',
   ],
   coda: [
     'That local limit sits on the same bath job: a waterproof shower, a vanity that fits, and light you can use. The visit writes the price for this {name} room.',

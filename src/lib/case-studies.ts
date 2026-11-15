@@ -57,7 +57,7 @@ export const caseStudies: readonly CaseStudy[] = [
       },
       {
         title: 'A record for the insurer',
-        body: 'He wrote that the team communicated with the adjuster. That is his account. Your insurer still decides what the policy pays. We photograph conditions and the work. A public adjuster is a different license, and the claim stays with the insurer.',
+        body: 'He wrote that the team communicated with the adjuster. That is his account. Your insurer still decides what the policy pays. We photograph conditions and the work.',
       },
       {
         title: 'Rebuild after it is dry',
@@ -95,7 +95,7 @@ export const caseStudies: readonly CaseStudy[] = [
     serviceLabel: 'Kitchen remodeling',
     reviewer: 'Shronda A.',
     quote:
-      'I can\'t say enough about the great job that the Elite Restorations\' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were phenomenal! Their customer service, communication, & promptness was by far the best experience I\'ve ever had during a home remodel job!... My kitchen doesn\'t look the same, I love it!!!',
+      'I can\'t say enough about the great job that the Elite Restorations\' team did to my kitchen. Everyone from the beginning of the quote process to the completed job were phenomenal! Their customer service, communication, & promptness was by far the best experience I\'ve ever had during a home remodel job! I have other work down the line & I\'m looking forward to working with them again, very soon! My kitchen doesn\'t look the same, I love it!',
     steps: [
       {
         title: 'The quote',

@@ -11,7 +11,7 @@ import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { brandServiceLinks } from '@/lib/brand-nav';
-import { esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
+import { esGroupNames, esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
 import { isLocalLandingPath } from '@/lib/local-paths';
 import {
   isServicePagePath,
@@ -192,7 +192,9 @@ export function MobileNav({ className }: { className?: string }) {
                       >
                         {serviceGroups.map((group) => (
                           <div key={group}>
-                            <p className="eyebrow text-accent-ink">{group}</p>
+                            <p className="eyebrow text-accent-ink">
+                              {es ? (esGroupNames[group] ?? group) : group}
+                            </p>
                             <ul className="mt-2">
                               {servicesInGroup(group).map((service) => {
                                 const serviceLink = serviceHref(service.slug, es ? 'es' : 'en');

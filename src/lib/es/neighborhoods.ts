@@ -11,6 +11,16 @@ import { wordCount } from '@/lib/words';
 
 const phone = '(713) 909-0034';
 
+function neighborhoodTitleEs(name: string) {
+  const candidates = [
+    `Remodelación, techos y agua, ${name}`,
+    `Techos y remodelación en ${name}`,
+    `Remodelación en ${name}`,
+    name,
+  ];
+  return candidates.find((candidate) => titleFits(candidate)) ?? name;
+}
+
 function page(
   slug: NeighborhoodSlug,
   name: string,
@@ -25,7 +35,7 @@ function page(
     slug,
     path: `/es/${slug}`,
     name,
-    title: `${name}, TX`,
+    title: neighborhoodTitleEs(name),
     description,
     lede,
     paragraphs,
@@ -81,7 +91,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       'Brays Bayou cambia la visita de agua. El terreno bajo, pegado al bayou, ha recibido agua de tormenta en ciclones pasados. Las calles más lejos de la orilla no siempre vieron lo mismo. Un tubo de suministro reventado sobre la losa y el agua que subió de la calle son trabajos distintos, y a veces pólizas distintas. Su aseguradora decide cuál aplica. Nosotros fotografiamos, secamos y reparamos lo que usted contrata.',
       'La otra historia de agua es una helada fuerte. En estos ranchos, los tubos del ático y de las paredes exteriores se han partido cuando Houston baja de cero. El agua corre por la losa, entra a la base del drywall y se mete bajo el piso. Casi nunca hay un espacio debajo de la casa para mirar. Buscamos el borde húmedo con un medidor, no adivinando por la mancha.',
       'El granizo y el viento pegan en estos techos bajos igual que en el resto del suroeste. Desde la calle no se ven los golpes. Las caras sur y oeste envejecen primero. Los encinos tiran ramas sobre los valles. Subimos cuando es seguro, tomamos fotos y decimos si una reparación aguanta. Si la casa está abierta al clima, la lona va antes de hablar de teja.',
-      'La cocina suele empezar como un cuarto cerrado. Abrir ese muro es pregunta de estructura, y mover el fregadero es cortar la losa. El baño suele ser el del pasillo, o el principal retileado en los años 80 o 90. Primero se impermeabiliza. Después va la loseta. No tratamos un rancho de Meyerland como un plano abierto en blanco.',
+      'La cocina suele empezar como un cuarto cerrado. Abrir ese muro es pregunta de estructura, y mover el fregadero es cortar la losa. El baño suele ser el del pasillo, o el principal con loseta nueva en los años 80 o 90. Primero se impermeabiliza. Después va la loseta. No tratamos un rancho de Meyerland como un plano abierto en blanco.',
       'El piso sigue la historia de agua de esa casa. Hay madera original, loseta posterior y vinil en rollo. Una losa que se mojó tiene que estar seca antes de un piso nuevo. El vinil enseña el lomo que la alfombra escondía. La madera tiene que acostumbrarse a la casa. La loseta necesita una base pareja. Si la casa se levantó o se cambió la planta baja, medimos lo que hay ahora.',
       'Meyerland está en la ciudad de Houston. Algunas secciones tienen restricciones que miran lo que se ve desde la calle. Una cocina por dentro suele ser otra pregunta, distinta de un techo nuevo. Desde la oficina en 77082 se cruza el suroeste, por Beechnut o Bellaire hacia Chimney Rock. No hay un local en Meyerland. Llame al (713) 909-0034 y agendamos la visita.',
     ],
@@ -160,8 +170,8 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
         a: 'El techo plano del porche, los valles y el metal alrededor de chimeneas y ventilas viejas. El frente puede verse bien mientras una buhardilla parchada mete lluvia al cielo. Esas son las fotos.',
       },
       {
-        q: '¿Van a negociar el reclamo?',
-        a: 'No somos ajustadores públicos. Podemos estar cuando llegue su ajustador, caminar lo que encontramos y reparar lo que usted contrata. Su aseguradora decide la cobertura y el pago. Revise la póliza o pregúnteles a ellos.',
+        q: '¿Manejan mi reclamo del seguro?',
+        a: 'Enviamos nuestro estimado a su aseguradora para que lo apruebe y lo trabajamos con el ajustador. No somos ajustadores públicos. Podemos estar cuando llegue su ajustador, caminar lo que encontramos y reparar lo que usted contrata. Su aseguradora decide la cobertura y el pago. Revise la póliza o pregúnteles a ellos.',
       },
     ],
     [

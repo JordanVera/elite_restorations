@@ -34,7 +34,7 @@ export default function SpanishHomePage() {
   return (
     <>
       <section aria-labelledby="hero-heading" className="kitchen-hero">
-        <KitchenSlideshow />
+        <KitchenSlideshow locale="es" />
         <div className="kitchen-shade" />
         <div className="kitchen-copy gutter">
           <p className="kitchen-eyebrow">

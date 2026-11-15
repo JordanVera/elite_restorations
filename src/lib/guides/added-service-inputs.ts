@@ -319,7 +319,7 @@ export const addedServiceInputs = [
       conditions: [
         { title: "Ledger", body: "The connection to the house is where decks leak and where they pull away. We look there first." },
         { title: "Air", body: "A deck tight to wet ground stays rotten. We keep a path for air and for water to leave." },
-        { title: "Rails", body: "If it moves when you lean, it is part of the repair. We do not certify it as a city inspector would." },
+        { title: "Rails", body: "If it moves when you lean, it is part of the repair. We are not the city inspector." },
       ],
       neighborhoods: ["Houston", "Memorial", "Bellaire", "The Woodlands", "Katy", "Sugar Land", "Westchase", "Energy Corridor"],
     },
@@ -335,7 +335,7 @@ export const addedServiceInputs = [
     emergency: true,
     intro: [
       "Property managers, HOAs, and building owners can call " + phone + " any time for an active storm or water emergency at an apartment community or a commercial building.",
-      "We tarp roofs when it is safe, board broken glass, extract water, dry what got wet, and repair what you hire. We are not public adjusters and we are not an insurer's preferred vendor.",
+      "We tarp roofs when it is safe, board broken glass, extract water, dry what got wet, and repair what you hire. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We are independent of every insurer.",
     ],
     includes: [
       "Emergency response for apartments and commercial buildings",

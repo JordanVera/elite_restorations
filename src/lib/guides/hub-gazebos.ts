@@ -66,7 +66,7 @@ export const gazeboGuide: ServiceGuide = {
       eyebrow: "Claims",
       heading: "A storm-damaged gazebo, documented plainly.",
       paragraphs: [
-        "We help with photos, a site meeting with the adjuster if you want us there, and a rebuild estimate. We are not public adjusters and we do not promise a claim will pay for an outbuilding. Hurricane, hail, wind, tornado, and flood do different things to a yard structure. Check your policy. A kit that was never anchored and then blew apart is a fact we will describe honestly.",
+        "We help with photos, a site meeting with the adjuster if you want us there, and a rebuild estimate. We are not public adjusters. We do not promise a claim will pay for an outbuilding. Hurricane, hail, wind, tornado, and flood do different things to a yard structure. Check your policy. A kit that was never anchored and then blew apart is a fact we will describe honestly.",
         "Safety may mean taking down a leaning roof so it does not fall on the house or the fence. That is safety. It is not a coverage opinion. The photo log and the insurance claims page explain the records. Our role is the construction and the documentation of what we see.",
       ],
       points: [
@@ -82,6 +82,6 @@ export const gazeboGuide: ServiceGuide = {
     { q: "Will it stand up to hurricane wind?", a: "We build it as a real structure with footings, not as a tent. We do not promise any outdoor roof will ignore a major hurricane. Placement, anchors, and the roof details are how we take the wind seriously." },
     { q: "Do I need a permit or HOA approval?", a: "Sometimes. It depends on the size and the city, and some associations review yard structures. We check the address. We do not guess." },
     { q: "Is a gazebo the same as a patio cover?", a: "No. A gazebo is freestanding. A patio cover attaches to the house and has to be flashed at the wall. We build both. They are different pages." },
-    { q: "Can you help with an insurance claim if a storm destroyed it?", a: "We photograph what is left and estimate the rebuild. We are not public adjusters and we do not promise payment. Check your policy. Call (713) 909-0034." },
+    { q: "Can you help with an insurance claim if a storm destroyed it?", a: "We photograph what is left and estimate the rebuild. We are not public adjusters. We do not promise payment. Check your policy. Call (713) 909-0034." },
   ],
 };

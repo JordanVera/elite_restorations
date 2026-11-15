@@ -216,10 +216,10 @@ export function ServiceIndex({
 
         <div className="mt-16">
           <Link
-            href="/services"
+            href={locale === "es" ? "/es" : "/services"}
             className="eyebrow inline-flex items-center gap-3 border-b border-foreground/40 pb-2 transition-colors hover:border-accent-ink hover:text-accent-ink"
           >
-            See how each service works
+            {locale === "es" ? "Vea cómo funciona cada servicio" : "See how each service works"}
             <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>

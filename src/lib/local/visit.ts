@@ -16,7 +16,7 @@ function fill(area: AreaProfile, template: string) {
 const visits: Record<string, readonly [string, string]> = {
   'kitchen-remodeling': [
     'On a {name} kitchen visit we walk the path you actually use, from the refrigerator to the sink to the range, and we mark the wall you hope to open before anyone calls it structural. Outlets, the dishwasher, and the landing spot for groceries are part of that walk. We leave with a layout that names what can move and what should stay, plus a materials list that can be ordered without inventing a second kitchen later. Bring a photo of a cabinet you like if you have one. You do not need a finished drawing.',
-    'What we will not do in {name} is price a kitchen from {housing} alone. Two houses near {landmark} can share a decade and not share a drain. The visit is the cabinets that are there, the light you hate at night, and the floor height at the next room. After that, demolition has a sequence. Call {phone} when you want that hour on the calendar. The drive along {roads} is separate from the job.',
+    'What we will not do in {name} is price a kitchen from {housing} alone. Two houses near {landmark} can be the same age and still have different drains. On the visit we look at the cabinets that are there, the light you hate at night, and the floor height at the next room. After that, demolition has a sequence. Call {phone} when you want that hour on the calendar. The drive along {roads} is separate from the job.',
   ],
   'bathroom-remodeling': [
     'A {name} bath visit starts in the wet wall. We look at the valve, the drain, the pan, and the fan, then at the door swing that a new vanity has to miss. If you have a second bath, say so, because that changes how the house lives during the work. Waterproofing is discussed while the wall is still visible in our notes, not after tile is chosen. Photos of the room help. A final grout color can wait.',
@@ -89,14 +89,14 @@ const visits: Record<string, readonly [string, string]> = {
 };
 
 const closers = [
-  'Nothing on this page is a bid for {name}. The number comes after we see the property, including the parts {housing} does not reveal from the street.',
-  'Bring questions about what has already failed. A {name} plan written without that history misses the repair hiding under the finish.',
-  'If an association or a city desk has to review part of the work, tell us on the {name} visit so the order does not get ahead of the paperwork.',
-  'We would rather say a {name} idea will not fit than discover it after demolition or tear-off. That is what the hour at the house is for.',
-  'Photos help us prepare for {name}. They do not replace measurements, moisture readings, or a look at the structure.',
-  'The same trade in a neighboring city is a different page because the houses differ. This one stays on {name}.',
-  'Ask what is included before work starts in {name}. Surprises belong in the visit notes, not in the last day of the job.',
-  'A straight line of about {miles} miles to {landmark} is only how we get to {name}. The property still sets the job.',
+  'Nothing on this page is a bid for {name}. The number comes after we see the property. Calling the area "{housing}" still does not describe this house.',
+  'Bring questions about what has already failed. A plan written without that history misses the repair hiding under the finish.',
+  'If an association or a city desk has to review part of the work, tell us on the visit so the order does not get ahead of the paperwork.',
+  'We would rather say an idea will not fit than discover it after demolition or tear-off. That is what the hour at the house is for.',
+  'Photos help us prepare. They do not replace measurements, moisture readings, or a look at the structure.',
+  'The same trade in a neighboring city is a different page because the houses differ. This page stays on the house in {name}.',
+  'Ask what is included before work starts. Surprises belong in the visit notes, not in the last day of the job.',
+  'A straight line of about {miles} miles to {landmark} is only how we get there. The property still sets the job.',
 ];
 
 export function visitParagraph(serviceSlug: string, area: AreaProfile) {

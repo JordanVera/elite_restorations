@@ -19,7 +19,7 @@ export const deckGuide: ServiceGuide = {
       ],
       points: [
         { title: "At the house", body: "Where the deck meets the house, water can get into the wall and the siding. We look there first." },
-        { title: "Rails", body: "A pretty top board on loose posts is not a guard. If the rail moves, say so. We do not certify it as a building official would." },
+        { title: "Rails", body: "A pretty top board on loose posts is not a guard. If the rail moves, say so. We are not the city inspector." },
         { title: "Stairs", body: "Most of the wear and most of the falls are at the stairs. They are part of the work, not a leftover." },
       ],
     },
@@ -66,7 +66,7 @@ export const deckGuide: ServiceGuide = {
       eyebrow: "Claims",
       heading: "Storm damage to a deck, without a coverage promise.",
       paragraphs: [
-        "We help with photos of a deck a storm actually broke, a meeting with the adjuster on site if you want us there, and a repair estimate. We are not public adjusters and we do not give legal advice. Hurricane wind, hail, a tornado, and flooding are different events. A deck that rotted for years is maintenance. Check your policy before you assume wood outside is covered the way the roof is.",
+        "We help with photos of a deck a storm actually broke, a meeting with the adjuster on site if you want us there, and a repair estimate. We are not public adjusters. We do not give legal advice. Hurricane wind, hail, a tornado, and flooding are different events. A deck that rotted for years is maintenance. Check your policy before you assume wood outside is covered the way the roof is.",
         "Emergency help is making the deck safe to walk or keeping people off it, and keeping rain out of the house if the connection opened the wall. That help is not a payout. The insurance claims page and the photo log are the record-keeping tools. Our invoice is the construction.",
       ],
       points: [

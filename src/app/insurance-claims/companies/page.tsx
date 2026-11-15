@@ -18,7 +18,7 @@ export default function InsurerHubPage() {
       <PageHero
         eyebrow="Insurance"
         title={["Houston guides for", "major insurers."]}
-        lede="These pages are for homeowners, property managers, and building owners who already have a policy with one of these companies. Elite Restorations is not a partner, a preferred vendor, or an agent of any of them."
+        lede="These pages are for homeowners, property managers, and building owners who already have a policy with one of these companies. Elite Restorations is an independent contractor and is not affiliated with any of them."
         crumbs={[
           { name: "Insurance claims", path: "/insurance-claims" },
           { name: "Insurers", path: "/insurance-claims/companies" },

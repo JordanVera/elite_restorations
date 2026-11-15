@@ -585,7 +585,7 @@ export const articles: Article[] = [
     service: 'insurance-claims',
     ctaTitle: 'Need the damage written down?',
     ctaBody:
-      'We photograph what got wet and what was dried or repaired. Your insurer decides coverage. We are the contractor. A public adjuster is a different license, and the claim stays with your insurer.',
+      'We photograph what got wet and what was dried or repaired. Your insurer decides coverage. We are the contractor.',
     related: [
       'frozen-and-burst-pipes-in-houston',
       'how-to-prevent-water-damage-in-your-home',
@@ -646,7 +646,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license: someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We are the contractor. We can photograph the conditions and do the drying and the repairs. The claim and the payment stay with your insurer.',
+            text: 'We are not public adjusters. We are the contractor. We can photograph the conditions and do the drying and the repairs. The claim and the payment stay with your insurer.',
           },
         ],
       },

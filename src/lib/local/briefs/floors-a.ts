@@ -41,7 +41,7 @@ export const woodBrief: Brief = {
     'New {name} planks are acclimated, then fastened or glued per the product and the subfloor. Shoe molding and the door undercuts are part of the finish, not a punch-list surprise.',
   ],
   sequence: [
-    'The {name} order is inspect, test moisture and flatness, choose refinish or replace, acclimate if the wood is new, then install or sand, then finish. Furniture and site protection come before the sander or the fastener.',
+    'Here is the order we work in: inspect, test moisture and flatness, choose refinish or replace, acclimate if the wood is new, then install or sand, then finish. Furniture and site protection come before the sander or the fastener.',
     'We do not sand a {name} floor the day we meet it. The inspection decides. If the subfloor is the problem, the finish waits. If the boards are sound, we schedule the work so the house can stay as clean as the method allows.',
   ],
   coda: [
@@ -122,7 +122,7 @@ export const tileFloorBrief: Brief = {
   ],
   opener: [
     'For tile floors, these houses tell us the base: a wood subfloor, a slab, or a shower pan. {name} uses different methods for each. A large tile does not hide a hump.',
-    'Tile there is layout plus prep. In {name} we center the tile on the doorway you see, and we waterproof a bath before the finish goes down.',
+    'In {name}, tile means layout plus prep. We center the tile on the doorway you see, and we waterproof a bath before the finish goes down.',
     'For us, that house type means a flatness and a thickness problem. {name} doors are often already close to the floor. A new tile layer that will not let them close is caught before the mortar.',
   ],
   pier: [
@@ -151,7 +151,7 @@ export const tileFloorBrief: Brief = {
     'We plan {name} layouts so the pattern repeats instead of ending in a sliver at the most visible wall. Door transitions are part of that drawing.',
   ],
   sequence: [
-    'The {name} order is check flatness and height, remove what cannot stay, waterproof wet rooms, then set, grout, and seal when the product needs it. Furniture and toilets are planned around that, not balanced on fresh tile.',
+    'Here is the order we work in: check flatness and height, remove what cannot stay, waterproof wet rooms, then set, grout, and seal when the product needs it. Furniture and toilets are planned around that, not balanced on fresh tile.',
     'We do not start setting {name} tile on a floor we have not walked with a straightedge. The layout lines are marked first. Wet areas get their membrane inspected before it disappears under the finish.',
   ],
   coda: [

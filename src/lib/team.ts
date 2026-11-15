@@ -40,12 +40,12 @@ export const team: readonly TeamMember[] = [
   {
     name: 'Jordan Vera',
     role: 'Sales Representative and Project Manager',
-    body: 'Sales representative and project manager.',
+    body: '',
   },
   {
     name: 'Michael Hanson',
     role: 'Sales Representative and Project Manager',
-    body: 'Sales representative and project manager.',
+    body: '',
     photo: img(
       '/images/about/michael_hanson.webp',
       'Michael Hanson, sales representative and project manager',
@@ -72,7 +72,7 @@ export function personSchemaNodes() {
     '@id': personAnchor(person.name),
     name: person.name,
     jobTitle: person.role,
-    description: person.body,
+    ...(person.body ? { description: person.body } : {}),
     url: `${site.url}/about`,
     worksFor: { '@id': `${site.url}/#business` },
     ...(person.photo ? { image: `${site.url}${person.photo.src}` } : {}),

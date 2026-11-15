@@ -44,7 +44,7 @@ export const kitchenCostSections: readonly GuideSection[] = [
 export const kitchenCostFaqs = [
   {
     q: 'Why do the ranges overlap?',
-    a: 'Because a small layout change and a large finish update can cost similar money. The labels describe the kind of work, not a guaranteed bracket. Your kitchen lands where the work lands.',
+    a: 'Because a small layout change and a large finish update can cost similar money. The labels describe the kind of work, not a fixed bracket. Your kitchen lands where the work lands.',
   },
   {
     q: 'Does an island always mean the layout-change range?',
@@ -155,7 +155,7 @@ export const roofCostSections: readonly GuideSection[] = [
     heading: 'The deductible is not the estimate.',
     paragraphs: [
       'Your insurer decides what the policy pays. Many Texas policies, especially in Harris County and closer to the coast, use a wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common. On a higher limit, two percent is a large deductible, and it is not the deductible on a kitchen leak. Whether this storm clears it is your question for the carrier. Our estimate is the cost to do the roof. Those numbers are allowed to be different.',
-      'Some policies pay the depreciated value first and release the rest after the work. Some do not. We do not calculate that for you, and we are not public adjusters. We photograph the roof and install the one you hire. We do not rewrite the work to match a check. If you are paying for the roof yourself, read the work, not the claim story. Temporary tarping, when the roof is open and it is safe to be up there, is a separate small project, often a few hundred dollars to about $2,000 for a single walkable opening. It is not a down payment that locks you into a replacement.',
+      'Some policies pay the depreciated value first and release the rest after the work. Some do not. We do not calculate that for you. We are not public adjusters. We photograph the roof and install the one you hire. We do not rewrite the work to match a check. If you are paying for the roof yourself, read the work, not the claim story. Temporary tarping, when the roof is open and it is safe to be up there, is a separate small project, often a few hundred dollars to about $2,000 for a single walkable opening. It is not a down payment that locks you into a replacement.',
     ],
   },
   {

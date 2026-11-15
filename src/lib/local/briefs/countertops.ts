@@ -12,7 +12,7 @@ export const countertopsBrief: Brief = {
   ],
   opener: [
     'For countertops, these houses tell us about access and about how square the room is. {name} runs from tight lots to long islands. Both get a template. Neither gets a slab ordered from a drawing alone.',
-    'Counter work there is the surface you work on every day. In {name} the edge, the seam, and the sink hole are decided with the cabinets in place, because older rooms lie about their dimensions.',
+    'In {name}, counter work is the surface you use every day. The edge, the seam, and the sink hole are decided with the cabinets in place, because older rooms lie about their dimensions.',
     'For us, that house type means a delivery problem and a layout problem. A {name} driveway can take a slab the way a narrow inside-the-Loop street cannot. The template still happens at the cabinets.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const countertopsBrief: Brief = {
     'A chipped {name} top is sometimes a repair and sometimes a replacement. We look at the damage, the seam, and whether the cabinets under it are still worth topping.',
   ],
   sequence: [
-    'The {name} order is cabinets set and level, then template, then fabrication, then install of the top, the sink if it is an undermount, and the backsplash after. Templating a room that still has no cabinets is how tops come back short.',
+    'Here is the order we work in: cabinets set and level, then template, then fabrication, then install of the top, the sink if it is an undermount, and the backsplash after. Templating a room that still has no cabinets is how tops come back short.',
     'We do not schedule the {name} install before the template is checked. The sink model has to be chosen by then so the cutout matches. Faucet holes are marked with it.',
   ],
   coda: [

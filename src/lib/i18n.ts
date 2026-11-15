@@ -82,6 +82,13 @@ export function localeSwitch(pathname: string) {
   return { current: "en" as const, en: path, es: spanishPathFor(path) ?? "/es" };
 }
 
+export const esGroupNames: Record<string, string> = {
+  Interiors: "Interiores",
+  Floors: "Pisos",
+  "Roof & exterior": "Techo y exterior",
+  Recovery: "Restauración",
+};
+
 export const esServiceNames: Record<(typeof spanishServiceSlugs)[number], string> = {
   "kitchen-remodeling": "Remodelación de cocinas",
   "bathroom-remodeling": "Remodelación de baños",

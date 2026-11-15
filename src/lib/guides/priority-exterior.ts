@@ -254,7 +254,7 @@ export const roofReplacement: ServiceGuide = {
       heading: 'Documentation without pretending to be the carrier.',
       paragraphs: [
         'A replacement paid by insurance starts as an inspection. It is not a promise of payment. We photograph the shingles, the soft metal, the flashing, and any interior damage we are shown. Many Harris County policies pay wind and hail under a percentage deductible that is separate from the deductible on a plumbing leak. One, two, and five percent of the dwelling limit are common. On a higher limit, that percentage is a large number. Whether you are above it is a question for the policy and the insurer.',
-        'Some policies pay the depreciated value first and hold the rest until the work is done. Some pay replacement cost differently. The wording is yours. We install the roof you hire us to install, and we can provide photos and a description of that work. We do not negotiate the claim, and we are not public adjusters. If the check and the work do not match, we talk about the work. We do not quietly change it to fit a number that was never an estimate.',
+        'Some policies pay the depreciated value first and hold the rest until the work is done. Some pay replacement cost differently. The wording is yours. We install the roof you hire us to install, and we can provide photos and a description of that work. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. If the check and the work do not match, we talk about the work. We do not quietly change it to fit a number that was never an estimate.',
       ],
       points: [
         {
@@ -295,7 +295,7 @@ export const roofReplacement: ServiceGuide = {
     },
     {
       q: 'Does a claim set the contract price?',
-      a: 'No. The contract price is the work. The insurer decides what the policy pays. We document the roof. We do not negotiate the claim or rewrite the roof to match a check.',
+      a: 'No. The contract price is the work. The insurer decides what the policy pays. We document the roof. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not rewrite the roof to match a check.',
     },
   ],
 };
@@ -395,7 +395,7 @@ export const waterDamage: ServiceGuide = {
       heading: 'What to record, and what we will not decide.',
       paragraphs: [
         'If it is safe, photograph before you throw things away. Take wide shots of each room and close shots of the source, the wet floors, and the ceilings. Keep the burst hose or the failed fitting if you can do that safely. Write down when you noticed the water. Many policies want notice promptly. The deadline and the method are in your policy, so ask the insurer how many days you have. Keep the claim number next to the photos. The free insurance photo log on this site is a room-by-room way to start that record yourself.',
-        'We add our own photos of the conditions, the moisture, what was removed, and what was rebuilt. You can share them. Your insurer decides coverage. We do not negotiate the claim, and we are not public adjusters. Flood from rising water is often a different policy from a homeowners policy. Check your policy. Wind-driven rain through a storm opening is a different situation from a slow drip behind a tub. We describe the facts we can see. Many policies also expect you to limit further damage, which is why tarping a safe roof and starting drying do not wait on an adjuster’s visit. Starting that work is not a promise the work will be reimbursed.',
+        'We add our own photos of the conditions, the moisture, what was removed, and what was rebuilt. You can share them. Your insurer decides coverage. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Flood from rising water is often a different policy from a homeowners policy. Check your policy. Wind-driven rain through a storm opening is a different situation from a slow drip behind a tub. We describe the facts we can see. Many policies also expect you to limit further damage, which is why tarping a safe roof and starting drying do not wait on an adjuster’s visit. Your insurer decides whether that work is reimbursed.',
       ],
       points: [
         {

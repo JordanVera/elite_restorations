@@ -76,7 +76,7 @@ export default function SpanishRestorationPage() {
               },
               {
                 q: "¿Hablan por la aseguradora?",
-                a: "Fotografiamos y reparamos lo que usted contrata. La aseguradora decide el pago. Nosotros no somos ajustadores públicos y no lo prometemos.",
+                a: "Fotografiamos y reparamos lo que usted contrata. La aseguradora decide el pago. No somos ajustadores públicos. No lo prometemos.",
               },
               ...esRestorationFaqs,
             ]}

@@ -26,7 +26,7 @@ export const exteriorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Should I sign with the first roofer who knocks after hail?",
-      a: "No. A storm brings door-knockers. Take photos, call your insurer if you are filing, and get a written look at your roof before you sign. We work for the owner who hires us. We are not public adjusters, and we do not negotiate the claim for a fee.",
+      a: "No. A storm brings door-knockers. Take photos, call your insurer if you are filing, and get a written look at your roof before you sign. We work for the owner who hires us. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not take a fee to argue the claim.",
     },
     {
       q: "Can you repair a roof during hurricane season?",

@@ -12,7 +12,7 @@ import { hasRealVideos } from '@/lib/resource-videos';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Realtor Partners in Houston, TX',
+  title: 'Realtor Program in Houston, TX',
   description:
     'How Houston realtors and investors can send remodeling work to Elite Restorations, and the steps a typical project follows.',
   path: '/resources/realtors',
@@ -37,7 +37,7 @@ const benefits = [
   {
     index: '04',
     title: 'A direct line',
-    body: 'Partners reach the office directly. You do not start over as a stranger each time.',
+    body: 'Realtors in the program reach the office directly. You do not start over as a stranger each time.',
   },
   {
     index: '05',
@@ -56,7 +56,7 @@ export default function RealtorsResourcesPage() {
     <>
       <PageHero
         eyebrow="For realtors"
-        title={['A partner for', 'the work you refer.']}
+        title={['A Realtor program for', 'the work you refer.']}
         lede="Send a flip, or introduce a client. One crew, a direct line, and a form that reaches the office."
         crumbs={[
           { name: 'Resources', path: '/resources' },
@@ -66,7 +66,7 @@ export default function RealtorsResourcesPage() {
         <Reveal delay={0.45} className="mt-10">
           <Button asChild size="xl" variant="accent">
             <Link href="#partner-form">
-              Become a partner
+              Join the Realtor program
               <ArrowUpRight className="arrow" aria-hidden />
             </Link>
           </Button>
@@ -105,7 +105,7 @@ export default function RealtorsResourcesPage() {
       >
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>
-            <p className="eyebrow text-muted-foreground">Partner benefits</p>
+            <p className="eyebrow text-muted-foreground">Program benefits</p>
             <h2 id="benefits-heading" className="font-display t-lg mt-4 max-w-[16ch]">
               What you get when you send us the work.
             </h2>
@@ -129,13 +129,13 @@ export default function RealtorsResourcesPage() {
       >
         <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12 lg:gap-20">
           <Reveal className="lg:col-span-5">
-            <p className="eyebrow text-accent-ink">Become a partner</p>
+            <p className="eyebrow text-accent-ink">Realtor program</p>
             <h2 id="partner-heading" className="font-display t-lg mt-4">
               Refer a project.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Tell us who you are and the kind of work you send. We will call you back and explain how a
-              partnership would actually run. Fees are part of that conversation. We do not post a rate sheet.
+              Tell us who you are and the kind of work you send. We will call you back and explain how the
+              Realtor program works. Fees are part of that conversation. We do not post a rate sheet.
             </p>
           </Reveal>
           <div className="lg:col-span-7">

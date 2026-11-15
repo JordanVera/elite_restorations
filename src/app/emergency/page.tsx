@@ -168,6 +168,7 @@ export default function EmergencyPage() {
                 idPrefix="emergency"
                 defaultService="storm-hail"
                 submitLabel="Request a call back"
+                timing="emergency"
               />
             </div>
           </Reveal>

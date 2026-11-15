@@ -104,7 +104,7 @@ const certainteedEn: BrandPage = {
       eyebrow: "Claims",
       heading: "Insurance-claim roof replacements.",
       paragraphs: [
-        `If you are filing, we photograph the roof before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: tear-off, the CertainTeed line you chose, flashing, vents, and any decking we can already see. It is not the amount the claim will pay. You file the claim. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.`,
+        `If you are filing, we photograph the roof before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: tear-off, the CertainTeed line you chose, flashing, vents, and any decking we can already see. It is not the amount the claim will pay. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.`,
         "A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. Some policies pay a depreciated amount first. Read yours, or ask your insurer. We install the roof you hire us to install and we do not rewrite it to match a check. If a slope in the claim cannot be matched to the Landmark color on the house, we say so before the shingles are ordered.",
       ],
     },
@@ -230,7 +230,7 @@ const hardieEn: BrandPage = {
       eyebrow: "Claims",
       heading: "When the siding is part of a storm claim.",
       paragraphs: [
-        "If wind or hail opened the wall, we photograph the cracks, the lifted courses, and what is behind them if we have to open it. We can meet your adjuster on site. The estimate is the price of the HardiePlank, the HardieTrim, the flashing, and any sheathing that has to come out. It is not the claim payment. You file. Your insurer decides coverage and payment. We are not public adjusters, and we do not give legal advice.",
+        "If wind or hail opened the wall, we photograph the cracks, the lifted courses, and what is behind them if we have to open it. We can meet your adjuster on site. The estimate is the price of the HardiePlank, the HardieTrim, the flashing, and any sheathing that has to come out. It is not the claim payment. You file. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.",
         "A planned re-side, with no storm, is construction, and we describe it that way. We do not rename a worn wall as hail. Hail marks and ordinary age look different up close, and the notes say which one we see. Photos of the damage and of the repair are yours to share.",
       ],
     },
@@ -338,7 +338,7 @@ const certainteedEs: BrandPage = {
       eyebrow: "Reclamos",
       heading: "Cambios de techo ligados a un reclamo.",
       paragraphs: [
-        `Si va a presentar un reclamo, fotografiamos el techo antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar lo viejo, la línea CertainTeed que eligió, el metal, la ventilación y la madera que ya se puede ver. No es la cantidad que el reclamo va a pagar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.`,
+        `Si va a presentar un reclamo, fotografiamos el techo antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar lo viejo, la línea CertainTeed que eligió, el metal, la ventilación y la madera que ya se puede ver. No es la cantidad que el reclamo va a pagar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.`,
         "En Texas, el deducible de viento y granizo suele ser un porcentaje del monto que la póliza lista para la casa. Ese porcentaje está en su página de declaraciones, o se lo dice su agente. Nosotros no lo tenemos y no lo inventamos. Algunas pólizas pagan primero un valor depreciado y sueltan el resto cuando el trabajo está hecho. Otras no. Lea la suya o pregúntele a su aseguradora. Instalamos el techo que usted nos contrata. No reescribimos el trabajo para que quepa en un cheque. Si una caída del reclamo no se puede igualar al color Landmark de la casa, lo decimos antes de pedir la teja.",
       ],
     },
@@ -464,7 +464,7 @@ const hardieEs: BrandPage = {
       eyebrow: "Reclamos",
       heading: "Cuando el siding es parte de un reclamo por tormenta.",
       paragraphs: [
-        "Si el viento o el granizo abrió la pared, fotografiamos las grietas, las hileras levantadas y lo que hay detrás si tenemos que abrir. Podemos estar cuando llegue su ajustador. El estimado es el precio del HardiePlank, del HardieTrim, del metal y del triplay que haya que quitar. No es el pago del reclamo. Usted lo presenta. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos y no damos consejo legal.",
+        "Si el viento o el granizo abrió la pared, fotografiamos las grietas, las hileras levantadas y lo que hay detrás si tenemos que abrir. Podemos estar cuando llegue su ajustador. El estimado es el precio del HardiePlank, del HardieTrim, del metal y del triplay que haya que quitar. No es el pago del reclamo. Usted lo presenta. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
         "Un cambio planeado, sin tormenta, es construcción, y así lo describimos. No le cambiamos el nombre a un muro gastado para que parezca granizo. Las marcas de granizo y la edad normal se ven distintas de cerca, y las notas dicen cuál vemos. Las fotos del daño y de la reparación terminada son suyas para compartir. La página de reclamos explica hasta dónde llega nuestra ayuda.",
       ],
     },

@@ -11,8 +11,8 @@ export const roofingBrief: Brief = {
     '{name} roofing includes a repair path and a replacement path. A tarp, when a storm has opened the roof, is temporary cover, not the finished roof.',
   ],
   opener: [
-    'For roofing, these houses tell us the size and the shape of the roof and what sits over it. {name} oaks, pines, or a clear suburban lot change the inspection. The shingles are still judged up close.',
-    'Roofing there is repair or replacement after we photograph the slopes you cannot see from the driveway. In {name} south and west faces age faster. We look at all of them.',
+    'For roofing, these houses tell us the size and the shape of the roof and what sits over it. Oaks, pines, or a clear suburban lot change the inspection in {name}. The shingles are still judged up close.',
+    'In {name}, roofing means a repair or a replacement after we photograph the slopes you cannot see from the driveway. South and west faces age faster. We look at all of them.',
     'For us, that house type means access, height, and rules. A {name} association may care about color. The wood under the shingles does not care about the association. We look at both.',
   ],
   pier: [
@@ -41,7 +41,7 @@ export const roofingBrief: Brief = {
     'Storm openings in {name} get photographs first and a temporary cover when it is safe to be up there. The permanent roof is the step after the house is protected. Coverage decisions stay with your insurer.',
   ],
   sequence: [
-    'The {name} order is inspect and photograph, say repair or replace, confirm which city or association touches the color, then do the work. Tear-off, when it happens, includes a look at the wood before the new underlayment goes down.',
+    'Here is the order we work in: inspect and photograph, say repair or replace, confirm which city or association touches the color, then do the work. Tear-off, when it happens, includes a look at the wood before the new underlayment goes down.',
     'We do not quote a {name} roof from the ground and a satellite photo. The visit is the slopes, the penetrations, and the boards we can already see. Anything hidden until tear-off is named as a possibility, not as a surprise price after the fact if we can see the clue now.',
   ],
   coda: [
@@ -96,7 +96,7 @@ export const roofingBrief: Brief = {
     {
       q: 'Will you work with my insurer on a {name} roof?',
       answers: [
-        'We photograph the roof and do the work you hire. We do not decide coverage, we do not negotiate the claim, and we are not a public adjuster. In {name} a claim is your conversation with your insurer. The roof is the construction work. Those stay separate.',
+        'We photograph the roof and do the work you hire. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage. In {name} the roof is the construction work. Those stay separate.',
         'Documentation is photos and notes. Payment of a claim is your insurer’s decision. A {name} roof that needs a tarp gets the tarp so the house stays covered. That protection is not a coverage determination.',
       ],
     },
@@ -123,7 +123,7 @@ export const replacementBrief: Brief = {
   opener: [
     'For a replacement, these houses tell us size, stories, and what the roof has to live under. {name} trees, wind, and association colors are real. The wood is still individual to the house.',
     'Replacement there means the old roof comes off. In {name} we look at the wood before the new underlayment goes down, and we say if soft wood changes the job.',
-    'For us, that house type means staging. A {name} two-story under oaks is not a one-story ranch with a wide driveway. The tear-off plan follows the lot.',
+    'For us, that house type means staging. A two-story house under oaks is not a one-story ranch with a wide driveway. The tear-off plan follows the lot.',
   ],
   pier: [
     'Older {name} roofs are often cut up. A replacement there is more flashing and more small slopes than a simple rectangle. Tear-off has to protect the yard on a tight lot. The wood on a cottage can be boards rather than plywood. We say what we find and we do not cover over rotten wood. Historic districts may care what the street sees when the new roof is on.',
@@ -151,7 +151,7 @@ export const replacementBrief: Brief = {
     'Ventilation in {name} is part of the replacement. A hot attic and a sealed ridge are how a new roof ages early. We look at intake and exhaust while the roof is open.',
   ],
   sequence: [
-    'The {name} order is inspect, confirm repair will not do, confirm permit and any color review, tear off, repair boards as agreed, then underlayment, flashing, vents, and the new material. The site is cleaned as the roof is finished.',
+    'Here is the order we work in: inspect, confirm repair will not do, confirm permit and any color review, tear off, repair boards as agreed, then underlayment, flashing, vents, and the new material. The site is cleaned as the roof is finished.',
     'We photograph the {name} roof before tear-off. Those photos are your record. During tear-off the wood is the new information. We pause the job conversation if what we find changes the job, instead of burying it.',
   ],
   coda: [
@@ -206,7 +206,7 @@ export const replacementBrief: Brief = {
     {
       q: 'Does insurance set the price of a {name} roof?',
       answers: [
-        'No. Your insurer decides what the policy pays. The price of the roof is the work of the roof. In {name} we can document conditions. We do not decide coverage and we do not negotiate the claim. An association’s color rule is also separate from the claim.',
+        'No. Your insurer decides what the policy pays. The price of the roof is the work of the roof. In {name} we can document conditions. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. An association’s color rule is also separate from the claim.',
         'A claim is not a bid. The {name} roof is priced from the inspection and the tear-off findings. You can share our photos with your insurer. What they pay is their decision.',
       ],
     },

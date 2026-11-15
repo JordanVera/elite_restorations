@@ -8,6 +8,16 @@ import { wordCount } from '@/lib/words';
 
 const phone = '(713) 909-0034';
 
+function neighborhoodTitle(name: string) {
+  const candidates = [
+    `${name} Roofing, Remodeling & Water`,
+    `${name} Roofing & Remodeling`,
+    `${name} Roofing & Water`,
+    name,
+  ];
+  return candidates.find((candidate) => titleFits(candidate)) ?? name;
+}
+
 const knownStatic = new Set([
   'houston-storm-damage',
   'emergency',
@@ -32,7 +42,7 @@ function page(
     slug,
     path: `/${slug}`,
     name,
-    title: `${name}, TX`,
+    title: neighborhoodTitle(name),
     description,
     lede,
     paragraphs,
@@ -176,8 +186,8 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
         a: 'Flat porch roofs, valleys, and the metal around old chimneys and vents. The front slope can look fine while a patched dormer lets rain into a ceiling. We photograph those spots.',
       },
       {
-        q: 'Will you negotiate the claim?',
-        a: 'We are not public adjusters. We can meet your adjuster, walk what we found, and repair what you hire. Your insurer decides coverage and payment. Check the policy or ask the insurer.',
+        q: 'Do you handle my insurance claim?',
+        a: 'We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We can meet your adjuster, walk what we found, and repair what you hire. Your insurer decides coverage and payment. Check the policy or ask the insurer.',
       },
     ],
     [

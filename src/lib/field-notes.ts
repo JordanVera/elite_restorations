@@ -39,7 +39,7 @@ export const fieldNotes: Article[] = [
       },
       {
         q: 'Who decides whether insurance pays for the leak?',
-        a: 'Your insurer. We photograph the opening and the rooms that got wet, and we can tarp and repair. We are the contractor. Your insurer decides the payment, and a public adjuster is a different license.',
+        a: 'Your insurer. We photograph the opening and the rooms that got wet, and we can tarp and repair. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides the payment.',
       },
     ],
     sections: [
@@ -306,7 +306,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'A public adjuster is a separate license, someone a homeowner can hire to represent them with the insurance company. Elite Restorations is not a public adjuster. We photograph, dry, and rebuild finishes. The claim and the payment stay with your insurer. If the loss also opened a roof or you are not sure the water was only the supply line, say so. A roof leak and a supply break are different paths, and both can wet the same slab.',
+            text: 'We are not public adjusters. We photograph, dry, and rebuild finishes. The claim and the payment stay with your insurer. If the loss also opened a roof or you are not sure the water was only the supply line, say so. A roof leak and a supply break are different paths, and both can wet the same slab.',
           },
           {
             type: 'links',
@@ -369,7 +369,7 @@ export const fieldNotes: Article[] = [
       },
       {
         q: 'Will you tell the insurance company the roof is totaled?',
-        a: 'No. We photograph what we find and we say whether we recommend a repair or a replacement for the roof in front of us. Your insurer decides coverage. We are not a public adjuster.',
+        a: 'No. We photograph what we find and we say whether we recommend a repair or a replacement for the roof in front of us. Your insurer decides coverage. We are not public adjusters.',
       },
     ],
     sections: [
@@ -386,7 +386,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Wind is the partner that actually opens the house. Hail can bruise a roof that does not leak until wind lifts a tab, breaks a seal, or drives rain at a detail that was only bruised. A ceiling stain after a hail storm may be the wind and the rain, with the hail as the reason you are looking. Both belong in the photos.',
+            text: 'Wind is what actually opens the house. Hail can bruise a roof that does not leak until wind lifts a tab, breaks a seal, or drives rain at a detail that was only bruised. A ceiling stain after a hail storm may be the wind and the rain, with the hail as the reason you are looking. Both belong in the photos.',
           },
         ],
       },
@@ -525,7 +525,7 @@ export const fieldNotes: Article[] = [
       },
       {
         q: 'Does the log decide what gets paid?',
-        a: 'No. The log is your record. Your insurer decides what the policy covers. Elite Restorations is the contractor. A public adjuster is a different license, and the claim stays with your insurer.',
+        a: 'No. The log is your record. Your insurer decides what the policy covers. Elite Restorations is the contractor.',
       },
       {
         q: 'Where is the free log on this site?',
@@ -630,7 +630,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'The log is your record, and your insurer still decides whether anything is paid. Read your policy, or ask the insurer how they want notice given. Keep stopping more water while you write it down. This is not legal advice. A public adjuster, if you hire one, is a licensed representative who can negotiate with the insurance company. That is a different role. We are the contractor. We can photograph, tarp, dry, and rebuild. The claim stays with your insurer.',
+            text: 'The log is your record, and your insurer still decides whether anything is paid. Read your policy, or ask the insurer how they want notice given. Keep stopping more water while you write it down. This is not legal advice. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We can photograph, tarp, dry, and rebuild. The claim stays with your insurer.',
           },
           {
             type: 'p',

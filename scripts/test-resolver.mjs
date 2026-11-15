@@ -1,4 +1,4 @@
-import { existsSync } from "node:fs";
+import { existsSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -22,7 +22,9 @@ export async function resolve(specifier, context, nextResolve) {
   if (base) {
     const files = [base, `${base}.ts`, `${base}.tsx`, `${base}.mjs`, path.join(base, "index.ts")];
     for (const file of files) {
-      if (existsSync(file)) return nextResolve(pathToFileURL(file).href, context);
+      if (existsSync(file) && statSync(file).isFile()) {
+        return nextResolve(pathToFileURL(file).href, context);
+      }
     }
   }
   return nextResolve(specifier, context);

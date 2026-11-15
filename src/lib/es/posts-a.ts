@@ -69,7 +69,7 @@ export const esPostsA: Article[] = [
             type: 'list',
             items: [
               'No se suba a un techo mojado o empinado.',
-              'Fotografie el jardín, los cielos y cualquier abertura antes de cubrirla.',
+              'Fotografíe el jardín, los cielos y cualquier abertura antes de cubrirla.',
               'Llame a su aseguradora si va a reclamar. Pregunte cómo quieren el aviso.',
               `Llame al ${phone} si está entrando agua o el techo está abierto.`,
             ],
@@ -85,7 +85,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Fotografie el granizo en el metal blando, los mosquiteros y las aletas del aire acondicionado si puede hacerlo desde el suelo o una escalera segura. Esas abolladuras ayudan a mostrar que cayó granizo en la casa. No prueban, por sí solas, que hay que quitar cada teja. El techo igual hay que verlo. Nosotros fotografiamos las pendientes cuando estamos arriba, incluidas las que no se ven desde el driveway.',
+            text: 'Fotografíe el granizo en el metal blando, los mosquiteros y las aletas del aire acondicionado si puede hacerlo desde el suelo o una escalera segura. Esas abolladuras ayudan a mostrar que cayó granizo en la casa. No prueban, por sí solas, que hay que quitar cada teja. El techo igual hay que verlo. Nosotros fotografiamos las pendientes cuando estamos arriba, incluidas las que no se ven desde el driveway.',
           },
           {
             type: 'links',
@@ -107,7 +107,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'No somos ajustadores públicos. No negociamos el reclamo por una cuota, y no decidimos lo que paga la póliza. Podemos estar con el ajustador en la casa, mostrar lo que encontramos y escribir un estimado de la construcción. Ese estimado es el precio del trabajo. No es un anuncio de pago. Su aseguradora decide la cobertura, el deducible y el monto.',
+            text: 'No decidimos lo que paga la póliza. Enviamos nuestro estimado a su aseguradora para que lo apruebe y lo trabajamos con el ajustador. No somos ajustadores públicos. Podemos estar con el ajustador en la casa, mostrar lo que encontramos y escribir un estimado de la construcción. Ese estimado es el precio del trabajo. No es un anuncio de pago. Su aseguradora decide la cobertura, el deducible y el monto.',
           },
           {
             type: 'p',
@@ -182,7 +182,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Las tablas deciden el pago del seguro?',
-        a: 'No. No somos ajustadores públicos. Fotografie la abertura, cúbrala y guarde el recibo. Usted presenta el reclamo si va a presentarlo. La aseguradora decide la cobertura.',
+        a: 'No. No somos ajustadores públicos. Fotografíe la abertura, cúbrala y guarde el recibo. Usted presenta el reclamo si va a presentarlo. La aseguradora decide la cobertura.',
       },
     ],
     sections: [
@@ -208,14 +208,14 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Fotografie la abertura, el cuarto y el camino del agua. Después puede tapar un hoyo chico con una cubeta y plástico si lo hace desde el piso. No suba. No clave una hoja cualquiera sobre la única evidencia y luego se pregunte qué necesitaba ver el ajustador. Toma abierta, toma cercana, y después la cubierta temporal.',
+            text: 'Fotografíe la abertura, el cuarto y el camino del agua. Después puede tapar un hoyo chico con una cubeta y plástico si lo hace desde el piso. No suba. No clave una hoja cualquiera sobre la única evidencia y luego se pregunte qué necesitaba ver el ajustador. Toma abierta, toma cercana, y después la cubierta temporal.',
           },
           {
             type: 'list',
             items: [
               'No se suba al techo.',
               'Aléjese de cielos vencidos y de agua estancada cerca de la electricidad.',
-              'Fotografie antes de cubrir, cuando pueda hacerlo con seguridad.',
+              'Fotografíe antes de cubrir, cuando pueda hacerlo con seguridad.',
               `Llame al ${phone} y diga techo, ventana, o los dos.`,
             ],
           },
@@ -375,7 +375,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'En una cocina sobre losa, el agua viaja bajo el vinil o la madera hacia el cuarto de al lado. No hay un hueco que la reciba. Saque la máquina solo si puede hacerlo sin hacer una inundación más grande, y cierre el suministro. Fotografie el fondo del gabinete antes de que alguien lo tire. Una remodelación de cocina y una fuga de lavavajillas pueden compartir el cuarto. Seque la fuga primero. Elija los gabinetes nuevos cuando el piso esté seco.',
+            text: 'En una cocina sobre losa, el agua viaja bajo el vinil o la madera hacia el cuarto de al lado. No hay un hueco que la reciba. Saque la máquina solo si puede hacerlo sin hacer una inundación más grande, y cierre el suministro. Fotografíe el fondo del gabinete antes de que alguien lo tire. Una remodelación de cocina y una fuga de lavavajillas pueden compartir el cuarto. Seque la fuga primero. Elija los gabinetes nuevos cuando el piso esté seco.',
           },
           {
             type: 'links',
@@ -412,7 +412,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Pare el agua. Corte la electricidad del cuarto mojado si puede hacerlo desde un lugar seco. Fotografie. Después seque la estructura, no solo el charco. La humedad de Houston mantiene mojadas una losa y una pared después de que la superficie se ve bien. Los ventiladores del clóset no sacan la humedad de la tablaroca. Un zoclo hinchado le está diciendo que el agua entró al muro.',
+            text: 'Pare el agua. Corte la electricidad del cuarto mojado si puede hacerlo desde un lugar seco. Fotografíe. Después seque la estructura, no solo el charco. La humedad de Houston mantiene mojadas una losa y una pared después de que la superficie se ve bien. Los ventiladores del clóset no sacan la humedad de la tablaroca. Un zoclo hinchado le está diciendo que el agua entró al muro.',
           },
           {
             type: 'p',
@@ -505,7 +505,7 @@ export const esPostsA: Article[] = [
           {
             type: 'list',
             items: [
-              'Fotografie la línea de agua y cada cuarto mojado.',
+              'Fotografíe la línea de agua y cada cuarto mojado.',
               'No mezcle el escombro de la inundación con la basura común si su aseguradora le pidió separarlo.',
               'Deje la electricidad apagada hasta que alguien que entienda el tablero diga que es seguro.',
               'Empiece a secar en cuanto se pueda entrar a la casa con seguridad.',

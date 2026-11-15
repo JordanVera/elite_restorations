@@ -33,7 +33,7 @@ export const stormPage = {
       heading: "Gulf storms, June through November.",
       paragraphs: [
         "Hurricane season runs June 1 through November 30. A Gulf storm can lift shingles from Galveston and Clear Lake inland through Pearland, Houston, and Katy, throw limbs through roofs in Memorial and The Woodlands, and push rain through flashing for days after the eye has gone. The first construction job, when the wind lets a crew up, is often a tarp so the next band stays outside. Board-up is the broken window or door. They are different tasks and a bad storm needs both.",
-        "A crew stays off the roof during lightning and in wind that is not safe. Waiting for daylight is the right call even when a ceiling is dripping. We do this for houses, apartment communities, and low commercial roofs. A property manager should have unit numbers and a way onto the roof ready. We work for the person who calls us. We are not a preferred vendor of any insurer.",
+        "A crew stays off the roof during lightning and in wind that is not safe. Waiting for daylight is the right call even when a ceiling is dripping. We do this for houses, apartment communities, and low commercial roofs. A property manager should have unit numbers and a way onto the roof ready. We work for the person who calls us. We are independent of every insurer.",
       ],
       points: [
         { title: "Tarp", body: "A cover buys time. It is not a roof and it is not a warranty. The roofing and tarp pages say what the permanent step is." },
@@ -120,7 +120,7 @@ export const stormPage = {
     { q: "Can property managers call?", a: "Yes, any time for an active emergency. Have the address, the access, and which units are wet. The commercial page is written for that call." },
     { q: "How do I make a photo log?", a: "Wide shots, close shots, the source, and the belongings, before cleanup. The guide on this site walks through a room-by-room log. It does not create coverage." },
     { q: "What does emergency tarping usually cost?", a: "Many single openings on a walkable roof plan around a few hundred dollars to about $2,000. Steeper or larger openings cost more. That is a range, not a quote, and it is not a new roof." },
-    { q: "Are you public adjusters?", a: "No. We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. Your insurer decides coverage and payment." },
+    { q: "Do you handle my insurance claim?", a: "We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage and payment." },
     { q: "Where are you, and when do you answer?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
     { q: "Which neighborhoods do you cover?", a: "Greater Houston, including Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, The Woodlands, Pearland, Clear Lake, and Galveston. The visit is at the property." },
     ...extraStormFaqs,

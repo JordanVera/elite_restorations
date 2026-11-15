@@ -67,8 +67,8 @@ export const kitchenTrade: TradeSpec = {
       `Demolition in ${a.name} starts only after the layout and the lead times are real. The cabinet order, the template sequence, and the electrical for the lights are already in the plan. A sample board is not a plan.`,
   ],
   sequence: [
-    (a) =>
-      `The visit order in ${a.name} is measure, including anything out of square, then decide what plumbing can move, then choose cabinets and surfaces, then demolish. After that comes rough work, boxes, template, stone, backsplash, the floor transition, and the paint that closes the room.`,
+    () =>
+      `Here is the order we work in: measure, including anything out of square, then decide what plumbing can move, then choose cabinets and surfaces, then demolish. After that comes rough work, boxes, template, stone, backsplash, the floor transition, and the paint that closes the room.`,
     (a) =>
       `We do not start a ${a.name} kitchen by tearing out boxes to see what happens. That part is the measuring visit. After that, demolition has a plan, a dumpster location that fits the lot, and a sequence the other trades can follow.`,
   ],

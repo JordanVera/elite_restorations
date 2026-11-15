@@ -15,9 +15,18 @@ type PhotoPickerProps = {
   setPhotos: React.Dispatch<React.SetStateAction<PickedPhoto[]>>;
   max?: number;
   disabled?: boolean;
+  locale?: "en" | "es";
 };
 
-export function PhotoPicker({ id, photos, setPhotos, max = MAX_PHOTOS, disabled }: PhotoPickerProps) {
+export function PhotoPicker({
+  id,
+  photos,
+  setPhotos,
+  max = MAX_PHOTOS,
+  disabled,
+  locale = "en",
+}: PhotoPickerProps) {
+  const es = locale === "es";
   const [busy, setBusy] = React.useState(false);
   const [problem, setProblem] = React.useState<string | null>(null);
   const latest = React.useRef(photos);
@@ -58,8 +67,20 @@ export function PhotoPicker({ id, photos, setPhotos, max = MAX_PHOTOS, disabled 
     setBusy(false);
 
     const messages: string[] = [];
-    if (files.length > room) messages.push(`Only ${max} photos can be attached, so the extra ones were skipped.`);
-    if (failed.length > 0) messages.push(`We could not read ${failed.join(", ")}. Try a JPEG or PNG.`);
+    if (files.length > room) {
+      messages.push(
+        es
+          ? `Solo se pueden adjuntar ${max} fotos, así que las demás se omitieron.`
+          : `Only ${max} photos can be attached, so the extra ones were skipped.`,
+      );
+    }
+    if (failed.length > 0) {
+      messages.push(
+        es
+          ? `No pudimos leer ${failed.join(", ")}. Pruebe un JPEG o un PNG.`
+          : `We could not read ${failed.join(", ")}. Try a JPEG or PNG.`,
+      );
+    }
     if (messages.length > 0) setProblem(messages.join(" "));
   }
 
@@ -82,7 +103,17 @@ export function PhotoPicker({ id, photos, setPhotos, max = MAX_PHOTOS, disabled 
           )}
         >
           {busy ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <Camera className="size-4" aria-hidden />}
-          {busy ? "Preparing" : photos.length > 0 ? "Add more" : "Add photos"}
+          {busy
+            ? es
+              ? "Preparando"
+              : "Preparing"
+            : photos.length > 0
+              ? es
+                ? "Agregar más"
+                : "Add more"
+              : es
+                ? "Agregar fotos"
+                : "Add photos"}
           <input
             id={id}
             type="file"
@@ -103,7 +134,11 @@ export function PhotoPicker({ id, photos, setPhotos, max = MAX_PHOTOS, disabled 
           {photos.map((photo, index) => (
             <li key={photo.id} className="relative aspect-square overflow-hidden border border-border bg-surface">
               {/* eslint-disable-next-line @next/next/no-img-element -- local blob preview */}
-              <img src={photo.previewUrl} alt={`Attached photo ${index + 1}`} className="size-full object-cover" />
+              <img
+                src={photo.previewUrl}
+                alt={es ? `Foto adjunta ${index + 1}` : `Attached photo ${index + 1}`}
+                className="size-full object-cover"
+              />
               <button
                 type="button"
                 onClick={() => remove(photo)}
@@ -111,7 +146,7 @@ export function PhotoPicker({ id, photos, setPhotos, max = MAX_PHOTOS, disabled 
                 className="absolute right-1 top-1 inline-flex size-7 items-center justify-center bg-background/90 text-foreground transition-colors hover:bg-accent hover:text-white disabled:opacity-50"
               >
                 <X className="size-4" aria-hidden />
-                <span className="sr-only">Remove photo {index + 1}</span>
+                <span className="sr-only">{es ? `Quitar foto ${index + 1}` : `Remove photo ${index + 1}`}</span>
               </button>
             </li>
           ))}

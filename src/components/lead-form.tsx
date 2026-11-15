@@ -13,9 +13,15 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
   callbackPromise,
+  callbackPromiseEs,
   claimAnswers,
+  claimAnswersEs,
   contactMethods,
+  contactMethodsEs,
+  emergencyCallback,
+  emergencyCallbackEs,
   isUrgentService,
+  leadServiceLabelsEs,
   leadServices,
   optionLabel,
   serviceForSlug,
@@ -81,6 +87,48 @@ type LeadFormProps = {
   defaultCarrier?: string;
   defaultContact?: string;
   initialPhotos?: LeadPhotoSeed[];
+  /** Emergency pages use the after-hours water line instead of the office-hours note. */
+  timing?: 'office' | 'emergency';
+};
+
+const errorCopyEs: Record<ErrorReason, { title: string; body: string }> = {
+  unavailable: {
+    title: 'El formulario en línea todavía no está disponible.',
+    body: 'No se envió nada. Lo que escribió sigue aquí. Llámenos y lo tomamos desde ahí.',
+  },
+  'rate-limited': {
+    title: 'Fueron varios intentos seguidos.',
+    body: 'Espere unos minutos e inténtelo de nuevo, o llámenos y lo tomamos desde ahí.',
+  },
+  failed: {
+    title: 'No pudimos enviar esta solicitud.',
+    body: 'No se envió nada. Lo que escribió sigue aquí. Llámenos y lo tomamos desde ahí.',
+  },
+  'too-fast': {
+    title: 'Espere un momento y envíela otra vez.',
+    body: 'No se envió nada. Lo que escribió sigue aquí. También puede llamar.',
+  },
+  expired: {
+    title: 'Esta página lleva un rato abierta.',
+    body: 'Actualice la página y envíela otra vez, o llámenos. Lo que escribió sigue en el formulario.',
+  },
+};
+
+const schemaErrorsEs: Record<string, string> = {
+  'That email is too long.': 'Ese correo es demasiado largo.',
+  'Please enter a valid email address.': 'Escriba un correo válido.',
+  'That phone number is too long.': 'Ese teléfono es demasiado largo.',
+  'That name is too long.': 'Ese nombre es demasiado largo.',
+  'Please attach no more than 6 photos.': 'Adjunte no más de 6 fotos.',
+  'Choose how we should reach you.': 'Elija cómo debemos comunicarnos.',
+  'That address is too long.': 'Esa dirección es demasiado larga.',
+  'Enter a street address or a 5-digit ZIP.': 'Escriba una dirección o un código postal de 5 dígitos.',
+  'Choose the kind of work.': 'Elija el tipo de trabajo.',
+  'Tell us if this is an insurance claim.': 'Díganos si es un reclamo de seguro.',
+  'That carrier name is too long.': 'Ese nombre de aseguradora es demasiado largo.',
+  'Please keep this under 2,000 characters.': 'Manténgalo en menos de 2,000 caracteres.',
+  'Add an email if you want us to write back that way.': 'Agregue un correo si quiere que le respondamos por ahí.',
+  'Add an email, or choose phone or text.': 'Agregue un correo, o elija llamada o texto.',
 };
 
 const errorCopy: Record<ErrorReason, { title: string; body: string }> = {
@@ -176,10 +224,99 @@ export function LeadForm({
   defaultCarrier,
   defaultContact,
   initialPhotos,
+  timing = 'office',
 }: LeadFormProps) {
   const photosEnabled = showPhotos ?? intent === 'estimate';
   const partner = intent === 'partner';
+  const es = locale === 'es';
   const copy = contactIdentityCopy[locale];
+  const claimOptions = es ? claimAnswersEs : claimAnswers;
+  const contactOptions = es ? contactMethodsEs : contactMethods;
+  const hoursNote =
+    timing === 'emergency'
+      ? es
+        ? emergencyCallbackEs
+        : emergencyCallback
+      : es
+        ? callbackPromiseEs
+        : callbackPromise;
+  const ui = es
+    ? {
+        gotIt: 'Recibimos su solicitud.',
+        haveIt: 'Tenemos lo que envió. Si nos necesita antes, llame al',
+        photosNone: 'No pudimos adjuntar sus fotos.',
+        photosSome: (saved: number, total: number) => `Adjuntamos ${saved} de ${total} fotos.`,
+        emailThem: 'Envíelas a',
+        addThem: 'y las agregamos a su solicitud.',
+        insuranceLog: 'Empiece su registro de fotos del seguro',
+        another: 'Enviar otra solicitud',
+        noJs: 'Este formulario necesita JavaScript para enviarse. También puede llamar al',
+        email: 'Correo',
+        optional: 'opcional',
+        company: 'Empresa o inmobiliaria',
+        address: 'Dirección o código postal',
+        addressPlaceholder: 'Dirección o código postal',
+        service: 'Servicio',
+        chooseService: 'Elija un servicio',
+        urgent:
+          'Si el agua sigue entrando, o el techo está abierto, llame primero al',
+        urgentAfter: 'Puede terminar este formulario cuando cuelgue.',
+        claim: '¿Es un reclamo de seguro?',
+        carrier: 'Aseguradora',
+        contact: 'Cómo prefiere que lo contactemos',
+        message: 'Mensaje',
+        photosAttached: (n: number) => `Fotos adjuntas (${n})`,
+        hidePhotos: 'Ocultar fotos',
+        addPhotos: 'Agregar fotos (opcional)',
+        photoHelp:
+          'Unas fotos del daño, o del cuarto, nos ayudan a prepararnos. Puede agregar hasta 6.',
+        honeypot: 'Deje este campo vacío',
+        sending: 'Enviando',
+        emailThis: 'Envíenos este mensaje por correo',
+        send: 'Enviar solicitud',
+        partnerSend: 'Unirse al programa para agentes',
+        preferCall: '¿Prefiere llamar?',
+        estimateRequest: 'Solicitud de estimado',
+        partnerRequest: 'Solicitud del programa para agentes',
+        uploading: (index: number, total: number) => `Subiendo foto ${index} de ${total}`,
+      }
+    : {
+        gotIt: 'We got your request.',
+        haveIt: 'We have what you sent. If you need us sooner, call',
+        photosNone: 'We could not attach your photos.',
+        photosSome: (saved: number, total: number) => `We attached ${saved} of ${total} photos.`,
+        emailThem: 'Email them to',
+        addThem: 'and we will add them to your request.',
+        insuranceLog: 'Start your insurance photo log',
+        another: 'Send another request',
+        noJs: 'This form needs JavaScript to send. You can also call',
+        email: 'Email',
+        optional: 'optional',
+        company: 'Company or brokerage',
+        address: 'Address or ZIP',
+        addressPlaceholder: 'Street address or ZIP',
+        service: 'Service',
+        chooseService: 'Choose a service',
+        urgent: 'If water is still coming in, or the roof is open, call',
+        urgentAfter: 'You can finish this form after you hang up.',
+        claim: 'Is this an insurance claim?',
+        carrier: 'Insurance company',
+        contact: 'Preferred contact',
+        message: 'Message',
+        photosAttached: (n: number) => `Photos attached (${n})`,
+        hidePhotos: 'Hide photos',
+        addPhotos: 'Add photos (optional)',
+        photoHelp: 'A few photos of the damage, or of the room, help us get ready. You can add up to 6.',
+        honeypot: 'Leave this field empty',
+        sending: 'Sending',
+        emailThis: 'Email us this message',
+        send: 'Send request',
+        partnerSend: 'Join the Realtor program',
+        preferCall: 'Prefer to call?',
+        estimateRequest: 'Estimate request',
+        partnerRequest: 'Realtor program request',
+        uploading: (index: number, total: number) => `Uploading photo ${index} of ${total}`,
+      };
   const fid = (name: string) => `${idPrefix}-${name}`;
   const [values, setValues] = React.useState<Values>({
     name: defaultName ?? '',
@@ -251,7 +388,9 @@ export function LeadForm({
       if (!check.success) {
         for (const issue of check.error.issues) {
           const key = issue.path[0] as keyof FieldErrors | undefined;
-          if (key && key !== 'photos' && key !== 'website' && !next[key]) next[key] = issue.message;
+          if (key && key !== 'photos' && key !== 'website' && !next[key]) {
+            next[key] = es ? (schemaErrorsEs[issue.message] ?? issue.message) : issue.message;
+          }
         }
       }
       if (identity.name) next.name = identity.name;
@@ -262,7 +401,9 @@ export function LeadForm({
         values.email.trim().length === 0 &&
         !next.email
       ) {
-        next.email = 'Add an email, or choose phone or text.';
+        next.email = es
+          ? schemaErrorsEs['Add an email, or choose phone or text.']
+          : 'Add an email, or choose phone or text.';
       }
       setErrors(next);
       setStatus({ kind: 'idle' });
@@ -286,7 +427,7 @@ export function LeadForm({
           if (uploaded.current.has(photo.id)) continue;
           setStatus({
             kind: 'submitting',
-            step: `Uploading photo ${index + 1} of ${photos.length}`,
+            step: ui.uploading(index + 1, photos.length),
           });
           const result = await uploadLeadPhoto(photo.blob);
           if (!result.ok) {
@@ -297,7 +438,7 @@ export function LeadForm({
         }
       }
 
-      setStatus({ kind: 'submitting', step: 'Sending' });
+      setStatus({ kind: 'submitting', step: ui.sending });
       const pathnames = trap
         ? []
         : photos.flatMap((photo) => uploaded.current.get(photo.id) ?? []);
@@ -387,9 +528,9 @@ export function LeadForm({
         role="status"
         className="border border-border p-6 outline-none sm:p-8"
       >
-        <p className="font-display text-4xl">We got your request.</p>
+        <p className="font-display text-4xl">{ui.gotIt}</p>
         <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">
-          We have what you sent. If you need us sooner, call{' '}
+          {ui.haveIt}{' '}
           <a
             href={site.phone.href}
             className="text-foreground underline underline-offset-[0.4em] hover:text-accent-ink"
@@ -398,19 +539,17 @@ export function LeadForm({
           </a>
           .
         </p>
-        <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">{callbackPromise}</p>
+        <p className="mt-4 max-w-[48ch] leading-relaxed text-muted-foreground">{hoursNote}</p>
         {photosTotal > 0 && photosSaved < photosTotal && (
           <p className="mt-4 max-w-[48ch] leading-relaxed">
-            {photosSaved === 0
-              ? 'We could not attach your photos.'
-              : `We attached ${photosSaved} of ${photosTotal} photos.`}{' '}
+            {photosSaved === 0 ? ui.photosNone : ui.photosSome(photosSaved, photosTotal)}{' '}
             <a
               href={`mailto:${site.email}`}
               className="underline underline-offset-[0.5em] hover:text-accent-ink"
             >
-              Email them to {site.email}
+              {ui.emailThem} {site.email}
             </a>{' '}
-            and we will add them to your request.
+            {ui.addThem}
           </p>
         )}
         {showLog && (
@@ -418,7 +557,7 @@ export function LeadForm({
             href="/insurance-log"
             className="mt-8 inline-flex items-center gap-2 underline underline-offset-[0.5em] hover:text-accent-ink"
           >
-            Start your insurance photo log
+            {ui.insuranceLog}
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
         )}
@@ -429,20 +568,20 @@ export function LeadForm({
   const submitting = status.kind === 'submitting';
   const stack = density === 'compact' ? 'space-y-6' : 'space-y-8';
   const askCarrier = values.claim === 'yes' || values.claim === 'not-sure';
-  const buttonLabel = submitLabel ?? (partner ? 'Become a partner' : 'Send request');
+  const buttonLabel = submitLabel ?? (partner ? ui.partnerSend : ui.send);
 
   return (
     <form
       ref={formRef}
       onSubmit={onSubmit}
       noValidate
-      aria-label={partner ? 'Partner request' : 'Estimate request'}
+      aria-label={partner ? ui.partnerRequest : ui.estimateRequest}
       aria-busy={submitting}
       className={cn('relative', stack)}
     >
       <noscript>
         <p className="text-sm leading-relaxed">
-          This form needs JavaScript to send. You can also call{' '}
+          {ui.noJs}{' '}
           <a href={site.phone.href} className="underline underline-offset-[0.4em]">
             {site.phone.display}
           </a>
@@ -497,8 +636,9 @@ export function LeadForm({
         <Field
           id={fid('email')}
           field="email"
-          label="Email"
+          label={ui.email}
           optional={!partner}
+          optionalLabel={ui.optional}
           error={errors.email}
         >
           <Input
@@ -515,7 +655,7 @@ export function LeadForm({
           />
         </Field>
         {partner ? (
-          <Field id={fid('company')} field="company" label="Company or brokerage" error={errors.company}>
+          <Field id={fid('company')} field="company" label={ui.company} error={errors.company}>
             <Input
               id={fid('company')}
               name="organization"
@@ -528,14 +668,21 @@ export function LeadForm({
             />
           </Field>
         ) : (
-          <Field id={fid('address')} field="address" label="Address or ZIP" error={errors.address}>
+          <Field
+            id={fid('address')}
+            field="address"
+            label={ui.address}
+            error={errors.address}
+            required
+            requiredLabel={copy.required}
+          >
             <Input
               id={fid('address')}
               name="street-address"
               autoComplete="street-address"
               required
               disabled={submitting}
-              placeholder="Street address or ZIP"
+              placeholder={ui.addressPlaceholder}
               value={values.address}
               onChange={onText('address')}
               {...described(fid('address'), Boolean(errors.address), true)}
@@ -545,7 +692,14 @@ export function LeadForm({
       </div>
 
       {!partner && (
-        <Field id={fid('service')} field="service" label="Service" error={errors.service}>
+        <Field
+          id={fid('service')}
+          field="service"
+          label={ui.service}
+          error={errors.service}
+          required
+          requiredLabel={copy.required}
+        >
           <div className="relative">
             <select
               id={fid('service')}
@@ -557,10 +711,10 @@ export function LeadForm({
               className={selectClass}
               {...described(fid('service'), Boolean(errors.service), true)}
             >
-              <option value="">Choose a service</option>
+              <option value="">{ui.chooseService}</option>
               {leadServices.map((service) => (
                 <option key={service.value} value={service.value}>
-                  {service.label}
+                  {es ? leadServiceLabelsEs[service.value] : service.label}
                 </option>
               ))}
             </select>
@@ -574,14 +728,15 @@ export function LeadForm({
 
       {!partner && isUrgentService(values.service) && (
         <p className="max-w-[52ch] text-sm leading-relaxed">
-          If water is still coming in, or the roof is open, call{' '}
+          {ui.urgent}{' '}
           <a
             href={site.phone.href}
             className="underline underline-offset-[0.4em] hover:text-accent-ink"
           >
             {site.phone.display}
-          </a>{' '}
-          first. You can finish this form after you hang up.
+          </a>
+          {es ? '. ' : ' first. '}
+          {ui.urgentAfter}
         </p>
       )}
 
@@ -589,8 +744,8 @@ export function LeadForm({
         <ChoiceGroup
           name={fid('claim')}
           field="claim"
-          legend="Is this an insurance claim?"
-          options={claimAnswers}
+          legend={ui.claim}
+          options={claimOptions}
           value={values.claim}
           onChange={set('claim')}
           error={errors.claim}
@@ -603,8 +758,9 @@ export function LeadForm({
         <Field
           id={fid('carrier')}
           field="carrier"
-          label="Insurance company"
+          label={ui.carrier}
           optional
+          optionalLabel={ui.optional}
           error={errors.carrier}
         >
           <Input
@@ -622,8 +778,8 @@ export function LeadForm({
       <ChoiceGroup
         name={fid('contact')}
         field="contactMethod"
-        legend="Preferred contact"
-        options={contactMethods}
+        legend={ui.contact}
+        options={contactOptions}
         value={values.contactMethod}
         onChange={set('contactMethod')}
         error={errors.contactMethod}
@@ -634,8 +790,9 @@ export function LeadForm({
       <Field
         id={fid('message')}
         field="message"
-        label="Message"
+        label={ui.message}
         optional={!partner}
+        optionalLabel={ui.optional}
         error={errors.message}
       >
         <Textarea
@@ -660,20 +817,21 @@ export function LeadForm({
             onClick={() => setPhotosOpen((open) => !open)}
           >
             {photos.length > 0
-              ? `Photos attached (${photos.length})`
+              ? ui.photosAttached(photos.length)
               : photosOpen
-                ? 'Hide photos'
-                : 'Add photos (optional)'}
+                ? ui.hidePhotos
+                : ui.addPhotos}
           </button>
           <div id={fid('photos-panel')} hidden={!photosOpen} className="mt-4">
             <p className="mb-4 max-w-[52ch] text-sm text-muted-foreground">
-              A few photos of the damage, or of the room, help us get ready. You can add up to 6.
+              {ui.photoHelp}
             </p>
             <PhotoPicker
               id={fid('photos')}
               photos={photos}
               setPhotos={setPhotos}
               disabled={submitting}
+              locale={locale}
             />
           </div>
         </div>
@@ -683,7 +841,7 @@ export function LeadForm({
         aria-hidden="true"
         className="pointer-events-none absolute left-0 top-0 -z-10 h-0 w-0 overflow-hidden"
       >
-        <label htmlFor={fid('hp')}>Leave this field empty</label>
+        <label htmlFor={fid('hp')}>{ui.honeypot}</label>
         <input
           ref={honeypotRef}
           id={fid('hp')}
@@ -701,13 +859,13 @@ export function LeadForm({
 
       <div ref={statusRef} tabIndex={-1} role="status" aria-live="polite" className="outline-none">
         {submitting && (
-          <p className="sr-only">{status.kind === 'submitting' ? status.step : 'Sending'}</p>
+          <p className="sr-only">{status.kind === 'submitting' ? status.step : ui.sending}</p>
         )}
         {status.kind === 'error' && (
           <div role="alert" className="border border-accent-ink p-6">
-            <p className="font-display text-2xl">{errorCopy[status.reason].title}</p>
+            <p className="font-display text-2xl">{(es ? errorCopyEs : errorCopy)[status.reason].title}</p>
             <p className="mt-3 max-w-[52ch] leading-relaxed text-muted-foreground">
-              {errorCopy[status.reason].body}
+              {(es ? errorCopyEs : errorCopy)[status.reason].body}
             </p>
             <div className="mt-5 flex flex-col items-start gap-4">
               <a
@@ -722,7 +880,7 @@ export function LeadForm({
                 className="inline-flex items-center gap-2 text-sm underline underline-offset-[0.5em] hover:text-accent-ink"
               >
                 <Mail className="size-4" aria-hidden />
-                Email us this message
+                {ui.emailThis}
               </a>
             </div>
           </div>
@@ -730,8 +888,8 @@ export function LeadForm({
       </div>
 
       <div className="space-y-5">
-        <p className="max-w-[52ch] text-sm leading-relaxed text-muted-foreground">{callbackPromise}</p>
-        <FormConsent />
+        <p className="max-w-[52ch] text-sm leading-relaxed text-muted-foreground">{hoursNote}</p>
+        <FormConsent locale={locale} />
         <div className="flex flex-col items-start gap-4">
           <Button
             type="submit"
@@ -742,7 +900,7 @@ export function LeadForm({
           >
             {submitting ? (
               <>
-                {status.kind === 'submitting' ? status.step : 'Sending'}
+                {status.kind === 'submitting' ? status.step : ui.sending}
                 <Loader2 className="animate-spin" aria-hidden />
               </>
             ) : (
@@ -757,7 +915,7 @@ export function LeadForm({
             className="inline-flex items-center gap-2 text-sm underline underline-offset-[0.4em] hover:text-accent-ink"
           >
             <Phone className="size-4" aria-hidden />
-            Prefer to call? {site.phone.display}
+            {ui.preferCall} {site.phone.display}
           </a>
         </div>
       </div>

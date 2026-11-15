@@ -312,7 +312,7 @@ export const restorationFaqs: Faq[] = [
   },
   {
     q: "Do you restore apartments and commercial buildings too?",
-    a: "Yes. Managers and owners can call any time if the emergency is still going. Have the address, the access, and which units are wet. Houses use the same trades. We are a family company in Houston since 1993. We are not a preferred vendor for an insurance company.",
+    a: "Yes. Managers and owners can call any time if the emergency is still going. Have the address, the access, and which units are wet. Houses use the same trades. We are a family company in Houston since 1993. We are independent of every insurer.",
   },
 ];
 

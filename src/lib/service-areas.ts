@@ -43,7 +43,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Bellaire: {
     setting:
-      'Bellaire sits inside the Loop on smaller lots, with mid-century houses and newer rebuilds. Rooms are often tight, and older walls are not always square.',
+      'Bellaire sits on both sides of the West Loop, on smaller lots, with mid-century houses and newer rebuilds. Rooms are often tight, and older walls are not always square.',
     clause: 'smaller lots, mid-century houses, and newer rebuilds',
   },
   Memorial: {
