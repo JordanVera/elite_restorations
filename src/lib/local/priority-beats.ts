@@ -368,7 +368,7 @@ const laterBeats: Record<string, Record<string, string>> = {
     pearland:
       'Pearland kitchens in the newer sections were built open, on slabs that are often post-tension. The work is the cabinets, the island, and the light, more often than a wall coming down. The older town is a different room, and we measure that one.',
     richmond:
-      'Richmond splits in two. An open kitchen in a new section toward the Grand Parkway is not the closed room in a house near the courthouse. The slab, when it is post-tension, decides whether the sink can move.',
+      'Richmond has two kinds of kitchens. A new house toward the Grand Parkway is often already open. A house near the courthouse may still have a closed kitchen. If the slab is post-tension, that decides whether the sink can move.',
   },
   'bathroom-remodeling': {
     pearland:
@@ -398,13 +398,13 @@ const laterBeats: Record<string, Record<string, string>> = {
     pearland:
       'Tile is already common on Pearland slabs. A replacement starts with flatness. Large porcelain shows every ridge, and a wet room is waterproofed before the finish.',
     richmond:
-      'A Richmond tile floor might be a new open first floor or a smaller older room. The substrate is checked either way. A shower is a waterproof assembly, not the same number as the living room.',
+      'A Richmond tile floor might be a new open first floor or a smaller older room. We check the floor underneath either way. A shower is waterproofed before the tile, and it is not priced like a living-room floor.',
   },
   'vinyl-flooring': {
     pearland:
       'Vinyl is a common wood-look floor on a Pearland slab once carpet comes out. Glue-down is often steadier on concrete. We check that the slab is flat and dry first.',
     richmond:
-      'Vinyl on a newer Richmond slab needs a flat, dry surface. An older house may have a different subfloor. We do not order the plank from the city name.',
+      'Vinyl on a newer Richmond slab needs a flat, dry surface. An older house may have a different floor underneath. We choose the plank after we see your floor.',
   },
   'laminate-flooring': {
     pearland:
@@ -426,13 +426,13 @@ const laterBeats: Record<string, Record<string, string>> = {
   },
   roofing: {
     pearland:
-      'Pearland roofs repeat a suburban shape, and an association in the master-planned sections often reviews color. Clear Creek’s watershed is a drainage fact. The roof we inspect is still this house, slope by slope.',
+      'Pearland roofs often share a suburban shape, and an association in the master-planned sections often reviews the color. Parts of the city drain toward Clear Creek. We still inspect your roof, slope by slope.',
     richmond:
       'A roof near the Richmond courthouse and a roof in a new section toward the Grand Parkway are not the same age. We photograph the slopes and say whether a repair will hold.',
   },
   'roof-replacement': {
     pearland:
-      'A Pearland replacement goes through the city, and often an association color review. Tear-off, the wood, underlayment, flashing, and vents are the roof. The Houston cost page is a range, not this house.',
+      'A Pearland replacement goes through the city, and often through an association color review. The work is the tear-off, the wood, the underlayment, the flashing, and the vents. The Houston cost page is only a planning range. Your roof is priced after we see it.',
     richmond:
       'Replacing a Richmond roof follows the address: the city when you are inside Richmond, and the association when the section has one. Soft boards are discussed when tear-off shows them.',
   },
@@ -440,13 +440,13 @@ const laterBeats: Record<string, Record<string, string>> = {
     pearland:
       'A Pearland tarp is for an opening, not a finished roof. Spring hail and tropical wind are both reasons the call comes. We cover what we can safely reach and photograph it first.',
     richmond:
-      'If rain is entering a Richmond roof, the cover comes before a conversation about shingle color. We say when the climb has to wait for a safer hour. The permanent roof is a separate visit.',
+      'If rain is coming through a Richmond roof, we cover the opening before we talk about shingle color. If the roof is not safe to climb, we wait. The permanent roof is a separate visit.',
   },
   siding: {
     pearland:
       'Pearland fronts are often brick with siding accents, and an association may already have approved a color. We match the faded board on the wall, or we say the whole run needs to be replaced.',
     richmond:
-      'Siding in a newer Richmond section may be a reviewed color. An older house near downtown is more likely a repair of the boards that are there. South and west walls fade first.',
+      'In a newer Richmond section, the association may need to approve a siding color. An older house near downtown is more often a repair of the boards already on the wall. South and west walls fade first.',
   },
   'patios-decks': {
     pearland:
@@ -458,19 +458,19 @@ const laterBeats: Record<string, Record<string, string>> = {
     pearland:
       'A Pearland slab leak shows up at the base of the drywall. Some neighborhoods near Clear Creek have taken tropical-storm water, and many houses have not. We start with where the water entered this house.',
     richmond:
-      'The Brazos floodplain is real on some Richmond tracts and irrelevant on others. A supply-line leak on a slab is still the more ordinary call. We map the one that happened and dry before we rebuild.',
+      'Some Richmond lots sit in the Brazos floodplain, and many do not. A supply-line leak on a slab is still the more common call. We follow the water that actually got in, and we dry the house before we rebuild.',
   },
   'insurance-claims': {
     pearland:
-      'A Pearland claim might be hail on a roof or a leak on a slab. We photograph the conditions. We are not public adjusters. Your insurer decides coverage. An association color rule is a separate conversation.',
+      'A Pearland claim might be hail on a roof or a leak on a slab. We document the damage, meet with your adjuster, and work with your insurance company on the scope of repairs as your contractor. We are not public adjusters. Your insurer makes the final coverage decision. An association color approval, if one is required, is separate from that scope.',
     richmond:
-      'Wind, hail, and water near the Brazos can be different policies. We keep the photos for this Richmond address straight. We are not public adjusters. Your insurer decides what is paid.',
+      'Wind, hail, and water near the Brazos can fall under different parts of a policy. We document the damage, meet with your adjuster, and work with your insurance company on the scope of repairs as your contractor. We are not public adjusters. Your insurer makes the final coverage decision.',
   },
   'painting-drywall-repair': {
     pearland:
       'Pearland rooms open onto each other, so a paint sheen has to match where you can see two rooms at once. After a leak, the wall is confirmed dry before it is closed.',
     richmond:
-      'An older Richmond wall may be a different texture from the drywall in a new section. We blend to the surface that is there, and we do not coat a damp wall to hit a date.',
+      'An older Richmond wall may have a different texture from the drywall in a new section. We blend the repair into the surface that is there, and we do not paint a damp wall just to meet a date.',
   },
 };
 

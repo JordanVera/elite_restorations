@@ -7,7 +7,7 @@ export const homeRestorationEn = {
   title: 'Home restoration in Houston',
   paragraphs: [
     'Home restoration is the work that follows water, a storm, or a roof that let rain in. The aim is a dry house you can use again. A remodel can wait until the structure is dry.',
-    'Elite Restorations is a family-owned restoration company in Houston, Texas, serving Houston since 1993. A restore company in Houston should dry the structure before anyone talks about new finishes. Restoration companies in Houston do not all do the same job. We dry water damage, cover an open roof, board up a broken opening, and repair what the water ruined. The office is at 511 Crestwater Ct. Call (713) 909-0034.',
+    'Elite Restorations is a family-owned restoration company in Houston, Texas. We have been serving Houston since 1993. Restoration companies in Houston do not all do the same job. We dry water damage, cover an open roof, board up a broken opening, and repair what the water ruined. Our office is in west Houston (77082). Call (713) 909-0034.',
     'A house in Crosby had water damage found in January 2025. The kitchen floor came out down to a stained subfloor, and dehumidifiers and air movers dried the kitchen and bathroom. Drying and repairs ran from February to March 2025, and the kitchen and bath were rebuilt by April 2025.',
   ],
   links: [

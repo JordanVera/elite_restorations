@@ -30,30 +30,30 @@ function foundationFact(foundation: Foundation) {
     case 'pier':
       return 'Older houses are often pier-and-beam, with a crawlspace under the floor.';
     case 'slab':
-      return 'Concrete slabs are the usual foundation.';
+      return 'Most houses sit on a concrete slab.';
     case 'mixed':
       return 'Pier-and-beam houses and slab houses are both common, sometimes on the same street.';
     case 'post-tension':
-      return 'Newer slabs are often post-tension, with cables in the concrete.';
+      return 'Newer slabs often have post-tension cables running through the concrete.';
     case 'raised':
-      return 'Many houses are raised for wind and water, which is a different structure from a Houston slab.';
+      return 'Many houses are raised for wind and water, which is different from a typical Houston slab.';
     default:
-      return 'The foundation is confirmed at the address.';
+      return 'We confirm the foundation when we see your house.';
   }
 }
 
 function weatherFact(weather: Weather) {
   switch (weather) {
     case 'bayou':
-      return 'Bayous and flat streets pond in hard rain. Hurricane season runs from June 1 through November 30.';
+      return 'Bayous and flat streets hold water in a hard rain. Hurricane season runs from June 1 through November 30.';
     case 'reservoir':
-      return 'Low ground near the Addicks and Barker pools has taken storm water. Higher pads have not all seen the same water.';
+      return 'Low ground near the Addicks and Barker reservoirs has flooded in past storms. Higher lots nearby have not all seen the same water.';
     case 'coastal':
-      return 'Coastal wind and salt air are part of exterior work. Hurricane season runs from June 1 through November 30.';
+      return 'Wind off the coast and salt air wear on roofs, siding, and paint. Hurricane season runs from June 1 through November 30.';
     case 'creek':
-      return 'Creeks and detention ponds hold rain. A pond is not a promise that a street never floods.';
+      return 'Creeks run through parts of the area. Detention ponds help with heavy rain, but low streets can still flood in a big storm.';
     case 'citywide':
-      return 'Flat clay, street flooding in hard rain, spring hail, and tropical storms are the regional weather.';
+      return 'This part of Houston has clay soil, streets that flood in a hard rain, spring hail, and tropical storms.';
     default:
       return 'Spring hail and tropical rain are the regional storms.';
   }
@@ -62,45 +62,45 @@ function weatherFact(weather: Weather) {
 function interiorCut(area: AreaProfile) {
   switch (area.foundation) {
     case 'pier':
-      return 'A drain in a pier-and-beam house can move through the crawlspace. The old walls still decide whether a room can open.';
+      return 'In a pier-and-beam house, a drain can often move through the crawlspace. The old walls still decide whether a room can open up.';
     case 'post-tension':
-      return 'Moving a drain means locating the cables in the slab before anyone cuts. A remodel that keeps the fixtures in place does not need that cut.';
+      return 'If a drain has to move, we locate the cables in the slab before anyone cuts the concrete. If the fixtures stay where they are, the slab can stay intact.';
     case 'raised':
-      return 'The height of the house changes how materials reach the room. The plumbing is still traced at the address.';
+      return 'On a raised house, getting materials up to the room is part of the job. We still trace the plumbing at your house.';
     case 'mixed':
-      return 'One house can be pier-and-beam and the next a slab. We look before we say a sink or a shower can move.';
+      return 'One house can be pier-and-beam and the next one a slab. We look before we say a sink or a shower can move.';
     default:
-      return 'On a slab, a sink or a shower that has to move means cutting concrete. A same-place remodel leaves the drain where it is.';
+      return 'On a slab, moving a sink or a shower means cutting concrete. If the fixtures stay put, the drain stays put.';
   }
 }
 
 function tradeLine(slug: string) {
   const lines: Record<string, string> = {
     'kitchen-remodeling':
-      'On a kitchen, the path from the sink to the range is settled before demolition.',
-    'bathroom-remodeling': 'On a bath, waterproofing goes in before the finish tile.',
-    backsplash: 'On a backsplash, the pattern is centered before the tile is set in mortar.',
-    countertops: 'On a counter, the template is taken from the cabinets that are actually set.',
-    'wood-flooring': 'On a wood floor, new boards acclimate in the house before they are fastened.',
-    'tile-flooring': 'On a tile floor, the substrate has to be flat, and a wet room is waterproofed first.',
-    'vinyl-flooring': 'On vinyl, the slab or the wood underneath has to be flat and dry.',
+      'For a kitchen, we settle the path from the sink to the range before demolition starts.',
+    'bathroom-remodeling': 'For a bathroom, waterproofing goes in before the finish tile.',
+    backsplash: 'For a backsplash, we center the pattern before the tile goes into the mortar.',
+    countertops: 'For a countertop, we make the template from the cabinets that are actually installed.',
+    'wood-flooring': 'New wood stays in the house for a while before we fasten it, so it can adjust to the humidity.',
+    'tile-flooring': 'Tile needs a flat floor underneath, and a wet room is waterproofed before the finish tile.',
+    'vinyl-flooring': 'Vinyl needs a flat, dry floor underneath, whether that floor is concrete or wood.',
     'laminate-flooring':
-      'On laminate, the boxes acclimate in the house, and a bath stays a tile floor.',
-    carpentry: 'On carpentry, trim and built-ins are sized to the wall that is there.',
-    'tile-fireplaces': 'On a fireplace, the surround is heat-rated even if the firebox is rarely lit.',
-    roofing: 'On a roof, every slope is photographed before anyone says a repair will hold.',
+      'The laminate stays in the house before we install it, so the planks can adjust to the room.',
+    carpentry: 'Trim and built-ins are cut to fit the wall you already have.',
+    'tile-fireplaces': 'Fireplace tile is made for heat, even if you rarely light a fire.',
+    roofing: 'We photograph every slope before we say whether a repair will hold.',
     'roof-replacement':
-      'On a replacement, tear-off is how the wood underneath is seen, and soft boards are called out then.',
+      'A replacement starts by taking the old roof off, so we can see the wood and point out anything soft.',
     'roofing-emergency-tarp-repair':
-      'On an emergency roof, the cover stops the next rain. It is not the finished roof.',
-    siding: 'On siding, a repair is matched to the faded board, not to a chip from the year the house was built.',
-    'patios-decks': 'On a deck or a patio, water has to leave the wall, and the footings are part of the job.',
+      'An emergency cover keeps the next rain out. It is not a finished roof.',
+    siding: 'A siding repair is matched to the faded boards on your house, not to a sample from the year it was built.',
+    'patios-decks': 'A deck or patio has to send water away from the wall, and the footings are part of that work.',
     'water-damage-restoration':
-      'On a water call, we map past the stain, then dry the structure before it is rebuilt.',
+      'When water gets in, we follow it past the stain you can see, then dry the structure before we rebuild.',
     'insurance-claims':
-      'On a claim file, we photograph what we can see. We are not public adjusters. Your insurer decides coverage.',
+      'We document the damage, meet with your adjuster, and work with your insurance company on the scope of repairs as your contractor. We are not public adjusters. Your insurer makes the final coverage decision.',
     'painting-drywall-repair':
-      'On paint and drywall, a wall that was opened for a leak is confirmed dry before it is closed.',
+      'If a wall was opened because of a leak, we make sure it is dry before we close it and paint.',
   };
   const line = lines[slug];
   if (!line) throw new Error(`Missing trade line for ${slug}`);
@@ -110,27 +110,27 @@ function tradeLine(slug: string) {
 function kindLine(area: AreaProfile, kind: ServiceKind, variant: number) {
   const clay =
     variant % 2 === 0
-      ? 'Clay soil under these houses moves as it wets and dries, so a door or a floor can be out of line even when the street looks flat.'
-      : 'Gulf Coast clay under these lots shrinks and swells with moisture. We measure the house instead of assuming the slab or the piers are still where they started.';
+      ? 'The clay soil under these houses swells when it is wet and shrinks when it dries, so a door can stick or a floor can slope even when the street looks flat.'
+      : 'The clay under these lots shrinks and swells with the moisture. We measure your house instead of assuming the slab or the piers have not moved.';
   switch (kind) {
     case 'water':
       return variant % 2 === 0
-        ? `Gulf humidity is why a dry-out here uses dehumidifiers with the air movers. ${clay} Water that rose from outside and water from a supply line are different visits.`
-        : `A wall that feels dry can still read wet at the base. ${clay} We meter past the stain before anything is closed up.`;
+        ? `Gulf humidity is why drying a house here takes dehumidifiers along with fans. ${clay} Water that came in from outside and water from a supply line are two different jobs.`
+        : `A wall can feel dry to your hand and still be wet along the floor. ${clay} We check for moisture past the stain before we close anything up.`;
     case 'roof':
       return area.trees
-        ? `Spring hail bruises shingles, and limbs from the trees here land in valleys. Hurricane season, June 1 through November 30, is when wind-driven rain finds those openings. ${clay}`
-        : `Spring hail and, from June 1 through November 30, tropical wind are the storms that mark a roof. South and west slopes age faster. ${clay}`;
+        ? `Spring hail bruises shingles, and limbs from the trees land in the valleys. From June 1 through November 30, tropical wind can drive rain into those openings. ${clay}`
+        : `Spring hail, and tropical wind from June 1 through November 30, are the storms that usually damage a roof here. South and west slopes wear out first. ${clay}`;
     case 'floor':
       return variant % 2 === 0
-        ? `Humidity in a Gulf Coast summer is why new wood and laminate boxes sit in the house before they are installed. ${clay} A bath stays a tile floor.`
-        : `Vinyl and laminate show a ridge that carpet hid, and wood has to acclimate in the house. ${clay} The floor goes down after the surface under it is flat and dry.`;
+        ? `In a Gulf Coast summer, new wood and laminate need time in the house before they go down. ${clay} A bathroom stays a tile floor.`
+        : `Vinyl and laminate will show a high spot that carpet used to hide, and wood needs time in the house first. ${clay} We install the floor only after the surface under it is flat and dry.`;
     case 'exterior':
-      return `South and west walls take more sun and more rain. ${clay} Footings and the way water leaves the wall are planned for this lot, not copied from the next subdivision.`;
+      return `South and west walls take more sun and more rain. ${clay} We plan the footings, and the way water leaves the wall, for your yard rather than copying the house next door.`;
     default:
       return variant % 2 === 0
-        ? `${interiorCut(area)} ${clay} Cabinets and paint inside the house are usually outside an association review of the street.`
-        : `A permit, when plumbing, electrical, or structure moves, follows the legal address. ${clay} ${interiorCut(area)}`;
+        ? `${interiorCut(area)} ${clay} An association usually reviews what the street sees. Cabinets and interior paint are usually your choice.`
+        : `If plumbing, wiring, or structure changes, the permit follows the legal address. ${clay} ${interiorCut(area)}`;
   }
 }
 
@@ -143,11 +143,11 @@ export function placeParagraph(area: AreaProfile, serviceSlug: string) {
   const kind = serviceKind(serviceSlug);
   const n = hashString(`${serviceSlug}:place:${area.slug}`);
   const county = `${area.name} sits ${area.county}.`;
-  const houses = `${foundationFact(area.foundation)} The street label "${area.housingShort}" describes the blocks and misses the house.`;
+  const houses = `${foundationFact(area.foundation)} We look at your house before we plan the work, because two homes on the same street can still be built differently.`;
   const weather = weatherFact(area.weather);
   const work = kindLine(area, kind, n);
   const trade = tradeLine(serviceSlug);
-  const near = `The visit is the address near ${area.landmark}, not the county line.`;
+  const near = `We come to your home, whether you are near ${area.landmark} or across town.`;
   const templates = [
     `${county} ${houses} ${weather} ${work} ${trade}`,
     `${county} ${trade} ${work} ${weather} ${near}`,
@@ -164,7 +164,7 @@ export function placeFacts(area: AreaProfile) {
     { label: 'Weather', value: weatherFact(area.weather) },
     {
       label: 'From Houston',
-      value: `About ${areaMiles(area)} miles ${area.direction} to ${area.landmark}, along ${area.roads}.`,
+      value: `About ${areaMiles(area)} miles ${area.direction.replace(/ of the office$/, '')} of our office in west Houston (77082), measured to ${area.landmark}. The usual drive is ${area.roads}.`,
     },
   ];
 }

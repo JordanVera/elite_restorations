@@ -188,7 +188,7 @@ const raw: Record<
       'Katy is an older town center and a wide band of master-planned subdivisions along I-10 and the Grand Parkway.',
       'The newer houses are open two-story plans on slabs, and this era is often post-tension, with cables in the concrete. The older town center is not the same construction.',
       'Associations are typical in the master-planned sections and usually review roofs, fences, paint, and sometimes driveways. They rarely govern a cabinet layout inside the house.',
-      'Detention ponds are how many of these subdivisions hold rain. They are not a promise that a street will never flood. Creek-side sections have taken storm water.',
+      'Detention ponds help these subdivisions with heavy rain, but low streets can still flood in a big storm. Creek-side sections have taken storm water.',
       'Lots are suburban, with driveways that can take a dumpster or a slab delivery more easily than a street inside the Loop.',
       'Downtown Katy and a new section near the Grand Parkway are both “Katy” on a map and not the same house.',
     ],
