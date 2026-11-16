@@ -586,6 +586,110 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       { href: '/es/blog/remodeling-a-houston-ranch-house', label: 'Remodelar una casa tipo rancho' },
     ],
   ),
+  page(
+    'missouri-city-tx',
+    'Missouri City',
+    'Missouri City, en el condado de Fort Bend, entre Houston y Sugar Land. Losas, techos, agua, cocinas y baños. Llame al (713) 909-0034.',
+    'Missouri City es la ciudad de Fort Bend al sur de Houston, sobre la Highway 6 y el Fort Bend Tollway, con un centro más viejo y secciones planeadas nuevas. Lo agendamos desde 511 Crestwater Ct.',
+    [
+      'Missouri City está sobre todo en el condado de Fort Bend, con una parte en el condado de Harris. No es Sugar Land y no es Houston, aunque un código postal o una salida de la autopista haga que los bordes se sientan compartidos. Quail Valley es el tejido más viejo, mucho de los años sesenta a los ochenta, sobre losas de concreto. Las secciones posteriores, incluida la zona de Sienna, son planos de dos pisos más grandes. Mucho de ese concreto nuevo es postensado, con cables dentro de la losa. Cortar una de esas losas para mover un drenaje no es el mismo trabajo que cortar una losa vieja de Quail Valley. Ubicamos el trabajo antes de que alguien corte.',
+      'El suelo es la arcilla plana de esta parte de Fort Bend. Se mueve cuando se moja y cuando se seca, y eso se ve en una puerta que atora o en un piso que no está tan parejo como parece. La lluvia fuerte encharca las calles planas. Los bayous y los estanques de detención llevan el agua de tormenta. Un estanque en una sección nueva es la forma en que esa sección guarda la lluvia. No es una promesa de que la calle nunca se inunde. Una casa que recibió agua de afuera y una casa con una línea de suministro reventada necesitan secados distintos y, a menudo, conversaciones de seguro distintas. Su aseguradora decide la cobertura. Documentamos el camino que se puede ver.',
+      'La humedad del Golfo es la razón de que un secado aquí use deshumidificadores junto con los ventiladores. La temporada de huracanes va del 1 de junio al 30 de noviembre. Las tormentas de primavera traen granizo. Los techos son casi todos de asfalto, en ranchos de un piso en las secciones viejas y en casas más grandes de dos pisos en las nuevas. Las pendientes del sur y del oeste envejecen más rápido. Las vemos todas, no solo el frente. Una asociación en una sección planeada suele revisar el color del techo, la pintura y las cercas. Una cocina dentro de la casa casi nunca entra en esa revisión. La ciudad da el permiso dentro de Missouri City. La dirección, no el apodo del vecindario, elige el mostrador.',
+      'El agua dentro de estas casas suele empezar en un calentador, una línea de suministro o un aparato sobre la losa. La mancha en la base del drywall es la pista, no toda el área mojada. Casi nunca hay un sótano o un espacio bajo la casa para mirar. Medimos, sacamos lo que está encharcado y dejamos el muro abierto hasta que esté seco. Una gotera de techo después del granizo es otro camino: el cielo, el aislamiento y luego el muro. No cerramos drywall mojado para que un cuarto se vea terminado.',
+      'Las cocinas de las casas nuevas se construyeron abiertas, con una isla y el family room en la misma vista. El trabajo es gabinetes, cubiertas, luz y un piso que cruza al cuarto de al lado. Las cocinas de los ranchos viejos suelen seguir más cerradas, y los muros no están a escuadra. Los baños se parten igual. Un baño principal grande y un baño de pasillo chico llevan impermeabilización antes de la loseta. Un vidrio no hace que la regadera sea impermeable.',
+      'Los pisos sobre estas losas enseñan cada lomo en cuanto sale la alfombra. El vinil es un aspecto de madera común cuando el concreto está parejo y seco. La madera tiene que acostumbrarse en la casa. El laminado va en recámaras y pasillos secos, no en un baño y no sobre una losa que acaba de estar en agua de inundación. La loseta es el piso del cuarto mojado. Después del agua de afuera, la primera pregunta es si la losa está seca, no qué muestra le gustó.',
+      'Desde la oficina en Houston 77082 se va al sur, por la Highway 6 o el Fort Bend Tollway, y es más largo que el camino a Sugar Land. Llame al (713) 909-0034. Diga si es una fuga, un techo o una remodelación, para que la visita sea la correcta. Empresa familiar en Houston desde 1993. No hay un segundo local en Missouri City. La visita es en la casa.',
+    ],
+    [
+      services.storm('Granizo, viento y agua de la calle se anotan como el evento que de verdad llegó a la casa.'),
+      services.tarp('Para un techo abierto después de una tormenta, antes de la siguiente lluvia. La lona no es el techo terminado.'),
+      services.water('Fugas de losa, fallas de aparatos y casas que recibieron agua de un bayou o de una calle encharcada.'),
+      services.kitchen('Cocinas abiertas en secciones nuevas. Cuartos más cerrados en los ranchos viejos.'),
+      services.bath('Suites principales y baños de pasillo más chicos. Impermeabilización antes del acabado.'),
+      services.vinyl('Un piso con aspecto de madera sobre una losa pareja y seca, incluso donde salió la alfombra.'),
+      services.tile('Ya es común abajo. El reemplazo empieza por qué tan pareja está la losa.'),
+      services.wood('Después de que la losa esté seca, y después de que la madera pase tiempo en la casa.'),
+      services.laminate('Recámaras y pasillos secos. No es un baño, ni un piso para una losa que se quedó mojada.'),
+      services.roof('Asfalto en ranchos y en casas más grandes de dos pisos. Cada pendiente, no solo el frente.'),
+      services.replace('Cuando el granizo o la edad está en todo el techo, no en una sola pestaña levantada.'),
+    ],
+    [
+      {
+        q: '¿Missouri City usa el mismo permiso que Houston o Sugar Land?',
+        a: 'No. Missouri City da sus propios permisos. Una parte de la ciudad está en el condado de Harris y la mayor parte en Fort Bend. Eso es el mapa, no un segundo ayuntamiento. Confirmamos la dirección. Una asociación, donde existe, es otra revisión y suele ser del exterior.',
+      },
+      {
+        q: '¿Las losas nuevas de Missouri City son postensadas?',
+        a: 'Muchas de las nuevas sí. Los cables corren dentro del concreto. Eso cambia si una regadera o un fregadero se pueden mover. Las losas más viejas de Quail Valley son otro corte. Revisamos esta casa antes de prometer un plano.',
+      },
+      {
+        q: '¿Missouri City se inunda?',
+        a: 'Las calles planas se encharcan con lluvia fuerte, y algunos lotes cerca de bayous han recibido agua de tormenta. Muchas casas no. Vemos este lote. El agua de afuera y una fuga de suministro se documentan como eventos distintos. Su aseguradora decide la cobertura.',
+      },
+      {
+        q: '¿Ustedes manejan el reclamo del seguro?',
+        a: 'No somos ajustadores públicos. Fotografiamos el daño, ponemos lona o secamos cuando ese es el paso correcto, y escribimos un estimado de reparación por el trabajo que usted contrata. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago.',
+      },
+    ],
+    [
+      { href: '/es/water-damage-restoration', label: 'Daño de agua' },
+      { href: '/es/roofing', label: 'Techos' },
+      { href: '/es/kitchen-remodeling', label: 'Remodelación de cocinas' },
+      { href: '/es/cypress-tx', label: 'Cypress' },
+    ],
+  ),
+  page(
+    'fulshear-tx',
+    'Fulshear',
+    'Fulshear, en el oeste del condado de Fort Bend, con un pueblo chico y subdivisiones nuevas. Techos, losas, cocinas y agua. Llame al (713) 909-0034.',
+    'Fulshear es la ciudad del oeste de Fort Bend sobre la FM 1093, entre el pueblo viejo y las secciones planeadas nuevas hacia el Grand Parkway. Las visitas salen de nuestra oficina en Houston.',
+    [
+      'Fulshear está en el condado de Fort Bend, al oeste de Houston. El pueblo viejo es chico. La mayoría de las casas por las que llaman son subdivisiones nuevas sobre la FM 1093 y hacia el Grand Parkway: planos de dos pisos, cocinas abiertas y losas. Mucho de ese concreto es postensado. Los cables dentro de la losa cambian si una regadera o un fregadero se pueden mover. No cortamos una de esas losas a partir de un plano dibujado sin la casa. Las calles viejas son otro edificio, y miramos antes de describir el trabajo como construcción nueva.',
+      'Esto es el oeste de Fort Bend, la misma geografía amplia que Richmond: arcilla plana, arroyos y el río Brazos más al oeste. Algunos terrenos sí tienen una pregunta real de planicie de inundación. Muchos pads nuevos no. Los estanques de detención guardan la lluvia ordinaria. No son una promesa de que una calle nunca se encharque. Una fuga de suministro sobre la losa y el agua que subió de afuera son visitas distintas, y pueden ser pólizas distintas. Su aseguradora decide cuál aplica. Fotografiamos y secamos lo que usted contrata.',
+      'El granizo de primavera y, del 1 de junio al 30 de noviembre, el viento tropical son las tormentas que marcan un techo por acá. Los techos son casi todos de asfalto en casas grandes de dos pisos, a menudo con varios planos. Una asociación en una sección planeada suele revisar el color, la pintura, las cercas y a veces un patio. Los gabinetes de adentro suelen ser decisión del dueño. Fulshear da el permiso dentro de la ciudad. Confirmamos la dirección antes de tratar un lote del condado y un lote de la ciudad como el mismo mostrador.',
+      'La humedad es la del Golfo, aunque esto quede más tierra adentro. Un secado usa deshumidificadores, no solo ventiladores. Los calentadores y las líneas de suministro en los áticos de las casas de dos pisos son una fuga común: el cielo de abajo enseña la mancha tarde, y el aislamiento puede estar empapado mientras el drywall solo tiene puntos. Abrimos la parte mojada y la dejamos abierta hasta que las lecturas digan que está seca. El movimiento de la arcilla se ve en los pisos y en las puertas. Medimos esta casa. No culpamos a la línea del condado por un lomo en la losa.',
+      'El trabajo de cocina en las casas nuevas suele ser acabado y un ajuste de plano dentro de un cuarto que ya está abierto. La isla, la luz y el piso que encuentra el family room son el proyecto. Los baños suelen ser suites principales grandes. La impermeabilización va detrás de la loseta de todos modos. Un baño de pasillo en una casa vieja es más chico, y la plomería está donde la dejaron. Los pisos siguen la losa. El vinil es un aspecto de madera cuando el concreto está parejo y seco. La madera se acostumbra en la casa. El laminado es para recámaras y pasillos secos. La loseta es el piso del cuarto mojado.',
+      'Los lotes son suburbanos, con driveways que pueden recibir un contenedor o una entrega de material con más facilidad que una calle dentro del Loop. Eso ayuda a organizar el trabajo. No hace que la casa esté a escuadra, y no dice si la losa está lo bastante pareja para el piso que usted quiere. Los patios caben si el agua se aleja del muro. Una asociación todavía puede tener que ver el deck o la cubierta antes de que se pida la madera.',
+      'Desde 511 Crestwater Ct se va al oeste, por la FM 1093 o el Westpark Tollway, y el tráfico cambia la hora. Llame al (713) 909-0034 y diga si es un techo, una fuga o una remodelación. Empresa familiar en Houston desde 1993. No hay un segundo local en Fulshear. La visita es en la casa.',
+    ],
+    [
+      services.storm('Granizo y viento tropical en techos grandes, aparte del agua en un terreno bajo cerca de un arroyo.'),
+      services.tarp('Detiene la siguiente lluvia en una abertura. El techo permanente es una decisión posterior.'),
+      services.water('Líneas de ático, fugas de losa y la casa ocasional que recibió agua de afuera.'),
+      services.kitchen('Cocinas abiertas en las secciones nuevas. Cuartos más chicos en las calles viejas.'),
+      services.bath('Baños principales grandes, impermeabilizados antes de la loseta de acabado.'),
+      services.vinyl('Un piso con aspecto de madera sobre una losa seca y razonablemente pareja.'),
+      services.tile('Abajo y en los baños, después de que la losa esté lo bastante pareja para la loseta.'),
+      services.wood('En las salas, después de que se acostumbre. No sobre una losa húmeda.'),
+      services.laminate('Recámaras y pasillos secos. La base no esconde un lomo.'),
+      services.roof('Techos grandes de asfalto. Cada plano, incluidos los del garaje.'),
+      services.replace('Cuando las tejas están cansadas en todo el techo, no en un solo borde levantado.'),
+    ],
+    [
+      {
+        q: '¿Fulshear es parte de Katy o de Richmond?',
+        a: 'No. Fulshear es su propia ciudad en el condado de Fort Bend. Katy y Richmond son los vecinos por los que la gente pasa, y tienen sus propias páginas. Usamos la dirección legal, porque una costumbre del correo no es una oficina de permisos.',
+      },
+      {
+        q: '¿Se puede mover una regadera en una casa nueva de Fulshear?',
+        a: 'A veces. Las losas nuevas suelen ser postensadas, así que un drenaje que se mueve empieza por ubicar los cables. Una regadera que se queda en su drenaje no necesita ese corte. Miramos antes de prometer el plano.',
+      },
+      {
+        q: '¿Quién revisa un techo nuevo o un deck?',
+        a: 'La ciudad, para el permiso, y una asociación cuando la sección tiene una. Las asociaciones de aquí suelen cuidar el color del techo, la pintura, las cercas y los decks. Una cocina dentro de la casa es otra pregunta. Preguntamos antes de pedir materiales.',
+      },
+      {
+        q: '¿Ustedes manejan el reclamo del seguro?',
+        a: 'No somos ajustadores públicos. Fotografiamos el techo o el agua, y reparamos lo que usted contrata. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago.',
+      },
+    ],
+    [
+      { href: '/es/roofing', label: 'Techos' },
+      { href: '/es/kitchen-remodeling', label: 'Remodelación de cocinas' },
+      { href: '/es/water-damage-restoration', label: 'Daño de agua' },
+      { href: '/es/spring-tx', label: 'Spring' },
+    ],
+  ),
 ];
 
 const bySlug = new Map(esNeighborhoods.map((item) => [item.slug, item]));

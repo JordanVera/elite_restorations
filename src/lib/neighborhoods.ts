@@ -611,6 +611,110 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/energy-corridor-tx', label: 'Energy Corridor' },
     ],
   ),
+  page(
+    'missouri-city-tx',
+    'Missouri City',
+    'Missouri City, in Fort Bend County, between Houston and Sugar Land. Slab houses, roofs, water, kitchens, and baths. Call (713) 909-0034.',
+    'Missouri City is the Fort Bend city south of Houston, along Highway 6 and the Fort Bend Tollway, with an older core and newer master-planned sections. We schedule the work from 511 Crestwater Ct.',
+    [
+      'Missouri City sits mostly in Fort Bend County, with a portion in Harris County. It is not Sugar Land and it is not Houston, even when a mailing address or a freeway exit makes the edges feel shared. Quail Valley is the older suburban fabric, much of it from the 1960s through the 1980s, on concrete slabs. Later sections, including the Sienna area, are larger two-story plans. A lot of that newer concrete is post-tension, with cables in the slab. Cutting one of those slabs to move a drain is not the same job as cutting an older Quail Valley slab. We locate the work before anyone cuts.',
+      'The ground is the flat clay of this part of Fort Bend. It moves when it wets and dries, which shows up as a door that sticks or a floor that is not as flat as it looks. Heavy rain ponds on flat streets. Bayous and detention ponds carry storm water. A pond in a newer section is how that section holds rain. It is not a promise that a street never floods. A house that took water from outside and a house with a burst supply line need different drying, and often different insurance conversations. Your insurer decides coverage. We document the path we can see.',
+      'Gulf humidity is why a dry-out here uses dehumidifiers with the air movers. Hurricane season runs from June 1 through November 30. Spring storms bring hail. Roofs are mostly asphalt, on one-story ranches in the older sections and on larger two-story houses in the newer ones. South and west slopes age faster. We look at all of them, not only the front. An association in a planned section usually reviews roof color, paint, and fences. A kitchen inside the house is usually outside that review. The city permits work inside Missouri City. The address, not the neighborhood nickname, picks the counter.',
+      'Water inside these houses often starts at a water heater, a supply line, or an appliance on the slab. The stain at the base of the drywall is the clue, not the whole wet area. There is usually no crawlspace to look into. We meter, extract what is standing, and leave a wall open until it is dry. A roof leak after hail is a different path: the ceiling, the insulation, then the wall. We do not close wet drywall to make a room look finished.',
+      'Kitchens in the newer houses were built open, with an island and a family room in the same view. The remodel is cabinets, counters, light, and a floor that crosses into the next room. Kitchens in the older ranches are often still more closed, and the walls are not square. Baths follow the same split. A large primary bath and a small hall bath both get waterproofing before the tile. A glass panel does not make a shower waterproof.',
+      'Floors on these slabs show every ridge once carpet comes out. Vinyl plank is a common wood look when the concrete is flat and dry. Wood has to acclimate in the house. Laminate belongs in dry bedrooms and halls, not in a bath and not on a slab that just sat in flood water. Tile is the floor for a wet room. After outside water, the first question is whether the slab is dry, not which sample you liked.',
+      'The drive from the office in Houston 77082 is south, Highway 6 or the Fort Bend Tollway, and it is longer than the drive to Sugar Land. Call (713) 909-0034. Say whether this is a leak, a roof, or a remodel so the visit is the right one. Family-owned, serving Houston since 1993. There is no Missouri City storefront. The visit is at the house.',
+    ],
+    [
+      services.storm('Hail, wind, and street water are written down as the event that actually reached the house.'),
+      services.tarp('For an open roof after a storm, before the next rain. A tarp is not the finished roof.'),
+      services.water('Slab leaks, appliance failures, and houses that took water from a bayou or a ponded street.'),
+      services.kitchen('Open kitchens in newer sections. More closed rooms in the older ranches.'),
+      services.bath('Primary suites and smaller hall baths. Waterproofing before the finish.'),
+      services.vinyl('A wood-look floor on a flat, dry slab, including where carpet came out.'),
+      services.tile('Already common downstairs. Replacement starts with how flat the slab is.'),
+      services.wood('After the slab is dry, and after the wood has spent time in the house.'),
+      services.laminate('Dry bedrooms and halls. Not a bath, and not a floor for a slab that stayed wet.'),
+      services.roof('Asphalt on ranches and on larger two-story houses. Every slope, not only the front.'),
+      services.replace('When hail or age is across the roof, not a single lifted tab.'),
+    ],
+    [
+      {
+        q: 'Is Missouri City the same permit office as Houston or Sugar Land?',
+        a: 'No. Missouri City permits its own work. A portion of the city is in Harris County and most of it is in Fort Bend County, which is a map fact, not a second city hall. We confirm the address. An association, where one exists, is a separate review and usually about the exterior.',
+      },
+      {
+        q: 'Are newer Missouri City slabs post-tension?',
+        a: 'Many of the newer ones are. Cables run through the concrete. That changes whether a shower or a sink can move. Older slabs in Quail Valley are a different cut. We check this house before we promise a layout.',
+      },
+      {
+        q: 'Does Missouri City flood?',
+        a: 'Flat streets pond in hard rain, and some lots near bayous have taken storm water. Many houses have not. We look at this lot. Outside water and a supply leak are documented as different events. Your insurer decides coverage.',
+      },
+      {
+        q: 'Do you handle the insurance claim?',
+        a: 'We are not public adjusters. We photograph the damage, tarp or dry when that is the right next step, and write a repair estimate for the work you hire. You file the claim. Your insurer decides coverage and payment.',
+      },
+    ],
+    [
+      { href: '/water-damage-restoration-sugar-land-tx', label: 'Water damage in Sugar Land' },
+      { href: '/roofing-sugar-land-tx', label: 'Roofing in Sugar Land' },
+      { href: '/kitchen-remodeling-stafford-tx', label: 'Kitchen remodeling in Stafford' },
+      { href: '/roofing-pearland-tx', label: 'Roofing in Pearland' },
+    ],
+  ),
+  page(
+    'fulshear-tx',
+    'Fulshear',
+    'Fulshear, in western Fort Bend County, with a small older town and newer subdivisions. Roofs, slabs, kitchens, and water. Call (713) 909-0034.',
+    'Fulshear is the west Fort Bend city along FM 1093, between the older town and newer master-planned sections toward the Grand Parkway. Visits are scheduled from our Houston office.',
+    [
+      'Fulshear is in Fort Bend County, west of Houston. The older town is small. Most of the houses people call about are newer subdivisions along FM 1093 and toward the Grand Parkway: two-story plans, open kitchens, and slabs. A lot of that concrete is post-tension. Cables in the slab change whether a shower or a sink can move. We do not cut one of those slabs from a floor plan someone drew without the house. The older streets are a different building, and we look before we describe the job as new construction.',
+      'This is west Fort Bend, the same broad geography as Richmond: flat clay, creeks, and the Brazos River farther west. Some tracts have a real floodplain question. Many newer pads do not. Detention ponds hold ordinary rain. They are not a promise that a street never ponds. A supply-line leak on a slab and water that rose from outside are different visits, and they can be different insurance policies. Your insurer decides which one applies. We photograph and dry what you hire.',
+      'Spring hail and, from June 1 through November 30, tropical wind are the storms that mark a roof out here. The roofs are mostly asphalt on large two-story houses, often with several planes. An association in a master-planned section usually reviews color, paint, fences, and sometimes a patio. Interior cabinets are usually the owner’s choice. Fulshear permits work inside the city. We confirm the address before we treat a county lot and a city lot as the same counter.',
+      'Humidity is the Gulf, even this far inland. A dry-out uses dehumidifiers, not fans alone. Water heaters and supply lines in attics of two-story houses are a common leak: the ceiling below shows a stain late, and the insulation can be soaked while the drywall is only spotted. We open the wet part and leave it open until the readings say it is dry. Clay movement shows up in floors and in doors. We measure this house. We do not blame a county line for a ridge in a slab.',
+      'Kitchen work in the newer houses is usually a finish and a layout tune inside a room that is already open. The island, the light, and the floor that meets the family room are the project. Baths are often large primary suites. Waterproofing goes behind the tile either way. A hall bath in an older house is smaller, and the plumbing is wherever it was left. Floors follow the slab. Vinyl is a wood look when the concrete is flat and dry. Wood acclimates in the house. Laminate is for dry bedrooms and halls. Tile is the wet-room floor.',
+      'Lots are suburban, with driveways that can take a dumpster or a material delivery more easily than a street inside the Loop. That helps staging. It does not make the house square, and it does not tell us whether the slab is flat enough for the floor you want. Yards can take a patio if the water leaves the wall. An association may still have to see the deck or the cover before lumber is ordered.',
+      'The drive from 511 Crestwater Ct is west, FM 1093 or the Westpark Tollway, and traffic changes the time. Call (713) 909-0034 and say whether this is a roof, a leak, or a remodel. Family-owned, serving Houston since 1993. There is not a second storefront in Fulshear. The visit is at the house.',
+    ],
+    [
+      services.storm('Hail and tropical wind on large roofs, separate from water on a low tract near a creek.'),
+      services.tarp('Stops the next rain at an opening. The permanent roof is a later decision.'),
+      services.water('Attic supply lines, slab leaks, and the occasional house that took water from outside.'),
+      services.kitchen('Open kitchens in the newer sections. Smaller rooms on the older streets.'),
+      services.bath('Large primary baths, waterproofed before the finish tile.'),
+      services.vinyl('A wood-look floor on a dry, reasonably flat slab.'),
+      services.tile('Downstairs and in baths, after the slab is flat enough for the tile.'),
+      services.wood('In living rooms, after it acclimates. Not over a damp slab.'),
+      services.laminate('Dry bedrooms and halls. The pad does not hide a hump.'),
+      services.roof('Large asphalt roofs. Every plane, including the ones over the garage.'),
+      services.replace('When the shingles are tired across the roof, not one lifted edge.'),
+    ],
+    [
+      {
+        q: 'Is Fulshear part of Katy or Richmond?',
+        a: 'No. Fulshear is its own city in Fort Bend County. Katy and Richmond are the neighbors people drive through, and they have their own pages. We use the legal address, because a mailing habit is not a permit office.',
+      },
+      {
+        q: 'Can you move a shower in a newer Fulshear house?',
+        a: 'Sometimes. Newer slabs are often post-tension, so a moved drain starts with locating the cables. A shower that stays on its drain does not need that cut. We look before we promise the layout.',
+      },
+      {
+        q: 'Who reviews a new roof or a deck?',
+        a: 'The city, for the permit, and an association when the section has one. Associations here usually care about roof color, paint, fences, and decks. A kitchen inside the house is a different question. We ask before materials are ordered.',
+      },
+      {
+        q: 'Do you handle the insurance claim?',
+        a: 'We are not public adjusters. We photograph the roof or the water, and we repair what you hire. You file the claim. Your insurer decides coverage and payment.',
+      },
+    ],
+    [
+      { href: '/roofing-richmond-tx', label: 'Roofing in Richmond' },
+      { href: '/kitchen-remodeling-richmond-tx', label: 'Kitchen remodeling in Richmond' },
+      { href: '/water-damage-restoration-katy-tx', label: 'Water damage in Katy' },
+      { href: '/roofing-cinco-ranch-tx', label: 'Roofing in Cinco Ranch' },
+    ],
+  ),
 ];
 
 const bySlug = new Map(neighborhoods.map((item) => [item.slug, item]));

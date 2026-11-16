@@ -11,6 +11,8 @@ export const neighborhoodSlugs = [
   'humble-tx',
   'friendswood-tx',
   'tomball-tx',
+  'missouri-city-tx',
+  'fulshear-tx',
 ] as const;
 
 export const houstonPostSlugs = [

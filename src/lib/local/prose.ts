@@ -108,7 +108,13 @@ export function thinAreaName(text: string, area: AreaProfile) {
 }
 
 export function finishLocal(text: string, area: AreaProfile) {
-  return thinAreaName(polishLocal(text), area);
+  const thinned = thinAreaName(polishLocal(text), area);
+  const repaired = thinned
+    .replace(/\b[Aa]n? this area average\b/g, (match) =>
+      match.startsWith('A') ? 'A local average' : 'a local average',
+    )
+    .replace(/\b[Aa]n? this area\b/g, (match) => (match.startsWith('A') ? 'This area' : 'this area'));
+  return polishLocal(repaired);
 }
 
 export function mentionsArea(text: string, name: string) {

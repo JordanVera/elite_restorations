@@ -25,6 +25,8 @@ export type AreaProfile = {
   hoa: Hoa;
   /** Four words or fewer, so it does not become a reusable five-word phrase. */
   housingShort: string;
+  /** Where the area sits, as a phrase that can follow the place name. */
+  county: string;
   lines: readonly [string, string, string, string, string, string];
 };
 
@@ -39,11 +41,47 @@ const priority = new Set([
   'Bellaire',
   'The Heights',
   'The Woodlands',
+  'Pearland',
+  'Richmond',
 ]);
+
+/** Public county geography. Multi-county cities name each county they actually span. */
+const counties: Record<string, string> = {
+  Houston: 'mostly in Harris County, with city limits that also reach Fort Bend and Montgomery counties',
+  Westchase: 'in Harris County',
+  Alief: 'in Harris County',
+  'Energy Corridor': 'in Harris County',
+  Katy: 'across Harris, Fort Bend, and Waller counties',
+  'Sugar Land': 'in Fort Bend County',
+  Bellaire: 'in Harris County',
+  Memorial: 'in Harris County',
+  'Spring Branch': 'in Harris County',
+  'The Heights': 'in Harris County',
+  'River Oaks': 'in Harris County',
+  'West University': 'in Harris County',
+  'Galleria Area': 'in Harris County',
+  'Upper Kirby': 'in Harris County',
+  'Rice Village': 'in Harris County',
+  'Medical Center': 'in Harris County',
+  'Bunker Hill': 'in Harris County',
+  'Piney Point': 'in Harris County',
+  'Hunters Creek': 'in Harris County',
+  'Bear Creek': 'in Harris County',
+  'Cinco Ranch': 'mostly in Fort Bend County, with a portion in Harris County',
+  Stafford: 'in Fort Bend and Harris counties',
+  Richmond: 'in Fort Bend County',
+  Pearland: 'mostly in Brazoria County, with parts in Harris and Fort Bend counties',
+  'Clear Lake': 'in Harris County',
+  Baytown: 'in Harris and Chambers counties',
+  Galveston: 'in Galveston County',
+  'Texas City': 'in Galveston County',
+  'The Woodlands': 'mostly in Montgomery County, with a southern portion in Harris County',
+  Magnolia: 'in Montgomery County',
+};
 
 const raw: Record<
   string,
-  Omit<AreaProfile, 'slug' | 'name' | 'priority'>
+  Omit<AreaProfile, 'slug' | 'name' | 'priority' | 'county'>
 > = {
   Houston: {
     neighbors: ['the-heights', 'bellaire', 'memorial'],
@@ -726,10 +764,13 @@ function wordCountOf(value: string) {
 export const areaProfiles: readonly AreaProfile[] = site.serviceArea.map((name) => {
   const data = raw[name];
   if (!data) throw new Error(`Missing area profile for ${name}`);
+  const county = counties[name];
+  if (!county) throw new Error(`Missing county for ${name}`);
   return {
     name,
     slug: areaSlug(name),
     priority: priority.has(name),
+    county,
     ...data,
   };
 });

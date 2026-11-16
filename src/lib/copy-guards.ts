@@ -11,7 +11,7 @@ const negotiationDenial =
 const vowelSound =
   /^(?:hour|hours|honest|honor|honour|heir|heiress|hoa)(?:\b|-)/i;
 const consonantSound =
-  /^(?:one|once|uni(?:on|versity|form|que|t)|use(?:r|ful|d|able)?|euro(?:pean)?|u(?:s|saa|rl)|utility|hvacs?)(?:\b|-)/i;
+  /^(?:one|once|uni(?:on|versity|form|que|t)|usable|use(?:r|ful|d|able)?|euro(?:pean)?|u(?:s|saa|rl)|utility|hvacs?)(?:\b|-)/i;
 
 function looksSpanish(label: string, text: string) {
   return /(?:^|\/)es(?:\/|$)/.test(label) || /[¿¡ñáéíóúü]/i.test(text);
