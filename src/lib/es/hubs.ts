@@ -164,14 +164,18 @@ const esHubInputs: readonly EsHub[] = [
   ),
   hub(
     "laminate-flooring",
-    "Pisos laminados en Houston",
+    "Instalación de laminado en Houston",
     "Pisos laminados",
     "Pisos",
-    "El laminado es un piso para cuartos secos. No es la respuesta para un baño que se moja, ni para una losa que todavía tiene una fuga.",
-    "La capa que se pisa, el centro de la tabla y la base de abajo se eligen juntos. Con la humedad de Houston, un laminado sin espacio en las orillas se levanta. Dejamos el espacio que pide el fabricante.",
+    "El servicio de pisos laminados en Houston es para cuartos secos: recámaras, pasillos y salas. No es la respuesta para un baño que se moja, ni para una losa que todavía tiene una fuga.",
+    "La instalación de pisos laminados en Houston junta la capa que se pisa, el centro de la tabla y la base de abajo. Con la humedad de aquí, un laminado sin espacio en las orillas se levanta. Dejamos el espacio que pide el fabricante. En casas nuevas de Katy, Cinco Ranch, Pearland y Magnolia suele ir sobre losa, después de revisar que esté seca y pareja. En octubre de 2026 terminamos la planta baja de una casa en BlackHorse Ranch South, Cypress. Ese piso fue vinil de lujo con aspecto de madera, después de nivelar la losa. Es otro piso, no laminado.",
     [
       { q: "¿Lo ponen en toda la casa?", a: "En cuartos secos, sí. Si el cuarto se inunda o es un baño, le decimos que ese material no va ahí." },
       { q: "¿Se puede poner sobre losa?", a: "Sí, con la base correcta y una losa seca. Si hubo una fuga, primero se seca." },
+      {
+        q: "¿Hacen instalación de pisos laminados en Houston?",
+        a: "Sí. El servicio de pisos laminados cubre recámaras, pasillos y salas que se quedan secos, con la base que pide el producto. El baño se queda en loseta. Empresa familiar desde 1993. Llame al (713) 909-0034.",
+      },
     ],
   ),
   hub(
@@ -304,7 +308,18 @@ export const esHubs: readonly EsHub[] = esHubInputs.map((hub) => {
   if (repeated.length > 0) {
     throw new Error(`/es/${hub.slug} repeats FAQ: ${repeated.join(" | ")}`);
   }
-  return { ...hub, faqs };
+  if (hub.slug !== "laminate-flooring") return { ...hub, faqs };
+  return {
+    ...hub,
+    description:
+      "Instalación de pisos laminados en Houston para recámaras, pasillos y salas secas. Empresa familiar desde 1993. Llame al (713) 909-0034.",
+    sections: hub.sections.map((section, index) =>
+      index === 0
+        ? { ...section, heading: "Servicio de pisos laminados en Houston" }
+        : section,
+    ),
+    faqs,
+  };
 });
 
 export function getEsHub(slug: string) {

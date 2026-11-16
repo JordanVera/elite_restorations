@@ -81,7 +81,11 @@ export default async function SpanishServicePage({
       <LongformPage
         locale="es"
         eyebrow={hub.eyebrow}
-        title={[hub.name, "en Houston"]}
+        title={
+          slug === "laminate-flooring"
+            ? ["Instalación de piso laminado", "en Houston"]
+            : [hub.name, "en Houston"]
+        }
         lede={hub.lede}
         crumbs={[
           { name: "Servicios", path: "/es" },
@@ -99,6 +103,14 @@ export default async function SpanishServicePage({
             .filter((item) => item !== undefined)
             .map((item) => ({ href: `/es/${item.slug}`, label: item.name })),
           ...brandLinksForService(slug, "es"),
+          ...(slug === "laminate-flooring"
+            ? [
+                {
+                  href: "/projects/blackhorse-ranch-cypress",
+                  label: "Pisos y cocina en BlackHorse Ranch, Cypress",
+                },
+              ]
+            : []),
         ]}
         ctaTitle={emergency ? "¿Sigue entrando agua?" : `¿Planea ${hub.name.toLowerCase()}?`}
         ctaBody={

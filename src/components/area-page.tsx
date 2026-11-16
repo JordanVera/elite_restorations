@@ -105,6 +105,19 @@ export function AreaPageView({ page }: { page: AreaPage }) {
               </li>
             ))}
           </ul>
+          <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            {page.also.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+                >
+                  {link.label}
+                  <ArrowUpRight className="size-3.5" aria-hidden />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

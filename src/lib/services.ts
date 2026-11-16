@@ -497,6 +497,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
       },
+      {
+        href: '/laminate-flooring',
+        label: 'Laminate floor installation in Houston',
+      },
     ],
     image: img(
       '/images/services/wood-flooring.jpg',
@@ -506,7 +510,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'A floor that holds the whole house.',
       body: [
         'Hardwood in a Houston house is usually a whole-room decision: the living room, the hall, the stair. Wood type, width and stain are what you see. The layer underneath is what makes the floor stay flat.',
-        'We install new planks and refinish floors that still have life in them. The wood adjusts in the house before it is fastened, which is how a new floor belongs in a Memorial, Heights or Woodlands home instead of arriving from a warehouse and warping later.',
+        'We install new planks and refinish floors that still have life in them. The wood adjusts in the house before it is fastened, which is how a new floor belongs in a Memorial, Heights or Woodlands home instead of arriving from a warehouse and warping later. When sanding the hardwood is more than the room needs, laminate floor installation is the wood look for dry bedrooms and halls.',
       ],
       conditions: [
         {
@@ -573,11 +577,15 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         a: 'Yes. Shower floors and bathroom floors are waterproofed. Living areas and entries are set for flatness, movement joints and the grout the room needs.',
       },
     ],
-    related: ['wood-flooring', 'bathroom-remodeling', 'tile-fireplaces'],
+    related: ['wood-flooring', 'laminate-flooring', 'bathroom-remodeling', 'tile-fireplaces'],
     links: [
       {
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
+      },
+      {
+        href: '/laminate-flooring',
+        label: 'Laminate floor installation in Houston',
       },
     ],
     image: img(
@@ -588,7 +596,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'Pattern and stone, laid for the room.',
       body: [
         'Houston tile floors show up as encaustic-style entries, stone-look kitchens, and large porcelain tile that runs from a hall into a bath. The design is the part you live with. A flat surface underneath is what makes large tile look right.',
-        'We flatten first, then set the layout so the pattern meets the doorway. In showers and baths the waterproofing is in place before the finish tile. In living areas the work is the main floor, the grout and the transitions.',
+        'We flatten first, then set the layout so the pattern meets the doorway. In showers and baths the waterproofing is in place before the finish tile. In living areas the work is the main floor, the grout and the transitions. When the room stays dry and you want a wood look, laminate floor installation is the other floor we talk through.',
       ],
       conditions: [
         {
@@ -660,6 +668,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
       },
+      {
+        href: '/laminate-flooring',
+        label: 'Laminate floor installation in Houston',
+      },
     ],
     image: img(
       '/images/services/vinyl-flooring.jpg',
@@ -669,7 +681,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       heading: 'Wood look, chosen for the room.',
       body: [
         'Vinyl shows up in Houston as a kitchen floor, a playroom, or a first-floor upgrade in Katy, Pearland and Spring Branch, where families want the look of plank without committing the whole house to hardwood.',
-        'We install it click-lock, glue-down or laid loose, whichever the product and the layer underneath call for. The floor is flat before the first plank goes down.',
+        'We install it click-lock, glue-down or laid loose, whichever the product and the layer underneath call for. The floor is flat before the first plank goes down. Laminate is the other wood look, for dry bedrooms and halls. A kitchen that sees spills is usually vinyl.',
       ],
       conditions: [
         {
@@ -701,15 +713,16 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     slug: 'laminate-flooring',
     name: 'Laminate Flooring',
     group: 'Floors',
-    tagline: 'A clean, affordable look with a quick turnaround.',
+    tagline:
+      'Laminate floor installation for bedrooms, halls, and living rooms that stay dry.',
     summary:
-      'Laminate installation, repair and replacement, including the pad underneath, for a clean wood look.',
-    metaTitle: 'Houston Laminate Flooring',
+      'Laminate floor installation, repair, and replacement, including the pad underneath, for a wood look in dry rooms.',
+    metaTitle: 'Houston Laminate Floor Installation',
     metaDescription:
-      'Laminate flooring in Houston: wood-look floors for bedrooms, halls, and living rooms. Call (713) 909-0034.',
+      'Laminate floor installation in Houston for bedrooms, halls, and living rooms. This laminate floor service is for dry rooms. Call (713) 909-0034.',
     intro: [
-      'Laminate gives a Houston house the look of wood with straightforward upkeep, which makes it a practical upgrade for bedrooms, halls and living rooms.',
-      'We install click-lock or glued laminate over a flat floor with the right pad underneath, and we replace damaged planks when a full floor is more than you need.',
+      'Laminate floor installation in Houston gives a house the look of wood with straightforward upkeep. It is a practical upgrade for bedrooms, halls, and living rooms that stay dry.',
+      'This laminate floor service covers click-lock or glued laminate over a flat floor, with the pad the product calls for. We replace damaged planks when a full floor is more than you need.',
     ],
     includes: [
       'Laminate installation',
@@ -735,6 +748,14 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         q: 'What does the pad underneath do?',
         a: 'It smooths small bumps and quiets the floor over concrete. A badly uneven slab still needs leveling. We check the floor before the planks arrive.',
       },
+      {
+        q: 'What does a laminate floor service in Houston include?',
+        a: 'We look at the rooms, check that the floor underneath is flat and dry, and install click-lock or glued laminate with the underlayment that plank calls for. Bedrooms, halls, and living rooms are the usual fit. A bath is tile. Family-owned, serving Houston since 1993. Call (713) 909-0034.',
+      },
+      {
+        q: 'Where do you do laminate floor installation in Houston?',
+        a: 'Across the Houston area, scheduled from 511 Crestwater Ct, Houston, TX 77082. Newer slab houses in Katy, Cinco Ranch, Pearland, and Magnolia are a common fit. The visit is at the house.',
+      },
     ],
     related: ['vinyl-flooring', 'wood-flooring', 'tile-flooring'],
     links: [
@@ -742,16 +763,21 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         href: '/floor-and-decor-flooring-installation-houston',
         label: 'Floor & Decor flooring installation in Houston',
       },
+      {
+        href: '/projects/blackhorse-ranch-cypress',
+        label: 'Flooring and kitchen in BlackHorse Ranch, Cypress',
+      },
     ],
     image: img(
       '/images/services/laminate-flooring.jpg',
       'Chevron laminate flooring in a Houston home',
     ),
     local: {
-      heading: 'A wood look with a quicker install.',
+      heading: 'Laminate floor installation in Houston.',
       body: [
         'Laminate is the floor we install when a Houston family wants the look of wood in bedrooms, halls and living rooms, and wants the work finished without a full sanding project.',
         'In newer houses in Cinco Ranch, Katy, Pearland and Magnolia we set it over prepared concrete with a pad chosen for that floor, not a generic roll chosen only for price.',
+        'In October 2026 we finished the downstairs of a house in BlackHorse Ranch South, Cypress. The old flooring came out, the rooms were prepped and contained with air movers, and self-leveling compound flattened the slab. Wood-look luxury vinyl plank went into the dining room and living room, and the stairs got new treads in the same finish. That job was vinyl. Laminate is the wood-look floor for dry bedrooms and halls when vinyl is not the product.',
       ],
       conditions: [
         {
