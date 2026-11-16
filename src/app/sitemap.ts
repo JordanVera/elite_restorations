@@ -98,6 +98,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
     entry('/privacy', 0.3, builtAt),
     entry('/terms', 0.3, builtAt),
+    // City pages, the homepage, and about take this build time as lastmod,
+    // so a production deploy refreshes the date after their copy changes.
     ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
     ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),

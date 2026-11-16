@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { DriftPhoto } from '@/components/about/drift-photo';
 import { Reveal, SplitLines } from '@/components/motion';
@@ -38,10 +40,42 @@ export function AboutHero() {
               className="font-display t-lg"
             />
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-[36ch] text-lg leading-relaxed text-muted-foreground">
-                Elite Restorations is family-owned and operated in Houston. The
-                people who plan your project are the same people who pick up the
-                phone.
+              <p className="mt-8 max-w-[42ch] text-lg leading-relaxed text-muted-foreground">
+                Elite Restorations is a family-owned restoration company in
+                Houston, Texas. We have been serving Houston since 1993. The
+                people who plan the work are the same people who pick up the
+                phone at (713) 909-0034.
+              </p>
+              <p className="mt-4 max-w-[46ch] text-lg leading-relaxed text-muted-foreground">
+                Water, storm, and the rebuild after them are on the{' '}
+                <Link href="/restoration" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  Houston restoration
+                </Link>{' '}
+                page. A wet house starts with{' '}
+                <Link href="/water-damage-restoration" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  water damage restoration
+                </Link>
+                , and roofs are on{' '}
+                <Link href="/roofing" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  roofing
+                </Link>
+                . The same work is written up for{' '}
+                <Link href="/water-damage-restoration-houston-tx" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  Houston
+                </Link>
+                ,{' '}
+                <Link href="/water-damage-restoration-katy-tx" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  Katy
+                </Link>
+                ,{' '}
+                <Link href="/roofing-sugar-land-tx" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  Sugar Land
+                </Link>
+                , and{' '}
+                <Link href="/cypress-tx" className="underline decoration-foreground/30 underline-offset-[0.3em] hover:decoration-accent-ink">
+                  Cypress
+                </Link>
+                .
               </p>
             </Reveal>
           </div>

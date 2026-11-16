@@ -25,6 +25,8 @@ export type AreaProfile = {
   hoa: Hoa;
   /** Four words or fewer, so it does not become a reusable five-word phrase. */
   housingShort: string;
+  /** Where the area sits, as a phrase that can follow the place name. */
+  county: string;
   lines: readonly [string, string, string, string, string, string];
 };
 
@@ -39,11 +41,47 @@ const priority = new Set([
   'Bellaire',
   'The Heights',
   'The Woodlands',
+  'Pearland',
+  'Richmond',
 ]);
+
+/** Public county geography. Multi-county cities name each county they actually span. */
+const counties: Record<string, string> = {
+  Houston: 'mostly in Harris County, with city limits that also reach Fort Bend and Montgomery counties',
+  Westchase: 'in Harris County',
+  Alief: 'in Harris County',
+  'Energy Corridor': 'in Harris County',
+  Katy: 'across Harris, Fort Bend, and Waller counties',
+  'Sugar Land': 'in Fort Bend County',
+  Bellaire: 'in Harris County',
+  Memorial: 'in Harris County',
+  'Spring Branch': 'in Harris County',
+  'The Heights': 'in Harris County',
+  'River Oaks': 'in Harris County',
+  'West University': 'in Harris County',
+  'Galleria Area': 'in Harris County',
+  'Upper Kirby': 'in Harris County',
+  'Rice Village': 'in Harris County',
+  'Medical Center': 'in Harris County',
+  'Bunker Hill': 'in Harris County',
+  'Piney Point': 'in Harris County',
+  'Hunters Creek': 'in Harris County',
+  'Bear Creek': 'in Harris County',
+  'Cinco Ranch': 'mostly in Fort Bend County, with a portion in Harris County',
+  Stafford: 'in Fort Bend and Harris counties',
+  Richmond: 'in Fort Bend County',
+  Pearland: 'mostly in Brazoria County, with parts in Harris and Fort Bend counties',
+  'Clear Lake': 'in Harris County',
+  Baytown: 'in Harris and Chambers counties',
+  Galveston: 'in Galveston County',
+  'Texas City': 'in Galveston County',
+  'The Woodlands': 'mostly in Montgomery County, with a southern portion in Harris County',
+  Magnolia: 'in Montgomery County',
+};
 
 const raw: Record<
   string,
-  Omit<AreaProfile, 'slug' | 'name' | 'priority'>
+  Omit<AreaProfile, 'slug' | 'name' | 'priority' | 'county'>
 > = {
   Houston: {
     neighbors: ['the-heights', 'bellaire', 'memorial'],
@@ -150,7 +188,7 @@ const raw: Record<
       'Katy is an older town center and a wide band of master-planned subdivisions along I-10 and the Grand Parkway.',
       'The newer houses are open two-story plans on slabs, and this era is often post-tension, with cables in the concrete. The older town center is not the same construction.',
       'Associations are typical in the master-planned sections and usually review roofs, fences, paint, and sometimes driveways. They rarely govern a cabinet layout inside the house.',
-      'Detention ponds are how many of these subdivisions hold rain. They are not a promise that a street will never flood. Creek-side sections have taken storm water.',
+      'Detention ponds help these subdivisions with heavy rain, but low streets can still flood in a big storm. Creek-side sections have taken storm water.',
       'Lots are suburban, with driveways that can take a dumpster or a slab delivery more easily than a street inside the Loop.',
       'Downtown Katy and a new section near the Grand Parkway are both “Katy” on a map and not the same house.',
     ],
@@ -726,10 +764,13 @@ function wordCountOf(value: string) {
 export const areaProfiles: readonly AreaProfile[] = site.serviceArea.map((name) => {
   const data = raw[name];
   if (!data) throw new Error(`Missing area profile for ${name}`);
+  const county = counties[name];
+  if (!county) throw new Error(`Missing county for ${name}`);
   return {
     name,
     slug: areaSlug(name),
     priority: priority.has(name),
+    county,
     ...data,
   };
 });

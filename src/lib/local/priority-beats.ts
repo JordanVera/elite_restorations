@@ -362,8 +362,120 @@ export const priorityBeats: Record<string, Record<string, string>> = {
   },
 };
 
+/** Pearland and Richmond, added with the same one-sentence local beat as the other priority cities. */
+const laterBeats: Record<string, Record<string, string>> = {
+  'kitchen-remodeling': {
+    pearland:
+      'Pearland kitchens in the newer sections were built open, on slabs that are often post-tension. The work is the cabinets, the island, and the light, more often than a wall coming down. The older town is a different room, and we measure that one.',
+    richmond:
+      'Richmond has two kinds of kitchens. A new house toward the Grand Parkway is often already open. A house near the courthouse may still have a closed kitchen. If the slab is post-tension, that decides whether the sink can move.',
+  },
+  'bathroom-remodeling': {
+    pearland:
+      'Pearland primary baths in the master-planned sections are large rooms on newer slabs. A shower that stays on its drain is a different job from one that has to move. Waterproofing goes in before the tile either way.',
+    richmond:
+      'A bath in a newer Richmond section can be a large primary suite. A bath near the older downtown is smaller, and the plumbing is wherever the last remodel left it. We look before the layout changes.',
+  },
+  backsplash: {
+    pearland:
+      'Pearland backsplashes often face an open kitchen. The pattern has to read as one field from the family room, and the outlets have to land in that layout.',
+    richmond:
+      'A new Richmond kitchen can take a long backsplash. An older house near downtown may have a short, out-of-square wall. We measure the run before we center a pattern.',
+  },
+  countertops: {
+    pearland:
+      'Pearland islands are long, and a suburban driveway can take a slab delivery more easily than a street inside the Loop. Seams and the sink cutout are still templated after the cabinets are set.',
+    richmond:
+      'A Richmond counter in a new section is an island and a perimeter run. A house near the courthouse may not be square. We template the cabinets that are actually there.',
+  },
+  'wood-flooring': {
+    pearland:
+      'Pearland’s two-story plans put wood on a slab and often up a stair. We check height at the doors and acclimate the wood in the house before it is fastened.',
+    richmond:
+      'Newer Richmond houses are slab. An older house near downtown may not be. Wood goes down only after we know which floor is under it, and the boards spend time in the house first.',
+  },
+  'tile-flooring': {
+    pearland:
+      'Tile is already common on Pearland slabs. A replacement starts with flatness. Large porcelain shows every ridge, and a wet room is waterproofed before the finish.',
+    richmond:
+      'A Richmond tile floor might be a new open first floor or a smaller older room. We check the floor underneath either way. A shower is waterproofed before the tile, and it is not priced like a living-room floor.',
+  },
+  'vinyl-flooring': {
+    pearland:
+      'Vinyl is a common wood-look floor on a Pearland slab once carpet comes out. Glue-down is often steadier on concrete. We check that the slab is flat and dry first.',
+    richmond:
+      'Vinyl on a newer Richmond slab needs a flat, dry surface. An older house may have a different floor underneath. We choose the plank after we see your floor.',
+  },
+  'laminate-flooring': {
+    pearland:
+      'Upstairs bedrooms are a common Pearland laminate floor. We check the stair and the door heights. A bath stays tile, and the boxes acclimate in the house.',
+    richmond:
+      'Laminate in a dry Richmond bedroom is a wood look without a full sanding job. It will not hide a hump in the slab, and it does not belong in a room that stays wet.',
+  },
+  carpentry: {
+    pearland:
+      'Pearland stairs and two-story entries are the carpentry you see first. Built-ins are sized to the wall in an open plan, and the trim is usually newer than a bungalow’s.',
+    richmond:
+      'Carpentry near downtown Richmond may be matching an older casing. A new section wants a stair and a built-in sized to a larger plan. We measure the one you have.',
+  },
+  'tile-fireplaces': {
+    pearland:
+      'A Pearland fireplace is often the tall wall you see from the kitchen. The surround is sized to that wall, with heat-rated tile, even if the firebox is rarely lit.',
+    richmond:
+      'Not every Richmond house has a fireplace. In a newer section it may be a simple box on a tall wall. We say retile, resurface, or rebuild after we see the face.',
+  },
+  roofing: {
+    pearland:
+      'Pearland roofs often share a suburban shape, and an association in the master-planned sections often reviews the color. Parts of the city drain toward Clear Creek. We still inspect your roof, slope by slope.',
+    richmond:
+      'A roof near the Richmond courthouse and a roof in a new section toward the Grand Parkway are not the same age. We photograph the slopes and say whether a repair will hold.',
+  },
+  'roof-replacement': {
+    pearland:
+      'A Pearland replacement goes through the city, and often through an association color review. The work is the tear-off, the wood, the underlayment, the flashing, and the vents. The Houston cost page is only a planning range. Your roof is priced after we see it.',
+    richmond:
+      'Replacing a Richmond roof follows the address: the city when you are inside Richmond, and the association when the section has one. Soft boards are discussed when tear-off shows them.',
+  },
+  'roofing-emergency-tarp-repair': {
+    pearland:
+      'A Pearland tarp is for an opening, not a finished roof. Spring hail and tropical wind are both reasons the call comes. We cover what we can safely reach and photograph it first.',
+    richmond:
+      'If rain is coming through a Richmond roof, we cover the opening before we talk about shingle color. If the roof is not safe to climb, we wait. The permanent roof is a separate visit.',
+  },
+  siding: {
+    pearland:
+      'Pearland fronts are often brick with siding accents, and an association may already have approved a color. We match the faded board on the wall, or we say the whole run needs to be replaced.',
+    richmond:
+      'In a newer Richmond section, the association may need to approve a siding color. An older house near downtown is more often a repair of the boards already on the wall. South and west walls fade first.',
+  },
+  'patios-decks': {
+    pearland:
+      'Pearland yards have room, and associations often review a deck, a cover, or a fence. The patio still has to slope away from the slab so water does not sit against the house.',
+    richmond:
+      'A patio in a new Richmond section and a small yard near the older town are different structures. Water has to leave the wall either way. We measure the door and the grade.',
+  },
+  'water-damage-restoration': {
+    pearland:
+      'A Pearland slab leak shows up at the base of the drywall. Some neighborhoods near Clear Creek have taken tropical-storm water, and many houses have not. We start with where the water entered this house.',
+    richmond:
+      'Some Richmond lots sit in the Brazos floodplain, and many do not. A supply-line leak on a slab is still the more common call. We follow the water that actually got in, and we dry the house before we rebuild.',
+  },
+  'insurance-claims': {
+    pearland:
+      'A Pearland claim might be hail on a roof or a leak on a slab. We document the damage, meet with your adjuster, and work with your insurance company on the scope of repairs as your contractor. We are not public adjusters. Your insurer makes the final coverage decision. An association color approval, if one is required, is separate from that scope.',
+    richmond:
+      'Wind, hail, and water near the Brazos can fall under different parts of a policy. We document the damage, meet with your adjuster, and work with your insurance company on the scope of repairs as your contractor. We are not public adjusters. Your insurer makes the final coverage decision.',
+  },
+  'painting-drywall-repair': {
+    pearland:
+      'Pearland rooms open onto each other, so a paint sheen has to match where you can see two rooms at once. After a leak, the wall is confirmed dry before it is closed.',
+    richmond:
+      'An older Richmond wall may have a different texture from the drywall in a new section. We blend the repair into the surface that is there, and we do not paint a damp wall just to meet a date.',
+  },
+};
+
 export function beatFor(serviceSlug: string, areaSlug: string) {
   const row = priorityBeats[serviceSlug];
   if (!row) throw new Error(`No priority beats for ${serviceSlug}`);
-  return row[areaSlug];
+  return row[areaSlug] ?? laterBeats[serviceSlug]?.[areaSlug];
 }

@@ -1,7 +1,9 @@
 import 'server-only';
 
 import { getArticle } from '@/lib/articles';
+import { assertCopyAllowed } from '@/lib/copy-guards';
 import { getAreaProfile } from '@/lib/local/areas';
+import { placeFacts } from '@/lib/local/place';
 import { mentionsArea } from '@/lib/local/prose';
 import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
 import { localLandingSlug } from '@/lib/local-paths';
@@ -485,6 +487,9 @@ export type LocalLanding = {
   nearby: readonly { href: string; label: string; areaName: string }[];
   costGuide?: { href: string; label: string };
   photoShift: number;
+  /** 0–3. Picks the section order and headings so the pages are not one template. */
+  layout: 0 | 1 | 2 | 3;
+  facts: readonly { label: string; value: string }[];
 };
 
 function hashString(value: string) {
@@ -565,6 +570,8 @@ function buildLanding(service: Service, area: ServiceArea): LocalLanding {
     nearby,
     costGuide: costGuideForService[service.slug],
     photoShift: n % 11,
+    layout: (n % 4) as 0 | 1 | 2 | 3,
+    facts: placeFacts(profile),
   };
 }
 
@@ -620,11 +627,20 @@ function assertLandings(pages: readonly LocalLanding[]) {
       ...page.paragraphs,
       ...page.notes.flatMap((note) => [note.title, note.body]),
       ...page.faqs.flatMap((faq) => [faq.q, faq.a]),
+      ...page.facts.flatMap((fact) => [fact.label, fact.value]),
     ].join('\n');
     for (const pattern of banned) {
       if (pattern.test(blob)) {
         throw new Error(`Banned phrase ${pattern} on ${page.path}`);
       }
+    }
+    try {
+      assertCopyAllowed(page.path, blob);
+    } catch (error) {
+      throw new Error(error instanceof Error ? error.message : String(error));
+    }
+    if (/\bfree estimate\b/i.test(blob)) {
+      throw new Error(`${page.path} says free estimate`);
     }
     if (!page.paragraphs.some((paragraph) => mentionsArea(paragraph, page.areaName))) {
       throw new Error(`City name missing from body: ${page.path}`);
@@ -657,7 +673,7 @@ function assertLandings(pages: readonly LocalLanding[]) {
       ...page.faqs.flatMap((faq) => [faq.q, faq.a]),
     ]);
     const minimum = profile?.priority ? 900 : 750;
-    const maximum = profile?.priority ? 1350 : 1200;
+    const maximum = profile?.priority ? 1700 : 1550;
     if (words < minimum || words > maximum) {
       wordErrors.push(`${page.path} ${words} ${profile?.priority ? 'priority' : 'standard'}`);
     }

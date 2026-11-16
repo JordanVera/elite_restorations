@@ -24,6 +24,12 @@ const galleryFallback: Record<string, readonly string[]> = {
   'insurance-claims': ['water-damage-restoration', 'roofing-emergency-tarp-repair'],
 };
 
+function rotate<T>(items: readonly T[], amount: number) {
+  if (items.length === 0) return [];
+  const start = amount % items.length;
+  return [...items.slice(start), ...items.slice(0, start)];
+}
+
 function landingPhotos(serviceSlug: string, heroSrc: string, shift: number) {
   const sources = [serviceSlug, ...(galleryFallback[serviceSlug] ?? [])];
   const seen = new Set<string>();
@@ -72,6 +78,29 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
   const estimateHref = service.emergency
     ? emergencyHref
     : `/contact?service=${encodeURIComponent(service.slug)}`;
+  const layout = landing.layout;
+  const facts = rotate(landing.facts, layout);
+  const scopeHeading = [
+    `What changes in ${area.name}.`,
+    `${service.name} for a house in ${area.name}.`,
+    `Houses in ${area.name}, then the job.`,
+    `${area.name}: the address, not the city name.`,
+  ][layout];
+  const notesHeading = [
+    `What we look at in ${area.name}.`,
+    `Checked at the house in ${area.name}.`,
+    `Before anything is ordered in ${area.name}.`,
+    `What the lot changes in ${area.name}.`,
+  ][layout];
+  const factHeading = [
+    `Where ${area.name} sits.`,
+    `County, weather, and the drive.`,
+    `The map around ${area.name}.`,
+    `From the Houston office to ${area.name}.`,
+  ][layout];
+  const splitAt = Math.max(3, Math.min(5, Math.ceil(landing.paragraphs.length / 2)));
+  const leadParagraphs = layout === 2 ? landing.paragraphs.slice(0, splitAt) : landing.paragraphs;
+  const restParagraphs = layout === 2 ? landing.paragraphs.slice(splitAt) : [];
 
   return (
     <>
@@ -134,17 +163,21 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         </div>
       )}
 
+      {layout === 1 && (
+        <FactBand id="local-facts-heading" heading={factHeading} facts={facts} />
+      )}
+
       <section aria-labelledby="local-scope-heading" className="py-20 md:py-28">
         <div className="gutter mx-auto grid max-w-[120rem] gap-14 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-7">
+          <div className={layout === 1 ? 'lg:col-span-10' : 'lg:col-span-7'}>
             <Reveal>
               <p className="eyebrow text-accent-ink">{area.name}</p>
-              <h2 id="local-scope-heading" className="sr-only">
-                {service.name} in {area.name}, TX
+              <h2 id="local-scope-heading" className="font-display t-lg mt-4 max-w-[16ch]">
+                {scopeHeading}
               </h2>
             </Reveal>
             <div className="mt-6 space-y-7">
-              {landing.paragraphs.map((paragraph, index) => (
+              {leadParagraphs.map((paragraph, index) => (
                 <Reveal key={paragraph} delay={index * 0.06}>
                   <p
                     className={
@@ -159,7 +192,16 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
               ))}
             </div>
           </div>
+          {layout !== 1 && (
           <Reveal className="lg:col-span-5" delay={0.12}>
+            {layout === 3 ? (
+              <>
+                <p className="eyebrow text-accent-ink">The place</p>
+                <h2 className="font-display mt-4 text-3xl leading-snug">{factHeading}</h2>
+                <FactList facts={facts} />
+              </>
+            ) : (
+            <>
             <p className="eyebrow text-accent-ink">What is included</p>
             <ul className="mt-6 border-t border-border">
               {service.includes.map((item) => (
@@ -201,9 +243,37 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                   </li>
                 </ul>
               )}
+            </>
+            )}
           </Reveal>
+          )}
         </div>
       </section>
+
+      {layout === 2 && restParagraphs.length > 0 && (
+        <FactBand id="local-facts-mid-heading" heading={factHeading} facts={facts} />
+      )}
+
+      {restParagraphs.length > 0 && (
+        <section aria-labelledby="local-rest-heading" className="pb-20 md:pb-28">
+          <div className="gutter mx-auto max-w-[120rem] lg:max-w-[70rem]">
+            <h2 id="local-rest-heading" className="font-display text-3xl leading-snug md:text-4xl">
+              The rest of the visit in {area.name}.
+            </h2>
+            <div className="mt-6 space-y-7">
+              {restParagraphs.map((paragraph) => (
+                <p key={paragraph} className="measure text-lg leading-relaxed text-muted-foreground">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {layout === 0 && (
+        <FactBand id="local-facts-heading" heading={factHeading} facts={facts} />
+      )}
 
       <section
         aria-labelledby="local-notes-heading"
@@ -211,12 +281,22 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
       >
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>
-            <p className="eyebrow text-accent-ink">On the visit</p>
+            <p className="eyebrow text-accent-ink">
+              {layout === 1 ? 'At the address' : layout === 3 ? 'Before the order' : 'On the visit'}
+            </p>
             <h2 id="local-notes-heading" className="font-display t-lg mt-4 max-w-[18ch]">
-              What we look at in {area.name}.
+              {notesHeading}
             </h2>
           </Reveal>
-          <ul className="mt-12 grid gap-8 md:grid-cols-3">
+          <ul
+            className={
+              layout === 1
+                ? 'mt-12 grid gap-10'
+                : layout === 2
+                  ? 'mt-12 grid gap-8 md:grid-cols-2'
+                  : 'mt-12 grid gap-8 md:grid-cols-3'
+            }
+          >
             {landing.notes.map((note, index) => (
               <li key={note.title} className="border-t border-border pt-5">
                 <p className="eyebrow text-accent-ink">{String(index + 1).padStart(2, '0')}</p>
@@ -273,7 +353,13 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
             <Reveal className="lg:col-span-4">
               <p className="eyebrow text-accent-ink">Questions</p>
               <h2 id="local-faq-heading" className="font-display t-lg mt-4">
-                In {area.name}.
+                {layout === 1
+                  ? `Questions about ${area.name}.`
+                  : layout === 2
+                    ? `Before the visit in ${area.name}.`
+                    : layout === 3
+                      ? `${area.name} questions.`
+                      : `In ${area.name}.`}
               </h2>
             </Reveal>
             <div className="lg:col-span-8">
@@ -290,7 +376,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="local-related-heading" className="eyebrow text-muted-foreground">
-              Related work in {area.name}
+              {layout % 2 === 0 ? `Related work in ${area.name}` : `Other services in ${area.name}`}
             </h2>
             <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
               {related.map((item) => {
@@ -323,7 +409,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="nearby-heading" className="font-display text-3xl md:text-4xl">
-              {service.name} nearby
+              {layout === 3 ? `The same trade near ${area.name}` : `${service.name} nearby`}
             </h2>
             <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               {nearby.map((item) => (
@@ -381,5 +467,44 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         }}
       />
     </>
+  );
+}
+
+function FactList({ facts }: { facts: readonly { label: string; value: string }[] }) {
+  return (
+    <dl className="mt-6 border-t border-border">
+      {facts.map((fact) => (
+        <div
+          key={fact.label}
+          className="grid gap-1 border-b border-border py-4 sm:grid-cols-[9rem_1fr] sm:gap-6"
+        >
+          <dt className="eyebrow text-accent-ink">{fact.label}</dt>
+          <dd className="text-sm leading-relaxed">{fact.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+function FactBand({
+  id,
+  heading,
+  facts,
+}: {
+  id: string;
+  heading: string;
+  facts: readonly { label: string; value: string }[];
+}) {
+  return (
+    <section aria-labelledby={id} className="border-y border-border bg-surface py-16 md:py-20">
+      <div className="gutter mx-auto grid max-w-[120rem] gap-10 lg:grid-cols-12">
+        <h2 id={id} className="font-display text-3xl leading-snug md:text-4xl lg:col-span-4">
+          {heading}
+        </h2>
+        <div className="lg:col-span-8">
+          <FactList facts={facts} />
+        </div>
+      </div>
+    </section>
   );
 }

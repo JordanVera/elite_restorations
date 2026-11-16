@@ -1,7 +1,15 @@
 import { areaMiles, type AreaProfile, type Foundation } from '@/lib/local/areas';
+import { placeParagraph } from '@/lib/local/place';
 import { beatFor } from '@/lib/local/priority-beats';
 import { finishLocal } from '@/lib/local/prose';
-import { driveParagraph, nearbyParagraph, permitSentence, pick, placeLine } from '@/lib/local/speak';
+import {
+  driveParagraph,
+  hashString,
+  nearbyParagraph,
+  permitSentence,
+  pick,
+  placeLine,
+} from '@/lib/local/speak';
 import { visitParagraph } from '@/lib/local/visit';
 import { site } from '@/lib/site';
 import { wordCount } from '@/lib/words';
@@ -58,6 +66,9 @@ export function assemble(area: AreaProfile, spec: TradeSpec): LocalCopy {
     visitParagraph(spec.slug, area),
     nearbyParagraph(area, spec.work, salt),
   ];
+  const place = placeParagraph(area, spec.slug);
+  const slot = 1 + (hashString(`${salt}:place-slot:${area.slug}`) % 4);
+  paragraphs.splice(Math.min(slot, paragraphs.length), 0, place);
   if (area.priority) {
     const beat = beatFor(spec.slug, area.slug);
     if (!beat) throw new Error(`Missing priority beat for ${spec.slug} in ${area.slug}`);
