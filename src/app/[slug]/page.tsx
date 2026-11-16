@@ -248,7 +248,11 @@ export default async function ServicePage({
       <PageHero
         eyebrow={service.group}
         // "Houston {service}" stays distinct from the city-page H1, "{service} in {city}, TX".
-        title={['Houston', service.name]}
+        title={
+          service.slug === 'laminate-flooring'
+            ? ['Houston laminate', 'floor installation']
+            : ['Houston', service.name]
+        }
         lede={service.tagline}
         crumbs={[
           { name: 'Services', path: '/services' },

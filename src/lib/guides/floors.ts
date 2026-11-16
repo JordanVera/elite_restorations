@@ -304,7 +304,7 @@ export const laminateFlooring: ServiceGuide = {
     },
     {
       eyebrow: 'Houston',
-      heading: 'Slabs, humidity, and dry rooms.',
+      heading: 'Laminate floor installation on a Houston slab.',
       paragraphs: [
         'In newer slab houses the laminate goes over concrete with the pad the product allows, after we know the slab is dry enough. Moisture vapor through a Gulf Coast slab is common. A floating floor with the right pad can be the right setup. A floating floor over a damp slab is a swollen floor later. Pier-and-beam bedrooms need the wood base flat and dry. A crawl space that smells wet is a reason to look below before we cover it.',
         'Humidity still changes with the season. The gap at the walls is how a floating floor survives August. Baseboard hides it. We leave that gap, even if the first day would look tighter without it. Kitchens can work with the right product and a household that does not leave water standing. Baths are better in tile or, in some cases, a vinyl we are willing to stand behind in that room. We would rather skip the laminate than put it where it will fail.',

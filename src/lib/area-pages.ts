@@ -17,6 +17,7 @@ export type AreaPage = {
   paragraphs: readonly string[];
   faqs: readonly { q: string; a: string }[];
   services: readonly { href: string; label: string; cityHref: string }[];
+  also: readonly { href: string; label: string }[];
 };
 
 const notes: Record<
@@ -149,6 +150,12 @@ function buildAreaPage(areaSlug: (typeof nearOfficeSlugs)[number]): AreaPage {
       label: service.name,
       cityHref: `/${localLandingSlug(service.slug, area.slug)}`,
     })),
+    also: [
+      {
+        href: '/laminate-flooring',
+        label: 'Laminate floor installation in Houston',
+      },
+    ],
   };
 }
 

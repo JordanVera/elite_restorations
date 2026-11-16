@@ -5,12 +5,14 @@ import { HomeHero } from '@/components/home/home-hero';
 import { HomeManifesto } from '@/components/home/home-manifesto';
 import { HomeProcess } from '@/components/home/home-process';
 import { HomeTestimonials } from '@/components/home/home-testimonials';
+import { DiscoverLinks } from '@/components/seo-sections';
 import {
   ServiceIndex,
   type IndexService,
 } from '@/components/home/service-index';
 import { services } from '@/lib/services';
 import { languageAlternates, pageMetadata } from '@/lib/seo';
+import { discoverEn } from '@/lib/seo-sections';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Restoration & Remodeling',
@@ -46,6 +48,12 @@ export default function HomePage() {
       <HomeHero />
       <HomeManifesto />
       <ServiceIndex services={indexServices} coreLinks={coreLinks} />
+      <DiscoverLinks
+        id="home-discover-heading"
+        heading={discoverEn.heading}
+        intro={discoverEn.intro}
+        links={discoverEn.links}
+      />
       <HomeProcess />
       <HomeTestimonials />
       <HomeFinalCta />

@@ -6,6 +6,7 @@ import { CtaBand } from '@/components/cta-band';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
+import { DiscoverLinks, HomeRestorationSection } from '@/components/seo-sections';
 import { areaPages } from '@/lib/area-pages';
 import { neighborhoods } from '@/lib/neighborhoods';
 import { pageMetadata } from '@/lib/seo';
@@ -16,11 +17,12 @@ import {
   services,
   servicesInGroup,
 } from '@/lib/services';
+import { discoverServicesEn, homeRestorationEn } from '@/lib/seo-sections';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling & Restoration',
   description:
-    'Restoration and remodeling in Houston: water and storm damage, kitchens, baths, roofs, and floors. Call (713) 909-0034.',
+    'Home restoration in Houston, plus remodeling: water and storm damage, kitchens, baths, roofs, and floors. Call (713) 909-0034.',
   path: '/services',
   image: '/images/services/kitchen-remodeling.jpg',
 });
@@ -122,6 +124,14 @@ export default function ServicesPage() {
         );
       })}
 
+      <HomeRestorationSection
+        id="home-restoration-heading"
+        eyebrow={homeRestorationEn.eyebrow}
+        title={homeRestorationEn.title}
+        paragraphs={homeRestorationEn.paragraphs}
+        links={homeRestorationEn.links}
+      />
+
       <section
         id="areas"
         aria-labelledby="services-areas-heading"
@@ -164,6 +174,13 @@ export default function ServicesPage() {
           </ul>
         </div>
       </section>
+
+      <DiscoverLinks
+        id="services-discover-heading"
+        heading={discoverServicesEn.heading}
+        intro={discoverServicesEn.intro}
+        links={discoverServicesEn.links}
+      />
 
       <CtaBand
         title="Not sure which one you need?"

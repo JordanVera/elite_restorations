@@ -435,7 +435,7 @@ export const floorDepth: Record<string, ServiceDepth> = {
     moreLocal: [
       'Houston humidity is less dramatic for laminate than for solid hardwood, and it is not irrelevant. A floating floor still needs expansion space, and a wet mop that leaves water standing at the joints will swell the core. Water-resistant laminates exist. They are still not a shower floor, and they are still a poor choice where a supply line has a history of leaking.',
     ],
-    factorsHeading: 'A floating floor on a Gulf-Coast slab.',
+    factorsHeading: 'A laminate floor service on a Gulf-Coast slab.',
     factorsIntro:
       'Laminate earns its place in dry rooms. The slab under a newer suburban house, and the moisture in the air, still set the rules for how it is installed.',
     factors: [

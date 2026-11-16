@@ -3,9 +3,11 @@ import Link from "next/link";
 
 import { ServiceIndex, type IndexService } from "@/components/home/service-index";
 import { KitchenSlideshow } from "@/components/home/kitchen-slideshow";
+import { DiscoverLinks, HomeRestorationSection } from "@/components/seo-sections";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { esHubs } from "@/lib/es/hubs";
 import { services } from "@/lib/services";
+import { discoverEs, homeRestorationEs } from "@/lib/seo-sections";
 import { site } from "@/lib/site";
 
 import "@/components/home/kitchen-hero.css";
@@ -87,6 +89,19 @@ export default function SpanishHomePage() {
           { href: "/es/houston-storm-damage", label: "Tormenta en Houston" },
           { href: "/commercial-storm-restoration", label: "Comercios y apartamentos" },
         ]}
+      />
+      <HomeRestorationSection
+        id="es-home-restoration-heading"
+        eyebrow={homeRestorationEs.eyebrow}
+        title={homeRestorationEs.title}
+        paragraphs={homeRestorationEs.paragraphs}
+        links={homeRestorationEs.links}
+      />
+      <DiscoverLinks
+        id="es-discover-heading"
+        heading={discoverEs.heading}
+        intro={discoverEs.intro}
+        links={discoverEs.links}
       />
     </>
   );
