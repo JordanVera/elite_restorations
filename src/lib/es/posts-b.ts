@@ -735,4 +735,164 @@ export const esPostsB: Article[] = [
       },
     ],
   },
+  {
+    slug: 'patio-cover-gazebo-cypress-bridgeland',
+    title: 'Cómo elegir una cubierta, una pérgola o un gazebo en Cypress y Bridgeland',
+    metaTitle: 'Cubierta o gazebo en Cypress',
+    crumb: 'Cubiertas de patio',
+    lines: ['Un techo para el patio,', 'no una carpa.'],
+    description:
+      'Cómo elegir una cubierta, una pérgola o un gazebo en Cypress y Bridgeland: sol, tormentas, drenaje, materiales y la asociación.',
+    lede: 'Un patio en Cypress o en Bridgeland puede estar demasiado caliente para usarse de mayo a septiembre, y una tormenta de verano igual puede dejar la lluvia sobre la misma mesa una hora después. Una cubierta, una pérgola y un gazebo son tres estructuras distintas. La correcta depende de si usted necesita sombra seca contra la casa, sol filtrado en el patio, o un techo independiente.',
+    image: '/images/projects/siding/rear-deck-glass-doors.jpg',
+    service: 'patios-decks',
+    ctaTitle: '¿No sabe qué techo le queda al patio?',
+    ctaBody:
+      'Llame al (713) 909-0034 para pedir un estimado. Vemos el muro, el patio y por dónde se va el agua antes de hablar de un techo. Empresa familiar, en Houston desde 1993.',
+    related: [
+      'deck-material-for-houston-humidity',
+      'gutter-size-for-houston-rain',
+      'best-fence-for-houston-weather',
+    ],
+    faqs: [
+      {
+        q: '¿Una pérgola es lo mismo que una cubierta?',
+        a: 'No. Una pérgola es un marco abierto. Los listones cortan el sol, y la lluvia igual pasa. Una cubierta es un techo sólido, casi siempre amarrado a la casa, para que la tormenta no caiga sobre la mesa. Un gazebo es independiente, sobre sus propios cimientos, en el patio. Construimos cada uno, y dejamos el nombre claro.',
+      },
+      {
+        q: '¿Conviene cedro, pino tratado o aluminio?',
+        a: 'El cedro se pone gris con el sol del oeste si nadie le da mantenimiento. El pino tratado es el marco práctico, y los postes igual tienen que quedar fuera de un suelo que se queda mojado. El aluminio no se pudre, y igual necesita cimientos y un detalle en el muro que saque el agua del siding. El claro, el sol y el mantenimiento que usted sí va a hacer lo deciden.',
+      },
+      {
+        q: '¿La asociación de Bridgeland o de Cypress tiene que aprobarla?',
+        a: 'Muchas veces, sí. Las secciones planeadas revisan una cubierta, un gazebo o una pérgola, y a veces el color. Esa revisión no es el permiso de construcción. Cypress no es un solo mostrador. La dirección lo elige, y Bridgeland no es la excepción. Preguntamos antes de pedir el material. No empezamos un trabajo que una revisión tiene que aprobar.',
+      },
+      {
+        q: '¿Se le puede poner un ventilador o una luz?',
+        a: 'Sí, cuando se planean con el techo. El cable va dentro de las vigas antes de cerrar el cielo, y el marco tiene que cargar el ventilador. Un cable puesto después significa abrir un trabajo ya terminado. Díganos en la primera visita si quiere ventilador, luz, o los dos.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Tres estructuras, y el patio donde van a vivir',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Una cubierta es el techo pegado a la parte de atrás de la casa. Da sombra a la puerta que usted ya usa, y hay que sellarla donde toca el muro para que la lluvia no corra detrás del siding. En las casas nuevas de dos plantas a lo largo de la US 290, y en Bridgeland, esa puerta suele abrir de la sala familiar a una losa que el constructor dejó en el sol de la tarde.',
+          },
+          {
+            type: 'p',
+            text: 'Una pérgola es carpintería sin un techo sólido. Las vigas o los listones cortan el sol y dejan pasar la lluvia. Puede ser la opción correcta sobre la parrilla, o a lo largo de un paso, cuando usted quiere la brisa. Sigue siendo una estructura en el viento. Los postes en la arcilla, y la unión con la casa si la pérgola va pegada, son el trabajo. Los listones son la última capa.',
+          },
+          {
+            type: 'p',
+            text: 'Un gazebo se para sobre sus propios cimientos, lejos del muro, con un techo chico que tira el agua. La gente lo pide cuando la sombra que quiere está en el patio y no contra el ladrillo. No es una cubierta, y no es un deck. Si el viejo se mueve cuando usted empuja un poste, el siguiente tiene que anclarse para una ráfaga del Golfo.',
+          },
+        ],
+      },
+      {
+        heading: 'El calor, las tormentas de verano y el viento',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El sol de la tarde en Cypress y en Bridgeland es la razón de que los muebles se queden adentro de mayo a septiembre. Una cubierta sólida cambia eso. Una pérgola abierta baja el resplandor, y la lluvia igual llega a la mesa. Un ventilador bajo una cubierta sólida mueve en agosto el aire que de otro modo se queda ahí.',
+          },
+          {
+            type: 'p',
+            text: 'La temporada de huracanes va del 1 de junio al 30 de noviembre, y las tormentas de verano alrededor de esa temporada bastan para probar un techo ligero. Una cubierta sólida y un gazebo con malla atrapan viento. La malla ayuda con los mosquitos cerca de un lago o de un estanque de detención, y también convierte las aberturas en una vela, así que lo decimos antes de construirla. No prometemos que un techo de patio ignore un huracán fuerte. Construimos los postes, las uniones y el techo para que ellos sean la parte que aguanta.',
+          },
+          {
+            type: 'p',
+            text: 'El granizo de primavera puede marcar un techo chico de asfalto igual que marca la casa. Si los dos necesitan revisión, separamos los estimados.',
+          },
+        ],
+      },
+      {
+        heading: 'Cedro, pino tratado y aluminio',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El cedro es la madera de acabado que muchas asociaciones quieren ver, y el pleno sol del oeste lo raja y lo pone gris si nadie lo limpia y le renueva el acabado. Del lado norte de una casa de dos plantas se queda húmedo más tiempo y igual pide ese mantenimiento. Usamos cedro cuando el aspecto y el claro tienen sentido.',
+          },
+          {
+            type: 'p',
+            text: 'El pino tratado es el marco que usamos cuando el presupuesto es la estructura, no la veta. Se pudre si un poste se queda en arcilla mojada o si un aspersor le pega al pie todas las mañanas. Los cortes y la parte de abajo de los postes se quedan fuera del contacto constante con la tierra. Un tinte es un plan de mantenimiento. No es lo que sostiene el techo.',
+          },
+          {
+            type: 'p',
+            text: 'El aluminio no se pudre, y por eso muchas cubiertas de estas secciones son de metal. Instalamos cubiertas de aluminio cuando el claro y el aspecto funcionan, y cuando la asociación lo permite. El metal igual necesita cimientos, y una cubierta pegada igual necesita un detalle en el muro para que el agua se aleje del siding. Si el ruido de la lluvia bajo una recámara le importa, dígalo antes de pedir el material.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/es/patios-decks', label: 'Patios y decks' },
+              { href: '/patios', label: 'Patios' },
+              { href: '/decks', label: 'Decks' },
+              { href: '/gazebos', label: 'Gazebos' },
+              { href: '/es/carpentry', label: 'Carpintería' },
+              {
+                href: '/es/blog/deck-material-for-houston-humidity',
+                label: 'Madera o composite para un deck',
+              },
+              {
+                href: '/es/blog/carpentry-for-houston-humidity',
+                label: 'Carpintería y la humedad de Houston',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Pegada o independiente, y por dónde se va la lluvia',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Una cubierta pegada se amarra a la casa, y esa unión es donde estos trabajos gotean. El sellado tiene que mandar el agua sobre la cubierta y después fuera, no detrás del ladrillo ni del siding. Los postes van en cimientos, no sobre un bloque suelto en la losa. La arcilla de Houston guarda el agua después de una lluvia fuerte y se encoge en un mes seco. Un detalle de cimiento pensado para un clima seco no es el detalle de este suelo.',
+          },
+          {
+            type: 'p',
+            text: 'Un gazebo independiente o una pérgola independiente no abre el muro, y igual necesita esos cimientos. Poner postes sobre un patio agrietado que hace charco tuerce el marco en la primera tormenta de verdad. Si la losa está sana y escurre, puede quedarse. Si cae hacia la cimentación, un techo nuevo encima no corrige la pendiente. Revisamos la caída. Una pulgada hacia la casa basta para que la lluvia se quede en la puerta.',
+          },
+          {
+            type: 'p',
+            text: 'El techo nuevo junta un aguacero de Houston por su cuenta. El agua de la cubierta tiene que alejarse del ladrillo, de la puerta y del punto bajo junto a la barda. Una cubierta que tapa los bajantes de la casa, o un patio que los represa, deja esa agua contra la cimentación. Planeamos ese camino antes de poner un poste. Si el portón de un lado es demasiado angosto para el material, dígalo cuando llame.',
+          },
+        ],
+      },
+      {
+        heading: 'La asociación, un ventilador y una tormenta',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Bridgeland es una comunidad planeada, y muchas secciones nuevas de Cypress funcionan igual. La asociación suele querer ver una cubierta, un gazebo o una pérgola, y a veces el color, antes de que exista. Esa aprobación no es un permiso de la Ciudad de Houston ni del Condado de Harris. La dirección elige el mostrador. No ponemos postes mientras una revisión sigue abierta.',
+          },
+          {
+            type: 'p',
+            text: 'Un ventilador o una luz es trabajo eléctrico, planeado con las vigas. El cable entra antes de cerrar el techo, y el marco tiene que cargar el ventilador. Poner cualquiera de los dos después de cerrar el cielo significa abrir un trabajo que acaba de pagar. Díganos si quiere un ventilador, una luz, o los dos.',
+          },
+          {
+            type: 'p',
+            text: 'Si una tormenta ya tumbó la cubierta vieja o el gazebo, fotografíe los postes, el muro y lo que queda del techo antes de que alguien se lo lleve, y llame al (713) 909-0034. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide la cobertura y el monto. La pudrición que ya estaba en los postes sigue siendo pudrición, aunque el viento haya pasado esa misma semana. Empresa familiar, en Houston desde 1993. Las visitas se programan desde nuestra oficina en el oeste de Houston (77082).',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/es/cypress-tx', label: 'Casas y patios en Cypress' },
+              { href: '/gutters', label: 'Canaletas' },
+              { href: '/fence-installation-repair', label: 'Bardas' },
+              {
+                href: '/es/blog/gutter-size-for-houston-rain',
+                label: 'Tamaño de canaleta para la lluvia de Houston',
+              },
+              {
+                href: '/es/blog/best-fence-for-houston-weather',
+                label: 'Qué barda aguanta el clima de Houston',
+              },
+              { href: '/es/contact', label: 'Contacto' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
