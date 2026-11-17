@@ -26,6 +26,13 @@ export const houstonPostSlugs = [
   'houston-roof-replacement-guide',
   'first-24-hours-water-damage-houston',
   'remodeling-a-houston-ranch-house',
+  'quartz-vs-granite-countertops-houston',
+  'carpentry-for-houston-humidity',
+  'tile-fireplace-surround-houston',
+  'drywall-repair-after-a-leak-houston',
+  'deck-material-for-houston-humidity',
+  'best-fence-for-houston-weather',
+  'gutter-size-for-houston-rain',
 ] as const;
 
 export type NeighborhoodSlug = (typeof neighborhoodSlugs)[number];

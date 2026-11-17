@@ -1,4 +1,5 @@
 import { fieldNotes } from '@/lib/field-notes';
+import { hoaTips } from '@/lib/hoa-tips';
 import { houstonPosts } from '@/lib/houston-posts';
 import { restorationGuides } from '@/lib/restoration-guides';
 
@@ -584,6 +585,7 @@ export const articles: Article[] = [
             items: [
               { href: '/emergency', label: 'Request emergency help' },
               { href: '/water-damage-restoration', label: 'Water damage restoration' },
+              { href: '/houston-freeze-prep-for-pipes', label: 'How to prepare Houston pipes before a freeze' },
             ],
           },
         ],
@@ -673,6 +675,7 @@ export const articles: Article[] = [
   ...restorationGuides,
   ...fieldNotes,
   ...houstonPosts,
+  ...hoaTips,
 ];
 
 const articlesBySlug = new Map(

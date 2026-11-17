@@ -29,6 +29,9 @@ const alsoOn: Record<string, readonly string[]> = {
     "commercial-storm-restoration",
   ],
   "storm-and-hail-roof-repair-houston": ["roofing", "siding", "roof-replacement"],
+  "quartz-vs-granite-countertops-houston": ["backsplash"],
+  "deck-material-for-houston-humidity": ["patios", "decks", "gazebos"],
+  "plan-kitchen-bath-remodel-2027": ["bathroom-remodeling"],
 };
 
 function matches(article: Pick<Article, "slug" | "service">, slug: string) {
