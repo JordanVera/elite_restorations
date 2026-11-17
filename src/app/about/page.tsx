@@ -8,6 +8,8 @@ import { ProcessRail } from '@/components/about/process-rail';
 import { TeamGrid } from '@/components/about/team-grid';
 import { WorkHighlights } from '@/components/about/work-highlights';
 import { CtaBand } from '@/components/cta-band';
+import { FaqSection } from '@/components/faq-section';
+import { homeownerEn } from '@/lib/faqs/homeowner';
 import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
@@ -28,6 +30,11 @@ export default function AboutPage() {
       <WorkHighlights />
       <ProcessRail />
       <AreaMarquee />
+      <FaqSection
+        id="about-faq-heading"
+        title="Good to know."
+        items={[homeownerEn.areas, homeownerEn.years, homeownerEn.spanish]}
+      />
       <CtaBand
         title="Let us look at the house with you."
         body="A kitchen you have been planning, or a leak that showed up overnight. Either way, it starts with a conversation."

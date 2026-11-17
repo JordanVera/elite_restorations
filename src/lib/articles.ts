@@ -195,6 +195,7 @@ export const articles: Article[] = [
       'The first steps after a house fire in Houston: stay out until it is safe, start the claim, document the loss, secure the building, and begin cleanup.',
     lede: 'Once everyone is out and the fire department is on scene, the next decisions are about safety, the claim, and keeping a damaged building from getting worse overnight.',
     image: '/images/projects/siding/siding-upgrade-in-progress.jpg',
+    service: 'emergency-board-up',
     emergency: true,
     ctaTitle: 'Need the building secured?',
     ctaBody:
@@ -263,6 +264,14 @@ export const articles: Article[] = [
           {
             type: 'p',
             text: 'After the emergency work, the rebuild can be a straight restoration or the start of a remodel. That choice can wait until the building is safe, dry, and documented.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/emergency-board-up', label: 'Board-up for open windows and doors' },
+              { href: '/roofing-emergency-tarp-repair', label: 'Emergency roof tarping' },
+              { href: '/water-damage-restoration', label: 'Drying after firefighting water' },
+            ],
           },
         ],
       },
@@ -395,6 +404,15 @@ export const articles: Article[] = [
           {
             type: 'p',
             text: 'Kitchens and baths want a surface that can take spills. Living areas can take wood or a wood-look product if the slab or the layer under the floor is suitable. We look at the room, the moisture, and how you live in it before recommending a material.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/wood-flooring', label: 'Hardwood flooring' },
+              { href: '/vinyl-flooring', label: 'Luxury vinyl plank' },
+              { href: '/tile-flooring', label: 'Tile flooring' },
+              { href: '/laminate-flooring', label: 'Laminate flooring' },
+            ],
           },
         ],
       },

@@ -13,8 +13,8 @@ export const recoveryFaqs: Record<string, Faq[]> = {
       a: "It depends. A small clean-water leak caught early is a shorter job than a soaked wall, a wet slab, and insulation. Gulf humidity slows it. We do not pull the fans because a calendar said three days. We pull them when the moisture readings support it.",
     },
     {
-      q: "How fast can you come out for standing water?",
-      a: `Call ${phone} any time if water is still spreading or it is near power. We tell you the next safe step. We do not promise a drive time. After a hurricane or a citywide freeze, the line is longer. Calling puts the address on it.`,
+      q: "How fast can you respond to water damage in Houston?",
+      a: `Call ${phone} if water is still spreading or it is near power. We respond quickly, often the same day when crews are available. We tell you the next safe step. We do not promise a drive time. After a hurricane or a citywide freeze, the line is longer. Calling puts the address on it.`,
     },
     {
       q: "Can I stay in the house during the dry-out?",

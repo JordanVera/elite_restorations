@@ -1,5 +1,6 @@
 import { duplicateQuestions } from "@/lib/faqs";
 import { esServiceFaqs } from "@/lib/faqs/es";
+import { esHubHomeownerFaqs } from "@/lib/faqs/homeowner";
 import type { GuideSection } from "@/lib/guides/types";
 import { spanishServiceSlugs } from "@/lib/i18n";
 
@@ -303,7 +304,7 @@ const esHubInputs: readonly EsHub[] = [
 export const esHubs: readonly EsHub[] = esHubInputs.map((hub) => {
   const extra = esServiceFaqs[hub.slug];
   if (!extra) throw new Error(`Missing Spanish FAQs: ${hub.slug}`);
-  const faqs = [...hub.faqs, ...extra];
+  const faqs = [...hub.faqs, ...(esHubHomeownerFaqs[hub.slug] ?? []), ...extra];
   const repeated = duplicateQuestions(faqs);
   if (repeated.length > 0) {
     throw new Error(`/es/${hub.slug} repeats FAQ: ${repeated.join(" | ")}`);

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin } from "lucide-react";
 
+import { FaqSection } from "@/components/faq-section";
 import { LeadForm } from "@/components/lead-form";
 import { Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
+import { homeownerEs } from "@/lib/faqs/homeowner";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -73,6 +75,18 @@ export default function SpanishContactPage() {
           </Reveal>
         </div>
       </section>
+      <FaqSection
+        id="contacto-faq-heading"
+        eyebrow="Preguntas"
+        title="Conviene saber."
+        inLanguage="es"
+        items={[
+          homeownerEs.estimate,
+          homeownerEs.spanish,
+          homeownerEs.areas,
+          homeownerEs.years,
+        ]}
+      />
     </>
   );
 }

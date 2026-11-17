@@ -343,8 +343,8 @@ export const insuranceClaims: ServiceGuide = {
   ],
   faqs: [
     {
-      q: 'Do you handle my insurance claim?',
-      a: 'We photograph and note the damage and the work. Coverage, payment, and any holdback belong to your insurer. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. The claim stays yours.',
+      q: 'Do you help with insurance claims?',
+      a: 'Yes. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer still decides what the policy pays. Call (713) 909-0034 if you want us at the house.',
     },
     {
       q: 'Is there a fee for the documentation?',
