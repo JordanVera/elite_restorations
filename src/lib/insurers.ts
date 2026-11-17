@@ -35,7 +35,7 @@ function faqs(name: string, extra: { q: string; a: string }[]): { q: string; a: 
     },
     {
       q: "Can you help after a hurricane, hail, wind, or tornado?",
-      a: `Yes. We document the damage, tarp or board up when it is safe, dry what got wet, and estimate the repair. You file the ${name} claim. We help with the building and do not give legal advice.`,
+      a: `Yes. We document the damage, tarp or board up when it is safe, dry what got wet, and estimate the repair. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We help with the building and do not give legal advice.`,
     },
     {
       q: "What should I photograph?",
@@ -64,7 +64,7 @@ export const insurers: readonly InsurerPage[] = [
       {
         eyebrow: "Not affiliated",
         heading: "We work for the person who calls us.",
-        paragraphs: [disclaimer("State Farm"), "Many people in Greater Houston carry a State Farm homeowners policy through a local agent. Your agent, your deductible, and whether this loss is wind, water, or ordinary wear are on your declarations page and in your conversation with State Farm. Our office is 511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Call " + phone + " if water is coming in or a roof is open."],
+        paragraphs: [disclaimer("State Farm"), "Many people in Greater Houston carry a State Farm homeowners policy through a local agent. Your agent, your deductible, and whether this loss is wind, water, or ordinary wear are on your declarations page and in your conversation with State Farm. Our office is our office in west Houston (77082). Family-owned since 1993. Call " + phone + " if water is coming in or a roof is open."],
       },
       {
         eyebrow: "The path",
@@ -80,7 +80,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "Photos, a log, and an estimate with the rooms named.",
         paragraphs: [
           "Before you throw carpet out or let a tarp hide a hole, take wide shots and close shots. Note whether water came from the roof, a pipe, an appliance, or the street. Rising water in neighborhoods near the bayous is often a flood policy, not the homeowners policy. If the water came from the bayou, we write it down as flooding. A sudden plumbing break is a different cause.",
-          "We add our own photos of what we dry and what we rebuild. You can give that set to State Farm. The free photo log on this site is yours even if you do not hire us. The guide to how Texas restoration claims usually move is the longer explanation. None of those documents are a coverage opinion.",
+          "We add our own photos of what we dry and what we rebuild. You can give that set to State Farm. The photo log on this site is yours even if you do not hire us. The guide to how Texas restoration claims usually move is the longer explanation. None of those documents are a coverage opinion.",
         ],
       },
       {
@@ -88,7 +88,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "Slab houses, hail roofs, and buildings with many units.",
         paragraphs: [
           "Most of the houses we dry sit on concrete. A State Farm policyholder in Memorial with an attic leak and one in Katy with a supply line under the slab both need the moisture mapped, not guessed from the stain. Apartment managers and commercial owners insured by State Farm use the same phone number. We list the wet units. One ceiling is not a reason to dry the whole complex.",
-          "Call or text " + phone + " any time for an active emergency. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM. State Farm is the insurer. We are the restoration company at 511 Crestwater Ct.",
+          "Call or text " + phone + " any time for an active emergency. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM. State Farm is the insurer. We are the restoration company, working from our office in west Houston (77082).",
         ],
       },
       {
@@ -101,7 +101,7 @@ export const insurers: readonly InsurerPage[] = [
       },
     ],
     faqs: faqs("State Farm", [
-      { q: "Should I call my State Farm agent before I call you?", a: "Call us if water is coming in or the roof is open. You still give State Farm notice. We do not file the claim. Ask State Farm how they want that notice, and keep the claim number." },
+      { q: "Should I call my State Farm agent before I call you?", a: "Call us if water is coming in or the roof is open. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. State Farm decides what the policy pays." },
       { q: "Can you tell me my State Farm deductible?", a: "No. Wind, hail, and other losses are often treated differently. The percentage and the dollar amount are on the declarations page, or you can ask State Farm." },
       { q: "Do you only help with roof claims?", a: "No. Roof and tarp work, board-up, and water from pipes, heaters, dishwashers, and toilet overflows. The cause goes in the notes as we see it." },
       { q: "What if State Farm wants to see the damage first?", a: "Ask them. If the building is taking on water, we photograph and then protect it when it is safe. Leaving a roof open for a later visit lets the next storm in." },
@@ -133,7 +133,7 @@ export const insurers: readonly InsurerPage[] = [
         eyebrow: "Documentation",
         heading: "What to keep before the house gets cleaned up.",
         paragraphs: [
-          "Save the broken supply line if you can do it safely. Photograph the roof opening before the tarp. List rooms, not just 'the house was wet.' A claim file that starts after the dumpster is loaded is harder for you to explain. The photo log is free. Our photos of moisture and repairs can go in the same packet.",
+          "Save the broken supply line if you can do it safely. Photograph the roof opening before the tarp. List rooms, not just 'the house was wet.' A claim file that starts after the dumpster is loaded is harder for you to explain. The photo log is on this site. Our photos of moisture and repairs can go in the same packet.",
           "Temporary repairs that limit further damage are often expected. Whether Allstate pays our bill is a separate question. We bill you for the work you hire. We do not wait on a promise of repayment to cover an open roof when more rain is coming and the roof is safe to walk.",
         ],
       },
@@ -141,7 +141,7 @@ export const insurers: readonly InsurerPage[] = [
         eyebrow: "Houston",
         heading: "From the office in 77082 to the coast and the suburbs.",
         paragraphs: [
-          "We schedule from 511 Crestwater Ct. Hail and wind calls come from Katy, Cypress, and The Woodlands. Coastal wind calls come from Clear Lake and Galveston. Slab leaks and appliance failures show up in Westchase, Alief, Bellaire, and Memorial the same as anywhere else. Apartment and commercial Allstate policies, when that is what the owner carries, get the same documentation habits and a unit list.",
+          "We schedule from our office in west Houston (77082). Hail and wind calls come from Katy, Cypress, and The Woodlands. Coastal wind calls come from Clear Lake and Galveston. Slab leaks and appliance failures show up in Westchase, Alief, Bellaire, and Memorial the same as anywhere else. Apartment and commercial Allstate policies, when that is what the owner carries, get the same documentation habits and a unit list.",
           "Family-owned since 1993. Call or text " + phone + ". Active storm and water emergencies any time. Office hours Monday through Saturday, 8:00 AM to 6:00 PM. We are not Allstate.",
         ],
       },
@@ -150,14 +150,14 @@ export const insurers: readonly InsurerPage[] = [
         heading: "The work, labeled separately from the Allstate payment.",
         paragraphs: [
           "A tarp, board-up, water removal, and drying limit more damage. Roofing, drywall, and floors are the repair. We write them as separate jobs, with the rooms named. An Allstate payment, if one comes, is a different document. We keep our bill separate, and we do not collect the claim in our name. You hire us. Allstate decides what it owes under the policy you have.",
-          "Houston slabs keep water in the concrete after a dishwasher, a toilet, or a supply line looks cleaned up. We meter that. Hail roofs get looked at on every slope, not from the driveway. If you are comparing our estimate to an Allstate figure, we explain the construction. The argument, if you have one, is between you and Allstate. Call or text " + phone + " for an active leak or an open roof. Family-owned since 1993 at 511 Crestwater Ct. The name on the policy does not change how a slab dries. Apartment and commercial losses get the same photos, with a unit or suite list instead of a single hallway. We answer " + phone + " any time when water is still coming in. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM.",
+          "Houston slabs keep water in the concrete after a dishwasher, a toilet, or a supply line looks cleaned up. We meter that. Hail roofs get looked at on every slope, not from the driveway. If you are comparing our estimate to an Allstate figure, we explain the construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Allstate decides what the policy pays. Call or text " + phone + " for an active leak or an open roof. Family-owned since 1993. We work from our office in west Houston (77082). The name on the policy does not change how a slab dries. Apartment and commercial losses get the same photos, with a unit or suite list instead of a single hallway. We answer " + phone + " any time when water is still coming in. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
       },
     ],
     faqs: faqs("Allstate", [
       { q: "Do I have to use an Allstate contractor?", a: "We are not an Allstate contractor. Whether your policy says anything about who may repair the house is a question for Allstate and the policy. We will not invent a rule that is not written there." },
       { q: "Can you start drying before Allstate inspects?", a: "If the building is wet, drying should not wait. We photograph first. Ask Allstate what they want to see before anything is thrown away." },
-      { q: "Will you argue the Allstate estimate?", a: "We explain the repair work. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters." },
+      { q: "Will you go over an Allstate estimate with the adjuster?", a: "We explain the repair work. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters." },
       { q: "What losses do you document?", a: "Roof and storm openings, hail, wind, and indoor water from pipes and appliances. Rising water is written down as flood. Check your policy." },
     ]),
   },
@@ -178,7 +178,7 @@ export const insurers: readonly InsurerPage[] = [
         eyebrow: "The path",
         heading: "Notice, photos, and a house that may be empty.",
         paragraphs: [
-          "If the member is not in Houston, the first useful thing is a clear record: which rooms, where the water entered, whether the roof is open, and whether anyone has shut the main. We can photograph that set and send the facts to the person who has to talk to USAA. We do not log into a member account and we do not file the claim.",
+          "If the member is not in Houston, the first useful thing is a clear record: which rooms, where the water entered, whether the roof is open, and whether anyone has shut the main. We can photograph that set and send the facts to the person who has to talk to USAA. We do not log into a member account. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.",
           "The Houston building problems are the same ones we see on other policies. Hurricane season runs June through November. Hail bruises roofs in the suburbs. A freeze splits attic lines on slabs. A water heater in a garage, a dishwasher supply, or a toilet overflow does not wait for someone to fly home. Mitigation limits further damage. USAA decides what, if anything, it reimburses.",
           "When an adjuster visits, we can meet them if the person responsible for the house asks us to. We walk the damage we saw. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not give legal advice. The repair estimate names the construction. It is not a USAA payment.",
         ],
@@ -195,7 +195,7 @@ export const insurers: readonly InsurerPage[] = [
         eyebrow: "Houston",
         heading: "The house in Houston while the member is not.",
         paragraphs: [
-          "We work across Greater Houston from 511 Crestwater Ct, including Katy, Spring, Clear Lake, and the neighborhoods closer to the office in Westchase and Alief. Apartment communities and houses are both common. Call " + phone + " any time for an active leak or an open roof. Tell us who can approve the work if the member is not local.",
+          "We work across Greater Houston from our office in west Houston (77082), including Katy, Spring, Clear Lake, and the neighborhoods closer to the office in Westchase and Alief. Apartment communities and houses are both common. Call " + phone + " any time for an active leak or an open roof. Tell us who can approve the work if the member is not local.",
           "Family-owned since 1993. Text the same number. Office hours Monday through Saturday, 8:00 AM to 6:00 PM for a visit that is not an emergency. We are not USAA.",
         ],
       },
@@ -204,12 +204,12 @@ export const insurers: readonly InsurerPage[] = [
         heading: "A record the member can read from somewhere else.",
         paragraphs: [
           "When the member is not in the house, the value of the visit is a plain record: photos before a tarp goes on, unit or room names, moisture notes, and a repair estimate that says what will be rebuilt. We can text or email that set to the person who holds the USAA policy. We still do not submit it to USAA ourselves unless you are standing there and you hand it over. The photo log is a tool the person on site can fill out the same day.",
-          "Drying does not wait on a flight home. Wet drywall on a Houston slab gets worse in the humidity. We start the steps that limit more damage when someone with authority hires us, and we keep the member's insurer out of our company name. Call " + phone + " any time for an active water or storm emergency. We are not USAA. You do not need a membership number for us to come out. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM when the visit can wait. Family-owned since 1993. Text the same number if a call is hard from where you are. A gate code and a unit number belong in the first message if the loss is an apartment.",
+          "Drying does not wait on a flight home. Wet drywall on a Houston slab gets worse in the humidity. We start the steps that limit more damage when someone with authority hires us, and we keep the member's insurer out of our company name. Call " + phone + " any time for an active water or storm emergency. We are not USAA. You do not need a membership number for us to come out. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM when the visit can wait. Family-owned since 1993. Text the same number if a call is hard from where you are. A gate code and a unit number belong in the first message if the loss is an apartment.",
         ],
       },
     ],
     faqs: faqs("USAA", [
-      { q: "Can you talk to USAA for the member?", a: "We can explain the building to an adjuster on site if you want us there. We do not file the claim, access a USAA account, or speak as the member." },
+      { q: "Can you talk to USAA for the member?", a: "We can explain the building to an adjuster on site if you want us there. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We do not access a USAA account or speak as the member. We are not public adjusters." },
       { q: "The member is deployed. Can we still start?", a: "If someone with authority hires us, yes. We need to know who can approve drying and repairs. We photograph so the member can see the loss from somewhere else." },
       { q: "Do you know USAA deductibles?", a: "No. We will not guess. The member or the policy has that answer." },
       { q: "Are military families your only USAA customers?", a: "We help the household that calls about a USAA-insured property. We do not screen membership and we do not claim a special status with USAA." },

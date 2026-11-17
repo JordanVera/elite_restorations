@@ -5,7 +5,7 @@ const phone = "(713) 909-0034";
 export const claimHelpEn = {
   eyebrow: "Insurance claim help",
   title: "We help you with your insurance claim",
-  lede: "Elite Restorations helps Houston homeowners, property managers, and building owners document storm and water damage and keep the repair moving. We photograph the damage and do the work you hire. We are not public adjusters. You file the claim. We do not give legal advice, and we cannot promise that a claim will be approved or paid. Your insurer decides coverage. Check your policy.",
+  lede: "Elite Restorations helps Houston homeowners, property managers, and building owners document storm and water damage and keep the repair moving. We photograph the damage and do the work you hire. We are not public adjusters. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We do not give legal advice, and we cannot promise that a claim will be approved or paid. Your insurer decides coverage. Check your policy.",
   disastersTitle: "The disasters we document most often",
   disasters: [
     {
@@ -48,7 +48,7 @@ export const claimHelpEn = {
 export const claimHelpEs = {
   eyebrow: "Ayuda con el reclamo",
   title: "Le ayudamos con su reclamo de seguro",
-  lede: "Elite Restorations ayuda a dueños de casa, administradores y dueños de edificios en Houston a documentar el daño por tormenta o por agua y a seguir adelante con la reparación. Tomamos las fotos y hacemos el trabajo que usted contrate. No somos ajustadores públicos. El reclamo lo presenta usted. No damos consejo legal ni prometemos que se lo aprueben o se lo paguen. La cobertura la decide su aseguradora. Revise su póliza.",
+  lede: "Elite Restorations ayuda a dueños de casa, administradores y dueños de edificios en Houston a documentar el daño por tormenta o por agua y a seguir adelante con la reparación. Tomamos las fotos y hacemos el trabajo que usted contrate. No somos ajustadores públicos. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No damos consejo legal ni prometemos que se lo aprueben o se lo paguen. La cobertura la decide su aseguradora. Revise su póliza.",
   disastersTitle: "Los desastres que más documentamos",
   disasters: [
     {

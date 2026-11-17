@@ -80,7 +80,7 @@ export const addedServiceInputs = [
       { q: "Do you handle HOA fences?", a: "We ask whether an association has to approve the style. When a review applies, we wait for that answer before we start." },
       { q: "What about the property line?", a: "We build where you show us. If the line is disputed, a survey comes before the holes." },
       { q: "Can you photograph a fence a storm knocked down?", a: "Yes. Photos and a rebuild estimate. Your insurer decides coverage and whether it pays." },
-      { q: "How do I request the work?", a: "Call or text " + phone + ". The office is 511 Crestwater Ct, Houston, TX 77082, Monday through Saturday, 8:00 AM to 6:00 PM." },
+      { q: "How do I request the work?", a: "Call or text " + phone + ". Visits are scheduled from our office in west Houston (77082), Monday through Saturday, 8:00 AM to 6:00 PM." },
     ],
     related: ["patios", "decks", "siding", "commercial-storm-restoration"],
     links: [
@@ -148,7 +148,7 @@ export const addedServiceInputs = [
       heading: "Hard rain on flat lots and tree-filled yards.",
       body: [
         "Alief, Westchase, and much of Katy are flat. A gutter that overflows hits the slab and stays. Memorial and The Woodlands add oak and pine debris, so a stretch that was clear in March is full by June.",
-        "Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that tests it. We hang gutters from 511 Crestwater Ct. Family-owned since 1993. Call " + phone + ". A quiet clog is a cleaning. A stretch the wind pulled off the board is the replacement we estimate.",
+        "Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that tests it. We hang gutters from our office in west Houston (77082). Family-owned since 1993. Call " + phone + ". A quiet clog is a cleaning. A stretch the wind pulled off the board is the replacement we estimate.",
         "We also repair apartment and low commercial gutters when we can reach them safely. A manager can use the same number. We do not work for the insurance company.",
       ],
       conditions: [
@@ -205,7 +205,7 @@ export const addedServiceInputs = [
       body: [
         "Lots in Alief, Westchase, and much of the Energy Corridor do not show a slope to the eye. A patio can still slope an inch the wrong way and pond at the threshold. We check the fall.",
         "Memorial and Bellaire yards are tighter, with trees that lift edges. Katy and Sugar Land lots are often wider and hotter. The surface can be the same product and still want a different joint and a different conversation about shade.",
-        "Hurricane season is June 1 through November 30, and summer storms the rest of the year are enough to test a flat pad. We are family-owned at 511 Crestwater Ct, Houston, TX 77082, since 1993. Call or text " + phone + ". A patio visit is usually Monday through Saturday, 8:00 AM to 6:00 PM. If a storm undermined the slab, photograph it before anyone breaks it out. Bring the gate width up on the call so we know whether a buggy fits.",
+        "Hurricane season is June 1 through November 30, and summer storms the rest of the year are enough to test a flat pad. We are family-owned, working from our office in west Houston (77082), since 1993. Call or text " + phone + ". A patio visit is usually Monday through Saturday, 8:00 AM to 6:00 PM. If a storm undermined the slab, photograph it before anyone breaks it out. Bring the gate width up on the call so we know whether a buggy fits.",
       ],
       conditions: [
         { title: "The threshold", body: "The patio stays below the door. Water and the slab edge are the constraint, not the catalog height." },
@@ -313,7 +313,7 @@ export const addedServiceInputs = [
       heading: "Humidity under the boards, wind on the rail.",
       body: [
         "Live oaks in Memorial, Bellaire, and The Woodlands keep a deck damp. A west-facing deck in Katy or Sugar Land splits and fades. The frame still has to stay dry at the house wall either way.",
-        "Clay footings move between drought and a tropical rain. Hurricane season, June 1 through November 30, tests a loose rail. We build from 511 Crestwater Ct, family-owned since 1993.",
+        "Clay footings move between drought and a tropical rain. Hurricane season, June 1 through November 30, tests a loose rail. We build from our office in west Houston (77082), family-owned since 1993.",
         "If a storm opened the wall where the deck meets the house, call " + phone + " any time. A planned deck is a visit Monday through Saturday, 8:00 AM to 6:00 PM. You can text the same number. We serve houses across Greater Houston and we will say when a patio on the ground makes more sense than a raised deck. Stairs, rails, and the board that ties the deck to the house are priced on the first walk, not added after the boards are ordered. Composite and wood are priced as different walking surfaces on the same frame. If a side gate is too narrow for the lumber, we ask about that before we schedule the build.",
       ],
       conditions: [
@@ -347,7 +347,7 @@ export const addedServiceInputs = [
     ],
     faqs: [
       { q: "Who is this for?", a: "Property managers, HOA boards, and owners of apartment communities and commercial buildings in Greater Houston. Homeowners can use the house pages for the same trades." },
-      { q: "Do you answer after hours?", a: "Yes for an active storm or water emergency. Call " + phone + " any time. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits." },
+      { q: "Do you answer after hours?", a: "Yes for an active storm or water emergency. Call " + phone + " any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits." },
       { q: "Can you work while units are occupied?", a: "Yes, with the access you arrange. We do not enter a unit on our own, and we do not dry a whole building because one ceiling is stained." },
       { q: "Will you promise the claim is covered?", a: "We document the damage, limit more damage, estimate, and repair. Flood and a homeowners policy may differ. Check your policy." },
       { q: "Can the same company rebuild?", a: "Yes. Drywall, roofing, and related finishes can stay here after the structure is dry." },
@@ -367,7 +367,7 @@ export const addedServiceInputs = [
       heading: "One building, many ceilings.",
       body: [
         "Garden apartments in the Energy Corridor and retail fronts in Westchase do not fail the same way. We list the wet units and the openings, then cover and dry those, not a guess about the whole property.",
-        "Family-owned in Houston since 1993. The office is 511 Crestwater Ct, Houston, TX 77082. Call or text " + phone + ".",
+        "Family-owned in Houston since 1993. Visits are scheduled from our office in west Houston (77082). Call or text " + phone + ".",
       ],
       conditions: [
         { title: "Roofs", body: "Low-slope commercial roofs pond under a loose tarp. We anchor for that or we wait until it is safe." },

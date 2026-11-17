@@ -108,11 +108,11 @@ const faqs = [
   },
   {
     q: 'Will you decide what my insurance covers?',
-    a: 'Your insurer decides what the policy covers. We give you inspection photos and a record of what was dried and repaired. The photo log on this site is free if you want to start that record yourself.',
+    a: 'Your insurer decides what the policy covers. We give you inspection photos and a record of what was dried and repaired. The photo log on this site can start that record if you want to.',
   },
   {
     q: 'Which parts of Houston do you restore?',
-    a: 'Greater Houston, with visits scheduled from 511 Crestwater Ct, Houston, TX 77082. The neighborhoods beside the office, and the city pages for water damage, are linked below.',
+    a: 'Greater Houston, with visits scheduled from our office in west Houston (77082). The neighborhoods beside the office, and the city pages for water damage, are linked below.',
   },
   ...extraRestorationFaqs,
 ];
@@ -204,9 +204,7 @@ export default function RestorationPage() {
               about what is worth changing.
             </p>
             <p>
-              The office is at {site.address.streetAddress},{' '}
-              {site.address.addressLocality}, {site.address.addressRegion}{' '}
-              {site.address.postalCode}. We come to the house for the visit.
+              Visits are scheduled from our office in west Houston (77082). We come to the house for the visit.
             </p>
           </div>
         </div>
@@ -364,10 +362,10 @@ export default function RestorationPage() {
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lg leading-relaxed text-muted-foreground">
               We photograph the opening, the wet rooms, and the drying and
-              repair work. You file the claim with your insurer. They decide
+              repair work. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. They decide
               what the policy pays. Keeping more water out of the house does
               not wait on that decision. If you want a room-by-room packet of
-              your own before anything is moved, the photo log is free,
+              your own before anything is moved, the photo log is on this site,
               whether or not you hire us.
             </p>
             <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">

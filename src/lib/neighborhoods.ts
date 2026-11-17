@@ -51,7 +51,7 @@ function page(
     faqs,
     also,
     ctaTitle: `Planning work in ${name}?`,
-    ctaBody: `Call ${phone}. We schedule from 511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993.`,
+    ctaBody: `Call ${phone}. We schedule from our office in west Houston (77082). Family-owned since 1993.`,
   };
 }
 
@@ -98,7 +98,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
     'meyerland-tx',
     'Meyerland',
     '1950s brick ranches along Brays Bayou in Meyerland. Storm repair, dried-out houses, kitchens, baths, floors, and low roofs. Call (713) 909-0034.',
-    'Meyerland is the southwest Houston neighborhood of one-story brick ranches along Brays Bayou and North Braeswood. We schedule the work from 511 Crestwater Ct.',
+    'Meyerland is the southwest Houston neighborhood of one-story brick ranches along Brays Bayou and North Braeswood. We schedule the work from our office in west Houston (77082).',
     [
       'Most of Meyerland went up in the 1950s as brick ranches on concrete slabs. The roofs are low. The lots are deeper than a bungalow lot inside the Loop, and many houses still have the original closed kitchen, a hall bath, and a larger bedroom at the back. Some streets have been rebuilt or lifted after bayou flooding. The house next door may still be the ranch from the year it was built. We look at the one you called about.',
       'Brays Bayou is the fact that separates a Meyerland water call from a leak in a dryer suburb. Low ground along the bayou has taken storm water in past tropical storms. Streets farther from the bank have not all seen the same water. A supply-line break on the slab and water that rose from outside are different visits, and they can be different insurance policies. Your insurer decides which one applies. We photograph, dry, and repair what you hire.',
@@ -142,7 +142,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Do you handle the insurance claim?',
-        a: 'We are not public adjusters. We photograph the damage, tarp or dry when that is the right next step, and write a repair estimate for the work you hire. You file the claim. Your insurer decides coverage and payment.',
+        a: 'We are not public adjusters. We photograph the damage, tarp or dry when that is the right next step, and write a repair estimate for the work you hire. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment.',
       },
     ],
     [
@@ -163,7 +163,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       'Kitchens in the bungalows are small. Opening the room means the structure and the old trim have to be part of the plan. New cabinets that ignore the casing look stuck on. Townhome kitchens cannot borrow square footage from the neighbor. We measure both kinds of room. A bath is often one hall bath, sometimes with a later addition that does not match the original tile.',
       'Floors in the older houses are often pine that cups when Houston humidity swings. Refinishing is possible when the boards are thick enough and the subfloor is sound. A crawlspace that stays damp will put that cup right back. Vinyl and tile show up in kitchens and baths, and in townhomes that were built on slabs. Wood over a damp crawl is a different conversation from wood on a dry slab.',
       'Montrose is the City of Houston. There is no zoning in the usual suburban sense, and some blocks have deed restrictions or a design conversation about the street elevation. Interior work is usually outside that. Parking a dumpster on these streets is a planning item. We set it on the visit, not from a cul-de-sac habit.',
-      'The drive from 511 Crestwater Ct is cross-town, Westheimer or Richmond into the Loop. There is no Montrose showroom. Call (713) 909-0034. If water is coming in or the roof is open, say that first.',
+      'The drive from our office in west Houston (77082) is cross-town, Westheimer or Richmond into the Loop. There is no Montrose showroom. Call (713) 909-0034. If water is coming in or the roof is open, say that first.',
     ],
     [
       services.storm('Old roofs, dormers, and flat porches. We photograph the opening before a tarp hides it.'),
@@ -216,7 +216,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       'Freeze damage shows up in pipes run through exterior walls and in lines under a house that is open to a cold wind. Once the line splits, the water may sit in the crawlspace and wick into the subfloor. We stop the water, photograph the path, and dry the wood before anyone talks about new flooring.',
       'Kitchens are often still the small room at the back. People want them opened toward the living room. The beams and the old openings decide whether that is simple. Matching the casing matters if the rest of the trim stays. Baths are small. A shower in a Garden Oaks bath is waterproofed before the tile, and the floor slope in an old house is checked before a curb is promised.',
       'Wood floors are common, and Houston humidity moves them. Refinishing works when the boards are sound and the crawlspace is not feeding them moisture. Tile belongs in the wet rooms. Vinyl plank is the floor people choose when a slab addition needs something stable and the original pine stays in the living room. We say which floor the room can hold.',
-      'Garden Oaks is in Houston. Some streets have older deed restrictions aimed at the elevation. Interior remodeling is usually outside that review. The drive from 511 Crestwater Ct is across town, I-10 toward the north side. Call (713) 909-0034 to set a time. Traffic changes the hour.',
+      'Garden Oaks is in Houston. Some streets have older deed restrictions aimed at the elevation. Interior remodeling is usually outside that review. The drive from our office in west Houston (77082) is across town, I-10 toward the north side. Call (713) 909-0034 to set a time. Traffic changes the hour.',
     ],
     [
       services.storm('Limb hits and hail under the oak canopy. We photograph the roof before debris is cleared, when that is safe.'),
@@ -246,7 +246,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Who decides an insurance payment?',
-        a: 'Your insurer. We are not public adjusters. We document what the storm or the leak did and we repair what you hire. The claim stays with you and the insurer.',
+        a: 'Your insurer. We are not public adjusters. We document what the storm or the leak did and we repair what you hire. Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster.',
       },
     ],
     [
@@ -258,7 +258,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
     'oak-forest-tx',
     'Oak Forest',
     'Postwar brick ranches in Oak Forest, north Houston. Slab leaks, hail, kitchens, baths, and floors. Call (713) 909-0034.',
-    'Oak Forest is the north Houston neighborhood of brick ranch houses from the late 1940s through the 1960s, north of Garden Oaks. We schedule the visits from 511 Crestwater Ct.',
+    'Oak Forest is the north Houston neighborhood of brick ranch houses from the late 1940s through the 1960s, north of Garden Oaks. We schedule the visits from our office in west Houston (77082).',
     [
       'The common Oak Forest house is a one-story brick ranch on a concrete slab. Roofs are low and simple until someone has added a porch or a second shed roof. Carports and later garages are common. Kitchens were built as closed rooms. Hall baths are small, with a tub that many people now want as a shower. A rebuilt house on the same street is a different scope. We can see the difference from the foundation and the trim.',
       'These slabs do not give a burst pipe anywhere to fall. In a hard freeze, attic lines and exterior-wall lines are the ones that split. Water comes out at the ceiling or at the baseboard and runs under the floor. Vinyl that looks almost fine can be sitting on wet concrete. We pull what has to come up, meter the rest, and dry the slab before a new floor is discussed.',
@@ -296,7 +296,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Are you adjusting the claim?',
-        a: 'No. We are not public adjusters. You call your insurer. We document the house and do the drying and the repair you hire. The insurer decides payment.',
+        a: 'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. We dry and repair what you hire. Your insurer decides payment.',
       },
     ],
     [
@@ -316,7 +316,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       'Attic pipes and attic water heaters are common in these two-story plans. A freeze or a failed heater dumps water into the ceiling of the kitchen or a bedroom. The stain on the ceiling is smaller than the wet insulation above it. We open what the meter says is wet, and we leave it open until it is dry. Houston humidity is why a fan in the hallway is not the whole dry-out.',
       'Kitchen remodels here are usually about the cabinets, the island, and whether a wall between the kitchen and the family room is doing structural work. Primary baths are larger than a ranch hall bath. They still need waterproofing before the stone or the porcelain. A glass shower in a humid house needs a fan that vents outside, not into the attic.',
       'Floors split by story. Carpet upstairs, tile or wood downstairs, is a pattern we see. After a water event, carpet pad that stayed wet comes out. Tile on the slab is a practical downstairs floor if the slab is flat. Wood can work once the slab is dry and the product is meant for that substrate. Vinyl plank is the other downstairs choice, and it will telegraph a hump.',
-      'Kingwood has its own municipal services inside Houston’s extraterritorial patchwork. We confirm the permit office for the address. The drive from Crestwater Court is the long one, up the northeast side. Call (713) 909-0034 and we will tell you the visit window. There is no Kingwood showroom.',
+      'Kingwood has its own municipal services inside Houston’s extraterritorial patchwork. We confirm the permit office for the address. The drive from our office in west Houston (77082) is the long one, up the northeast side. Call (713) 909-0034 and we will tell you the visit window. There is no Kingwood showroom.',
     ],
     [
       services.storm('Wind, hail, and rising water near the lake are written up as what actually happened.'),
@@ -421,7 +421,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       'Water inside these houses often starts upstairs or in the attic. A water heater, a supply line in a freeze, or a boot that cracked around a vent. The ceiling below shows a stain late. Insulation can be soaked while the drywall is only spotted. We open the wet part and dry it. A first-floor flood from the creek is a different tear-out: wet insulation in the walls, flooring that came loose, and cabinets that swelled at the toe kick.',
       'Kitchen ideas split the same way the houses do. In a newer open plan, the work is cabinets, counters, light, and a floor that meets the family room. In an older Spring house, the kitchen may still be a separate room, and the walls are not square. Baths in the new houses can take a large shower. Baths in the older houses need the plumbing found before the room is redrawn.',
       'Flooring and humidity travel together under the trees. A slab that never sees sun still needs to be dry before vinyl or wood goes down. Tile is the forgiving wet-room floor. Wood moves. We acclimate it in the house. After creek water, we do not install a floor to hide a damp slab.',
-      'The drive from 511 Crestwater Ct is north, I-45 or the Hardy Toll Road depending on the section. Call (713) 909-0034. Say whether this is a leak, a roof, or a remodel so the visit is the right one. Family-owned since 1993. The crew comes from the Houston office.',
+      'The drive from our office in west Houston (77082) is north, I-45 or the Hardy Toll Road depending on the section. Call (713) 909-0034. Say whether this is a leak, a roof, or a remodel so the visit is the right one. Family-owned since 1993. The crew comes from the Houston office.',
     ],
     [
       services.storm('Hail, wind, and creek water. We write down which one reached the house.'),
@@ -451,7 +451,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Who pays the insurance claim?',
-        a: 'Your insurer decides. We are not public adjusters. We photograph, tarp, dry, and rebuild the parts you hire. We do not take a fee to argue the claim.',
+        a: 'Your insurer decides. We are not public adjusters. We photograph, tarp, dry, and rebuild the parts you hire. We do not take a percentage of a settlement.',
       },
     ],
     [
@@ -501,7 +501,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Do you represent me with the insurer?',
-        a: 'We are not public adjusters. We help with photos, a repair estimate, and the work. You file. The insurer decides coverage and payment.',
+        a: 'We are not public adjusters. We help with photos, a repair estimate, and the work. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The insurer decides coverage and payment.',
       },
     ],
     [
@@ -513,7 +513,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
     'friendswood-tx',
     'Friendswood',
     'Friendswood houses near Clear Creek, southeast of Houston. Coastal wind, creek flooding, kitchens, baths, floors, and roofs. Call (713) 909-0034.',
-    'Friendswood is its own city southeast of Houston, between the Gulf Freeway and Clear Creek. We schedule remodeling and restoration there from 511 Crestwater Ct.',
+    'Friendswood is its own city southeast of Houston, between the Gulf Freeway and Clear Creek. We schedule remodeling and restoration there from our office in west Houston (77082).',
     [
       'The houses are mostly suburban brick plans from the 1960s through the 1990s, on slabs, with some newer sections mixed in. One-story ranches and two-story houses sit on the same streets. Kitchens have often been updated one piece at a time, so the cabinets, the counters, and the floor can be three different decades. We look at what you want replaced instead of assuming a full gut.',
       'Clear Creek is the water people here already know. Low ground near the creek has flooded in past tropical storms. Blocks farther from the creek did not all take water. Coastal wind and driven rain are the other storm. Roofs and windows see more wind than a neighborhood in northwest Harris County, and humidity hangs on because the bay is not far. A roof leak and creek water in the same month are still two events. We document them that way. Your insurer decides coverage.',
@@ -550,8 +550,8 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
         a: 'Tile and a vinyl plank meant for a slab are the usual answers in kitchens, baths, and main rooms. Wood can work in a dry living room. We look at the slab before we recommend one.',
       },
       {
-        q: 'Will you file the claim for me?',
-        a: 'You file with your insurer. We are not public adjusters. We document the damage and repair what you hire. We do not decide the payment.',
+        q: 'Do you help with an insurance claim?',
+        a: 'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. We repair what you hire. Your insurer decides the payment.',
       },
     ],
     [

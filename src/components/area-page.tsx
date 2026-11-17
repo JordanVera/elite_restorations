@@ -161,7 +161,7 @@ export function AreaPageView({ page }: { page: AreaPage }) {
 
       <CtaBand
         title={`Planning work in ${page.name}?`}
-        body={`Call ${site.phone.display}. We schedule from ${site.address.streetAddress}, Houston, TX ${site.address.postalCode}.`}
+        body={`Call ${site.phone.display} to schedule an estimate. We work from our office in west Houston (77082).`}
       />
 
       <JsonLd

@@ -41,7 +41,7 @@ export const gutterGuide: ServiceGuide = {
       heading: "What a gutter project usually plans around.",
       paragraphs: [
         "As a planning range, not a quote, replacing the gutters on a typical one-story Houston house often falls around $1,200 to $3,500. A two-story house, a complex roof with many corners, board repair, or long downspout stretches often plans around $2,500 to $6,500. A few repaired corners and a couple of downspouts can be less. Guards add cost and are optional. These are ranges so you can tell a repair from a whole-house replacement. They are not a bid for your eaves.",
-        "The number moves with height, linear feet, how much rotten wood we find, and whether the downspouts can discharge on the ground or have to reach a drain across a patio. The price follows the gutters, not the size of the roof the way a roof replacement is discussed. If you are filing a hail or wind claim, we can photograph the damaged stretches and estimate the replacement. Your insurer decides coverage. A clogged gutter from ordinary leaves is maintenance, not a storm.",
+        "The number moves with height, linear feet, how much rotten wood we find, and whether the downspouts can discharge on the ground or have to reach a drain across a patio. The price follows the gutters, not the size of the roof the way a roof replacement is discussed. When hail or wind damaged the gutters, we can photograph the damaged stretches and estimate the replacement. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage. A clogged gutter from ordinary leaves is maintenance, not a storm.",
       ],
       points: [
         { title: "The board", body: "Soft wood behind the gutter is extra work. We show it before the new stretch goes up." },
@@ -54,7 +54,7 @@ export const gutterGuide: ServiceGuide = {
       heading: "Hard rain, flat lots, and trees that never stop.",
       paragraphs: [
         "Houston rain often arrives as a heavy burst. A gutter that is a little low or a little clogged overflows in minutes, and the water hits the slab. On flat lots in Alief, Westchase, and parts of Katy, that splash stays against the brick. Houses in Memorial and The Woodlands add live oak and pine debris, so a gutter that was clear in March is full by June. Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that actually tests it.",
-        "We work from 511 Crestwater Ct, Houston, TX 77082. Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer any time. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are independent of every insurer.",
+        "We work from our office in west Houston (77082). Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer any time. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are independent of every insurer.",
       ],
       points: [
         { title: "Slab splash", body: "Downspouts should discharge away from the foundation. A pretty stretch that dumps at the corner still wets the slab." },

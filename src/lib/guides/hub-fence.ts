@@ -41,7 +41,7 @@ export const fenceGuide: ServiceGuide = {
       heading: "What moves a fence number in Houston.",
       paragraphs: [
         "Fence prices follow linear feet, the number of gates, how many old posts have to come out, and whether the yard is open or full of roots and irrigation. As a planning range, not a quote, a straightforward wood privacy repair of a few sections often plans around $800 to $3,500. A full backyard stretch on a typical lot often plans around $3,500 to $12,000, more when the fence is long, the gates are wide, or the old concrete has to be broken out. Metal and masonry columns sit above that. Those ranges are not a bid.",
-        "Tear-out, haul-off, and a slope that steps the fence down a yard in Memorial or near a bayou add time. So does working from an alley with no place to stage. The price follows the fence, not the neighborhood name. We price the fence we walk. If a storm knocked it down and you are filing a claim, we can photograph the failure and estimate the rebuild. Your insurer decides whether wind is covered, and we leave that decision there.",
+        "Tear-out, haul-off, and a slope that steps the fence down a yard in Memorial or near a bayou add time. So does working from an alley with no place to stage. The price follows the fence, not the neighborhood name. We price the fence we walk. If a storm knocked it down, we can photograph the failure and estimate the rebuild. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides whether wind is covered, and we leave that decision there.",
       ],
       points: [
         { title: "Old posts", body: "Pulling concrete out of clay takes longer than setting a new hole in open soil. We say which posts are actually dead." },
@@ -54,7 +54,7 @@ export const fenceGuide: ServiceGuide = {
       heading: "Clay, wind, and the season the posts see.",
       paragraphs: [
         "Hurricane season is June 1 through November 30. That is when a privacy fence becomes a sail. Spring squalls do it too. A hard freeze is rarer and usually a pipe story, but a wet cold week still swells clay around a post. The Gulf humidity is the everyday problem: wood stays damp at the ground, and fungus finds the bottoms. We set posts with that in mind, and we do not promise a fence will ignore the next storm.",
-        "We schedule fence work from 511 Crestwater Ct, Houston, TX 77082, for yards in Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, and The Woodlands. Slab foundations matter because the fence often meets a patio or a driveway that must keep draining away from the house. A new fence that dams water against the slab is a mistake. We keep the bottom gap and the ground level in the conversation. Elite Restorations has been family-owned here since 1993. Call (713) 909-0034.",
+        "We schedule fence work from our office in west Houston (77082), for yards in Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, and The Woodlands. Slab foundations matter because the fence often meets a patio or a driveway that must keep draining away from the house. A new fence that dams water against the slab is a mistake. We keep the bottom gap and the ground level in the conversation. Elite Restorations has been family-owned here since 1993. Call (713) 909-0034.",
       ],
       points: [
         { title: "Drainage", body: "The lowest board should not become a dam. Water has to leave the yard and leave the slab." },
@@ -82,6 +82,6 @@ export const fenceGuide: ServiceGuide = {
     { q: "Can you match an existing wood fence?", a: "Often, if the style is still sold. Sun-faded boards will not match a new board perfectly. We will say that before we start." },
     { q: "Do you build fences at apartments or only houses?", a: "Houses are the usual fence. Apartment and commercial properties more often need gates, dumpster enclosures, or a stretch the wind took down. Call (713) 909-0034 and describe the property." },
     { q: "Will insurance pay for a fallen fence?", a: "The answer about payment is in your policy, not in our estimate. We photograph the failure and estimate the rebuild. Wind, flood, and rot are different stories. Check your policy." },
-    { q: "How do I reach you?", a: "Call (713) 909-0034. For an active storm emergency we answer any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM. You can also text that number." },
+    { q: "How do I reach you?", a: "Call (713) 909-0034. For an active storm emergency we answer any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. You can also text that number." },
   ],
 };

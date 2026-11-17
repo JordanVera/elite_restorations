@@ -103,7 +103,7 @@ export const backsplashBrief: Brief = {
     {
       q: 'How do you schedule backsplash installation in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if the counters stay. A backsplash is priced after we see the wall, not from the kitchen remodel ranges on the cost page.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if the counters stay. A backsplash is priced after we see the wall, not from the kitchen remodel ranges on the cost page.',
         'Call {phone} with the wall length and a photo. We set the {name} visit from ZIP 77082. The pattern is chosen after the wall is measured.',
       ],
     },

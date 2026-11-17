@@ -148,7 +148,7 @@ export const kitchenTrade: TradeSpec = {
       q: (a) => `How do you schedule kitchen remodeling in ${a.name}?`,
       answers: [
         (a) =>
-          `Call ${phone} or use the estimate form. We schedule ${a.name} from 511 Crestwater Ct. ${a.landmark} is about ${miles(a)} miles ${a.direction}, measured in a straight line, and the drive follows ${a.roads}. The kitchen cost page on this site explains what changes a Houston price. It is not a quote for this room. The quote follows the visit.`,
+          `Call ${phone} or use the estimate form. We schedule ${a.name} from our office in west Houston (77082). ${a.landmark} is about ${miles(a)} miles ${a.direction}, measured in a straight line, and the drive follows ${a.roads}. The kitchen cost page on this site explains what changes a Houston price. It is not a quote for this room. The quote follows the visit.`,
         (a) =>
           `The office is in west Houston, 77082. Call ${phone}, say what you want the ${a.name} kitchen to do, and we set a visit. Mention a wall you hope to open or a sink you hope to move so we look at those first. Mileage to ${a.landmark} is about ${miles(a)} miles in a straight line and does not set the layout.`,
       ],

@@ -31,14 +31,14 @@ const notes: Record<
 > = {
   westchase: {
     lede:
-      'The office is at 511 Crestwater Ct, Houston, TX 77082, in the Crestwater neighborhood near George Bush Park, a short drive west of the Westchase district. Remodeling, roofing, and restoration for Westchase are scheduled from that address.',
+      'Visits are scheduled from our office in west Houston (77082), in the Crestwater neighborhood near George Bush Park, a short drive west of the Westchase district. Remodeling, roofing, and restoration for Westchase are scheduled from that address.',
     description:
-      'Westchase, TX, a short drive from the Elite Restorations office at 511 Crestwater Ct, Houston 77082. Remodeling, roofing, and restoration.',
+      'Westchase, TX, a short drive from our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'Westchase is the district of offices, townhomes, and single-family houses along Westheimer, Richmond, and the Sam Houston Tollway. It is not one floor plan. A townhome with a shared wall and a single-family house from the late 1970s can sit a few blocks apart, and the work follows the building.',
       'Most of that housing went up from the 1970s through the 1990s. On this side of Houston that usually means a concrete slab rather than a crawlspace. Kitchens and baths have often been updated once already. We look at what is there before we assume the drains, the floor, or the roof match the year on the outside.',
       'Townhome sections often have an association that reviews exterior color, fences, and sometimes a roof. Single-family streets are less uniform. A kitchen or a bath inside the house is usually outside that review. A permit, when the work needs one, is a City of Houston permit. We confirm the address.',
-      'The office is not in the middle of the district. Crestwater Court is in 77082, near George Bush Park and the east side of Barker Reservoir, about 7 miles west of the Westchase core along Richmond in a straight line. The drive is Westheimer or Richmond. Traffic on the tollway changes the time, so we agree on a visit window when we talk.',
+      'The office is not in the middle of the district. Our office in west Houston (77082) is near George Bush Park and the east side of Barker Reservoir, about 7 miles west of the Westchase core along Richmond in a straight line. The drive is Westheimer or Richmond. Traffic on the tollway changes the time, so we agree on a visit window when we talk.',
       'This side of town drains toward the reservoir and the local bayous. Heavy rain ponds on flat streets. Low ground near the reservoir pools has taken storm water in past tropical storms. Higher pads have not all seen the same water. A water-heater leak and water that rose from outside are different visits, and sometimes different insurance policies. Your insurer decides coverage. We document and, if you hire us, dry and repair.',
       'Hail and wind are the same regional weather as the rest of west Houston. Roofs here are often asphalt on one or two stories. We inspect before we say a repair will hold. South and west walls fade first when the house has siding. Yards are usually modest, so a deck or a patio is sized to the lot and sloped away from the slab.',
       'There is no separate Westchase storefront. The visit is at the property. The links below open each service as it applies in Westchase, from kitchens and baths to roofs, water damage, and the notes that go with a claim.',
@@ -46,7 +46,7 @@ const notes: Record<
     faqs: [
       {
         q: 'Is the Elite Restorations office in the Westchase district?',
-        a: 'The office is at 511 Crestwater Ct, Houston, TX 77082, in Crestwater near George Bush Park. That is a short drive west of the Westchase core along Richmond and Westheimer, about 7 miles in a straight line. Westchase work is scheduled from that address. There is not a second storefront in the district.',
+        a: 'Visits are scheduled from our office in west Houston (77082), in Crestwater near George Bush Park. That is a short drive west of the Westchase core along Richmond and Westheimer, about 7 miles in a straight line. Westchase work is scheduled from that address. There is not a second storefront in the district.',
       },
       {
         q: 'What kind of houses are common in Westchase?',
@@ -64,12 +64,12 @@ const notes: Record<
   },
   alief: {
     lede:
-      'Alief is the southwest Houston community just south of our 77082 office. We schedule the work from 511 Crestwater Ct.',
+      'Alief is the southwest Houston community just south of our 77082 office. We schedule the work from our office in west Houston (77082).',
     description:
-      'Alief, TX, just south of the Elite Restorations office in Houston 77082. Remodeling, roofing, and restoration scheduled from 511 Crestwater Ct.',
+      'Alief, TX, just south of our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'Alief runs along Bellaire Boulevard south of the office: ranch houses and two-story homes, not a high-rise district. Most of the houses date from the 1970s through the 1990s and sit on slabs. Kitchens and baths have often been updated one piece at a time, so one room can mix decades. We look at what you want replaced.',
-      'Bellaire Boulevard at Dairy Ashford is about 4 miles south of 511 Crestwater Ct in a straight line. Beechnut and Bellaire are the usual drives. There is no Alief office. The visit is at the property.',
+      'Bellaire Boulevard at Dairy Ashford is about 4 miles south of our office in west Houston (77082) in a straight line. Beechnut and Bellaire are the usual drives. There is no Alief office. The visit is at the property.',
       'Alief is part of Houston, not a separate city hall. Associations exist in some subdivisions and not in others. When a permit is required, it is typically a City of Houston permit. Interior remodeling is rarely an association review. Roofs, paint, and fences are the items an association is more likely to care about, and only where one exists.',
       'Keegans Bayou and the wider Brays Bayou drainage run through this part of southwest Houston. Heavy rain floods streets. Some low blocks have taken storm water. A supply-line leak on a slab is still the more ordinary call, and it shows up at the base of the drywall. We meter before we dry, and a wall stays open until it is dry. Humidity is why dehumidifiers are part of a dry-out here.',
       'Roofs are typically asphalt on one and two stories. South and west slopes age faster. We look at all of them before we recommend a repair. Exteriors are often brick with some siding and trim. A siding repair is matched to the faded board, not to a chip from the year the house was built. Yards are ordinary suburban lots, which makes staging easier than on a street inside the Loop, and a patio still has to slope away from the slab.',
@@ -79,7 +79,7 @@ const notes: Record<
     faqs: [
       {
         q: 'How far is Alief from the office?',
-        a: 'The office is at 511 Crestwater Ct, Houston, TX 77082, just north of Alief. Bellaire Boulevard at Dairy Ashford is about 4 miles south in a straight line. The drive is Bellaire Boulevard or Beechnut. Work in Alief is scheduled from the 77082 office, and traffic changes the drive time.',
+        a: 'Visits are scheduled from our office in west Houston (77082), just north of Alief. Bellaire Boulevard at Dairy Ashford is about 4 miles south in a straight line. The drive is Bellaire Boulevard or Beechnut. Work in Alief is scheduled from the 77082 office, and traffic changes the drive time.',
       },
       {
         q: 'Are Alief houses usually pier-and-beam?',
@@ -87,7 +87,7 @@ const notes: Record<
       },
       {
         q: 'What should a roof inspection cover in Alief?',
-        a: 'All the slopes, not only the front. South and west faces age faster. Rubber collars, valleys, and metal joints fail while the main roof still looks calm from the street. We photograph the roof and say whether a repair will hold. If you are filing a claim, your insurer decides coverage.',
+        a: 'All the slopes, not only the front. South and west faces age faster. Rubber collars, valleys, and metal joints fail while the main roof still looks calm from the street. We photograph the roof and say whether a repair will hold. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
       },
       {
         q: 'Do you only remodel kitchens in Alief?',
@@ -97,13 +97,13 @@ const notes: Record<
   },
   'energy-corridor': {
     lede:
-      'The Energy Corridor is the west Houston district along Interstate 10, north of the office in 77082. We schedule work here from 511 Crestwater Ct.',
+      'The Energy Corridor is the west Houston district along Interstate 10, north of the office in 77082. We schedule work here from our office in west Houston (77082).',
     description:
-      'Energy Corridor, TX, along Interstate 10 near the Houston office in 77082. Remodeling, roofing, and restoration scheduled from 511 Crestwater Ct.',
+      'Energy Corridor, TX, along Interstate 10 near our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'The Energy Corridor is the I-10 district from the office parks near Eldridge toward Highway 6, with houses, townhomes, and apartments between the towers. A townhome with a shared wall and a single-family house on the next block are different jobs. The district name does not choose the work.',
       'Residential stock mixes 1960s and 1970s houses, later townhomes, and newer houses on older lots. Slabs are the normal foundation. Moving a shower or a sink means cutting concrete unless the fixture stays on its drain. Newer slabs are often post-tension, with cables that have to be located before anyone cuts. The corridor mixes decades, and we treat each house on its own.',
-      'Interstate 10 at Eldridge Parkway is about 6 miles north of 511 Crestwater Ct in a straight line. The drive is Highway 6 north to the freeway. The office is in Crestwater, near George Bush Park, south of the corridor. There is no corridor showroom.',
+      'Interstate 10 at Eldridge Parkway is about 6 miles north of our office in west Houston (77082) in a straight line. The drive is Highway 6 north to the freeway. The office is in Crestwater, near George Bush Park, south of the corridor. There is no corridor showroom.',
       'Terry Hershey Park and Buffalo Bayou run through the district. Low ground along the bayou has flooded in past tropical storms, including when the upstream reservoirs released. Houses and apartments on higher ground did not all take water. A second-floor supply leak is a different problem from bayou water. We ask which one happened. Wind and hail still belong in any roof conversation, separate from rising water. Your insurer decides which policy applies.',
       'Many townhome communities have an association that reviews exterior changes: roof color, siding, fences, and sometimes a deck. A kitchen or a bath inside the house is usually outside that review. This is Houston, so there is no zoning, and a permit depends on whether plumbing, electrical, or structure changes. We confirm the address before we treat a townhome rule as if it were the city.',
       'Roofs sit on houses and on townhomes, so staging and debris are planned for the one you have. Siding shows up on house walls and on the back of townhomes. Patios may be a court or a yard, and water still has to leave the wall, especially on lower ground near the bayou. Interior floors need a flat slab. A ridge will show through vinyl or large tile. Wood acclimates in the house. Showers are waterproofed before the finish tile.',
@@ -112,7 +112,7 @@ const notes: Record<
     faqs: [
       {
         q: 'Where is the office relative to the Energy Corridor?',
-        a: 'At 511 Crestwater Ct, Houston, TX 77082, in Crestwater near George Bush Park, south of Interstate 10. Interstate 10 at Eldridge is about 6 miles north in a straight line. The usual drive is Highway 6 up to the freeway. Corridor work is scheduled from that office. There is not a separate showroom in the district.',
+        a: 'At our office in west Houston (77082), in Crestwater near George Bush Park, south of Interstate 10. Interstate 10 at Eldridge is about 6 miles north in a straight line. The usual drive is Highway 6 up to the freeway. Corridor work is scheduled from that office. There is not a separate showroom in the district.',
       },
       {
         q: 'Are Energy Corridor homes all the same age?',

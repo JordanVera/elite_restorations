@@ -45,7 +45,7 @@ export const siding: ServiceGuide = {
       heading: 'A section, a wall, or the whole house.',
       paragraphs: [
         'As a planning range, not a quote, a matched repair of a damaged section often falls around $800 to $3,500 when the style can be found. A full wall or new siding on a typical house often plans around $10,000 to $30,000, more for a complex two-story, many windows, or a premium pattern. Height, gables, and rotten wood under the siding move the number. The price follows the wall, not the size of the roof.',
-        'Paint on sound boards is a different project from new siding. If the boards are sound and only the paint has failed, we will say so. Soft boards make paint a waste. If you are filing, the record is photos of the damage and of the finished repair. Your insurer decides coverage. We help with the photos and the work.',
+        'Paint on sound boards is a different project from new siding. If the boards are sound and only the paint has failed, we will say so. Soft boards make paint a waste. The record is photos of the damage and of the finished repair. Your insurer decides coverage. We help with the photos and the work.',
       ],
       points: [
         { title: 'Wood behind it', body: 'Soft plywood or a torn wrap behind the siding is extra work. We open enough to know, and we stop to show you before the job grows.' },
@@ -224,7 +224,7 @@ export const emergencyTarp: ServiceGuide = {
       heading: 'Storms, photos, and the interior underneath.',
       paragraphs: [
         'The calls come from Clear Lake and Galveston after coastal wind, and from Katy, Cypress, and The Woodlands after hail and straight-line wind. The work is the same order: safe access, photos, a cover that stays on, then a plan. Live oaks throw limbs. Older roofs open at valleys and where metal meets a wall. Newer roofs open when a ridge vent or the rubber collar around a vent pipe gives up. We document the one you have.',
-        'Many Texas policies use a separate wind or hail deductible that is a percentage of the insured value of the house. That deductible is not the one on a plumbing leak, and it can be a large number. Whether this storm clears it is a question for your insurer. Our part is the photos and the protection. Call (713) 909-0034. The office is at 511 Crestwater Ct, Houston, TX 77082, and the form on this site reaches the same team. We\'ll call you back as soon as we can.',
+        'Many Texas policies use a separate wind or hail deductible that is a percentage of the insured value of the house. That deductible is not the one on a plumbing leak, and it can be a large number. Whether this storm clears it is a question for your insurer. Our part is the photos and the protection. Call (713) 909-0034. Visits are scheduled from our office in west Houston (77082), and the form on this site reaches the same team. We\'ll call you back as soon as we can.',
       ],
       points: [
         { title: 'Photograph before cleanup', body: 'Wide shots and close shots, before belongings are thrown away and before the tarp hides the opening. We take our own set too.' },
@@ -237,7 +237,7 @@ export const emergencyTarp: ServiceGuide = {
       heading: 'Houses, apartments, and low commercial roofs.',
       paragraphs: [
         'The same storm that opens a house in Katy can open a stairwell roof on an apartment building in the Energy Corridor or a low commercial roof in Westchase. The sequence does not change because the building is bigger: stay off it until it is safe, photograph the opening, cover what we can reach, and note which ceilings are wet. A property manager usually needs those photos the same day.',
-        'Board-up is the wall and the glass. A tarp is the roof. A limb can make both true. We say which openings we can secure on that visit. Flat roofs pond, so a loose cover is worse than none. Call (713) 909-0034 any time for an active storm or water emergency. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit.',
+        'Board-up is the wall and the glass. A tarp is the roof. A limb can make both true. We say which openings we can secure on that visit. Flat roofs pond, so a loose cover is worse than none. Call (713) 909-0034 any time for an active storm or water emergency. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit.',
       ],
       points: [
         { title: 'Many units', body: 'Water in a top-floor ceiling can be one unit or a stack. We ask which ceilings are wet before we treat the building as a single room.' },
@@ -273,7 +273,7 @@ export const emergencyTarp: ServiceGuide = {
     },
     {
       q: 'Can a manager reach you after office hours?',
-      a: 'For an active storm or water emergency, call (713) 909-0034 any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. You can also text that number.',
+      a: 'For an active storm or water emergency, call (713) 909-0034 any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. You can also text that number.',
     },
   ],
 };
@@ -292,7 +292,7 @@ export const insuranceClaims: ServiceGuide = {
       eyebrow: 'What this is',
       heading: 'Photos and a clear record. Not a coverage decision.',
       paragraphs: [
-        'When we help with a claim, we mean photos and notes of the water or storm damage, tied to the work if you hire us to dry or rebuild. Filing the claim, reading the policy, and the numbers with the adjuster stay with you and your insurer. Your insurer decides what is covered. We are not public adjusters. The free insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
+        'When we help with a claim, we mean photos and notes of the water or storm damage, tied to the work if you hire us to dry or rebuild. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Reading the policy stays with you and your insurer. Your insurer decides what is covered. We are not public adjusters. The insurance photo log is yours whether or not you hire us. It is a packet, not a promise about payment.',
         'The losses we document most often start with a roof opening, a supply line, an appliance, or water that came in at ground level. Those are different facts. A homeowners policy often treats them differently, and flood from rising water is often a different policy entirely. We describe what we can see. If the water rose into the house, we write it that way. Check your policy before calling it a burst pipe.',
       ],
       points: [
@@ -306,10 +306,10 @@ export const insuranceClaims: ServiceGuide = {
       heading: 'What to write down, and what we will write down.',
       paragraphs: [
         'Write the date you noticed the damage, who you called, and the claim number. Keep the failed hose or the fitting if you can do it safely. Note whether water came from a pipe, from the roof, or from the street. Ask the insurer what they want saved and whether they want to see anything before it is removed. Notice language is in the policy. It is not the same on every Texas policy, so we will not invent “you have 48 hours” or any other deadline.',
-        'When we are there, the notes say where the water went, what was dried, what was removed, and what was rebuilt. Photos are taken before a tarp covers an opening when that is safe, and before new drywall closes a wall. You may give that set to the adjuster. We can walk an adjuster through what we saw of the building. The dollar figure stays between you and your insurer, and the claim stays in your name.',
+        'When we are there, the notes say where the water went, what was dried, what was removed, and what was rebuilt. Photos are taken before a tarp covers an opening when that is safe, and before new drywall closes a wall. You may give that set to the adjuster. We can walk an adjuster through what we saw of the building. Your insurer decides the dollar figure. Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster.',
       ],
       points: [
-        { title: 'The photo log', body: 'The log on this site is room by room. Use it the day of the loss if you want a structure. It is free. It does not create coverage.' },
+        { title: 'The photo log', body: 'The log on this site is room by room. Use it the day of the loss if you want a structure. It does not create coverage.' },
         { title: 'Cause in plain words', body: '“The supply line under the sink failed” is a fact if that is what happened. Whether the policy should pay is for your insurer to decide.' },
         { title: 'Depreciation', body: 'Some policies pay a lower amount first and hold the rest until the work is done. Some do not. That wording is in your policy. Your insurer does the math.' },
       ],
@@ -324,7 +324,7 @@ export const insuranceClaims: ServiceGuide = {
       points: [
         { title: 'The claim stays yours', body: 'Hiring the drying or the repair does not assign the claim to us. You remain the person on the policy. We document the building.' },
         { title: 'Limiting more damage', body: 'A tarp and a dry-out have a cost even when you hope the policy pays them back. We price that work as work. Starting it is not a yes from the insurer.' },
-        { title: 'Get the number from the visit', body: 'Call (713) 909-0034 or request an estimate. The address is 511 Crestwater Ct, Houston, TX 77082. The visit is how the work, and then the price, gets decided.' },
+        { title: 'Get the number from the visit', body: 'Call (713) 909-0034 or request an estimate. We schedule the visit from our office in west Houston (77082). The visit is how the work, and then the price, gets decided.' },
       ],
     },
     {
@@ -348,11 +348,11 @@ export const insuranceClaims: ServiceGuide = {
     },
     {
       q: 'Is there a fee for the documentation?',
-      a: 'Photos and notes are part of the inspection, drying, or repair you hire. There is no separate bill just for the paperwork. The photo log on the site is free to use on your own.',
+      a: 'Photos and notes are part of the inspection, drying, or repair you hire. There is no separate bill just for the paperwork. The photo log on the site is there if you want to fill it out on your own.',
     },
     {
       q: 'What should I do before anyone arrives?',
-      a: 'If it is safe, stop more water, photograph the rooms, and keep the failed part. Then call your insurer and call (713) 909-0034 if you want us on the building. Do not gut a room before it is documented.',
+      a: 'If it is safe, stop more water, photograph the rooms, and keep the failed part. Then call (713) 909-0034 if you want us on the building. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Do not gut a room before it is documented.',
     },
     {
       q: 'Why might the insurance check and your estimate differ?',

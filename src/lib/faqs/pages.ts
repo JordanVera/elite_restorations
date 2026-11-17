@@ -56,7 +56,7 @@ export const costFaqs: Record<string, Faq[]> = {
     },
     {
       q: "What if there is already a leak under the tile?",
-      a: "Then drying and rotten board come before the new bath. That repair is not free inside a finish refresh. We would rather find it on the visit than on demo day. If you are filing a claim, your insurer decides payment. This page is the construction price.",
+      a: "Then drying and rotten board come before the new bath. That repair is not free inside a finish refresh. We would rather find it on the visit than on demo day. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides payment. This page is the construction price.",
     },
     {
       q: "Does the glass enclosure sit inside the range?",
@@ -300,7 +300,7 @@ export const restorationFaqs: Faq[] = [
   },
   {
     q: "Will insurance cover the restoration?",
-    a: "We cannot say, and we do not promise approval or a payout. We help document the damage and work with your adjuster. You file the claim. A burst pipe, hail, a hurricane, a tornado, and rising floodwater are different events. Check the policy that matches the one you had.",
+    a: "We cannot say, and we do not promise approval or a payout. We help document the damage and work with your adjuster. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. A burst pipe, hail, a hurricane, a tornado, and rising floodwater are different events. Check the policy that matches the one you had.",
   },
   {
     q: "What is the difference between floodwater and a pipe break?",

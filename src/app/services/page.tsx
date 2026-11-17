@@ -145,7 +145,7 @@ export default function ServicesPage() {
             Areas we serve
           </h2>
           <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-            The office is at 511 Crestwater Ct, Houston, TX 77082. Westchase,
+            Visits are scheduled from our office in west Houston (77082). Westchase,
             Alief, and the Energy Corridor are next door. Each service page
             also covers the wider Houston area.
           </p>

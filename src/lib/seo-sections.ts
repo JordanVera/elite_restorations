@@ -37,7 +37,7 @@ export const homeRestorationEs = {
   title: 'Restauración de casas en Houston',
   paragraphs: [
     'La restauración de una casa es el trabajo que sigue al agua, a una tormenta o a un techo que dejó pasar la lluvia. La meta es una casa seca que se pueda usar otra vez. Remodelar puede esperar a que la estructura esté seca.',
-    'Elite Restorations es una empresa familiar en Houston desde 1993. Secamos el daño de agua, cubrimos un techo abierto, ponemos tablas en una ventana o una puerta rota, y reparamos lo que el agua dañó. La oficina está en 511 Crestwater Ct. Llame al (713) 909-0034.',
+    'Elite Restorations es una empresa familiar en Houston desde 1993. Secamos el daño de agua, cubrimos un techo abierto, ponemos tablas en una ventana o una puerta rota, y reparamos lo que el agua dañó. Trabajamos desde nuestra oficina en el oeste de Houston (77082). Llame al (713) 909-0034.',
     'En una casa de Crosby se encontró daño de agua en enero de 2025. El piso de la cocina salió hasta un contrapiso manchado, y deshumidificadores y ventiladores de secado secaron la cocina y el baño. El secado y la reparación fueron de febrero a marzo de 2025, y la cocina y el baño quedaron listos en abril de 2025.',
   ],
   links: [

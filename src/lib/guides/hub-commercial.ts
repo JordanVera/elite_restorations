@@ -18,7 +18,7 @@ export const commercialGuide: ServiceGuide = {
         "We have done house work in Houston since 1993, and the same family company takes the building calls. You hire us for the repair, not a national brand and not the insurer. You hire us. The insurer decides the claim. If you need a crew that will also rebuild drywall and roofing after the dry-out, that is the point of keeping one team.",
       ],
       points: [
-        { title: "One number", body: "Call (713) 909-0034 for an active emergency any time. Office hours for a scheduled walk are Monday through Saturday, 8:00 AM to 6:00 PM, at 511 Crestwater Ct, Houston, TX 77082." },
+        { title: "One number", body: "Call (713) 909-0034 for an active emergency any time. Office hours for a scheduled walk are Monday through Saturday, 8:00 AM to 6:00 PM, at our office in west Houston (77082)." },
         { title: "Who can approve", body: "Tell us if a board, an owner, or an on-site manager has to authorize tarping or drywall. We would rather know before we open a ceiling." },
         { title: "Houses too", body: "The same company restores houses. The commercial page exists so a manager can see the building work without reading a kitchen page." },
       ],
@@ -67,7 +67,7 @@ export const commercialGuide: ServiceGuide = {
       heading: "Helping the building's claim without pretending to own it.",
       paragraphs: [
         "We help with photos, a unit-by-unit moisture note, steps that limit more damage, a meeting with the adjuster on site, and a detailed repair estimate. We work with you through the repair. We are not public adjusters. Legal advice and the payout stay with your insurer. Hurricane, hail, wind, tornado, and flood are different events, and a building may carry more than one policy. Check them. The photo log on this site is built for a house, room by room. A manager can still use the same habits: wide shot, close shot, date, location.",
-        "Elite Restorations is family-owned in Houston since 1993. The office is 511 Crestwater Ct, Houston, TX 77082. We serve Greater Houston, including the Energy Corridor, Westchase, Alief, Katy, Sugar Land, and the commercial streets between them. We do not use another company's logo, and we do not claim an affiliation. If you want the house version of this work, the water, roofing, tarp, and board-up pages are linked below the article.",
+        "Elite Restorations is family-owned in Houston since 1993. Visits are scheduled from our office in west Houston (77082). We serve Greater Houston, including the Energy Corridor, Westchase, Alief, Katy, Sugar Land, and the commercial streets between them. We do not use another company's logo, and we do not claim an affiliation. If you want the house version of this work, the water, roofing, tarp, and board-up pages are linked below the article.",
       ],
       points: [
         { title: "Adjuster day", body: "We can walk the roof and the wet units with the adjuster and stick to what we saw." },

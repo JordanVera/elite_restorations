@@ -80,7 +80,7 @@ const waterCauseInputs: readonly WaterCause[] = [
         eyebrow: "Where it goes",
         heading: "Slabs, ceilings, and more than one unit.",
         paragraphs: [
-          "Most houses around our office at 511 Crestwater Ct sit on concrete slabs. Water from a burst line does not drop into a crawlspace. It runs across the slab, wicks into the base of the drywall, and soaks padding under floors. A second-floor or attic break lands in the ceiling and can cross rooms before it drips. We map that path with meters. Thermal imaging helps when the stain is smaller than the wet area, which is common.",
+          "Most houses around our office in west Houston (77082) sit on concrete slabs. Water from a burst line does not drop into a crawlspace. It runs across the slab, wicks into the base of the drywall, and soaks padding under floors. A second-floor or attic break lands in the ceiling and can cross rooms before it drips. We map that path with meters. Thermal imaging helps when the stain is smaller than the wet area, which is common.",
           "In an apartment building the same break can wet the unit below and the corridor. We write down each unit that is actually wet. One spotted ceiling is not a reason to dry the whole stack. Commercial buildings add ceiling tile, a server closet, or a stock room under the line. Tell us what is underneath. Hurricane season is a different time of year. A hard freeze in Houston is a winter event, often one or two nights, and the calls come the morning the pipes thaw.",
         ],
         points: [
@@ -123,7 +123,7 @@ const waterCauseInputs: readonly WaterCause[] = [
           "Houses in Houston, Katy, Sugar Land, The Woodlands, and Clear Lake are built for heat. Supplies in attics and on exterior walls are often uninsulated because a hard freeze is not the normal week. When one arrives, those lines are the ones that split, often while people are asleep or out of town. Apartment complexes with exposed lines in breezeways and commercial buildings with rooftop or exterior water lines fail the same night. The morning thaw is when the ceiling opens.",
           "We answer " +
             phone +
-            " any time for an active water emergency at a house, an apartment community, or a commercial building. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. You can text that number. Elite Restorations has been family-owned here since 1993. We dry and repair the building for you, not for your insurer. We are independent of every insurer.",
+            " any time for an active water emergency at a house, an apartment community, or a commercial building. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. You can text that number. Elite Restorations has been family-owned here since 1993. We dry and repair the building for you, not for your insurer. We are independent of every insurer.",
         ],
         points: [
           { title: "Check after the ice melts", body: "A frozen pipe can stay closed until the ice melts, then let go. If the freeze just broke, walk the house and look at the ceilings before you leave." },
@@ -143,7 +143,7 @@ const waterCauseInputs: readonly WaterCause[] = [
       { q: "Can you rebuild the drywall and floors?", a: "Yes, after the readings say the structure is dry. Drying and the rebuild can stay with one company." },
       { q: "What does this usually cost?", a: "A small contained release and a whole-house ceiling failure are not the same number. As a planning range, not a quote, drying one wet room often plans in the low thousands, and a wide release costs more. We price what we measure." },
       { q: "Are you available after hours?", a: "For active water emergencies, call " + phone + " any time. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
-      { q: "Where are you located?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. We schedule Greater Houston from that office, including Westchase, Katy, Sugar Land, and The Woodlands." },
+      { q: "Where are you located?", a: "Our office in west Houston (77082). Family-owned since 1993. We schedule Greater Houston from that office, including Westchase, Katy, Sugar Land, and The Woodlands." },
     ],
   }),
   ...moreWaterCauses,

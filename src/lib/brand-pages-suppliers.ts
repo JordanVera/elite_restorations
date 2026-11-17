@@ -28,10 +28,10 @@ const abcEn = {
   esPath: "/es/abc-supply-roofing-siding-houston",
   metaTitle: "ABC Supply Roofing Houston",
   description:
-    "ABC Supply roofing and siding in Houston. We buy the materials and install the roof, wall, or gutters. Free estimates. Call (713) 909-0034.",
+    "ABC Supply roofing and siding in Houston. We buy the materials and install the roof, wall, or gutters. Call (713) 909-0034 to schedule an estimate.",
   eyebrow: "ABC Supply",
   title: ["ABC Supply roofing", "and siding."],
-  lede: `Need roofing or siding work in Houston? Elite Restorations buys quality roofing, siding and gutter materials from ABC Supply and installs them on your home, whether it's a full replacement, a repair, new siding or new gutters. ABC Supply has been supplying building materials since 1982, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
+  lede: `Need roofing or siding work in Houston? Elite Restorations buys quality roofing, siding and gutter materials from ABC Supply and installs them on your home, whether it's a full replacement, a repair, new siding or new gutters. ABC Supply has been supplying building materials since 1982, and we've been a family-owned Houston company since 1993. Call ${phone} to schedule an estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Roofing", path: "/roofing" },
@@ -41,7 +41,7 @@ const abcEn = {
   serviceName: "ABC Supply roofing and siding in Houston",
   relatedHeading: "Neighborhoods and related exterior work",
   ctaTitle: "Planning a roof or siding from ABC Supply?",
-  ctaBody: `Call ${phone} and we will look at the roof or the wall. The estimate is free. We buy the materials from ABC Supply and install them. If a claim is involved, your insurer decides it.`,
+  ctaBody: `Call ${phone} to schedule an estimate, and we will look at the roof or the wall. We buy the materials from ABC Supply and install them. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.`,
   sections: [
     {
       eyebrow: "The supplier",
@@ -87,8 +87,8 @@ const abcEn = {
       eyebrow: "The visit",
       heading: "Claims, timing, and where we work.",
       paragraphs: [
-        "If you are filing, we photograph the roof, the siding, or the gutters before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: the tear-off or the repair, the materials we buy from ABC Supply, the flashing, the vents, the siding or the gutters, and any decking or fascia we can already see. It is not the amount the claim will pay. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.",
-        `A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these roofs, walls, and gutters across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        "We photograph the roof, the siding, or the gutters before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: the tear-off or the repair, the materials we buy from ABC Supply, the flashing, the vents, the siding or the gutters, and any decking or fascia we can already see. It is not the amount the claim will pay. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.",
+        `A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. Visits are scheduled from our office in west Houston (77082). Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} to schedule an estimate. We install these roofs, walls, and gutters across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
@@ -115,11 +115,11 @@ const abcEn = {
     },
     {
       q: "Will you document a storm for an insurance claim?",
-      a: "We photograph the damage, we can meet your adjuster on site, and the estimate is the price of the construction. You file the claim. Your insurer decides coverage and payment. We are not public adjusters.",
+      a: "We photograph the damage, we can meet your adjuster on site, and the estimate is the price of the construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We are not public adjusters.",
     },
     {
       q: "Where do you install ABC Supply materials, and how do I reach you?",
-      a: `From the office at 511 Crestwater Ct, Houston, TX 77082, across Houston and nearby cities including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Call ${phone}. Family-owned since 1993.`,
+      a: `From our office in west Houston (77082), across Houston and nearby cities including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Call ${phone}. Family-owned since 1993.`,
     },
   ],
   related: [
@@ -143,10 +143,10 @@ const fergusonEn = {
   esPath: "/es/ferguson-plumbing-fixtures-installation-houston",
   metaTitle: "Ferguson Fixtures Houston",
   description:
-    "Ferguson fixture installation in Houston for kitchens and baths. We buy the fixtures and set them. Free estimates. Call (713) 909-0034.",
+    "Ferguson fixture installation in Houston for kitchens and baths. We buy the fixtures and set them. Call (713) 909-0034 to schedule an estimate.",
   eyebrow: "Ferguson",
   title: ["Ferguson fixtures", "in Houston."],
-  lede: `Upgrading your kitchen or bathroom in Houston? Elite Restorations buys faucets, sinks, toilets, showers, tubs, water heaters and appliances from Ferguson and installs them during remodels or after leak repairs. Ferguson has been supplying plumbing products since 1953, and we've been a family-owned Houston company since 1993. Call ${phone} for a free estimate.`,
+  lede: `Upgrading your kitchen or bathroom in Houston? Elite Restorations buys faucets, sinks, toilets, showers, tubs, water heaters and appliances from Ferguson and installs them during remodels or after leak repairs. Ferguson has been supplying plumbing products since 1953, and we've been a family-owned Houston company since 1993. Call ${phone} to schedule an estimate.`,
   crumbs: [
     { name: "Services", path: "/services" },
     { name: "Bathrooms", path: "/bathroom-remodeling" },
@@ -156,7 +156,7 @@ const fergusonEn = {
   serviceName: "Ferguson fixture installation in Houston",
   relatedHeading: "Neighborhoods and related remodel work",
   ctaTitle: "Planning Ferguson fixtures?",
-  ctaBody: `Call ${phone} and we will look at the kitchen or the bath. The estimate is free. We buy the fixtures from Ferguson and install them. If a claim is involved, your insurer decides it.`,
+  ctaBody: `Call ${phone} to schedule an estimate, and we will look at the kitchen or the bath. We buy the fixtures from Ferguson and install them. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.`,
   sections: [
     {
       eyebrow: "The supplier",
@@ -187,7 +187,7 @@ const fergusonEn = {
       heading: "Water heaters after a leak, or in a remodel.",
       paragraphs: [
         "A water heater we buy from Ferguson is either a tank or a tankless unit, sized for the baths in the house, not for a slogan on the box. A tank sits in a pan with a drain that can actually leave the room. The relief valve on the tank needs a discharge line that ends where water can get out. A gas heater needs a vent that carries exhaust outside. An electric heater needs a circuit that matches the unit. We do not set a new heater into a closet that is still wet from the one that failed.",
-        "When a heater has already leaked, the job is the water first. Standing water, wet drywall, and a soaked floor are dried before a new tank is slid into place. A pan full of rust is a reason to replace the pan, not only the heater. If you are filing because the leak damaged the house, we photograph the heater, the pan, and the rooms the water reached. The estimate separates the drying and the rebuild from the new heater. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.",
+        "When a heater has already leaked, the job is the water first. Standing water, wet drywall, and a soaked floor are dried before a new tank is slid into place. A pan full of rust is a reason to replace the pan, not only the heater. When the leak damaged the house, we photograph the heater, the pan, and the rooms the water reached. The estimate separates the drying and the rebuild from the new heater. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.",
       ],
     },
     {
@@ -203,7 +203,7 @@ const fergusonEn = {
       heading: "How long the fixture work takes, and where we work.",
       paragraphs: [
         "A single faucet or a toilet reset is often part of a day once the fixture is here. A shower that needs a new valve, waterproofing, and tile is a sequence of days, and the tile cannot start until the waterproofing is ready. A kitchen sink waits on the counter. A water heater is often one visit after the old unit is out and the closet is dry, unless the vent, the pan drain, or the gas piping has to be rebuilt. We name those steps after we see the room, including what has to dry before anything new is set.",
-        `The office is at 511 Crestwater Ct, Houston, TX 77082. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} for a free estimate. We install these fixtures across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
+        `Visits are scheduled from our office in west Houston (77082). Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Call ${phone} to schedule an estimate. We install these fixtures across Houston, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University. Family-owned since 1993.`,
       ],
     },
   ],
@@ -230,11 +230,11 @@ const fergusonEn = {
     },
     {
       q: "Can you replace fixtures after a leak or a water-damage repair?",
-      a: "Yes, after the room is dry and the cabinet or the wall behind the fixture is sound. A new faucet does not go on a swollen vanity. We photograph the damage if you are filing a claim.",
+      a: "Yes, after the room is dry and the cabinet or the wall behind the fixture is sound. A new faucet does not go on a swollen vanity. We photograph the damage. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.",
     },
     {
       q: "Will you document the fixture work for a claim, and where do you work?",
-      a: "We photograph the damage and the repair. The estimate is the price of the construction and the fixtures. You file the claim. Your insurer decides coverage and payment. We are not public adjusters. We work from 511 Crestwater Ct, Houston, TX 77082, including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University.",
+      a: "We photograph the damage and the repair. The estimate is the price of the construction and the fixtures. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We are not public adjusters. We work from our office in west Houston (77082), including Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial, and West University.",
     },
   ],
   related: [
@@ -257,10 +257,10 @@ const abcEs = {
   esPath: "/es/abc-supply-roofing-siding-houston",
   metaTitle: "Techos ABC Supply en Houston",
   description:
-    "Techos y siding ABC Supply en Houston. Compramos el material e instalamos el techo, el muro o las canaletas. Estimado gratis. Llame al (713) 909-0034.",
+    "Techos y siding ABC Supply en Houston. Compramos el material e instalamos el techo o las canaletas. Llame al (713) 909-0034 para pedir un estimado.",
   eyebrow: "ABC Supply",
   title: ["Techos y siding", "ABC Supply."],
-  lede: `¿Necesita trabajo de techo o de siding en Houston? Elite Restorations compra materiales de techo, siding y canaletas en ABC Supply Co. y los instala en su casa, ya sea un cambio completo, una reparación, siding nuevo o canaletas nuevas. ABC Supply surte materiales de construcción desde 1982, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
+  lede: `¿Necesita trabajo de techo o de siding en Houston? Elite Restorations compra materiales de techo, siding y canaletas en ABC Supply Co. y los instala en su casa, ya sea un cambio completo, una reparación, siding nuevo o canaletas nuevas. ABC Supply surte materiales de construcción desde 1982, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para pedir un estimado.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Techos", path: "/es/roofing" },
@@ -270,7 +270,7 @@ const abcEs = {
   serviceName: "Techos y siding ABC Supply en Houston",
   relatedHeading: "Vecindarios y exterior relacionado",
   ctaTitle: "¿Planea techo o siding de ABC Supply?",
-  ctaBody: `Llame al ${phone} y vemos el techo o el muro. El estimado es gratis. Compramos el material en ABC Supply y lo instalamos. Si hay un reclamo, su aseguradora lo decide.`,
+  ctaBody: `Llame al ${phone} para pedir un estimado, y vemos el techo o el muro. Compramos el material en ABC Supply y lo instalamos. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.`,
   sections: [
     {
       eyebrow: "El proveedor",
@@ -316,8 +316,8 @@ const abcEs = {
       eyebrow: "La visita",
       heading: "Reclamos, tiempos y dónde trabajamos.",
       paragraphs: [
-        "Si va a presentar un reclamo, fotografiamos el techo, el siding o las canaletas antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar o reparar, el material que compramos en ABC Supply, el metal, la ventilación, el siding o las canaletas, y la madera o la fascia que ya se puede ver. No es la cantidad que el reclamo va a pagar. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
-        `Un deducible de viento o granizo en Texas suele ser un porcentaje en su página de declaraciones. No tenemos ese número y no lo inventamos. La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estos techos, muros y canaletas en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        "Fotografiamos el techo, el siding o las canaletas antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar o reparar, el material que compramos en ABC Supply, el metal, la ventilación, el siding o las canaletas, y la madera o la fascia que ya se puede ver. No es la cantidad que el reclamo va a pagar. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.",
+        `Un deducible de viento o granizo en Texas suele ser un porcentaje en su página de declaraciones. No tenemos ese número y no lo inventamos. Trabajamos desde nuestra oficina en el oeste de Houston (77082). Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para pedir un estimado. Instalamos estos techos, muros y canaletas en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
@@ -344,11 +344,11 @@ const abcEs = {
     },
     {
       q: "¿Documentan una tormenta para un reclamo de seguro?",
-      a: "Fotografiamos el daño, podemos estar con su ajustador, y el estimado es el precio de la construcción. Usted presenta el reclamo. Su aseguradora decide. No somos ajustadores públicos.",
+      a: "Fotografiamos el daño, podemos estar con su ajustador, y el estimado es el precio de la construcción. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Su aseguradora decide. No somos ajustadores públicos.",
     },
     {
       q: "¿Dónde instalan material de ABC Supply y cómo los contacto?",
-      a: `Desde la oficina en 511 Crestwater Ct, Houston, TX 77082, en Houston y ciudades cercanas, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Llame al ${phone}. Empresa familiar desde 1993.`,
+      a: `Desde la oficina en nuestra oficina en el oeste de Houston (77082), en Houston y ciudades cercanas, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Llame al ${phone}. Empresa familiar desde 1993.`,
     },
   ],
   related: [
@@ -371,10 +371,10 @@ const fergusonEs = {
   esPath: "/es/ferguson-plumbing-fixtures-installation-houston",
   metaTitle: "Plomería Ferguson en Houston",
   description:
-    "Instalación de accesorios Ferguson en Houston para cocinas y baños. Compramos las piezas y las ponemos. Estimado gratis. Llame al (713) 909-0034.",
+    "Instalación de accesorios Ferguson en Houston para cocinas y baños. Compramos las piezas y las ponemos. Llame al (713) 909-0034 para pedir un estimado.",
   eyebrow: "Ferguson",
   title: ["Accesorios Ferguson", "en Houston."],
-  lede: `¿Va a renovar la cocina o el baño en Houston? Elite Restorations compra llaves, fregaderos, inodoros, regaderas, tinas, calentadores y aparatos en Ferguson y los instala en la remodelación o después de reparar una fuga. Ferguson surte productos de plomería desde 1953, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para un estimado gratis.`,
+  lede: `¿Va a renovar la cocina o el baño en Houston? Elite Restorations compra llaves, fregaderos, inodoros, regaderas, tinas, calentadores y aparatos en Ferguson y los instala en la remodelación o después de reparar una fuga. Ferguson surte productos de plomería desde 1953, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para pedir un estimado.`,
   crumbs: [
     { name: "Servicios", path: "/es" },
     { name: "Baños", path: "/es/bathroom-remodeling" },
@@ -384,7 +384,7 @@ const fergusonEs = {
   serviceName: "Instalación de accesorios Ferguson en Houston",
   relatedHeading: "Vecindarios y remodelación relacionada",
   ctaTitle: "¿Planea accesorios Ferguson?",
-  ctaBody: `Llame al ${phone} y vemos la cocina o el baño. El estimado es gratis. Compramos los accesorios en Ferguson y los instalamos. Si hay un reclamo, su aseguradora lo decide.`,
+  ctaBody: `Llame al ${phone} para pedir un estimado, y vemos la cocina o el baño. Compramos los accesorios en Ferguson y los instalamos. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.`,
   sections: [
     {
       eyebrow: "El proveedor",
@@ -415,7 +415,7 @@ const fergusonEs = {
       heading: "Calentadores después de una fuga, o en una remodelación.",
       paragraphs: [
         "Un calentador que compramos en Ferguson es de tanque o sin tanque, del tamaño de los baños de la casa, no de una frase en la caja. Un tanque va en una charola con un desagüe que de verdad pueda salir del cuarto. La válvula de alivio del tanque necesita un tubo de descarga que termine donde el agua pueda salir. Un calentador de gas necesita un venteo que saque el escape de la casa. Uno eléctrico necesita un circuito que coincida con el aparato. No ponemos un calentador nuevo en un clóset que sigue mojado por el que falló.",
-        "Cuando un calentador ya se fugó, el trabajo es el agua primero. El agua en el piso, el drywall mojado y el piso empapado se secan antes de meter un tanque nuevo. Una charola llena de óxido es razón para cambiar la charola, no solo el calentador. Si va a presentar un reclamo porque la fuga dañó la casa, fotografiamos el calentador, la charola y los cuartos a los que llegó el agua. El estimado separa el secado y la reconstrucción del calentador nuevo. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
+        "Cuando un calentador ya se fugó, el trabajo es el agua primero. El agua en el piso, el drywall mojado y el piso empapado se secan antes de meter un tanque nuevo. Una charola llena de óxido es razón para cambiar la charola, no solo el calentador. Cuando la fuga dañó la casa, fotografiamos el calentador, la charola y los cuartos a los que llegó el agua. El estimado separa el secado y la reconstrucción del calentador nuevo. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.",
       ],
     },
     {
@@ -431,7 +431,7 @@ const fergusonEs = {
       heading: "Cuánto tarda el trabajo de accesorios, y dónde trabajamos.",
       paragraphs: [
         "Una sola llave o volver a sentar un inodoro suele ser parte de un día cuando el accesorio ya está. Una regadera que necesita válvula nueva, impermeabilización y loseta es una secuencia de días, y la loseta no empieza hasta que la impermeabilización está lista. Un fregadero de cocina espera a la cubierta. Un calentador suele ser una visita cuando la unidad vieja ya salió y el clóset está seco, a menos que el venteo, el desagüe de la charola o la tubería de gas haya que rehacerlos. Esos pasos los nombramos después de ver el cuarto, incluido lo que tiene que secar antes de poner algo nuevo.",
-        `La oficina está en 511 Crestwater Ct, Houston, TX 77082. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para un estimado gratis. Instalamos estos accesorios en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
+        `Trabajamos desde nuestra oficina en el oeste de Houston (77082). Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Llame al ${phone} para pedir un estimado. Instalamos estos accesorios en Houston, incluidos Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University. Empresa familiar desde 1993.`,
       ],
     },
   ],
@@ -458,11 +458,11 @@ const fergusonEs = {
     },
     {
       q: "¿Pueden cambiar accesorios después de una fuga o de daño de agua?",
-      a: "Sí, cuando el cuarto está seco y el gabinete o la pared detrás del accesorio están sanos. Una llave nueva no va sobre un tocador hinchado. Fotografiamos el daño si va a presentar un reclamo.",
+      a: "Sí, cuando el cuarto está seco y el gabinete o la pared detrás del accesorio están sanos. Una llave nueva no va sobre un tocador hinchado. Fotografiamos el daño. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador.",
     },
     {
       q: "¿Documentan el trabajo para un reclamo y dónde trabajan?",
-      a: "Fotografiamos el daño y la reparación. El estimado es el precio de la construcción y de los accesorios. Usted presenta el reclamo. Su aseguradora decide. No somos ajustadores públicos. Trabajamos desde 511 Crestwater Ct, Houston, TX 77082, incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University.",
+      a: "Fotografiamos el daño y la reparación. El estimado es el precio de la construcción y de los accesorios. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Su aseguradora decide. No somos ajustadores públicos. Trabajamos desde nuestra oficina en el oeste de Houston (77082), incluidas Katy, Sugar Land, Bellaire, The Woodlands, River Oaks, Memorial y West University.",
     },
   ],
   related: [

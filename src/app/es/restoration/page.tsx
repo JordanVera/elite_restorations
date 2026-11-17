@@ -45,7 +45,7 @@ export default function SpanishRestorationPage() {
       </PageHero>
       <section className="gutter mx-auto max-w-[120rem] py-16">
         <p className="measure text-lg leading-relaxed text-muted-foreground">
-          Restaurar es dejar el edificio seco y listo para usarse otra vez. Un tubo de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. La oficina está en {site.address.streetAddress}, Houston, TX 77082. La visita es en la propiedad.
+          Restaurar es dejar el edificio seco y listo para usarse otra vez. Un tubo de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. Trabajamos desde nuestra oficina en el oeste de Houston (77082). La visita es en la propiedad.
         </p>
         <ul className="mt-10 flex flex-wrap gap-6">
           {esNeighborhoods.map((area) => (

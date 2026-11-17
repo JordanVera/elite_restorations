@@ -56,7 +56,7 @@ export const recoveryFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Do you charge a fee to handle my insurance claim?",
-      a: "We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We photograph, we can meet on site, and we write a repair estimate. You file the claim. Your insurer decides coverage and payment. We do not take a percentage of a settlement.",
+      a: "We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We photograph, we can meet on site, and we write a repair estimate. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We do not take a percentage of a settlement.",
     },
     {
       q: "Can you meet the adjuster if I am at work?",
@@ -68,7 +68,7 @@ export const recoveryFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Should I wait to call you until the claim is approved?",
-      a: "No, if water is still coming in or a room is wet. Limit more damage first. Approval can take longer than wet drywall should sit in Houston humidity. Calling us is not the same as filing. You still call your insurer. We cannot promise the claim will be approved.",
+      a: "No, if water is still coming in or a room is wet. Limit more damage first. Approval can take longer than wet drywall should sit in Houston humidity. Calling us starts the work. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We cannot promise the claim will be approved.",
     },
   ],
   "emergency-board-up": [
@@ -238,7 +238,7 @@ export const recoveryFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How do I ask for a gazebo visit?",
-      a: `Call or text ${phone}. The office is open Monday through Saturday, 8:00 AM to 6:00 PM, at 511 Crestwater Ct, Houston, TX 77082. If wind already dropped one, say that. We photograph what is left. Your insurer decides any claim.`,
+      a: `Call or text ${phone}. The office is open Monday through Saturday, 8:00 AM to 6:00 PM. We work from our office in west Houston (77082). If wind already dropped one, say that. We photograph what is left. Your insurer decides any claim.`,
     },
   ],
   decks: [

@@ -87,7 +87,7 @@ export const moreWaterCauses: readonly Cause[] = [
           "We remove what is standing, meter the closet and the rooms it reached, and set air movers and dehumidifiers. Houston humidity makes a fan in the doorway a slow way to dry a wall. The heater itself may need to be replaced. That replacement is plumbing. The drywall and the floor are the building repair. We can coordinate both, and we keep the prices separate so a new tank and a ceiling repair stay labeled as two jobs.",
           "A licensed plumber should restart a gas heater when you are ready for hot water again. We leave the gas to them. Our work is the water that left the heater and the finishes it ruined. Homes, apartments, and small commercial closets are all work we take on. Call " +
             phone +
-            " any time if water is still moving. Office hours at 511 Crestwater Ct are Monday through Saturday, 8:00 AM to 6:00 PM.",
+            " any time if water is still moving. Office hours at our office in west Houston (77082) are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
         points: [
           { title: "One company for both steps", body: "Elite Restorations is family-owned in Houston since 1993. Drying the rooms and repairing the drywall and floors can stay with the same crew." },
@@ -136,7 +136,7 @@ export const moreWaterCauses: readonly Cause[] = [
       { q: "How do you dry the slab?", a: "We meter the concrete, remove the standing water, and run air movers and dehumidifiers. Read the slab-moisture guide if the closet looked dry and the concrete was still wet." },
       { q: "What does drying usually cost?", a: "A closet and one adjacent room often plan in the low thousands. A second-floor heater through a ceiling costs more. That is a range, not a quote." },
       { q: "Do you work on commercial buildings?", a: "Yes. Break-room and mechanical closets, plus apartments and houses. Call " + phone + " any time if water is still moving." },
-      { q: "Where is the office?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. Text the office number too." },
+      { q: "Where is the office?", a: "Our office in west Houston (77082). Family-owned since 1993. Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. Text the office number too." },
     ],
   }),
   page({
@@ -193,7 +193,7 @@ export const moreWaterCauses: readonly Cause[] = [
           "We remove standing water, take out wet cabinet bottoms that have lost their shape, and dry the slab and the wall behind the dishwasher with air movers and dehumidifiers. Houston air is humid enough that a box fan will not finish a closed cabinet. Moisture readings decide when new board and a new cabinet floor can go in. The dishwasher itself may need a plumber or an appliance tech. Rebuilding the machine is their work, not ours.",
           "The building repair, cabinets, drywall, and floor, can stay with Elite Restorations, family-owned in Houston since 1993. We work in houses, apartment kitchens, and small commercial break rooms. Call or text " +
             phone +
-            ". Active leaks are answered any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM.",
+            ". Active leaks are answered any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
         points: [
           { title: "The kick plate comes off", body: "If we cannot see the floor under the cabinet, we cannot say it is dry. The board at the bottom of the cabinet usually has to come off." },
@@ -220,7 +220,7 @@ export const moreWaterCauses: readonly Cause[] = [
         heading: "Kitchens on slabs, from the Loop to Katy.",
         paragraphs: [
           "We see this in bungalow kitchens in the Heights and Bellaire, in larger plans in Memorial and The Woodlands, and in apartment kitchens in the Energy Corridor and Westchase. The slab is the common thread. A leak under a dishwasher does not announce itself until the toe kick is soft or the floor cupboards smell. Summer humidity keeps that cavity wet longer than people expect. Hurricane season is not the usual cause. A supply failure can happen any week. A freeze week can break the same supply if it is on an exterior wall. Tell us if the cold just happened.",
-          "Family-owned since 1993 at 511 Crestwater Ct. We are not affiliated with an appliance brand or an insurer. Call " +
+          "Family-owned since 1993. We work from our office in west Houston (77082). We are not affiliated with an appliance brand or an insurer. Call " +
             phone +
             " or text. For the full drying process, use the water damage page. For a heater in the same kitchen closet, use the water heater page. They can fail in the same room and still be two sources.",
         ],
@@ -242,7 +242,7 @@ export const moreWaterCauses: readonly Cause[] = [
       { q: "What does the repair usually cost?", a: "Drying a toe kick and replacing a cabinet bottom is not a whole new kitchen. As a range, not a quote, a contained dishwasher loss often plans in the low thousands, more if the floor and several cabinets are gone." },
       { q: "Do you handle houses and apartments?", a: "Yes, and small commercial break rooms. Call " + phone + " any time if water is still spreading." },
       { q: "Where do I read about the slab?", a: "The slab-moisture guide explains water left in the concrete. The water damage hub explains the overall dry-out." },
-      { q: "How do I reach you?", a: "Call or text " + phone + ". Office: 511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits." },
+      { q: "How do I reach you?", a: "Call or text " + phone + ". We work from our office in west Houston (77082). Family-owned since 1993. Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits." },
     ],
   }),
   page({
@@ -297,7 +297,7 @@ export const moreWaterCauses: readonly Cause[] = [
         heading: "Clean what the water was, then dry the slab.",
         paragraphs: [
           "Clean supply water and a sewage overflow are not dried the same way. We remove contaminated materials that cannot be cleaned, remove the rest of the water, and dry the structure with air movers and dehumidifiers. Houston humidity is the reason the equipment stays until the meters agree. Flooring that cupped or stained at the seams often has to come up so the slab can dry. We show you that line before we pull a whole bathroom.",
-          "Drywall, baseboard, flooring, and setting the toilet back, when those are part of the work, come after the moisture readings. Elite Restorations is family-owned in Houston since 1993. We work on houses, apartment baths, and commercial restrooms. The office is 511 Crestwater Ct, Houston, TX 77082. Call or text " +
+          "Drywall, baseboard, flooring, and setting the toilet back, when those are part of the work, come after the moisture readings. Elite Restorations is family-owned in Houston since 1993. We work on houses, apartment baths, and commercial restrooms. Visits are scheduled from our office in west Houston (77082). Call or text " +
             phone +
             " any time when water is still spreading. Scheduled walks are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
@@ -326,7 +326,7 @@ export const moreWaterCauses: readonly Cause[] = [
         heading: "Bathrooms on slabs across Greater Houston.",
         paragraphs: [
           "From West University and Bellaire bungalows to newer baths in Katy and The Woodlands, the toilet sits close to a wall and a slab or a second-floor ceiling. Hard freezes can split the supply line the same week they split an attic pipe. Ordinary weeks are clogs and aging connectors. Hurricane rain does not cause a toilet to overflow by itself, but a drained city line can. If the street was flooding and the tub gurgled, say that. It may be a different policy from a clogged toilet on a dry day.",
-          "We schedule this work from 511 Crestwater Ct. Family-owned since 1993. Call or text " +
+          "We schedule this work from our office in west Houston (77082). Family-owned since 1993. Call or text " +
             phone +
             ". We are not public adjusters. We are not a vendor for any insurer. Use the water damage hub for the wider dry-out, and the burst-pipe page if the supply failure was part of a freeze. We write those up as separate causes.",
         ],
@@ -348,7 +348,7 @@ export const moreWaterCauses: readonly Cause[] = [
       { q: "What does the drying usually cost?", a: "A single bath with wet flooring often plans in the low thousands. A ceiling below and several rooms cost more. That is a planning range, not a quote." },
       { q: "Do you dry commercial restrooms?", a: "Yes, along with houses and apartments. Call " + phone + " any time if water is still spreading." },
       { q: "How is this different from a slab leak?", a: "A toilet supply or overflow starts at the fixture. Water still ends up in the slab and under the floor. The slab-moisture guide covers what the concrete does next." },
-      { q: "Where are you?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Text or call " + phone + ". Office hours Monday through Saturday, 8:00 AM to 6:00 PM." },
+      { q: "Where are you?", a: "Our office in west Houston (77082). Family-owned since 1993. Text or call " + phone + ". Office hours Monday through Saturday, 8:00 AM to 6:00 PM." },
     ],
   }),
 ];

@@ -103,7 +103,7 @@ export const vinylBrief: Brief = {
     {
       q: 'How do you schedule vinyl flooring in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us the rooms. We will say if one of them should be tile.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us the rooms. We will say if one of them should be tile.',
         'Call {phone} or use the estimate form. The {name} visit is flatness, moisture, and the install method. Material is ordered after that, not from a photo of the current floor.',
       ],
     },
@@ -213,7 +213,7 @@ export const laminateBrief: Brief = {
     {
       q: 'How do you schedule laminate flooring in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us the rooms so we can say if one of them should not be laminate.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us the rooms so we can say if one of them should not be laminate.',
         'Call {phone} or use the estimate form. The {name} visit checks flatness and the stair or bath doorway. Color comes after the floor is a candidate.',
       ],
     },

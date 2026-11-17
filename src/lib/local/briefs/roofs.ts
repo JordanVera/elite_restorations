@@ -21,7 +21,7 @@ export const roofingBrief: Brief = {
   ],
   slab: [
     'Slab-era houses in {name} usually carry asphalt roofs of a suburban shape, one story or two. We inspect the shingles, the penetrations, and the flashing. Two-story staging is different from a ranch. Soft boards, if we can see evidence of them, are called out before anyone promises a simple repair.',
-    'On a {name} roof the question is whether a repair will hold. Vent collars, valleys, and the ridge are looked at, not only the slope that faces the street. Photographs are part of the visit so you have a record. Your insurer decides coverage if you file. We document it.',
+    'On a {name} roof the question is whether a repair will hold. Vent collars, valleys, and the ridge are looked at, not only the slope that faces the street. Photographs are part of the visit so you have a record. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
   ],
   mixed: [
     '{name} puts a mid-century roof and a new rebuild on the same street. Age is obvious once we are up there, and it is not obvious from a listing photo. We inspect the one you own. A young roof with a flashing leak is a repair. The old shingles are a different conversation.',
@@ -66,7 +66,7 @@ export const roofingBrief: Brief = {
     {
       title: 'Photos',
       bodies: [
-        'We photograph the {name} roof. If you file a claim, your insurer decides coverage. We document it.',
+        'We photograph the {name} roof. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
         'A temporary cover in {name}, when the roof is open, is not the permanent roof. Photos come before the cover hides the opening.',
       ],
     },
@@ -103,7 +103,7 @@ export const roofingBrief: Brief = {
     {
       q: 'How do you schedule roofing in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. If the roof is open, say so. The roof cost page on this site is about replacement ranges, not a bid for this house.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. If the roof is open, say so. The roof cost page on this site is about replacement ranges, not a bid for this house.',
         'Call {phone} for an inspection. We look at the {name} roof and say repair or replace. Color and material come after that, especially where an association has a list.',
       ],
     },
@@ -213,7 +213,7 @@ export const replacementBrief: Brief = {
     {
       q: 'How do you schedule a roof replacement in {name}?',
       answers: [
-        'Call {phone}. We inspect the {name} roof from a schedule based at 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Replacement is recommended only if repair will not hold.',
+        'Call {phone}. We inspect the {name} roof from a schedule based at our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Replacement is recommended only if repair will not hold.',
         'Call {phone} for the inspection first. The {name} visit produces photographs and a recommendation. Tear-off is scheduled after that, with the permit path identified.',
       ],
     },

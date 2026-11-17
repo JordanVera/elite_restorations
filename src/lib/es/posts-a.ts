@@ -11,7 +11,7 @@ export const esPostsA: Article[] = [
     lines: ['Después del granizo,', 'antes del papeleo.'],
     description:
       'Qué hacer cuando el granizo o el viento pega en un techo de Houston: fotos, lona si está abierto, y un reclamo que decide su aseguradora.',
-    lede: 'Una tormenta de granizo en Houston puede golpear un techo que desde el jardín se ve bien. El primer día útil es simple: que no entre más agua, tomar fotos y llamar a su aseguradora si va a presentar un reclamo.',
+    lede: 'Una tormenta de granizo en Houston puede golpear un techo que desde el jardín se ve bien. El primer día útil es simple: que no entre más agua, tomar fotos y elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador..',
     image: '/images/projects/roofing/brick-home-multi-gable.webp',
     service: 'roofing',
     emergency: true,
@@ -25,7 +25,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Firmo con la primera persona que toca la puerta?',
-        a: 'No. Después de una tormenta llegan a tocar. Tome sus fotos, llame a su aseguradora si va a reclamar, y pida una revisión por escrito antes de firmar. Trabajamos para el dueño que nos contrata.',
+        a: 'No. Después de una tormenta llegan a tocar. Tome sus fotos y pida una revisión por escrito antes de firmar. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Trabajamos para el dueño que nos contrata.',
       },
       {
         q: '¿Una lona arruina el reclamo?',
@@ -33,7 +33,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Ustedes deciden lo que paga la aseguradora?',
-        a: 'No. No somos ajustadores públicos. Usted presenta el reclamo. Podemos estar con el ajustador y explicar la reparación. La aseguradora decide la cobertura y el pago.',
+        a: 'No. No somos ajustadores públicos. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Podemos estar con el ajustador y explicar la reparación. La aseguradora decide la cobertura y el pago.',
       },
     ],
     sections: [
@@ -70,7 +70,7 @@ export const esPostsA: Article[] = [
             items: [
               'No se suba a un techo mojado o empinado.',
               'Fotografíe el jardín, los cielos y cualquier abertura antes de cubrirla.',
-              'Llame a su aseguradora si va a reclamar. Pregunte cómo quieren el aviso.',
+              'Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Pregunte cómo quieren el aviso.',
               `Llame al ${phone} si está entrando agua o el techo está abierto.`,
             ],
           },
@@ -103,7 +103,7 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Usted llama a su aseguradora y abre el reclamo. Ellos mandan un ajustador, o piden fotos primero. El ajustador trabaja para la aseguradora. Esté ahí si puede. Recorra lo que se encontró en el techo con sus fotos. Pregunte qué contaron. Anote lo que no entienda y vuelva a preguntarlo por escrito.',
+            text: 'Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. El ajustador trabaja para la aseguradora. Podemos estar en la casa en esa visita, recorrer lo que encontramos y anotar lo que todavía haga falta aclarar. La aseguradora decide la cobertura y el pago.',
           },
           {
             type: 'p',
@@ -182,7 +182,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Las tablas deciden el pago del seguro?',
-        a: 'No. No somos ajustadores públicos. Fotografíe la abertura, cúbrala y guarde el recibo. Usted presenta el reclamo si va a presentarlo. La aseguradora decide la cobertura.',
+        a: 'No. No somos ajustadores públicos. Fotografíe la abertura, cúbrala y guarde el recibo. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. La aseguradora decide la cobertura.',
       },
     ],
     sections: [
@@ -252,7 +252,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Después de una tormenta, las tablas y la lona suelen caer en la misma casa. El viento se lleva una ventana y levanta una pendiente. Hágalos en una sola visita si las dos están abiertas. Tome fotos de cada abertura. Si va a reclamar, esas fotos son parte de su registro. No somos ajustadores públicos. La madera y la lona son construcción. El reclamo es entre usted y su aseguradora.',
+            text: 'Después de una tormenta, las tablas y la lona suelen caer en la misma casa. El viento se lleva una ventana y levanta una pendiente. Hágalos en una sola visita si las dos están abiertas. Tome fotos de cada abertura. Esas fotos son parte del registro del daño. No somos ajustadores públicos. La madera y la lona son construcción. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. La aseguradora decide el pago.',
           },
         ],
       },
@@ -287,7 +287,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Llame a su aseguradora si la pérdida fue repentina y va a reclamar. Guarde el recibo de la lona. Deje la madera puesta hasta que el vidrio o la puerta de verdad se estén cambiando. Quitarla para una visita y luego recibir otra tormenta es como una abertura chica se vuelve una casa mojada. Podemos volver para el techo definitivo cuando usted quiera contratarlo.',
+            text: 'Guarde el recibo de la lona. Deje la madera puesta hasta que el vidrio o la puerta de verdad se estén cambiando. Quitarla para una visita y luego recibir otra tormenta es como una abertura chica se vuelve una casa mojada. Podemos volver para el techo definitivo cuando usted quiera contratarlo. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.',
           },
         ],
       },
@@ -323,7 +323,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Ustedes presentan el reclamo?',
-        a: 'Usted lo presenta. No somos ajustadores públicos. Secamos, documentamos y reparamos lo que usted contrata.',
+        a: 'Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Secamos, documentamos y reparamos lo que usted contrata.',
       },
     ],
     sections: [
@@ -353,7 +353,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Los calentadores del segundo piso y del ático, comunes en planos nuevos de dos pisos, tiran agua por el cielo. La mancha es el anuncio. El aislamiento es el material mojado. Abrimos lo que el medidor dice que está húmedo y lo dejamos abierto hasta que seque. Cambiar el tanque antes de que el cielo esté seco solo estaciona un calentador nuevo sobre una casa mojada. Si va a reclamar, fotografíe el calentador, la charola y los cuartos que alcanzó el agua.',
+            text: 'Los calentadores del segundo piso y del ático, comunes en planos nuevos de dos pisos, tiran agua por el cielo. La mancha es el anuncio. El aislamiento es el material mojado. Abrimos lo que el medidor dice que está húmedo y lo dejamos abierto hasta que seque. Cambiar el tanque antes de que el cielo esté seco solo estaciona un calentador nuevo sobre una casa mojada. Fotografíe el calentador, la charola y los cuartos que alcanzó el agua. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.',
           },
           {
             type: 'links',
@@ -416,7 +416,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Llame al (713) 909-0034 si el agua llegó al edificio. Una toalla alcanza para una taza de agua en un piso de loseta que usted atrapó de inmediato. No alcanza para un cielo, un gabinete hinchado o un acolchonado de alfombra. Empresa familiar desde 1993. Si va a reclamar, llame a su aseguradora el mismo día. Lea la póliza o pregúnteles en qué se distingue una fuga repentina de una filtración larga.',
+            text: 'Llame al (713) 909-0034 si el agua llegó al edificio. Una toalla alcanza para una taza de agua en un piso de loseta que usted atrapó de inmediato. No alcanza para un cielo, un gabinete hinchado o un acolchonado de alfombra. Empresa familiar desde 1993. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. Lea la póliza o pregúnteles en qué se distingue una fuga repentina de una filtración larga.',
           },
           {
             type: 'list',
@@ -597,7 +597,7 @@ export const esPostsA: Article[] = [
     image: '/images/services/kitchen-remodeling.jpg',
     service: 'kitchen-remodeling',
     ctaTitle: '¿Quiere que midamos la cocina?',
-    ctaBody: `Llame al ${phone} para una visita. Empresa familiar en Houston desde 1993. El estimado es gratis. Si hay una fuga de por medio, eso se seca primero.`,
+    ctaBody: `Llame al ${phone} para pedir un estimado. Empresa familiar en Houston desde 1993. Si hay una fuga de por medio, eso se seca primero.`,
     related: ['remodeling-a-houston-ranch-house', 'houston-bathroom-remodel-guide'],
     faqs: [
       {
@@ -610,7 +610,7 @@ export const esPostsA: Article[] = [
       },
       {
         q: '¿Remodelo justo después de una fuga?',
-        a: 'Seque el cuarto primero. Después decida el plano nuevo. Una losa mojada es un mal lugar para plantillar una cubierta. Si va a reclamar la fuga, esa reparación y la remodelación opcional deben quedar separadas en el papel.',
+        a: 'Seque el cuarto primero. Después decida el plano nuevo. Una losa mojada es un mal lugar para plantillar una cubierta. Esa reparación y la remodelación opcional deben quedar separadas en el papel. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador.',
       },
       {
         q: '¿Ustedes deciden un pago del seguro por la cocina?',
@@ -718,11 +718,11 @@ export const esPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Los lavavajillas y las líneas de suministro arruinan el gabinete que ya no le gustaba. Seque y documente el daño primero. Si va a reclamar, separe la reparación del plano nuevo opcional para que las fotos coincidan con lo que falló. No somos ajustadores públicos. Su aseguradora decide la fuga. La isla nueva, si todavía la quiere, es una remodelación que usted elige.',
+            text: 'Los lavavajillas y las líneas de suministro arruinan el gabinete que ya no le gustaba. Seque y documente el daño primero. Separe la reparación del plano nuevo opcional para que las fotos coincidan con lo que falló. No somos ajustadores públicos. Su aseguradora decide la fuga. La isla nueva, si todavía la quiere, es una remodelación que usted elige.',
           },
           {
             type: 'p',
-            text: 'Hacer las dos cosas con una sola cuadrilla significa que quien secó el piso es quien pone el gabinete. No le está pasando una cocina a medias a alguien que no vio la pérdida. Empresa familiar en Houston desde 1993. La visita es gratis. Traiga las fotos de la fuga, si la hubo, y una lista de lo que quiere que el cuarto haga un martes normal.',
+            text: 'Hacer las dos cosas con una sola cuadrilla significa que quien secó el piso es quien pone el gabinete. No le está pasando una cocina a medias a alguien que no vio la pérdida. Empresa familiar en Houston desde 1993. Llame al (713) 909-0034 para pedir un estimado. Traiga las fotos de la fuga, si la hubo, y una lista de lo que quiere que el cuarto haga un martes normal.',
           },
           {
             type: 'links',

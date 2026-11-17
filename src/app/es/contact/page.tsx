@@ -12,7 +12,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Contacto en Houston",
   description:
-    "Llame al (713) 909-0034 para restauración o remodelación en Houston. La oficina está en 511 Crestwater Ct, Houston, TX 77082, o pida un estimado.",
+    "Llame al (713) 909-0034 para restauración o remodelación en Houston. Trabajamos desde nuestra oficina en el oeste de Houston (77082), o pida un estimado.",
   path: "/es/contact",
   locale: "es",
   languages: languageAlternates("/contact", "/es/contact"),

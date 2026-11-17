@@ -104,7 +104,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'Write the date, the room, and whether water was still coming in when you took the photo. Your insurer decides what a policy pays. The photos are the part you can take care of the same day. If you want a room-by-room packet instead of a camera roll, the insurance photo log on this site is free to use.',
+            text: 'Write the date, the room, and whether water was still coming in when you took the photo. Your insurer decides what a policy pays. The photos are the part you can take care of the same day. If you want a room-by-room packet instead of a camera roll, the insurance photo log on this site is there when you want a room-by-room record.',
           },
           {
             type: 'links',
@@ -171,7 +171,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: `Call ${phone}, or use the contact form. Say whether water is still coming in. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has been restoring and remodeling Houston houses since 1993. We tarp when the roof is open, repair or replace the roofing, and dry what the leak wet downstairs. Coverage is a decision for your insurer.`,
+            text: `Call ${phone}, or use the contact form. Say whether water is still coming in. Elite Restorations is family-owned and works from our office in west Houston (77082), and has been restoring and remodeling Houston houses since 1993. We tarp when the roof is open, repair or replace the roofing, and dry what the leak wet downstairs. Coverage is a decision for your insurer.`,
           },
         ],
       },
@@ -330,7 +330,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: `Call ${phone} if the water is still out or you are not sure how far it went. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has worked on Houston houses since 1993. We find the wet materials, dry what can be dried, and rebuild the drywall, trim, and floors when the readings support it.`,
+            text: `Call ${phone} if the water is still out or you are not sure how far it went. Elite Restorations is family-owned and works from our office in west Houston (77082), and has worked on Houston houses since 1993. We find the wet materials, dry what can be dried, and rebuild the drywall, trim, and floors when the readings support it.`,
           },
         ],
       },
@@ -490,7 +490,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: `If the ceiling is already wet, call ${phone} and say so. If the roof only looks suspicious from the yard, call and we will look while the weather allows it. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has served Houston since 1993. We repair roofs, replace them, and dry the rooms a storm already wet.`,
+            text: `If the ceiling is already wet, call ${phone} and say so. If the roof only looks suspicious from the yard, call and we will look while the weather allows it. Elite Restorations is family-owned and works from our office in west Houston (77082), and has served Houston since 1993. We repair roofs, replace them, and dry the rooms a storm already wet.`,
           },
         ],
       },
@@ -528,7 +528,7 @@ export const fieldNotes: Article[] = [
         a: 'No. The log is your record. Your insurer decides what the policy covers. Elite Restorations is the contractor.',
       },
       {
-        q: 'Where is the free log on this site?',
+        q: 'Where is the photo log on this site?',
         a: 'The insurance photo log is a page you can fill out on your phone: a first-night checklist, then rooms with a wide shot, a close shot, and the wet materials, plus the loss details, and a PDF you can download.',
       },
     ],
@@ -610,7 +610,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'The log is free. It does not file the claim and it does not estimate what you are owed. It is a way to stop the record from living in twenty text messages. If you later ask us to dry or repair the house, the same kind of photos are part of how we document the work. You can use the log whether or not you hire anyone.',
+            text: 'The log keeps the photos in one place. It does not estimate what you are owed. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. It is a way to stop the record from living in twenty text messages. If you later ask us to dry or repair the house, the same kind of photos are part of how we document the work. You can use the log whether or not you hire anyone.',
           },
           {
             type: 'links',
@@ -643,7 +643,7 @@ export const fieldNotes: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: `Call ${phone} when water is still coming in, the roof is open, or you want the drying and the repairs done by the same company that is looking at the photos. The emergency form is there if you cannot call. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has been here since 1993. Bring the log. We will still look at the house ourselves.`,
+            text: `Call ${phone} when water is still coming in, the roof is open, or you want the drying and the repairs done by the same company that is looking at the photos. The emergency form is there if you cannot call. Elite Restorations is family-owned and works from our office in west Houston (77082), and has been here since 1993. Bring the log. We will still look at the house ourselves.`,
           },
           {
             type: 'links',

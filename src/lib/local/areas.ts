@@ -101,7 +101,7 @@ const raw: Record<
       'Pier-and-beam is common in older neighborhoods inside Loop 610. Slab-on-grade is the usual foundation farther out, and a lot of construction from the mid-1980s on uses post-tension cable in the slab.',
       'The city sits on flat clay and drains to bayous. Streets flood in heavy rain. Hail comes with spring storms, and tropical systems bring wind and driven rain.',
       'Houston has no zoning. Deed restrictions still shape some street elevations, and a few districts add historic-design rules. A permit depends on the work, not on a neighborhood nickname.',
-      'The office is at 511 Crestwater Ct in west Houston, 77082, in the Crestwater neighborhood near George Bush Park. Downtown is a cross-town drive, not a local errand.',
+      'Visits are scheduled from our office in west Houston (77082), in the Crestwater neighborhood near George Bush Park. Downtown is a cross-town drive, not a local errand.',
       'A Houston address is not a house type. The scope comes from the building you ask us to visit.',
     ],
   },

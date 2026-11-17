@@ -8,7 +8,7 @@ export const roofing: ServiceGuide = {
     },
     {
       title: 'Photograph',
-      body: 'We photograph the roof for your records and, if you are filing, for the conversation with your insurer. Photos are not a coverage decision. Your insurer makes that.',
+      body: 'We photograph the roof for your records. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Photos are not a coverage decision. Your insurer decides what the policy pays.',
     },
     {
       title: 'Say repair or replace',
@@ -120,8 +120,8 @@ export const roofing: ServiceGuide = {
       eyebrow: 'Insurance',
       heading: 'Photos, deductibles, and a clear claim role.',
       paragraphs: [
-        'Many Texas homeowners policies, especially in Harris County and closer to the coast, carry a separate wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common figures. A two percent deductible on a higher dwelling limit is a different dollar amount from the deductible on a kitchen supply line. The percentage and what it applies to are in your policy. Ask your agent to walk that policy with you. We do not read it for you, and we do not tell you the claim is worth filing. That choice is yours.',
-        'If you do file, photographs of the roof, the soft metal, and any interior wetting are the record. We take those photos as part of the inspection. We can meet the information an adjuster asks for about the roof we saw. Your insurer decides the settlement. We keep the job to what we inspected, and we will not pad it to chase a deductible. We talk about filing only after that visit. A temporary cover, when the roof is open and safe to stand on, limits further damage. Many policies expect that. It is still not a promise of coverage.',
+        'Many Texas homeowners policies, especially in Harris County and closer to the coast, carry a separate wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common figures. A two percent deductible on a higher dwelling limit is a different dollar amount from the deductible on a kitchen supply line. The percentage and what it applies to are in your policy. Ask your agent to walk that policy with you. We do not read the policy for you. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides what the policy pays.',
+        'Photographs of the roof, the soft metal, and any interior wetting are the record. We take those photos as part of the inspection. We can meet the information an adjuster asks for about the roof we saw. Your insurer decides the settlement. We keep the job to what we inspected, and we will not pad it to chase a deductible. We walk the claim scope with the adjuster after that visit. A temporary cover, when the roof is open and safe to stand on, limits further damage. Many policies expect that. It is still not a promise of coverage.',
       ],
       points: [
         {
@@ -394,7 +394,7 @@ export const waterDamage: ServiceGuide = {
       eyebrow: 'Insurance',
       heading: 'What to record, and what we will not decide.',
       paragraphs: [
-        'If it is safe, photograph before you throw things away. Take wide shots of each room and close shots of the source, the wet floors, and the ceilings. Keep the burst hose or the failed fitting if you can do that safely. Write down when you noticed the water. Many policies want notice promptly. The deadline and the method are in your policy, so ask the insurer how many days you have. Keep the claim number next to the photos. The free insurance photo log on this site is a room-by-room way to start that record yourself.',
+        'If it is safe, photograph before you throw things away. Take wide shots of each room and close shots of the source, the wet floors, and the ceilings. Keep the burst hose or the failed fitting if you can do that safely. Write down when you noticed the water. Many policies want notice promptly. The deadline and the method are in your policy, so ask the insurer how many days you have. Keep the claim number next to the photos. The insurance photo log on this site is a room-by-room way to start that record yourself.',
         'We add our own photos of the conditions, the moisture, what was removed, and what was rebuilt. You can share them. Your insurer decides coverage. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Flood from rising water is often a different policy from a homeowners policy. Check your policy. Wind-driven rain through a storm opening is a different situation from a slow drip behind a tub. We describe the facts we can see. Many policies also expect you to limit further damage, which is why tarping a safe roof and starting drying do not wait on an adjuster’s visit. Your insurer decides whether that work is reimbursed.',
       ],
       points: [
@@ -408,7 +408,7 @@ export const waterDamage: ServiceGuide = {
         },
         {
           title: 'Reach us',
-          body: 'Call (713) 909-0034 and say whether water is still coming in. If you cannot call, use the emergency form. We will call you back as soon as we can. The office address is 511 Crestwater Ct, Houston, TX 77082.',
+          body: 'Call (713) 909-0034 and say whether water is still coming in. If you cannot call, use the emergency form. We will call you back as soon as we can. The office address is our office in west Houston (77082).',
         },
       ],
     },

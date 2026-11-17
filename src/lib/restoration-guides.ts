@@ -94,7 +94,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'Hold permanent repairs that would hide the damage until an adjuster has seen it, unless leaving an opening would make the loss worse or the insurer told you to proceed. If you have to cover something, photograph it first. The insurance photo log on this site is a free room-by-room packet. It is yours whether or not you hire anyone.',
+            text: 'Hold permanent repairs that would hide the damage until an adjuster has seen it, unless leaving an opening would make the loss worse or the insurer told you to proceed. If you have to cover something, photograph it first. The insurance photo log on this site is a room-by-room packet. It is yours whether or not you hire anyone.',
           },
         ],
       },
@@ -148,7 +148,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Call (713) 909-0034, or use the contact form. Say where the water came from and whether it is still coming in. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has been restoring and remodeling Houston houses since 1993. We dry the structure and, when you want us to, rebuild the drywall, floors, and finishes. Coverage is a decision for your insurer. The visit is about the house.',
+            text: 'Call (713) 909-0034, or use the contact form. Say where the water came from and whether it is still coming in. Elite Restorations is family-owned and works from our office in west Houston (77082), and has been restoring and remodeling Houston houses since 1993. We dry the structure and, when you want us to, rebuild the drywall, floors, and finishes. Coverage is a decision for your insurer. The visit is about the house.',
           },
         ],
       },
@@ -288,7 +288,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Call (713) 909-0034, or use the contact form. If water is coming in, say so at the start of the call. We tarp when it is safe, photograph the damage, and then repair or replace the roof the house actually needs. Elite Restorations is family-owned and has served Houston since 1993. The office is at 511 Crestwater Ct, Houston, TX 77082, and the work is scheduled from there.',
+            text: 'Call (713) 909-0034, or use the contact form. If water is coming in, say so at the start of the call. We tarp when it is safe, photograph the damage, and then repair or replace the roof the house actually needs. Elite Restorations is family-owned and has served Houston since 1993. Visits are scheduled from our office in west Houston (77082), and the work is scheduled from there.',
           },
         ],
       },
@@ -319,7 +319,7 @@ export const restorationGuides: Article[] = [
       },
       {
         q: 'Can you meet the adjuster with me?',
-        a: 'Yes, if you want us there. We can speak to the damage and the repair. The claim stays with your insurer, and We are not public adjusters.',
+        a: 'Yes, if you want us there. We can speak to the damage and the repair. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters.',
       },
       {
         q: 'Should I wait to dry the house until the claim is approved?',
@@ -365,7 +365,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'Keep a simple file. Photos, the claim number, names, receipts for temporary protection, and notes of what was removed. The insurance photo log on this site is a free way to keep the room-by-room part of that file. Bring it to the adjuster meeting. It does not decide coverage. It keeps the facts in one place. Water that rose from outside is often a different conversation than a burst supply line or a roof leak. Ask your insurer which policy, if any, applies to the water you had.',
+            text: 'Keep a simple file. Photos, the claim number, names, receipts for temporary protection, and notes of what was removed. The insurance photo log on this site keeps the room-by-room part of that file. Bring it to the adjuster meeting. It does not decide coverage. It keeps the facts in one place. Water that rose from outside is often a different conversation than a burst supply line or a roof leak. Ask your insurer which policy, if any, applies to the water you had.',
           },
         ],
       },
@@ -378,7 +378,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. They are not there to argue your policy for you. That is a separate license a homeowner can hire to represent them with the insurer. We are not public adjusters. If you hire one, that is your decision. The claim stays with your insurer.',
+            text: 'You can ask questions on the spot. You can also ask later, in writing, about anything you do not understand. You do not have to agree to a figure in the driveway. If a contractor is with you, that person can speak to the condition of the building and to the work they would do. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides what the policy pays.',
           },
         ],
       },
@@ -391,7 +391,7 @@ export const restorationGuides: Article[] = [
           },
           {
             type: 'p',
-            text: 'We do that work as a family-owned company that has been in Houston since 1993, scheduled from 511 Crestwater Ct, Houston, TX 77082. You can hire the company you want. A visit from us does not lock you into the work.',
+            text: 'We do that work as a family-owned company that has been in Houston since 1993, scheduled from our office in west Houston (77082). You can hire the company you want. A visit from us does not lock you into the work.',
           },
         ],
       },
@@ -596,7 +596,7 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Call (713) 909-0034, or use the contact form. Before a storm, we can look at the roof while the weather allows it. After a storm, tell us if the roof is open or if water is inside. Elite Restorations is family-owned, at 511 Crestwater Ct, Houston, TX 77082, and has served Houston since 1993.',
+            text: 'Call (713) 909-0034, or use the contact form. Before a storm, we can look at the roof while the weather allows it. After a storm, tell us if the roof is open or if water is inside. Elite Restorations is family-owned and works from our office in west Houston (77082), and has served Houston since 1993.',
           },
         ],
       },

@@ -4,7 +4,6 @@ import { areaPages } from '@/lib/area-pages';
 import { landingsForService } from '@/lib/local-landings';
 import { neighborhoods } from '@/lib/neighborhoods';
 import { getService } from '@/lib/services';
-import { site } from '@/lib/site';
 
 export function AreasWeServe({ serviceSlug }: { serviceSlug: string }) {
   const service = getService(serviceSlug);
@@ -23,8 +22,7 @@ export function AreasWeServe({ serviceSlug }: { serviceSlug: string }) {
           Areas we serve
         </h2>
         <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-          {service.name} is scheduled from our Houston office at{' '}
-          {site.address.streetAddress}, {site.address.postalCode}. The closest
+          {service.name} is scheduled from our office in west Houston (77082). The closest
           neighborhoods have their own pages. Every community below has a page
           for this service.
         </p>

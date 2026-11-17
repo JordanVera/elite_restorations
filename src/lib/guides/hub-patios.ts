@@ -53,7 +53,7 @@ export const patioGuide: ServiceGuide = {
       eyebrow: "Houston",
       heading: "Clay, slabs, and rain that falls all at once.",
       paragraphs: [
-        "Much of the housing around our office at 511 Crestwater Ct, Houston, TX 77082 sits on concrete slabs in clay. The patio is outside that slab and still affects it. Water held against the brick keeps the edge wet. We slope the new surface away, and we keep a path for the roof water. Hurricane season is June 1 through November 30. Afternoon storms the rest of the summer are enough to pond a flat patio. That is the test, not a light sprinkle.",
+        "Much of the housing around our office in west Houston (77082) sits on concrete slabs in clay. The patio is outside that slab and still affects it. Water held against the brick keeps the edge wet. We slope the new surface away, and we keep a path for the roof water. Hurricane season is June 1 through November 30. Afternoon storms the rest of the summer are enough to pond a flat patio. That is the test, not a light sprinkle.",
         "We build patios for houses across Houston, Westchase, Alief, the Energy Corridor, Sugar Land, Bellaire, Memorial, and The Woodlands. A townhome court is smaller and may have an association rule. A commercial courtyard is rarer for us and still possible if the drainage is the same problem. Call (713) 909-0034 or text. Family-owned in Houston since 1993 is the history this page states.",
       ],
       points: [

@@ -45,7 +45,7 @@ export function CtaBand({
           <Button asChild size="xl" variant="accent">
             <Link href={destination}>
               {buttonLabel ??
-                (emergency ? "Request emergency help" : "Request a free estimate")}
+                (emergency ? "Request emergency help" : "Request an estimate")}
               <ArrowUpRight className="arrow" aria-hidden />
             </Link>
           </Button>

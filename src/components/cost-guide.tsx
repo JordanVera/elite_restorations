@@ -82,7 +82,7 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
           <Reveal>
             <p className="eyebrow text-accent-ink">Ranges</p>
             <h2 id="cost-ranges-heading" className="font-display t-lg mt-4">
-              {publishRanges ? 'Typical planning ranges.' : 'Call for a free estimate.'}
+              {publishRanges ? 'Typical planning ranges.' : 'Call (713) 909-0034 to schedule an estimate.'}
             </h2>
           </Reveal>
           {publishRanges ? (
@@ -167,7 +167,7 @@ export function CostGuideView({ guide }: { guide: CostGuide }) {
 
       <CtaBand
         title={`Planning ${guide.serviceLabel.toLowerCase()}?`}
-        body={`Call ${site.phone.display} for a free estimate. We price the scope after we see the house.`}
+        body={`Call ${site.phone.display} to schedule an estimate. We price the scope after we see the house.`}
         service={guide.serviceSlug}
       />
     </>

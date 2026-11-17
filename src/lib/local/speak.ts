@@ -57,19 +57,18 @@ export function driveParagraph(
   salt: string,
 ) {
   const miles = areaMiles(area);
-  const street = site.address.streetAddress;
-  const zip = site.address.postalCode;
   const phone = site.phone.display;
+  const office = 'our office in west Houston (77082)';
   const call = emergency
     ? `If water is still coming in, call ${phone} before you do anything else.`
     : `Call ${phone} or send the estimate form.`;
   const options = [
-    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${street}, ${zip}. The drive follows ${area.roads}. ${call} We book ${work} in ${area.name} from the office on that street, and traffic is why your arrival time is just a window.`,
-    `From ${street} to ${area.landmark} is about ${miles} miles as a straight line, ${area.direction}. ${area.roads} is the road the drive actually takes. ${call} ${work} in ${area.name} is booked from the 77082 office.`,
-    `${area.name} is on our list because we can get there from ${street}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} plan is still based on the house, not on the mileage.`,
-    `Schedule ${work} in ${area.name} at ${street}, Houston ${zip}. A straight line to ${area.landmark} is about ${miles} miles, ${area.direction}, and ${area.roads} is the normal route. ${call}`,
-    `The 77082 office on ${street} is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} Traffic makes that drive time a window.`,
-    `${call} The office is ${street}, Houston, ${zip}. ${area.name} is about ${miles} miles ${area.direction.replace(/ of the office$/, '')} of our office, measured to ${area.landmark}. The usual route is ${area.roads}.`,
+    `${area.landmark} is about ${miles} miles ${area.direction}, measured in a straight line from ${office}. The drive follows ${area.roads}. ${call} We book ${work} in ${area.name} from that office, and traffic is why your arrival time is just a window.`,
+    `From ${office} to ${area.landmark} is about ${miles} miles as a straight line, ${area.direction}. ${area.roads} is the road the drive actually takes. ${call} ${work} in ${area.name} is booked from the 77082 office.`,
+    `${area.name} is on our list because we can get there from ${office}. ${area.landmark} lies about ${miles} miles ${area.direction}. Follow ${area.roads}. ${call} The ${work} plan is still based on the house, not on the mileage.`,
+    `Schedule ${work} in ${area.name} from ${office}. A straight line to ${area.landmark} is about ${miles} miles, ${area.direction}, and ${area.roads} is the normal route. ${call}`,
+    `Our office in west Houston (77082) is where ${work} for ${area.name} gets scheduled. ${area.landmark} is about ${miles} miles ${area.direction} in a straight line. ${area.roads} covers the drive. ${call} Traffic makes that drive time a window.`,
+    `${call} We schedule from ${office}. ${area.name} is about ${miles} miles ${area.direction.replace(/ of the office$/, '')} of our office, measured to ${area.landmark}. The usual route is ${area.roads}.`,
   ];
   return pick(options, `${salt}:drive:${area.slug}`);
 }

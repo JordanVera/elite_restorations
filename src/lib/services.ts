@@ -754,7 +754,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       },
       {
         q: 'Where do you do laminate floor installation in Houston?',
-        a: 'Across the Houston area, scheduled from 511 Crestwater Ct, Houston, TX 77082. Newer slab houses in Katy, Cinco Ranch, Pearland, and Magnolia are a common fit. The visit is at the house.',
+        a: 'Across the Houston area, scheduled from our office in west Houston (77082). Newer slab houses in Katy, Cinco Ranch, Pearland, and Magnolia are a common fit. The visit is at the house.',
       },
     ],
     related: ['vinyl-flooring', 'wood-flooring', 'tile-flooring'],
@@ -1683,19 +1683,19 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Insurance claims help in Houston, TX: damage photos and documentation for water and storm losses. Your insurer decides coverage. Call (713) 909-0034.',
     intro: [
       'When a roof or a pipe lets water in, a clear record helps the conversation with your insurer. We photograph the damage, note where the water went, and put that documentation with the repair plan.',
-      'Your insurer decides what your policy covers. If you want a room-by-room record of your own before anything is moved, the insurance photo log on this site is free to use.',
+      'Your insurer decides what your policy covers. If you want a room-by-room record of your own before anything is moved, the insurance photo log on this site is there when you want a room-by-room record.',
     ],
     includes: [
       'Inspection photos of roof, water and storm damage',
       'Notes on what was wet and what was repaired',
       'Documentation you can share with your adjuster',
-      'A free room-by-room photo log you can fill out yourself',
+      'A room-by-room photo log you can fill out yourself',
       'Drying and repairs once the house is protected',
     ],
     faqs: [
       {
-        q: 'Do you file the claim or decide what is covered?',
-        a: 'You file the claim, and your insurer decides coverage. We provide inspection photos and documentation.',
+        q: 'Do you help with an insurance claim?',
+        a: 'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides coverage. We provide inspection photos and documentation.',
       },
       {
         q: 'Should I clean up before the photos?',
@@ -1716,7 +1716,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'roofing',
     ],
     links: [
-      { href: '/insurance-log', label: 'Open the free insurance photo log' },
+      { href: '/insurance-log', label: 'Open the insurance photo log' },
       {
         href: '/water-damage-insurance-claims-in-texas',
         label: 'Water-damage claim checklist',

@@ -34,7 +34,7 @@ export const interiorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How do I start a kitchen conversation?",
-      a: `Call or text ${phone}. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM. The visit is how a planning range becomes a price. Family-owned since 1993.`,
+      a: `Call or text ${phone}. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. The visit is how a planning range becomes a price. Family-owned since 1993.`,
     },
   ],
   "bathroom-remodeling": [

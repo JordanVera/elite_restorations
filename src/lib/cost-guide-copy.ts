@@ -43,7 +43,7 @@ export const costGuideExtras = {
         heading: 'What the visit is pricing',
         paragraphs: [
           'We walk the room, measure it, and look at the wet wall, the floor, and any wall you want opened. The number you get is for that scope. It is not a revision of the range on this page, and the range is not a bid you can hold us to. If demolition later shows rot, a previous leak, or wiring that cannot serve the new appliances, we stop and show you before the job grows.',
-          'Call (713) 909-0034 or request an estimate. Family-owned in Houston since 1993, at 511 Crestwater Ct. The useful preparation is a list of what must stay and what you are willing to move. Appliance model numbers help if you have already bought them.',
+          'Call (713) 909-0034 or request an estimate. Family-owned in Houston since 1993, at our office in west Houston (77082). The useful preparation is a list of what must stay and what you are willing to move. Appliance model numbers help if you have already bought them.',
         ],
       },
       {
