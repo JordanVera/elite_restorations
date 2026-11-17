@@ -28,6 +28,7 @@ export const houstonPostSlugs = [
   'remodeling-a-houston-ranch-house',
   'quartz-vs-granite-countertops-houston',
   'carpentry-for-houston-humidity',
+  'patio-cover-gazebo-cypress-bridgeland',
   'tile-fireplace-surround-houston',
   'drywall-repair-after-a-leak-houston',
   'deck-material-for-houston-humidity',

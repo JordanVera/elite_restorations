@@ -742,4 +742,152 @@ export const houstonPostsB: Article[] = [
       },
     ],
   },
+  {
+    slug: 'patio-cover-gazebo-cypress-bridgeland',
+    title: 'Choosing a patio cover, pergola, or gazebo in Cypress and Bridgeland',
+    metaTitle: 'Patio Cover or Gazebo, Cypress',
+    crumb: 'Patio covers',
+    lines: ['A roof for the yard,', 'not a catalog tent.'],
+    description:
+      'How to choose a patio cover, pergola, or gazebo in Cypress and Bridgeland: sun, storms, drainage, materials, and HOA review.',
+    lede: 'A Cypress or Bridgeland yard can be too hot to use from May through September, and a summer storm can still dump rain on the same table an hour later. A patio cover, a pergola, and a gazebo are three different structures. The right one depends on whether you need dry shade against the house, broken sun in the yard, or a freestanding roof of your own.',
+    image: '/images/projects/siding/rear-deck-glass-doors.jpg',
+    service: 'patios-decks',
+    ctaTitle: 'Not sure which roof the yard wants?',
+    ctaBody:
+      'Call (713) 909-0034 to schedule an estimate. We look at the wall, the yard, and where the water goes before we talk about a roof. Family-owned, serving Houston since 1993.',
+    related: [
+      'deck-material-for-houston-humidity',
+      'gutter-size-for-houston-rain',
+      'best-fence-for-houston-weather',
+    ],
+    faqs: [
+      {
+        q: 'Is a pergola the same as a patio cover?',
+        a: 'No. A pergola is an open frame. The slats break up the sun, and rain still comes through. A patio cover is a solid roof, usually tied to the house, so a storm stays off the table. A gazebo is freestanding, on its own footings, out in the yard. We build each one, and we keep the names straight.',
+      },
+      {
+        q: 'Should the frame be cedar, treated pine, or aluminum?',
+        a: 'Cedar grays in west sun unless someone keeps a finish on it. Treated pine is the practical frame, and the posts still have to stay out of soil that stays wet. Aluminum does not rot, and it still needs footings and a wall detail that sends water off the siding. The span, the sun, and the upkeep you will actually do decide it.',
+      },
+      {
+        q: 'Does an HOA in Bridgeland or Cypress have to approve it?',
+        a: 'Often, yes. Planned sections review a cover, a gazebo, or a pergola, and sometimes the color. That review is not the building permit. Cypress is not one permit counter. The address picks the desk, and Bridgeland is not an exception to that. We ask before we order. We do not start work a review has to approve.',
+      },
+      {
+        q: 'Can you add a fan or a light?',
+        a: 'Yes, when they are planned with the roof. The wiring goes into the beams before the ceiling is closed, and the frame has to carry the fan. A cord added later means opening finished work. Tell us on the first visit if you want a fan, a light, or both.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Three structures, and the yards they have to fit',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A patio cover is the roof attached to the back of the house. It shades the door you already use, and it has to be flashed where it meets the wall so rain does not run behind the siding. In the newer two-story houses along US 290, and through Bridgeland, that door often opens from the family room onto a concrete pad the builder left in the afternoon sun.',
+          },
+          {
+            type: 'p',
+            text: 'A pergola is carpentry without a solid roof. Rafters or slats break the sun and leave the rain, which can be the right choice over a grill or along a walk when you want the breeze. It is still a structure in the wind. The posts in clay, and the connection at the house if the pergola is attached, are the work. The slats are the last layer.',
+          },
+          {
+            type: 'p',
+            text: 'A gazebo stands on its own footings, away from the wall, with a small roof that sheds water. People ask for one when the shade they want is out in the yard rather than against the brick. It is not a patio cover, and it is not a deck. If the old one moves when you push a post, the next one has to be anchored for a Gulf gust.',
+          },
+        ],
+      },
+      {
+        heading: 'Heat, summer storms, and the wind',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The afternoon sun in Cypress and Bridgeland is why the furniture stays inside from May into September. A solid cover changes that. An open pergola cuts some of the glare, and rain still reaches the table. A fan under a solid cover moves air that would otherwise sit there in August.',
+          },
+          {
+            type: 'p',
+            text: 'Hurricane season runs June 1 through November 30, and the summer storms around that season are enough to test a light roof. A solid cover and a screened gazebo both catch wind. Screens help with mosquitoes near a lake or a detention pond, and they also turn the openings into a sail, so we say that before we build them. We do not promise any yard roof will ignore a major hurricane. We build the posts, the connections, and the roof so they are the part that holds.',
+          },
+          {
+            type: 'p',
+            text: 'Spring hail can mark a small shingle roof the same way it marks the house. We walk both when both need a look, and we keep the estimates separate.',
+          },
+        ],
+      },
+      {
+        heading: 'Cedar, treated pine, and aluminum',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Cedar is the finish wood many associations like to see, and full west sun will check it and gray it unless it is cleaned and refinished. On the north side of a two-story house it stays damp longer and still wants that upkeep. We use cedar where the look and the span make sense.',
+          },
+          {
+            type: 'p',
+            text: 'Treated pine is the framing we use when the budget is the structure, not the grain. It rots if a post stands in wet clay or if a sprinkler hits the bottom every morning. Cut ends and the bottoms of the posts stay out of constant soil contact. A stain is a maintenance plan. It is not what holds the roof up.',
+          },
+          {
+            type: 'p',
+            text: 'Aluminum does not rot, which is why a lot of covers in these subdivisions are metal. We install aluminum covers when the span and the look work, and when the association allows it. The metal still needs footings, and an attached cover still needs a detail at the wall so water leaves the siding. A hard rain on a low aluminum roof is loud. If that matters under a bedroom window, say so before we order.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/patios-decks', label: 'Patios and decks' },
+              { href: '/patios', label: 'Patios' },
+              { href: '/decks', label: 'Decks' },
+              { href: '/gazebos', label: 'Gazebos' },
+              { href: '/carpentry', label: 'Carpentry' },
+              { href: '/deck-material-for-houston-humidity', label: 'Deck material for Houston humidity' },
+              { href: '/carpentry-for-houston-humidity', label: 'Carpentry in Houston humidity' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Attached or freestanding, and where the rain goes',
+        blocks: [
+          {
+            type: 'p',
+            text: 'An attached cover ties into the house, and that connection is where these jobs leak. The flashing has to send water onto the cover and then off it, not behind the brick or the siding. The posts land on footings, not on a surface block set on the pad because it was faster. Houston clay holds water after a hard rain and shrinks in a dry month. A footing detail from a dry climate is not the detail for this ground.',
+          },
+          {
+            type: 'p',
+            text: 'A freestanding gazebo or a freestanding pergola does not open the wall, and it still needs those footings. Setting posts on a cracked patio that ponds will twist the frame in the first real storm. If the pad is sound and it drains, it can stay. If it slopes toward the slab, a new roof over it will not fix the pitch. We check the fall. An inch toward the house is enough for rain to sit at the door.',
+          },
+          {
+            type: 'p',
+            text: 'The new roof collects a Houston downpour of its own. Water off the cover has to miss the brick, the door, and the low spot by the fence. Downspouts already on the house have a path. A cover that blocks them, or a patio that dams them, holds that water against the foundation. We plan that path before we set a post. If a side gate is too narrow for the material, say so when you call.',
+          },
+        ],
+      },
+      {
+        heading: 'The association, a fan, and a storm',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Bridgeland is a planned community, and many newer Cypress sections work the same way. The association often wants to see a cover, a gazebo, or a pergola, and sometimes the color, before any of it exists. That approval is not a City of Houston permit, and it is not a Harris County permit. The address picks the counter. We do not set posts while a review is still open.',
+          },
+          {
+            type: 'p',
+            text: 'A fan or a light is electrical work, planned with the beams. The wiring goes in before the roof is closed, and the frame has to carry the fan. Adding either one after the ceiling is finished means opening work you just paid for. Tell us whether you want a fan, a light, or both.',
+          },
+          {
+            type: 'p',
+            text: 'If a storm has already taken the old cover or gazebo down, photograph the posts, the wall, and what is left of the roof before anyone hauls it off, and call (713) 909-0034. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides coverage and the amount. Rot that was already in the posts stays rot, even if wind passed through the same week. We have been family-owned, serving Houston since 1993. Visits are scheduled from our office in west Houston (77082).',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/cypress-tx', label: 'Yards and houses in Cypress' },
+              { href: '/gutters', label: 'Gutters' },
+              { href: '/fence-installation-repair', label: 'Fence installation and repair' },
+              { href: '/gutter-size-for-houston-rain', label: 'Gutter size for Houston rain' },
+              { href: '/best-fence-for-houston-weather', label: 'A fence for Houston weather' },
+              { href: '/contact', label: 'Contact' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

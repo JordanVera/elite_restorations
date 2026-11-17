@@ -31,6 +31,7 @@ const alsoOn: Record<string, readonly string[]> = {
   "storm-and-hail-roof-repair-houston": ["roofing", "siding", "roof-replacement"],
   "quartz-vs-granite-countertops-houston": ["backsplash"],
   "deck-material-for-houston-humidity": ["patios", "decks", "gazebos"],
+  "patio-cover-gazebo-cypress-bridgeland": ["patios", "decks", "gazebos", "carpentry"],
   "plan-kitchen-bath-remodel-2027": ["bathroom-remodeling"],
 };
 
