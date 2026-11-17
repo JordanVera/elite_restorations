@@ -14,7 +14,7 @@ export const houstonPostsB: Article[] = [
     service: 'bathroom-remodeling',
     ctaTitle: 'Planning a bath?',
     ctaBody:
-      'Call (713) 909-0034. We measure the room before we promise a layout. We\'ve been family-owned in Houston since 1993, and the estimate is free.',
+      'Call (713) 909-0034 to schedule an estimate. We measure the room before we promise a layout. We\'ve been family-owned in Houston since 1993.',
     related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
     faqs: [
       {
@@ -31,7 +31,7 @@ export const houstonPostsB: Article[] = [
       },
       {
         q: 'What if the bath leaked first?',
-        a: 'We dry it before we tile it. If you\'re filing a claim, photograph the damage and keep that repair separate from any extra layout changes. We are not public adjusters. Your insurer decides the claim.',
+        a: 'We dry it before we tile it. Photograph the damage and keep that repair separate from any extra layout changes. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides the claim.',
       },
     ],
     sections: [
@@ -136,7 +136,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you\'re remodeling. Dry the subfloor and the ceiling below before new tile goes on. If you\'re filing, photograph the failure and the wet materials. The insurer decides whether the leak is covered. The new glass, if it wasn\'t there before, is a choice you\'re making, and it should be written that way.',
+            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you\'re remodeling. Dry the subfloor and the ceiling below before new tile goes on. Photograph the failure and the wet materials. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The insurer decides whether the leak is covered. The new glass, if it wasn\'t there before, is a choice you\'re making, and it should be written that way.',
           },
           {
             type: 'p',
@@ -176,7 +176,7 @@ export const houstonPostsB: Article[] = [
       },
       {
         q: 'What if the old floor got wet in a claim?',
-        a: 'Dry the structure first, and photograph what came out if you\'re filing. We are not public adjusters. Your insurer decides payment. The new floor goes in when the meter says the slab or the subfloor is ready.',
+        a: 'Dry the structure first, and photograph what came out. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides payment. The new floor goes in when the meter says the slab or the subfloor is ready.',
       },
     ],
     sections: [
@@ -270,7 +270,7 @@ export const houstonPostsB: Article[] = [
               'Acclimate wood in the house.',
               'Level where vinyl or large tile would show the ridge.',
               'Keep laminate out of the wet rooms.',
-              'Photograph a wet floor before it comes up if you\'re filing a claim.',
+              'Photograph a wet floor before it comes up.',
             ],
           },
         ],
@@ -360,7 +360,7 @@ export const houstonPostsB: Article[] = [
             type: 'list',
             items: [
               'Walk every slope before recommending replacement.',
-              'Photograph hail or wear if you\'re filing.',
+              'Photograph hail or wear.',
               'Replace soft decking when it shows up.',
               'Flash the walls and the penetrations with the new roof.',
               'Confirm association color rules before the order.',
@@ -395,7 +395,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Many replacements start after hail or wind, and you can also replace a worn roof with no claim at all. If you\'re filing, photograph the slopes before a tarp hides an opening, when that\'s safe, and meet the adjuster if you can. We can be there to point at what we found. The estimate we write is the price to build the roof. It isn\'t the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
+            text: 'Many replacements start after hail or wind, and you can also replace a worn roof with no claim at all. Photograph the slopes before a tarp hides an opening, when that\'s safe. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We can meet the adjuster on the house. We can be there to point at what we found. The estimate we write is the price to build the roof. It isn\'t the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
           },
           {
             type: 'p',
@@ -412,7 +412,7 @@ export const houstonPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Permits follow the city. Houston, Friendswood, Humble, and Tomball each have their own, and some Spring addresses are the county. We pull what the address requires. An association letter, if you need one, should be in hand before the shingles land. We\'ve been family-owned since 1993. The crew is scheduled from 511 Crestwater Ct, not from a storm trailer that will be gone next month.',
+            text: 'Permits follow the city. Houston, Friendswood, Humble, and Tomball each have their own, and some Spring addresses are the county. We pull what the address requires. An association letter, if you need one, should be in hand before the shingles land. We\'ve been family-owned since 1993. The crew is scheduled from our office in west Houston (77082), not from a storm trailer that will be gone next month.',
           },
           {
             type: 'links',
@@ -607,7 +607,7 @@ export const houstonPostsB: Article[] = [
     service: 'kitchen-remodeling',
     ctaTitle: 'Have a ranch to walk through?',
     ctaBody:
-      'Call (713) 909-0034. We measure the kitchen, the bath, and the roof you actually have. We\'ve been family-owned in Houston since 1993, and the visit is free.',
+      'Call (713) 909-0034 to schedule an estimate. We measure the kitchen, the bath, and the roof you actually have. We\'ve been family-owned in Houston since 1993.',
     related: ['houston-kitchen-remodel-ideas', 'houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
     faqs: [
       {
@@ -736,7 +736,7 @@ export const houstonPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'If a storm or a burst pipe is why the walls are open, document that damage before the new layout covers the evidence. Your insurer decides the claim. The beam in the former kitchen wall, if you want it, is a remodel. We can write them as separate scopes so you can see which dollars are which. We\'ve been family-owned in Houston since 1993. The office is at 511 Crestwater Ct, and the ranch is wherever you send us.',
+            text: 'If a storm or a burst pipe is why the walls are open, document that damage before the new layout covers the evidence. Your insurer decides the claim. The beam in the former kitchen wall, if you want it, is a remodel. We can write them as separate scopes so you can see which dollars are which. We\'ve been family-owned in Houston since 1993. Visits are scheduled from our office in west Houston (77082), and the ranch is wherever you send us.',
           },
         ],
       },

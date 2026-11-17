@@ -228,7 +228,7 @@ export async function buildInsurancePdf(
   }
 
   const disclaimer = wrap(
-    'This is a photo record prepared by the property owner. It is not a claim filing and does not replace any forms or documentation your insurance company requires.',
+    'This is a photo record of the damage. It does not replace any forms or documentation your insurance company requires.',
     regular,
     9,
     CONTENT_W,

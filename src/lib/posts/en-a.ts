@@ -9,7 +9,7 @@ export const houstonPostsA: Article[] = [
     lines: ['After the hail,', 'before the paperwork.'],
     description:
       'What to do after hail or wind hits a Houston roof: photos, a tarp if it\'s open, and a claim your insurer still decides.',
-    lede: 'A Houston hailstorm can bruise a roof that still looks fine from the yard. On the first day, keep more water out, take pictures, and call your insurer if you\'re filing a claim.',
+    lede: 'A Houston hailstorm can bruise a roof that still looks fine from the yard. On the first day, keep more water out, take pictures, and call (713) 909-0034. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
     image: '/images/projects/roofing/brick-home-multi-gable.webp',
     service: 'roofing',
     emergency: true,
@@ -28,7 +28,7 @@ export const houstonPostsA: Article[] = [
       },
       {
         q: 'Should I sign with the first person who knocks?',
-        a: 'No. Storms bring door-knockers. Take your own photos, call your insurer if you\'re filing, and get a written look at the roof before you sign anything. We work for the owner who hires us.',
+        a: 'No. Storms bring door-knockers. Take your own photos and get a written look at the roof before you sign anything. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We work for the owner who hires us.',
       },
       {
         q: 'Will a tarp ruin the claim?',
@@ -36,7 +36,7 @@ export const houstonPostsA: Article[] = [
       },
       {
         q: 'Do you decide what the insurer pays?',
-        a: 'No. We are not public adjusters. You file the claim. We can meet the adjuster and explain the repair, and the insurer decides coverage and payment.',
+        a: 'No. We are not public adjusters. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We can meet the adjuster and explain the repair, and the insurer decides coverage and payment.',
       },
     ],
     sections: [
@@ -106,11 +106,11 @@ export const houstonPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'You call your insurer and open the claim. They send an adjuster, or they ask for photos first. The adjuster works for the insurer, so be there if you can. Walk the roof findings with your pictures, ask what was counted, and write down anything you don\'t understand so you can ask again in writing.',
+            text: 'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The adjuster works for the insurer. We can be at the house for that visit, walk the roof findings, and write down anything that still needs an answer.',
           },
           {
             type: 'p',
-            text: 'We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not take a fee to argue the claim, and we do not decide what the policy pays. We can meet the adjuster on the house, show what we found, and write a repair estimate for the construction. That estimate is the price of the work, not a promise of payment. Your insurer decides coverage, the deductible, and the amount.',
+            text: 'We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not take a percentage of a settlement, and we do not decide what the policy pays. We can meet the adjuster on the house, show what we found, and write a repair estimate for the construction. That estimate is the price of the work, not a promise of payment. Your insurer decides coverage, the deductible, and the amount.',
           },
           {
             type: 'p',
@@ -186,7 +186,7 @@ export const houstonPostsA: Article[] = [
       },
       {
         q: 'Does board-up decide the insurance payment?',
-        a: 'No. We are not public adjusters. Photograph the opening, cover it, and keep the receipt. You file if you\'re filing, and the insurer decides coverage.',
+        a: 'No. We are not public adjusters. Photograph the opening, cover it, and keep the receipt. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
       },
     ],
     sections: [
@@ -256,7 +256,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'After a storm, board-up and a tarp often land on the same house, because wind takes a window and lifts a slope. Do them as one visit if both are open, and take photos of each opening. If you\'re filing, those photos are part of your record. The plywood and the tarp are construction. The claim stays between you and your insurer.',
+            text: 'After a storm, board-up and a tarp often land on the same house, because wind takes a window and lifts a slope. Do them as one visit if both are open, and take photos of each opening. Those photos are part of the record. The plywood and the tarp are construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
           },
         ],
       },
@@ -327,8 +327,8 @@ export const houstonPostsA: Article[] = [
         a: 'Sometimes the box is solid and only the particle-board bottom swelled. Sometimes the cabinet is done. We look at the toe kick and the floor in front, not only the door.',
       },
       {
-        q: 'Do you file the claim?',
-        a: 'You file. We are not public adjusters. We dry, document, and repair what you hire.',
+        q: 'Do you help with the insurance claim?',
+        a: 'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. We dry, document, and repair what you hire.',
       },
     ],
     sections: [
@@ -358,7 +358,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Second-floor and attic heaters, which are common in newer two-story plans, drop water through the ceiling. The stain is the advertisement, and the insulation is the wet material. We open what the meter says is wet, and we leave it open until it\'s dry. Replacing the tank before the ceiling is dry just parks a new heater over a wet house. If you\'re filing, photograph the heater, the pan, and the rooms the water reached.',
+            text: 'Second-floor and attic heaters, which are common in newer two-story plans, drop water through the ceiling. The stain is the advertisement, and the insulation is the wet material. We open what the meter says is wet, and we leave it open until it\'s dry. Replacing the tank before the ceiling is dry just parks a new heater over a wet house. Photograph the heater, the pan, and the rooms the water reached. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
           },
           {
             type: 'links',
@@ -422,7 +422,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Call (713) 909-0034 if the water reached the building. A towel is enough for a cup of water on a tile floor you caught immediately. It isn\'t enough for a ceiling, a swollen cabinet, or a carpet pad. We\'ve been family-owned since 1993. If you\'re filing, call your insurer the same day, and read the policy or ask them how a sudden leak differs from a long seep.',
+            text: 'Call (713) 909-0034 if the water reached the building. A towel is enough for a cup of water on a tile floor you caught immediately. It isn\'t enough for a ceiling, a swollen cabinet, or a carpet pad. We\'ve been family-owned since 1993. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Read the policy or ask the insurer how a sudden leak differs from a long seep.',
           },
           {
             type: 'list',
@@ -605,7 +605,7 @@ export const houstonPostsA: Article[] = [
     service: 'kitchen-remodeling',
     ctaTitle: 'Want the kitchen measured?',
     ctaBody:
-      'Call (713) 909-0034 for a visit. We\'ve been family-owned in Houston since 1993, and the estimate is free. If a leak is part of the story, we dry that first.',
+      'Call (713) 909-0034 to schedule an estimate. We\'ve been family-owned in Houston since 1993. If a leak is part of the story, we dry that first.',
     related: ['remodeling-a-houston-ranch-house', 'houston-bathroom-remodel-guide'],
     faqs: [
       {
@@ -618,7 +618,7 @@ export const houstonPostsA: Article[] = [
       },
       {
         q: 'Should I remodel right after a leak?',
-        a: 'Dry the room first, then decide the new layout. A wet slab is a bad place to template a counter. If you\'re filing a claim for the leak, that repair and the optional remodel should stay separate on paper.',
+        a: 'Dry the room first, then decide the new layout. A wet slab is a bad place to template a counter. That repair and the optional remodel should stay separate on paper. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
       },
       {
         q: 'Are you deciding an insurance payment for a kitchen?',
@@ -726,11 +726,11 @@ export const houstonPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Dishwashers and supply lines ruin the cabinet you already disliked. Dry and document the damage first. If you\'re filing, keep the repair separate from the optional new layout so the photos match what failed. Your insurer decides the leak. The new island, if you still want it, is a remodel you choose.',
+            text: 'Dishwashers and supply lines ruin the cabinet you already disliked. Dry and document the damage first. Keep the repair separate from the optional new layout so the photos match what failed. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides the leak. The new island, if you still want it, is a remodel you choose.',
           },
           {
             type: 'p',
-            text: 'Doing both with one crew means the person who dried the floor is the person who sets the cabinet. You aren\'t handing a half-wet kitchen to someone who hasn\'t seen the loss. We\'ve been family-owned in Houston since 1993, and the visit is free. Bring the photos of the leak if there was one, and a list of what you want the room to do on a normal Tuesday.',
+            text: 'Doing both with one crew means the person who dried the floor is the person who sets the cabinet. You aren\'t handing a half-wet kitchen to someone who hasn\'t seen the loss. We\'ve been family-owned in Houston since 1993. Call (713) 909-0034 to schedule an estimate. Bring the photos of the leak if there was one, and a list of what you want the room to do on a normal Tuesday.',
           },
           {
             type: 'links',

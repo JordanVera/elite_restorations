@@ -37,7 +37,7 @@ export const insuranceBrief: Brief = {
   ],
   craft: [
     'In {name} the deliverable is photographs and notes: what got wet, what the roof or the wall shows, and what was repaired if you hire the repair. You can share that with your adjuster.',
-    'We tell {name} clients to protect the house from more water and to photograph before belongings are thrown away. The free photo log on this site is a room-by-room way to start that record yourself.',
+    'We tell {name} clients to protect the house from more water and to photograph before belongings are thrown away. The photo log on this site is a room-by-room way to start that record yourself.',
     'Drying and rebuilding in {name} can follow the documentation. We keep the invoice for construction separate from the idea that we approved a claim. We cannot approve a claim.',
   ],
   sequence: [
@@ -53,7 +53,7 @@ export const insuranceBrief: Brief = {
       title: 'Photos before cleanup',
       bodies: [
         'In {name} we want the damage photographed before wet belongings are thrown away.',
-        'The free photo log on this site is a room-by-room way to start a {name} record yourself.',
+        'The photo log on this site is a room-by-room way to start a {name} record yourself.',
       ],
     },
     {
@@ -73,16 +73,16 @@ export const insuranceBrief: Brief = {
   ],
   faqs: [
     {
-      q: 'Do you file the claim or decide coverage in {name}?',
+      q: 'Do you help with an insurance claim in {name}?',
       answers: [
-        'No. We provide inspection photos and notes. In {name} that might be a roof, a wet room, or both. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage. You can share the file we build.',
-        'Filing is your choice and your insurer’s process. Our {name} work is the record and, if hired, the drying or the repair. Those are not an approval. Anyone who tells you a contractor can promise the claim is overstating the role.',
+        'Yes. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. In {name} that might be a roof, a wet room, or both. We send our estimate to your insurance company for approval and work through it with the adjuster. Your insurer decides coverage.',
+        'Our {name} work is the record and, if hired, the drying or the repair. Your insurer decides what the policy pays. We do not promise an approval.',
       ],
     },
     {
       q: 'Should I clean up before photos in {name}?',
       answers: [
-        'Protect the house from more water, and photograph before you throw damaged items away. In {name} the free insurance photo log on this site walks a room at a time if you want to start alone. When we are hired, we photograph the conditions we find, which is easier if the evidence is still there.',
+        'Protect the house from more water, and photograph before you throw damaged items away. In {name} the insurance photo log on this site walks a room at a time if you want to start alone. When we are hired, we photograph the conditions we find, which is easier if the evidence is still there.',
         'Safety first, then pictures, then cleanup. A {name} ceiling that is falling is not a reason to stage a photo. It is a reason to get people out and call {phone}. Ordinary wet drywall can usually wait for a photograph.',
       ],
     },
@@ -103,7 +103,7 @@ export const insuranceBrief: Brief = {
     {
       q: 'How do you schedule claims help in {name}?',
       answers: [
-        'Call {phone}. If water is still coming in, say so. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The photo log on this site is there if you want to start the record tonight.',
+        'Call {phone}. If water is still coming in, say so. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The photo log on this site is there if you want to start the record tonight.',
         'Call {phone} or use the emergency form when the loss is active. A calmer {name} documentation visit can be scheduled in ordinary hours. Either way, coverage stays with your insurer.',
       ],
     },
@@ -213,7 +213,7 @@ export const paintBrief: Brief = {
     {
       q: 'How do you schedule painting and drywall repair in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say if this is after a leak or the end of a remodel.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say if this is after a leak or the end of a remodel.',
         'Call {phone} or use the estimate form. The {name} visit looks at texture, size, and whether the wall is dry. Color samples can wait until the prep is known.',
       ],
     },

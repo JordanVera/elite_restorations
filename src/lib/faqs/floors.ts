@@ -34,7 +34,7 @@ export const floorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Who do I call about a floor?",
-      a: `Call or text ${phone}. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM, at 511 Crestwater Ct, Houston, TX 77082. If the floor is wet right now, say so. Drying comes before new wood.`,
+      a: `Call or text ${phone}. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM. We work from our office in west Houston (77082). If the floor is wet right now, say so. Drying comes before new wood.`,
     },
   ],
   "tile-flooring": [

@@ -131,7 +131,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     insurance: {
       heading: 'A record of the loss, not a promise about the policy.',
       paragraphs: [
-        'Photograph the water, the source if you can see it safely, and the belongings before they are thrown away. We photograph the conditions, the drying, and the repairs. The insurance photo log on this site is free. A sudden pipe break is often treated differently from floodwater or a slow leak, and flood is often a separate policy. We do not know your form.',
+        'Photograph the water, the source if you can see it safely, and the belongings before they are thrown away. We photograph the conditions, the drying, and the repairs. The insurance photo log is on this site. A sudden pipe break is often treated differently from floodwater or a slow leak, and flood is often a separate policy. We do not know your form.',
         'Mitigation, the work that stops more damage, should not wait on a coverage decision. The rebuild can be scheduled with a clearer scope. Keep those two ideas separate when you talk to the insurer.',
         notAPublicAdjuster,
       ],
@@ -166,8 +166,8 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
   },
   'insurance-claims': {
     moreIntro: [
-      'Insurance claims help, on this site, means photographs, notes, and a clear scope of the drying or the repair. You file the claim. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.',
-      'The free insurance photo log is a room-by-room packet you can fill out whether or not you hire us. Use it before things are thrown away. If you hire us for the building, our inspection photos and the scope of the work sit beside that record. Coverage is still your insurer’s decision.',
+      'Insurance claims help, on this site, means photographs, notes, and a clear scope of the drying or the repair. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.',
+      'The insurance photo log is a room-by-room packet you can fill out whether or not you hire us. Use it before things are thrown away. If you hire us for the building, our inspection photos and the scope of the work sit beside that record. Coverage is still your insurer’s decision.',
     ],
     moreLocal: [
       'The Houston losses we document are usually a roof opening after hail or tropical weather, a supply line, an appliance, a water heater, or water that came in at grade. Hurricane season runs from June through November. Spring is when hail shows up. A Katy slab and a Heights pier-and-beam house hide water in different places, so the notes say where it went, not only which room looks bad.',
@@ -200,7 +200,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'Plan',
-        body: 'We list the rooms, the roof slopes, and the questions the photos need to answer. You decide whether you are calling your insurer. We do not file that call for you, and we do not tell you that you must.',
+        body: 'We list the rooms, the roof slopes, and the questions the photos need to answer. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. You do not have to wait on that conversation before we look at the house.',
       },
       {
         title: 'Prepare',
@@ -261,7 +261,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     ],
     costHeading: 'What this help costs, and what it does not.',
     costIntro: [
-      'Documentation is part of the inspection and the repair you hire. You file the claim. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. There is no separate fee for that. If you only need the photo log, that page is free to use.',
+      'Documentation is part of the inspection and the repair you hire. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We send our estimate to your insurance company for approval and work it out with the adjuster. We are not public adjusters. There is no separate fee for that. If you only need the photo log, you can use that page.',
       'The money in a loss is the building work. The planning ranges below are the same ones we publish for that work. They are not a prediction of the claim payment. Your deductible and your coverage can make the check different from the invoice.',
     ],
     costFactors: [
@@ -284,7 +284,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       { label: 'Architectural asphalt roof replacement', range: '$12,000 to $24,000' },
     ],
     rangeNote:
-      'The building ranges are typical planning ranges for that scope in Greater Houston, not a quote and not an insurance payment. The photo log is free. Call (713) 909-0034 if you want an inspection.',
+      'The building ranges are typical planning ranges for that scope in Greater Houston, not a quote and not an insurance payment. The photo log is on this site. Call (713) 909-0034 if you want an inspection.',
     insurance: {
       heading: 'What we will say to an adjuster, and what we will not.',
       paragraphs: [
@@ -293,7 +293,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
         notAPublicAdjuster,
       ],
       links: [
-        { href: '/insurance-log', label: 'Open the free insurance photo log' },
+        { href: '/insurance-log', label: 'Open the insurance photo log' },
         {
           href: '/how-insurance-claims-work-texas-restoration',
           label: 'How insurance claims work for Texas restoration',
@@ -307,7 +307,7 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
     faqs: [
       {
         q: 'Do you charge a separate fee to work with the adjuster?',
-        a: 'No. Sending our estimate to your insurance company and working it out with the adjuster is part of the repair you hire. We are not public adjusters. Your insurer decides coverage and payment. The photo log on this site is free.',
+        a: 'No. Sending our estimate to your insurance company and working it out with the adjuster is part of the repair you hire. We are not public adjusters. Your insurer decides coverage and payment. The photo log is on this site.',
       },
       {
         q: 'What should I photograph in a Houston house?',

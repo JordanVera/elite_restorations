@@ -43,7 +43,7 @@ function page(
     faqs,
     also,
     ctaTitle: `¿Trabajo en ${name}?`,
-    ctaBody: `Llame al ${phone}. Salimos de 511 Crestwater Ct, Houston, TX 77082. Empresa familiar desde 1993.`,
+    ctaBody: `Llame al ${phone}. Salimos de nuestra oficina en el oeste de Houston (77082). Empresa familiar desde 1993.`,
   };
 }
 
@@ -90,7 +90,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
     'meyerland-tx',
     'Meyerland',
     'Ranchos de ladrillo de los años 50 en Meyerland, junto a Brays Bayou. Tormenta, agua, cocinas, baños, pisos y techos bajos. Llame al (713) 909-0034.',
-    'Meyerland es el vecindario del suroeste de Houston de ranchos de ladrillo de un piso, junto a Brays Bayou y North Braeswood. El trabajo se agenda desde 511 Crestwater Ct.',
+    'Meyerland es el vecindario del suroeste de Houston de ranchos de ladrillo de un piso, junto a Brays Bayou y North Braeswood. El trabajo se agenda desde nuestra oficina en el oeste de Houston (77082).',
     [
       'La mayoría de Meyerland se construyó en los años 50: ladrillo, losa de concreto y techos bajos. Los lotes son más profundos que los de un bungalow dentro del Loop. Muchas casas todavía tienen la cocina cerrada, un baño de pasillo y la recámara grande atrás. En algunas calles la casa se reconstruyó o se levantó después de que el bayou se salió. La de al lado puede seguir siendo el rancho original. Vemos la que usted nos indicó.',
       'Brays Bayou cambia la visita de agua. El terreno bajo, pegado al bayou, ha recibido agua de tormenta en ciclones pasados. Las calles más lejos de la orilla no siempre vieron lo mismo. Un tubo de suministro reventado sobre la losa y el agua que subió de la calle son trabajos distintos, y a veces pólizas distintas. Su aseguradora decide cuál aplica. Nosotros fotografiamos, secamos y reparamos lo que usted contrata.',
@@ -128,7 +128,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: '¿Ustedes manejan el reclamo del seguro?',
-        a: 'No somos ajustadores públicos. Fotografiamos el daño, ponemos lona o secamos cuando ese es el paso correcto, y escribimos un estimado de la reparación que usted contrata. Usted presenta el reclamo. Su aseguradora decide la cobertura y el pago.',
+        a: 'No somos ajustadores públicos. Fotografiamos el daño, ponemos lona o secamos cuando ese es el paso correcto, y escribimos un estimado de la reparación que usted contrata. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Su aseguradora decide la cobertura y el pago.',
       },
     ],
     [
@@ -148,7 +148,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       'Las cocinas de los bungalows son chicas. Abrir el cuarto mete la estructura y la moldura vieja en el plan. Un gabinete que ignora el contramarco se ve pegado. La cocina de un townhome no puede pedir metros al vecino. Medimos los dos. El baño a menudo es uno solo, de pasillo, a veces con una adición que no coincide con la loseta original.',
       'El piso de las casas viejas suele ser pino, y se curva cuando la humedad de Houston sube y baja. Se puede lijar si las tablas tienen grosor y el contrapiso está sano. Un hueco que sigue húmedo devuelve esa curva. El vinil y la loseta aparecen en cocinas, baños y townhomes sobre losa. Madera sobre un hueco húmedo es otra conversación.',
       'Montrose está en la ciudad de Houston. No hay el zonificado de un suburbio, y algunas calles tienen restricciones o una conversación de diseño sobre la fachada. El trabajo interior suele quedar fuera de eso. Meter un contenedor en estas calles se planea en la visita, no con la costumbre de un cul-de-sac.',
-      'Desde 511 Crestwater Ct es un cruce de la ciudad, por Westheimer o Richmond hacia el Loop. No hay showroom en Montrose. Llame al (713) 909-0034. Si está entrando agua o el techo está abierto, dígalo primero.',
+      'Desde nuestra oficina en el oeste de Houston (77082) es un cruce de la ciudad, por Westheimer o Richmond hacia el Loop. No hay showroom en Montrose. Llame al (713) 909-0034. Si está entrando agua o el techo está abierto, dígalo primero.',
     ],
     [
       services.storm('Techos viejos, buhardillas y porches planos. Fotografiamos la abertura antes de que la lona la tape.'),
@@ -198,7 +198,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       'La helada se ve en tubos de paredes exteriores y en líneas bajo una casa abierta al viento frío. Cuando el tubo se parte, el agua puede quedarse en el hueco y subir al contrapiso. Paramos el agua, fotografiamos el camino y secamos la madera antes de hablar de piso nuevo.',
       'La cocina suele ser todavía el cuarto chico de atrás. La gente quiere abrirla hacia la sala. Las vigas y los vanos viejos deciden si eso es simple. Si el resto de la moldura se queda, hay que igualarla. Los baños son chicos. Una regadera aquí se impermeabiliza antes de la loseta, y la pendiente del piso viejo se revisa antes de prometer un bordillo.',
       'El piso de madera es común, y la humedad de Houston lo mueve. Lijar funciona cuando las tablas están sanas y el hueco no les está metiendo humedad. La loseta va en los cuartos mojados. El vinil es el piso que se elige cuando una adición sobre losa necesita algo estable y el pino original se queda en la sala. Decimos qué piso aguanta ese cuarto.',
-      'Garden Oaks está en Houston. Algunas calles tienen restricciones viejas sobre la fachada. Remodelar por dentro suele quedar fuera de esa revisión. Desde 511 Crestwater Ct es un cruce, por la I-10 hacia el norte. Llame al (713) 909-0034. El tráfico cambia la hora.',
+      'Garden Oaks está en Houston. Algunas calles tienen restricciones viejas sobre la fachada. Remodelar por dentro suele quedar fuera de esa revisión. Desde nuestra oficina en el oeste de Houston (77082) es un cruce, por la I-10 hacia el norte. Llame al (713) 909-0034. El tráfico cambia la hora.',
     ],
     [
       services.storm('Golpes de rama y granizo bajo los encinos. Fotografiamos el techo antes de quitar escombro, si es seguro.'),
@@ -240,7 +240,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
     'oak-forest-tx',
     'Oak Forest',
     'Ranchos de ladrillo de la posguerra en Oak Forest, al norte de Houston. Fugas en losa, granizo, cocinas, baños y pisos. Llame al (713) 909-0034.',
-    'Oak Forest es el vecindario del norte de Houston de ranchos de ladrillo de finales de los años 40 hasta los 60, al norte de Garden Oaks. Las visitas salen de 511 Crestwater Ct.',
+    'Oak Forest es el vecindario del norte de Houston de ranchos de ladrillo de finales de los años 40 hasta los 60, al norte de Garden Oaks. Las visitas salen de nuestra oficina en el oeste de Houston (77082).',
     [
       'La casa común es un rancho de un piso, de ladrillo, sobre losa. Los techos son bajos y simples hasta que alguien añadió un porche o un techo de cobertizo. Hay cocheras abiertas y garajes posteriores. Las cocinas se construyeron cerradas. Los baños de pasillo son chicos, con una tina que mucha gente ahora quiere como regadera. Una casa reconstruida en la misma calle es otro alcance. Se nota en la cimentación y en la moldura.',
       'Estas losas no le dan a un tubo reventado un lugar donde caer. En una helada fuerte se parten las líneas del ático y de las paredes exteriores. El agua sale en el cielo o en el zoclo y corre bajo el piso. Un vinil que se ve casi bien puede estar sobre concreto mojado. Levantamos lo que hay que quitar, medimos el resto y secamos la losa antes de hablar de piso nuevo.',
@@ -278,7 +278,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: '¿Están ajustando el reclamo?',
-        a: 'No. No somos ajustadores públicos. Usted llama a su aseguradora. Nosotros documentamos la casa y hacemos el secado y la reparación que usted contrata. La aseguradora decide el pago.',
+        a: 'No. No somos ajustadores públicos. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Documentamos la casa y hacemos el secado y la reparación que usted contrata. La aseguradora decide el pago.',
       },
     ],
     [
@@ -298,7 +298,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       'Los tubos y los calentadores en el ático son comunes en estos planos de dos pisos. Una helada o un calentador fallado tira agua al cielo de la cocina o de una recámara. La mancha del cielo es más chica que el aislamiento mojado arriba. Abrimos lo que el medidor dice que está húmedo, y lo dejamos abierto hasta que seque. Por la humedad de Houston, un ventilador en el pasillo no es todo el secado.',
       'Las cocinas aquí suelen ser gabinetes, una isla, y si el muro entre la cocina y el family room está trabajando como estructura. Los baños principales son más grandes que el baño de pasillo de un rancho. Igual necesitan impermeabilización antes de la piedra o la porcelana. Una regadera de vidrio en una casa húmeda necesita un extractor que salga afuera, no al ático.',
       'Los pisos se parten por nivel. Alfombra arriba, loseta o madera abajo, es un patrón que vemos. Después del agua, el acolchonado de la alfombra que se quedó mojado sale. La loseta sobre la losa es un piso práctico de abajo si la losa está pareja. La madera puede funcionar cuando la losa está seca y el producto es para ese suelo. El vinil es la otra opción de abajo, y marca cualquier lomo.',
-      'Kingwood tiene sus propios servicios municipales dentro del mapa complicado alrededor de Houston. Confirmamos la oficina de permisos de esa dirección. Desde Crestwater Court el viaje es largo, hacia el noreste. Llame al (713) 909-0034 y le decimos la ventana de la visita. No hay showroom en Kingwood.',
+      'Kingwood tiene sus propios servicios municipales dentro del mapa complicado alrededor de Houston. Confirmamos la oficina de permisos de esa dirección. Desde nuestra oficina en el oeste de Houston (77082) el viaje es largo, hacia el noreste. Llame al (713) 909-0034 y le decimos la ventana de la visita. No hay showroom en Kingwood.',
     ],
     [
       services.storm('Viento, granizo y agua que sube cerca del lago se anotan como lo que de verdad pasó.'),
@@ -398,7 +398,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       'El agua dentro de estas casas suele empezar arriba o en el ático. Un calentador, una línea en una helada, o una bota cuarteada alrededor de una ventila. El cielo de abajo enseña la mancha tarde. El aislamiento puede estar empapado mientras el drywall solo tiene puntos. Abrimos la parte mojada y la secamos. Una planta baja inundada por el arroyo es otro desmonte: aislamiento mojado en los muros, piso suelto y gabinetes hinchados en la base.',
       'Las ideas de cocina se parten igual que las casas. En un plano nuevo y abierto, el trabajo es gabinetes, cubiertas, luz y un piso que encuentra el family room. En una casa vieja de Spring, la cocina puede seguir siendo un cuarto aparte, y los muros no están a escuadra. Los baños nuevos pueden llevar una regadera grande. Los baños viejos necesitan que se encuentre la plomería antes de redibujar el cuarto.',
       'El piso y la humedad viajan juntos bajo los árboles. Una losa que no ve sol igual tiene que estar seca antes de que baje vinil o madera. La loseta es el piso que perdona el cuarto mojado. La madera se mueve. La acostumbramos en la casa. Después del agua del arroyo, no instalamos un piso para esconder una losa húmeda.',
-      'Desde 511 Crestwater Ct se va al norte, por la I-45 o el Hardy Toll Road según la sección. Llame al (713) 909-0034. Diga si es una fuga, un techo o una remodelación, para que la visita sea la correcta. Empresa familiar desde 1993. La cuadrilla sale de la oficina de Houston.',
+      'Desde nuestra oficina en el oeste de Houston (77082) se va al norte, por la I-45 o el Hardy Toll Road según la sección. Llame al (713) 909-0034. Diga si es una fuga, un techo o una remodelación, para que la visita sea la correcta. Empresa familiar desde 1993. La cuadrilla sale de la oficina de Houston.',
     ],
     [
       services.storm('Granizo, viento y agua del arroyo. Anotamos cuál llegó a la casa.'),
@@ -478,7 +478,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: '¿Me representan ante la aseguradora?',
-        a: 'No somos ajustadores públicos. Ayudamos con fotos, un estimado de reparación y el trabajo. Usted presenta el reclamo. La aseguradora decide la cobertura y el pago.',
+        a: 'No somos ajustadores públicos. Ayudamos con fotos, un estimado de reparación y el trabajo. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. La aseguradora decide la cobertura y el pago.',
       },
     ],
     [
@@ -490,7 +490,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
     'friendswood-tx',
     'Friendswood',
     'Casas de Friendswood cerca de Clear Creek, al sureste de Houston. Viento de la costa, inundación, cocinas, baños, pisos y techos. Llame al (713) 909-0034.',
-    'Friendswood es su propia ciudad al sureste de Houston, entre el Gulf Freeway y Clear Creek. Agendamos remodelación y restauración desde 511 Crestwater Ct.',
+    'Friendswood es su propia ciudad al sureste de Houston, entre el Gulf Freeway y Clear Creek. Agendamos remodelación y restauración desde nuestra oficina en el oeste de Houston (77082).',
     [
       'Las casas son sobre todo planos suburbanos de ladrillo, de los años 60 hasta los 90, sobre losa, con algunas secciones más nuevas. Ranchos de un piso y casas de dos pisos comparten calle. Las cocinas se han actualizado por partes, así que los gabinetes, las cubiertas y el piso pueden ser tres décadas distintas. Vemos lo que usted quiere cambiar, en lugar de suponer que hay que tirar todo.',
       'Clear Creek es el agua que aquí ya se conoce. El terreno bajo cerca del arroyo se ha inundado en ciclones pasados. Las cuadras más lejos del arroyo no todas recibieron agua. El otro temporal es el viento de la costa y la lluvia empujada. Los techos y las ventanas ven más viento que un vecindario del noroeste de Harris, y la humedad se queda porque la bahía no está lejos. Una filtración de techo y el agua del arroyo en el mismo mes siguen siendo dos eventos. Los documentamos así. Su aseguradora decide la cobertura.',
@@ -528,7 +528,7 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: '¿Presentan el reclamo por mí?',
-        a: 'Usted lo presenta con su aseguradora. No somos ajustadores públicos. Documentamos el daño y reparamos lo que usted contrata. No decidimos el pago.',
+        a: 'Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Documentamos el daño y reparamos lo que usted contrata. No decidimos el pago.',
       },
     ],
     [

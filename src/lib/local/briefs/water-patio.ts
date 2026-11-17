@@ -103,7 +103,7 @@ export const patioBrief: Brief = {
     {
       q: 'How do you schedule patio or deck work in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether you want a patio, a deck, or a cover.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether you want a patio, a deck, or a cover.',
         'Call {phone} for a look at the yard and the door. The {name} visit inspects what exists and the grade. Materials follow that, and any required review.',
       ],
     },
@@ -214,7 +214,7 @@ export const waterBrief: Brief = {
     {
       q: 'How do you schedule water damage help in {name}?',
       answers: [
-        'Call {phone} first if water is still coming in. {name} is dispatched from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The emergency form works when you cannot call. Your arrival time stays a short window in traffic or in a storm.',
+        'Call {phone} first if water is still coming in. {name} is dispatched from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. The emergency form works when you cannot call. Your arrival time stays a short window in traffic or in a storm.',
         'Call {phone} and describe the source if you know it. The {name} visit maps the water and sets drying. Photos can go to your insurer. We will not tell you the claim is approved.',
       ],
     },

@@ -103,7 +103,7 @@ export const carpentryBrief: Brief = {
     {
       q: 'How do you schedule carpentry in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether you need trim matched, a built-in, or an opening looked at.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether you need trim matched, a built-in, or an opening looked at.',
         'Call {phone} or use the estimate form. The {name} visit measures the profiles and the wall. We do not mill a match from a text description alone.',
       ],
     },
@@ -213,7 +213,7 @@ export const fireplaceBrief: Brief = {
     {
       q: 'How do you schedule fireplace tile in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. A photo of the face helps. The visit still decides retile, resurface, or rebuild.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. A photo of the face helps. The visit still decides retile, resurface, or rebuild.',
         'Call {phone} and say if the fireplace is used. We set the {name} visit to look at the box and the wall. Material is chosen after that measurement.',
       ],
     },

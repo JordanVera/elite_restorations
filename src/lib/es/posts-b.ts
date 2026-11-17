@@ -15,7 +15,7 @@ export const esPostsB: Article[] = [
     image: '/images/projects/bathrooms/shower-niche-large-format.jpg',
     service: 'bathroom-remodeling',
     ctaTitle: '¿Está planeando un baño?',
-    ctaBody: `Llame al ${phone}. Medimos el cuarto antes de prometer un plano. Empresa familiar en Houston desde 1993. El estimado es gratis.`,
+    ctaBody: `Llame al ${phone}. Medimos el cuarto antes de prometer un plano. Empresa familiar en Houston desde 1993. Pida un estimado.`,
     related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
     faqs: [
       {
@@ -32,7 +32,7 @@ export const esPostsB: Article[] = [
       },
       {
         q: '¿Y si el baño primero se fugó?',
-        a: 'Lo secamos antes de enlosetarlo. Si va a reclamar, fotografíe el daño y separe esa reparación de cualquier cambio extra de plano. No somos ajustadores públicos. Su aseguradora decide el reclamo.',
+        a: 'Lo secamos antes de enlosetarlo. Fotografíe el daño y separe esa reparación de cualquier cambio extra de plano. No somos ajustadores públicos. Su aseguradora decide el reclamo.',
       },
     ],
     sections: [
@@ -137,7 +137,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A veces la remodelación empieza porque un inodoro se filtró, una válvula se partió o la regadera nunca estuvo impermeabilizada. Seque el contrapiso y el cielo de abajo antes de poner loseta nueva. Si va a reclamar, fotografíe la falla y los materiales mojados. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
+            text: 'A veces la remodelación empieza porque un inodoro se filtró, una válvula se partió o la regadera nunca estuvo impermeabilizada. Seque el contrapiso y el cielo de abajo antes de poner loseta nueva. Fotografíe la falla y los materiales mojados. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
           },
           {
             type: 'p',
@@ -176,7 +176,7 @@ export const esPostsB: Article[] = [
       },
       {
         q: '¿Y si el piso viejo se mojó en un reclamo?',
-        a: 'Seque la estructura primero. Fotografíe lo que salió si va a reclamar. No somos ajustadores públicos. Su aseguradora decide el pago. El piso nuevo se instala cuando el medidor dice que la losa o el contrapiso están listos.',
+        a: 'Seque la estructura primero. Fotografíe lo que salió. No somos ajustadores públicos. Su aseguradora decide el pago. El piso nuevo se instala cuando el medidor dice que la losa o el contrapiso están listos.',
       },
     ],
     sections: [
@@ -270,7 +270,7 @@ export const esPostsB: Article[] = [
               'Acostumbre la madera en la casa.',
               'Nivele donde el vinil o la loseta grande enseñarían el lomo.',
               'Deje el laminado fuera de los cuartos mojados.',
-              'Fotografíe un piso mojado antes de levantarlo si va a reclamar.',
+              'Fotografíe un piso mojado antes de levantarlo.',
             ],
           },
         ],
@@ -359,7 +359,7 @@ export const esPostsB: Article[] = [
             type: 'list',
             items: [
               'Caminar cada pendiente antes de recomendar el reemplazo.',
-              'Fotografiar el granizo o el desgaste si va a reclamar.',
+              'Fotografiar el granizo o el desgaste.',
               'Cambiar la madera blanda cuando aparece.',
               'Poner el flashing de muros y penetraciones con el techo nuevo.',
               'Confirmar las reglas de color de la asociación antes del pedido.',
@@ -394,7 +394,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Muchos reemplazos empiezan después del granizo o del viento, aunque también se puede cambiar un techo gastado sin abrir un reclamo. Si va a reclamar, fotografíe las pendientes antes de que una lona esconda una abertura, cuando sea seguro, y esté con el ajustador si puede. Nosotros podemos estar para señalar lo que encontramos. No somos ajustadores públicos. El estimado que escribimos es el precio de construir el techo, no el monto que va a pagar la póliza. Su aseguradora decide la cobertura, la depreciación y el deducible.',
+            text: 'Muchos reemplazos empiezan después del granizo o del viento, aunque también se puede cambiar un techo gastado sin abrir un reclamo. Fotografíe las pendientes antes de que una lona esconda una abertura, cuando sea seguro, y esté con el ajustador si puede. Nosotros podemos estar para señalar lo que encontramos. No somos ajustadores públicos. El estimado que escribimos es el precio de construir el techo, no el monto que va a pagar la póliza. Su aseguradora decide la cobertura, la depreciación y el deducible.',
           },
           {
             type: 'p',
@@ -411,7 +411,7 @@ export const esPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Los permisos siguen la ciudad. Houston, Friendswood, Humble y Tomball tienen los suyos. Algunas direcciones de Spring son del condado. Sacamos lo que la dirección pide. Una carta de la asociación, si la necesita, debe estar en la mano antes de que llegue la teja. Empresa familiar desde 1993. La cuadrilla se agenda desde 511 Crestwater Ct, no desde un tráiler de tormenta que el mes que entra ya no está.',
+            text: 'Los permisos siguen la ciudad. Houston, Friendswood, Humble y Tomball tienen los suyos. Algunas direcciones de Spring son del condado. Sacamos lo que la dirección pide. Una carta de la asociación, si la necesita, debe estar en la mano antes de que llegue la teja. Empresa familiar desde 1993. La cuadrilla se agenda desde nuestra oficina en el oeste de Houston (77082), no desde un tráiler de tormenta que el mes que entra ya no está.',
           },
           {
             type: 'links',
@@ -500,11 +500,11 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Fotografíe la fuente, los cielos, los pisos y la base de los gabinetes. Una nota corta del cuarto sirve tanto como otras veinte fotos borrosas. Si puede usar el registro de fotos del seguro de este sitio, mantiene los cuartos en orden. Está en inglés. Después mueva lo que pueda salvar a un cuarto seco. Levante las cortinas. Suba los aparatos. Deje la tablaroca y el piso empapados hasta que estén documentados si va a reclamar.',
+            text: 'Fotografíe la fuente, los cielos, los pisos y la base de los gabinetes. Una nota corta del cuarto sirve tanto como otras veinte fotos borrosas. Si puede usar el registro de fotos del seguro de este sitio, mantiene los cuartos en orden. Está en inglés. Después mueva lo que pueda salvar a un cuarto seco. Levante las cortinas. Suba los aparatos. Deje la tablaroca y el piso empapados hasta que estén documentados.',
           },
           {
             type: 'p',
-            text: 'Si la pérdida fue repentina y quiere un reclamo, llame a su aseguradora y dígales qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo o agua que subió de afuera. No es lo mismo, y no le vamos a poner un nombre más bonito al agua. Puede llamarnos el mismo día para empezar a secar. Si espera el fin de semana a que llegue el ajustador, un zoclo mojado se convierte en un muro mojado.',
+            text: 'Si la pérdida fue repentina, Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Diga qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo o agua que subió de afuera. No es lo mismo, y no le vamos a poner un nombre más bonito al agua. Puede llamarnos el mismo día para empezar a secar. Si espera el fin de semana a que llegue el ajustador, un zoclo mojado se convierte en un muro mojado.',
           },
           {
             type: 'links',
@@ -600,7 +600,7 @@ export const esPostsB: Article[] = [
     image: '/images/projects/kitchens/range-hood-cooking-wall.jpg',
     service: 'kitchen-remodeling',
     ctaTitle: '¿Tiene un rancho para recorrer?',
-    ctaBody: `Llame al ${phone}. Medimos la cocina, el baño y el techo que usted tiene. Empresa familiar en Houston desde 1993. La visita es gratis.`,
+    ctaBody: `Llame al ${phone}. Medimos la cocina, el baño y el techo que usted tiene. Empresa familiar en Houston desde 1993. Pida un estimado.`,
     related: ['houston-kitchen-remodel-ideas', 'houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
     faqs: [
       {
@@ -729,7 +729,7 @@ export const esPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Si una tormenta o un tubo reventado es la razón de que los muros estén abiertos, documente ese daño antes de que el plano nuevo se coma la evidencia. No somos ajustadores públicos. Su aseguradora decide el reclamo. La viga en el muro que era la cocina, si la quiere, es una remodelación. Podemos escribirlos como alcances separados para que vea qué dólares son cuáles. Empresa familiar en Houston desde 1993. La oficina está en 511 Crestwater Ct. El rancho está donde usted nos mande.',
+            text: 'Si una tormenta o un tubo reventado es la razón de que los muros estén abiertos, documente ese daño antes de que el plano nuevo se coma la evidencia. No somos ajustadores públicos. Su aseguradora decide el reclamo. La viga en el muro que era la cocina, si la quiere, es una remodelación. Podemos escribirlos como alcances separados para que vea qué dólares son cuáles. Empresa familiar en Houston desde 1993. Trabajamos desde nuestra oficina en el oeste de Houston (77082). El rancho está donde usted nos mande.',
           },
         ],
       },

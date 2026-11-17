@@ -129,7 +129,7 @@ export const kitchenRemodeling: ServiceGuide = {
         },
         {
           title: 'What we photograph',
-          body: 'The source if it is still visible, the wet cavities, and the work after. The free insurance photo log on this site is there if you want a room-by-room record of your own.',
+          body: 'The source if it is still visible, the wet cavities, and the work after. The insurance photo log on this site is there if you want a room-by-room record of your own.',
         },
         {
           title: 'Coverage is not the estimate',

@@ -103,7 +103,7 @@ export const countertopsBrief: Brief = {
     {
       q: 'How do you schedule countertops in {name}?',
       answers: [
-        'Call {phone}. We schedule {name} from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, along {roads}. Tell us if the cabinets are already set. The kitchen cost page covers full remodels. A top alone is priced from the template.',
+        'Call {phone}. We schedule {name} from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, along {roads}. Tell us if the cabinets are already set. The kitchen cost page covers full remodels. A top alone is priced from the template.',
         'Call {phone} and say quartz, stone, or “we are not sure.” The {name} visit sorts the material and whether the room is ready to template. Mileage does not pick the edge profile.',
       ],
     },

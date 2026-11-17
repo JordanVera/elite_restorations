@@ -322,7 +322,7 @@ const angles: Record<string, readonly Angle[]> = {
       focus: 'ventilation, valleys, and pipe boots, not only the shingles you see from the street',
       before: 'Those pieces go in with the new roofing. They are part of the replacement.',
       onSite:
-        'We document the roof for your records and, when you are filing, for the conversation with your insurer. Coverage is your insurer’s decision.',
+        'We document the roof for your records. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
       blurb: 'Full replacement, from tear-off through flashing, vents, and cleanup.',
     },
   ],
@@ -435,7 +435,7 @@ const angles: Record<string, readonly Angle[]> = {
     {
       focus: 'a clear record taken before cleanup throws the evidence away',
       before:
-        'Protect the house from more water, and photograph the damage before belongings are tossed. The free photo log on this site is a room-by-room way to start that record yourself.',
+        'Protect the house from more water, and photograph the damage before belongings are tossed. The photo log on this site is a room-by-room way to start that record yourself.',
       onSite: 'We can also photograph the conditions if you hire us for the inspection or the repairs.',
       blurb: 'Inspection photos and a written record. We do not decide coverage.',
     },

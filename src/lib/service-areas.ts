@@ -18,7 +18,7 @@ const details: Record<string, { setting: string; clause: string }> = {
   },
   Westchase: {
     setting:
-      'Westchase is the west Houston district of offices, townhomes, and houses along Westheimer and the Beltway. Our office at 511 Crestwater Ct is in 77082, a short drive west near George Bush Park.',
+      'Westchase is the west Houston district of offices, townhomes, and houses along Westheimer and the Beltway. Our office in west Houston (77082) is a short drive from the district, near George Bush Park.',
     clause: 'townhomes and single-family houses around the 77082 office',
   },
   Alief: {

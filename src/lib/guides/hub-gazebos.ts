@@ -7,7 +7,7 @@ export const gazeboGuide: ServiceGuide = {
     { title: "Footings", body: "Posts need footings that suit clay soil and the wind this close to the Gulf. A gazebo set on loose pavers will twist in the first real storm." },
     { title: "Frame and roof", body: "The roof of a gazebo is a small roof: framing, underlayment, and a surface that sheds water away from the posts and away from the house if it is close." },
     { title: "Rails and floor", body: "If the gazebo has a raised floor or rails, they are built with the frame, not screwed on after the photos. Screens, if you want them, change airflow and wind load. We say that before we build them." },
-    { title: "Walk the yard", body: "We look at drainage around the footings after a hose test or the next rain plan. Family-owned in Houston since 1993. The office is 511 Crestwater Ct." },
+    { title: "Walk the yard", body: "We look at drainage around the footings after a hose test or the next rain plan. Family-owned in Houston since 1993. Visits are scheduled from our office in west Houston (77082)." },
   ],
   sections: [
     {

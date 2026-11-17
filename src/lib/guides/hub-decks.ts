@@ -54,7 +54,7 @@ export const deckGuide: ServiceGuide = {
       heading: "Humidity, clay footings, and wind.",
       paragraphs: [
         "The air stays humid enough that a deck without airflow grows a film, especially on the north side and under live oaks in The Woodlands, Memorial, and Bellaire. Footings in clay need to be thought about because the soil moves when it swings from drought to a tropical rain. Hurricane season, June 1 through November 30, is when a loose rail or a poorly tied board gets tested. Afternoon storms the rest of the year keep the underside damp.",
-        "We build and rebuild decks from our office at 511 Crestwater Ct, Houston, TX 77082, across Greater Houston including Katy, Sugar Land, Westchase, Alief, and the Energy Corridor. Family-owned since 1993. Call or text (713) 909-0034. A deck estimate is usually scheduled Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has made the deck the way inside the house, that is an emergency call any time, and the tarp or board-up may come first.",
+        "We build and rebuild decks from our office in west Houston (77082), across Greater Houston including Katy, Sugar Land, Westchase, Alief, and the Energy Corridor. Family-owned since 1993. Call or text (713) 909-0034. A deck estimate is usually scheduled Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has made the deck the way inside the house, that is an emergency call any time, and the tarp or board-up may come first.",
       ],
       points: [
         { title: "Siding and slab", body: "The deck should not pour water into the wall or hold it at the foundation. Flashing and slope are part of the design." },

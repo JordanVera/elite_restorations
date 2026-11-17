@@ -74,7 +74,7 @@ export const stormPage = {
         "Elite Restorations does this work for homes, apartment complexes, and commercial buildings. A house in Bellaire and a garden complex in the Energy Corridor need the same order: safety, photos, a cover, drying, then a repair estimate. The access is what changes. Gate codes, roof hatches, and who can authorize drywall belong on the first call. We do not enter an occupied unit without the access you arrange.",
         "For an active storm or water emergency, call " +
           phone +
-          " any time. The office at 511 Crestwater Ct, Houston, TX 77082, is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. Family-owned since 1993. You can text the office number. We are not public adjusters. The commercial page is written for managers and owners. The house pages for tarp, board-up, roofing, and water damage are the trade-by-trade versions.",
+          " any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. Family-owned since 1993. You can text the office number. We are not public adjusters. The commercial page is written for managers and owners. The house pages for tarp, board-up, roofing, and water damage are the trade-by-trade versions.",
       ],
       points: [
         { title: "Top floors", body: "Apartment water shows in the highest ceilings first. We list units. We do not dry a whole building from one stain." },
@@ -86,7 +86,7 @@ export const stormPage = {
       eyebrow: "Claims",
       heading: "Help with the claim, without a promise of payment.",
       paragraphs: [
-        "We help you document hurricane, hail, wind, tornado, and water damage, meet the adjuster on site if you want us there, and write a repair estimate. We stay with the repair and share photos and notes you can pass along. You file the claim. We do not interpret the policy or promise approval. Flooding from rising water is often a different policy from wind. Check yours. Any notice deadline is in the policy, so ask your insurer what it says.",
+        "We help you document hurricane, hail, wind, tornado, and water damage, meet the adjuster on site if you want us there, and write a repair estimate. We stay with the repair and share photos and notes you can pass along. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We do not interpret the policy or promise approval. Flooding from rising water is often a different policy from wind. Check yours. Any notice deadline is in the policy, so ask your insurer what it says.",
         "A tarp, a board-up, water removal, and drying are the steps that limit more damage. Many policies expect you to take those steps. Whether this policy pays for them is your insurer's decision. Keep claim numbers, dates, and names. The insurance claims page, the photo log, and the pages about major Texas insurers show where our help stops. Their logos are not ours, and we are not affiliated with them.",
       ],
       points: [
@@ -121,7 +121,7 @@ export const stormPage = {
     { q: "How do I make a photo log?", a: "Wide shots, close shots, the source, and the belongings, before cleanup. The guide on this site walks through a room-by-room log. It does not create coverage." },
     { q: "What does emergency tarping usually cost?", a: "Many single openings on a walkable roof plan around a few hundred dollars to about $2,000. Steeper or larger openings cost more. That is a range, not a quote, and it is not a new roof." },
     { q: "Do you handle my insurance claim?", a: "We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage and payment." },
-    { q: "Where are you, and when do you answer?", a: "511 Crestwater Ct, Houston, TX 77082. Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
+    { q: "Where are you, and when do you answer?", a: "Our office in west Houston (77082). Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
     { q: "Which neighborhoods do you cover?", a: "Greater Houston, including Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, The Woodlands, Pearland, Clear Lake, and Galveston. The visit is at the property." },
     ...extraStormFaqs,
   ],

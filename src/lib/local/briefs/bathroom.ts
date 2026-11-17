@@ -103,7 +103,7 @@ export const bathroomBrief: Brief = {
     {
       q: 'How do you schedule a bathroom remodel in {name}?',
       answers: [
-        'Call {phone}. We work from 511 Crestwater Ct. {landmark} is about {miles} miles {direction}, in a straight line, by {roads}. The bathroom cost page on this site is a Houston planning range, not a bid for your {name} bath.',
+        'Call {phone}. We work from our office in west Houston (77082). {landmark} is about {miles} miles {direction}, in a straight line, by {roads}. The bathroom cost page on this site is a Houston planning range, not a bid for your {name} bath.',
         'Use the estimate form or call {phone} and name the bath. {name} is scheduled from ZIP 77082. If the shower is leaking now, say that first so we treat the leak before we treat the remodel.',
       ],
     },

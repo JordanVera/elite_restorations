@@ -54,7 +54,7 @@ export const tarpBrief: Brief = {
       title: 'Photos before the cover',
       bodies: [
         'In {name} we photograph the opening before the tarp hides it. Those photos are your record.',
-        'A {name} claim, if you file one, is decided by your insurer. The photos are not a coverage decision.',
+        'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage in {name}. The photos are not a coverage decision.',
       ],
     },
     {
@@ -104,7 +104,7 @@ export const tarpBrief: Brief = {
     {
       q: 'How fast can you reach {name}?',
       answers: [
-        'Call {phone}. We dispatch from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, and the drive follows {roads}. Traffic and the weather decide the arrival. Your arrival time is a window. We will tell you whether we can be on that roof safely.',
+        'Call {phone}. We dispatch from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, and the drive follows {roads}. Traffic and the weather decide the arrival. Your arrival time is a window. We will tell you whether we can be on that roof safely.',
         '{name} is on the emergency list from the 77082 office. Closer roofs can be the same day when the sky allows. Farther ones, including the coast, are a longer drive. Call and describe the opening. If you cannot call, the emergency form reaches the same team.',
       ],
     },
@@ -149,7 +149,7 @@ export const sidingBrief: Brief = {
   craft: [
     'In {name} we say when a section will blend and when the front wall wants a full replacement. The match is to the boards now, after years of sun.',
     'Corners, window trim, and soffits in {name} are part of the wall. A wall of new boards with the old trim left ragged does not look finished, and we do not leave it that way.',
-    'Storm pieces in {name} are photographed. The repair is the wall. The claim, if you file one, is your insurer’s decision.',
+    'Storm pieces in {name} are photographed. The repair is the wall. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
   ],
   sequence: [
     'Here is the order we work in: look at the wall up close, decide repair or replacement, confirm color rules, then install with the trim detailed. Paint or the factory finish is part of that plan, not a later guess.',
@@ -214,7 +214,7 @@ export const sidingBrief: Brief = {
     {
       q: 'How do you schedule siding work in {name}?',
       answers: [
-        'Call {phone}. {name} is scheduled from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if you want a match or a new front.',
+        'Call {phone}. {name} is scheduled from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if you want a match or a new front.',
         'Call {phone} for a look at the wall. The {name} visit decides repair or replacement and whether a review has to happen before the order.',
       ],
     },

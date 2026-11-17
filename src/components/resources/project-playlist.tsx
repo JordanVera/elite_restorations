@@ -164,7 +164,7 @@ export function ProjectPlaylist({
             </span>
             <Button asChild variant="accent">
               <Link href={estimateHref}>
-                Get a free estimate
+                Request an estimate
                 <ArrowRight className="arrow" aria-hidden />
               </Link>
             </Button>

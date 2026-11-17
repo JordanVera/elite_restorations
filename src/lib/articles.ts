@@ -179,7 +179,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'If the water came from a sudden break or a storm, call your insurer and a restoration crew the same day. The longer drywall, insulation, and wood stay wet, the more of the room has to come out.',
+            text: 'If the water came from a sudden break or a storm, call (713) 909-0034 the same day. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The longer drywall, insulation, and wood stay wet, the more of the room has to come out.',
           },
         ],
       },
@@ -547,7 +547,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Your insurer decides what the policy covers. The photos are for your records and for whoever you ask to dry the house. If you want a room-by-room packet you can fill out yourself, the insurance photo log on this site is free to use.',
+            text: 'Your insurer decides what the policy covers. The photos are for your records and for whoever you ask to dry the house. If you want a room-by-room packet you can fill out yourself, the insurance photo log on this site is there when you want a room-by-room record.',
           },
           {
             type: 'links',
@@ -597,7 +597,7 @@ export const articles: Article[] = [
     crumb: 'Claim checklist',
     lines: ['The claim,', 'in order.'],
     description:
-      'A Texas homeowner checklist after water damage: document the loss, call your insurer, limit further damage, and meet the adjuster.',
+      'A Texas homeowner checklist after water damage: document the loss, limit further damage, and have your contractor meet the adjuster.',
     lede: 'A claim is a conversation with your insurer about your policy. The useful part, on the day of the loss, is a clear record and a dry house. Those are separate jobs.',
     image: '/images/services/water-damage-restoration.jpg',
     service: 'insurance-claims',

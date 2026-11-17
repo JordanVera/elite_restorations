@@ -55,7 +55,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "What temporary protection includes.",
       paragraphs: [
         "We measure the opening, photograph it, and fasten a rigid cover to framing that can hold it. Windows, doors, and broken wall sections get a cover that sheds water away from the interior. On a house the board may sit until the glass is available. On an apartment or a storefront we note the unit so the photos match the opening.",
-        "If we cannot reach the building safely, we wait. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer any time. The office at 511 Crestwater Ct is open Monday through Saturday, 8:00 AM to 6:00 PM. Use the form, and we'll call you back as soon as we can.",
+        "If we cannot reach the building safely, we wait. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. Use the form, and we'll call you back as soon as we can.",
       ],
       points: [
         {
@@ -77,7 +77,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "What changes the price of a board-up.",
       paragraphs: [
         "There is no single Houston board-up price. Height, the number of openings, whether the frame is still square, after-dark access, and how much glass has to be cleared all move the number. As a planning range, not a quote, a ground-floor window or door on a house we can reach safely often falls around a few hundred dollars to about $1,500. A second story, a bank of storefront glass, or several apartment units is more. That range is not a promise and it is not the cost of the replacement glass.",
-        "The permanent window, door, or wall is separate work. So is drying, if water is already in the floor or the insulation. We keep those out of the board-up number so the first call stays honest. If you are filing a claim, some policies pay for reasonable steps that limit further damage. Some pay less than people hope. Your insurer decides that part. When it is safe to do the work, we secure a building that is still open.",
+        "The permanent window, door, or wall is separate work. So is drying, if water is already in the floor or the insulation. We keep those out of the board-up number so the first call stays honest. Some policies pay for reasonable steps that limit further damage. Some pay less than people hope. Your insurer decides that part. When it is safe to do the work, we secure a building that is still open.",
       ],
       points: [
         {
@@ -112,7 +112,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
         },
         {
           title: "Family company",
-          body: "Elite Restorations is family-owned in Houston since 1993. The office is 511 Crestwater Ct, Houston, TX 77082. That is the fact we stand on. You hire us directly, and your insurer decides the claim.",
+          body: "Elite Restorations is family-owned in Houston since 1993. Visits are scheduled from our office in west Houston (77082). That is the fact we stand on. You hire us directly, and your insurer decides the claim.",
         },
       ],
     },

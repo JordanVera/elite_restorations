@@ -103,7 +103,7 @@ export const woodBrief: Brief = {
     {
       q: 'How do you schedule wood flooring in {name}?',
       answers: [
-        'Call {phone}. {name} is booked from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if you want to save the existing floor. We inspect before we quote a sanding.',
+        'Call {phone}. {name} is booked from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Tell us if you want to save the existing floor. We inspect before we quote a sanding.',
         'Call {phone} or use the estimate form. The {name} visit checks thickness, flatness, and moisture. A color is chosen after that, not before.',
       ],
     },
@@ -213,7 +213,7 @@ export const tileFloorBrief: Brief = {
     {
       q: 'How do you schedule tile flooring in {name}?',
       answers: [
-        'Call {phone}. We schedule {name} from 511 Crestwater Ct. {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether the job is a bath, a kitchen, or a living area. Those are different methods.',
+        'Call {phone}. We schedule {name} from our office in west Houston (77082). {landmark} is about {miles} miles {direction} in a straight line, by {roads}. Say whether the job is a bath, a kitchen, or a living area. Those are different methods.',
         'Call {phone} with the room list. The {name} visit checks flatness, doors, and whether a shower is part of the work. The bathroom cost page is a planning range for whole baths, not a per-foot tile price.',
       ],
     },

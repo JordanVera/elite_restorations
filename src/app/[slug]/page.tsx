@@ -264,7 +264,7 @@ export default async function ServicePage({
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground">
           {service.emergency
             ? `Family-owned in Houston since ${site.founded}. If water is still coming in, call ${site.phone.display}.`
-            : `Family-owned in Houston since ${site.founded}. Call ${site.phone.display} for a free estimate.`}
+            : `Family-owned in Houston since ${site.founded}. Call ${site.phone.display} to schedule an estimate.`}
         </p>
         {service.emergency && (
           <Reveal
@@ -630,7 +630,7 @@ export default async function ServicePage({
         body={
           service.emergency
             ? `Serving Houston since ${site.founded}. Call ${site.phone.display} if water is coming in or the roof is open.`
-            : `Serving Houston since ${site.founded}. Call ${site.phone.display} for a free estimate.`
+            : `Serving Houston since ${site.founded}. Call ${site.phone.display} to schedule an estimate.`
         }
         service={service.slug}
         emergency={service.emergency}

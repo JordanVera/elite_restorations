@@ -203,7 +203,7 @@ export function NeighborhoodPageView({
         title={page.ctaTitle}
         body={page.ctaBody}
         href={es ? '/es/contact' : '/contact'}
-        buttonLabel={es ? 'Pedir un estimado' : 'Request a free estimate'}
+        buttonLabel={es ? 'Pedir un estimado' : 'Request an estimate'}
         textLabel={es ? 'Envíanos un texto' : 'Text us'}
       />
 
