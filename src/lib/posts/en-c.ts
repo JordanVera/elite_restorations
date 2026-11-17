@@ -731,4 +731,137 @@ export const houstonPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kitchen-backsplash-cinco-ranch-katy',
+    title: 'Choosing a kitchen backsplash in Cinco Ranch and Katy',
+    metaTitle: 'Katy and Cinco Ranch Backsplash',
+    crumb: 'Katy backsplash',
+    lines: ['A wall you wipe', 'every night.'],
+    description:
+      'How to choose a kitchen backsplash in Cinco Ranch and Katy: tile, grout, stone, outlets, and when it should follow new counters.',
+    lede: 'Many kitchens in Cinco Ranch and the newer parts of Katy still have the short tile the builder left between the counter and the upper cabinets. The kitchen is open to the family room, so that wall is what you see from the sofa. Choosing the replacement means the tile, the grout, the outlets, and whether the counters stay.',
+    image: '/images/services/backsplash.webp',
+    service: 'backsplash',
+    ctaTitle: 'Want the wall looked at before you order tile?',
+    ctaBody:
+      'Call (713) 909-0034 to schedule an estimate. We look at the counters, the outlets, and the wall behind the range. Family-owned, serving Houston since 1993.',
+    related: ['quartz-vs-granite-countertops-houston', 'houston-kitchen-remodel-ideas'],
+    faqs: [
+      {
+        q: 'Should the backsplash go in before new counters?',
+        a: 'No, when both are in the plan. The stone is fit to the wall, and tile set first leaves a gap the counter cannot close. If the counters are already in, we protect the stone and set the tile to it.',
+      },
+      {
+        q: 'Can the backsplash match the quartz or granite?',
+        a: 'When the slab is long enough, the same stone can run up the wall. Clients pick it at the Expo Stone yard at 1055 W Sam Houston Pkwy N in Houston. We do not bring countertop samples to the house. Tile is a separate layout, set after the counter.',
+      },
+      {
+        q: 'What grout holds up behind a range in Houston humidity?',
+        a: 'One you can clean. Steam and sauce will reach it. Light grout shows oil, and dark grout shows the film wiping leaves. Stone and some cement grouts need a sealer, and renewing it is maintenance. We choose the color in the kitchen, next to the counter.',
+      },
+      {
+        q: 'How long does a backsplash take in a Cinco Ranch or Katy kitchen?',
+        a: 'A straight field is often a day or two of setting once the tile is on site, then grout that needs time before you splash it. Glass, a pattern, stone, or a full-height slab takes longer. New counters add the template and the shop before install day. We do not lock the days until we see the kitchen.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'What those kitchens already look like',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A Cinco Ranch house from the 1990s or the 2000s is usually two stories, with the kitchen open to the family room across the island. The builder backsplash is often a narrow band or a field of small ceramic squares. Katy is more than one kind of house. Older streets near downtown Katy are different. The master-planned sections along the Grand Parkway, toward Cinco Ranch, Fulshear, and Richmond, are the long open walls. Cypress has the same newer kitchen farther north along US 290. In those rooms the backsplash faces the sofa.',
+          },
+          {
+            type: 'p',
+            text: 'An association in Cinco Ranch usually reviews roof color, paint, fences, and sometimes a patio. A backsplash inside the house is almost always yours to choose. Planned sections in Katy work the same way. A permit shows up when plumbing or wiring moves, and the address picks the desk. Cinco Ranch is not one city hall. Tile on a sound wall, with the outlets left in place, usually is not that permit.',
+          },
+        ],
+      },
+      {
+        heading: 'Ceramic, porcelain, stone, glass, or a slab',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Ceramic is what a lot of these kitchens already have. Small pieces forgive a slightly wavy wall, and gloss shows grease. Porcelain is fired denser, which matters where steam from a boiling pot and a nightly wipe are normal from a humid May into October. Large porcelain shows every dip in the drywall. These 2000s walls are straighter than old plaster inside the Loop, and they are still not perfect. We flatten the wall, or we pick a size that hides the wave.',
+          },
+          {
+            type: 'p',
+            text: 'Marble and a tumbled stone mosaic will mark, and they need a sealer you renew. Lemon and tomato etch marble. If the first sauce splash would bother you, say that before the stone is ordered. Glass reflects the light under the cabinets and shows the thinset color when that color is wrong. It also shows every cut, including the one at a square outlet box.',
+          },
+          {
+            type: 'p',
+            text: 'A full-height slab is not a tile job. When the counter slab is long enough, a piece of the same quartz or granite can run up the wall so one vein continues. It is cut with the counters. Outlets are marked before the stone is cut, the same way faucet holes are marked, because a slab cannot be nibbled around a box the way a small ceramic tile can. If the slab at the yard is too short for that, we say so.',
+          },
+        ],
+      },
+      {
+        heading: 'Grout, sealer, and steam at the range',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The range throws steam at a wall that gets wiped after dinner. Houston humidity does not dry that splash quickly. Pick a grout you can clean. Light grout shows oil. Dark grout shows the film wiping leaves behind. We look at the color in the kitchen, next to the counter. Stone and some cement grouts need a sealer. Renewing it is maintenance. That does not mean sauce will never mark the joint, and it is not a reason to leave water standing on marble.',
+          },
+          {
+            type: 'p',
+            text: 'If the hood is changing, decide that before the first piece, so the tile can finish to a clean line. Steam with nowhere to go will mark any grout. A new backsplash does not fix a hood that does not vent.',
+          },
+        ],
+      },
+      {
+        heading: 'Pairing the wall with quartz or granite',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Quartz is the usual switch on newer Katy and Cinco Ranch islands when builder granite feels dated. Lemon and tomato do not etch it, and a hot pan still does not belong on it. Granite moves in color and needs sealer, and a spill that sits can mark it. A busy mosaic on busy granite reads as two patterns from the family room. A quieter porcelain field lets the counter be the stone. The same slab, cut tall, carries one vein up the wall.',
+          },
+          {
+            type: 'p',
+            text: 'Clients pick that slab at the Expo Stone yard at 1055 W Sam Houston Pkwy N in Houston. Elite installs the counters. We do not bring countertop samples to the house. The slab in the yard is the one to judge, because the yard changes. We buy tile at Floor & Decor, and you can buy it there for us to install. We check the dye lot and the extra pieces for outlet cuts before the day is set.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/backsplash', label: 'Backsplash installation' },
+              { href: '/countertops', label: 'Countertops' },
+              { href: '/kitchen-remodeling', label: 'Kitchen remodeling' },
+              { href: '/quartz-vs-granite-countertops-houston', label: 'Quartz or granite in a Houston kitchen' },
+              { href: '/expo-stone-countertops-houston', label: 'Expo Stone countertops' },
+              { href: '/floor-and-decor-flooring-installation-houston', label: 'Tile from Floor & Decor' },
+              { href: '/backsplash-cinco-ranch-tx', label: 'Backsplash in Cinco Ranch' },
+              { href: '/backsplash-katy-tx', label: 'Backsplash in Katy' },
+              { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
+              { href: '/kitchen-remodeling-cinco-ranch-tx', label: 'Kitchen remodeling in Cinco Ranch' },
+              { href: '/countertops-katy-tx', label: 'Countertops in Katy' },
+              { href: '/countertops-cinco-ranch-tx', label: 'Countertops in Cinco Ranch' },
+              { href: '/fulshear-tx', label: 'Newer kitchens in Fulshear' },
+              { href: '/cypress-tx', label: 'Open kitchens in Cypress' },
+              { href: '/contact', label: 'Contact' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Outlets, light, and the days on site',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The open wall is long enough for a pattern to repeat, so outlets have to land in that repeat. Plates come off and the tile is cut to the box. Moving an outlet that sits on a vein is electrical work and may need a permit. We say which case it is before we cut. A light strip added after the tile means a hole in a finished wall, or a cord you see from the sofa. Set the switch while the wall is open, and keep the center of the layout on the range, the hood, or the window.',
+          },
+          {
+            type: 'p',
+            text: 'On a remodel the backsplash waits until the counters are in. Tile set first leaves a gap the stone cannot close. If the counters stay, we protect them and take off the builder tile. The wall behind a 2000s backsplash is usually sound drywall. A soft spot, a stain from a slow faucet leak, or tile that sounds hollow means we look before covering it. A wet wall is dried first.',
+          },
+          {
+            type: 'p',
+            text: 'A straight ceramic or porcelain field is often a day or two of setting once the tile is on site, then grout, then time before you splash the wall. Glass, a pattern, stone, or a full-height slab takes longer, and we do not lock the days until we see the kitchen. The range wall stays clear until the grout has had its time. You can usually use the sink. When the counters are replaced too, level the cabinets, choose the slab, template, let the shop cut, and set the stone before the tile. A straight kitchen is often one install day once the pieces are cut. The wait is the template and the fabrication. A full-height stone backsplash is part of that stone work.',
+          },
+          {
+            type: 'p',
+            text: 'Paint before the stone arrives, and we protect the paint. Paint after, and we cover the new stone and tile. Moving a sink is separate. Newer Cinco Ranch and Katy slabs are often post-tension, with cables in the concrete. We find those cables before anyone talks about cutting. The wall tile does not require that cut. If the granite is etched and the tile is tired, do both in one project. Fulshear, newer streets in Richmond, and much of the Energy Corridor share this open kitchen. An older Cypress ranch is a shorter wall, and we measure the run in front of us.',
+          },
+        ],
+      },
+    ],
+  },
 ];

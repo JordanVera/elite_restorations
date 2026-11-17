@@ -4,6 +4,7 @@ import { esPostsA } from '@/lib/es/posts-a';
 import { esPostsB } from '@/lib/es/posts-b';
 import { esPostsC } from '@/lib/es/posts-c';
 import { houstonPostSlugs, neighborhoodSlugs } from '@/lib/locale-paths';
+import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { spanishServiceSlugs } from '@/lib/i18n';
 import { titleFits } from '@/lib/seo';
 import { wordCount } from '@/lib/words';
@@ -28,6 +29,8 @@ const extraHrefs = new Set([
   '/decks',
   '/patios',
   '/gazebos',
+  '/es/expo-stone-countertops-houston',
+  '/es/floor-and-decor-flooring-installation-houston',
 ]);
 
 function withPath(article: Article): EsPost {
@@ -59,6 +62,7 @@ function postWords(article: Article) {
 function linkOk(href: string) {
   if (extraHrefs.has(href)) return true;
   if (href.startsWith('/es/blog/')) return postSlugs.has(href.slice('/es/blog/'.length));
+  if (parseLocalLandingSlug(href.replace(/^\//, ''))) return true;
   if (!href.startsWith('/es/')) return href === '/emergency-board-up';
   const slug = href.slice(4);
   return spanishServices.has(slug) || neighborhoods.has(slug);

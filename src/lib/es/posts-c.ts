@@ -729,4 +729,142 @@ export const esPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kitchen-backsplash-cinco-ranch-katy',
+    title: 'Cómo elegir el backsplash de la cocina en Cinco Ranch y Katy',
+    metaTitle: 'Backsplash en Cinco Ranch y Katy',
+    crumb: 'Backsplash en Katy',
+    lines: ['La pared que se limpia', 'cada noche.'],
+    description:
+      'Cómo elegir el backsplash en Cinco Ranch y Katy: loseta, junta, piedra, contactos y cuándo hacerlo con cubiertas nuevas.',
+    lede: 'En Cinco Ranch y en las partes nuevas de Katy, muchas cocinas todavía tienen la loseta corta que dejó el constructor entre la cubierta y los gabinetes de arriba. La cocina está abierta a la sala, así que esa pared se ve desde el sofá. Elegir el reemplazo es la loseta, la junta, los contactos y si las cubiertas se quedan.',
+    image: '/images/services/backsplash.webp',
+    service: 'backsplash',
+    ctaTitle: '¿Quiere ver la pared antes de pedir la loseta?',
+    ctaBody: `Llame al ${phone} para pedir un estimado. Vemos las cubiertas, los contactos y la pared detrás de la estufa. Empresa familiar en Houston desde 1993.`,
+    related: ['quartz-vs-granite-countertops-houston', 'houston-kitchen-remodel-ideas'],
+    faqs: [
+      {
+        q: '¿El backsplash va antes que las cubiertas nuevas?',
+        a: 'No, cuando las dos van en el mismo plan. La piedra se ajusta a la pared, y si la loseta va primero queda un hueco que la cubierta no cierra. Si las cubiertas ya están, protegemos la piedra y asentamos la loseta contra ella.',
+      },
+      {
+        q: '¿El backsplash puede ser la misma piedra que la cubierta?',
+        a: 'Cuando la losa alcanza, la misma piedra puede subir por la pared. Los clientes la eligen en el patio de Expo Stone, en 1055 W Sam Houston Pkwy N, en Houston. No llevamos muestras de cubiertas a la casa. La loseta es otro tendido, y va después de la cubierta.',
+      },
+      {
+        q: '¿Qué junta aguanta el vapor detrás de la estufa?',
+        a: 'Una que se pueda limpiar. El vapor y la salsa van a llegar. La junta clara enseña el aceite, y la oscura enseña la película que deja el trapo. La piedra y algunas juntas de cemento piden sellador, y renovarlo es mantenimiento. El color se elige en la cocina, junto a la cubierta.',
+      },
+      {
+        q: '¿Cuánto tarda un backsplash en Cinco Ranch o en Katy?',
+        a: 'Un paño recto suele ser uno o dos días de asentado cuando la loseta ya está, y luego la junta necesita tiempo antes de salpicarla. El vidrio, un dibujo, la piedra o una losa alta tardan más. Si también cambian las cubiertas, antes está la plantilla y el taller. No fijamos los días hasta ver la cocina.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Cómo son esas cocinas hoy',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Una casa de Cinco Ranch de los noventa o de los dos mil suele ser de dos plantas, con la cocina abierta a la sala. El backsplash del constructor suele ser una franja angosta o cuadros chicos de cerámica. Las calles viejas del centro de Katy son otra casa. Las secciones del Grand Parkway, hacia Cinco Ranch, Fulshear y Richmond, tienen la pared larga. Cypress repite esa cocina nueva más al norte, por la US 290. El backsplash da hacia el sofá.',
+          },
+          {
+            type: 'p',
+            text: 'Una asociación en Cinco Ranch suele revisar el color del techo, la pintura, las bardas y a veces un patio. El backsplash de adentro casi siempre lo elige usted. Las secciones planeadas de Katy funcionan igual. El permiso aparece cuando se mueve la plomería o el cable, y la dirección elige el mostrador. Cinco Ranch no es un solo ayuntamiento. Loseta sobre una pared sana, con los contactos donde ya están, casi nunca es ese permiso.',
+          },
+        ],
+      },
+      {
+        heading: 'Cerámica, porcelanato, piedra, vidrio o una losa',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La cerámica es lo que ya tienen muchas de estas cocinas. Las piezas chicas perdonan una pared un poco ondulada, y el brillo enseña la grasa. El porcelanato se cuece más denso, y eso importa donde el vapor de una olla y el trapo de cada noche son normales, de un mayo húmedo a octubre. El porcelanato grande enseña cada hundimiento del drywall. Esas paredes de los dos mil están más derechas que el yeso viejo dentro del Loop, y no son perfectas. Emparejamos la pared, o elegimos un tamaño que esconda la onda.',
+          },
+          {
+            type: 'p',
+            text: 'El mármol y un mosaico de piedra se marcan, y piden un sellador que se renueve. El limón y el tomate marcan el mármol. Si la primera salpicadura de salsa le va a molestar, dígalo antes de pedir la piedra. El vidrio refleja la luz bajo los gabinetes y enseña el color del adhesivo cuando ese color está mal. También enseña cada corte, incluido el de una caja de contacto cuadrada.',
+          },
+          {
+            type: 'p',
+            text: 'Una losa de piso a techo no es un trabajo de loseta. Cuando la losa de la cubierta alcanza, un tramo del mismo cuarzo o granito puede subir por la pared para que una veta siga. Se corta con las cubiertas. Los contactos se marcan antes de cortar la piedra, igual que los hoyos de la llave, porque una losa no se recorta alrededor de una caja como un cuadrito de cerámica. Si la losa del patio no alcanza, lo decimos.',
+          },
+        ],
+      },
+      {
+        heading: 'La junta, el sellador y el vapor de la estufa',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La estufa le echa vapor a una pared que se limpia después de cenar. La humedad de Houston no seca esa salpicadura pronto. Elija una junta que se pueda limpiar. La clara enseña el aceite. La oscura enseña la película que deja el trapo. Vemos el color en la cocina, junto a la cubierta. La piedra y algunas juntas de cemento piden sellador. Renovarlo es mantenimiento. Eso no quiere decir que la salsa nunca va a marcar la junta, y no es motivo para dejar agua sobre el mármol.',
+          },
+          {
+            type: 'p',
+            text: 'Si va a cambiar la campana, decídalo antes de la primera pieza, para que la loseta termine en una línea limpia. El vapor que no tiene salida marca cualquier junta. Un backsplash nuevo no arregla una campana que no ventila.',
+          },
+        ],
+      },
+      {
+        heading: 'Juntar la pared con cuarzo o granito',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El cuarzo es el cambio habitual en las islas nuevas de Katy y de Cinco Ranch cuando el granito del constructor se siente viejo. El limón y el tomate no lo marcan, y una olla caliente tampoco va encima. El granito cambia de color y pide sellador, y un derrame que se queda lo puede marcar. Un mosaico movido sobre un granito movido se lee como dos dibujos desde la sala. Un porcelanato más quieto deja que la cubierta sea la piedra. La misma losa, cortada alta, sube una veta por la pared.',
+          },
+          {
+            type: 'p',
+            text: 'Los clientes eligen esa losa en el patio de Expo Stone, en 1055 W Sam Houston Pkwy N, en Houston. Elite instala las cubiertas. No llevamos muestras de cubiertas a la casa. Hay que juzgar la losa en el patio, porque el patio cambia. Compramos loseta en Floor & Decor, y usted puede comprarla ahí para que nosotros la instalemos. Revisamos el lote de color y las piezas de sobra para los cortes de los contactos antes de fijar el día.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/es/backsplash', label: 'Backsplash' },
+              { href: '/es/countertops', label: 'Cubiertas' },
+              { href: '/es/kitchen-remodeling', label: 'Remodelación de cocinas' },
+              {
+                href: '/es/blog/quartz-vs-granite-countertops-houston',
+                label: 'Cuarzo o granito en una cocina de Houston',
+              },
+              { href: '/es/expo-stone-countertops-houston', label: 'Cubiertas Expo Stone' },
+              {
+                href: '/es/floor-and-decor-flooring-installation-houston',
+                label: 'Loseta de Floor & Decor',
+              },
+              { href: '/backsplash-cinco-ranch-tx', label: 'Backsplash en Cinco Ranch' },
+              { href: '/backsplash-katy-tx', label: 'Backsplash en Katy' },
+              { href: '/kitchen-remodeling-katy-tx', label: 'Cocinas en Katy' },
+              { href: '/kitchen-remodeling-cinco-ranch-tx', label: 'Cocinas en Cinco Ranch' },
+              { href: '/countertops-katy-tx', label: 'Cubiertas en Katy' },
+              { href: '/countertops-cinco-ranch-tx', label: 'Cubiertas en Cinco Ranch' },
+              { href: '/es/fulshear-tx', label: 'Cocinas nuevas en Fulshear' },
+              { href: '/es/cypress-tx', label: 'Cocinas abiertas en Cypress' },
+              { href: '/es/contact', label: 'Contacto' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Contactos, luz y los días en la casa',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La pared abierta da para que un dibujo se repita, y los contactos tienen que caer ahí. Las placas se quitan y la loseta se corta a la caja. Mover un contacto que cae sobre una veta es trabajo eléctrico y puede pedir permiso. Lo decimos antes de cortar. Una tira de luz después de la loseta deja un hoyo, o un cable a la vista del sofá. Defina el interruptor con la pared abierta, y deje el centro en la estufa, la campana o la ventana.',
+          },
+          {
+            type: 'p',
+            text: 'En una remodelación el backsplash espera a las cubiertas. Si la loseta va primero, queda un hueco. Si las cubiertas se quedan, las protegemos y quitamos la loseta vieja. Un punto blando, una mancha o una loseta hueca se ve antes de tapar. Si la pared está mojada, se seca primero. Si hay seguro de por medio, Elite trabaja con su aseguradora como su contratista y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide lo que paga la póliza.',
+          },
+          {
+            type: 'p',
+            text: 'Un paño recto de cerámica o porcelanato suele ser uno o dos días de asentado cuando la loseta ya está, y la junta necesita tiempo antes de salpicarla. El vidrio, un dibujo, la piedra o una losa alta tardan más. No fijamos los días hasta ver la cocina. Si también se cambian las cubiertas, se nivelan los gabinetes, se elige la losa, hacemos la plantilla, el taller corta y se pone la piedra antes de la loseta. La espera es la plantilla y el corte. El backsplash de la misma losa es parte de ese trabajo de piedra.',
+          },
+          {
+            type: 'p',
+            text: 'Si se pinta antes de la piedra, protegemos la pintura. Si se pinta después, cubrimos la piedra y la loseta. Mover el fregadero es aparte. Las losas nuevas de Cinco Ranch y de Katy suelen ser postensadas, y encontramos los cables antes de hablar de cortar. La loseta de la pared no pide ese corte. Si el granito está marcado y la loseta cansada, haga los dos juntos. Fulshear, Richmond y buena parte del Energy Corridor comparten esta cocina abierta. Un rancho viejo de Cypress es una pared más corta.',
+          },
+        ],
+      },
+    ],
+  },
 ];

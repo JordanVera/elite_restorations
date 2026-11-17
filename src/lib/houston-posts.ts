@@ -2,6 +2,7 @@ import { houstonPostsA } from '@/lib/posts/en-a';
 import { houstonPostsB } from '@/lib/posts/en-b';
 import { houstonPostsC } from '@/lib/posts/en-c';
 import { assertCopyAllowed } from '@/lib/copy-guards';
+import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { neighborhoodSlugs } from '@/lib/locale-paths';
 import { getNeighborhood } from '@/lib/neighborhoods';
 import { titleFits } from '@/lib/seo';
@@ -28,6 +29,8 @@ const staticHrefs = new Set([
   '/what-to-do-after-water-damage-houston',
   '/storm-and-hail-roof-repair-houston',
   '/frozen-and-burst-pipes-in-houston',
+  '/expo-stone-countertops-houston',
+  '/floor-and-decor-flooring-installation-houston',
 ]);
 
 const postSlugs = new Set(houstonPosts.map((article) => article.slug));
@@ -51,6 +54,7 @@ function linkOk(href: string) {
   const slug = href.replace(/^\//, '');
   if (getService(slug) || getNeighborhood(slug) || postSlugs.has(slug)) return true;
   if ((neighborhoodSlugs as readonly string[]).includes(slug)) return true;
+  if (parseLocalLandingSlug(slug)) return true;
   return false;
 }
 
