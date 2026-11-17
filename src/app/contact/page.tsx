@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Clock, Mail, MapPin } from 'lucide-react';
 
+import { FaqSection } from '@/components/faq-section';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
+import { homeownerEn } from '@/lib/faqs/homeowner';
 import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -135,6 +137,11 @@ export default async function ContactPage({
           </Reveal>
         </div>
       </section>
+      <FaqSection
+        id="contact-faq-heading"
+        title="Good to know."
+        items={[homeownerEn.estimate, homeownerEn.spanish, homeownerEn.areas]}
+      />
     </>
   );
 }

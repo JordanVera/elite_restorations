@@ -34,7 +34,7 @@ export function LanguageSwitch({
         href={en}
         hrefLang="en-US"
         lang="en"
-        aria-label="English"
+        aria-label={enText === "EN" ? "EN, English" : "English"}
         aria-current={current === "en" ? "page" : undefined}
         className={cn(
           "inline-flex min-h-11 items-center px-1.5",
@@ -52,7 +52,7 @@ export function LanguageSwitch({
         href={es}
         hrefLang="es-US"
         lang="es"
-        aria-label="Español"
+        aria-label={esText === "ES" ? "ES, Español" : "Español"}
         aria-current={current === "es" ? "page" : undefined}
         className={cn(
           "inline-flex min-h-11 items-center px-1.5",

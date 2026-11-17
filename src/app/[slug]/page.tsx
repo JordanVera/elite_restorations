@@ -23,6 +23,7 @@ import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
+import { readingForService } from '@/lib/related-reading';
 import { getNeighborhood, neighborhoods } from '@/lib/neighborhoods';
 import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
@@ -240,6 +241,7 @@ export default async function ServicePage({
   });
   const costLinks = (service.links ?? []).filter((link) => link.href.includes('cost'));
   const related = service.related.map((s) => getService(s)).filter((s) => !!s);
+  const reading = readingForService(service.slug);
   const { localPhoto, masonry } = photographsFor(service);
   const path = servicePath(service.slug);
 
@@ -553,6 +555,35 @@ export default async function ServicePage({
             <div className="lg:col-span-8">
               <Faq items={faqs} />
             </div>
+          </div>
+        </section>
+      )}
+
+      {reading.length > 0 && (
+        <section
+          aria-labelledby="reading-heading"
+          className="border-t border-border py-16 md:py-20"
+        >
+          <div className="gutter mx-auto max-w-[120rem]">
+            <h2 id="reading-heading" className="eyebrow text-muted-foreground">
+              From the blog
+            </h2>
+            <ul className="mt-6 flex flex-col gap-4">
+              {reading.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="group inline-flex items-center gap-2 text-lg transition-colors hover:text-accent-ink"
+                  >
+                    {item.label}
+                    <ArrowUpRight
+                      aria-hidden
+                      className="size-4 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

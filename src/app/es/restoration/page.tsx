@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Faq } from "@/components/faq";
 import { esRestorationFaqs } from "@/lib/faqs/es";
+import { homeownerEs, homeownerEsList } from "@/lib/faqs/homeowner";
 import { PageHero } from "@/components/page-hero";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { esNeighborhoods } from "@/lib/es/neighborhoods";
@@ -66,6 +67,7 @@ export default function SpanishRestorationPage() {
           <Faq
             inLanguage="es"
             items={[
+              ...homeownerEsList.filter((item) => item.q !== homeownerEs.waterSpeed.q),
               {
                 q: "¿Qué hace una empresa de restauración en Houston?",
                 a: "Daño de agua, tormenta, viento, granizo, y la reparación que sigue. También ponemos tablas en ventanas y una lona cuando el edificio está abierto. La aseguradora decide la cobertura.",

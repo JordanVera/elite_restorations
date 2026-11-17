@@ -6,6 +6,7 @@ import { areaPages } from '@/lib/area-pages';
 import { neighborhoods } from '@/lib/neighborhoods';
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
+import { homeownerEn } from '@/lib/faqs/homeowner';
 import { restorationFaqs as extraRestorationFaqs } from '@/lib/faqs/pages';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
@@ -85,6 +86,10 @@ const reads = [
 ] as const;
 
 const faqs = [
+  homeownerEn.insurance,
+  homeownerEn.stormRoofs,
+  homeownerEn.tarp,
+  homeownerEn.areas,
   {
     q: 'What does a Houston restoration company handle?',
     a: 'Water damage, damage from storms, wind, and hail, fire and smoke cleanup, and the repairs that follow. A remodel is a separate decision, after the house is dry and safe.',

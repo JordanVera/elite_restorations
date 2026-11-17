@@ -283,8 +283,8 @@ export const stormFaqs: Faq[] = [
 
 export const restorationFaqs: Faq[] = [
   {
-    q: "How fast can you come out in Houston?",
-    a: `For water that is still moving, or a building that is open to the weather, call ${phone} any time. We tell you the next safe step. We do not promise a drive time, and we do not climb in lightning. After a citywide storm the line is longer. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM.`,
+    q: "How fast can you respond to water damage in Houston?",
+    a: `Call ${phone} if water is still moving, or the building is open to the weather. We respond quickly, often the same day when crews are available. We tell you the next safe step. We do not promise a drive time, and we do not climb in lightning. After a citywide storm the line is longer. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM.`,
   },
   {
     q: "Do I need to be home?",

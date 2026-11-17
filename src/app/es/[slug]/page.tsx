@@ -7,6 +7,7 @@ import { WaterCauseSections } from "@/components/water-cause-sections";
 import { brandLinksForService } from "@/lib/brand-nav";
 import { esNeighborhoods, getEsNeighborhood } from "@/lib/es/neighborhoods";
 import { esHubs, getEsHub } from "@/lib/es/hubs";
+import { readingForService } from "@/lib/related-reading";
 import { getService } from "@/lib/services";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -98,6 +99,7 @@ export default async function SpanishServicePage({
         sections={hub.sections}
         faqs={hub.faqs}
         related={[
+          ...readingForService(slug, "es"),
           ...service.related
             .map((related) => getEsHub(related))
             .filter((item) => item !== undefined)

@@ -5,14 +5,21 @@ import { floorDepth } from '@/lib/service-depth-floors';
 import { interiorDepth } from '@/lib/service-depth-interiors';
 import { recoveryDepth } from '@/lib/service-depth-recovery';
 import type { ServiceDepth } from '@/lib/service-depth-types';
+import { serviceHomeownerFaqs } from '@/lib/faqs/homeowner';
 import { services, type Service } from '@/lib/services';
 
-const bySlug: Record<string, ServiceDepth> = {
-  ...interiorDepth,
-  ...floorDepth,
-  ...exteriorDepth,
-  ...recoveryDepth,
-};
+const bySlug: Record<string, ServiceDepth> = Object.fromEntries(
+  Object.entries({
+    ...interiorDepth,
+    ...floorDepth,
+    ...exteriorDepth,
+    ...recoveryDepth,
+  }).map(([slug, depth]) => {
+    const extra = serviceHomeownerFaqs[slug];
+    if (!extra?.length) return [slug, depth];
+    return [slug, { ...depth, faqs: [...depth.faqs, ...extra] }];
+  }),
+);
 
 export function getServiceDepth(slug: string) {
   return bySlug[slug];

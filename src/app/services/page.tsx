@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
+import { FaqSection } from '@/components/faq-section';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { Photo } from '@/components/photo';
@@ -17,6 +18,7 @@ import {
   services,
   servicesInGroup,
 } from '@/lib/services';
+import { homeownerEnList } from '@/lib/faqs/homeowner';
 import { discoverServicesEn, homeRestorationEn } from '@/lib/seo-sections';
 
 export const metadata: Metadata = pageMetadata({
@@ -180,6 +182,12 @@ export default function ServicesPage() {
         heading={discoverServicesEn.heading}
         intro={discoverServicesEn.intro}
         links={discoverServicesEn.links}
+      />
+
+      <FaqSection
+        id="services-faq-heading"
+        title="Good to know."
+        items={homeownerEnList}
       />
 
       <CtaBand
