@@ -8,8 +8,9 @@ import { ImageReveal, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
 import { Photo } from "@/components/photo";
 import { ProjectGallery, ProjectPhotoButton } from "@/components/project-gallery";
+import { spanishPathFor } from "@/lib/i18n";
 import { getProject, projectSeoName, projects } from "@/lib/projects";
-import { localTitle, pageMetadata } from "@/lib/seo";
+import { languageAlternates, localTitle, pageMetadata } from "@/lib/seo";
 import { getService, servicePath } from "@/lib/services";
 
 type Params = { slug: string };
@@ -22,11 +23,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
+  const path = `/projects/${project.slug}`;
+  const esPath = spanishPathFor(path);
   return pageMetadata({
     title: localTitle(projectSeoName(project.slug) ?? project.title),
     description: `${project.title} in Houston. ${project.tagline}`,
-    path: `/projects/${project.slug}`,
+    path,
     image: project.cover.src,
+    languages: esPath ? languageAlternates(path, esPath) : undefined,
   });
 }
 

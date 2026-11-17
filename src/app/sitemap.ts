@@ -10,6 +10,7 @@ import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
 import { legalEffectiveDate } from '@/lib/legal';
 import { localLandings } from '@/lib/local-landings';
+import { esProjectStories } from '@/lib/es/project-stories';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
 import { insurers } from '@/lib/insurers';
@@ -95,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...waterCauses.map((cause) => entry(cause.path, 0.7, builtAt)),
     ...insurers.map((insurer) => entry(`/insurance-claims/companies/${insurer.slug}`, 0.6, builtAt)),
     ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
+    ...esProjectStories.map((story) => entry(story.path, 0.6, builtAt)),
     ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
     entry('/privacy', 0.3, builtAt),
     entry('/terms', 0.3, builtAt),

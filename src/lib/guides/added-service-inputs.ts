@@ -301,6 +301,7 @@ export const addedServiceInputs = [
     ],
     related: ["patios", "gazebos", "patios-decks", "siding"],
     links: [
+      { href: "/projects/katy-composite-deck", label: "Composite deck in Katy" },
       { href: "/patios", label: "Patios" },
       { href: "/gazebos", label: "Gazebos" },
       { href: "/patios-decks", label: "Patios and decks overview" },
