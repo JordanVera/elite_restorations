@@ -88,6 +88,18 @@ const altOverrides: Record<string, string> = {
     'New tub in a Crosby bathroom with a white marble-look wall surround and matte black shower fixtures',
   'crosby/09-after-bathroom.jpg':
     'Crosby bathroom with a new vanity, a granite top, wood-look flooring, a new tub, and a white marble-look wall surround',
+  'katy-deck/katy-composite-deck-01.jpg':
+    'Open hot tub on a gray composite deck built by Elite Restorations in Katy, TX, with trees beyond a black fence.',
+  'katy-deck/katy-composite-deck-02.jpg':
+    'Finished composite deck and closed hot tub platform with dark fascia and red rock, built by Elite Restorations in Katy, TX.',
+  'katy-deck/katy-composite-deck-03.jpg':
+    'Angled view of an open hot tub on composite deck boards built by Elite Restorations in Katy, TX.',
+  'katy-deck/katy-composite-deck-04.jpg':
+    'Composite deck with built-in steps and an open hot tub, seen from the yard, built by Elite Restorations in Katy, TX.',
+  'katy-deck/katy-composite-deck-05.jpg':
+    'Close-up of the composite deck corner, dark fascia, and built-in steps built by Elite Restorations in Katy, TX.',
+  'katy-deck/katy-composite-deck-06.jpg':
+    'Full-length view of a composite deck and closed hot tub along the back of a house in Katy, TX, built by Elite Restorations.',
 };
 
 const projectSeoNames: Record<string, string> = {
@@ -107,6 +119,7 @@ const projectSeoNames: Record<string, string> = {
   'exteriors-renewed': 'Siding Project',
   'blackhorse-ranch-cypress': 'Cypress Floors & Kitchen',
   'crosby-water-damage': 'Crosby Water Damage Repair',
+  'katy-composite-deck': 'Katy Composite Deck',
 };
 
 export function projectSeoName(slug: string) {
@@ -274,6 +287,15 @@ const cypressJob = gallery('cypress', 'Cypress project', [
   '06-after-kitchen.jpg',
   '07-after-kitchen-counters.jpg',
   '08-after-stairs.jpg',
+]);
+
+const katyDeck = gallery('katy-deck', 'Katy deck', [
+  'katy-composite-deck-01.jpg',
+  'katy-composite-deck-02.jpg',
+  'katy-composite-deck-03.jpg',
+  'katy-composite-deck-04.jpg',
+  'katy-composite-deck-05.jpg',
+  'katy-composite-deck-06.jpg',
 ]);
 
 const crosbyJob = gallery('crosby', 'Crosby project', [
@@ -619,6 +641,31 @@ export const projects: Project[] = [
     ],
     cover: crosbyJob[6],
     gallery: crosbyJob,
+    cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
+    story: true,
+  },
+  {
+    slug: 'katy-composite-deck',
+    title: 'Composite Deck & Hot Tub Platform, Katy, TX',
+    category: 'Roof & exterior',
+    tagline: 'Gray-brown composite deck and hot tub platform, finished October 2024.',
+    summary: [
+      'Elite Restorations built this new gray-brown composite deck in Katy, Texas. It was completed in October 2024.',
+      'The deck forms a low platform along the back of the house, with matching fascia, built-in steps, and a white hot tub at one end.',
+      'Red rock sits at the base, and trees and a black fence run along the yard beyond the platform.',
+    ],
+    notes: [
+      'New gray-brown composite deck',
+      'Low platform along the back of the house',
+      'Matching fascia',
+      'Built-in steps',
+      'White hot tub at one end',
+      'Red rock at the base',
+      'Trees and a black fence along the yard',
+    ],
+    services: ['decks', 'carpentry'],
+    cover: katyDeck[0],
+    gallery: katyDeck,
     cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
     story: true,
   },

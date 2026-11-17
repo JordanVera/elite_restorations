@@ -129,6 +129,15 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
             {service.emergency ? 'Request help' : 'Request an estimate'}
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
+          {landing.areaSlug === 'katy' && landing.serviceSlug === 'patios-decks' && (
+            <Link
+              href="/projects/katy-composite-deck"
+              className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              Composite deck in Katy
+              <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
+          )}
         </div>
         {service.emergency && (
           <Reveal delay={0.2} className="mt-8">
