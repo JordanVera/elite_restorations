@@ -252,7 +252,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Después de una tormenta, las tablas y la lona suelen caer en la misma casa. El viento se lleva una ventana y levanta una pendiente. Hágalos en una sola visita si las dos están abiertas. Tome fotos de cada abertura. Esas fotos son parte del registro del daño. No somos ajustadores públicos. La madera y la lona son construcción. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. La aseguradora decide el pago.',
+            text: 'Después de una tormenta, las tablas y la lona suelen caer en la misma casa. El viento se lleva una ventana y levanta una pendiente. Hágalos en una sola visita si las dos están abiertas. Tome fotos de cada abertura. Esas fotos son parte del registro del daño. No somos ajustadores públicos. La madera y la lona son construcción. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. La aseguradora decide el pago.',
           },
         ],
       },
@@ -287,7 +287,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Guarde el recibo de la lona. Deje la madera puesta hasta que el vidrio o la puerta de verdad se estén cambiando. Quitarla para una visita y luego recibir otra tormenta es como una abertura chica se vuelve una casa mojada. Podemos volver para el techo definitivo cuando usted quiera contratarlo.',
+            text: 'Guarde el recibo de la lona. Deje la madera puesta hasta que el vidrio o la puerta de verdad se estén cambiando. Quitarla para una visita y luego recibir otra tormenta es como una abertura chica se vuelve una casa mojada. Podemos volver para el techo definitivo cuando usted quiera contratarlo. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.',
           },
         ],
       },
@@ -353,7 +353,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Los calentadores del segundo piso y del ático, comunes en planos nuevos de dos pisos, tiran agua por el cielo. La mancha es el anuncio. El aislamiento es el material mojado. Abrimos lo que el medidor dice que está húmedo y lo dejamos abierto hasta que seque. Cambiar el tanque antes de que el cielo esté seco solo estaciona un calentador nuevo sobre una casa mojada. Fotografíe el calentador, la charola y los cuartos que alcanzó el agua. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador.',
+            text: 'Los calentadores del segundo piso y del ático, comunes en planos nuevos de dos pisos, tiran agua por el cielo. La mancha es el anuncio. El aislamiento es el material mojado. Abrimos lo que el medidor dice que está húmedo y lo dejamos abierto hasta que seque. Cambiar el tanque antes de que el cielo esté seco solo estaciona un calentador nuevo sobre una casa mojada. Fotografíe el calentador, la charola y los cuartos que alcanzó el agua. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.',
           },
           {
             type: 'links',
@@ -416,7 +416,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Llame al (713) 909-0034 si el agua llegó al edificio. Una toalla alcanza para una taza de agua en un piso de loseta que usted atrapó de inmediato. No alcanza para un cielo, un gabinete hinchado o un acolchonado de alfombra. Empresa familiar desde 1993. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Lea la póliza o pregúnteles en qué se distingue una fuga repentina de una filtración larga.',
+            text: 'Llame al (713) 909-0034 si el agua llegó al edificio. Una toalla alcanza para una taza de agua en un piso de loseta que usted atrapó de inmediato. No alcanza para un cielo, un gabinete hinchado o un acolchonado de alfombra. Empresa familiar desde 1993. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. Lea la póliza o pregúnteles en qué se distingue una fuga repentina de una filtración larga.',
           },
           {
             type: 'list',
@@ -597,7 +597,7 @@ export const esPostsA: Article[] = [
     image: '/images/services/kitchen-remodeling.jpg',
     service: 'kitchen-remodeling',
     ctaTitle: '¿Quiere que midamos la cocina?',
-    ctaBody: `Llame al ${phone} para una visita. Empresa familiar en Houston desde 1993. Pida un estimado. Si hay una fuga de por medio, eso se seca primero.`,
+    ctaBody: `Llame al ${phone} para pedir un estimado. Empresa familiar en Houston desde 1993. Si hay una fuga de por medio, eso se seca primero.`,
     related: ['remodeling-a-houston-ranch-house', 'houston-bathroom-remodel-guide'],
     faqs: [
       {
@@ -722,7 +722,7 @@ export const esPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Hacer las dos cosas con una sola cuadrilla significa que quien secó el piso es quien pone el gabinete. No le está pasando una cocina a medias a alguien que no vio la pérdida. Empresa familiar en Houston desde 1993. Pida un estimado. Traiga las fotos de la fuga, si la hubo, y una lista de lo que quiere que el cuarto haga un martes normal.',
+            text: 'Hacer las dos cosas con una sola cuadrilla significa que quien secó el piso es quien pone el gabinete. No le está pasando una cocina a medias a alguien que no vio la pérdida. Empresa familiar en Houston desde 1993. Llame al (713) 909-0034 para pedir un estimado. Traiga las fotos de la fuga, si la hubo, y una lista de lo que quiere que el cuarto haga un martes normal.',
           },
           {
             type: 'links',

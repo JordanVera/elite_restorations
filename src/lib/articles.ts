@@ -179,7 +179,7 @@ export const articles: Article[] = [
           },
           {
             type: 'p',
-            text: 'If the water came from a sudden break or a storm, call (713) 909-0034 the same day. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The longer drywall, insulation, and wood stay wet, the more of the room has to come out.',
+            text: 'If the water came from a sudden break or a storm, call (713) 909-0034 the same day. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. The longer drywall, insulation, and wood stay wet, the more of the room has to come out.',
           },
         ],
       },

@@ -322,7 +322,7 @@ const angles: Record<string, readonly Angle[]> = {
       focus: 'ventilation, valleys, and pipe boots, not only the shingles you see from the street',
       before: 'Those pieces go in with the new roofing. They are part of the replacement.',
       onSite:
-        'We document the roof for your records. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
+        'We document the roof for your records. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
       blurb: 'Full replacement, from tear-off through flashing, vents, and cleanup.',
     },
   ],

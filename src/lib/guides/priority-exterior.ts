@@ -8,7 +8,7 @@ export const roofing: ServiceGuide = {
     },
     {
       title: 'Photograph',
-      body: 'We photograph the roof for your records. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Photos are not a coverage decision. Your insurer decides what the policy pays.',
+      body: 'We photograph the roof for your records. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Photos are not a coverage decision. Your insurer decides what the policy pays.',
     },
     {
       title: 'Say repair or replace',
@@ -120,7 +120,7 @@ export const roofing: ServiceGuide = {
       eyebrow: 'Insurance',
       heading: 'Photos, deductibles, and a clear claim role.',
       paragraphs: [
-        'Many Texas homeowners policies, especially in Harris County and closer to the coast, carry a separate wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common figures. A two percent deductible on a higher dwelling limit is a different dollar amount from the deductible on a kitchen supply line. The percentage and what it applies to are in your policy. Ask your agent to walk that policy with you. We do not read the policy for you. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides what the policy pays.',
+        'Many Texas homeowners policies, especially in Harris County and closer to the coast, carry a separate wind or hail deductible that is a percentage of the dwelling limit. One, two, and five percent are common figures. A two percent deductible on a higher dwelling limit is a different dollar amount from the deductible on a kitchen supply line. The percentage and what it applies to are in your policy. Ask your agent to walk that policy with you. We do not read the policy for you. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides what the policy pays.',
         'Photographs of the roof, the soft metal, and any interior wetting are the record. We take those photos as part of the inspection. We can meet the information an adjuster asks for about the roof we saw. Your insurer decides the settlement. We keep the job to what we inspected, and we will not pad it to chase a deductible. We walk the claim scope with the adjuster after that visit. A temporary cover, when the roof is open and safe to stand on, limits further damage. Many policies expect that. It is still not a promise of coverage.',
       ],
       points: [

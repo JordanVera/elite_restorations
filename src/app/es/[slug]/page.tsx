@@ -118,7 +118,7 @@ export default async function SpanishServicePage({
         ctaBody={
           emergency
             ? `Si sigue entrando agua, llame al ${site.phone.display}. Somos una empresa familiar en Houston desde 1993.`
-            : `Somos una empresa familiar en Houston desde 1993. Pida un estimado. Llame al ${site.phone.display} o envíe un texto.`
+            : `Somos una empresa familiar en Houston desde 1993. Llame al ${site.phone.display} para pedir un estimado, o envíe un texto.`
         }
         serviceName={`${hub.name} en Houston`}
         description={hub.description}

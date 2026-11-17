@@ -610,7 +610,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'The log keeps the photos in one place. It does not estimate what you are owed. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. It is a way to stop the record from living in twenty text messages. If you later ask us to dry or repair the house, the same kind of photos are part of how we document the work. You can use the log whether or not you hire anyone.',
+            text: 'The log keeps the photos in one place. It does not estimate what you are owed. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. It is a way to stop the record from living in twenty text messages. If you later ask us to dry or repair the house, the same kind of photos are part of how we document the work. You can use the log whether or not you hire anyone.',
           },
           {
             type: 'links',

@@ -256,7 +256,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'After a storm, board-up and a tarp often land on the same house, because wind takes a window and lifts a slope. Do them as one visit if both are open, and take photos of each opening. Those photos are part of the record. The plywood and the tarp are construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
+            text: 'After a storm, board-up and a tarp often land on the same house, because wind takes a window and lifts a slope. Do them as one visit if both are open, and take photos of each opening. Those photos are part of the record. The plywood and the tarp are construction. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.',
           },
         ],
       },
@@ -358,7 +358,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Second-floor and attic heaters, which are common in newer two-story plans, drop water through the ceiling. The stain is the advertisement, and the insulation is the wet material. We open what the meter says is wet, and we leave it open until it\'s dry. Replacing the tank before the ceiling is dry just parks a new heater over a wet house. Photograph the heater, the pan, and the rooms the water reached. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster.',
+            text: 'Second-floor and attic heaters, which are common in newer two-story plans, drop water through the ceiling. The stain is the advertisement, and the insulation is the wet material. We open what the meter says is wet, and we leave it open until it\'s dry. Replacing the tank before the ceiling is dry just parks a new heater over a wet house. Photograph the heater, the pan, and the rooms the water reached. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.',
           },
           {
             type: 'links',
@@ -422,7 +422,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'Call (713) 909-0034 if the water reached the building. A towel is enough for a cup of water on a tile floor you caught immediately. It isn\'t enough for a ceiling, a swollen cabinet, or a carpet pad. We\'ve been family-owned since 1993. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Read the policy or ask the insurer how a sudden leak differs from a long seep.',
+            text: 'Call (713) 909-0034 if the water reached the building. A towel is enough for a cup of water on a tile floor you caught immediately. It isn\'t enough for a ceiling, a swollen cabinet, or a carpet pad. We\'ve been family-owned since 1993. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Read the policy or ask the insurer how a sudden leak differs from a long seep.',
           },
           {
             type: 'list',
@@ -726,7 +726,7 @@ export const houstonPostsA: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Dishwashers and supply lines ruin the cabinet you already disliked. Dry and document the damage first. Keep the repair separate from the optional new layout so the photos match what failed. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides the leak. The new island, if you still want it, is a remodel you choose.',
+            text: 'Dishwashers and supply lines ruin the cabinet you already disliked. Dry and document the damage first. Keep the repair separate from the optional new layout so the photos match what failed. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides the leak. The new island, if you still want it, is a remodel you choose.',
           },
           {
             type: 'p',

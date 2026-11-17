@@ -15,7 +15,7 @@ export const esPostsB: Article[] = [
     image: '/images/projects/bathrooms/shower-niche-large-format.jpg',
     service: 'bathroom-remodeling',
     ctaTitle: '¿Está planeando un baño?',
-    ctaBody: `Llame al ${phone}. Medimos el cuarto antes de prometer un plano. Empresa familiar en Houston desde 1993. Pida un estimado.`,
+    ctaBody: `Llame al ${phone} para pedir un estimado. Medimos el cuarto antes de prometer un plano. Empresa familiar en Houston desde 1993.`,
     related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
     faqs: [
       {
@@ -137,7 +137,7 @@ export const esPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A veces la remodelación empieza porque un inodoro se filtró, una válvula se partió o la regadera nunca estuvo impermeabilizada. Seque el contrapiso y el cielo de abajo antes de poner loseta nueva. Fotografíe la falla y los materiales mojados. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
+            text: 'A veces la remodelación empieza porque un inodoro se filtró, una válvula se partió o la regadera nunca estuvo impermeabilizada. Seque el contrapiso y el cielo de abajo antes de poner loseta nueva. Fotografíe la falla y los materiales mojados. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. La aseguradora decide si la fuga está cubierta. El vidrio nuevo, si antes no estaba, es una decisión suya, y así hay que escribirlo.',
           },
           {
             type: 'p',
@@ -504,7 +504,7 @@ export const esPostsB: Article[] = [
           },
           {
             type: 'p',
-            text: 'Si la pérdida fue repentina, Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Diga qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo o agua que subió de afuera. No es lo mismo, y no le vamos a poner un nombre más bonito al agua. Puede llamarnos el mismo día para empezar a secar. Si espera el fin de semana a que llegue el ajustador, un zoclo mojado se convierte en un muro mojado.',
+            text: 'Si la pérdida fue repentina, Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador. Diga qué falló: una línea, un calentador, un lavavajillas, un inodoro, un techo o agua que subió de afuera. No es lo mismo, y no le vamos a poner un nombre más bonito al agua. Puede llamarnos el mismo día para empezar a secar. Si espera el fin de semana a que llegue el ajustador, un zoclo mojado se convierte en un muro mojado.',
           },
           {
             type: 'links',
@@ -600,7 +600,7 @@ export const esPostsB: Article[] = [
     image: '/images/projects/kitchens/range-hood-cooking-wall.jpg',
     service: 'kitchen-remodeling',
     ctaTitle: '¿Tiene un rancho para recorrer?',
-    ctaBody: `Llame al ${phone}. Medimos la cocina, el baño y el techo que usted tiene. Empresa familiar en Houston desde 1993. Pida un estimado.`,
+    ctaBody: `Llame al ${phone} para pedir un estimado. Medimos la cocina, el baño y el techo que usted tiene. Empresa familiar en Houston desde 1993.`,
     related: ['houston-kitchen-remodel-ideas', 'houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
     faqs: [
       {

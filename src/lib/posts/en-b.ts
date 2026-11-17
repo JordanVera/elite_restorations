@@ -136,7 +136,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you\'re remodeling. Dry the subfloor and the ceiling below before new tile goes on. Photograph the failure and the wet materials. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. The insurer decides whether the leak is covered. The new glass, if it wasn\'t there before, is a choice you\'re making, and it should be written that way.',
+            text: 'A toilet that seeped, a valve that split, or a shower that was never waterproofed can be why you\'re remodeling. Dry the subfloor and the ceiling below before new tile goes on. Photograph the failure and the wet materials. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. The insurer decides whether the leak is covered. The new glass, if it wasn\'t there before, is a choice you\'re making, and it should be written that way.',
           },
           {
             type: 'p',
@@ -395,7 +395,7 @@ export const houstonPostsB: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Many replacements start after hail or wind, and you can also replace a worn roof with no claim at all. Photograph the slopes before a tarp hides an opening, when that\'s safe. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We can meet the adjuster on the house. We can be there to point at what we found. The estimate we write is the price to build the roof. It isn\'t the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
+            text: 'Many replacements start after hail or wind, and you can also replace a worn roof with no claim at all. Photograph the slopes before a tarp hides an opening, when that\'s safe. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. We can meet the adjuster on the house. We can be there to point at what we found. The estimate we write is the price to build the roof. It isn\'t the amount the policy will pay. Your insurer decides coverage, depreciation, and the deductible.',
           },
           {
             type: 'p',

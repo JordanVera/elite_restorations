@@ -59,7 +59,7 @@ const visits: Record<string, readonly [string, string]> = {
     'We do not price a {name} roof from the ground. Call {phone} and describe the leak or the storm. {landmark} is about {miles} miles {direction} in a straight line. {roads} is the drive. The recommendation still comes from the roof at the address, including slopes you cannot see from the driveway.',
   ],
   'roof-replacement': [
-    'Before a {name} replacement we confirm a repair will not hold, then we talk tear-off, the wood, underlayment, flashing, vents, and the material. Color waits on the front and on any review the address requires. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We can photograph the roof. We cannot decide what the policy pays. Soft boards, if tear-off reveals them, are discussed before they are covered.',
+    'Before a {name} replacement we confirm a repair will not hold, then we talk tear-off, the wood, underlayment, flashing, vents, and the material. Color waits on the front and on any review the address requires. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. We can photograph the roof. We cannot decide what the policy pays. Soft boards, if tear-off reveals them, are discussed before they are covered.',
     'Schedule the {name} inspection by calling {phone}. Do not order shingles first. Near {landmark}, about {miles} miles {direction} via {roads}, roofs that look alike from the street still hide different boards. The visit is how we see this one. The Houston cost page is a range, not this roof.',
   ],
   'roofing-emergency-tarp-repair': [
@@ -67,7 +67,7 @@ const visits: Record<string, readonly [string, string]> = {
     'Call {phone} for {name} rather than waiting on a claim decision to keep rain out. {landmark} is about {miles} miles {direction}. {roads} is the route, and traffic plus the weather set the arrival. We will tell you if the climb has to wait for a safer hour. The emergency form reaches the same team.',
   ],
   siding: [
-    'A {name} siding visit is up close: rot, fade on the south and west walls, and the trim at windows and corners. We say whether a section can match or the front wall needs to be replaced. If a committee reviews color, that answer is needed before boards are ordered. Storm damage can be photographed. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage. The wall is the construction.',
+    'A {name} siding visit is up close: rot, fade on the south and west walls, and the trim at windows and corners. We say whether a section can match or the front wall needs to be replaced. If a committee reviews color, that answer is needed before boards are ordered. Storm damage can be photographed. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage. The wall is the construction.',
     'Tell us if the {name} request is a patch or a new profile. Those are different orders. Call {phone}. Houses near {landmark}, about {miles} miles {direction} along {roads}, do not share one siding material. We match, or replace, the wall that is there.',
   ],
   'patios-decks': [
@@ -79,7 +79,7 @@ const visits: Record<string, readonly [string, string]> = {
     'A {name} dry-out is not a same-day repaint. Call {phone} and describe the rooms you can see. Near {landmark}, about {miles} miles {direction} on {roads}, the arrival depends on traffic and on whether the roof is safe. The emergency form works if you cannot stay on the phone. We do not close wet walls to make a room look finished.',
   ],
   'insurance-claims': [
-    'Before a {name} documentation visit, leave damaged materials in place if it is safe to do so, and do not assume we can reconstruct a story from an empty room. We photograph the roof, the rooms, and the source as far as it can be seen, and we keep wind, a plumbing leak, and rising water distinct in the notes. You may share that file. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides what is paid. The photo log on this site can start the record the same day.',
+    'Before a {name} documentation visit, leave damaged materials in place if it is safe to do so, and do not assume we can reconstruct a story from an empty room. We photograph the roof, the rooms, and the source as far as it can be seen, and we keep wind, a plumbing leak, and rising water distinct in the notes. You may share that file. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides what is paid. The photo log on this site can start the record the same day.',
     'Call {phone} and say whether {name} still has water coming in. Protection and photographs can happen together. A calm documentation visit can be scheduled when the house is stable. {landmark} is about {miles} miles {direction}, along {roads}. None of that mileage changes the fact that coverage is your insurer’s decision.',
   ],
   'painting-drywall-repair': [

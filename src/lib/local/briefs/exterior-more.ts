@@ -54,7 +54,7 @@ export const tarpBrief: Brief = {
       title: 'Photos before the cover',
       bodies: [
         'In {name} we photograph the opening before the tarp hides it. Those photos are your record.',
-        'Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage in {name}. The photos are not a coverage decision.',
+        'If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage in {name}. The photos are not a coverage decision.',
       ],
     },
     {
@@ -149,7 +149,7 @@ export const sidingBrief: Brief = {
   craft: [
     'In {name} we say when a section will blend and when the front wall wants a full replacement. The match is to the boards now, after years of sun.',
     'Corners, window trim, and soffits in {name} are part of the wall. A wall of new boards with the old trim left ragged does not look finished, and we do not leave it that way.',
-    'Storm pieces in {name} are photographed. The repair is the wall. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
+    'Storm pieces in {name} are photographed. The repair is the wall. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
   ],
   sequence: [
     'Here is the order we work in: look at the wall up close, decide repair or replacement, confirm color rules, then install with the trim detailed. Paint or the factory finish is part of that plan, not a later guess.',

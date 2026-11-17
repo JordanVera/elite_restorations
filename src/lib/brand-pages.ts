@@ -61,7 +61,7 @@ const certainteedEn: BrandPage = {
   esPath: "/es/certainteed-roofing-houston",
   metaTitle: "CertainTeed Roofing Houston",
   description:
-    "CertainTeed shingle roofing in Houston, including Landmark after hail or wind. Family-owned since 1993. Request an estimate. Call (713) 909-0034.",
+    "CertainTeed shingle roofing in Houston, including Landmark after hail or wind. Family-owned since 1993. Call (713) 909-0034 to schedule an estimate.",
   eyebrow: "CertainTeed shingles",
   title: ["CertainTeed roofing", "in Houston."],
   lede: `Ready for a new CertainTeed roof in Houston? Elite Restorations installs CertainTeed architectural shingles for full replacements and re-roofs after hail or wind damage, and we document everything for your insurance claim. CertainTeed has been making roofing products since 1904, and we've been a family-owned Houston company since 1993. Call ${phone} to schedule an estimate.`,
@@ -74,7 +74,7 @@ const certainteedEn: BrandPage = {
   serviceName: "CertainTeed roofing in Houston",
   relatedHeading: "Neighborhoods and related roofing",
   ctaTitle: "Planning a CertainTeed roof?",
-  ctaBody: `Call ${phone} and we will look at the roof you have. Request an estimate. We install the shingles. If a claim is involved, your insurer decides it.`,
+  ctaBody: `Call ${phone} to schedule an estimate, and we will look at the roof you have. We install the shingles. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.`,
   sections: [
     {
       eyebrow: "The shingles",
@@ -104,7 +104,7 @@ const certainteedEn: BrandPage = {
       eyebrow: "Claims",
       heading: "Insurance-claim roof replacements.",
       paragraphs: [
-        `We photograph the roof before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: tear-off, the CertainTeed line you chose, flashing, vents, and any decking we can already see. It is not the amount the claim will pay. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.`,
+        `We photograph the roof before a tarp hides an opening, when that is safe. We can meet your adjuster on the house and walk through what we saw. The estimate we write is the price of the construction: tear-off, the CertainTeed line you chose, flashing, vents, and any decking we can already see. It is not the amount the claim will pay. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.`,
         "A Texas wind or hail deductible is often a percentage on your declarations page. We do not have that number and we will not invent it. Some policies pay a depreciated amount first. Read yours, or ask your insurer. We install the roof you hire us to install and we do not rewrite it to match a check. If a slope in the claim cannot be matched to the Landmark color on the house, we say so before the shingles are ordered.",
       ],
     },
@@ -128,7 +128,7 @@ const certainteedEn: BrandPage = {
   faqs: [
     {
       q: "Do you install CertainTeed shingles in Houston?",
-      a: `Yes. We install CertainTeed asphalt shingles, including Landmark, Landmark PRO, and Landmark ClimateFlex. Call ${phone} and we will look at the roof you have. Request an estimate.`,
+      a: `Yes. We install CertainTeed asphalt shingles, including Landmark, Landmark PRO, and Landmark ClimateFlex. Call ${phone} to schedule an estimate, and we will look at the roof you have.`,
     },
     {
       q: "Which Landmark line do people ask about after Houston hail?",
@@ -179,7 +179,7 @@ const hardieEn: BrandPage = {
   esPath: "/es/james-hardie-siding-houston",
   metaTitle: "James Hardie Siding Houston",
   description:
-    "James Hardie siding in Houston: HardiePlank, HardieTrim, and ColorPlus on the wall you have. Request an estimate. Call (713) 909-0034.",
+    "James Hardie siding in Houston: HardiePlank, HardieTrim, and ColorPlus on the wall you have. Call (713) 909-0034 to schedule an estimate.",
   eyebrow: "James Hardie",
   title: ["James Hardie siding", "in Houston."],
   lede: `Thinking about James Hardie siding in Houston? Elite Restorations installs HardiePlank lap siding and HardieTrim, finished in paint or ColorPlus, for a durable fiber cement exterior that stands up to Houston weather. James Hardie has been in business since 1888, and we've been a family-owned Houston company since 1993. Call ${phone} to schedule an estimate.`,
@@ -192,7 +192,7 @@ const hardieEn: BrandPage = {
   serviceName: "James Hardie siding in Houston",
   relatedHeading: "Neighborhoods and related exterior work",
   ctaTitle: "Planning James Hardie siding?",
-  ctaBody: `Call ${phone} and we will walk the wall with you. Request an estimate. We install the boards. If a claim is involved, your insurer decides it.`,
+  ctaBody: `Call ${phone} to schedule an estimate, and we will walk the wall with you. We install the boards. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.`,
   sections: [
     {
       eyebrow: "The boards",
@@ -230,7 +230,7 @@ const hardieEn: BrandPage = {
       eyebrow: "Claims",
       heading: "When the siding is part of a storm claim.",
       paragraphs: [
-        "If wind or hail opened the wall, we photograph the cracks, the lifted courses, and what is behind them if we have to open it. We can meet your adjuster on site. The estimate is the price of the HardiePlank, the HardieTrim, the flashing, and any sheathing that has to come out. It is not the claim payment. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We are not public adjusters. We do not give legal advice.",
+        "If wind or hail opened the wall, we photograph the cracks, the lifted courses, and what is behind them if we have to open it. We can meet your adjuster on site. The estimate is the price of the HardiePlank, the HardieTrim, the flashing, and any sheathing that has to come out. It is not the claim payment. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster.",
         "A planned re-side, with no storm, is construction, and we describe it that way. We do not rename a worn wall as hail. Hail marks and ordinary age look different up close, and the notes say which one we see. Photos of the damage and of the repair are yours to share.",
       ],
     },
@@ -246,7 +246,7 @@ const hardieEn: BrandPage = {
   faqs: [
     {
       q: "Do you install James Hardie siding in Houston?",
-      a: `Yes. We install James Hardie fiber cement, including HardiePlank lap siding and HardieTrim, with ColorPlus or paint. Call ${phone} and we will look at the wall. Request an estimate.`,
+      a: `Yes. We install James Hardie fiber cement, including HardiePlank lap siding and HardieTrim, with ColorPlus or paint. Call ${phone} to schedule an estimate, and we will look at the wall.`,
     },
     {
       q: "Is HardiePlank the same as board-and-batten?",
@@ -295,7 +295,7 @@ const certainteedEs: BrandPage = {
   esPath: "/es/certainteed-roofing-houston",
   metaTitle: "Techos CertainTeed en Houston",
   description:
-    "Techos CertainTeed en Houston, incluida teja Landmark después de granizo o viento. Pida un estimado. Llame al (713) 909-0034.",
+    "Techos CertainTeed en Houston, incluida teja Landmark después de granizo o viento. Llame al (713) 909-0034 para pedir un estimado.",
   eyebrow: "Teja CertainTeed",
   title: ["Techos CertainTeed", "en Houston."],
   lede: `¿Listo para un techo CertainTeed nuevo en Houston? Elite Restorations instala teja arquitectónica CertainTeed en cambios completos y después de granizo o viento, y documentamos todo para su reclamo. CertainTeed fabrica techos desde 1904, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para pedir un estimado.`,
@@ -308,7 +308,7 @@ const certainteedEs: BrandPage = {
   serviceName: "Techos CertainTeed en Houston",
   relatedHeading: "Vecindarios y techos relacionados",
   ctaTitle: "¿Planea un techo CertainTeed?",
-  ctaBody: `Llame al ${phone} y vemos el techo que tiene. Pida un estimado. Instalamos la teja. Si hay un reclamo, su aseguradora lo decide.`,
+  ctaBody: `Llame al ${phone} para pedir un estimado, y vemos el techo que tiene. Instalamos la teja. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.`,
   sections: [
     {
       eyebrow: "La teja",
@@ -338,7 +338,7 @@ const certainteedEs: BrandPage = {
       eyebrow: "Reclamos",
       heading: "Cambios de techo ligados a un reclamo.",
       paragraphs: [
-        `Fotografiamos el techo antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar lo viejo, la línea CertainTeed que eligió, el metal, la ventilación y la madera que ya se puede ver. No es la cantidad que el reclamo va a pagar. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.`,
+        `Fotografiamos el techo antes de que la lona tape una abertura, cuando es seguro. Podemos estar cuando llegue su ajustador y caminar lo que vimos. El estimado que escribimos es el precio de la construcción: quitar lo viejo, la línea CertainTeed que eligió, el metal, la ventilación y la madera que ya se puede ver. No es la cantidad que el reclamo va a pagar. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.`,
         "En Texas, el deducible de viento y granizo suele ser un porcentaje del monto que la póliza lista para la casa. Ese porcentaje está en su página de declaraciones, o se lo dice su agente. Nosotros no lo tenemos y no lo inventamos. Algunas pólizas pagan primero un valor depreciado y sueltan el resto cuando el trabajo está hecho. Otras no. Lea la suya o pregúntele a su aseguradora. Instalamos el techo que usted nos contrata. No reescribimos el trabajo para que quepa en un cheque. Si una caída del reclamo no se puede igualar al color Landmark de la casa, lo decimos antes de pedir la teja.",
       ],
     },
@@ -362,7 +362,7 @@ const certainteedEs: BrandPage = {
   faqs: [
     {
       q: "¿Instalan teja CertainTeed en Houston?",
-      a: `Sí. Instalamos teja de asfalto CertainTeed, incluidas Landmark, Landmark PRO y Landmark ClimateFlex. Llame al ${phone} y vemos el techo que tiene. Pida un estimado.`,
+      a: `Sí. Instalamos teja de asfalto CertainTeed, incluidas Landmark, Landmark PRO y Landmark ClimateFlex. Llame al ${phone} para pedir un estimado, y vemos el techo que tiene.`,
     },
     {
       q: "¿Qué línea Landmark piden después del granizo en Houston?",
@@ -413,7 +413,7 @@ const hardieEs: BrandPage = {
   esPath: "/es/james-hardie-siding-houston",
   metaTitle: "Siding James Hardie en Houston",
   description:
-    "Siding James Hardie en Houston: HardiePlank, HardieTrim y ColorPlus en la pared que ya tiene. Pida un estimado. Llame al (713) 909-0034.",
+    "Siding James Hardie en Houston: HardiePlank, HardieTrim y ColorPlus en la pared que ya tiene. Llame al (713) 909-0034 para pedir un estimado.",
   eyebrow: "James Hardie",
   title: ["Siding James Hardie", "en Houston."],
   lede: `¿Está pensando en siding James Hardie en Houston? Elite Restorations instala HardiePlank en hileras y HardieTrim, con pintura o ColorPlus, para un exterior de fibrocemento que aguante el clima de Houston. James Hardie existe desde 1888, y somos una empresa familiar en Houston desde 1993. Llame al ${phone} para pedir un estimado.`,
@@ -426,7 +426,7 @@ const hardieEs: BrandPage = {
   serviceName: "Siding James Hardie en Houston",
   relatedHeading: "Vecindarios y exterior relacionado",
   ctaTitle: "¿Planea siding James Hardie?",
-  ctaBody: `Llame al ${phone} y caminamos la pared con usted. Pida un estimado. Instalamos las tablas. Si hay un reclamo, su aseguradora lo decide.`,
+  ctaBody: `Llame al ${phone} para pedir un estimado, y caminamos la pared con usted. Instalamos las tablas. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.`,
   sections: [
     {
       eyebrow: "Las tablas",
@@ -464,7 +464,7 @@ const hardieEs: BrandPage = {
       eyebrow: "Reclamos",
       heading: "Cuando el siding es parte de un reclamo por tormenta.",
       paragraphs: [
-        "Si el viento o el granizo abrió la pared, fotografiamos las grietas, las hileras levantadas y lo que hay detrás si tenemos que abrir. Podemos estar cuando llegue su ajustador. El estimado es el precio del HardiePlank, del HardieTrim, del metal y del triplay que haya que quitar. No es el pago del reclamo. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Su aseguradora decide la cobertura y el pago. No somos ajustadores públicos. No damos consejo legal.",
+        "Si el viento o el granizo abrió la pared, fotografiamos las grietas, las hileras levantadas y lo que hay detrás si tenemos que abrir. Podemos estar cuando llegue su ajustador. El estimado es el precio del HardiePlank, del HardieTrim, del metal y del triplay que haya que quitar. No es el pago del reclamo. Si hay seguro de por medio, trabajamos con su aseguradora como su contratista y atendemos el alcance del reclamo con el ajustador.",
         "Un cambio planeado, sin tormenta, es construcción, y así lo describimos. No le cambiamos el nombre a un muro gastado para que parezca granizo. Las marcas de granizo y la edad normal se ven distintas de cerca, y las notas dicen cuál vemos. Las fotos del daño y de la reparación terminada son suyas para compartir. La página de reclamos explica hasta dónde llega nuestra ayuda.",
       ],
     },
@@ -480,7 +480,7 @@ const hardieEs: BrandPage = {
   faqs: [
     {
       q: "¿Instalan siding James Hardie en Houston?",
-      a: `Sí. Instalamos fibrocemento James Hardie, incluido HardiePlank y HardieTrim, con ColorPlus o pintura. Llame al ${phone} y vemos la pared. Pida un estimado.`,
+      a: `Sí. Instalamos fibrocemento James Hardie, incluido HardiePlank y HardieTrim, con ColorPlus o pintura. Llame al ${phone} para pedir un estimado, y vemos la pared.`,
     },
     {
       q: "¿HardiePlank es lo mismo que board-and-batten?",

@@ -21,7 +21,7 @@ export const roofingBrief: Brief = {
   ],
   slab: [
     'Slab-era houses in {name} usually carry asphalt roofs of a suburban shape, one story or two. We inspect the shingles, the penetrations, and the flashing. Two-story staging is different from a ranch. Soft boards, if we can see evidence of them, are called out before anyone promises a simple repair.',
-    'On a {name} roof the question is whether a repair will hold. Vent collars, valleys, and the ridge are looked at, not only the slope that faces the street. Photographs are part of the visit so you have a record. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
+    'On a {name} roof the question is whether a repair will hold. Vent collars, valleys, and the ridge are looked at, not only the slope that faces the street. Photographs are part of the visit so you have a record. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
   ],
   mixed: [
     '{name} puts a mid-century roof and a new rebuild on the same street. Age is obvious once we are up there, and it is not obvious from a listing photo. We inspect the one you own. A young roof with a flashing leak is a repair. The old shingles are a different conversation.',
@@ -66,7 +66,7 @@ export const roofingBrief: Brief = {
     {
       title: 'Photos',
       bodies: [
-        'We photograph the {name} roof. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage.',
+        'We photograph the {name} roof. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides coverage.',
         'A temporary cover in {name}, when the roof is open, is not the permanent roof. Photos come before the cover hides the opening.',
       ],
     },

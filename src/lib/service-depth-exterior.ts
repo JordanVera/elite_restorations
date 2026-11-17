@@ -346,7 +346,7 @@ export const exteriorDepth: Record<string, ServiceDepth> = {
       },
       {
         title: 'Photos before the cover',
-        body: 'We photograph the opening and the surrounding roof before the tarp hides it, when it is safe to do that. Those pictures are for you. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides what the photos mean. The permit, if one is required, belongs to the permanent repair, not to the night we stop the leak.',
+        body: 'We photograph the opening and the surrounding roof before the tarp hides it, when it is safe to do that. Those pictures are for you. If insurance is involved, we work with your insurance company as your contractor and handle the claim scope with the adjuster. Your insurer decides what the photos mean. The permit, if one is required, belongs to the permanent repair, not to the night we stop the leak.',
       },
     ],
     process: [
