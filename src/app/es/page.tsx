@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
-import { ServiceIndex, type IndexService } from "@/components/home/service-index";
+import type { IndexService } from "@/components/home/service-index";
 import { KitchenSlideshow } from "@/components/home/kitchen-slideshow";
 import { DiscoverLinks, HomeRestorationSection } from "@/components/seo-sections";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
@@ -11,6 +12,10 @@ import { discoverEs, homeRestorationEs } from "@/lib/seo-sections";
 import { site } from "@/lib/site";
 
 import "@/components/home/kitchen-hero.css";
+
+const ServiceIndex = dynamic(() =>
+  import("@/components/home/service-index").then((mod) => mod.ServiceIndex),
+);
 
 export const metadata: Metadata = pageMetadata({
   title: "Restauración en Houston",
