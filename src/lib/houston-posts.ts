@@ -1,5 +1,6 @@
 import { houstonPostsA } from '@/lib/posts/en-a';
 import { houstonPostsB } from '@/lib/posts/en-b';
+import { houstonPostsC } from '@/lib/posts/en-c';
 import { assertCopyAllowed } from '@/lib/copy-guards';
 import { neighborhoodSlugs } from '@/lib/locale-paths';
 import { getNeighborhood } from '@/lib/neighborhoods';
@@ -8,7 +9,7 @@ import { getService } from '@/lib/services';
 import { wordCount } from '@/lib/words';
 import type { Article } from '@/lib/articles';
 
-export const houstonPosts: Article[] = [...houstonPostsA, ...houstonPostsB];
+export const houstonPosts: Article[] = [...houstonPostsA, ...houstonPostsB, ...houstonPostsC];
 
 const staticHrefs = new Set([
   '/emergency',

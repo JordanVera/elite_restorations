@@ -2,6 +2,7 @@ import type { Article } from '@/lib/articles';
 import { assertCopyAllowed } from '@/lib/copy-guards';
 import { esPostsA } from '@/lib/es/posts-a';
 import { esPostsB } from '@/lib/es/posts-b';
+import { esPostsC } from '@/lib/es/posts-c';
 import { houstonPostSlugs, neighborhoodSlugs } from '@/lib/locale-paths';
 import { spanishServiceSlugs } from '@/lib/i18n';
 import { titleFits } from '@/lib/seo';
@@ -21,13 +22,19 @@ const extraHrefs = new Set([
   '/es/houston-storm-damage',
   '/es/restoration',
   '/emergency-board-up',
+  // English hubs that do not have a Spanish page.
+  '/fence-installation-repair',
+  '/gutters',
+  '/decks',
+  '/patios',
+  '/gazebos',
 ]);
 
 function withPath(article: Article): EsPost {
   return { ...article, path: `/es/blog/${article.slug}` };
 }
 
-export const esPosts: readonly EsPost[] = [...esPostsA, ...esPostsB].map(withPath);
+export const esPosts: readonly EsPost[] = [...esPostsA, ...esPostsB, ...esPostsC].map(withPath);
 
 const bySlug = new Map(esPosts.map((post) => [post.slug, post]));
 
