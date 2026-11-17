@@ -1,8 +1,12 @@
+import dynamic from 'next/dynamic';
 import { ArrowUpRight } from 'lucide-react';
 
 import { Reveal, SplitLines } from '@/components/motion';
-import { InfiniteReviewCards } from '@/components/ui/infinite-review-cards';
 import { googleReviewSummary, homepageReviews } from '@/lib/published-reviews';
+
+const InfiniteReviewCards = dynamic(() =>
+  import('@/components/ui/infinite-review-cards').then((mod) => mod.InfiniteReviewCards),
+);
 
 export function HomeTestimonials() {
   return (

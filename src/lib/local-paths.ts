@@ -1,4 +1,4 @@
-import { services } from '@/lib/services';
+import { serviceNav } from '@/lib/service-nav';
 import { site } from '@/lib/site';
 
 /** URL slug for a name in `site.serviceArea`. */
@@ -10,7 +10,7 @@ export function areaSlug(name: string) {
     .replace(/^-+|-+$/g, '');
 }
 
-const serviceSlugsLongestFirst = services
+const serviceSlugsLongestFirst = serviceNav
   .map((service) => service.slug)
   .sort((a, b) => b.length - a.length);
 

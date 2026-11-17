@@ -4,13 +4,11 @@ import { serviceGuides } from '@/lib/guides/index';
 import type { ServiceGuide } from '@/lib/guides/types';
 import { img, type Img } from '@/lib/images';
 import { processSteps } from '@/lib/process';
+import { serviceNav, type ServiceGroup } from '@/lib/service-nav';
 import { wordCount } from '@/lib/words';
 
-export type ServiceGroup =
-  | 'Interiors'
-  | 'Floors'
-  | 'Roof & exterior'
-  | 'Recovery';
+export type { ServiceGroup } from '@/lib/service-nav';
+export { serviceGroups } from '@/lib/service-nav';
 
 export type ServiceLocal = {
   heading: string;
@@ -41,13 +39,6 @@ export type Service = {
   local: ServiceLocal;
   guide: ServiceGuide;
 };
-
-export const serviceGroups: ServiceGroup[] = [
-  'Interiors',
-  'Floors',
-  'Roof & exterior',
-  'Recovery',
-];
 
 export const serviceGroupBlurbs: Record<ServiceGroup, string> = {
   Interiors:
@@ -1905,6 +1896,21 @@ export const services: Service[] = serviceInputs.map((service) => {
   return { ...service, faqs: [...service.faqs, ...extra], guide };
 });
 
+services.forEach((service, index) => {
+  const nav = serviceNav[index];
+  if (
+    serviceNav.length !== services.length ||
+    !nav ||
+    nav.slug !== service.slug ||
+    nav.name !== service.name ||
+    nav.group !== service.group
+  ) {
+    throw new Error(
+      `service-nav is out of date at ${service.slug}. Update src/lib/service-nav.ts to match the catalog.`,
+    );
+  }
+});
+
 const priorityServiceSlugs = new Set([
   'kitchen-remodeling',
   'bathroom-remodeling',
@@ -2015,11 +2021,6 @@ export function getService(slug: string) {
 /** Canonical path for an individual service page (no `/services` prefix). */
 export function servicePath(slug: string) {
   return `/${slug}`;
-}
-
-export function isServicePagePath(pathname: string) {
-  const slug = pathname.replace(/^\//, '').split('/')[0];
-  return slug.length > 0 && servicesBySlug.has(slug);
 }
 
 export function servicesInGroup(group: ServiceGroup) {

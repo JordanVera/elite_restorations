@@ -18,7 +18,7 @@ import {
   isServicePagePath,
   serviceGroups,
   servicesInGroup,
-} from '@/lib/services';
+} from '@/lib/service-nav';
 import { ctaHref, nav, site, type NavItem } from '@/lib/site';
 import { cn } from '@/lib/utils';
 

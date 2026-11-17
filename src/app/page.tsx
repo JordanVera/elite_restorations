@@ -1,18 +1,22 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 import { HomeFinalCta } from '@/components/home/home-final-cta';
 import { HomeHero } from '@/components/home/home-hero';
 import { HomeManifesto } from '@/components/home/home-manifesto';
-import { HomeProcess } from '@/components/home/home-process';
 import { HomeTestimonials } from '@/components/home/home-testimonials';
 import { DiscoverLinks, HomeRestorationSection } from '@/components/seo-sections';
-import {
-  ServiceIndex,
-  type IndexService,
-} from '@/components/home/service-index';
+import type { IndexService } from '@/components/home/service-index';
 import { services } from '@/lib/services';
 import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { discoverEn, homeRestorationEn } from '@/lib/seo-sections';
+
+const HomeProcess = dynamic(() =>
+  import('@/components/home/home-process').then((mod) => mod.HomeProcess),
+);
+const ServiceIndex = dynamic(() =>
+  import('@/components/home/service-index').then((mod) => mod.ServiceIndex),
+);
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Restoration & Remodeling',

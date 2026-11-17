@@ -103,8 +103,8 @@ export default async function RootLayout({
           <main id="main" tabIndex={-1} className="outline-none">
             {children}
           </main>
-          <SiteFooter />
-          <CallTextBar />
+          <SiteFooter es={es} />
+          <CallTextBar es={es} />
         </Providers>
         <JsonLd data={siteSchemaGraph()} />
       </body>

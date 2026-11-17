@@ -8,6 +8,58 @@ const nextConfig: NextConfig = {
   // inside this process. Requires Next.js 16.4+.
   experimental: {
     turbopackPluginRuntimeStrategy: 'workerThreads',
+    // Tailwind CSS is one render-blocking request. Inlining it removes that
+    // round trip for a first visit. Returning visitors still get <link> tags
+    // on client navigations.
+    inlineCss: true,
+  },
+  webpack: (config, { isServer, webpack }) => {
+    if (!isServer) {
+      // Next always emits the legacy core-js nomodule polyfill. The browsers
+      // in package.json (Chrome/Edge/Firefox 111+, Safari 16.4+) already have
+      // those features, so the file is dead weight on every page.
+      const stage = webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT;
+      config.plugins.push({
+        apply(compiler: {
+          hooks: {
+            thisCompilation: {
+              tap: (
+                name: string,
+                fn: (compilation: {
+                  hooks: {
+                    processAssets: {
+                      tap: (
+                        options: { name: string; stage: number },
+                        callback: () => void,
+                      ) => void;
+                    };
+                  };
+                  getAssets: () => { name: string }[];
+                  updateAsset: (name: string, source: unknown) => void;
+                }) => void,
+              ) => void;
+            };
+          };
+        }) {
+          compiler.hooks.thisCompilation.tap('ModernBrowsersPolyfill', (compilation) => {
+            const source = new webpack.sources.RawSource(
+              '/* Legacy core-js polyfill omitted: browserslist targets already support these APIs. */\n',
+            );
+            compilation.hooks.processAssets.tap(
+              { name: 'ModernBrowsersPolyfill', stage },
+              () => {
+                for (const asset of compilation.getAssets()) {
+                  if (/static\/chunks\/polyfills(?:-|\.)/.test(asset.name)) {
+                    compilation.updateAsset(asset.name, source);
+                  }
+                }
+              },
+            );
+          });
+        },
+      });
+    }
+    return config;
   },
   // Preview is served from *.preview.c36.airoapp.ai, not localhost.
   allowedDevOrigins: ['**.airoapp.ai'],
