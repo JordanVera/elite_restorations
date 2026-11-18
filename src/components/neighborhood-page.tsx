@@ -27,8 +27,12 @@ export function NeighborhoodPageView({
     'humble-tx',
     'friendswood-tx',
     'tomball-tx',
+    'rosenberg-tx',
+    'jersey-village-tx',
   ]);
-  const place = cities.has(page.slug) ? page.name : `${page.name}, Houston`;
+  const communities = new Set(['towne-lake-tx', 'bridgeland-tx', 'sienna-tx']);
+  const place =
+    cities.has(page.slug) || communities.has(page.slug) ? page.name : `${page.name}, Houston`;
   const serviceName = es
     ? `Restauración y remodelación en ${page.name}`
     : `Restoration and remodeling in ${page.name}`;
@@ -41,9 +45,13 @@ export function NeighborhoodPageView({
             ? es
               ? 'Ciudad'
               : 'City'
-            : es
-              ? 'Vecindario de Houston'
-              : 'Houston neighborhood'
+            : communities.has(page.slug)
+              ? es
+                ? 'Comunidad'
+                : 'Community'
+              : es
+                ? 'Vecindario de Houston'
+                : 'Houston neighborhood'
         }
         title={
           es

@@ -879,6 +879,8 @@ export const houstonPostsB: Article[] = [
             type: 'links',
             items: [
               { href: '/cypress-tx', label: 'Yards and houses in Cypress' },
+              { href: '/bridgeland-tx', label: 'Bridgeland' },
+              { href: '/towne-lake-tx', label: 'Towne Lake' },
               { href: '/gutters', label: 'Gutters' },
               { href: '/fence-installation-repair', label: 'Fence installation and repair' },
               { href: '/gutter-size-for-houston-rain', label: 'Gutter size for Houston rain' },
