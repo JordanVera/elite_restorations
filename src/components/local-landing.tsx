@@ -138,6 +138,15 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
               <ArrowUpRight className="size-4" aria-hidden />
             </Link>
           )}
+          {landing.areaSlug === 'katy' && landing.serviceSlug === 'bathroom-remodeling' && (
+            <Link
+              href="/projects/katy-marble-bathroom"
+              className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              Marble-look bathroom in Katy
+              <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
+          )}
         </div>
         {service.emergency && (
           <Reveal delay={0.2} className="mt-8">

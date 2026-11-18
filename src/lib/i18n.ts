@@ -43,6 +43,7 @@ const staticSpanishPaths: Record<string, string> = {
   "/ferguson-plumbing-fixtures-installation-houston":
     "/es/ferguson-plumbing-fixtures-installation-houston",
   "/projects/katy-composite-deck": "/es/projects/katy-composite-deck",
+  "/projects/katy-marble-bathroom": "/es/projects/katy-marble-bathroom",
 };
 
 export function isSpanishPath(pathname: string) {
