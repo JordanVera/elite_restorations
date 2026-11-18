@@ -155,6 +155,12 @@ function buildAreaPage(areaSlug: (typeof nearOfficeSlugs)[number]): AreaPage {
         href: '/laminate-flooring',
         label: 'Laminate floor installation in Houston',
       },
+      ...(areaSlug === 'energy-corridor'
+        ? [
+            { href: '/copperfield-tx', label: 'Copperfield' },
+            { href: '/jersey-village-tx', label: 'Jersey Village' },
+          ]
+        : []),
     ],
   };
 }

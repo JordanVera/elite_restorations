@@ -13,6 +13,12 @@ export const neighborhoodSlugs = [
   'tomball-tx',
   'missouri-city-tx',
   'fulshear-tx',
+  'copperfield-tx',
+  'rosenberg-tx',
+  'jersey-village-tx',
+  'towne-lake-tx',
+  'bridgeland-tx',
+  'sienna-tx',
 ] as const;
 
 export const houstonPostSlugs = [

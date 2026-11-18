@@ -878,6 +878,8 @@ export const esPostsB: Article[] = [
             type: 'links',
             items: [
               { href: '/es/cypress-tx', label: 'Casas y patios en Cypress' },
+              { href: '/es/bridgeland-tx', label: 'Bridgeland' },
+              { href: '/es/towne-lake-tx', label: 'Towne Lake' },
               { href: '/gutters', label: 'Canaletas' },
               { href: '/fence-installation-repair', label: 'Bardas' },
               {
