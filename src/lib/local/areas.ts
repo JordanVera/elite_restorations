@@ -3,7 +3,14 @@ import { site } from '@/lib/site';
 
 export type Foundation = 'pier' | 'slab' | 'mixed' | 'post-tension' | 'raised';
 export type Weather = 'bayou' | 'reservoir' | 'coastal' | 'creek' | 'citywide';
-export type Authority = 'houston' | 'zoned-city' | 'village' | 'township' | 'mixed-cities';
+export type Authority =
+  | 'houston'
+  | 'zoned-city'
+  | 'village'
+  | 'township'
+  | 'mixed-cities'
+  | 'county'
+  | 'hosted';
 export type Hoa = 'usual' | 'mixed' | 'light';
 
 export type AreaProfile = {
@@ -21,6 +28,8 @@ export type AreaProfile = {
   foundation: Foundation;
   weather: Weather;
   authority: Authority;
+  /** City hall that permits a community which is not itself a city. */
+  permitCity?: string;
   trees: boolean;
   hoa: Hoa;
   /** Four words or fewer, so it does not become a reusable five-word phrase. */
@@ -77,6 +86,12 @@ const counties: Record<string, string> = {
   'Texas City': 'in Galveston County',
   'The Woodlands': 'mostly in Montgomery County, with a southern portion in Harris County',
   Magnolia: 'in Montgomery County',
+  Copperfield: 'in Harris County, inside the City of Houston',
+  Rosenberg: 'in Fort Bend County, beside Richmond',
+  'Jersey Village': 'in Harris County as its own city',
+  'Towne Lake': 'in unincorporated Harris County, north of US 290',
+  Bridgeland: 'in unincorporated Harris County, north of Cypress Creek',
+  Sienna: 'in Missouri City, in Fort Bend County',
 };
 
 const raw: Record<
@@ -741,6 +756,139 @@ const raw: Record<
       'The drive uses Highway 290 or the Grand Parkway to FM 1488 and is longer than the straight line from 77082.',
       'Storms here are inland: wind, hail, and heavy rain. Tree debris on a roof is a common reason for the visit. Surge is not the issue.',
       'We schedule Magnolia from the Houston office. A longer driveway on an acreage lot changes staging, and we look at that before materials are ordered.',
+    ],
+  },
+  Copperfield: {
+    neighbors: ['energy-corridor', 'jersey-village', 'bear-creek'],
+    landmark: 'Highway 6 at Clay Road',
+    lat: 29.835991,
+    lng: -95.645626,
+    direction: 'north of the office',
+    roads: 'Highway 6 north past Interstate 10 to Clay Road',
+    foundation: 'slab',
+    weather: 'creek',
+    authority: 'houston',
+    trees: true,
+    hoa: 'mixed',
+    housingShort: '1970s brick slab houses',
+    lines: [
+      'Copperfield is brick one-story and two-story houses from the late 1970s and the 1980s, on conventional concrete slabs rather than post-tension cable.',
+      'Copperfield sits between Highway 6, Clay Road, FM 529, and Barker Cypress Road, with Bear Creek and the Addicks Reservoir pool south of Clay Road.',
+      'Copperfield carries asphalt roofs that are often the second or third on the house, and trees along the greenbelts drop limbs into the valleys.',
+      'Copperfield kept many kitchens separate from the family room, and a lot of them have already been updated one piece at a time.',
+      'Copperfield is in the City of Houston, so a required permit comes from Houston, and many streets also have an association that reviews the exterior.',
+      'Copperfield has not seen storm water on every street, even where the neighborhood lakes and greenbelts hold rain after a hard storm.',
+    ],
+  },
+  Rosenberg: {
+    neighbors: ['richmond', 'sugar-land', 'sienna'],
+    landmark: 'Rosenberg City Hall',
+    lat: 29.546738,
+    lng: -95.806088,
+    direction: 'southwest of the office',
+    roads: 'Interstate 69 southwest past Sugar Land',
+    foundation: 'mixed',
+    weather: 'creek',
+    authority: 'zoned-city',
+    trees: false,
+    hoa: 'mixed',
+    housingShort: 'older town and slabs',
+    lines: [
+      'Rosenberg is the Fort Bend railroad town beside Richmond, with older wood and brick houses near Highway 36 and later slab houses farther out.',
+      'Rosenberg has the Brazos River to the west, and low ground nearer the river and Seabourne Creek has taken floodwater in past storms.',
+      'Rosenberg issues its own permits, and a Richmond permit does not cover an address along US 90A or Interstate 69.',
+      'Rosenberg mixes pier-and-beam houses near the original town with newer two-story slabs along FM 2218, FM 762, and the Grand Parkway.',
+      'Rosenberg keeps smaller, often patched roofs near downtown and larger asphalt roofs with several planes in the newer subdivisions.',
+      'Rosenberg sees associations in the newer sections, and those reviews usually cover the roof and the exterior rather than a kitchen inside the house.',
+    ],
+  },
+  'Jersey Village': {
+    neighbors: ['copperfield', 'energy-corridor', 'houston'],
+    landmark: 'Jersey Village City Hall',
+    lat: 29.883483,
+    lng: -95.568727,
+    direction: 'northeast of the office',
+    roads: 'Highway 6 or the Beltway to US 290',
+    foundation: 'slab',
+    weather: 'bayou',
+    authority: 'zoned-city',
+    trees: true,
+    hoa: 'light',
+    housingShort: '1960s brick slab ranches',
+    lines: [
+      'Jersey Village is its own city on US 290, between Jones Road and the Sam Houston Tollway, and a Houston permit does not cover an address inside that limit.',
+      'Jersey Village is mostly brick ranches and two-story plans from the 1960s through the 1980s, on concrete slabs and slightly larger lots.',
+      'Jersey Village has White Oak Bayou through the middle of it, and low streets along that bayou have flooded more than once, including in 2016 and 2017.',
+      'Jersey Village carries asphalt roofs on one and two stories, and limbs from the trees along the bayou land in the valleys.',
+      'Jersey Village still has a lot of original ranch kitchens, updated in pieces and partly closed off from the living room.',
+      'Jersey Village sends permits to its own city hall, which is a different counter from a Houston address a few blocks outside the limit on Senate Avenue or Jones Road.',
+    ],
+  },
+  'Towne Lake': {
+    neighbors: ['bridgeland', 'copperfield', 'jersey-village'],
+    landmark: 'the lake in Towne Lake',
+    lat: 29.930143,
+    lng: -95.697573,
+    direction: 'north of the office',
+    roads: 'US 290 northwest, then Tuckerton Road',
+    foundation: 'post-tension',
+    weather: 'citywide',
+    authority: 'county',
+    trees: false,
+    hoa: 'usual',
+    housingShort: 'newer lake-community houses',
+    lines: [
+      'Towne Lake is a master-planned community north of US 290, with two-story houses that started going up around 2008 beside a large lake between Tuckerton Road and Mueschke Road.',
+      'Towne Lake uses post-tension slabs in many houses around the lake, with cables in the concrete, unlike a conventional slab from the 1980s.',
+      'Towne Lake holds ordinary rain in the lake and the detention around it, which is a different water story from Cypress Creek south of US 290.',
+      'Towne Lake is not a city, and most addresses are in unincorporated Harris County, so the permit follows the address rather than a community counter or an automatic City of Houston permit.',
+      'Towne Lake carries large cut-up asphalt roofs, including planes over the garage that Tuckerton Road does not show, and the association usually reviews color.',
+      'Towne Lake was built with open kitchens, and a shower that stays on its drain does not need the post-tension slab cut.',
+    ],
+  },
+  Bridgeland: {
+    neighbors: ['towne-lake', 'katy', 'copperfield'],
+    landmark: 'Lake Bridgeland',
+    lat: 29.945247,
+    lng: -95.718808,
+    direction: 'north of the office',
+    roads: 'US 290 northwest to Fry Road',
+    foundation: 'post-tension',
+    weather: 'creek',
+    authority: 'county',
+    trees: false,
+    hoa: 'usual',
+    housingShort: 'newer village slab houses',
+    lines: [
+      'Bridgeland is several villages north of US 290, along Fry Road and Mason Road, with Cypress Creek as the south edge rather than one shared floor plan.',
+      'Bridgeland puts Creekland nearer the creek, Lakeland around the lakes, and Parkland and Prairieland on more open prairie, on newer slabs that are often post-tension.',
+      'Bridgeland is not a city, and addresses are commonly in unincorporated Harris County, so the permit is the county or the city that contains the lot.',
+      'Bridgeland asks the association to review roof color, paint, fences, and a patio cover before materials are ordered.',
+      'Bridgeland carries large cut-up roofs, with dormers and garage planes the front elevation hides, and south and west slopes age faster.',
+      'Bridgeland treats a lot next to the Cypress Creek greenway as different ground from a house in the middle of a village, and detention lakes take ordinary rain.',
+    ],
+  },
+  Sienna: {
+    neighbors: ['sugar-land', 'pearland', 'stafford'],
+    landmark: 'Highway 6 at Sienna Parkway',
+    lat: 29.539155,
+    lng: -95.5345,
+    direction: 'southeast of the office',
+    roads: 'Highway 6 south to Sienna Parkway',
+    foundation: 'post-tension',
+    weather: 'creek',
+    authority: 'hosted',
+    permitCity: 'The City of Missouri City',
+    trees: false,
+    hoa: 'usual',
+    housingShort: '1990s master-planned houses',
+    lines: [
+      'Sienna is the master-planned community in Missouri City along the parkway, started in the 1990s, and it is not the older Quail Valley fabric.',
+      'Sienna sits in the City of Missouri City in Fort Bend County, so the permit comes from Missouri City, not from Houston and not from Sugar Land.',
+      'Sienna uses post-tension concrete in many later sections, while earlier slabs closer to Highway 6 are often a different pour.',
+      'Sienna drains through Steep Bank Creek in the southern part of the community, with lakes that also serve as detention on flat Fort Bend clay.',
+      'Sienna asks the association to review roof color, paint, and fences, while a kitchen inside the house is usually outside that review.',
+      'Sienna built later kitchens open to the next room, while earlier houses closer to Highway 6 can still be more closed and out of square.',
     ],
   },
 };

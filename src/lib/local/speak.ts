@@ -110,6 +110,24 @@ export function permitSentence(area: AreaProfile, exterior: boolean) {
       return `The Woodlands is a township, not a Houston neighborhood and not a single city hall. Village associations and deed covenants review a great deal of exterior work. ${interior} We ask which village and which review the address falls under before exterior materials are ordered.`;
     case 'mixed-cities':
       return `${area.name} sits where city limits are easy to mix up. ${interior} We confirm which city actually permits the address before anyone treats it as Houston, a village, or a county road.`;
+    case 'county':
+      return `${area.name} is not its own city hall. Most addresses are in unincorporated Harris County, so a permit follows the legal address rather than a community counter or an automatic City of Houston permit. ${
+        area.hoa === 'usual'
+          ? 'An association usually reviews the exterior on top of the permit.'
+          : area.hoa === 'mixed'
+            ? 'Some sections add an association review and some do not.'
+            : 'An association is the exception, not the default.'
+      } ${interior}`;
+    case 'hosted': {
+      if (!area.permitCity) throw new Error(`Missing permit city for ${area.slug}`);
+      return `${area.name} does not issue its own permits. ${area.permitCity} does. ${
+        area.hoa === 'usual'
+          ? 'An association usually reviews the exterior on top of that permit.'
+          : area.hoa === 'mixed'
+            ? 'Some sections add an association review and some do not.'
+            : 'An association is the exception, not the default.'
+      } ${interior}`;
+    }
     default:
       return interior;
   }
