@@ -6,7 +6,7 @@ import { NeighborhoodPageView } from "@/components/neighborhood-page";
 import { WaterCauseSections } from "@/components/water-cause-sections";
 import { brandLinksForService } from "@/lib/brand-nav";
 import { esNeighborhoods, getEsNeighborhood } from "@/lib/es/neighborhoods";
-import { katyDeckStoryEs } from "@/lib/es/project-stories";
+import { katyBathStoryEs, katyDeckStoryEs } from "@/lib/es/project-stories";
 import { esHubs, getEsHub } from "@/lib/es/hubs";
 import { readingForService } from "@/lib/related-reading";
 import { getService } from "@/lib/services";
@@ -119,6 +119,14 @@ export default async function SpanishServicePage({
                 {
                   href: katyDeckStoryEs.path,
                   label: katyDeckStoryEs.linkLabel,
+                },
+              ]
+            : []),
+          ...(slug === "bathroom-remodeling"
+            ? [
+                {
+                  href: katyBathStoryEs.path,
+                  label: katyBathStoryEs.linkLabel,
                 },
               ]
             : []),

@@ -28,6 +28,8 @@ export type Project = {
    * after the existing sample, so those samples stay put.
    */
   story?: boolean;
+  /** Guides and city pages that sit beside the service links. */
+  reading?: { href: string; label: string }[];
 };
 
 export const projectCategories: ProjectCategory[] = [
@@ -100,6 +102,18 @@ const altOverrides: Record<string, string> = {
     'Close-up of the composite deck corner, dark fascia, and built-in steps built by Elite Restorations in Katy, TX.',
   'katy-deck/katy-composite-deck-06.jpg':
     'Full-length view of a composite deck and closed hot tub along the back of a house in Katy, TX, built by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-01.jpg':
+    'Square rain shower head over large white and gray marble-look tile, with a recessed niche lined in hex mosaic, in a Katy bathroom finished by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-02.jpg':
+    'Frameless glass walk-in shower in Katy, TX, with marble-look walls, a rain shower head, a handheld, two mosaic niches, a pebble floor, a built-in bench, and a glass-block window, finished by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-03.jpg':
+    'Walk-in shower in Katy with a rain shower head, a handheld, a built-in bench, and a glass-block window, lined in large marble-look tile, finished by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-04.jpg':
+    'Frameless glass shower in Katy, TX, with marble-look walls, two recessed mosaic niches, a built-in bench, a pebble mosaic floor, and a square drain, finished by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-05.jpg':
+    'Corner jetted tub with a marble-look deck and tiled apron beside a glass-block window, next to a pebble mosaic shower floor, in a Katy bathroom by Elite Restorations.',
+  'katy-bathroom/katy-marble-bathroom-06.jpg':
+    'White corner jetted tub on a marble-look deck with a tiled apron, a glass-block window, and large floor tile, in a Katy, TX bathroom finished by Elite Restorations.',
 };
 
 const projectSeoNames: Record<string, string> = {
@@ -120,6 +134,7 @@ const projectSeoNames: Record<string, string> = {
   'blackhorse-ranch-cypress': 'Cypress Floors & Kitchen',
   'crosby-water-damage': 'Crosby Water Damage Repair',
   'katy-composite-deck': 'Katy Composite Deck',
+  'katy-marble-bathroom': 'Katy Marble Bathroom',
 };
 
 export function projectSeoName(slug: string) {
@@ -287,6 +302,15 @@ const cypressJob = gallery('cypress', 'Cypress project', [
   '06-after-kitchen.jpg',
   '07-after-kitchen-counters.jpg',
   '08-after-stairs.jpg',
+]);
+
+const katyBath = gallery('katy-bathroom', 'Katy bathroom', [
+  'katy-marble-bathroom-01.jpg',
+  'katy-marble-bathroom-02.jpg',
+  'katy-marble-bathroom-03.jpg',
+  'katy-marble-bathroom-04.jpg',
+  'katy-marble-bathroom-05.jpg',
+  'katy-marble-bathroom-06.jpg',
 ]);
 
 const katyDeck = gallery('katy-deck', 'Katy deck', [
@@ -669,6 +693,37 @@ export const projects: Project[] = [
     cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
     story: true,
   },
+  {
+    slug: 'katy-marble-bathroom',
+    title: 'Marble-Look Walk-In Shower and Jetted Tub Bathroom in Katy, TX',
+    category: 'Bathrooms',
+    tagline: 'Marble-look shower and corner jetted tub, finished February 2025.',
+    summary: [
+      'Elite Restorations finished this marble-look bathroom in Katy, Texas, in February 2025. The room has a frameless glass walk-in shower and a corner jetted tub.',
+      'Large-format white and gray marble-look tile covers the shower walls. The frameless glass enclosure has a rain shower head and a handheld. Two recessed niches have pebble and hex mosaic backs. The shower floor is pebble mosaic with a square drain, and a built-in bench sits in the shower. Glass-block windows light the room.',
+      'A corner jetted tub sits on a marble-look deck, with a tiled apron on the front. The jets are visible inside the tub, and a metal faucet sits on the deck.',
+      'A glass enclosure holds the spray inside the shower, which helps in Houston humidity, where the air is already damp. Large-format tile on the walls leaves fewer grout lines to wipe than a wall of small tile. The pebble floor has many joints, so rinse it after use and clean the grout before soap film builds up. Squeegee the glass so spots do not haze it, and wipe the deck around the tub so water does not sit by the faucet. Glass-block windows bring in daylight and stay closed, so the room is not sitting under an open window in humid air. We are family-owned, serving Houston since 1993. See [bathroom remodeling](/bathroom-remodeling), [bathroom remodeling in Katy](/bathroom-remodeling-katy-tx), and the [Houston bathroom remodel guide](/houston-bathroom-remodel-guide) for waterproofing, a fan that vents outside, and how a hall bath differs from a room like this one.',
+    ],
+    notes: [
+      'Large-format white and gray marble-look wall tile',
+      'Frameless glass walk-in shower',
+      'Rain shower head and handheld',
+      'Two recessed niches with pebble and hex mosaic backs',
+      'Pebble mosaic shower floor with a square drain',
+      'Built-in shower bench',
+      'Glass-block windows',
+      'Corner jetted tub with a marble-look deck and tiled apron',
+    ],
+    services: ['bathroom-remodeling'],
+    reading: [
+      { href: '/bathroom-remodeling-katy-tx', label: 'Bathroom remodeling in Katy' },
+      { href: '/houston-bathroom-remodel-guide', label: 'Houston bathroom remodel guide' },
+    ],
+    cover: katyBath[1],
+    gallery: katyBath,
+    cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
+    story: true,
+  },
 ];
 
 export const projectsBySlug = new Map(projects.map((p) => [p.slug, p]));
@@ -741,6 +796,7 @@ for (const project of projects) {
       project.cta ?? '',
       ...project.summary,
       ...project.notes,
+      ...(project.reading ?? []).map((link) => link.label),
       ...project.gallery.map((image) => image.alt),
     ].join('\n'),
   );

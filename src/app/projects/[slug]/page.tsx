@@ -8,6 +8,7 @@ import { ImageReveal, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
 import { Photo } from "@/components/photo";
 import { ProjectGallery, ProjectPhotoButton } from "@/components/project-gallery";
+import { StoryCopy } from "@/components/story-copy";
 import { spanishPathFor } from "@/lib/i18n";
 import { getProject, projectSeoName, projects } from "@/lib/projects";
 import { languageAlternates, localTitle, pageMetadata } from "@/lib/seo";
@@ -89,7 +90,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                           : "measure text-lg leading-relaxed text-muted-foreground"
                       }
                     >
-                      {p}
+                      <StoryCopy text={p} />
                     </p>
                   </Reveal>
                 ))}
@@ -115,6 +116,24 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                           className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                         >
                           {s.name}
+                          <ArrowUpRight className="size-3.5" aria-hidden />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {project.reading && project.reading.length > 0 && (
+                <div className="mt-10">
+                  <p className="eyebrow text-accent-ink">Related reading</p>
+                  <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                    {project.reading.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
+                        >
+                          {link.label}
                           <ArrowUpRight className="size-3.5" aria-hidden />
                         </Link>
                       </li>

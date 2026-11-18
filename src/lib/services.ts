@@ -203,6 +203,10 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     ],
     links: [
       {
+        href: '/projects/katy-marble-bathroom',
+        label: 'Marble-look bathroom in Katy',
+      },
+      {
         href: '/bathroom-remodel-cost-houston',
         label: 'What changes a bathroom remodel cost',
       },
