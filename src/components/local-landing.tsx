@@ -7,7 +7,7 @@ import { Faq } from '@/components/faq';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { Photo } from '@/components/photo';
+import { bleedPhotoSizes, Photo } from '@/components/photo';
 import { imagesForService, type ServiceGalleryItem } from '@/lib/projects';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import {
@@ -174,7 +174,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
           >
             <Photo
               image={hero}
-              sizes="(min-width: 1920px) 1800px, 96vw"
+              sizes={bleedPhotoSizes}
               priority
             />
           </ImageReveal>

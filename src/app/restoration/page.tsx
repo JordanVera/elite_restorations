@@ -11,7 +11,7 @@ import { restorationFaqs as extraRestorationFaqs } from '@/lib/faqs/pages';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { Photo } from '@/components/photo';
+import { bleedPhotoSizes, Photo } from '@/components/photo';
 import { landingsForService } from '@/lib/local-landings';
 import { absoluteUrl, languageAlternates, localBusinessSchema, pageMetadata } from '@/lib/seo';
 import { getService } from '@/lib/services';
@@ -173,7 +173,7 @@ export default function RestorationPage() {
           >
             <Photo
               image={photo}
-              sizes="(min-width: 1920px) 1800px, 96vw"
+              sizes={bleedPhotoSizes}
               priority
             />
           </ImageReveal>

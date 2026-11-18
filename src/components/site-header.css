@@ -1,0 +1,28 @@
+.site-nav-panel {
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 150ms;
+}
+
+.site-nav-item:is(:hover, :focus-within, [data-open]) > .site-nav-panel {
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 120ms;
+}
+
+.site-nav-item:is(:hover, :focus-within, [data-open]) .site-nav-chevron {
+  rotate: 180deg;
+}
+
+.site-nav-item:is(:hover, :focus-within, [data-open]) .site-nav-underline {
+  scale: 1 1;
+}
+
+/* Open menu paints a solid bar over the scrolled glass treatment. */
+.site-header:has([data-nav-item]:is(:hover, :focus-within, [data-open])) {
+  border-color: var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}

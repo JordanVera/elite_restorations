@@ -15,8 +15,19 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer, webpack }) => {
     if (!isServer) {
-      // Next always emits the legacy core-js nomodule polyfill. The browsers
-      // in package.json (Chrome/Edge/Firefox 111+, Safari 16.4+) already have
+      // Next always imports polyfill-module into the main app chunk (the
+      // numbered chunk Lighthouse calls out). package.json browserslist
+      // matches Next's own modern target, which already has these APIs.
+      // URL.canParse is only called from dev and server helpers, not this
+      // client chunk.
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /[\\/]next[\\/]dist[\\/]build[\\/]polyfills[\\/]polyfill-module(?:\.js)?$/,
+          path.join(__dirname, 'src/lib/empty-polyfill.js'),
+        ),
+      );
+      // Next also copies a nomodule core-js bundle. The browsers in
+      // package.json (Chrome/Edge/Firefox 111+, Safari 16.4+) already have
       // those features, so the file is dead weight on every page.
       const stage = webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT;
       config.plugins.push({
@@ -121,7 +132,9 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [480, 768, 1024, 1440, 1920, 2560],
+    // 1080 and 1200 stop a phone at ~2.6x (about 1080px) from jumping
+    // 1024 → 1440. 1200 also covers a full-bleed 100vw hero.
+    deviceSizes: [480, 768, 1024, 1080, 1200, 1440, 1920, 2560],
     qualities: [60, 70, 75, 78, 80, 85],
   },
   poweredByHeader: false,
