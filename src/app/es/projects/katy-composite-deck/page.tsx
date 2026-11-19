@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CtaBand } from "@/components/cta-band";
 import { ImageReveal, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
-import { Photo } from "@/components/photo";
+import { bleedPhotoSizes, Photo } from "@/components/photo";
 import { ProjectGallery, ProjectPhotoButton } from "@/components/project-gallery";
 import { katyDeckStoryEs } from "@/lib/es/project-stories";
 import { languageAlternates, pageMetadata } from "@/lib/seo";
@@ -44,10 +44,10 @@ export default function SpanishKatyDeckStoryPage() {
           <ImageReveal immediate className="relative aspect-[4/3] w-full md:aspect-[21/9]">
             {coverIndex >= 0 ? (
               <ProjectPhotoButton index={coverIndex} alt={story.cover.alt} className="absolute inset-0">
-                <Photo image={story.cover} sizes="(min-width: 1920px) 1800px, 96vw" priority />
+                <Photo image={story.cover} sizes={bleedPhotoSizes} priority />
               </ProjectPhotoButton>
             ) : (
-              <Photo image={story.cover} sizes="(min-width: 1920px) 1800px, 96vw" priority />
+              <Photo image={story.cover} sizes={bleedPhotoSizes} priority />
             )}
           </ImageReveal>
         </div>

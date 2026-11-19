@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import * as Dialog from 'radix-ui/dialog';
 import { ArrowUpRight, ChevronDown, Phone, X } from 'lucide-react';
 
-import { LanguageSwitch } from '@/components/language-switch';
+import { LanguageSwitchLinks } from '@/components/language-switch-links';
 import { SiteLogo } from '@/components/site-logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
@@ -34,10 +34,18 @@ const esNavLabels: Record<string, string> = {
   '/emergency': 'Emergencia',
 };
 
-export function MobileNav({ className }: { className?: string }) {
+export function MobileNav({
+  className,
+  initialOpen = false,
+}: {
+  className?: string;
+  initialOpen?: boolean;
+}) {
   const pathname = usePathname() || '/';
   const es = isSpanishPath(pathname);
-  const [openOn, setOpenOn] = React.useState<string | null>(null);
+  const [openOn, setOpenOn] = React.useState<string | null>(
+    initialOpen ? pathname : null,
+  );
   const [servicesOpen, setServicesOpen] = React.useState(false);
   const open = openOn === pathname;
   const homeHref = es ? '/es' : '/';
@@ -92,7 +100,7 @@ export function MobileNav({ className }: { className?: string }) {
           </div>
           <div className="gutter border-b border-border pb-4">
             <p className="eyebrow text-muted-foreground">{es ? 'Idioma' : 'Language'}</p>
-            <LanguageSwitch labels="full" className="mt-1" />
+            <LanguageSwitchLinks pathname={pathname} labels="full" className="mt-1" />
           </div>
 
           <nav

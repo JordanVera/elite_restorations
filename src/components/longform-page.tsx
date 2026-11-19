@@ -7,7 +7,7 @@ import { Faq } from "@/components/faq";
 import { InsuranceClaimHelp } from "@/components/insurance-claim-help";
 import { JsonLd } from "@/components/json-ld";
 import { PageHero } from "@/components/page-hero";
-import { Photo } from "@/components/photo";
+import { bleedPhotoSizes, Photo } from "@/components/photo";
 import { PropertyScopeNote } from "@/components/property-scope-note";
 import { ProseSections } from "@/components/prose-sections";
 import { ImageReveal } from "@/components/motion";
@@ -90,7 +90,7 @@ export function LongformPage({
       {image ? (
         <div className="gutter mx-auto max-w-[120rem] pt-6">
           <ImageReveal immediate className="relative aspect-[4/5] w-full sm:aspect-[16/10] md:aspect-[21/9]">
-            <Photo image={image} sizes="(min-width: 1920px) 1800px, 96vw" priority />
+            <Photo image={image} sizes={bleedPhotoSizes} priority />
           </ImageReveal>
         </div>
       ) : null}

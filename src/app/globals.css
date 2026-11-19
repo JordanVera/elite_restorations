@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant header-scrolled (&[data-scrolled="true"]);
+@custom-variant header-hidden (&[data-hidden="true"]);
+@custom-variant header-hero (&[data-home="true"]:not([data-scrolled="true"]):not(:has([data-nav-item]:is(:hover, :focus-within, [data-open]))));
 
 @theme inline {
   --font-sans: var(--font-body);

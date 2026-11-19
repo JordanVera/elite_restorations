@@ -20,7 +20,7 @@ import { ProseSections } from '@/components/prose-sections';
 import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
-import { Photo } from '@/components/photo';
+import { bleedPhotoSizes, Photo } from '@/components/photo';
 import { areaPages, getAreaPage } from '@/lib/area-pages';
 import { articlePath, articles, getArticle } from '@/lib/articles';
 import { readingForService } from '@/lib/related-reading';
@@ -313,7 +313,7 @@ export default async function ServicePage({
           >
             <Photo
               image={service.image}
-              sizes="(min-width: 1920px) 1800px, 96vw"
+              sizes={bleedPhotoSizes}
               priority
             />
           </ImageReveal>

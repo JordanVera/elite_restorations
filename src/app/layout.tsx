@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import type { Metadata, Viewport } from 'next';
 import { Geist, Instrument_Serif } from 'next/font/google';
 import { headers } from 'next/headers';
@@ -19,13 +21,42 @@ const display = Instrument_Serif({
   style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
+  // Next's own preload adds ?dpl= to the link, which does not match the
+  // inlined url(), so the file is downloaded twice. Preloads are emitted
+  // below with the same path the stylesheet uses. Italic stays because the
+  // homepage hero <em> is above the fold.
+  preload: false,
 });
 
 const body = Geist({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
+  preload: false,
 });
+
+let latinFontHrefs: string[] | null = null;
+
+function preloadableLatinFonts() {
+  if (latinFontHrefs) return latinFontHrefs;
+  const hrefs: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), '.next/static/css');
+    for (const name of fs.readdirSync(dir)) {
+      if (!name.endsWith('.css')) continue;
+      const css = fs.readFileSync(path.join(dir, name), 'utf8');
+      for (const block of css.split('@font-face').slice(1)) {
+        if (!block.includes('u+0131')) continue;
+        const match = block.match(/url\((\/_next\/static\/media\/[^)]+\.woff2)\)/);
+        if (match) hrefs.push(match[1]);
+      }
+    }
+  } catch {
+    // CSS is not on disk yet during the production build's page collection.
+  }
+  latinFontHrefs = hrefs;
+  return hrefs;
+}
 
 const defaultTitle = documentTitle('Houston Restoration & Remodeling');
 
@@ -81,6 +112,16 @@ export default async function RootLayout({
       className={cn(display.variable, body.variable)}
     >
       <head>
+        {preloadableLatinFonts().map((href) => (
+          <link
+            key={href}
+            rel="preload"
+            href={href}
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+        ))}
         <script
           dangerouslySetInnerHTML={{
             __html:
