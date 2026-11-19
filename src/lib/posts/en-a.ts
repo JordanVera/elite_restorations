@@ -110,7 +110,7 @@ export const houstonPostsA: Article[] = [
           },
           {
             type: 'p',
-            text: 'We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not take a percentage of a settlement, and we do not decide what the policy pays. We can meet the adjuster on the house, show what we found, and write a repair estimate for the construction. That estimate is the price of the work, not a promise of payment. Your insurer decides coverage, the deductible, and the amount.',
+            text: 'We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not decide what the policy pays. We can meet the adjuster on the house, show what we found, and write a repair estimate for the construction. That estimate is the price of the work, not a promise of payment. Your insurer decides coverage, the deductible, and the amount.',
           },
           {
             type: 'p',

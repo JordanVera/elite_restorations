@@ -464,7 +464,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
       {
         q: 'Who pays the insurance claim?',
-        a: 'Your insurer decides. We are not public adjusters. We photograph, tarp, dry, and rebuild the parts you hire. We do not take a percentage of a settlement.',
+        a: 'Your insurer decides. We are not public adjusters. We photograph, tarp, dry, and rebuild the parts you hire.',
       },
     ],
     [
