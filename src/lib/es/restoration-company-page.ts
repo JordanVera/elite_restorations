@@ -46,7 +46,7 @@ export const restorationCompanyEs: RestorationCompanyCopy = {
       eyebrow: 'Seguro',
       heading: 'Cómo funciona trabajar con el seguro',
       paragraphs: [
-        'Cuando la pérdida puede estar cubierta, Elite trabaja con su compañía de seguros como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide la cobertura y el pago. No cobramos un porcentaje del acuerdo.',
+        'Cuando la pérdida puede estar cubierta, Elite trabaja con su compañía de seguros como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide la cobertura y el pago.',
         'Negociar el alcance es caminar el daño con el ajustador y alinear la reparación con la casa que tenemos enfrente. No podemos prometer una aprobación ni una cantidad. Lea la póliza, o pregunte a la aseguradora cómo quiere el aviso. No damos consejo legal.',
         'Detener más agua no espera esa decisión. Una lona, unas tablas y el secado pueden empezar mientras el reclamo sigue abierto. El registro de fotos de este sitio es suyo aunque no nos contrate. Su aseguradora sigue decidiendo el reclamo.',
       ],
@@ -185,7 +185,7 @@ export const restorationCompanyEs: RestorationCompanyCopy = {
     },
     {
       q: '¿Trabajan con el seguro?',
-      a: 'Sí. Elite trabaja con su compañía de seguros como su contratista y negocia el alcance del reclamo con el ajustador. Su aseguradora decide la cobertura y el pago. No cobramos un porcentaje del acuerdo.',
+      a: 'Sí. Elite trabaja con su compañía de seguros como su contratista y negocia el alcance del reclamo con el ajustador. Su aseguradora decide la cobertura y el pago.',
     },
     {
       q: '¿Dónde está la oficina y a qué hora abre?',

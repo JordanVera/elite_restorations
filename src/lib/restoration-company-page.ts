@@ -46,7 +46,7 @@ export const restorationCompanyEn: RestorationCompanyCopy = {
       eyebrow: 'Insurance',
       heading: 'How working with insurance works',
       paragraphs: [
-        'When a loss may be covered, Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides coverage and payment. We do not take a percentage of a settlement.',
+        'When a loss may be covered, Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. Your insurer decides coverage and payment.',
         'Negotiating the scope means walking the damage with the adjuster and lining the repair up with the house in front of us. We cannot promise an approval or a dollar amount. Read the policy, or ask the insurer how notice should be given. We do not give legal advice.',
         'Stopping more water does not wait on that decision. A tarp, a board-up, and drying can start while the claim is still open. The photo log on this site is yours whether or not you hire us. Your insurer still decides the claim.',
       ],
@@ -161,7 +161,7 @@ export const restorationCompanyEn: RestorationCompanyCopy = {
     },
     {
       q: 'Do you work with insurance?',
-      a: 'Yes. Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We do not take a percentage of a settlement.',
+      a: 'Yes. Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment.',
     },
     {
       q: 'Where is the office, and when is it open?',
