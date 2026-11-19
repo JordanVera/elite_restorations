@@ -39,9 +39,9 @@ const bathKaty = shot(
   '/projects/katy-marble-bathroom',
 );
 const powder = shot(
-  '/images/edited/powder-vanity.webp',
-  'Painted powder room with a dark vanity and a round mirror',
-  '/projects/charcoal-cream-and-wallpaper-baths',
+  '/images/projects/bathrooms/navy-vanity-gold-pulls.webp',
+  'Painted navy vanity with gold pulls and a vessel sink',
+  '/projects/vanities-gold-and-glass',
 );
 const woodLight = shot(
   '/images/edited/wood-light.webp',
@@ -56,8 +56,8 @@ const vinylRoom = shot(
   'Wood-look plank flooring in a bright finished room',
 );
 const plankGray = shot(
-  '/images/edited/plank-gray.webp',
-  'Gray wood-look plank flooring in a room with three windows',
+  '/images/projects/flooring/stair-landing-hardwood.jpg',
+  'Wood plank flooring across a stair landing',
   '/projects/floors-that-hold-the-room',
 );
 const stair = shot(
@@ -90,14 +90,14 @@ const siding = shot(
   '/projects/exteriors-renewed',
 );
 const deck = shot(
-  '/images/edited/deck-boards.webp',
-  'Composite deck corner and steps',
+  '/images/edited/deck-surface.webp',
+  'Composite deck boards',
   '/projects/katy-composite-deck',
 );
 const waterKitchen = shot(
-  '/images/edited/water-kitchen.webp',
-  'Finished kitchen with shaker cabinets and a quartz counter after restoration work in Cypress',
-  '/projects/blackhorse-ranch-cypress',
+  '/images/projects/kitchens/shaker-diagonal-tile-floor.jpg',
+  'Finished kitchen with white cabinets, a lantern-tile backsplash, and a marble floor',
+  '/projects/coffered-ceilings-marble-islands',
 );
 
 const sets: Record<string, { hero: EditedShot; gallery: readonly EditedShot[] }> = {
