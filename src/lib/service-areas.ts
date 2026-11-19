@@ -161,6 +161,36 @@ const details: Record<string, { setting: string; clause: string }> = {
       'Magnolia is northwest of Houston, with newer suburban houses and larger lots than neighborhoods inside the Loop.',
     clause: 'newer suburban houses on larger lots',
   },
+  Copperfield: {
+    setting:
+      'Copperfield is a west Houston neighborhood of brick houses from the late 1970s and the 1980s, on conventional slabs, between Highway 6 and Barker Cypress Road. Bear Creek and the Addicks Reservoir pool sit south of Clay Road, and permits come from the City of Houston.',
+    clause: '1970s and 1980s brick houses on conventional slabs',
+  },
+  Rosenberg: {
+    setting:
+      'Rosenberg is the Fort Bend city beside Richmond, with an older railroad town and newer slab subdivisions. The Brazos River is west of town, Seabourne Creek drains the flat clay, and Rosenberg issues its own permits.',
+    clause: 'an older railroad town and newer slab subdivisions',
+  },
+  'Jersey Village': {
+    setting:
+      'Jersey Village is its own city on US 290, with brick ranches from the 1960s through the 1980s on slabs. White Oak Bayou runs through it, and permits come from Jersey Village, not from Houston.',
+    clause: '1960s to 1980s brick ranches on slabs along White Oak Bayou',
+  },
+  'Towne Lake': {
+    setting:
+      'Towne Lake is the master-planned community north of US 290 in Cypress, with two-story houses around a lake since about 2008, often on post-tension slabs. Most addresses are in unincorporated Harris County.',
+    clause: 'newer houses around a lake, often on post-tension slabs',
+  },
+  Bridgeland: {
+    setting:
+      'Bridgeland is the Cypress community of villages along Fry Road and Mason Road, with Cypress Creek on the south edge and newer post-tension slabs. Addresses are commonly in unincorporated Harris County.',
+    clause: 'newer villages along Fry Road, with Cypress Creek to the south',
+  },
+  Sienna: {
+    setting:
+      'Sienna is the master-planned community in Missouri City along Sienna Parkway, in Fort Bend County, with later post-tension houses and earlier sections nearer Highway 6. Missouri City issues the permits.',
+    clause: 'master-planned houses in Missouri City along Sienna Parkway',
+  },
 };
 
 export const serviceAreas: ServiceArea[] = site.serviceArea.map((name) => {

@@ -1,10 +1,10 @@
 import { assertCopyAllowed } from '@/lib/copy-guards';
 import { neighborhoodSlugs, type NeighborhoodSlug } from '@/lib/locale-paths';
 import type { NeighborhoodPage } from '@/lib/neighborhood-types';
-import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { getProject } from '@/lib/projects';
 import { titleFits } from '@/lib/seo';
-import { getService } from '@/lib/services';
+import { localLandingSlug, parseLocalLandingSlug } from '@/lib/local-paths';
+import { getService, isCityIndexedService, services as serviceCatalog } from '@/lib/services';
 import { wordCount } from '@/lib/words';
 
 const phone = '(713) 909-0034';
@@ -92,6 +92,15 @@ const services = {
     note,
   }),
 };
+
+function ownCityServiceLinks(area: string, name: string) {
+  return serviceCatalog
+    .filter((service) => isCityIndexedService(service.slug))
+    .map((service) => ({
+      href: `/${localLandingSlug(service.slug, area)}`,
+      label: `${service.name} in ${name}`,
+    }));
+}
 
 export const neighborhoods: readonly NeighborhoodPage[] = [
   page(
@@ -773,6 +782,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/water-damage-restoration-energy-corridor-tx', label: 'Water damage in the Energy Corridor' },
       { href: '/kitchen-remodeling-houston-tx', label: 'Kitchen remodeling in Houston' },
       { href: '/roofing-houston-tx', label: 'Roofing in Houston' },
+      ...ownCityServiceLinks('copperfield', 'Copperfield'),
     ],
   ),
   page(
@@ -826,6 +836,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/bathroom-remodeling-richmond-tx', label: 'Bathroom remodeling in Richmond' },
       { href: '/water-damage-restoration-richmond-tx', label: 'Water damage in Richmond' },
       { href: '/fulshear-tx', label: 'Fulshear' },
+      ...ownCityServiceLinks('rosenberg', 'Rosenberg'),
     ],
   ),
   page(
@@ -880,6 +891,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/bathroom-remodeling-houston-tx', label: 'Bathroom remodeling in Houston' },
       { href: '/cypress-tx', label: 'Cypress' },
       { href: '/copperfield-tx', label: 'Copperfield' },
+      ...ownCityServiceLinks('jersey-village', 'Jersey Village'),
     ],
   ),
   page(
@@ -933,6 +945,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/roofing-katy-tx', label: 'Roofing in Katy' },
       { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
       { href: '/water-damage-restoration-katy-tx', label: 'Water damage in Katy' },
+      ...ownCityServiceLinks('towne-lake', 'Towne Lake'),
     ],
   ),
   page(
@@ -987,6 +1000,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
       { href: '/bathroom-remodeling-katy-tx', label: 'Bathroom remodeling in Katy' },
       { href: '/water-damage-restoration-katy-tx', label: 'Water damage in Katy' },
+      ...ownCityServiceLinks('bridgeland', 'Bridgeland'),
     ],
   ),
   page(
@@ -1041,6 +1055,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/bathroom-remodeling-sugar-land-tx', label: 'Bathroom remodeling in Sugar Land' },
       { href: '/water-damage-restoration-sugar-land-tx', label: 'Water damage in Sugar Land' },
       { href: '/roofing-pearland-tx', label: 'Roofing in Pearland' },
+      ...ownCityServiceLinks('sienna', 'Sienna'),
     ],
   ),
 ];
