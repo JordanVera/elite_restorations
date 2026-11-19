@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/es/blog',
     '/houston-storm-damage',
+    '/restoration-company-houston',
     '/insurance-claims/companies',
   ];
   const spanishRoutes = [
@@ -85,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/es/emergency',
     '/es/contact',
     '/es/houston-storm-damage',
+    '/es/restoration-company-houston',
     ...spanishServiceSlugs.map((slug) => `/es/${slug}`),
   ];
   return [

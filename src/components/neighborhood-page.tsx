@@ -204,6 +204,26 @@ export function NeighborhoodPageView({
               ))}
             </ul>
           ) : null}
+          <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+            {es ? (
+              <Link
+                href="/es/restoration-company-houston"
+                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+              >
+                Empresa de restauración en Houston
+              </Link>
+            ) : (
+              <Link
+                href="/restoration-company-houston"
+                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+              >
+                Restoration company in Houston
+              </Link>
+            )}
+            {es
+              ? ' reúne los servicios y el resto de las zonas.'
+              : ' lists every service and the rest of the areas.'}
+          </p>
         </div>
       </section>
 

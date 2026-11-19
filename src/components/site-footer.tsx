@@ -143,6 +143,14 @@ export function SiteFooter({ es }: { es: boolean }) {
                 </Link>
               </li>
               <li>
+                <Link
+                  href={es ? '/es/restoration-company-houston' : '/restoration-company-houston'}
+                  className={linkClass}
+                >
+                  {es ? 'Empresa de restauración en Houston' : 'Restoration company in Houston'}
+                </Link>
+              </li>
+              <li>
                 <Link href={es ? '/es/houston-storm-damage' : '/houston-storm-damage'} className={linkClass}>
                   {es ? 'Daño por tormenta' : 'Storm damage'}
                 </Link>
