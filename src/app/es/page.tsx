@@ -55,8 +55,9 @@ export default function SpanishHomePage() {
           <p className="kitchen-description">
             Remodelamos cocinas y baños en el área de Houston. Si está entrando
             agua, o acaba de pegar una tormenta, empiece por{" "}
-            <Link href="/es/restoration">restauración en Houston</Link>. Después
-            de un huracán, granizo o helada, vea{" "}
+            <Link href="/es/restoration">restauración en Houston</Link>.             El mapa de servicios y zonas está en la{" "}
+            <Link href="/es/restoration-company-houston">empresa de restauración en Houston</Link>.
+            Después de un huracán, granizo o helada, vea{" "}
             <Link href="/es/houston-storm-damage">ayuda por tormenta</Link>.
           </p>
           <div className="kitchen-actions">

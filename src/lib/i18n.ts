@@ -33,6 +33,7 @@ const staticSpanishPaths: Record<string, string> = {
   "/emergency": "/es/emergency",
   "/contact": "/es/contact",
   "/houston-storm-damage": "/es/houston-storm-damage",
+  "/restoration-company-houston": "/es/restoration-company-houston",
   "/certainteed-roofing-houston": "/es/certainteed-roofing-houston",
   "/james-hardie-siding-houston": "/es/james-hardie-siding-houston",
   "/sherwin-williams-painting-houston": "/es/sherwin-williams-painting-houston",

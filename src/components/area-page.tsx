@@ -155,6 +155,15 @@ export function AreaPageView({ page }: { page: AreaPage }) {
                 </li>
               ))}
             </ul>
+            <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+              <Link
+                href="/restoration-company-houston"
+                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+              >
+                Restoration company in Houston
+              </Link>{' '}
+              lists every service and the city pages outside this district.
+            </p>
           </div>
         </section>
       )}
