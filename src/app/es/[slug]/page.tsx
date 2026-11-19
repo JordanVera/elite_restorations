@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { LocalLandingView } from "@/components/local-landing";
 import { LongformPage } from "@/components/longform-page";
 import { NeighborhoodPageView } from "@/components/neighborhood-page";
 import { WaterCauseSections } from "@/components/water-cause-sections";
 import { brandLinksForService } from "@/lib/brand-nav";
+import { esCityLandings, getEsCityLanding } from "@/lib/es/city-landings";
+import { editedPhotoSet } from "@/lib/edited-photos";
 import { esNeighborhoods, getEsNeighborhood } from "@/lib/es/neighborhoods";
 import { katyBathStoryEs, katyDeckStoryEs } from "@/lib/es/project-stories";
 import { esHubs, getEsHub } from "@/lib/es/hubs";
@@ -26,6 +29,7 @@ export function generateStaticParams() {
   return [
     ...esHubs.map((hub) => ({ slug: hub.slug })),
     ...esNeighborhoods.map((page) => ({ slug: page.slug })),
+    ...esCityLandings.map((page) => ({ slug: page.slug })),
   ];
 }
 
@@ -43,6 +47,17 @@ export async function generateMetadata({
       path: neighborhood.path,
       locale: "es",
       languages: languageAlternates(`/${slug}`, neighborhood.path),
+    });
+  }
+  const city = getEsCityLanding(slug);
+  if (city) {
+    return pageMetadata({
+      title: city.title,
+      description: city.description,
+      path: city.path,
+      locale: "es",
+      image: editedPhotoSet(city.serviceSlug).hero.image.src,
+      languages: languageAlternates(`/${slug}`, city.path),
     });
   }
   const hub = getEsHub(slug);
@@ -73,6 +88,10 @@ export default async function SpanishServicePage({
         locale="es"
       />
     );
+  }
+  const city = getEsCityLanding(slug);
+  if (city) {
+    return <LocalLandingView landing={city} locale="es" />;
   }
   const hub = getEsHub(slug);
   const service = getService(slug);

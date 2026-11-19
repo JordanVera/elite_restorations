@@ -9,6 +9,7 @@ import { articlePath, articles } from '@/lib/articles';
 import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
 import { legalEffectiveDate } from '@/lib/legal';
+import { esCityLandings } from '@/lib/es/city-landings';
 import { localLandings } from '@/lib/local-landings';
 import { esProjectStories } from '@/lib/es/project-stories';
 import { projects } from '@/lib/projects';
@@ -105,6 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // City pages, the homepage, and about take this build time as lastmod,
     // so a production deploy refreshes the date after their copy changes.
     ...localLandings.map((page) => entry(page.path, 0.5, builtAt)),
+    ...esCityLandings.map((page) => entry(page.path, 0.5, builtAt)),
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
     ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
     ...esNeighborhoods.map((page) => entry(page.path, 0.6, builtAt)),

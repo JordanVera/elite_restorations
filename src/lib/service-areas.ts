@@ -191,6 +191,36 @@ const details: Record<string, { setting: string; clause: string }> = {
       'Sienna is the master-planned community in Missouri City along Sienna Parkway, in Fort Bend County, with later post-tension houses and earlier sections nearer Highway 6. Missouri City issues the permits.',
     clause: 'master-planned houses in Missouri City along Sienna Parkway',
   },
+  Cypress: {
+    setting:
+      'Cypress is northwest Harris County along US 290, with older slab houses near Cypress Creek and newer sections toward the Grand Parkway. Addresses fall in Houston or in unincorporated Harris County.',
+    clause: 'older slab houses and newer sections along US 290',
+  },
+  Spring: {
+    setting:
+      'Spring is north Harris County along Interstate 45, from Old Town Spring to newer subdivisions. Spring Creek has flooded low streets, and the permit follows the address.',
+    clause: 'Old Town houses and newer slabs along Interstate 45',
+  },
+  'Missouri City': {
+    setting:
+      'Missouri City is mostly in Fort Bend County, with a portion in Harris County. It issues its own permits. Quail Valley is the older slab fabric, and later sections are larger two-story plans.',
+    clause: 'older Quail Valley slabs and later two-story houses',
+  },
+  Fulshear: {
+    setting:
+      'Fulshear is a Fort Bend city along FM 1093, with a small older town and newer subdivisions toward the Grand Parkway. Many newer slabs are post-tension, and Fulshear issues its own permits.',
+    clause: 'a small older town and newer subdivisions on FM 1093',
+  },
+  Tomball: {
+    setting:
+      'Tomball is its own city along FM 2920 and Highway 249, with smaller houses near downtown and newer slabs toward the Grand Parkway. Permits inside the city come from Tomball.',
+    clause: 'an older downtown and newer subdivisions along Highway 249',
+  },
+  Kingwood: {
+    setting:
+      'Kingwood is inside the City of Houston, northeast near Lake Houston, with slab houses from the 1970s through the 2000s under pines. Low ground near the lake has flooded in past tropical storms.',
+    clause: 'pine-shaded slab houses near Lake Houston',
+  },
 };
 
 export const serviceAreas: ServiceArea[] = site.serviceArea.map((name) => {

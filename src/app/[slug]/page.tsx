@@ -27,6 +27,8 @@ import { readingForService } from '@/lib/related-reading';
 import { getNeighborhood, neighborhoods } from '@/lib/neighborhoods';
 import { caseStudies, getCaseStudy } from '@/lib/case-studies';
 import { costGuides, getCostGuide } from '@/lib/cost-guides';
+import { editedPhotoSet, usesEditedCityPhotos } from '@/lib/edited-photos';
+import { spanishCityPath } from '@/lib/city-landing-locales';
 import { getLocalLanding, localLandings } from '@/lib/local-landings';
 import { processSteps } from '@/lib/process';
 import { imagesForService, storyItemsForService } from '@/lib/projects';
@@ -98,12 +100,16 @@ export async function generateMetadata({
     const pool =
       cityHeroPools[landing.serviceSlug] ??
       (service?.image ? [service.image] : []);
-    const hero = pickFromPool(pool, landing.photoShift, service?.image);
+    const hero = usesEditedCityPhotos(landing.areaSlug)
+      ? editedPhotoSet(landing.serviceSlug).hero.image
+      : pickFromPool(pool, landing.photoShift, service?.image);
+    const esPath = spanishCityPath(landing.path);
     return pageMetadata({
       title: landing.title,
       description: landing.description,
       path: landing.path,
       image: hero?.src ?? service?.image?.src,
+      languages: esPath ? languageAlternates(landing.path, esPath) : undefined,
     });
   }
   const area = getAreaPage(slug);

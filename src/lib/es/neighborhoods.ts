@@ -5,7 +5,10 @@ import {
   type NeighborhoodSlug,
 } from '@/lib/locale-paths';
 import type { NeighborhoodPage } from '@/lib/neighborhood-types';
+import { esCityServiceLinks } from '@/lib/es/city-links';
+import { isSpanishCityArea } from '@/lib/city-landing-locales';
 import { spanishServiceSlugs } from '@/lib/i18n';
+import { parseLocalLandingSlug } from '@/lib/local-paths';
 import { titleFits } from '@/lib/seo';
 import { wordCount } from '@/lib/words';
 
@@ -85,7 +88,7 @@ const services = {
   }),
 };
 
-export const esNeighborhoods: readonly NeighborhoodPage[] = [
+const esNeighborhoodPages: readonly NeighborhoodPage[] = [
   page(
     'meyerland-tx',
     'Meyerland',
@@ -1018,6 +1021,31 @@ export const esNeighborhoods: readonly NeighborhoodPage[] = [
   ),
 ];
 
+const spanishCityNames: Record<string, string> = {
+  'copperfield-tx': 'Copperfield',
+  'rosenberg-tx': 'Rosenberg',
+  'jersey-village-tx': 'Jersey Village',
+  'towne-lake-tx': 'Towne Lake',
+  'bridgeland-tx': 'Bridgeland',
+  'sienna-tx': 'Sienna',
+  'cypress-tx': 'Cypress',
+  'spring-tx': 'Spring',
+  'missouri-city-tx': 'Missouri City',
+  'fulshear-tx': 'Fulshear',
+  'tomball-tx': 'Tomball',
+  'kingwood-tx': 'Kingwood',
+};
+
+export const esNeighborhoods: readonly NeighborhoodPage[] = esNeighborhoodPages.map((page) => {
+  const name = spanishCityNames[page.slug];
+  if (!name) return page;
+  const area = page.slug.slice(0, -3);
+  return {
+    ...page,
+    also: [...esCityServiceLinks(area, name), ...page.also],
+  };
+});
+
 const bySlug = new Map(esNeighborhoods.map((item) => [item.slug, item]));
 
 export function getEsNeighborhood(slug: string) {
@@ -1034,7 +1062,11 @@ function linkOk(href: string) {
   if (href.startsWith('/es/blog/')) return postSet.has(href.slice('/es/blog/'.length));
   if (href.startsWith('/es/')) {
     const slug = href.slice(4);
-    return spanishServiceSet.has(slug) || (neighborhoodSlugs as readonly string[]).includes(slug);
+    if (spanishServiceSet.has(slug) || (neighborhoodSlugs as readonly string[]).includes(slug)) {
+      return true;
+    }
+    const parsed = parseLocalLandingSlug(slug);
+    return Boolean(parsed && isSpanishCityArea(parsed.areaSlug));
   }
   return false;
 }

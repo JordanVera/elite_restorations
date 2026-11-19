@@ -490,6 +490,8 @@ export type LocalLanding = {
   /** 0–3. Picks the section order and headings so the pages are not one template. */
   layout: 0 | 1 | 2 | 3;
   facts: readonly { label: string; value: string }[];
+  /** Spanish pages pass their own bullets. English pages use the service list. */
+  bullets?: readonly string[];
 };
 
 function hashString(value: string) {
