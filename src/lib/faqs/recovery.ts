@@ -55,8 +55,8 @@ export const recoveryFaqs: Record<string, Faq[]> = {
       a: "TWIA is wind and hail coverage for the Texas coast. It includes Galveston County and a few communities in far east Harris County, east of State Highway 146, including Seabrook, La Porte, Shoreacres, Morgan's Point, and part of that side of Pasadena. Most of Houston is not TWIA. If your homeowners policy already includes wind and hail, that is usually the policy. Ask your agent. We do not interpret the contract for you.",
     },
     {
-      q: "Do you charge a fee to handle my insurance claim?",
-      a: "We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We photograph, we can meet on site, and we write a repair estimate. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment. We do not take a percentage of a settlement.",
+      q: "How do you work with the claim?",
+      a: "We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We photograph, we can meet on site, and we write a repair estimate. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Your insurer decides coverage and payment.",
     },
     {
       q: "Can you meet the adjuster if I am at work?",

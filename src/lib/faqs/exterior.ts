@@ -26,7 +26,7 @@ export const exteriorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "Should I sign with the first roofer who knocks after hail?",
-      a: "No. A storm brings door-knockers. Take photos and get a written look at your roof before you sign. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We work for the owner who hires us. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We do not take a percentage of a settlement.",
+      a: "No. A storm brings door-knockers. Take photos and get a written look at your roof before you sign. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We work for the owner who hires us. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters.",
     },
     {
       q: "Can you repair a roof during hurricane season?",
