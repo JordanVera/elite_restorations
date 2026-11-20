@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { IconArrowUpRight } from '@/components/icons';
 
 import { waterCauses } from "@/lib/water-causes";
 
@@ -71,7 +71,7 @@ export function WaterCauseSections({ locale = "en" }: { locale?: "en" | "es" }) 
                   className="mt-6 inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.45em]"
                 >
                   {es ? `${cause.hubHeading} (en inglés)` : cause.hubHeading}
-                  <ArrowUpRight className="size-3.5" aria-hidden />
+                  <IconArrowUpRight className="size-3.5" aria-hidden />
                 </Link>
               </article>
             );

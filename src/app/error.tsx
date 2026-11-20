@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { site } from "@/lib/site";
 
 export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
@@ -16,9 +16,13 @@ export default function ErrorPage({ reset }: { error: Error & { digest?: string 
         .
       </p>
       <div className="mt-10">
-        <Button variant="accent" size="lg" onClick={reset}>
+        <button
+          type="button"
+          className={buttonVariants({ variant: "accent", size: "lg" })}
+          onClick={reset}
+        >
           Try again
-        </Button>
+        </button>
       </div>
     </section>
   );

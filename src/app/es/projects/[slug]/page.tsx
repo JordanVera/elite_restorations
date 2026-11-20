@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { IconArrowRight, IconArrowUpRight } from "@/components/icons";
 
 import { CtaBand } from "@/components/cta-band";
 import { ImageReveal, Reveal } from "@/components/motion";
@@ -71,10 +71,10 @@ export default async function SpanishProjectPage({ params }: { params: Promise<P
           <ImageReveal immediate className="relative aspect-[4/3] w-full md:aspect-[21/9]">
             {cover && coverIndex >= 0 ? (
               <ProjectPhotoButton index={coverIndex} alt={cover.alt} className="absolute inset-0">
-                <Photo image={cover} sizes={bleedPhotoSizes} priority />
+                <Photo image={cover} sizes={bleedPhotoSizes} priority quality={60} />
               </ProjectPhotoButton>
             ) : cover ? (
-              <Photo image={cover} sizes={bleedPhotoSizes} priority />
+              <Photo image={cover} sizes={bleedPhotoSizes} priority quality={60} />
             ) : null}
           </ImageReveal>
         </div>
@@ -123,7 +123,7 @@ export default async function SpanishProjectPage({ params }: { params: Promise<P
                         className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                       >
                         {service.label}
-                        <ArrowUpRight className="size-3.5" aria-hidden />
+                        <IconArrowUpRight className="size-3.5" />
                       </Link>
                     </li>
                   ))}
@@ -140,7 +140,7 @@ export default async function SpanishProjectPage({ params }: { params: Promise<P
                           className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                         >
                           {link.label}
-                          <ArrowUpRight className="size-3.5" aria-hidden />
+                          <IconArrowUpRight className="size-3.5" />
                         </Link>
                       </li>
                     ))}
@@ -161,6 +161,7 @@ export default async function SpanishProjectPage({ params }: { params: Promise<P
                       <Photo
                         image={image}
                         intrinsic
+                        quality={60}
                         sizes="(min-width: 1280px) 31vw, (min-width: 640px) 48vw, 94vw"
                       />
                     </ProjectPhotoButton>
@@ -183,10 +184,7 @@ export default async function SpanishProjectPage({ params }: { params: Promise<P
               Todos los proyectos
             </span>
           </span>
-          <ArrowRight
-            aria-hidden
-            className="size-10 shrink-0 text-accent-ink transition-transform duration-500 ease-out-expo group-hover:translate-x-2"
-          />
+          <IconArrowRight className="size-10 shrink-0 text-accent-ink transition-transform duration-500 ease-out-expo group-hover:translate-x-2" />
         </Link>
       </section>
 

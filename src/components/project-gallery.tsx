@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import * as React from 'react';
 
 import type { LightboxImage } from '@/components/project-lightbox';
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 const ProjectLightbox = dynamic(
   () => import('@/components/project-lightbox').then((mod) => mod.ProjectLightbox),
@@ -87,7 +87,7 @@ export function ProjectPhotoButton({
   return (
     <button
       type="button"
-      className={cn(
+      className={cx(
         'block w-full cursor-zoom-in border-0 bg-transparent p-0 text-inherit',
         'focus-visible:outline-offset-[-3px]',
         className,

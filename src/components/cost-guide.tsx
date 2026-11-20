@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Phone } from 'lucide-react';
+import { IconArrowUpRight, IconPhone } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
@@ -83,14 +83,14 @@ export function CostGuideView({ guide, locale = 'en' }: { guide: CostGuide; loca
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {guide.serviceLabel}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" aria-hidden />
           </Link>
           <Link
             href={contactHref}
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {copy.estimate}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" aria-hidden />
           </Link>
         </div>
       </PageHero>
@@ -148,7 +148,7 @@ export function CostGuideView({ guide, locale = 'en' }: { guide: CostGuide; loca
                 href={site.phone.href}
                 className="inline-flex items-center gap-3 font-display text-4xl transition-colors hover:text-accent-ink"
               >
-                <Phone className="size-6 text-accent-ink" aria-hidden />
+                <IconPhone className="size-6 text-accent-ink" aria-hidden />
                 {site.phone.display}
               </a>
               <Link
@@ -156,7 +156,7 @@ export function CostGuideView({ guide, locale = 'en' }: { guide: CostGuide; loca
                 className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
               >
                 {copy.estimate}
-                <ArrowUpRight className="size-4" aria-hidden />
+                <IconArrowUpRight className="size-4" aria-hidden />
               </Link>
             </div>
           )}
@@ -199,7 +199,7 @@ export function CostGuideView({ guide, locale = 'en' }: { guide: CostGuide; loca
                     className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
                   >
                     {link.label}
-                    <ArrowUpRight className="size-4" aria-hidden />
+                    <IconArrowUpRight className="size-4" aria-hidden />
                   </Link>
                 </li>
               ))}

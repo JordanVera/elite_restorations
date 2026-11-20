@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { IconArrowUpRight } from '@/components/icons';
 
 import { claimHelpCopy } from "@/lib/claim-help";
 
@@ -52,7 +52,7 @@ export function InsuranceClaimHelp({
                   className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                 >
                   {link.label}
-                  <ArrowUpRight className="size-3.5" aria-hidden />
+                  <IconArrowUpRight className="size-3.5" aria-hidden />
                 </Link>
               </li>
             ))}

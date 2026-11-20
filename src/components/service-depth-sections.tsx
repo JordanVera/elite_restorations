@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { Reveal } from '@/components/motion';
 import type { DepthLink, ServiceDepth } from '@/lib/service-depth-types';
@@ -40,7 +40,7 @@ function GuideLinks({ links }: { links: DepthLink[] }) {
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {link.label}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" aria-hidden />
           </Link>
         </li>
       ))}

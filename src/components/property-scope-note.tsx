@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { IconArrowUpRight } from '@/components/icons';
 
 import { commercialHubPath, propertyScopeCopy } from "@/lib/property-scope";
 
@@ -25,7 +25,7 @@ export function PropertyScopeNote({
             className="mt-6 inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {copy.linkLabel}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" aria-hidden />
           </Link>
         ) : null}
       </div>

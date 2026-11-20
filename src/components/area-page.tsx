@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
@@ -154,7 +154,7 @@ export function AreaPageView({
                       {copy.inName}
                     </span>
                   </span>
-                  <ArrowUpRight className="mt-1 size-4 shrink-0 text-accent-ink" aria-hidden />
+                  <IconArrowUpRight className="mt-1 size-4 shrink-0 text-accent-ink" aria-hidden />
                 </Link>
               </li>
             ))}
@@ -167,7 +167,7 @@ export function AreaPageView({
                   className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                 >
                   {link.label}
-                  <ArrowUpRight className="size-3.5" aria-hidden />
+                  <IconArrowUpRight className="size-3.5" aria-hidden />
                 </Link>
               </li>
             ))}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 export function HeaderChrome({
   home,
@@ -132,7 +132,7 @@ export function HeaderChrome({
     <header
       ref={ref}
       data-home={home ? 'true' : 'false'}
-      className={cn(
+      className={cx(
         'site-header fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent',
         'transition-transform duration-500 ease-out-expo',
         'transition-[background-color,border-color,color] duration-500',

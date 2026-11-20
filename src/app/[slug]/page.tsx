@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowRight, ArrowUpRight, Check, Phone } from 'lucide-react';
+import { IconArrowRight, IconArrowUpRight, IconCheck, IconPhone } from '@/components/icons';
 
 import { AreaPageView } from '@/components/area-page';
 import { AreasWeServe } from '@/components/areas-we-serve';
@@ -285,10 +285,7 @@ export default async function ServicePage({
               href={site.phone.href}
               className="group inline-flex items-center gap-4 border border-accent-ink px-5 py-4 transition-colors hover:bg-accent hover:text-white"
             >
-              <Phone
-                className="size-4 text-accent-ink group-hover:text-white"
-                aria-hidden
-              />
+              <IconPhone className="size-4 text-accent-ink group-hover:text-white" />
               <span className="text-[0.72rem] font-medium uppercase tracking-[0.2em]">
                 Active leak or storm damage? Call {site.phone.display}
               </span>
@@ -298,14 +295,14 @@ export default async function ServicePage({
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
               Request help online
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" />
             </Link>
             <Link
               href="/insurance-log"
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
               Insurance photo log
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" />
             </Link>
           </Reveal>
         )}
@@ -364,10 +361,7 @@ export default async function ServicePage({
                   key={item}
                   className="flex items-start gap-4 border-b border-border py-4"
                 >
-                  <Check
-                    className="mt-1 size-4 shrink-0 text-accent-ink"
-                    aria-hidden
-                  />
+                  <IconCheck className="mt-1 size-4 shrink-0 text-accent-ink" />
                   <span className="leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -393,7 +387,7 @@ export default async function ServicePage({
                         className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
                       >
                         {link.label}
-                        <ArrowUpRight className="size-4" aria-hidden />
+                        <IconArrowUpRight className="size-4" />
                       </Link>
                     </li>
                   ))}
@@ -518,10 +512,7 @@ export default async function ServicePage({
                 className="group inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.2em]"
               >
                 All projects
-                <ArrowRight
-                  className="size-4 transition-transform duration-500 group-hover:translate-x-1"
-                  aria-hidden
-                />
+                <IconArrowRight className="size-4 transition-transform duration-500 group-hover:translate-x-1" />
               </Link>
             </div>
             <ul className="mt-12 gap-x-6 sm:columns-2 xl:columns-3">
@@ -586,10 +577,7 @@ export default async function ServicePage({
                     className="group inline-flex items-center gap-2 text-lg transition-colors hover:text-accent-ink"
                   >
                     {item.label}
-                    <ArrowUpRight
-                      aria-hidden
-                      className="size-4 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
+                    <IconArrowUpRight className="size-4 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
                 </li>
               ))}
@@ -615,10 +603,7 @@ export default async function ServicePage({
                     className="group inline-flex items-center gap-2 font-display text-3xl transition-colors hover:text-accent-ink"
                   >
                     {r.name}
-                    <ArrowUpRight
-                      aria-hidden
-                      className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
+                    <IconArrowUpRight className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
                 </li>
               ))}

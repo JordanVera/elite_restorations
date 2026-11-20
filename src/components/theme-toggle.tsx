@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useTheme } from 'next-themes';
 
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 import './theme-toggle.css';
 
@@ -33,7 +33,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       data-theme={isDark ? 'dark' : 'light'}
       data-ready={ready ? 'true' : 'false'}
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className={cn(
+      className={cx(
         'theme-switch relative inline-flex shrink-0 cursor-pointer items-center rounded-full',
         className,
       )}

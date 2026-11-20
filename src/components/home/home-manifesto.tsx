@@ -1,8 +1,9 @@
+import Image from 'next/image';
+
 import { ScrollWords } from '@/components/home/scroll-words';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { Photo } from '@/components/photo';
 import { img } from '@/lib/images';
-import { SiteLogo } from '../site-logo';
 
 const tile = img(
   '/images/projects/bathrooms/freestanding-tub-window.jpg',
@@ -43,7 +44,27 @@ export function HomeManifesto() {
             <Reveal>
               <p className="eyebrow text-muted-foreground">How we work</p>
               <div className="mt-6">
-                <SiteLogo className="h-24" />
+                <p className="sr-only">Elite Restorations</p>
+                <Image
+                  src="/images/logo/logo-main.png"
+                  alt=""
+                  width={743}
+                  height={336}
+                  sizes="12rem"
+                  aria-hidden
+                  className="h-24 w-auto dark:hidden"
+                  style={{ width: 'auto', height: '6rem' }}
+                />
+                <Image
+                  src="/images/logo/logo-white.png"
+                  alt=""
+                  width={880}
+                  height={398}
+                  sizes="12rem"
+                  aria-hidden
+                  className="hidden h-24 w-auto dark:block"
+                  style={{ width: 'auto', height: '6rem' }}
+                />
               </div>
               {/* <p aria-hidden className="font-display mt-6 text-[7rem] leading-none text-accent-ink/80">
                 &sect;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
@@ -145,7 +145,7 @@ export function NeighborhoodPageView({
                     <span className="font-display text-2xl leading-tight transition-colors group-hover:text-accent-ink">
                       {service.label}
                     </span>
-                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-accent-ink" aria-hidden />
+                    <IconArrowUpRight className="mt-1 size-4 shrink-0 text-accent-ink" aria-hidden />
                   </span>
                   {service.note ? (
                     <span className="text-sm leading-relaxed text-muted-foreground">{service.note}</span>

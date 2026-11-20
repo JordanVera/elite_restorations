@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
@@ -111,7 +111,7 @@ export function ArticleView({
                               className="inline-flex items-center gap-2 text-foreground underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                             >
                               {item.label}
-                              <ArrowUpRight className="size-4" aria-hidden />
+                              <IconArrowUpRight className="size-4" aria-hidden />
                             </Link>
                           </li>
                         ))}
@@ -165,7 +165,7 @@ export function ArticleView({
                     </span>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
                       {copy.see}
-                      <ArrowUpRight className="size-4" aria-hidden />
+                      <IconArrowUpRight className="size-4" aria-hidden />
                     </span>
                   </Link>
                 </li>
@@ -182,7 +182,7 @@ export function ArticleView({
                     </span>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
                       {copy.read}
-                      <ArrowUpRight className="size-4" aria-hidden />
+                      <IconArrowUpRight className="size-4" aria-hidden />
                     </span>
                   </Link>
                 </li>
