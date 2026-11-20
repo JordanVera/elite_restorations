@@ -12,6 +12,12 @@ import { costGuides } from '@/lib/cost-guides';
 import { legalEffectiveDate } from '@/lib/legal';
 import { esCityLandings } from '@/lib/es/city-landings';
 import { localLandings } from '@/lib/local-landings';
+import { esCostGuides } from '@/lib/es/cost-guides';
+import { esInsurers } from '@/lib/es/insurers';
+import { esLegacyArticles } from '@/lib/es/legacy-articles';
+import { esAreaPages } from '@/lib/es/area-pages';
+import { esWaterCauses } from '@/lib/es/water-causes';
+import { esProjectPages } from '@/lib/es/project-pages';
 import { esProjectStories } from '@/lib/es/project-stories';
 import { projects } from '@/lib/projects';
 import { absoluteUrl } from '@/lib/seo';
@@ -118,6 +124,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/es/restoration',
     '/es/emergency',
     '/es/contact',
+    '/es/projects',
+    '/es/insurance-claims/companies',
     '/es/houston-storm-damage',
     '/es/restoration-company-houston',
     ...spanishServiceSlugs.map((slug) => `/es/${slug}`),
@@ -134,6 +142,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esProjectStories.map((story) =>
       entry(story.path, 0.6, builtAt, contentUpdated(projectText(story))),
     ),
+    ...esProjectPages.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esLegacyArticles.map((post) => entry(post.path, 0.5, builtAt, contentUpdated(articleText(post)))),
+    ...esInsurers.map((page) => entry(page.path, 0.6, builtAt)),
+    ...esCostGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
+    ...esWaterCauses.map((page) => entry(page.path, 0.7, builtAt)),
+    ...esAreaPages.map((page) => entry(page.path, 0.6, builtAt)),
     ...articles.map((article) =>
       entry(articlePath(article.slug), 0.5, builtAt, contentUpdated(articleText(article))),
     ),

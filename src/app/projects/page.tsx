@@ -7,7 +7,7 @@ import {
   type BrowserPhoto,
 } from '@/components/projects-browser';
 import { projectCategories, projects } from '@/lib/projects';
-import { pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Houston Remodeling Project Photos',
@@ -15,6 +15,7 @@ export const metadata: Metadata = pageMetadata({
     'Kitchens, bathrooms, floors, roofs, and storm recovery by Elite Restorations in Houston. Photos from projects across the area.',
   path: '/projects',
   image: '/images/projects/kitchens/coffered-ceiling-island.jpg',
+  languages: languageAlternates('/projects', '/es/projects'),
 });
 
 export default function ProjectsPage() {

@@ -733,6 +733,39 @@ function nearbyFor(trade: Trade, areaSlug: string) {
   });
 }
 
+const olderAreaSlugs = new Set([
+  'houston',
+  'westchase',
+  'alief',
+  'energy-corridor',
+  'katy',
+  'sugar-land',
+  'bellaire',
+  'memorial',
+  'spring-branch',
+  'the-heights',
+  'river-oaks',
+  'west-university',
+  'galleria-area',
+  'upper-kirby',
+  'rice-village',
+  'medical-center',
+  'bunker-hill',
+  'piney-point',
+  'hunters-creek',
+  'bear-creek',
+  'cinco-ranch',
+  'stafford',
+  'richmond',
+  'pearland',
+  'clear-lake',
+  'baytown',
+  'galveston',
+  'texas-city',
+  'the-woodlands',
+  'magnolia',
+]);
+
 function buildOne(trade: Trade, areaSlug: string): LocalLanding {
   const area = esAreaCopy[areaSlug];
   const profile = getAreaProfile(areaSlug);
@@ -752,6 +785,13 @@ function buildOne(trade: Trade, areaSlug: string): LocalLanding {
     drive,
     area.more,
   ];
+  // Older areas have shorter place notes. This visit sentence keeps each page
+  // at the same depth as the cities that already had Spanish copy.
+  if (olderAreaSlugs.has(areaSlug)) {
+    paragraphs.push(
+      `En ${name} el orden se escribe en la casa: la cimentación, el acceso desde la calle y el cuarto que se va a tocar. ${area.housesNote} El nombre del lugar no elige el material ni el oficio que va primero. Eso sale de la visita. El trabajo empieza cuando ese plan ya está escrito, con el detalle que una foto del anuncio no enseña.`,
+    );
+  }
   if (trade.claim) paragraphs.push(claimSentence);
   paragraphs.push(
     `Una nota sobre ${name}: la visita confirma la cimentación, el acceso y si alguna revisión aplica a esta dirección. ${area.housesNote} describe la zona y describe mal una sola casa. El plan se escribe después de ver la propiedad, incluido el detalle que no sale en una foto del anuncio. ${kind} Llame al (713) 909-0034 cuando quiera agendar ${service.toLowerCase()}.`,
