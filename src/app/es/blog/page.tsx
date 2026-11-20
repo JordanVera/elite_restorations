@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
 import { PageHero } from '@/components/page-hero';
+import { esLegacyArticles } from '@/lib/es/legacy-articles';
 import { esPosts } from '@/lib/es/posts';
 import { languageAlternates, pageMetadata } from '@/lib/seo';
 
@@ -30,7 +31,7 @@ export default function SpanishBlogPage() {
       <section aria-label="Guías" className="pb-20 md:pb-28">
         <div className="gutter mx-auto max-w-[120rem]">
           <ul className="divide-y divide-border border-y border-border">
-            {esPosts.map((article, index) => (
+            {[...esPosts, ...esLegacyArticles].map((article, index) => (
               <li key={article.slug}>
                 <Link
                   href={article.path}

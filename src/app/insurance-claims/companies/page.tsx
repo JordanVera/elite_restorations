@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { InsurerIndex } from "@/components/insurer-view";
 import { PageHero } from "@/components/page-hero";
-import { pageMetadata } from "@/lib/seo";
+import { languageAlternates, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Houston guides for homeowners insured by major carriers. Elite Restorations is not affiliated with them. Call (713) 909-0034.",
   path: "/insurance-claims/companies",
+  languages: languageAlternates("/insurance-claims/companies", "/es/insurance-claims/companies"),
 });
 
 export default function InsurerHubPage() {

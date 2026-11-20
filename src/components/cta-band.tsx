@@ -13,6 +13,7 @@ type CtaBandProps = {
   href?: string;
   buttonLabel?: string;
   textLabel?: string;
+  sectionLabel?: string;
 };
 
 export function CtaBand({
@@ -23,6 +24,7 @@ export function CtaBand({
   href,
   buttonLabel,
   textLabel = "Text us",
+  sectionLabel = "Request an estimate",
 }: CtaBandProps) {
   const destination =
     href ??
@@ -33,8 +35,8 @@ export function CtaBand({
         : ctaHref);
   return (
     <section
-      aria-label="Request an estimate"
-      className="relative overflow-hidden border-t border-border bg-surface py-24 md:py-32"
+        aria-label={sectionLabel}
+        className="relative overflow-hidden border-t border-border bg-surface py-24 md:py-32"
     >
       <div className="gutter mx-auto grid max-w-[120rem] gap-12 md:grid-cols-[1.4fr_1fr] md:items-end">
         <Reveal>

@@ -1,3 +1,5 @@
+import { olderEsAreaCopy } from '@/lib/es/city-area-copy-older';
+
 export type EsKind = 'water' | 'roof' | 'floor' | 'interior' | 'exterior';
 
 export type EsAreaCopy = {
@@ -530,4 +532,5 @@ export const esAreaCopy: Record<string, EsAreaCopy> = {
         'En Montrose el permiso es de Houston, y la asociación del townhome, si la hay, suele mirar la fachada. El acceso de la calle estrecha se cotiza.',
     },
   },
+  ...olderEsAreaCopy,
 };
