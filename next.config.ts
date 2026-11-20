@@ -1,6 +1,8 @@
 import path from 'node:path';
 import type { NextConfig } from 'next';
 
+import { houstonPostSlugs } from './src/lib/locale-paths';
+
 const nextConfig: NextConfig = {
   turbopack: { root: path.resolve(__dirname) },
   // Airo's sandbox denies the loopback port Turbopack uses for PostCSS child
@@ -111,6 +113,9 @@ const nextConfig: NextConfig = {
       ),
       permanent('/services/:slug', '/:slug'),
       permanent('/services/:slug/', '/:slug'),
+      // English guides live at /:slug. Old /blog/:slug addresses jump there.
+      // Spanish guides stay at /es/blog/:slug.
+      ...houstonPostSlugs.flatMap((slug) => both(`/blog/${slug}`, `/${slug}`)),
       // WordPress author archives, search, and feeds.
       permanent('/author/:slug*', '/about'),
       permanent('/author/:slug*/', '/about'),

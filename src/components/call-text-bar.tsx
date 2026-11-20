@@ -1,8 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Phone } from "lucide-react";
 
+import { isSpanishPath } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-export function CallTextBar({ es }: { es: boolean }) {
+export function CallTextBar() {
+  const es = isSpanishPath(usePathname() || "/");
   const call = es ? "Llamar" : "Call";
   const text = es ? "Envíanos un texto" : "Text us";
 
