@@ -341,4 +341,193 @@ export const esAreaCopy: Record<string, EsAreaCopy> = {
         'En Kingwood la asociación suele revisar el techo, la pintura y la cerca. Un deck se confirma antes de pedir la madera.',
     },
   },
+  humble: {
+    slug: 'humble',
+    direction: 'al noreste de la oficina',
+    housing:
+      'Humble es su propia ciudad en el noreste del condado de Harris, sobre la Interestatal 69. El centro es más chico: casas de una planta, de madera o de ladrillo, de varias décadas, casi siempre sobre losa. Hacia la FM 1960 y Lake Houston las subdivisiones son posteriores, muchas de dos pisos, con cocina abierta y pinos sobre el techo. No es Kingwood. Un rancho del pueblo y un dos pisos junto al lago son otra cocina y otro techo. Vemos la dirección.',
+    climate:
+      'El río San Jacinto y Lake Houston son la geografía del agua. El terreno bajo se ha inundado en tormentas tropicales pasadas. Las calles más altas no todas vieron esa agua. El granizo y el viento marcan el asfalto, y en el lado del lago las agujas y las ramas se quedan en los valles. Una tubería reventada en una helada y el agua que subió del río son eventos distintos.',
+    permits:
+      'Humble da sus propios permisos dentro de la ciudad. Una calle cercana puede ser de Houston, y Kingwood es Houston, no Humble. Confirmamos la dirección antes de pedir materiales. En las subdivisiones la asociación suele revisar el techo y la pintura. Una cocina de adentro suele quedar fuera de esa revisión.',
+    route: `Se va al noreste por la Interestatal 69. Es el camino largo desde el oeste. No hay un local en Humble. ${office}`,
+    more:
+      'El calentador del garaje y las líneas del ático son la fuga común entre tormentas. Sobre la losa no hay un hueco para mirar. La mancha del plafón llega después del aislamiento mojado. La humedad no se va porque se abrió una ventana. El secado usa deshumidificadores.',
+    housesNote: 'Centro viejo sobre losa y subdivisiones posteriores hacia el lago.',
+    climateNote: 'El terreno bajo junto al San Jacinto y a Lake Houston se ha inundado. Los pinos llenan los valles.',
+    kind: {
+      water:
+        'En Humble el agua del río en un lote bajo no es el mismo secado que un calentador del garaje o una línea del ático.',
+      roof:
+        'En Humble el techo del pueblo puede estar parchado, y el del lado del lago junta agujas. El granizo no se juzga desde la calle.',
+      floor:
+        'En Humble la loseta y el vinil son el piso práctico sobre la losa, cuando el concreto ya está seco. La madera espera esa misma lectura.',
+      interior:
+        'En Humble la cocina del centro suele seguir cerrada y fuera de escuadra. En la subdivisión nueva el cuarto ya está abierto.',
+      exterior:
+        'En Humble el permiso es de la ciudad cuando la dirección está dentro del límite. La asociación, si la sección tiene una, suele mirar el techo.',
+    },
+  },
+  atascocita: {
+    slug: 'atascocita',
+    direction: 'al noreste de la oficina',
+    housing:
+      'Atascocita es la comunidad sin incorporar del noreste de Harris, sobre la FM 1960, entre Humble y Lake Houston. No tiene alcaldía propia. Las casas son sobre todo de ladrillo, de los setenta en adelante, de uno y dos pisos, sobre losa y bajo pinos. Las secciones posteriores pueden ser postensadas, con cables en el concreto. No es el rancho del centro de Humble ni la calle de Kingwood, aunque el mapa las pone cerca.',
+    climate:
+      'Lake Houston queda al este. El terreno más bajo, más cerca del lago, ha recibido agua de tormenta en ciclones pasados. Muchas calles más al oeste solo se encharcan. Los estanques de las subdivisiones guardan una lluvia ordinaria y no significan que esta casa se haya inundado. El granizo cruza la copa de los pinos y moretonea el asfalto. Las agujas se quedan en los valles.',
+    permits:
+      'La mayoría de las direcciones están en el condado de Harris sin incorporar. El permiso sigue esa dirección, no un mostrador de la ciudad de Houston y no una alcaldía que Atascocita no tiene. La asociación es lo habitual en estas secciones y suele revisar el color del techo, la pintura y las cercas. Los gabinetes de adentro suelen ser otra pregunta.',
+    route: `Se va por la Interestatal 69 hasta la FM 1960, o por el Beltway hasta esa misma carretera. No hay una oficina en Atascocita. ${office}`,
+    more:
+      'En los dos pisos el calentador o la línea del ático es una llamada común. La mancha del plafón es más chica que el aislamiento mojado. La arcilla se mueve con la humedad, así que medimos la losa antes de prometer un piso o una regadera en otro lugar.',
+    housesNote: 'Casas de ladrillo desde los setenta, sobre losa y bajo pinos, junto al lago.',
+    climateNote: 'Lake Houston queda al este. El terreno bajo cerca del lago se ha inundado.',
+    kind: {
+      water:
+        'En Atascocita el agua del lago en un lote bajo no es el secado de una línea del ático en un segundo piso.',
+      roof:
+        'En Atascocita el techo es largo y los valles juntan agujas. La asociación suele opinar del color antes de pedir la teja.',
+      floor:
+        'En Atascocita la alfombra escondió lomos de una losa de los setenta. El vinil y la loseta grande los enseñan si el concreto no está parejo y seco.',
+      interior:
+        'En Atascocita mover la regadera en una sección nueva empieza por buscar los cables. Si el drenaje se queda, la losa no se corta.',
+      exterior:
+        'En Atascocita el permiso sigue la dirección del condado, y la asociación suele revisar el techo, la pintura y la cerca.',
+    },
+  },
+  friendswood: {
+    slug: 'friendswood',
+    direction: 'al sureste de la oficina',
+    housing:
+      'Friendswood es su propia ciudad al sureste de Houston, sobre todo en el condado de Galveston, con una parte al norte en el condado de Harris, entre la Interestatal 45 y Clear Creek. Las casas son planos de ladrillo de los sesenta a los noventa, sobre losa, ranchos de un piso y casas de dos pisos en la misma calle. Las cocinas se actualizaron por partes: gabinetes de una década, cubierta de otra y piso de otra. Hay secciones más nuevas mezcladas. No suponemos que hay que tirar todo.',
+    climate:
+      'Clear Creek es el agua que aquí ya se conoce. El terreno bajo cerca del arroyo se ha inundado en tormentas tropicales pasadas. Las cuadras más lejos del arroyo no todas recibieron esa agua. El viento del Golfo y la lluvia empujada llegan a estos techos más que a un vecindario del noroeste de Harris. La humedad se queda porque la bahía no está lejos. Una filtración de techo y el agua del arroyo, aunque caigan en el mismo mes, son dos eventos.',
+    permits:
+      'Friendswood da sus propios permisos. No es el mostrador de Houston. Algunas subdivisiones revisan el color del techo y la pintura. Una cocina por dentro suele quedar fuera de esa revisión. Confirmamos la dirección porque el condado también cambia dentro del mapa.',
+    route: `Se cruza la ciudad por el Beltway 8 hacia la Interestatal 45. No hay un local en Friendswood. ${office}`,
+    more:
+      'Entre tormentas, la llamada ordinaria es un calentador del garaje, el suministro de un inodoro o una línea que se partió en una helada. Sobre la losa esa agua está en el zoclo el mismo día. Un secado de verdad usa deshumidificadores. El laminado que se sentó en agua de inundación se reemplaza. No vuelve a ser piso.',
+    housesNote: 'Casas de ladrillo de los sesenta a los noventa, sobre losa, cerca de Clear Creek.',
+    climateNote: 'Clear Creek ha inundado el terreno bajo. El viento del Golfo llega a estos techos.',
+    kind: {
+      water:
+        'En Friendswood el agua de Clear Creek en un lote bajo no es el mismo secado que un calentador del garaje.',
+      roof:
+        'En Friendswood el viento levanta teja sin un golpe de granizo, y el metal de las ventilas falla mientras el frente se ve parejo.',
+      floor:
+        'En Friendswood la loseta y el vinil son el piso habitual sobre la losa, cuando el concreto está seco. La madera es de sala, no de un cuarto que sigue húmedo.',
+      interior:
+        'En Friendswood mover el fregadero es cortar la losa. Una cocina de rancho puede seguir cerrada, y una posterior ya abre al den.',
+      exterior:
+        'En Friendswood el permiso es de la ciudad, y la asociación, si la sección tiene una, suele mirar el techo y la pintura.',
+    },
+  },
+  'league-city': {
+    slug: 'league-city',
+    direction: 'al sureste de la oficina',
+    housing:
+      'League City es su propia ciudad sobre la Interestatal 45, sobre todo en el condado de Galveston, con una parte en el condado de Harris. El pueblo más viejo está cerca de Main Street y la FM 518. Las secciones posteriores, incluidas las casas junto a Clear Lake, son planos de dos pisos más grandes sobre losa, y muchas de esas losas son postensadas. No usamos el dibujo del pueblo para una casa nueva, ni al revés.',
+    climate:
+      'Clear Creek cruza el lado norte. El terreno bajo cerca del arroyo ha recibido agua en tormentas tropicales pasadas. Muchos pads nuevos solo se encharcan. El viento de la costa y el aire salino de la bahía gastan techos, metal y pintura, sobre todo en las secciones más cerca de Clear Lake. La temporada de huracanes va de junio a noviembre. El granizo de primavera también llega.',
+    permits:
+      'League City da sus propios permisos. No es Friendswood ni Houston. En las secciones planeadas la asociación suele revisar el color del techo, la pintura y las cercas antes de que se pida el material. Los gabinetes de adentro suelen ser elección de la casa.',
+    route: `Se va al sureste por la Interestatal 45. El tráfico de la autopista cambia la hora. No hay una oficina en League City. ${office}`,
+    more:
+      'La humedad del Golfo pide deshumidificadores en un secado. En las casas nuevas el calentador y las líneas del ático son una fuga común. En una losa postensada, mover un drenaje empieza por encontrar los cables. Si la regadera se queda en su lugar, el concreto no se corta.',
+    housesNote: 'Pueblo viejo junto a la FM 518 y secciones nuevas sobre losa, a menudo postensada.',
+    climateNote: 'Clear Creek ha inundado el terreno bajo. El viento de la bahía gasta el techo y el metal.',
+    kind: {
+      water:
+        'En League City el agua de Clear Creek no es el mismo evento que una línea del ático en un dos pisos nuevo.',
+      roof:
+        'En League City el viento de la costa y el granizo marcan techos grandes, y el color suele pasar por la asociación.',
+      floor:
+        'En League City el vinil da un aspecto de madera cuando la losa está seca. La loseta grande pide un concreto más parejo que la alfombra.',
+      interior:
+        'En League City la cocina nueva ya está abierta. En el pueblo, el cuarto puede seguir cerrado y la losa puede ser el vaciado viejo, sin cables.',
+      exterior:
+        'En League City el permiso es de la ciudad, y un deck o una cerca en una sección planeada espera también a la asociación.',
+    },
+  },
+  conroe: {
+    slug: 'conroe',
+    direction: 'al norte de la oficina',
+    housing:
+      'Conroe es la cabecera del condado de Montgomery, al norte de The Woodlands, sobre la Interestatal 45. El centro tiene casas más chicas, y cerca del pueblo se mezclan pilotes y losas tempranas, con árboles junto al alero. Hacia Lake Conroe, la FM 1488 y la State Highway 242 hay planos de dos pisos sobre losa, muchos postensados, con cocinas abiertas y techos grandes. Una cocina que mueve un muro es otra conversación en cada una.',
+    climate:
+      'Lake Conroe queda al oeste. El agua de tormenta aquí es de arroyos y de drenaje sobre arcilla, no de un bayou de Houston por el centro. El terreno bajo cerca de esos arroyos ha recibido agua en tormentas pasadas. Muchos lotes solo se encharcan. El granizo de primavera moretonea el asfalto, y las ramas de pino caen en los valles. Desde el jardín a menudo no se ve nada.',
+    permits:
+      'La ciudad de Conroe permite el trabajo dentro del límite. Una dirección cercana en el condado de Montgomery sin incorporar no es el mismo mostrador, aunque el correo diga Conroe. Las asociaciones de las secciones nuevas revisan el exterior. El color del techo puede ser pregunta de ellas. Un tocador, casi nunca.',
+    route: `Se va al norte por la Interestatal 45. Es un camino largo desde el oeste de Houston, y la visita es una ventana. No hay un local en Conroe. ${office}`,
+    more:
+      'En una casa vieja el hueco bajo el piso hay que verlo si hubo una fuga. En la losa nueva se mide el zoclo. No flotamos un piso sobre un contrapiso mojado. La madera se aclimata en la casa, y un baño se impermeabiliza antes de la loseta.',
+    housesNote: 'Centro viejo, con pilotes y losa, y secciones nuevas hacia el lago.',
+    climateNote: 'Lake Conroe queda al oeste. El granizo y los pinos marcan los techos.',
+    kind: {
+      water:
+        'En Conroe una fuga bajo una casa de pilotes y una línea de ático en un dos pisos nuevo no se buscan en el mismo lugar.',
+      roof:
+        'En Conroe el techo va de un dos aguas del pueblo a un techo nuevo recortado. El granizo no se lee desde la entrada.',
+      floor:
+        'En Conroe la madera de una sala vieja depende de la humedad del hueco. Sobre la losa nueva, el vinil espera a que el concreto esté seco.',
+      interior:
+        'En Conroe el pueblo todavía tiene cocinas cerradas. En la sección nueva el cuarto ya está abierto y el drenaje nuevo espera a los cables.',
+      exterior:
+        'En Conroe el permiso es de la ciudad cuando la dirección está dentro del límite, y la asociación de una sección nueva suele mirar el techo.',
+    },
+  },
+  meyerland: {
+    slug: 'meyerland',
+    direction: 'al este de la oficina',
+    housing:
+      'Meyerland es el vecindario del suroeste de Houston de ranchos de ladrillo de un piso, de los años 50, sobre losa de concreto, con techos bajos y lotes más profundos que los de un bungalow dentro del Loop. Muchas casas todavía tienen la cocina cerrada, un baño de pasillo y la recámara grande atrás. En algunas calles la casa se reconstruyó o se levantó después de que el bayou se salió. La de al lado puede seguir siendo el rancho original. Vemos la que usted nos indicó.',
+    climate:
+      'Brays Bayou y North Braeswood son el agua de este lugar. El terreno bajo, pegado al bayou, ha recibido agua de tormenta en ciclones pasados. Las calles más lejos de la orilla no siempre vieron lo mismo. Un tubo de suministro sobre la losa y el agua que subió de afuera son trabajos distintos. El granizo y el viento pegan en estos techos bajos, y desde Beechnut no se ven los golpes. Los encinos tiran ramas sobre los valles.',
+    permits:
+      'Meyerland está en la ciudad de Houston. El permiso, cuando el trabajo lo pide, sale de Houston. Algunas secciones tienen restricciones que miran lo que se ve desde la calle. Una cocina por dentro suele ser otra pregunta, distinta de un techo nuevo. Confirmamos la dirección antes de tratar una calle como si tuviera la misma revisión que la de al lado.',
+    route: `Desde la oficina se cruza el suroeste, por Beechnut o Bellaire hacia Chimney Rock. No hay un local en Meyerland. ${office}`,
+    more:
+      'Casi nunca hay un espacio debajo de la casa para mirar. Buscamos el borde húmedo con un medidor. Una losa que se mojó tiene que estar seca antes de un piso nuevo. El vinil enseña el lomo que la alfombra escondía. Abrir la cocina es pregunta de estructura, y mover el fregadero es cortar la losa. Primero se impermeabiliza el baño. Después va la loseta.',
+    housesNote: 'Ranchos de ladrillo de los años 50, de un piso y techo bajo, sobre losa.',
+    climateNote: 'Brays Bayou ha inundado el terreno bajo. Los techos bajos esconden el granizo.',
+    kind: {
+      water:
+        'En Meyerland el agua de Brays Bayou en un lote bajo no es el secado de un tubo reventado sobre la losa.',
+      roof:
+        'En Meyerland el techo es bajo y los encinos caen en los valles. Desde la calle no se decide si una reparación aguanta.',
+      floor:
+        'En Meyerland hay madera original, loseta posterior y vinil en rollo. El piso nuevo espera a que la losa que se mojó esté seca.',
+      interior:
+        'En Meyerland la cocina de rancho suele seguir cerrada. El muro puede cargar el techo, y el drenaje está en la losa.',
+      exterior:
+        'En Meyerland la revisión, donde existe, suele mirar lo que se ve desde la calle. El permiso es de la ciudad de Houston.',
+    },
+  },
+  montrose: {
+    slug: 'montrose',
+    direction: 'al este de la oficina',
+    housing:
+      'Montrose es el vecindario dentro del Loop, sobre Westheimer, Montrose Boulevard y Richmond. En una misma calle puede haber un bungalow de los años 20 sobre pilotes y un townhome nuevo sobre losa. El bungalow suele tener un hueco debajo del piso, cuartos chicos y muros que no están a escuadra. El townhome comparte una pared. No pedimos el plano de uno para el otro. La moldura vieja entra en el trabajo si el resto del contramarco se queda.',
+    climate:
+      'La tormenta aquí suele ser viento, granizo y lluvia contra techos viejos, no un solo bayou por el medio del vecindario. Los techos planos del porche, las buhardillas añadidas y los valles parchados filtran mientras la pendiente principal se ve tranquila. Las calles estrechas y los carros estacionados cambian cómo se coloca una lona. Una helada puede partir un tubo en una pared exterior o en un hueco abierto al aire.',
+    permits:
+      'Montrose está en la ciudad de Houston. No hay el zonificado de un suburbio. Algunas calles tienen restricciones o una asociación de townhomes que revisa la fachada. El trabajo interior suele quedar fuera de eso. El permiso de Houston se confirma en la dirección cuando cambian tubos, cables o estructura. Meter un contenedor en estas calles se planea en la visita.',
+    route: `Se va al este por Westheimer o Richmond, hacia el Loop. No hay showroom en Montrose. ${office}`,
+    more:
+      'Cuando hay espacio debajo, miramos. Una fuga lenta puede mojar el contrapiso sin dejar un charco en la sala. El pino original se curva cuando la humedad sube y baja, y se puede lijar si las tablas tienen espesor y el hueco no sigue húmedo. La cocina del bungalow es chica. La del townhome no puede pedir metros al vecino.',
+    housesNote: 'Bungalows sobre pilotes y townhomes sobre losa, en calles estrechas dentro del Loop.',
+    climateNote: 'Viento, granizo y techos viejos. Las buhardillas y los porches planos filtran primero.',
+    kind: {
+      water:
+        'En Montrose una fuga bajo el bungalow no se busca igual que un suministro en un townhome sobre losa.',
+      roof:
+        'En Montrose el porche plano, el valle parchado y la buhardilla se fotografían. El frente puede verse bien mientras eso mete lluvia.',
+      floor:
+        'En Montrose el pino del bungalow depende del hueco. El vinil y la loseta aparecen en la cocina y en el townhome, cuando la base está seca.',
+      interior:
+        'En Montrose abrir la cocina del bungalow mete la estructura y la moldura en el plan. El townhome no crece hacia el vecino.',
+      exterior:
+        'En Montrose el permiso es de Houston, y la asociación del townhome, si la hay, suele mirar la fachada. El acceso de la calle estrecha se cotiza.',
+    },
+  },
 };

@@ -155,6 +155,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('meyerland', 'Meyerland'),
       { href: '/water-damage-restoration-bellaire-tx', label: 'Water damage in Bellaire' },
       { href: '/roofing-west-university-tx', label: 'Roofing in West University' },
       { href: '/alief-tx', label: 'Alief' },
@@ -208,6 +209,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('montrose', 'Montrose'),
       { href: '/kitchen-remodeling-the-heights-tx', label: 'Kitchen remodeling in The Heights' },
       { href: '/roofing-river-oaks-tx', label: 'Roofing in River Oaks' },
       { href: '/bathroom-remodeling-upper-kirby-tx', label: 'Bathroom remodeling in Upper Kirby' },
@@ -521,6 +523,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('humble', 'Humble'),
       { href: '/water-damage-restoration-the-woodlands-tx', label: 'Water damage in The Woodlands' },
       { href: '/roofing-the-woodlands-tx', label: 'Roofing in The Woodlands' },
     ],
@@ -571,6 +574,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('friendswood', 'Friendswood'),
       { href: '/roofing-clear-lake-tx', label: 'Roofing in Clear Lake' },
       { href: '/kitchen-remodeling-pearland-tx', label: 'Kitchen remodeling in Pearland' },
       { href: '/water-damage-restoration-pearland-tx', label: 'Water damage in Pearland' },
