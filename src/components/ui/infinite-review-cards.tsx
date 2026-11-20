@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Star } from "lucide-react";
+import { IconStar } from '@/components/icons';
 
 import type { Testimonial } from "@/lib/testimonials";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 
 export type ReviewLink = { href: string; label: string };
 
@@ -36,7 +36,7 @@ export function InfiniteReviewCards({
 
   if (reduce) {
     return (
-      <ul className={cn("grid gap-4 sm:grid-cols-2", className)}>
+      <ul className={cx("grid gap-4 sm:grid-cols-2", className)}>
         {items.map((item) => (
           <li key={item.author}>
             <ReviewCard item={item} />
@@ -48,7 +48,7 @@ export function InfiniteReviewCards({
 
   return (
     <div
-      className={cn(
+      className={cx(
         "group/marquee relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]",
         className,
       )}
@@ -67,7 +67,7 @@ export function InfiniteReviewCards({
       </ul>
       <ul
         aria-hidden
-        className={cn(
+        className={cx(
           "flex w-max min-w-full shrink-0 gap-4 py-2 animate-scroll",
           pauseOnHover &&
             "group-hover/marquee:[animation-play-state:paused] group-focus-within/marquee:[animation-play-state:paused]",
@@ -105,7 +105,7 @@ export function ReviewCard({
         <p className="eyebrow text-muted-foreground">{item.source}</p>
       </div>
       <blockquote
-        className={cn(
+        className={cx(
           "mt-5 font-display text-[1.35rem] leading-[1.25] tracking-[-0.02em] whitespace-pre-line",
           clamped && "line-clamp-6 whitespace-normal",
         )}
@@ -150,10 +150,10 @@ function Stars({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-0.5" role="img" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star
+        <IconStar
           key={i}
           aria-hidden
-          className={cn(
+          className={cx(
             "size-3.5",
             i < rating ? "fill-accent text-accent" : "text-border",
           )}

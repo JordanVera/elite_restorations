@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
 
 import { HeaderChrome } from '@/components/header-chrome';
+import { IconArrowUpRight, IconChevronDown, IconPhone } from '@/components/icons';
 import { LanguageSwitch } from '@/components/language-switch';
 import { MobileNavGate } from '@/components/mobile-nav-gate';
 import { ScrollProgressLine } from '@/components/scroll-progress';
@@ -20,7 +20,7 @@ import {
   servicesInGroup,
 } from '@/lib/service-nav';
 import { ctaHref, nav, site, type NavItem } from '@/lib/site';
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 import './site-header.css';
 
@@ -36,7 +36,7 @@ export function SiteHeader() {
           aria-label="Elite Restorations, home"
           className="shrink-0"
         >
-          <SiteLogo onDark={pathname === '/'} priority />
+          <SiteLogo onDark={pathname === '/'} eager />
         </Link>
 
         <nav aria-label="Primary" className="relative hidden lg:block">
@@ -57,7 +57,7 @@ export function SiteHeader() {
             href={site.phone.href}
             className="inline-flex h-11 min-w-11 shrink-0 items-center justify-center gap-2 whitespace-nowrap text-[0.8rem] tracking-wide transition-colors hover:text-accent-ink lg:hidden 2xl:inline-flex 2xl:min-w-0 2xl:justify-start"
           >
-            <Phone className="size-4 2xl:hidden" aria-hidden />
+            <IconPhone className="size-4 2xl:hidden" />
             <span className="hidden 2xl:inline">{site.phone.display}</span>
             <span className="sr-only 2xl:hidden">
               {es ? 'Llamar' : 'Call'} {site.phone.display}
@@ -76,10 +76,10 @@ export function SiteHeader() {
             data-slot="button"
             data-variant="accent"
             data-size="default"
-            className={cn(buttonVariants({ variant: 'accent' }), 'hidden lg:inline-flex')}
+            className={cx(buttonVariants({ variant: 'accent' }), 'hidden lg:inline-flex')}
           >
             {es ? 'Pedir un estimado' : 'Request estimate'}
-            <ArrowUpRight className="arrow" aria-hidden />
+            <IconArrowUpRight className="arrow" />
           </Link>
           <MobileNavGate className="lg:hidden" />
         </div>
@@ -131,10 +131,7 @@ function NavEntry({
       >
         <NavIndex index={index} />
         {item.label}
-        <ChevronDown
-          aria-hidden
-          className="site-nav-chevron size-3 translate-y-px transition-transform duration-500 ease-out-expo"
-        />
+        <IconChevronDown className="site-nav-chevron size-3 translate-y-px transition-transform duration-500 ease-out-expo" />
         <NavUnderline active={active} openAware />
       </button>
       <div className="site-nav-panel absolute top-full left-1/2 z-50 w-44 -translate-x-1/2 pt-7">
@@ -146,7 +143,7 @@ function NavEntry({
                 <Link
                   href={child.href}
                   aria-current={childActive ? 'page' : undefined}
-                  className={cn(
+                  className={cx(
                     'block px-3 py-2.5 text-[0.72rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-accent-ink',
                     childActive && 'text-accent-ink',
                   )}
@@ -215,10 +212,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
       >
         <NavIndex index={index} />
         {es ? 'Servicios' : 'Services'}
-        <ChevronDown
-          aria-hidden
-          className="site-nav-chevron size-3 translate-y-px transition-transform duration-500 ease-out-expo"
-        />
+        <IconChevronDown className="site-nav-chevron size-3 translate-y-px transition-transform duration-500 ease-out-expo" />
         <NavUnderline active={active} openAware />
       </button>
       <div className="site-nav-panel fixed inset-x-0 top-20 z-50">
@@ -231,7 +225,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
                 className="inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-accent-ink"
               >
                 {es ? 'Ver la lista' : 'View the full list'}
-                <ArrowUpRight className="size-3.5" aria-hidden />
+                <IconArrowUpRight className="size-3.5" />
               </Link>
             </div>
             <div className="mt-7 grid grid-cols-4 gap-x-10 gap-y-8">
@@ -251,7 +245,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
                           <Link
                             href={href}
                             aria-current={current ? 'page' : undefined}
-                            className={cn(
+                            className={cx(
                               'block py-1.5 text-sm leading-snug transition-colors hover:text-accent-ink',
                               current && 'text-accent-ink',
                             )}
@@ -271,7 +265,7 @@ function ServicesNav({ index, pathname }: { index: number; pathname: string }) {
                             <Link
                               href={href}
                               aria-current={current ? 'page' : undefined}
-                              className={cn(
+                              className={cx(
                                 'block py-1.5 text-sm leading-snug transition-colors hover:text-accent-ink',
                                 current && 'text-accent-ink',
                               )}
@@ -310,7 +304,7 @@ function NavUnderline({
   return (
     <span
       aria-hidden
-      className={cn(
+      className={cx(
         'absolute inset-x-0 -bottom-px h-px origin-left bg-accent-ink transition-transform duration-500 ease-out-expo',
         openAware && 'site-nav-underline',
         active

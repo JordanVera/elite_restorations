@@ -155,6 +155,9 @@ export default function RootLayout({
       as: 'font',
       type: 'font/woff2',
       crossOrigin: 'anonymous',
+      // City and project pages paint a hero photograph. Keep the font files
+      // from taking the high-priority connection the LCP image needs.
+      fetchPriority: 'low',
     });
   }
   return (

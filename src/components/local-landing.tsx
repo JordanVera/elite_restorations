@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowUpRight, Check, Phone } from 'lucide-react';
+import { IconArrowUpRight, IconCheck, IconPhone } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
@@ -189,7 +189,7 @@ export function LocalLandingView({
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {es ? `Página de ${serviceName.toLowerCase()}` : `Full ${service.name.toLowerCase()} page`}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" />
           </Link>
           {placeHref ? (
             <Link
@@ -197,7 +197,7 @@ export function LocalLandingView({
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
               {area.name}
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" />
             </Link>
           ) : null}
           <Link
@@ -205,7 +205,7 @@ export function LocalLandingView({
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
             {companyLabel}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" />
           </Link>
           <Link
             href={estimateHref}
@@ -218,7 +218,7 @@ export function LocalLandingView({
               : service.emergency
                 ? 'Request help'
                 : 'Request an estimate'}
-            <ArrowUpRight className="size-4" aria-hidden />
+            <IconArrowUpRight className="size-4" />
           </Link>
           {landing.areaSlug === 'katy' && landing.serviceSlug === 'patios-decks' && (
             <Link
@@ -226,7 +226,7 @@ export function LocalLandingView({
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
               Composite deck in Katy
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" />
             </Link>
           )}
           {landing.areaSlug === 'katy' && landing.serviceSlug === 'bathroom-remodeling' && (
@@ -235,7 +235,7 @@ export function LocalLandingView({
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
               Marble-look bathroom in Katy
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" />
             </Link>
           )}
         </div>
@@ -245,10 +245,7 @@ export function LocalLandingView({
               href={site.phone.href}
               className="group inline-flex items-center gap-4 border border-accent-ink px-5 py-4 transition-colors hover:bg-accent hover:text-white"
             >
-              <Phone
-                className="size-4 text-accent-ink group-hover:text-white"
-                aria-hidden
-              />
+              <IconPhone className="size-4 text-accent-ink group-hover:text-white" />
               <span className="text-[0.72rem] font-medium uppercase tracking-[0.2em]">
                 {es
                   ? `¿Sigue entrando agua? Llame al ${site.phone.display}`
@@ -269,6 +266,7 @@ export function LocalLandingView({
               image={hero}
               sizes={bleedPhotoSizes}
               priority
+              quality={60}
             />
           </ImageReveal>
         </div>
@@ -320,7 +318,7 @@ export function LocalLandingView({
                   key={item}
                   className="flex items-start gap-4 border-b border-border py-4"
                 >
-                  <Check className="mt-1 size-4 shrink-0 text-accent-ink" aria-hidden />
+                  <IconCheck className="mt-1 size-4 shrink-0 text-accent-ink" />
                   <span className="leading-relaxed">{item}</span>
                 </li>
               ))}
@@ -334,7 +332,7 @@ export function LocalLandingView({
                       className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
                     >
                       {link.label}
-                      <ArrowUpRight className="size-4" aria-hidden />
+                      <IconArrowUpRight className="size-4" />
                     </Link>
                   </li>
                 ))}
@@ -349,7 +347,7 @@ export function LocalLandingView({
                       className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
                     >
                       {landing.costGuide.label}
-                      <ArrowUpRight className="size-4" aria-hidden />
+                      <IconArrowUpRight className="size-4" />
                     </Link>
                   </li>
                 </ul>
@@ -533,10 +531,7 @@ export function LocalLandingView({
                       {es && relatedService.slug in esServiceNames
                         ? esServiceNames[relatedService.slug as keyof typeof esServiceNames]
                         : relatedService.name}
-                      <ArrowUpRight
-                        aria-hidden
-                        className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      />
+                      <IconArrowUpRight className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                     </Link>
                   </li>
                 );

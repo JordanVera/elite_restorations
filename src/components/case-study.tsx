@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { CtaBand } from '@/components/cta-band';
 import { ImageReveal } from '@/components/motion';
@@ -97,7 +97,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
               className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] hover:decoration-accent-ink"
             >
               Request an estimate
-              <ArrowUpRight className="size-4" aria-hidden />
+              <IconArrowUpRight className="size-4" aria-hidden />
             </Link>
           </p>
         </div>

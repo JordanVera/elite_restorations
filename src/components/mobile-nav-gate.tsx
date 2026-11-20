@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 type MobileNavComponent = typeof import('./mobile-nav').MobileNav;
 
@@ -29,7 +29,7 @@ export function MobileNavGate({ className }: { className?: string }) {
     <button
       type="button"
       aria-label={es ? 'Abrir el menú' : 'Open menu'}
-      className={cn(
+      className={cx(
         'group inline-flex h-11 items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em]',
         className,
       )}

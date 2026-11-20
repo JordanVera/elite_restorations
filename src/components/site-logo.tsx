@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 
-import { cn } from '@/lib/utils';
+import { cx } from '@/lib/cx';
 
 const subscribe = () => () => {};
 
@@ -17,12 +17,15 @@ export function SiteLogo({
   className,
   onDark = false,
   priority = false,
+  eager = false,
 }: {
   className?: string;
   /** Light wordmark before theme and scroll are known. The header passes this on the homepage. */
   onDark?: boolean;
-  /** Header wordmark. Eager so it is not lazy-loaded above the fold. */
+  /** Preload at high priority. Only for a wordmark that is the LCP image. */
   priority?: boolean;
+  /** Above-the-fold wordmark. Eager, but not a high-priority preload. */
+  eager?: boolean;
 }) {
   const { resolvedTheme } = useTheme();
   const mounted = useSyncExternalStore(subscribe, () => true, () => false);
@@ -71,9 +74,10 @@ export function SiteLogo({
         height={file.height}
         sizes="220px"
         priority={priority}
-        loading={priority ? 'eager' : undefined}
-        style={priority ? { width: 'auto', height: '2.75rem' } : { width: 'auto' }}
-        className={cn('h-11 w-auto', className)}
+        loading={priority || eager ? 'eager' : undefined}
+        fetchPriority={priority ? 'high' : eager ? 'low' : undefined}
+        style={priority || eager ? { width: 'auto', height: '2.75rem' } : { width: 'auto' }}
+        className={cx('h-11 w-auto', className)}
       />
     </span>
   );

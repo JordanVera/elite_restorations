@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Phone } from "lucide-react";
+import { IconPhone } from "@/components/icons";
 
 import { isSpanishPath } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -20,7 +20,7 @@ export function CallTextBar() {
             href={site.phone.href}
             className="inline-flex h-14 items-center justify-center gap-2 text-sm font-medium"
           >
-            <Phone className="size-4 text-accent-ink" aria-hidden />
+            <IconPhone className="size-4 text-accent-ink" />
             {call}
           </a>
           <a
@@ -37,7 +37,7 @@ export function CallTextBar() {
             href={site.phone.href}
             className="inline-flex h-11 items-center gap-2 px-3 text-[0.72rem] font-medium uppercase tracking-[0.16em] hover:text-accent-ink"
           >
-            <Phone className="size-3.5" aria-hidden />
+            <IconPhone className="size-3.5" />
             {call}
           </a>
           <a

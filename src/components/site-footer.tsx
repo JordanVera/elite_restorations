@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { LanguageSwitch } from '@/components/language-switch';
 import { brandServiceLinks } from '@/lib/brand-nav';
@@ -75,14 +75,14 @@ export function SiteFooter() {
                 className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
               >
                 {site.email}
-                <ArrowUpRight className="size-3.5" aria-hidden />
+                <IconArrowUpRight className="size-3.5" />
               </a>
               <Link
                 href={es ? '/es/contact' : '/contact'}
                 className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
               >
                 {es ? 'Pedir un estimado' : 'Request an estimate'}
-                <ArrowUpRight className="size-3.5" aria-hidden />
+                <IconArrowUpRight className="size-3.5" />
               </Link>
             </div>
           </div>

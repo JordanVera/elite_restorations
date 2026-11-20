@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { ArrowUpRight, Phone } from "lucide-react";
+import { IconArrowUpRight, IconPhone } from "@/components/icons";
 
 import { Reveal } from "@/components/motion";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { ctaHref, emergencyHref, site } from "@/lib/site";
 
 type CtaBandProps = {
@@ -42,18 +42,22 @@ export function CtaBand({
           <p className="measure mt-6 text-lg text-muted-foreground">{body}</p>
         </Reveal>
         <Reveal delay={0.15} className="flex flex-col items-start gap-6 md:items-end">
-          <Button asChild size="xl" variant="accent">
-            <Link href={destination}>
-              {buttonLabel ??
-                (emergency ? "Request emergency help" : "Request an estimate")}
-              <ArrowUpRight className="arrow" aria-hidden />
-            </Link>
-          </Button>
+          <Link
+            href={destination}
+            data-slot="button"
+            data-variant="accent"
+            data-size="xl"
+            className={buttonVariants({ variant: "accent", size: "xl" })}
+          >
+            {buttonLabel ??
+              (emergency ? "Request emergency help" : "Request an estimate")}
+            <IconArrowUpRight className="arrow" />
+          </Link>
           <a
             href={site.phone.href}
             className="inline-flex items-center gap-3 text-lg tracking-wide transition-colors hover:text-accent-ink"
           >
-            <Phone className="size-4" aria-hidden />
+            <IconPhone className="size-4" />
             {site.phone.display}
           </a>
           <a

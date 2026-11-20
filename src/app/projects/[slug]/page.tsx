@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { IconArrowRight, IconArrowUpRight } from "@/components/icons";
 
 import { CtaBand } from "@/components/cta-band";
 import { ImageReveal, Reveal } from "@/components/motion";
@@ -63,10 +63,10 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           <ImageReveal immediate className="relative aspect-[4/3] w-full md:aspect-[21/9]">
             {coverIndex >= 0 ? (
               <ProjectPhotoButton index={coverIndex} alt={project.cover.alt} className="absolute inset-0">
-                <Photo image={project.cover} sizes={bleedPhotoSizes} priority />
+                <Photo image={project.cover} sizes={bleedPhotoSizes} priority quality={60} />
               </ProjectPhotoButton>
             ) : (
-              <Photo image={project.cover} sizes={bleedPhotoSizes} priority />
+              <Photo image={project.cover} sizes={bleedPhotoSizes} priority quality={60} />
             )}
           </ImageReveal>
         </div>
@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                           className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                         >
                           {s.name}
-                          <ArrowUpRight className="size-3.5" aria-hidden />
+                          <IconArrowUpRight className="size-3.5" />
                         </Link>
                       </li>
                     ))}
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                           className="inline-flex items-center gap-1.5 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:text-accent-ink hover:decoration-accent-ink"
                         >
                           {link.label}
-                          <ArrowUpRight className="size-3.5" aria-hidden />
+                          <IconArrowUpRight className="size-3.5" />
                         </Link>
                       </li>
                     ))}
@@ -155,6 +155,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                       <Photo
                         image={image}
                         intrinsic
+                        quality={60}
                         sizes="(min-width: 1280px) 31vw, (min-width: 640px) 48vw, 94vw"
                       />
                     </ProjectPhotoButton>
@@ -177,10 +178,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
               {next.title}
             </span>
           </span>
-          <ArrowRight
-            aria-hidden
-            className="size-10 shrink-0 text-accent-ink transition-transform duration-500 ease-out-expo group-hover:translate-x-2"
-          />
+          <IconArrowRight className="size-10 shrink-0 text-accent-ink transition-transform duration-500 ease-out-expo group-hover:translate-x-2" />
         </Link>
       </section>
 

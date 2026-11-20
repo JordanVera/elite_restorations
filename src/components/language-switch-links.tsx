@@ -1,7 +1,7 @@
 import Link from "next/link";
 
+import { cx } from "@/lib/cx";
 import { localeSwitch } from "@/lib/i18n";
-import { cn } from "@/lib/utils";
 
 export function LanguageSwitchLinks({
   pathname,
@@ -20,7 +20,7 @@ export function LanguageSwitchLinks({
   return (
     <nav
       aria-label={label}
-      className={cn(
+      className={cx(
         "inline-flex items-center gap-0.5 font-medium",
         labels === "full"
           ? "text-base normal-case tracking-normal"
@@ -34,7 +34,7 @@ export function LanguageSwitchLinks({
         lang="en"
         aria-label={enText === "EN" ? "EN, English" : "English"}
         aria-current={current === "en" ? "page" : undefined}
-        className={cn(
+        className={cx(
           "inline-flex min-h-11 items-center px-1.5",
           current === "en"
             ? "text-accent-ink underline decoration-accent-ink underline-offset-4"
@@ -52,7 +52,7 @@ export function LanguageSwitchLinks({
         lang="es"
         aria-label={esText === "ES" ? "ES, Español" : "Español"}
         aria-current={current === "es" ? "page" : undefined}
-        className={cn(
+        className={cx(
           "inline-flex min-h-11 items-center px-1.5",
           current === "es"
             ? "text-accent-ink underline decoration-accent-ink underline-offset-4"

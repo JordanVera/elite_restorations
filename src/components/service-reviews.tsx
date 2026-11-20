@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
 import { ReviewCard } from '@/components/ui/infinite-review-cards';
 import { googleReviewSummary, reviewsForService } from '@/lib/published-reviews';
@@ -30,7 +30,7 @@ export function ServiceReviews({ serviceSlug }: { serviceSlug: string }) {
               className="inline-flex items-center gap-1 text-foreground underline decoration-foreground/30 underline-offset-[0.35em] hover:decoration-accent-ink"
             >
               See the Google profile
-              <ArrowUpRight className="size-3.5" aria-hidden />
+              <IconArrowUpRight className="size-3.5" aria-hidden />
             </a>
           </p>
         </div>

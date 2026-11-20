@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/cx";
 
 export function ScrollProgressLine({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ export function ScrollProgressLine({ className }: { className?: string }) {
     <div
       ref={ref}
       aria-hidden
-      className={cn("h-px origin-left bg-accent", className)}
+      className={cx("h-px origin-left bg-accent", className)}
       style={{ transform: "scaleX(0)" }}
     />
   );

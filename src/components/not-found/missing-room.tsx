@@ -2,11 +2,11 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { IconArrowUpRight } from '@/components/icons';
 
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button-variants';
+import { cx } from '@/lib/cx';
 import { site } from '@/lib/site';
-import { cn } from '@/lib/utils';
 
 const VB_W = 1000;
 const VB_H = 980;
@@ -447,10 +447,7 @@ function FloorPlan({
                 {room.hint}
               </span>
             </span>
-            <ArrowUpRight
-              aria-hidden
-              className="absolute top-2 right-2 size-3.5 text-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
-            />
+            <IconArrowUpRight className="absolute top-2 right-2 size-3.5 text-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
           </Link>
         ))}
       </nav>
@@ -531,7 +528,7 @@ function SheetMeta({
 
 function Crop({ className }: { className: string }) {
   return (
-    <span aria-hidden className={cn('absolute size-3.5', className)}>
+    <span aria-hidden className={cx('absolute size-3.5', className)}>
       <span className="absolute top-1/2 left-0 h-px w-full -translate-y-1/2 bg-foreground/50" />
       <span className="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-foreground/50" />
     </span>
@@ -623,12 +620,16 @@ export function MissingRoom() {
               we never built. The rest of the house is open.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button asChild variant="accent" size="lg">
-                <Link href="/">
-                  Back to the house
-                  <ArrowUpRight className="arrow" aria-hidden />
-                </Link>
-              </Button>
+              <Link
+                href="/"
+                data-slot="button"
+                data-variant="accent"
+                data-size="lg"
+                className={buttonVariants({ variant: 'accent', size: 'lg' })}
+              >
+                Back to the house
+                <IconArrowUpRight className="arrow" />
+              </Link>
               <Link
                 href="/projects"
                 className="underline underline-offset-[0.5em] hover:text-accent-ink"
