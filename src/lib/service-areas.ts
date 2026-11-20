@@ -221,6 +221,41 @@ const details: Record<string, { setting: string; clause: string }> = {
       'Kingwood is inside the City of Houston, northeast near Lake Houston, with slab houses from the 1970s through the 2000s under pines. Low ground near the lake has flooded in past tropical storms.',
     clause: 'pine-shaded slab houses near Lake Houston',
   },
+  Humble: {
+    setting:
+      'Humble is its own city in northeast Harris County along Interstate 69, with an older downtown and later slab houses toward FM 1960 and Lake Houston. Low ground near the San Jacinto River has taken storm water in past tropical storms.',
+    clause: 'an older downtown and later slabs toward Lake Houston',
+  },
+  Atascocita: {
+    setting:
+      'Atascocita is the unincorporated Harris County community along FM 1960 between Humble and Lake Houston. Houses are mostly brick slabs from the 1970s onward, many under pines, and the permit follows the county address.',
+    clause: '1970s brick slabs under pines, beside Lake Houston',
+  },
+  Friendswood: {
+    setting:
+      'Friendswood is its own city southeast of Houston, mostly in Galveston County with a northern portion in Harris County. Brick slab houses from the 1960s through the 1990s sit near Clear Creek, and Friendswood issues its own permits.',
+    clause: 'brick slab houses near Clear Creek',
+  },
+  'League City': {
+    setting:
+      'League City is its own city along Interstate 45, mostly in Galveston County with a portion in Harris County. An older town near FM 518 sits beside later slab subdivisions toward Clear Creek and Clear Lake.',
+    clause: 'an older town and later slabs along Interstate 45',
+  },
+  Conroe: {
+    setting:
+      'Conroe is the Montgomery County seat north of The Woodlands, with an older downtown and newer slab subdivisions toward Lake Conroe. The city permits addresses inside the city, and many nearby lots are in unincorporated Montgomery County.',
+    clause: 'an older downtown and newer slabs toward Lake Conroe',
+  },
+  Meyerland: {
+    setting:
+      'Meyerland is the southwest Houston neighborhood of 1950s one-story brick ranches on slabs along Brays Bayou and North Braeswood. Low ground along the bayou has taken storm water, and some of those houses were later rebuilt or lifted.',
+    clause: '1950s brick ranches along Brays Bayou',
+  },
+  Montrose: {
+    setting:
+      'Montrose is inside Loop 610 in Houston, with older bungalows on piers and newer townhomes on slabs along Westheimer, Montrose Boulevard, and Richmond. Streets are tight, and the roofs are often a mix of patched slopes, dormers, and flat porches.',
+    clause: 'bungalows on piers and townhomes on slabs',
+  },
 };
 
 export const serviceAreas: ServiceArea[] = site.serviceArea.map((name) => {

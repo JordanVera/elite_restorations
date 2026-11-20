@@ -1,6 +1,6 @@
 import { parseLocalLandingSlug } from '@/lib/local-paths';
 
-/** City service pages that have a Spanish twin. PR #61 areas plus the six added with them. */
+/** City service pages that have a Spanish twin. */
 export const spanishCityAreaSlugs = [
   'copperfield',
   'rosenberg',
@@ -14,11 +14,18 @@ export const spanishCityAreaSlugs = [
   'fulshear',
   'tomball',
   'kingwood',
+  'humble',
+  'atascocita',
+  'friendswood',
+  'league-city',
+  'conroe',
+  'meyerland',
+  'montrose',
 ] as const;
 
 export type SpanishCityAreaSlug = (typeof spanishCityAreaSlugs)[number];
 
-/** English city pages added in this round. Their heroes use the edited photo set. */
+/** English city pages whose heroes use the edited photo set. */
 export const newCityAreaSlugs = [
   'cypress',
   'spring',
@@ -26,6 +33,13 @@ export const newCityAreaSlugs = [
   'fulshear',
   'tomball',
   'kingwood',
+  'humble',
+  'atascocita',
+  'friendswood',
+  'league-city',
+  'conroe',
+  'meyerland',
+  'montrose',
 ] as const;
 
 const spanishCityAreaSet = new Set<string>(spanishCityAreaSlugs);

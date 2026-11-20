@@ -1034,6 +1034,10 @@ const spanishCityNames: Record<string, string> = {
   'fulshear-tx': 'Fulshear',
   'tomball-tx': 'Tomball',
   'kingwood-tx': 'Kingwood',
+  'humble-tx': 'Humble',
+  'friendswood-tx': 'Friendswood',
+  'meyerland-tx': 'Meyerland',
+  'montrose-tx': 'Montrose',
 };
 
 export const esNeighborhoods: readonly NeighborhoodPage[] = esNeighborhoodPages.map((page) => {
