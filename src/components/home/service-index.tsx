@@ -247,9 +247,9 @@ function ServiceRow({
       data-active={active}
       onMouseEnter={() => onActivate(service.slug)}
       onFocus={() => onActivate(service.slug)}
-      className="group grid min-w-0 grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-x-4 py-5 transition-opacity duration-500 md:grid-cols-[3.5rem_minmax(0,1fr)_auto] md:py-6 lg:opacity-40 lg:data-[active=true]:opacity-100"
+      className="group grid min-w-0 grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-x-4 py-5 transition-colors duration-500 md:grid-cols-[3.5rem_minmax(0,1fr)_auto] md:py-6"
     >
-      <span className="eyebrow text-muted-foreground">
+      <span className="eyebrow text-muted-foreground lg:text-[#655f53] lg:group-data-[active=true]:text-muted-foreground">
         {String(index + 1).padStart(2, '0')}
       </span>
       <span className="flex min-w-0 items-center gap-5">
@@ -260,7 +260,7 @@ function ServiceRow({
         </span>
         <span
           className={cn(
-            'min-w-0 font-display text-[clamp(1.45rem,5.4vw,2.15rem)] leading-[1.05] tracking-[-0.025em] transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3 lg:text-[clamp(2rem,4.6vw,4.25rem)] lg:leading-none',
+            'min-w-0 font-display text-[clamp(1.45rem,5.4vw,2.15rem)] leading-[1.05] tracking-[-0.025em] transition-transform duration-700 ease-out-expo group-hover:translate-x-3 group-focus-visible:translate-x-3 lg:text-[clamp(2rem,4.6vw,4.25rem)] lg:leading-none lg:text-[#7c766d] lg:group-data-[active=true]:text-foreground',
             active && 'lg:translate-x-3',
           )}
         >
@@ -273,7 +273,7 @@ function ServiceRow({
             Emergency
           </span>
         )}
-        <span className="eyebrow hidden text-muted-foreground md:inline">
+        <span className="eyebrow hidden text-muted-foreground md:inline lg:text-[#655f53] lg:group-data-[active=true]:text-muted-foreground">
           {service.group}
         </span>
         <ArrowUpRight

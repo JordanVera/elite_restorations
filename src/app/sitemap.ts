@@ -5,7 +5,8 @@ import { esNeighborhoods } from '@/lib/es/neighborhoods';
 import { esPosts } from '@/lib/es/posts';
 import { neighborhoods } from '@/lib/neighborhoods';
 import { brandPages } from '@/lib/brand-pages';
-import { articlePath, articles } from '@/lib/articles';
+import { articlePath, articles, type Article } from '@/lib/articles';
+import { contentUpdated } from '@/lib/content-dates';
 import { caseStudies } from '@/lib/case-studies';
 import { costGuides } from '@/lib/cost-guides';
 import { legalEffectiveDate } from '@/lib/legal';
@@ -35,8 +36,9 @@ const MONTHS = {
 } as const;
 
 /**
- * Privacy and terms name an effective date. Everything else is stamped with
- * the time this sitemap is generated, which is the production build.
+ * Privacy and terms name an effective date. Blog posts and projects use a
+ * date written in the copy when they have one. Everything else is stamped
+ * with the time this sitemap is generated, which is the production build.
  */
 function publishedDate(value: string) {
   const match = /^([A-Za-z]+) (\d{1,2}), (\d{4})$/.exec(value.trim());
@@ -52,12 +54,42 @@ const datedPaths = new Map<string, Date>([
   ['/terms', publishedDate(legalEffectiveDate)],
 ]);
 
-function entry(path: string, priority: number, builtAt: Date): MetadataRoute.Sitemap[number] {
+function entry(
+  path: string,
+  priority: number,
+  builtAt: Date,
+  modified?: Date,
+): MetadataRoute.Sitemap[number] {
   return {
     url: absoluteUrl(path),
-    lastModified: datedPaths.get(path) ?? builtAt,
+    lastModified: modified ?? datedPaths.get(path) ?? builtAt,
     priority,
   };
+}
+
+function articleText(article: Article) {
+  return [
+    article.title,
+    article.lede,
+    article.description,
+    ...article.sections.flatMap((section) =>
+      section.blocks.flatMap((block) => {
+        if (block.type === 'p') return [block.text];
+        if (block.type === 'list') return [...block.items];
+        return block.items.map((item) => item.label);
+      }),
+    ),
+    ...(article.faqs ?? []).flatMap((faq) => [faq.q, faq.a]),
+  ].join('\n');
+}
+
+function projectText(project: {
+  tagline: string;
+  description?: string;
+  summary: readonly string[];
+  notes: readonly string[];
+}) {
+  return [project.tagline, project.description ?? '', ...project.summary, ...project.notes].join('\n');
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -98,9 +130,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...spanishRoutes.map((path) => entry(path, 0.6, builtAt)),
     ...waterCauses.map((cause) => entry(cause.path, 0.7, builtAt)),
     ...insurers.map((insurer) => entry(`/insurance-claims/companies/${insurer.slug}`, 0.6, builtAt)),
-    ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt)),
-    ...esProjectStories.map((story) => entry(story.path, 0.6, builtAt)),
-    ...articles.map((article) => entry(articlePath(article.slug), 0.5, builtAt)),
+    ...projects.map((p) => entry(`/projects/${p.slug}`, 0.6, builtAt, contentUpdated(projectText(p)))),
+    ...esProjectStories.map((story) =>
+      entry(story.path, 0.6, builtAt, contentUpdated(projectText(story))),
+    ),
+    ...articles.map((article) =>
+      entry(articlePath(article.slug), 0.5, builtAt, contentUpdated(articleText(article))),
+    ),
     entry('/privacy', 0.3, builtAt),
     entry('/terms', 0.3, builtAt),
     // City pages, the homepage, and about take this build time as lastmod,
@@ -110,7 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaPages.map((page) => entry(page.path, 0.6, builtAt)),
     ...neighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
     ...esNeighborhoods.map((page) => entry(page.path, 0.6, builtAt)),
-    ...esPosts.map((post) => entry(post.path, 0.5, builtAt)),
+    ...esPosts.map((post) => entry(post.path, 0.5, builtAt, contentUpdated(articleText(post)))),
     ...costGuides.map((guide) => entry(guide.path, 0.6, builtAt)),
     ...brandPages.map((page) => entry(page.path, page.locale === 'es' ? 0.6 : 0.7, builtAt)),
     ...caseStudies.map((study) => entry(study.path, 0.6, builtAt)),

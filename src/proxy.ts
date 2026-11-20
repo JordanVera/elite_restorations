@@ -38,16 +38,17 @@ export function proxy(request: NextRequest) {
     return response;
   }
 
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('x-pathname', pathname);
-  return NextResponse.next({ request: { headers: requestHeaders } });
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    // Skip files and Next internals. Spanish pages need the pathname so the
-    // root layout can set <html lang="es">. WordPress leftovers stay in this
-    // proxy and still return 410.
+    // Skip Next internals and dotted static files. Pages stay in the proxy
+    // for the WordPress 410 and the old search noindex.
     '/((?!_next/static|_next/image|images/|favicon.ico|.*\\..*).*)',
+    // wp-*.php and xmlrpc.php contain a dot, so the rule above skips them
+    // and Next would 404. They still need the 410 from isWordPressJunk.
+    '/wp-:name.php',
+    '/xmlrpc.php',
   ],
 };

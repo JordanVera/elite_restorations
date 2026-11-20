@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import { headers } from 'next/headers';
+import { usePathname } from 'next/navigation';
 import { ArrowUpRight, ChevronDown, Phone } from 'lucide-react';
 
 import { HeaderChrome } from '@/components/header-chrome';
@@ -22,8 +24,8 @@ import { cn } from '@/lib/utils';
 
 import './site-header.css';
 
-export async function SiteHeader() {
-  const pathname = (await headers()).get('x-pathname') || '/';
+export function SiteHeader() {
+  const pathname = usePathname() || '/';
   const es = isSpanishPath(pathname);
 
   return (
@@ -34,7 +36,7 @@ export async function SiteHeader() {
           aria-label="Elite Restorations, home"
           className="shrink-0"
         >
-          <SiteLogo onDark={pathname === '/'} />
+          <SiteLogo onDark={pathname === '/'} priority />
         </Link>
 
         <nav aria-label="Primary" className="relative hidden lg:block">

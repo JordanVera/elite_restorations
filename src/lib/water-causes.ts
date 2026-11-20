@@ -2,6 +2,7 @@ import { duplicateQuestions } from "@/lib/faqs";
 import { waterFaqs as extraWaterFaqs } from "@/lib/faqs/pages";
 import type { GuideSection } from "@/lib/guides/types";
 import { img, type Img } from "@/lib/images";
+import { waterCauseLinks } from "@/lib/water-cause-links";
 import { moreWaterCauses } from "@/lib/water-causes-rest";
 import { wordCount } from "@/lib/words";
 
@@ -177,7 +178,16 @@ function pageWords(page: WaterCause) {
   ]);
 }
 
+const footerHeadings = new Map<string, string>(
+  waterCauseLinks.map((link) => [link.slug, link.hubHeading]),
+);
+if (footerHeadings.size !== waterCauses.length) {
+  throw new Error('Footer water links are out of sync with the water-cause pages');
+}
 for (const page of waterCauses) {
+  if (footerHeadings.get(page.slug) !== page.hubHeading) {
+    throw new Error(`Footer water link heading drifted: ${page.slug}`);
+  }
   const words = pageWords(page);
   const faqs = page.faqs.length;
   if (words < 1600) {

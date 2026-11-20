@@ -8,13 +8,21 @@ import { cn } from '@/lib/utils';
 
 const subscribe = () => () => {};
 
+const logoFile = {
+  light: { src: '/images/logo/logo-white.png', width: 880, height: 398 },
+  dark: { src: '/images/logo/logo-main.png', width: 743, height: 336 },
+} as const;
+
 export function SiteLogo({
   className,
   onDark = false,
+  priority = false,
 }: {
   className?: string;
   /** Light wordmark before theme and scroll are known. The header passes this on the homepage. */
   onDark?: boolean;
+  /** Header wordmark. Eager so it is not lazy-loaded above the fold. */
+  priority?: boolean;
 }) {
   const { resolvedTheme } = useTheme();
   const mounted = useSyncExternalStore(subscribe, () => true, () => false);
@@ -52,15 +60,19 @@ export function SiteLogo({
   }, []);
 
   const light = overHero || (mounted && resolvedTheme === 'dark');
+  const file = light ? logoFile.light : logoFile.dark;
 
   return (
     <span ref={ref} className="inline-flex">
       <Image
-        src={light ? '/images/logo/logo-white.png' : '/images/logo/logo-main.png'}
+        src={file.src}
         alt="Elite Restorations"
-        width={light ? 880 : 743}
-        height={light ? 398 : 336}
+        width={file.width}
+        height={file.height}
         sizes="220px"
+        priority={priority}
+        loading={priority ? 'eager' : undefined}
+        style={priority ? { width: 'auto', height: '2.75rem' } : { width: 'auto' }}
         className={cn('h-11 w-auto', className)}
       />
     </span>

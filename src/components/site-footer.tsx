@@ -1,11 +1,14 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ArrowUpRight } from 'lucide-react';
 
 import { LanguageSwitch } from '@/components/language-switch';
 import { brandServiceLinks } from '@/lib/brand-nav';
-import { esGroupNames, esServiceNames, serviceHref } from '@/lib/i18n';
-import { waterCauses } from '@/lib/water-causes';
-import { googleReviews } from '@/lib/testimonials';
+import { googleReviews } from '@/lib/google-listing';
+import { esGroupNames, esServiceNames, isSpanishPath, serviceHref } from '@/lib/i18n';
+import { waterCauseLinks } from '@/lib/water-cause-links';
 import { nav, site } from '@/lib/site';
 import { serviceGroups, servicesInGroup } from '@/lib/service-nav';
 import { SiteLogo } from './site-logo';
@@ -40,7 +43,8 @@ const esNav: Record<string, { href: string; label: string }> = {
   '/emergency': { href: '/es/emergency', label: 'Emergencia' },
 };
 
-export function SiteFooter({ es }: { es: boolean }) {
+export function SiteFooter() {
+  const es = isSpanishPath(usePathname() || '/');
   const year = new Date().getFullYear();
   const newTab = es ? ' (se abre en una pestaña nueva)' : ' (opens in a new tab)';
 
@@ -165,9 +169,9 @@ export function SiteFooter({ es }: { es: boolean }) {
                   {es ? 'Guías de aseguradoras' : 'Insurer guides'}
                 </Link>
               </li>
-              {waterCauses.map((cause) => (
+              {waterCauseLinks.map((cause) => (
                 <li key={cause.slug}>
-                  <Link href={cause.path} className={linkClass}>
+                  <Link href={`/${cause.slug}`} className={linkClass}>
                     {cause.hubHeading}
                   </Link>
                 </li>
