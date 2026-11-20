@@ -23,6 +23,8 @@ export type Project = {
   featured?: boolean;
   /** Closing line for the estimate band. Other projects keep the shared line. */
   cta?: string;
+  /** Story pages can supply the meta description. Others use the title and tagline. */
+  description?: string;
   /**
    * One finished job. Its photos are added on the related service pages
    * after the existing sample, so those samples stay put.
@@ -102,6 +104,12 @@ const altOverrides: Record<string, string> = {
     'Close-up of the composite deck corner, dark fascia, and built-in steps built by Elite Restorations in Katy, TX.',
   'katy-deck/katy-composite-deck-06.jpg':
     'Full-length view of a composite deck and closed hot tub along the back of a house in Katy, TX, built by Elite Restorations.',
+  'katy-closet/katy-custom-walk-in-closet-hanging-rods.webp':
+    'Custom walk-in closet in Katy, TX with double hanging rods and a pull-down wardrobe lift in an espresso finish',
+  'katy-closet/katy-custom-walk-in-closet-dresser.webp':
+    'Built-in espresso dresser with twelve drawers and brushed nickel bar pulls, plus open shelves above, in a Katy, TX walk-in closet',
+  'katy-closet/katy-custom-walk-in-closet-shoe-shelving.webp':
+    'Floor-to-ceiling espresso shoe shelving beside a built-in dresser in a custom walk-in closet in Katy, TX',
   'katy-bathroom/katy-marble-bathroom-01.jpg':
     'Square rain shower head over large white and gray marble-look tile, with a recessed niche lined in hex mosaic, in a Katy bathroom finished by Elite Restorations.',
   'katy-bathroom/katy-marble-bathroom-02.jpg':
@@ -135,6 +143,7 @@ const projectSeoNames: Record<string, string> = {
   'crosby-water-damage': 'Crosby Water Damage Repair',
   'katy-composite-deck': 'Katy Composite Deck',
   'katy-marble-bathroom': 'Katy Marble Bathroom',
+  'custom-walk-in-closet-katy': 'Custom Walk-In Closet in Katy, TX',
 };
 
 export function projectSeoName(slug: string) {
@@ -302,6 +311,12 @@ const cypressJob = gallery('cypress', 'Cypress project', [
   '06-after-kitchen.jpg',
   '07-after-kitchen-counters.jpg',
   '08-after-stairs.jpg',
+]);
+
+const katyCloset = gallery('katy-closet', 'Katy closet', [
+  'katy-custom-walk-in-closet-hanging-rods.webp',
+  'katy-custom-walk-in-closet-dresser.webp',
+  'katy-custom-walk-in-closet-shoe-shelving.webp',
 ]);
 
 const katyBath = gallery('katy-bathroom', 'Katy bathroom', [
@@ -724,6 +739,42 @@ export const projects: Project[] = [
     cta: 'Call (713) 909-0034, or tell us what you need on the contact page.',
     story: true,
   },
+  {
+    slug: 'custom-walk-in-closet-katy',
+    title: 'Custom Walk-In Closet in Katy, TX',
+    category: 'Details',
+    tagline: 'Espresso built-ins, a 12-drawer dresser, and floor-to-ceiling shoe shelving, finished in 2026.',
+    description:
+      'A 2026 custom walk-in closet in Katy, TX with espresso built-ins, a 12-drawer dresser, pull-down wardrobe lift, and floor-to-ceiling shoe shelving.',
+    summary: [
+      'This custom walk-in closet was completed in 2026 for a home in Katy, Texas. Espresso-finish built-ins wrap the room, set against white walls and light wide-plank floors.',
+      'At the center of the layout is a double-hanging bay: a shorter rod above a longer rod, divided by a mid-shelf. A pull-down wardrobe lift is mounted above that bay, so the highest hanging storage can be brought down within reach. The side panels are drilled with shelf-pin holes, allowing rods and shelves to be moved as needs change.',
+      'On the adjoining wall, a built-in dresser is the focal point: twelve drawers in two columns, each with a recessed panel front and a brushed nickel bar pull. The lowest drawers are slightly taller than the ones above. Two stacked bays of open shelving sit on top of the dresser, with small hooks along the lowest openings.',
+      'To the right, a floor-to-ceiling shoe tower fills a narrow bay with closely spaced shelves. Between the dresser and the shoe tower, a corner hanging space with a rod and hooks uses the remaining wall.',
+      'The result is a walk-in organized from floor to ceiling. Elite Restorations is family-owned and has been serving Houston since 1993. We build this kind of custom closet for homes in Katy and across the Houston area. See [carpentry](/carpentry) and [carpentry in Katy](/carpentry-katy-tx).',
+    ],
+    notes: [
+      'Espresso-finish custom built-ins',
+      'Double hanging rods with a mid-shelf between the upper and lower rods',
+      'Pull-down wardrobe lift above the hanging bay',
+      'Built-in 12-drawer dresser with recessed panel fronts',
+      'Brushed nickel bar pulls',
+      'Open shelving above the dresser, with hooks on the lower openings',
+      'Floor-to-ceiling shoe shelving',
+      'Adjustable shelf-pin holes on the hanging side panels',
+      'Corner hanging bay with a rod and hooks',
+      'Light wide-plank floors',
+    ],
+    services: ['carpentry'],
+    reading: [
+      { href: '/carpentry', label: 'Carpentry' },
+      { href: '/carpentry-katy-tx', label: 'Carpentry in Katy' },
+    ],
+    cover: katyCloset[0],
+    gallery: katyCloset,
+    cta: 'Ready for a custom closet or remodel? Call (713) 909-0034, Monday through Saturday, 8 AM to 6 PM. Tell us what you need on the contact page.',
+    story: true,
+  },
 ];
 
 export const projectsBySlug = new Map(projects.map((p) => [p.slug, p]));
@@ -778,7 +829,7 @@ for (const project of projects) {
   if (project.story) {
     const seo = projectSeoName(project.slug);
     if (!seo) throw new Error(`Story needs an SEO name: ${project.slug}`);
-    const description = `${project.title} in Houston. ${project.tagline}`;
+    const description = project.description ?? `${project.title} in Houston. ${project.tagline}`;
     if (description.length > 155 || fitDescription(description) !== description) {
       throw new Error(
         `Story description is ${description.length} characters and would be trimmed: ${project.slug}`,
