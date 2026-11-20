@@ -864,4 +864,172 @@ export const houstonPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'woodlands-spring-first-freeze-prep',
+    title: 'Getting a house in The Woodlands and Spring ready for a possible freeze',
+    metaTitle: 'Woodlands and Spring Freeze Prep',
+    crumb: 'Freeze prep',
+    lines: ['A freeze is possible.', 'Prep the house.'],
+    description:
+      'A freeze is possible in The Woodlands and Spring around Thanksgiving. How to prep pipes, hose bibs, irrigation, and the main shutoff.',
+    lede: 'On November 20, 2026, a first freeze is possible north of Houston. It is not a sure thing. The Woodlands and Spring are in the area the forecast is watching, and a house on a wooded lot can still lose a pipe on one cold night.',
+    image: '/images/services/water-damage-restoration.jpg',
+    service: 'water-damage-restoration',
+    emergency: true,
+    ctaTitle: 'If a pipe already opened',
+    ctaBody:
+      'Call (713) 909-0034 if a pipe opens. Shut the main if you can reach it safely. Elite Restorations extracts, dries, and repairs freeze and burst-pipe damage. Family-owned, serving Houston since 1993.',
+    related: [
+      'houston-leaks-pipes-heater-dishwasher-toilet',
+      'first-24-hours-water-damage-houston',
+    ],
+    faqs: [
+      {
+        q: 'Is a freeze certain for The Woodlands and Spring?',
+        a: 'No. On November 20, 2026, the Houston/Galveston office is watching for a possible first freeze around Wednesday night into Thanksgiving morning, across the Brazos Valley and the Piney Woods. Prepare the house anyway. The pipes that fail are the ones nobody looked at.',
+      },
+      {
+        q: 'Which faucets should drip?',
+        a: 'Set a slow drip on hot and cold at the fixtures farthest from where water enters, often an upstairs bath or a sink on an outside wall. Do it the night a freeze is possible. Covered hose bibs should stay dry, with the hoses off. A stream all night only wastes water.',
+      },
+      {
+        q: 'Where is the main shutoff?',
+        a: 'Usually in the meter box near the street. Some houses also have a valve where the line comes inside. Clear pine straw off the lid in daylight and confirm the valve turns. A meter key helps if the curb stop needs one. Leave the water on after you know it moves.',
+      },
+      {
+        q: 'What about the sprinkler backflow?',
+        a: 'Turn the system off and drain the above-ground brass if you know the valves. Wrapping a full assembly is a weaker step. If you have never drained it, find the handles this afternoon or call the person who services the irrigation.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'What the forecast actually says',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The National Weather Service Houston/Galveston office is watching for a possible first freeze across the Brazos Valley and the Piney Woods around Wednesday night, November 25, into Thanksgiving morning. The Woodlands and Spring sit on the Piney Woods side of the Houston area, north of the city. The Brazos Valley is farther west. A possible freeze means you should prepare. It does not mean every street will ice over. These houses are built for heat and humidity. One cold night can split a line that has gone all year with nothing on it.',
+          },
+        ],
+      },
+      {
+        heading: 'Why these houses are the ones that split',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Houses in The Woodlands, and in the newer sections of Spring, are often two stories on a concrete slab. Supply lines commonly run through the attic and inside exterior walls, where room heat does not reach them. Older houses near Old Town Spring are a different building. Some are smaller, and the line to find may be on an outside wall or under the floor. Either way, there is no basement to catch the water. A split shows up as a ceiling stain, a drip, or a wet floor.',
+          },
+          {
+            type: 'p',
+            text: 'Pines and oaks shade the walls and the yard. A hose bib on the north side, under those trees, stays colder than the same bib in full sun. Irrigation is common on these lots. The backflow preventer is usually brass, above the ground, near the meter or along the side yard, and it holds water on purpose. That fitting often cracks before anyone sees a stain inside.',
+          },
+        ],
+      },
+      {
+        heading: 'Hoses, bibs, and pipe you can see',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Disconnect every garden hose and drain it. A hose left on the bib holds water in the valve, and the bib can split in the wall behind it. After the hose is off, put an insulated cover on the bib. A cover over a hose that is still attached does not drain anything. Foam sleeves belong on exposed pipe you can see in a garage or along an outside wall. A towel gets wet and stops helping. If a bib has dripped for months, this is a poor week to ignore it.',
+          },
+        ],
+      },
+      {
+        heading: 'Attic lines and pipes in exterior walls',
+        blocks: [
+          {
+            type: 'p',
+            text: 'On a two-story house, look at the attic in daylight. Open the hatch and stay on the joists. Look for bare pipe near the eaves, near a roof vent, or where a line crosses the attic on the way to an upstairs bath. If the pipe is already under insulation, leave that insulation in place. Pulling it back and forgetting it turns a protected line into a bare one. Foam sleeves are for bare runs you can reach. Do not step off the wood. A foot through the ceiling is its own repair.',
+          },
+          {
+            type: 'p',
+            text: 'Pipe inside an exterior wall cannot be sleeved from the living room. Open the cabinet doors under kitchen and bathroom sinks on outside walls so room air can reach the supplies. Leave the doors open the night a freeze is possible. A closed cabinet is a cold box, and those lines can freeze while the kitchen still feels fine.',
+          },
+        ],
+      },
+      {
+        heading: 'The irrigation backflow preventer',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Many yards in The Woodlands and Spring have sprinklers, and the backflow preventer sits outside. Turn the controller off. Close the valve that feeds the assembly, and drain it if you know the handles. If you have never touched them, find them this afternoon or call the person who services the system. Wrapping brass that is still full of water is a weaker step than draining it. Cover it after the water is out. Pine straw piled on the device is not insulation, and it hides a leak later.',
+          },
+        ],
+      },
+      {
+        heading: 'The water heater, and the heat if you leave',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Water heaters here often sit in the garage or in the attic. Know which you have before you need to shut one down. For the cold night, leave the heater on. If it is in the garage, keep the garage door closed. If you leave for Thanksgiving, do not turn the house heat off. Leave a normal setting, as if someone were home. Ask a neighbor to look in if a freeze warning is posted later. As of November 20, a freeze is possible. It is not locked in.',
+          },
+        ],
+      },
+      {
+        heading: 'Find the main shutoff in daylight',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The main valve is usually in the meter box near the street. Some houses also have a valve where the line enters. On a wooded lot the lid disappears under pine straw and leaves. Clear it and make sure the valve turns. A water-meter key from a hardware store fits the curb stop when the valve needs one. Turn it only enough to confirm it moves, then leave the water on. Show anyone else in the house which way is off.',
+          },
+        ],
+      },
+      {
+        heading: 'A slow drip, on purpose',
+        blocks: [
+          {
+            type: 'p',
+            text: 'The night a freeze is possible, set a slow drip on the faucets farthest from where water enters. Open hot and cold if you are not sure which line runs through the cold space. A drip, not a stream. Moving water is harder to freeze, and an open faucet gives a thaw somewhere to go. Use a far fixture, often an upstairs bath or a sink on an outside wall. Leave the hose bibs covered and dry.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Disconnect hoses, then cover the bibs.',
+              'Check attic lines in daylight, stay on the joists, and sleeve only bare pipe you can reach.',
+              'Open cabinet doors under sinks on outside walls.',
+              'Turn irrigation off and drain the backflow preventer if you know the valves.',
+              'Leave the water heater and the house heat on. Close the garage door if the heater is in the garage.',
+              'Find the main shutoff in daylight and confirm that it turns.',
+              'Set a slow drip on the far faucets the night a freeze is possible.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'If a pipe does burst',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Shut the main. Open a faucet so the pressure can drop. Stay out of standing water near outlets or the panel. If the supply is off, turn the water heater off so it is not heating an empty tank. Do not thaw a pipe with a flame. Photograph the rooms, and the break if you can see it, once people are safe.',
+          },
+          {
+            type: 'p',
+            text: 'The hours after that are already written in two guides on this site. One covers burst pipes, water heaters, dishwashers, and toilet leaks. The other is the first day after water damage in Houston. This page is the prep. Those pages are what to do once water is in the building. A freeze split is also a different event from Spring Creek water in the house. Tell us which one happened.',
+          },
+          {
+            type: 'p',
+            text: 'Elite Restorations handles the water a freeze leaves behind. We pull out what is standing, dry the structure, and repair ceilings, insulation, drywall, and floors that a burst attic line or a split bib wets. Call (713) 909-0034. Your insurer decides whether the policy covers the loss.',
+          },
+          {
+            type: 'links',
+            items: [
+              {
+                href: '/houston-leaks-pipes-heater-dishwasher-toilet',
+                label: 'Burst pipes, water heaters, dishwashers, and toilet leaks',
+              },
+              {
+                href: '/first-24-hours-water-damage-houston',
+                label: 'The first 24 hours after water damage',
+              },
+              { href: '/water-damage-restoration', label: 'Water damage restoration' },
+              { href: '/spring-tx', label: 'Houses in Spring' },
+              {
+                href: '/water-damage-restoration-the-woodlands-tx',
+                label: 'Water damage in The Woodlands',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
