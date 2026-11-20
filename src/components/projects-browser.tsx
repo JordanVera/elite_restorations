@@ -19,25 +19,27 @@ const BATCH = 24;
 export function ProjectsBrowser({
   photos,
   categories,
-  allLabel = 'All',
-  filterLabel = 'Filter photos by category',
-  loadMoreLabel = 'Load more',
-  moreLabel,
-  statusLabel,
+  locale = 'en',
+  allLabel,
+  filterLabel,
+  loadMoreLabel,
 }: {
   photos: BrowserPhoto[];
   categories: string[];
+  locale?: 'en' | 'es';
   allLabel?: string;
   filterLabel?: string;
   loadMoreLabel?: string;
-  moreLabel?: (count: number) => string;
-  statusLabel?: (shown: number, total: number, category: string) => string;
 }) {
-  const [active, setActive] = React.useState(allLabel);
+  const es = locale === 'es';
+  const all = allLabel ?? (es ? 'Todo' : 'All');
+  const filter = filterLabel ?? (es ? 'Filtrar fotos por tipo' : 'Filter photos by category');
+  const loadMore = loadMoreLabel ?? (es ? 'Ver más' : 'Load more');
+  const [active, setActive] = React.useState(all);
   const [visibleCount, setVisibleCount] = React.useState(BATCH);
   const visible = React.useMemo(
-    () => (active === allLabel ? photos : photos.filter((p) => p.category === active)),
-    [active, allLabel, photos],
+    () => (active === all ? photos : photos.filter((p) => p.category === active)),
+    [active, all, photos],
   );
   const galleryImages = React.useMemo(
     () => visible.map((photo) => photo.image),
@@ -46,10 +48,10 @@ export function ProjectsBrowser({
   const displayed = visible.slice(0, visibleCount);
   const hasMore = visibleCount < visible.length;
   const counts = React.useMemo(() => {
-    const map = new Map<string, number>([[allLabel, photos.length]]);
+    const map = new Map<string, number>([[all, photos.length]]);
     for (const p of photos) map.set(p.category, (map.get(p.category) ?? 0) + 1);
     return map;
-  }, [allLabel, photos]);
+  }, [all, photos]);
 
   const selectCategory = (category: string) => {
     setActive(category);
@@ -61,10 +63,10 @@ export function ProjectsBrowser({
       <div>
         <div
           role="group"
-          aria-label={filterLabel}
+          aria-label={filter}
           className="flex flex-wrap gap-x-8 gap-y-3 border-b border-border pb-6"
         >
-          {[allLabel, ...categories].map((category) => {
+          {[all, ...categories].map((category) => {
             const selected = category === active;
             return (
               <button
@@ -98,11 +100,13 @@ export function ProjectsBrowser({
         </div>
 
         <p className="sr-only" role="status" aria-live="polite">
-          {statusLabel
-            ? statusLabel(displayed.length, visible.length, active === allLabel ? '' : active)
+          {es
+            ? `Mostrando ${displayed.length} de ${visible.length} ${
+                visible.length === 1 ? 'foto' : 'fotos'
+              }${active === all ? '' : ` en ${active}`}`
             : `Showing ${displayed.length} of ${visible.length} ${
                 visible.length === 1 ? 'photo' : 'photos'
-              }${active === allLabel ? '' : ` in ${active}`}`}
+              }${active === all ? '' : ` in ${active}`}`}
         </p>
 
         <ul
@@ -134,11 +138,13 @@ export function ProjectsBrowser({
               size="lg"
               onClick={() => setVisibleCount((n) => n + BATCH)}
             >
-              {loadMoreLabel}
+              {loadMore}
             </Button>
             <p className="text-[0.72rem] uppercase tracking-[0.18em] text-muted-foreground">
-              {moreLabel
-                ? moreLabel(visible.length - visibleCount)
+              {es
+                ? `${visible.length - visibleCount} ${
+                    visible.length - visibleCount === 1 ? 'foto más' : 'fotos más'
+                  }`
                 : `${visible.length - visibleCount} more ${
                     visible.length - visibleCount === 1 ? 'photo' : 'photos'
                   }`}

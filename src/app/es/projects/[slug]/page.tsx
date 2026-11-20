@@ -15,6 +15,8 @@ import { languageAlternates, pageMetadata } from "@/lib/seo";
 
 type Params = { slug: string };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return esProjectPages.map((page) => ({ slug: page.slug }));
 }

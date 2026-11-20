@@ -6,6 +6,8 @@ import { esInsurers } from "@/lib/es/insurers";
 
 type Params = { slug: string };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return esInsurers.map((insurer) => ({ slug: insurer.slug }));
 }

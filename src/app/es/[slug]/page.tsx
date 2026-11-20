@@ -24,6 +24,8 @@ import { site } from "@/lib/site";
 
 type Params = { slug: string };
 
+export const dynamicParams = false;
+
 const claimSlugs = new Set([
   "water-damage-restoration",
   "roofing",

@@ -48,15 +48,7 @@ export default function SpanishProjectsPage() {
           <ProjectsBrowser
             photos={photos}
             categories={projectCategories.map((category) => categoryNames[category] ?? category)}
-            allLabel="Todo"
-            filterLabel="Filtrar fotos por tipo"
-            loadMoreLabel="Ver más"
-            moreLabel={(count) => `${count} ${count === 1 ? 'foto más' : 'fotos más'}`}
-            statusLabel={(shown, total, category) =>
-              `Mostrando ${shown} de ${total} ${total === 1 ? 'foto' : 'fotos'}${
-                category ? ` en ${category}` : ''
-              }`
-            }
+            locale="es"
           />
         </div>
       </section>
