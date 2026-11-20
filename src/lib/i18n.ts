@@ -1,3 +1,4 @@
+import { spanishCityPath } from "@/lib/city-landing-locales";
 import { houstonPostSlugs, neighborhoodSlugs } from "@/lib/locale-paths";
 
 /** English paths that have a Spanish page. City pages are not in this set. */
@@ -59,7 +60,7 @@ export function spanishPathFor(pathname: string) {
   if (spanishServiceSlugSet.has(slug)) return `/es/${slug}`;
   if (neighborhoodSlugSet.has(slug)) return `/es/${slug}`;
   if (houstonPostSlugSet.has(slug)) return `/es/blog/${slug}`;
-  return null;
+  return spanishCityPath(path);
 }
 
 export function englishPathFor(pathname: string) {

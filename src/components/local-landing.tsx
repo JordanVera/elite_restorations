@@ -8,6 +8,9 @@ import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { bleedPhotoSizes, Photo } from '@/components/photo';
+import { editedPhotoSet, usesEditedCityPhotos, type EditedShot } from '@/lib/edited-photos';
+import { esGroupNames, esServiceNames } from '@/lib/i18n';
+import { neighborhoodSlugs } from '@/lib/locale-paths';
 import { imagesForService, type ServiceGalleryItem } from '@/lib/projects';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import {
@@ -18,6 +21,18 @@ import {
 import { absoluteUrl } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
 import { emergencyHref, site } from '@/lib/site';
+
+const nearOfficeOverviews = new Set(['westchase-tx', 'alief-tx', 'energy-corridor-tx']);
+
+function overviewHref(areaSlug: string, locale: 'en' | 'es') {
+  const slug = `${areaSlug}-tx`;
+  const neighborhood = (neighborhoodSlugs as readonly string[]).includes(slug);
+  if (locale === 'es') return neighborhood ? `/es/${slug}` : null;
+  if (neighborhood || nearOfficeOverviews.has(slug)) return `/${slug}`;
+  return null;
+}
+
+type ShownPhoto = { key: string; image: ServiceGalleryItem['image']; href?: string };
 
 const galleryFallback: Record<string, readonly string[]> = {
   roofing: ['roof-replacement'],
@@ -48,17 +63,37 @@ function landingPhotos(serviceSlug: string, heroSrc: string, shift: number) {
   return [...items.slice(start), ...items.slice(0, start)].slice(0, 4);
 }
 
-export function LocalLandingView({ landing }: { landing: LocalLanding }) {
+export function LocalLandingView({
+  landing,
+  locale = 'en',
+}: {
+  landing: LocalLanding;
+  locale?: 'en' | 'es';
+}) {
   const service = getService(landing.serviceSlug);
   const area = getArea(landing.areaSlug);
   if (!service || !area) notFound();
 
+  const es = locale === 'es';
   const path = landing.path;
-  const serviceHref = servicePath(service.slug);
+  const serviceHref = es ? `/es/${service.slug}` : servicePath(service.slug);
+  const serviceName =
+    es && service.slug in esServiceNames
+      ? esServiceNames[service.slug as keyof typeof esServiceNames]
+      : service.name;
+  const groupName = es ? (esGroupNames[service.group] ?? service.group) : service.group;
+  const placeHref = overviewHref(landing.areaSlug, locale);
+  const companyHref = es ? '/es/restoration-company-houston' : '/restoration-company-houston';
+  const companyLabel = es
+    ? 'Empresa de restauración en Houston'
+    : 'Restoration company in Houston';
+  const useEdited = es || usesEditedCityPhotos(landing.areaSlug);
+  const edited = useEdited ? editedPhotoSet(service.slug) : null;
   const galleryPool =
     cityHeroPools[service.slug] ??
     imagesForService(service.slug).map((item) => item.image);
   const hero =
+    edited?.hero.image ??
     pickFromPool(
       galleryPool.length > 0
         ? galleryPool
@@ -67,37 +102,71 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
           : [],
       landing.photoShift,
       service.image,
-    ) ?? service.image;
-  const photos = landingPhotos(
-    service.slug,
-    hero?.src ?? '',
-    landing.photoShift,
-  );
+    ) ??
+    service.image;
+  const photos: ShownPhoto[] = edited
+    ? edited.gallery.map((item: EditedShot) => ({
+        key: item.image.src,
+        image: item.image,
+        href: item.href,
+      }))
+    : landingPhotos(service.slug, hero?.src ?? '', landing.photoShift).map((item) => ({
+        key: item.image.src,
+        image: item.image,
+        href: `/projects/${item.project.slug}`,
+      }));
   const nearby = landing.nearby;
-  const related = relatedCityLandings(landing);
-  const estimateHref = service.emergency
-    ? emergencyHref
-    : `/contact?service=${encodeURIComponent(service.slug)}`;
+  const related = relatedCityLandings(landing).map((item) =>
+    es ? { ...item, path: `/es${item.path}` } : item,
+  );
+  const estimateHref = es
+    ? service.emergency
+      ? '/es/emergency'
+      : `/es/contact?service=${encodeURIComponent(service.slug)}`
+    : service.emergency
+      ? emergencyHref
+      : `/contact?service=${encodeURIComponent(service.slug)}`;
   const layout = landing.layout;
   const facts = rotate(landing.facts, layout);
-  const scopeHeading = [
-    `What changes in ${area.name}.`,
-    `${service.name} for a house in ${area.name}.`,
-    `Houses in ${area.name}, then the job.`,
-    `${area.name}: the address, not the city name.`,
-  ][layout];
-  const notesHeading = [
-    `What we look at in ${area.name}.`,
-    `Checked at the house in ${area.name}.`,
-    `Before anything is ordered in ${area.name}.`,
-    `What the lot changes in ${area.name}.`,
-  ][layout];
-  const factHeading = [
-    `Where ${area.name} sits.`,
-    `County, weather, and the drive.`,
-    `The map around ${area.name}.`,
-    `From the Houston office to ${area.name}.`,
-  ][layout];
+  const scopeHeading = (es
+    ? [
+        `Qué cambia en ${area.name}.`,
+        `${serviceName} para una casa en ${area.name}.`,
+        `La casa en ${area.name}, y después el trabajo.`,
+        `${area.name}: la dirección, no el nombre.`,
+      ]
+    : [
+        `What changes in ${area.name}.`,
+        `${service.name} for a house in ${area.name}.`,
+        `Houses in ${area.name}, then the job.`,
+        `${area.name}: the address, not the city name.`,
+      ])[layout];
+  const notesHeading = (es
+    ? [
+        `Qué vemos en ${area.name}.`,
+        `Revisado en la casa de ${area.name}.`,
+        `Antes de pedir algo en ${area.name}.`,
+        `Lo que el lote cambia en ${area.name}.`,
+      ]
+    : [
+        `What we look at in ${area.name}.`,
+        `Checked at the house in ${area.name}.`,
+        `Before anything is ordered in ${area.name}.`,
+        `What the lot changes in ${area.name}.`,
+      ])[layout];
+  const factHeading = (es
+    ? [
+        `Dónde queda ${area.name}.`,
+        `Condado, clima y el camino.`,
+        `El mapa alrededor de ${area.name}.`,
+        `De la oficina de Houston a ${area.name}.`,
+      ]
+    : [
+        `Where ${area.name} sits.`,
+        `County, weather, and the drive.`,
+        `The map around ${area.name}.`,
+        `From the Houston office to ${area.name}.`,
+      ])[layout];
   const splitAt = Math.max(3, Math.min(5, Math.ceil(landing.paragraphs.length / 2)));
   const leadParagraphs = layout === 2 ? landing.paragraphs.slice(0, splitAt) : landing.paragraphs;
   const restParagraphs = layout === 2 ? landing.paragraphs.slice(splitAt) : [];
@@ -105,12 +174,12 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
   return (
     <>
       <PageHero
-        eyebrow={service.group}
-        title={[service.name, `in ${area.name}, TX`]}
+        eyebrow={groupName}
+        title={es ? [serviceName, `en ${area.name}, TX`] : [service.name, `in ${area.name}, TX`]}
         lede={landing.lede}
         crumbs={[
-          { name: 'Services', path: '/services' },
-          { name: service.name, path: serviceHref },
+          { name: es ? 'Servicios' : 'Services', path: es ? '/es' : '/services' },
+          { name: serviceName, path: serviceHref },
           { name: area.name, path },
         ]}
       >
@@ -119,14 +188,36 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
             href={serviceHref}
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
-            Full {service.name.toLowerCase()} page
+            {es ? `Página de ${serviceName.toLowerCase()}` : `Full ${service.name.toLowerCase()} page`}
+            <ArrowUpRight className="size-4" aria-hidden />
+          </Link>
+          {placeHref ? (
+            <Link
+              href={placeHref}
+              className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              {area.name}
+              <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
+          ) : null}
+          <Link
+            href={companyHref}
+            className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+          >
+            {companyLabel}
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
           <Link
             href={estimateHref}
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
           >
-            {service.emergency ? 'Request help' : 'Request an estimate'}
+            {es
+              ? service.emergency
+                ? 'Pedir ayuda'
+                : 'Pedir un estimado'
+              : service.emergency
+                ? 'Request help'
+                : 'Request an estimate'}
             <ArrowUpRight className="size-4" aria-hidden />
           </Link>
           {landing.areaSlug === 'katy' && landing.serviceSlug === 'patios-decks' && (
@@ -159,7 +250,9 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 aria-hidden
               />
               <span className="text-[0.72rem] font-medium uppercase tracking-[0.2em]">
-                Active leak or storm damage? Call {site.phone.display}
+                {es
+                  ? `¿Sigue entrando agua? Llame al ${site.phone.display}`
+                  : `Active leak or storm damage? Call ${site.phone.display}`}
               </span>
             </a>
           </Reveal>
@@ -214,15 +307,15 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
           <Reveal className="lg:col-span-5" delay={0.12}>
             {layout === 3 ? (
               <>
-                <p className="eyebrow text-accent-ink">The place</p>
+                <p className="eyebrow text-accent-ink">{es ? 'El lugar' : 'The place'}</p>
                 <h2 className="font-display mt-4 text-3xl leading-snug">{factHeading}</h2>
                 <FactList facts={facts} />
               </>
             ) : (
             <>
-            <p className="eyebrow text-accent-ink">What is included</p>
+            <p className="eyebrow text-accent-ink">{es ? 'Qué incluye' : 'What is included'}</p>
             <ul className="mt-6 border-t border-border">
-              {service.includes.map((item) => (
+              {(es ? (landing.bullets ?? []) : service.includes).map((item) => (
                 <li
                   key={item}
                   className="flex items-start gap-4 border-b border-border py-4"
@@ -232,7 +325,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 </li>
               ))}
             </ul>
-            {service.links && service.links.length > 0 && (
+            {!es && service.links && service.links.length > 0 && (
               <ul className="mt-8 space-y-3">
                 {service.links.map((link) => (
                   <li key={link.href}>
@@ -247,7 +340,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                 ))}
               </ul>
             )}
-            {landing.costGuide &&
+            {!es && landing.costGuide &&
               !(service.links ?? []).some((link) => link.href === landing.costGuide?.href) && (
                 <ul className="mt-8 space-y-3">
                   <li>
@@ -276,7 +369,7 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         <section aria-labelledby="local-rest-heading" className="pb-20 md:pb-28">
           <div className="gutter mx-auto max-w-[120rem] lg:max-w-[70rem]">
             <h2 id="local-rest-heading" className="font-display text-3xl leading-snug md:text-4xl">
-              The rest of the visit in {area.name}.
+              {es ? `El resto de la visita en ${area.name}.` : `The rest of the visit in ${area.name}.`}
             </h2>
             <div className="mt-6 space-y-7">
               {restParagraphs.map((paragraph) => (
@@ -300,7 +393,17 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         <div className="gutter mx-auto max-w-[120rem]">
           <Reveal>
             <p className="eyebrow text-accent-ink">
-              {layout === 1 ? 'At the address' : layout === 3 ? 'Before the order' : 'On the visit'}
+              {es
+                ? layout === 1
+                  ? 'En la dirección'
+                  : layout === 3
+                    ? 'Antes del pedido'
+                    : 'En la visita'
+                : layout === 1
+                  ? 'At the address'
+                  : layout === 3
+                    ? 'Before the order'
+                    : 'On the visit'}
             </p>
             <h2 id="local-notes-heading" className="font-display t-lg mt-4 max-w-[18ch]">
               {notesHeading}
@@ -330,33 +433,40 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         <section aria-labelledby="local-photos-heading" className="py-20 md:py-28">
           <div className="gutter mx-auto max-w-[120rem]">
             <Reveal>
-              <p className="eyebrow text-accent-ink">Project photographs</p>
+              <p className="eyebrow text-accent-ink">{es ? 'Fotografías' : 'Project photographs'}</p>
               <h2 id="local-photos-heading" className="font-display t-lg mt-4">
-                The kind of work.
+                {es ? 'El tipo de trabajo.' : 'The kind of work.'}
               </h2>
               <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
-                Photos from our past {service.name.toLowerCase()} projects around Houston.
+                {es
+                  ? `Fotos de trabajos terminados de ${serviceName.toLowerCase()} en el área de Houston.`
+                  : `Photos from our past ${service.name.toLowerCase()} projects around Houston.`}
               </p>
-              <p className="font-display mt-8 text-3xl leading-snug">
-                {photos.every((item) => item.project.title === photos[0]?.project.title)
-                  ? photos[0]?.project.title
-                  : service.name}
-              </p>
+              <p className="font-display mt-8 text-3xl leading-snug">{serviceName}</p>
             </Reveal>
             <ul className="mt-12 grid gap-8 sm:grid-cols-2">
-              {photos.map((item) => (
-                <li key={item.image.src}>
-                  <Link href={`/projects/${item.project.slug}`} className="group block">
-                    <ImageReveal className="relative aspect-[4/3]">
-                      <Photo
-                        image={item.image}
-                        sizes="(min-width: 640px) 46vw, 92vw"
-                        className="transition-transform duration-[1400ms] ease-out-expo group-hover:scale-[1.02]"
-                      />
-                    </ImageReveal>
-                  </Link>
-                </li>
-              ))}
+              {photos.map((item) => {
+                const frame = (
+                  <ImageReveal className="relative aspect-[4/3]">
+                    <Photo
+                      image={item.image}
+                      sizes="(min-width: 640px) 46vw, 92vw"
+                      className="transition-transform duration-[1400ms] ease-out-expo group-hover:scale-[1.02]"
+                    />
+                  </ImageReveal>
+                );
+                return (
+                  <li key={item.key}>
+                    {item.href ? (
+                      <Link href={item.href} className="group block">
+                        {frame}
+                      </Link>
+                    ) : (
+                      <div className="group block">{frame}</div>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
@@ -369,19 +479,27 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
             <Reveal className="lg:col-span-4">
-              <p className="eyebrow text-accent-ink">Questions</p>
+              <p className="eyebrow text-accent-ink">{es ? 'Preguntas' : 'Questions'}</p>
               <h2 id="local-faq-heading" className="font-display t-lg mt-4">
-                {layout === 1
-                  ? `Questions about ${area.name}.`
-                  : layout === 2
-                    ? `Before the visit in ${area.name}.`
-                    : layout === 3
-                      ? `${area.name} questions.`
-                      : `In ${area.name}.`}
+                {es
+                  ? layout === 1
+                    ? `Preguntas sobre ${area.name}.`
+                    : layout === 2
+                      ? `Antes de la visita en ${area.name}.`
+                      : layout === 3
+                        ? `Preguntas de ${area.name}.`
+                        : `En ${area.name}.`
+                  : layout === 1
+                    ? `Questions about ${area.name}.`
+                    : layout === 2
+                      ? `Before the visit in ${area.name}.`
+                      : layout === 3
+                        ? `${area.name} questions.`
+                        : `In ${area.name}.`}
               </h2>
             </Reveal>
             <div className="lg:col-span-8">
-              <Faq items={[...landing.faqs]} />
+              <Faq items={[...landing.faqs]} inLanguage={es ? 'es' : 'en'} />
             </div>
           </div>
         </section>
@@ -394,7 +512,13 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="local-related-heading" className="eyebrow text-muted-foreground">
-              {layout % 2 === 0 ? `Related work in ${area.name}` : `Other services in ${area.name}`}
+              {es
+                ? layout % 2 === 0
+                  ? `Trabajo relacionado en ${area.name}`
+                  : `Otros servicios en ${area.name}`
+                : layout % 2 === 0
+                  ? `Related work in ${area.name}`
+                  : `Other services in ${area.name}`}
             </h2>
             <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
               {related.map((item) => {
@@ -406,7 +530,9 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
                       href={item.path}
                       className="group inline-flex items-center gap-2 font-display text-3xl transition-colors hover:text-accent-ink"
                     >
-                      {relatedService.name}
+                      {es && relatedService.slug in esServiceNames
+                        ? esServiceNames[relatedService.slug as keyof typeof esServiceNames]
+                        : relatedService.name}
                       <ArrowUpRight
                         aria-hidden
                         className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -427,7 +553,13 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="nearby-heading" className="font-display text-3xl md:text-4xl">
-              {layout === 3 ? `The same trade near ${area.name}` : `${service.name} nearby`}
+              {es
+                ? layout === 3
+                  ? `El mismo trabajo cerca de ${area.name}`
+                  : `${serviceName} cerca`
+                : layout === 3
+                  ? `The same trade near ${area.name}`
+                  : `${service.name} nearby`}
             </h2>
             <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               {nearby.map((item) => (
@@ -442,10 +574,10 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
               ))}
               <li>
                 <Link
-                  href={`${serviceHref}#areas`}
+                  href={es ? '/es/restoration' : `${serviceHref}#areas`}
                   className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
                 >
-                  All areas
+                  {es ? 'Todas las zonas' : 'All areas'}
                 </Link>
               </li>
             </ul>
@@ -455,24 +587,37 @@ export function LocalLandingView({ landing }: { landing: LocalLanding }) {
 
       <CtaBand
         title={
-          service.emergency
-            ? `Need ${service.name.toLowerCase()} in ${area.name}?`
-            : `${service.name} in ${area.name}`
+          es
+            ? service.emergency
+              ? `¿Necesita ${serviceName.toLowerCase()} en ${area.name}?`
+              : `${serviceName} en ${area.name}`
+            : service.emergency
+              ? `Need ${service.name.toLowerCase()} in ${area.name}?`
+              : `${service.name} in ${area.name}`
         }
         body={
-          service.emergency
-            ? `Call ${site.phone.display} if water is coming in. We schedule this work in ${area.name} from our Houston office.`
-            : `Call ${site.phone.display} to talk through ${service.name.toLowerCase()} in ${area.name}. The scope comes from a visit, not from the city name.`
+          es
+            ? service.emergency
+              ? `Llame al ${site.phone.display} si sigue entrando agua. Este trabajo en ${area.name} se agenda desde nuestra oficina en el oeste de Houston (77082).`
+              : `Llame al ${site.phone.display} para hablar de ${serviceName.toLowerCase()} en ${area.name}. El alcance sale de la visita. Atendemos de lunes a sábado, de 8 AM a 6 PM.`
+            : service.emergency
+              ? `Call ${site.phone.display} if water is coming in. We schedule this work in ${area.name} from our Houston office.`
+              : `Call ${site.phone.display} to talk through ${service.name.toLowerCase()} in ${area.name}. The scope comes from a visit, not from the city name.`
         }
-        service={service.slug}
+        service={es ? undefined : service.slug}
         emergency={service.emergency}
+        href={es ? estimateHref : undefined}
+        buttonLabel={
+          es ? (service.emergency ? 'Pedir ayuda' : 'Pedir un estimado') : undefined
+        }
+        textLabel={es ? 'Envíanos un texto' : undefined}
       />
 
       <JsonLd
         data={{
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: `${service.name} in ${area.name}, TX`,
+          name: es ? `${serviceName} en ${area.name}, TX` : `${service.name} in ${area.name}, TX`,
           serviceType: service.name,
           description: landing.description,
           url: absoluteUrl(path),

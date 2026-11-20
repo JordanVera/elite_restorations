@@ -359,6 +359,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('kingwood', 'Kingwood'),
       { href: '/water-damage-restoration-the-woodlands-tx', label: 'Water damage in The Woodlands' },
       { href: '/roofing-the-woodlands-tx', label: 'Roofing in The Woodlands' },
     ],
@@ -420,6 +421,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       { href: '/bridgeland-tx', label: 'Bridgeland' },
       { href: '/copperfield-tx', label: 'Copperfield' },
       { href: '/jersey-village-tx', label: 'Jersey Village' },
+      ...ownCityServiceLinks('cypress', 'Cypress'),
     ],
   ),
   page(
@@ -468,6 +470,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('spring', 'Spring'),
       { href: '/roofing-the-woodlands-tx', label: 'Roofing in The Woodlands' },
       { href: '/water-damage-restoration-magnolia-tx', label: 'Water damage in Magnolia' },
     ],
@@ -619,6 +622,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('tomball', 'Tomball'),
       { href: '/roofing-magnolia-tx', label: 'Roofing in Magnolia' },
       { href: '/kitchen-remodeling-katy-tx', label: 'Kitchen remodeling in Katy' },
       { href: '/energy-corridor-tx', label: 'Energy Corridor' },
@@ -670,6 +674,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('missouri-city', 'Missouri City'),
       { href: '/water-damage-restoration-sugar-land-tx', label: 'Water damage in Sugar Land' },
       { href: '/roofing-sugar-land-tx', label: 'Roofing in Sugar Land' },
       { href: '/kitchen-remodeling-stafford-tx', label: 'Kitchen remodeling in Stafford' },
@@ -723,6 +728,7 @@ export const neighborhoods: readonly NeighborhoodPage[] = [
       },
     ],
     [
+      ...ownCityServiceLinks('fulshear', 'Fulshear'),
       { href: '/roofing-richmond-tx', label: 'Roofing in Richmond' },
       { href: '/kitchen-remodeling-richmond-tx', label: 'Kitchen remodeling in Richmond' },
       { href: '/water-damage-restoration-katy-tx', label: 'Water damage in Katy' },
