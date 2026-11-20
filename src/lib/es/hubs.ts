@@ -23,6 +23,8 @@ const claimHubs = new Set<EsHub["slug"]>([
   "roofing-emergency-tarp-repair",
   "water-damage-restoration",
   "insurance-claims",
+  "emergency-board-up",
+  "commercial-storm-restoration",
 ]);
 
 function hub(
@@ -297,6 +299,90 @@ const esHubInputs: readonly EsHub[] = [
     [
       { q: "¿Se va a ver el parche?", a: "Un buen parche no se ve. Extendemos el empaste y la pintura lo necesario para que no quede una orilla." },
       { q: "¿Pintan todo el cuarto o solo el parche?", a: "Las dos. Un parche chico se funde con la pared. Si el cuarto cambió, se pinta completo para que el brillo coincida." },
+    ],
+  ),
+  hub(
+    "emergency-board-up",
+    "Tablas de emergencia en Houston",
+    "Tablas de emergencia",
+    "Emergencia",
+    "Si una tormenta, una rama o un golpe deja un edificio abierto, la primera hora útil es una tapa que se quede puesta.",
+    "Fotografiamos la abertura y fijamos una tabla rígida a un marco sano. Casas, comunidades de apartamentos y frentes comerciales son la misma idea y otro acceso. Díganos cuántas aberturas hay, en qué piso, y si el agua ya está adentro. La tabla detiene más lluvia. El vidrio, la puerta o el muro son el trabajo que sigue.",
+    [
+      { q: "¿Suben si hay rayos?", a: "No. Los rayos, un muro que se inclina o agua junto a la electricidad pueden esperar a que haya luz y sea seguro. Llame al " + phone + " y le decimos el siguiente paso." },
+      { q: "¿La tabla es la fachada terminada?", a: "No. Es temporal. La fijamos con cuidado porque puede quedarse hasta que llegue el vidrio. No es el frente terminado de la casa." },
+    ],
+  ),
+  hub(
+    "fence-installation-repair",
+    "Cercas en Houston",
+    "Cercas",
+    "Exterior",
+    "Una cerca en Houston falla en los postes. La humedad, la arcilla y el viento hacen más que el color del tinte.",
+    "Caminamos la cerca, cambiamos lo que está blando y construimos lo que tiene que ser nuevo. Un tramo que una tormenta tiró y una cerca que se pudrió durante años son hechos distintos. Describimos la que está en el patio. La pudrición sigue siendo pudrición, aunque una tormenta haya pasado la misma semana.",
+    [
+      { q: "¿Reemplazan solo unos tramos?", a: "Sí, cuando los postes de al lado están sanos y el estilo todavía se puede empatar. Si los postes están blandos, la cerca necesita más que un parche." },
+      { q: "¿Ustedes marcan la línea del terreno?", a: "Construimos donde usted nos indica. Si la línea está en disputa, un levantamiento va antes de los hoyos." },
+    ],
+  ),
+  hub(
+    "gutters",
+    "Canaletas en Houston",
+    "Canaletas",
+    "Exterior",
+    "Una canaleta en Houston o lleva una lluvia fuerte a un bajante lejos de la casa, o la tira sobre el ladrillo.",
+    "Vemos la pendiente, los ganchos, las esquinas y la tabla de atrás. Las manchas de un desborde, una tabla blanda y un tramo que el viento arrancó son trabajos distintos. Las hojas en una canaleta quieta son mantenimiento. Un reclamo de granizo es por el granizo, no por las hojas.",
+    [
+      { q: "¿Limpian o reemplazan?", a: "Reparamos y reemplazamos. Una limpieza no es un tramo nuevo. Si la canaleta se pandea o la tabla está blanda, lo decimos." },
+      { q: "¿El agua de la canaleta moja la losa?", a: "Sí, si cae junto a la cimentación. Apuntamos los bajantes lejos de la casa. No decimos que una canaleta detenga el movimiento de la cimentación." },
+    ],
+  ),
+  hub(
+    "patios",
+    "Patios en Houston",
+    "Patios",
+    "Exterior",
+    "Un patio es el piso de afuera, sobre el suelo. Si escurre hacia el ladrillo, la lluvia de Houston se queda contra la losa.",
+    "Dejamos la caída lejos de la casa y por debajo de la puerta. Concreto, adoquín y piedra envejecen distinto bajo este sol. Una cubierta es postes y un techo, no un recubrimiento. Los decks y los gazebos tienen su propia página porque son otra estructura. La arcilla alrededor de 77082 se mueve entre semanas secas y una lluvia tropical. La base es el trabajo que no se ve.",
+    [
+      { q: "¿Hacen concreto y adoquín?", a: "Sí. El patio, el drenaje y cómo quiere que envejezca al sol deciden cuál. Si un deck conviene más, lo decimos." },
+      { q: "¿En qué se diferencia de la página de patios y decks?", a: "Esa página presenta los dos. Esta página es solo el patio a nivel del suelo. Decks y gazebos tienen la suya." },
+    ],
+  ),
+  hub(
+    "gazebos",
+    "Gazebos en Houston",
+    "Gazebos",
+    "Exterior",
+    "Un gazebo es un techo chico en país de huracanes. La sombra de mayo a septiembre es la razón de quererlo. El viento es la razón de anclarlo.",
+    "Los construimos independientes, sobre cimentación. Una cubierta pegada a la casa es otra cosa, sellada para que la lluvia se quede afuera. Una plataforma elevada sin este techo es un deck. Esas páginas se quedan aparte. Un kit que nunca se ancló y luego se abrió con el viento lo describimos con claridad. No le ponemos el nombre a una estructura que no anclaríamos para una ráfaga del Golfo.",
+    [
+      { q: "¿Instalan kits de patio?", a: "Solo si la estructura se puede anclar como la construiríamos nosotros. Muchos kits no pueden. Preferimos armar el marco que decorar uno débil." },
+      { q: "¿Puede ir sobre el patio que ya está?", a: "Si la losa está sana, escurre y aguanta los postes. Una losa agrietada que guarda agua no es una cimentación." },
+    ],
+  ),
+  hub(
+    "decks",
+    "Decks en Houston",
+    "Decks",
+    "Exterior",
+    "Las tablas que se pisan son la última pregunta. Primero vemos la tabla contra la casa, los postes, la cimentación y la tornillería.",
+    "Tablas nuevas sobre una tabla blanda esconden una filtración hacia el muro. Madera y composite son las dos elecciones honestas con esta humedad. Un deck a la sombra, al norte, y uno al oeste en pleno sol no quieren el mismo cuidado. Esta página es el deck con estructura. El patio a nivel del suelo y el gazebo independiente van aparte.",
+    [
+      { q: "¿Pueden cambiar las tablas y dejar la estructura?", a: "Cuando la unión con la casa, los soportes y los postes están sanos. Si están blandos, se reconstruyen. Miramos debajo antes de pedir tablas." },
+      { q: "¿Hacen decks de segundo piso?", a: "Sí, cuando la casa y el acceso lo permiten. La unión con la casa y el barandal pesan más en ese trabajo que en una plataforma baja." },
+    ],
+  ),
+  hub(
+    "commercial-storm-restoration",
+    "Tormenta comercial en Houston",
+    "Restauración comercial por tormenta",
+    "Emergencia",
+    "Administradores, asociaciones y dueños de edificios pueden llamar a cualquier hora si la tormenta o el agua siguen en un apartamento o un comercio.",
+    "Ponemos lona cuando el techo es seguro, tablas en el vidrio roto, sacamos el agua, secamos lo que se mojó y reparamos lo que usted contrata. Enviamos el estimado a su aseguradora y lo trabajamos con el ajustador. No somos ajustadores públicos. Somos independientes de cada aseguradora.",
+    [
+      { q: "¿Para quién es esta página?", a: "Para administradores, mesas directivas y dueños de comunidades de apartamentos y edificios comerciales en el área de Houston. Las casas usan las otras páginas, con los mismos oficios." },
+      { q: "¿Entran a unidades ocupadas?", a: "Sí, con el acceso que usted arregle. No entramos a una unidad por nuestra cuenta, y no secamos todo el edificio porque un techo esté manchado." },
     ],
   ),
 ];

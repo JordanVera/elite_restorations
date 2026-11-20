@@ -114,10 +114,12 @@ export async function generateMetadata({
   }
   const area = getAreaPage(slug);
   if (area) {
+    const esPath = spanishPathFor(area.path);
     return pageMetadata({
       title: area.title,
       description: area.description,
       path: area.path,
+      languages: esPath ? languageAlternates(area.path, esPath) : undefined,
     });
   }
   const neighborhood = getNeighborhood(slug);
@@ -133,11 +135,13 @@ export async function generateMetadata({
   const guide = getCostGuide(slug);
   if (guide) {
     const service = getService(guide.serviceSlug);
+    const esPath = spanishPathFor(guide.path);
     return pageMetadata({
       title: guide.title,
       description: guide.description,
       path: guide.path,
       image: service?.image?.src,
+      languages: esPath ? languageAlternates(guide.path, esPath) : undefined,
     });
   }
   const study = getCaseStudy(slug);

@@ -60,7 +60,7 @@ export function rangesArePublishable(ranges: readonly CostRange[]) {
   );
 }
 
-export function formatPublishedRange(range: CostRange) {
+export function formatPublishedRange(range: CostRange, locale: 'en' | 'es' = 'en') {
   if (!rangesArePublishable([range]) || range.low === null || range.high === null) {
     return null;
   }
@@ -69,7 +69,7 @@ export function formatPublishedRange(range: CostRange) {
     currency: 'USD',
     maximumFractionDigits: 0,
   });
-  return `${money.format(range.low)} to ${money.format(range.high)}`;
+  return `${money.format(range.low)} ${locale === 'es' ? 'a' : 'to'} ${money.format(range.high)}`;
 }
 
 const phone = site.phone.display;

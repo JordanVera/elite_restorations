@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { ArticleView } from '@/components/article-view';
+import { esLegacyArticles, getEsLegacyArticle } from '@/lib/es/legacy-articles';
 import { esPosts, getEsPost } from '@/lib/es/posts';
 import { languageAlternates, pageMetadata } from '@/lib/seo';
 
@@ -10,7 +11,7 @@ type Params = { slug: string };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return esPosts.map((post) => ({ slug: post.slug }));
+  return [...esPosts, ...esLegacyArticles].map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getEsPost(slug);
+  const post = getEsPost(slug) ?? getEsLegacyArticle(slug);
   if (!post) return {};
   return pageMetadata({
     title: post.metaTitle,
@@ -33,10 +34,10 @@ export async function generateMetadata({
 
 export default async function SpanishPostPage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  const post = getEsPost(slug);
+  const post = getEsPost(slug) ?? getEsLegacyArticle(slug);
   if (!post) notFound();
   const related = post.related
-    .map((item) => getEsPost(item))
+    .map((item) => getEsPost(item) ?? getEsLegacyArticle(item))
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
   return <ArticleView article={post} locale="es" relatedArticles={related} />;
 }

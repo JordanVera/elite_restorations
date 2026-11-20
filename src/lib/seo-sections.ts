@@ -51,15 +51,15 @@ export const homeRestorationEs = {
     { href: '/es/restoration-company-houston', label: 'Empresa de restauración en Houston' },
     { href: '/es/houston-storm-damage', label: 'Daño por tormenta en Houston' },
     { href: '/es/water-damage-restoration', label: 'Restauración por daño de agua' },
-    { href: '/burst-frozen-pipe-water-damage-houston', label: 'Tubos congelados y reventados' },
-    { href: '/water-heater-leak-damage-houston', label: 'Fugas de calentador' },
-    { href: '/dishwasher-leak-water-damage-houston', label: 'Fugas de lavavajillas' },
-    { href: '/toilet-overflow-water-damage-houston', label: 'Desborde del inodoro' },
-    { href: '/emergency-board-up', label: 'Tablas de emergencia' },
+    { href: '/es/burst-frozen-pipe-water-damage-houston', label: 'Tubos congelados y reventados' },
+    { href: '/es/water-heater-leak-damage-houston', label: 'Fugas de calentador' },
+    { href: '/es/dishwasher-leak-water-damage-houston', label: 'Fugas de lavavajillas' },
+    { href: '/es/toilet-overflow-water-damage-houston', label: 'Desborde del inodoro' },
+    { href: '/es/emergency-board-up', label: 'Tablas de emergencia' },
     { href: '/es/roofing-emergency-tarp-repair', label: 'Lona de emergencia para techos' },
     { href: '/es/roofing', label: 'Techos' },
     { href: '/es/roof-replacement', label: 'Reemplazo de techo' },
-    { href: '/projects/crosby-water-damage', label: 'Reparación por agua en Crosby' },
+    { href: '/es/projects/crosby-water-damage', label: 'Reparación por agua en Crosby' },
   ] satisfies TextLink[],
 };
 
@@ -151,8 +151,8 @@ export const discoverEs = {
     { href: '/es/blog/first-24-hours-water-damage-houston', label: 'Las primeras 24 horas con agua' },
     { href: '/es/blog/houston-flood-damage-repair', label: 'Reparación por inundación' },
     { href: '/es/blog', label: 'Guías en español' },
-    { href: '/insurance-claims/companies', label: 'Guías de aseguradoras' },
-    { href: '/water-damage-insurance-claims-in-texas', label: 'Lista para un reclamo de agua' },
+    { href: '/es/insurance-claims/companies', label: 'Guías de aseguradoras' },
+    { href: '/es/blog/water-damage-insurance-claims-in-texas', label: 'Lista para un reclamo de agua' },
   ] satisfies TextLink[],
 };
 

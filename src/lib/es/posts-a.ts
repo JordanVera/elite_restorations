@@ -236,7 +236,7 @@ export const esPostsA: Article[] = [
             type: 'links',
             items: [
               { href: '/es/roofing-emergency-tarp-repair', label: 'Lona de emergencia para techos' },
-              { href: '/emergency-board-up', label: 'Tablas de emergencia' },
+              { href: '/es/emergency-board-up', label: 'Tablas de emergencia' },
               { href: '/es/montrose-tx', label: 'Aberturas de tormenta en Montrose' },
               { href: '/es/garden-oaks-tx', label: 'Ramas en Garden Oaks' },
             ],

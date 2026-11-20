@@ -1,5 +1,5 @@
 import { spanishCityPath } from "@/lib/city-landing-locales";
-import { houstonPostSlugs, neighborhoodSlugs } from "@/lib/locale-paths";
+import { areaOverviewSlugs, costGuideSlugs, houstonPostSlugs, insurerSlugs, legacyArticleSlugs, neighborhoodSlugs, spanishProjectSlugs, waterCauseSlugs } from "@/lib/locale-paths";
 
 /** English paths that have a Spanish page. City pages are not in this set. */
 
@@ -22,11 +22,24 @@ export const spanishServiceSlugs = [
   "water-damage-restoration",
   "insurance-claims",
   "painting-drywall-repair",
+  "emergency-board-up",
+  "fence-installation-repair",
+  "gutters",
+  "patios",
+  "gazebos",
+  "decks",
+  "commercial-storm-restoration",
 ] as const;
 
 const spanishServiceSlugSet = new Set<string>(spanishServiceSlugs);
 const neighborhoodSlugSet = new Set<string>(neighborhoodSlugs);
 const houstonPostSlugSet = new Set<string>(houstonPostSlugs);
+const spanishProjectSlugSet = new Set<string>(spanishProjectSlugs);
+const insurerSlugSet = new Set<string>(insurerSlugs);
+const costGuideSlugSet = new Set<string>(costGuideSlugs);
+const legacyArticleSlugSet = new Set<string>(legacyArticleSlugs);
+const waterCauseSlugSet = new Set<string>(waterCauseSlugs);
+const areaOverviewSlugSet = new Set<string>(areaOverviewSlugs);
 
 const staticSpanishPaths: Record<string, string> = {
   "/": "/es",
@@ -46,6 +59,7 @@ const staticSpanishPaths: Record<string, string> = {
     "/es/ferguson-plumbing-fixtures-installation-houston",
   "/projects/katy-composite-deck": "/es/projects/katy-composite-deck",
   "/projects/katy-marble-bathroom": "/es/projects/katy-marble-bathroom",
+  "/projects": "/es/projects",
 };
 
 export function isSpanishPath(pathname: string) {
@@ -56,10 +70,22 @@ export function spanishPathFor(pathname: string) {
   const path = pathname.split("?")[0] || "/";
   if (staticSpanishPaths[path]) return staticSpanishPaths[path];
   if (path === "/blog") return "/es/blog";
+  if (path === "/insurance-claims/companies") return "/es/insurance-claims/companies";
+  if (path.startsWith("/insurance-claims/companies/")) {
+    const insurer = path.slice("/insurance-claims/companies/".length);
+    if (insurerSlugSet.has(insurer)) return `/es/insurance-claims/companies/${insurer}`;
+  }
   const slug = path.slice(1);
   if (spanishServiceSlugSet.has(slug)) return `/es/${slug}`;
+  if (costGuideSlugSet.has(slug) || waterCauseSlugSet.has(slug) || areaOverviewSlugSet.has(slug)) {
+    return `/es/${slug}`;
+  }
   if (neighborhoodSlugSet.has(slug)) return `/es/${slug}`;
-  if (houstonPostSlugSet.has(slug)) return `/es/blog/${slug}`;
+  if (houstonPostSlugSet.has(slug) || legacyArticleSlugSet.has(slug)) return `/es/blog/${slug}`;
+  if (path.startsWith("/projects/")) {
+    const projectSlug = path.slice("/projects/".length);
+    if (spanishProjectSlugSet.has(projectSlug)) return `/es/projects/${projectSlug}`;
+  }
   return spanishCityPath(path);
 }
 
@@ -69,7 +95,7 @@ export function englishPathFor(pathname: string) {
   if (path === "/es/blog") return "/blog";
   if (path.startsWith("/es/blog/")) {
     const slug = path.slice("/es/blog/".length);
-    if (houstonPostSlugSet.has(slug)) return `/${slug}`;
+    if (houstonPostSlugSet.has(slug) || legacyArticleSlugSet.has(slug)) return `/${slug}`;
   }
   if (path.startsWith("/es/")) {
     const rest = path.slice(3);
@@ -112,6 +138,13 @@ export const esServiceNames: Record<(typeof spanishServiceSlugs)[number], string
   "water-damage-restoration": "Restauración por daño de agua",
   "insurance-claims": "Ayuda con reclamos de seguro",
   "painting-drywall-repair": "Pintura y reparación de drywall",
+  "emergency-board-up": "Tablas de emergencia",
+  "fence-installation-repair": "Cercas",
+  gutters: "Canaletas",
+  patios: "Patios",
+  gazebos: "Gazebos",
+  decks: "Decks",
+  "commercial-storm-restoration": "Restauración comercial por tormenta",
 };
 
 export function serviceHref(slug: string, locale: "en" | "es") {
