@@ -867,4 +867,171 @@ export const esPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'woodlands-spring-first-freeze-prep',
+    title: 'Cómo dejar lista una casa en The Woodlands y Spring ante una posible helada',
+    metaTitle: 'Helada en Woodlands y Spring',
+    crumb: 'Preparar la helada',
+    lines: ['Puede haber helada.', 'Deje la casa lista.'],
+    description:
+      'Puede haber una primera helada en The Woodlands y Spring hacia Acción de Gracias. Qué revisar en tubos, riego y la llave general.',
+    lede: 'El 20 de noviembre de 2026, una primera helada es posible al norte de Houston. No es un hecho. The Woodlands y Spring están en la zona que vigila el pronóstico, y una casa entre árboles puede perder un tubo en una sola noche fría.',
+    image: '/images/services/water-damage-restoration.jpg',
+    service: 'water-damage-restoration',
+    emergency: true,
+    ctaTitle: '¿Ya se abrió un tubo?',
+    ctaBody: `Llame al ${phone} si un tubo se abre. Cierre la llave general si puede hacerlo sin riesgo. Elite Restorations saca el agua, seca y repara el daño de una helada. Empresa familiar en Houston desde 1993.`,
+    related: [
+      'houston-leaks-pipes-heater-dishwasher-toilet',
+      'first-24-hours-water-damage-houston',
+    ],
+    faqs: [
+      {
+        q: '¿Está confirmada la helada en The Woodlands y Spring?',
+        a: 'No. El 20 de noviembre de 2026, la oficina de Houston/Galveston vigila una posible primera helada alrededor de la noche del miércoles y la mañana de Acción de Gracias, en el valle del Brazos y el Piney Woods. Prepare la casa de todos modos. Los tubos que fallan son los que nadie revisó.',
+      },
+      {
+        q: '¿Qué llaves dejo con un hilo de agua?',
+        a: 'Caliente y fría, en los muebles más lejos de donde entra el agua. Casi siempre un baño de arriba o un lavabo en pared exterior. Hágalo la noche en que pueda helar. Las llaves de manguera, ya cubiertas, se quedan secas y sin manguera. Un chorro toda la noche solo gasta agua.',
+      },
+      {
+        q: '¿Dónde está la llave general?',
+        a: 'Casi siempre en la caja del medidor, cerca de la calle. Algunas casas tienen otra válvula donde entra la línea. Quite las agujas de pino de día y vea que gira. Una llave de medidor ayuda cuando la válvula de la calle la necesita. Deje el agua abierta en cuanto compruebe que se mueve.',
+      },
+      {
+        q: '¿Qué hago con el riego?',
+        a: 'Apague el sistema y drene el latón de afuera si conoce las válvulas. Envolver una pieza llena sirve menos. Si nunca la ha drenado, encuentre las manijas esta tarde o llame a quien le da servicio.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Lo que dice el pronóstico',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La oficina de Houston/Galveston del Servicio Meteorológico Nacional está pendiente de una posible primera helada en el valle del Brazos y en el Piney Woods, alrededor de la noche del miércoles 25 de noviembre y la mañana del Día de Acción de Gracias. The Woodlands y Spring quedan en ese lado de pinares, al norte de la ciudad. El valle del Brazos está más al oeste. Que sea posible quiere decir que hay que preparar la casa. No quiere decir que cada calle se vaya a congelar. Una noche fría basta para partir una línea que pasó el año sin protección.',
+          },
+        ],
+      },
+      {
+        heading: 'Por qué se parten estas casas',
+        blocks: [
+          {
+            type: 'p',
+            text: 'En The Woodlands, y en las secciones nuevas de Spring, muchas casas son de dos pisos sobre losa. Las líneas de agua suelen correr por el ático y por dentro de las paredes exteriores, donde no llega el calor de los cuartos. Las casas más viejas, cerca de Old Town Spring, son otro edificio. Algunas son más chicas, y el tubo puede estar en una pared de afuera o debajo del piso. En unas y en otras no hay sótano que reciba el agua. Si un tubo se parte, se ve una mancha en el cielo, un goteo o un piso mojado.',
+          },
+          {
+            type: 'p',
+            text: 'Los pinos y los encinos sombrean las paredes y el patio. Una llave de manguera del lado norte, bajo esos árboles, se queda más fría que la misma llave al sol. El riego es común en estos lotes. El preventor de reflujo suele ser latón a la intemperie, junto al medidor o en el costado, y guarda agua a propósito. Muchas veces esa pieza se cuartea antes de que se vea una mancha adentro.',
+          },
+        ],
+      },
+      {
+        heading: 'Mangueras, llaves y tubo a la vista',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Quite todas las mangueras y vacíelas. Una manguera conectada deja agua en la válvula, y la llave puede partirse dentro de la pared. Ya sin manguera, ponga una cubierta aislante. Cubrir una manguera que sigue puesta no drena nada. Las mangas de espuma sirven para la tubería que se ve en el garaje o junto a una pared exterior. Una toalla se moja y ya no abriga.',
+          },
+        ],
+      },
+      {
+        heading: 'Líneas del ático y tubos en la pared',
+        blocks: [
+          {
+            type: 'p',
+            text: 'En una casa de dos pisos, mire el ático de día. Abra la escotilla y pise solo los travesaños. Busque tubo desnudo cerca de los aleros, de una ventila, o donde una línea cruza hacia un baño de arriba. Si el tubo ya está bajo el aislamiento, déjelo. Levantarlo y no acomodarlo otra vez deja desnuda una línea que estaba cubierta. Las mangas de espuma son para los tramos desnudos que pueda alcanzar. No se salga de la madera. Meter un pie por el cielo es otra reparación.',
+          },
+          {
+            type: 'p',
+            text: 'Un tubo dentro de una pared exterior no se forra desde la sala. Abra las puertas de los gabinetes bajo el fregadero y bajo el lavabo de las paredes de afuera, para que llegue el aire del cuarto. Déjelas abiertas la noche en que pueda helar. Un gabinete cerrado es una caja fría. Esas líneas se pueden congelar mientras la cocina se siente bien.',
+          },
+        ],
+      },
+      {
+        heading: 'El preventor de reflujo del riego',
+        blocks: [
+          {
+            type: 'p',
+            text: 'En muchos patios de The Woodlands y de Spring hay riego, y el preventor de reflujo está afuera. Apague el control. Cierre la válvula que alimenta esa pieza y drénela si conoce las manijas. Si nunca las ha tocado, encuéntrelas esta tarde o llame a quien le da servicio al sistema. Envolver latón que sigue lleno de agua sirve menos que vaciarlo. Cúbralo después de sacar el agua.',
+          },
+        ],
+      },
+      {
+        heading: 'El calentador, y la calefacción si se va',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El calentador suele estar en el garaje o en el ático. Sepa cuál es el suyo antes de tener que apagarlo. La noche fría, déjelo encendido. Si está en el garaje, deje la puerta cerrada. Si se va en Acción de Gracias, no apague la calefacción. Déjela como si alguien estuviera en la casa. Pida a un vecino que se asome si más adelante sale un aviso de helada. Este 20 de noviembre, una helada es posible. No está decidida.',
+          },
+        ],
+      },
+      {
+        heading: 'Encuentre la llave general de día',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La llave general suele estar en la caja del medidor, cerca de la calle. Algunas casas también tienen una válvula donde entra la línea. En un lote arbolado, la tapa se pierde bajo las agujas de pino y las hojas. Límpiela y vea que la válvula gira. Una llave de medidor, de ferretería, sirve cuando la válvula de la calle la necesita. Gírela solo lo bastante para ver que se mueve, y deje el agua abierta. Enséñele a quien viva ahí hacia dónde se cierra.',
+          },
+        ],
+      },
+      {
+        heading: 'Un hilo de agua, a propósito',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La noche en que pueda helar, deje un hilo de agua en las llaves más lejos de la entrada del agua. Abra caliente y fría si no sabe cuál línea pasa por el espacio frío. Un hilo, no un chorro. El agua que se mueve se congela menos, y una llave abierta le da salida si un tramo llega a congelarse. Use un mueble del extremo, casi siempre un baño de arriba o un lavabo en pared exterior. Las llaves de manguera van cubiertas y secas.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Quite las mangueras y luego cubra las llaves.',
+              'Revise el ático de día, pise los travesaños y forre solo el tubo desnudo que alcance.',
+              'Abra los gabinetes bajo los lavabos de las paredes exteriores.',
+              'Apague el riego y drene el preventor de reflujo si conoce las válvulas.',
+              'Deje el calentador y la calefacción encendidos. Cierre el garaje si el calentador está ahí.',
+              'Encuentre la llave general de día y compruebe que gira.',
+              'Deje un hilo de agua en las llaves lejanas la noche en que pueda helar.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Si un tubo se revienta',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Cierre la llave general. Abra una llave para bajar la presión. No se pare en agua junto a contactos o al tablero. Si ya cerró el suministro, apague el calentador para que no caliente un tanque vacío. No descongele un tubo con llama. Cuando todos estén a salvo, fotografíe los cuartos y la rotura, si la puede ver.',
+          },
+          {
+            type: 'p',
+            text: 'Lo que sigue ya está en dos guías de este sitio. Una habla de tubos reventados, calentadores, lavavajillas y fugas de inodoro. La otra es el primer día después de un daño de agua en Houston. Esta página es la preparación. Esas páginas son para cuando el agua ya entró. Un tubo partido por helada tampoco es lo mismo que agua de Spring Creek dentro de la casa. Diga cuál pasó.',
+          },
+          {
+            type: 'p',
+            text: 'Elite Restorations atiende el agua que deja una helada. Sacamos el agua encharcada, secamos la estructura y reparamos cielos, aislamiento, tablaroca y pisos que moja una línea del ático o una llave partida. Llame al (713) 909-0034. Si hay seguro de por medio, Elite trabaja con su aseguradora como su contratista y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide la cobertura.',
+          },
+          {
+            type: 'links',
+            items: [
+              {
+                href: '/es/blog/houston-leaks-pipes-heater-dishwasher-toilet',
+                label: 'Tubos reventados, calentadores, lavavajillas e inodoros',
+              },
+              {
+                href: '/es/blog/first-24-hours-water-damage-houston',
+                label: 'Las primeras 24 horas después de un daño de agua',
+              },
+              { href: '/es/water-damage-restoration', label: 'Restauración por daño de agua' },
+              { href: '/es/spring-tx', label: 'Casas en Spring' },
+              {
+                href: '/water-damage-restoration-the-woodlands-tx',
+                label: 'Daño de agua en The Woodlands',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
