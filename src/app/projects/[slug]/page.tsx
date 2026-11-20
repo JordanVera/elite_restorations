@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const esPath = spanishPathFor(path);
   return pageMetadata({
     title: localTitle(projectSeoName(project.slug) ?? project.title),
-    description: `${project.title} in Houston. ${project.tagline}`,
+    description: project.description ?? `${project.title} in Houston. ${project.tagline}`,
     path,
     image: project.cover.src,
     languages: esPath ? languageAlternates(path, esPath) : undefined,
