@@ -43,6 +43,8 @@ export default function HoustonStormDamagePage() {
         { href: "/emergency-board-up", label: "Boarding up broken windows and doors" },
         { href: "/water-damage-restoration", label: "Water damage restoration" },
         { href: "/roofing", label: "Roofing" },
+        { href: "/hail-damage-roof-repair", label: "Hail and storm roof repair" },
+        { href: "/fire-damage-restoration", label: "Fire and smoke restoration" },
         { href: "/ground-check-after-a-houston-storm", label: "A ground-level check after the storm" },
         { href: "/commercial-storm-restoration", label: "Commercial and apartment buildings" },
         { href: "/insurance-claims", label: "Insurance claims help" },

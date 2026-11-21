@@ -79,7 +79,7 @@ export default function SpanishHomePage() {
       </section>
       <ServiceIndex
         services={indexServices}
-        heading={["Veinticinco trabajos.", "Un solo equipo."]}
+        heading={["Veintisiete trabajos.", "Un solo equipo."]}
         intro="El mismo equipo hace la remodelación con cita y la emergencia. Elija el trabajo que necesita."
         indexLabel="Servicios"
         exploreLabel="Ver"

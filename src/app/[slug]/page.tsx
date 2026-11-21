@@ -184,6 +184,8 @@ const claimHelpSlugs = new Set([
   'roofing-emergency-tarp-repair',
   'emergency-board-up',
   'commercial-storm-restoration',
+  'fire-damage-restoration',
+  'hail-damage-roof-repair',
 ]);
 
 const propertyScopeSlugs = new Set([
@@ -191,6 +193,8 @@ const propertyScopeSlugs = new Set([
   'roofing',
   'roofing-emergency-tarp-repair',
   'emergency-board-up',
+  'fire-damage-restoration',
+  'hail-damage-roof-repair',
 ]);
 
 export default async function ServicePage({

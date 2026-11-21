@@ -29,7 +29,7 @@ const PREVIEW_COUNT = 6;
 export function ServiceIndex({
   services,
   coreLinks = [],
-  heading = ["Twenty-five trades.", "One team."],
+  heading = ["Twenty-seven trades.", "One team."],
   intro = "Planned remodels and unplanned emergencies use the same skills. That is why we do both. Pick a service to see how we approach it.",
   locale = "en",
   exploreLabel = "Explore",

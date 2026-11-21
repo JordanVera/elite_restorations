@@ -21,6 +21,8 @@ export const metadata: Metadata = pageMetadata({
 
 const links = [
   { href: "/es/water-damage-restoration", label: "Daño de agua" },
+  { href: "/es/fire-damage-restoration", label: "Fuego y humo" },
+  { href: "/es/hail-damage-roof-repair", label: "Techos por granizo" },
   { href: "/es/roofing-emergency-tarp-repair", label: "Lona de emergencia" },
   { href: "/es/roofing", label: "Techos" },
   { href: "/es/insurance-claims", label: "Reclamos de seguro" },

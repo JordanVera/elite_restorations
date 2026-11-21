@@ -64,6 +64,16 @@ const services = [
     label: 'Insurance claims help',
     body: 'Photos and a written record of the damage, the drying, and the repairs. Your insurer decides what the policy covers.',
   },
+  {
+    href: '/fire-damage-restoration',
+    label: 'Fire and smoke restoration',
+    body: 'Board-up, soot and odor cleanup, drying of the water used to fight the fire, and the rebuild after the house is secure.',
+  },
+  {
+    href: '/hail-damage-roof-repair',
+    label: 'Hail and storm roof repair',
+    body: 'Inspection, photos for a claim, and a repair or a replacement after hail, including gutters and siding.',
+  },
 ] as const;
 
 const reads = [
@@ -338,11 +348,17 @@ export default function RestorationPage() {
               house is secure, dry, and written down.
             </p>
             <Link
-              href="/what-to-do-after-a-fire-your-first-5-steps"
+              href="/fire-damage-restoration"
               className="mt-6 inline-flex items-center gap-2 underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
             >
-              What to do after a fire
+              Fire and smoke restoration
               <ArrowUpRight className="size-4" aria-hidden />
+            </Link>
+            <Link
+              href="/what-to-do-after-a-fire-your-first-5-steps"
+              className="mt-4 block underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
+            >
+              What to do after a fire
             </Link>
           </div>
         </div>

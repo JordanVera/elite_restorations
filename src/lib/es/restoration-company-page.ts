@@ -38,6 +38,8 @@ export const restorationCompanyEs: RestorationCompanyCopy = {
       ],
       links: [
         { href: '/what-to-do-after-a-fire-your-first-5-steps', label: 'Qué hacer después de un fuego' },
+        { href: '/es/fire-damage-restoration', label: 'Fuego y humo' },
+        { href: '/es/hail-damage-roof-repair', label: 'Techos por granizo' },
         { href: '/es/restoration', label: 'Restauración en Houston' },
       ],
     },
@@ -96,6 +98,8 @@ export const restorationCompanyEs: RestorationCompanyCopy = {
     'emergency-board-up': 'Tablas de emergencia',
     'commercial-storm-restoration': 'Restauración de comercios y multifamiliares',
     'insurance-claims': 'Ayuda con reclamos de seguro',
+    'fire-damage-restoration': 'Restauración por fuego y humo',
+    'hail-damage-roof-repair': 'Reparación de techos por granizo',
   },
   serviceBlurbs: {
     'kitchen-remodeling':
@@ -133,6 +137,10 @@ export const restorationCompanyEs: RestorationCompanyCopy = {
       'Apartamentos, asociaciones y edificios comerciales, con fotos marcadas por unidad y por cuarto.',
     'insurance-claims':
       'Fotos, un alcance por escrito y una reunión en el lugar con su ajustador cuando usted lo pida.',
+    'fire-damage-restoration':
+      'Tablas, limpieza de hollín y olor, secado del agua de los bomberos y la reconstrucción que usted contrate.',
+    'hail-damage-roof-repair':
+      'Inspección, fotos para un reclamo, y reparación o cambio después del granizo, con canaletas y siding.',
   },
   processEyebrow: 'Proceso',
   processHeading: 'Cómo avanza un trabajo.',

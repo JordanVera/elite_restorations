@@ -378,4 +378,161 @@ export const addedServiceInputs = [
       neighborhoods: ["Houston", "Energy Corridor", "Westchase", "Alief", "Katy", "Sugar Land", "Galleria Area", "Memorial"],
     },
   },
+  {
+    slug: "fire-damage-restoration",
+    name: "Fire Damage Restoration",
+    group: "Recovery" as const,
+    tagline: "Board it up, clean the soot, dry the water, then rebuild.",
+    summary:
+      "Board-up, smoke and soot cleanup, odor removal, drying of firefighting water, and the rebuild after a Houston fire.",
+    metaTitle: "Houston Fire Damage Restoration",
+    metaDescription:
+      "Fire and smoke restoration in Houston: board-up, soot cleanup, odor removal, drying, and the rebuild. Call (713) 909-0034.",
+    emergency: true,
+    intro: [
+      "After the fire department says the building is safe to enter, the clock is on soot and on the water used to put the fire out. Soot is acidic. It marks metal, stone, and finished wood the longer it sits. Hose water does not dry itself in Houston humidity.",
+      "We photograph the openings and the rooms, board what is open, clean what can be saved, dry the structure, and rebuild what you hire. Family-owned, serving Houston since 1993. The work is scheduled from our office in west Houston (77082). Call " + phone + " if the house is open or still wet.",
+    ],
+    includes: [
+      "Photos before openings are covered",
+      "Board-up of windows, doors, and open walls",
+      "A tarp when the roof is safe to cover",
+      "Smoke and soot cleanup",
+      "Odor removal from rooms and materials that can be saved",
+      "Drying of water used to fight the fire",
+      "Drywall, flooring, and the rebuild you hire",
+      "Help documenting the loss for your insurer",
+    ],
+    faqs: [
+      {
+        q: "What should I do first after a house fire in Houston?",
+        a: "Get everyone out and follow the fire department. Do not go back in until they say the building is safe. Then call " + phone + ". If you can do it from a cleared space, photograph rooms and broken openings before anything is thrown away.",
+      },
+      {
+        q: "Can you clean smoke and soot, or only board the openings?",
+        a: "Both. Board-up and a tarp keep the next rain out. Soot cleanup and odor removal are the work on the surfaces that can be saved. Charred drywall and wet insulation come out. We do not treat those as the same step.",
+      },
+      {
+        q: "Do you dry the water the fire department used?",
+        a: "Yes. That water soaks walls, insulation, and floors. We extract it and dry the structure with air movers and dehumidifiers until the readings say it is dry. Houston humidity is why the fans stay.",
+      },
+      {
+        q: "Can the same team rebuild after the cleanup?",
+        a: "Yes. Drywall, flooring, cabinets, and paint start when the structure is dry. Putting the room back and changing the layout are written as separate scopes. A remodel can wait until the house is secure.",
+      },
+    ],
+    related: ["emergency-board-up", "water-damage-restoration", "painting-drywall-repair", "insurance-claims"],
+    links: [
+      { href: "/what-to-do-after-a-fire-your-first-5-steps", label: "What to do after a fire" },
+      { href: "/emergency-board-up", label: "Emergency board-up" },
+      { href: "/water-damage-restoration", label: "Drying after firefighting water" },
+      { href: "/roofing-emergency-tarp-repair", label: "Emergency roof tarping" },
+      { href: "/insurance-claims", label: "Insurance claims help" },
+      { href: "/insurance-log", label: "Open the insurance photo log" },
+      { href: "/painting-drywall-repair", label: "Painting and drywall repair" },
+    ],
+    local: {
+      heading: "Soot and hose water in a humid city.",
+      body: [
+        "Houston fire losses we see are a kitchen that stayed in the kitchen, a room that opened the roof, or smoke that traveled down a hall. The houses sit in wet air, so a wall that looks dry can still hold moisture from the hoses, and soot keeps etching metal while you wait on a callback.",
+        "We measure before we remove more than we have to. Repairs start when the readings say the structure is dry. Family-owned since 1993. Visits leave from our office in west Houston (77082).",
+      ],
+      conditions: [
+        {
+          title: "Soot should not sit",
+          body: "Metal, stone, and finished wood lose more surface the longer the film stays. Cleaning is timed to that, not to a convenient week.",
+        },
+        {
+          title: "Hose water on a slab",
+          body: "On a slab the water runs under the floor and up the drywall. In a Heights bungalow it can also drop into the crawl space. We look at the structure you have.",
+        },
+        {
+          title: "Then the rebuild",
+          body: "Once the building is closed and dry, the same team repairs drywall, floors, and cabinets instead of handing you to a second contractor.",
+        },
+      ],
+      neighborhoods: ["Houston", "Spring Branch", "Memorial", "Westchase", "Alief", "Katy", "Bellaire", "The Heights"],
+    },
+  },
+  {
+    slug: "hail-damage-roof-repair",
+    name: "Hail Damage Roof Repair",
+    group: "Roof & exterior" as const,
+    tagline: "Inspect the slopes, document the storm, then repair or replace.",
+    summary:
+      "Hail and storm roof inspections, photos for an insurance claim, repair or replacement, and the gutters and siding the same storm hit.",
+    metaTitle: "Houston Hail Damage Roof Repair",
+    metaDescription:
+      "Hail and storm roof repair in Houston: inspection, claim photos, repair or replacement, gutters, and siding. Call (713) 909-0034.",
+    emergency: true,
+    intro: [
+      "A Houston hailstorm can bruise a roof that still looks even from the yard. Soft metal tells on it sooner: gutters, vent caps, and screens. The shingles have to be seen from the roof, when it is safe to be up there, before anyone calls the whole thing a replacement.",
+      "We inspect, photograph the slopes for your records and any claim, and say whether a repair will hold. Gutters and siding from the same storm are part of the walk. Your insurer decides coverage. Family-owned since 1993, from our office in west Houston (77082).",
+    ],
+    includes: [
+      "Roof inspection when it is safe to be up there",
+      "Photos of shingles, soft metal, gutters, and interior stains",
+      "A clear repair-or-replacement recommendation",
+      "Emergency tarping if the roof is open",
+      "Gutter and siding repair from the same storm",
+      "Help documenting the loss for your insurer",
+    ],
+    materials: {
+      label: "What the storm hits",
+      items: ["Architectural asphalt shingles", "Metal, tile, and composite roofs", "Gutters and downspouts", "Siding", "Flashing, vents, and pipe boots"],
+    },
+    faqs: [
+      {
+        q: "Can you tell hail damage from ordinary wear?",
+        a: "We compare the pattern. Hail marks a slope and the soft metal in one event. Wear thins the south and west slopes over years and does not dent a gutter in an afternoon. Both can be on the same roof. We describe what is actually there.",
+      },
+      {
+        q: "Do you repair hail damage, or only replace the roof?",
+        a: "Both. A limited bruise on a roof that still has life can be a repair. Bruises across the slopes, or soft wood underneath, is a replacement. We say which one after the inspection. A new patch can show against shingles the Houston sun has faded. We say that too.",
+      },
+      {
+        q: "Will you photograph the roof for my insurance claim?",
+        a: "Yes. We photograph the slopes, the metal, the gutters, and wet rooms before a repair covers the marks. We can meet the adjuster on site if you want us there. Your insurer decides whether the marks are hail or wear, and what the policy pays.",
+      },
+      {
+        q: "What if the gutters and siding were hit too?",
+        a: "We look at them on the same visit. Dented gutters are both evidence and a drainage problem. Cracked siding is its own repair. Those lines are separate from the shingle price, and we sequence them so a new gutter is not installed on a roof that is about to come off.",
+      },
+    ],
+    related: ["roofing", "roof-replacement", "roofing-emergency-tarp-repair", "gutters", "siding"],
+    links: [
+      { href: "/roofing", label: "Roofing" },
+      { href: "/roof-replacement", label: "Roof replacement" },
+      { href: "/roof-replacement-cost-houston", label: "What changes a roof replacement cost" },
+      { href: "/storm-and-hail-roof-repair-houston", label: "Storm and hail roof repair in Houston" },
+      { href: "/hail-damage-vs-normal-wear-houston-roof", label: "Hail damage vs normal wear" },
+      { href: "/houston-hail-storm-roof-claims", label: "Hail, storm roofs, and insurance claims" },
+      { href: "/gutters", label: "Gutters" },
+      { href: "/siding", label: "Siding" },
+      { href: "/roofing-emergency-tarp-repair", label: "Emergency roof tarping" },
+      { href: "/insurance-claims", label: "Insurance claims help" },
+    ],
+    local: {
+      heading: "Spring hail on roofs that already take the sun.",
+      body: [
+        "Spring storms drop hail from Meyerland and Oak Forest out to Cypress, Tomball, Kingwood, Katy, and The Woodlands. Hurricane season, June 1 through November 30, is wind and driven rain. We do not treat those calendars as the same loss.",
+        "The south and west slopes are already the ones the sun ages. Hail can land on that wear. We separate the two in the photos. Water from a dented gutter still has to leave the slab. That check is part of the visit, scheduled from our office in west Houston (77082).",
+      ],
+      conditions: [
+        {
+          title: "Repair or replace",
+          body: "We say which one the slopes in front of us need, after the inspection. A curb photo is not that inspection.",
+        },
+        {
+          title: "The metal beside the shingles",
+          body: "Gutters, caps, and screens show the storm from the ground. They support the file. They do not replace a look at the mat.",
+        },
+        {
+          title: "The first dry night",
+          body: "If the deck is open, a secured tarp buys time. It is not the finished roof, and we say when it needs to come off.",
+        },
+      ],
+      neighborhoods: ["Houston", "Cypress", "Katy", "Tomball", "Spring", "The Woodlands", "Memorial", "Pearland"],
+    },
+  },
 ];

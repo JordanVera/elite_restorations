@@ -31,6 +31,8 @@ const claimSlugs = new Set([
   "roofing",
   "roofing-emergency-tarp-repair",
   "insurance-claims",
+  "fire-damage-restoration",
+  "hail-damage-roof-repair",
 ]);
 
 export function generateStaticParams() {
@@ -152,7 +154,13 @@ export default async function SpanishServicePage({
         path={`/es/${slug}`}
         image={service.image}
         claimHelp={claimSlugs.has(slug)}
-        propertyScope={slug === "water-damage-restoration" || slug === "roofing" || slug === "roofing-emergency-tarp-repair"}
+        propertyScope={
+          slug === "water-damage-restoration" ||
+          slug === "roofing" ||
+          slug === "roofing-emergency-tarp-repair" ||
+          slug === "fire-damage-restoration" ||
+          slug === "hail-damage-roof-repair"
+        }
         sections={hub.sections}
         faqs={hub.faqs}
         related={[

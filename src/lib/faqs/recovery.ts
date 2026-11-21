@@ -309,6 +309,40 @@ export const recoveryFaqs: Record<string, Faq[]> = {
       a: "A hurricane may open the roof, the glass, and several units at once. A burst stack is often one line and the ceilings under it. Wind, flood, and a pipe can land in the same week and still be different claims. We document them separately. Your insurer decides payment.",
     },
   ],
+  "fire-damage-restoration": [
+    {
+      q: "Do I need to be home during smoke cleaning?",
+      a: "Someone with authority has to let us in and point out every room that smells or looks stained. You do not have to watch the cleaning. Tell us about pets, alarms, and whether any room is still wet. If you leave, we need a way back in for the drying check.",
+    },
+    {
+      q: "How long can soot sit on metal and stone?",
+      a: "Not long. It is acidic, and Houston humidity keeps the film damp. The sooner it is cleaned, the more of the surface is still there. That is a property of soot, not a scare line. Call " + phone + " after the fire department releases the building.",
+    },
+    {
+      q: "Will the smoke smell come back?",
+      a: "It can, if odor is still in insulation, in a cabinet box, or in the ducts. We clean what can be saved and remove what will keep smelling. We do not promise a house will never smell like smoke again. If the smell returns when the air runs, tell us. That is a clue.",
+    },
+    {
+      q: "Should I run the air conditioner after a fire?",
+      a: "Not until someone has looked at whether the system pulled smoke and whether water reached it. Running it can spread odor. Leaving a wet house closed with no drying also goes badly in this climate. We will tell you which problem you have. Do not turn power on if water is at the panel.",
+    },
+    {
+      q: "What if only one room burned?",
+      a: "We still look at the hall, the closets, the attic, and the ceiling below. Smoke and hose water travel farther than the char. If those spaces are clean, we say so and we do not expand the job to fill a day.",
+    },
+    {
+      q: "Can you help an apartment or a business after a fire?",
+      a: "Yes, with the access the owner or manager arranges. Photos are labeled by unit or suite. A house is a different scope, written on its own. Call " + phone + " and say which kind of building it is.",
+    },
+    {
+      q: "Who pays for board-up and cleaning before the claim is decided?",
+      a: "The owner or manager who hires us. Whether an insurer later includes that bill is their decision. Many policies expect you to limit more damage. That is not a promise of payment. We photograph the work so you have the record.",
+    },
+    {
+      q: "How do I reach you if the house is still open?",
+      a: "Call " + phone + " any time and say the fire department has released the building, or that you are still waiting on that. If you cannot call, the emergency form on this site reaches the same team. We will tell you the next safe step. Office hours for a visit that is not an emergency are Monday through Saturday, 8:00 AM to 6:00 PM.",
+    },
+  ],
 };
 
 assertFaqMap(recoveryFaqs);

@@ -207,6 +207,40 @@ export const exteriorFaqs: Record<string, Faq[]> = {
       a: "Yes, when the wall is ready. A kitchen remodel and a water repair can both end in paint. The dry-out has to finish first. We do not use paint to skip a wet wall. Color is the last visible step, not the drying method.",
     },
   ],
+  "hail-damage-roof-repair": [
+    {
+      q: "How can I see hail marks without climbing?",
+      a: "From the yard, look at gutters, downspouts, flue caps, window screens, and the top of the outdoor condenser. Fresh dents are a clue that hail fell. They are not a verdict on the shingles. Stay off the roof. We inspect the slopes.",
+    },
+    {
+      q: "Do I need to be home for a hail inspection?",
+      a: "Someone should open the gate and be reachable. You do not have to stand in the driveway. Tell us about dogs and which side leaked. If there is a ceiling stain, we need a way into the house or the attic.",
+    },
+    {
+      q: "When is hail season in Houston?",
+      a: "Spring is when hail shows up across Harris County. Hurricane season, June 1 through November 30, is mostly wind and rain, and it is a different kind of roof damage. Storms do not read the calendar. If one just hit, call " + phone + " and tell us whether water is coming in.",
+    },
+    {
+      q: "Should I sign a contract at the door after a hailstorm?",
+      a: "No. Storms bring door-knockers. Take photos and get a written look at your roof before you sign. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We work for the owner who hires us. We are not public adjusters.",
+    },
+    {
+      q: "Where do I find the wind or hail deductible?",
+      a: "On the declarations page, or ask the agent who sold the policy. Many Texas wind and hail deductibles are a percentage of the insured value, separate from the deductible on a plumbing leak. We do not have that number, and we do not waive it.",
+    },
+    {
+      q: "Will a repair hide damage the adjuster still needs to see?",
+      a: "A permanent repair can, which is why we photograph first. If the roof is open and the next rain will make the house worse, we cover it after the photos. Leaving it open so someone can see it later lets in more water. Your insurer still decides the claim.",
+    },
+    {
+      q: "Can you replace gutters and siding with the roof?",
+      a: "Yes, when those pieces were part of the same storm. They are separate prices. New gutters go on after the roof work that would tear them up, not before. Siding is matched to the profile that is still made. We say when a patch will show.",
+    },
+    {
+      q: "How do I request a hail inspection?",
+      a: "Call or text " + phone + ". If water is coming in, say so and we will tell you the next safe step. A closed roof is a scheduled visit, Monday through Saturday, 8:00 AM to 6:00 PM, from our office in west Houston (77082). The form on this site asks for a callback. It does not reserve a truck.",
+    },
+  ],
 };
 
 assertFaqMap(exteriorFaqs);

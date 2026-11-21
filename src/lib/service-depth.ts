@@ -3,6 +3,7 @@ import { costGuides, formatPublishedRange } from '@/lib/cost-guides';
 import { exteriorDepth } from '@/lib/service-depth-exterior';
 import { floorDepth } from '@/lib/service-depth-floors';
 import { interiorDepth } from '@/lib/service-depth-interiors';
+import { fireHailDepth } from '@/lib/service-depth-fire-hail';
 import { recoveryDepth } from '@/lib/service-depth-recovery';
 import type { ServiceDepth } from '@/lib/service-depth-types';
 import { serviceHomeownerFaqs } from '@/lib/faqs/homeowner';
@@ -14,6 +15,7 @@ const bySlug: Record<string, ServiceDepth> = Object.fromEntries(
     ...floorDepth,
     ...exteriorDepth,
     ...recoveryDepth,
+    ...fireHailDepth,
   }).map(([slug, depth]) => {
     const extra = serviceHomeownerFaqs[slug];
     if (!extra?.length) return [slug, depth];
