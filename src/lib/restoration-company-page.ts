@@ -38,6 +38,8 @@ export const restorationCompanyEn: RestorationCompanyCopy = {
       ],
       links: [
         { href: '/what-to-do-after-a-fire-your-first-5-steps', label: 'What to do after a fire' },
+        { href: '/fire-damage-restoration', label: 'Fire and smoke restoration' },
+        { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
         { href: '/restoration', label: 'Houston restoration services' },
       ],
     },
@@ -109,6 +111,10 @@ export const restorationCompanyEn: RestorationCompanyCopy = {
       'Apartments, associations, and commercial buildings, with photos labeled by unit and by room.',
     'insurance-claims':
       'Photos, a written scope, and an on-site meeting with your adjuster when you want us there.',
+    'fire-damage-restoration':
+      'Board-up, soot and odor cleanup, drying of firefighting water, and the rebuild you hire.',
+    'hail-damage-roof-repair':
+      'Inspection, photos for a claim, and repair or replacement after hail, including gutters and siding.',
   },
   processEyebrow: 'Process',
   processHeading: 'How a job moves.',

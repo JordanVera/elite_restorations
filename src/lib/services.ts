@@ -48,7 +48,7 @@ export const serviceGroupBlurbs: Record<ServiceGroup, string> = {
   'Roof & exterior':
     'What keeps the weather out: roofs, siding, and the decks and patios beside the house.',
   Recovery:
-    'Paint and drywall that finish a remodel, recovery after water or a storm, and documentation for an insurance claim.',
+    'Paint and drywall that finish a remodel, recovery after water, fire, or a storm, and documentation for an insurance claim.',
 };
 
 const serviceInputs: Omit<Service, 'guide'>[] = [
@@ -1013,6 +1013,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'roofing-emergency-tarp-repair',
       'siding',
       'water-damage-restoration',
+      'hail-damage-roof-repair',
     ],
     links: [
       {
@@ -1032,6 +1033,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         label: 'Hail damage vs normal wear on a Houston roof',
       },
       { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+      { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
       { href: '/commercial-storm-restoration', label: 'Commercial and apartment storm restoration' },
       { href: '/emergency-board-up', label: 'Emergency board-up' },
       {
@@ -1569,6 +1571,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'roofing',
       'roofing-emergency-tarp-repair',
       'insurance-claims',
+      'fire-damage-restoration',
     ],
     links: [
       {
@@ -1613,6 +1616,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       { href: '/water-heater-leak-damage-houston', label: 'Water heater leak damage' },
       { href: '/dishwasher-leak-water-damage-houston', label: 'Dishwasher leak damage' },
       { href: '/toilet-overflow-water-damage-houston', label: 'Toilet overflow damage' },
+      { href: '/fire-damage-restoration', label: 'Fire and smoke restoration' },
       {
         href: '/sherwin-williams-painting-houston',
         label: 'Sherwin-Williams painting in Houston',

@@ -272,6 +272,7 @@ export const restorationGuides: Article[] = [
             type: 'links',
             items: [
               { href: '/roofing', label: 'Roofing' },
+              { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
               { href: '/roof-replacement', label: 'Roof replacement' },
               { href: '/roofing-emergency-tarp-repair', label: 'Emergency roof tarping' },
               { href: '/insurance-claims', label: 'Insurance claims help' },

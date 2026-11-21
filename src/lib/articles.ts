@@ -270,6 +270,7 @@ export const articles: Article[] = [
             type: 'links',
             items: [
               { href: '/emergency-board-up', label: 'Board-up for open windows and doors' },
+              { href: '/fire-damage-restoration', label: 'Fire and smoke restoration' },
               { href: '/roofing-emergency-tarp-repair', label: 'Emergency roof tarping' },
               { href: '/water-damage-restoration', label: 'Drying after firefighting water' },
             ],

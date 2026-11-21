@@ -29,6 +29,8 @@ export const spanishServiceSlugs = [
   "gazebos",
   "decks",
   "commercial-storm-restoration",
+  "fire-damage-restoration",
+  "hail-damage-roof-repair",
 ] as const;
 
 const spanishServiceSlugSet = new Set<string>(spanishServiceSlugs);
@@ -145,6 +147,8 @@ export const esServiceNames: Record<(typeof spanishServiceSlugs)[number], string
   gazebos: "Gazebos",
   decks: "Decks",
   "commercial-storm-restoration": "Restauración comercial por tormenta",
+  "fire-damage-restoration": "Restauración por fuego y humo",
+  "hail-damage-roof-repair": "Reparación de techos por granizo",
 };
 
 export function serviceHref(slug: string, locale: "en" | "es") {

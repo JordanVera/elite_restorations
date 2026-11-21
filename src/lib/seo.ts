@@ -56,6 +56,8 @@ const serviceLedTitleSlugs = new Set([
   "gazebos",
   "decks",
   "commercial-storm-restoration",
+  "fire-damage-restoration",
+  "hail-damage-roof-repair",
   "siding",
   "patios-decks",
   "painting-drywall-repair",

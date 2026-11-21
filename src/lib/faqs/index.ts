@@ -12,8 +12,8 @@ export const extraServiceFaqs: Record<string, readonly Faq[]> = {
 };
 
 const keys = Object.keys(extraServiceFaqs);
-if (keys.length !== 25) {
-  throw new Error(`Expected 25 service FAQ sets, found ${keys.length}`);
+if (keys.length !== 27) {
+  throw new Error(`Expected 27 service FAQ sets, found ${keys.length}`);
 }
 assertFaqMap(extraServiceFaqs);
 

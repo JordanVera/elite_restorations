@@ -25,6 +25,8 @@ const claimHubs = new Set<EsHub["slug"]>([
   "insurance-claims",
   "emergency-board-up",
   "commercial-storm-restoration",
+  "fire-damage-restoration",
+  "hail-damage-roof-repair",
 ]);
 
 function hub(
@@ -383,6 +385,30 @@ const esHubInputs: readonly EsHub[] = [
     [
       { q: "¿Para quién es esta página?", a: "Para administradores, mesas directivas y dueños de comunidades de apartamentos y edificios comerciales en el área de Houston. Las casas usan las otras páginas, con los mismos oficios." },
       { q: "¿Entran a unidades ocupadas?", a: "Sí, con el acceso que usted arregle. No entramos a una unidad por nuestra cuenta, y no secamos todo el edificio porque un techo esté manchado." },
+    ],
+  ),
+  hub(
+    "fire-damage-restoration",
+    "Fuego y humo en Houston",
+    "Restauración por fuego y humo",
+    "Fuego",
+    "Después de que los bomberos entregan la casa, el reloj corre sobre el hollín y sobre el agua de las mangueras.",
+    "El hollín es ácido. Marca el metal, la piedra y la madera terminada mientras se queda. El agua con la que apagaron el fuego no se seca sola con la humedad de Houston. Fotografiamos, ponemos tablas en lo que está abierto, limpiamos lo que se puede salvar, secamos la estructura y reconstruimos lo que usted contrata. Una cocina que se quedó en la cocina y un techo abierto son tamaños distintos. El orden es el mismo. En una losa de Spring Branch, Westchase o Katy el agua corre bajo el piso. En muchas casas viejas de The Heights también puede caer al espacio de abajo. El humo llega a los clósets aunque la llama se haya quedado en un cuarto. Trabajamos desde nuestra oficina en el oeste de Houston (77082).",
+    [
+      { q: "¿Puedo entrar a recoger papeles?", a: "No, hasta que los bomberos digan que el edificio es seguro. El humo, un piso blando y un fuego que no está apagado lastiman gente después de que bajan las llamas." },
+      { q: "¿La limpieza es un fin de semana con producto de casa?", a: "No. Es quitar lo que no se salva, limpiar lo que sí, y secar por donde se fue el agua de los bomberos. Un trapo mojado puede embarrar el hollín en la pintura y en la piedra." },
+    ],
+  ),
+  hub(
+    "hail-damage-roof-repair",
+    "Granizo en techos de Houston",
+    "Reparación de techos por granizo",
+    "Techo",
+    "Una granizada en Houston puede magullar un techo que desde el jardín todavía se ve parejo.",
+    "El metal blando lo enseña antes: canaletas, tapas y mosquiteros. Las tejas hay que verlas desde el techo, cuando se puede subir sin riesgo. Inspeccionamos, fotografiamos las pendientes para su registro y para cualquier reclamo, y decimos si una reparación aguanta o si el techo tiene que salir. Canaletas y siding del mismo evento van en la misma visita, con precio aparte. La primavera es cuando el granizo cruza el condado de Harris, de Meyerland y Oak Forest hasta Cypress, Tomball, Spring y Kingwood, y también en Katy, Memorial, Pearland y The Woodlands. La temporada de huracanes, del 1 de junio al 30 de noviembre, es otro calendario: viento y lluvia empujada. No los tratamos como la misma pérdida. Trabajamos desde nuestra oficina en el oeste de Houston (77082).",
+    [
+      { q: "¿El granizo siempre significa techo nuevo?", a: "No. Puede marcar el metal y dejar un techo que se repara. Un techo gastado puede tener que salir aunque la última tormenta haya hecho poco. La pendiente se inspecciona." },
+      { q: "¿Me subo a confirmarlo?", a: "No. Tejas mojadas y una pendiente empinada lastiman. Desde el jardín anote abolladuras, piezas faltantes y manchas en el cielo. Nosotros vemos el techo cuando es seguro." },
     ],
   ),
 ];

@@ -91,6 +91,7 @@ export const esPostsA: Article[] = [
             type: 'links',
             items: [
               { href: '/es/roofing', label: 'Techos en Houston' },
+              { href: '/es/hail-damage-roof-repair', label: 'Reparación de techos por granizo' },
               { href: '/es/cypress-tx', label: 'Techos y tormenta en Cypress' },
               { href: '/es/tomball-tx', label: 'Techos y tormenta en Tomball' },
               { href: '/es/houston-storm-damage', label: 'Ayuda por tormenta en Houston' },

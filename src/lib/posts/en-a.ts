@@ -95,6 +95,7 @@ export const houstonPostsA: Article[] = [
             items: [
               { href: '/insurance-log', label: 'Room-by-room insurance photo log' },
               { href: '/roofing', label: 'Roofing in Houston' },
+              { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
               { href: '/cypress-tx', label: 'Roof and storm work in Cypress' },
               { href: '/tomball-tx', label: 'Roof and storm work in Tomball' },
             ],

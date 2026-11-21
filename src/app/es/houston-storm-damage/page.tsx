@@ -76,6 +76,8 @@ export default function SpanishStormPage() {
         { href: "/es/roofing-emergency-tarp-repair", label: "Lona de techo" },
         { href: "/es/water-damage-restoration", label: "Daño de agua" },
         { href: "/es/roofing", label: "Techos" },
+        { href: "/es/hail-damage-roof-repair", label: "Techos por granizo" },
+        { href: "/es/fire-damage-restoration", label: "Fuego y humo" },
         { href: "/es/insurance-claims", label: "Reclamos" },
         { href: "/commercial-storm-restoration", label: "Comercios y apartamentos" },
       ]}

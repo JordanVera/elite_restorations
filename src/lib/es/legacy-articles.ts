@@ -239,6 +239,7 @@ const legacyArticles: Article[] = [
             type: 'links',
             items: [
               { href: '/es/emergency-board-up', label: 'Tablas para ventanas y puertas abiertas' },
+              { href: '/es/fire-damage-restoration', label: 'Restauración por fuego y humo' },
               { href: '/es/roofing-emergency-tarp-repair', label: 'Lona de emergencia en el techo' },
               { href: '/es/water-damage-restoration', label: 'Secado después del agua de los bomberos' },
             ],
@@ -892,6 +893,7 @@ const legacyArticles: Article[] = [
             type: 'links',
             items: [
               { href: '/es/roofing', label: 'Techos' },
+              { href: '/es/hail-damage-roof-repair', label: 'Reparación de techos por granizo' },
               { href: '/es/roof-replacement', label: 'Reemplazo de techo' },
               { href: '/es/roofing-emergency-tarp-repair', label: 'Lona de emergencia en el techo' },
               { href: '/es/insurance-claims', label: 'Ayuda con reclamos de seguro' },
@@ -1638,6 +1640,7 @@ const legacyArticles: Article[] = [
             type: 'links',
             items: [
               { href: '/es/emergency', label: 'Está entrando agua: ayuda de emergencia' },
+              { href: '/es/hail-damage-roof-repair', label: 'Reparación de techos por granizo' },
               {
                 href: '/es/blog/what-to-do-after-a-roof-leak-in-houston',
                 label: 'Qué hacer después de una gotera de techo',

@@ -49,6 +49,8 @@ export const serviceNav: ServiceNavItem[] = [
   { slug: "gazebos", name: "Gazebos", group: "Roof & exterior" },
   { slug: "decks", name: "Decks", group: "Roof & exterior" },
   { slug: "commercial-storm-restoration", name: "Commercial & Multifamily Storm Restoration", group: "Recovery" },
+  { slug: "fire-damage-restoration", name: "Fire Damage Restoration", group: "Recovery" },
+  { slug: "hail-damage-roof-repair", name: "Hail Damage Roof Repair", group: "Roof & exterior" },
 ];
 
 const navSlugs = new Set(serviceNav.map((service) => service.slug));

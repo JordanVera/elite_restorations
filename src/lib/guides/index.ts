@@ -8,6 +8,8 @@ import { gazeboGuide } from '@/lib/guides/hub-gazebos';
 import { gutterGuide } from '@/lib/guides/hub-gutters';
 import { patioGuide } from '@/lib/guides/hub-patios';
 import { emergencyBoardUpGuide } from '@/lib/guides/hub-board-up';
+import { fireDamageGuide } from '@/lib/guides/hub-fire';
+import { hailRoofGuide } from '@/lib/guides/hub-hail';
 import { backsplash, carpentry, countertops, tileFireplaces } from '@/lib/guides/interiors';
 import { bathroomRemodeling, kitchenRemodeling } from '@/lib/guides/priority-interiors';
 import { roofReplacement, roofing, waterDamage } from '@/lib/guides/priority-exterior';
@@ -38,4 +40,6 @@ export const serviceGuides: Record<string, ServiceGuide> = {
   gazebos: gazeboGuide,
   decks: deckGuide,
   'commercial-storm-restoration': commercialGuide,
+  'fire-damage-restoration': fireDamageGuide,
+  'hail-damage-roof-repair': hailRoofGuide,
 };

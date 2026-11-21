@@ -426,6 +426,7 @@ export const fieldNotes: Article[] = [
             type: 'links',
             items: [
               { href: '/emergency', label: 'Water coming in: emergency help' },
+              { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
               {
                 href: '/what-to-do-after-a-roof-leak-in-houston',
                 label: 'What to do after a roof leak',

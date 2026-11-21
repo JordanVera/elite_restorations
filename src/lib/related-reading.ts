@@ -17,6 +17,7 @@ const alsoOn: Record<string, readonly string[]> = {
     "emergency-board-up",
     "roofing-emergency-tarp-repair",
     "water-damage-restoration",
+    "fire-damage-restoration",
   ],
   "emergency-tarp-and-board-up-houston": [
     "emergency-board-up",
@@ -28,7 +29,14 @@ const alsoOn: Record<string, readonly string[]> = {
     "siding",
     "commercial-storm-restoration",
   ],
-  "storm-and-hail-roof-repair-houston": ["roofing", "siding", "roof-replacement"],
+  "storm-and-hail-roof-repair-houston": [
+    "roofing",
+    "siding",
+    "roof-replacement",
+    "hail-damage-roof-repair",
+  ],
+  "houston-hail-storm-roof-claims": ["hail-damage-roof-repair", "gutters"],
+  "hail-damage-vs-normal-wear-houston-roof": ["hail-damage-roof-repair", "gutters", "siding"],
   "quartz-vs-granite-countertops-houston": ["backsplash"],
   "deck-material-for-houston-humidity": ["patios", "decks", "gazebos"],
   "patio-cover-gazebo-cypress-bridgeland": ["patios", "decks", "gazebos", "carpentry"],
