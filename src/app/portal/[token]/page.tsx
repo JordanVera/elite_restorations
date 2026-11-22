@@ -5,7 +5,11 @@ import { after } from 'next/server';
 import { ResourceCards } from '@/components/portal/resource-cards';
 import { PortalSelections } from '@/components/portal/portal-selections';
 import { site } from '@/lib/site';
-import { getCustomerPortal, recordPortalView, resolvePortal } from '@/server/portal/customer';
+import {
+  getCustomerPortal,
+  recordPortalView,
+  resolvePortal,
+} from '@/server/portal/customer';
 import { storageMode } from '@/server/portal/storage';
 
 export const dynamic = 'force-dynamic';
@@ -15,8 +19,18 @@ function PortalHeader() {
   return (
     <header className="border-b border-border bg-white">
       <div className="mx-auto flex h-16 max-w-3xl items-center justify-between px-4 sm:px-6">
-        <Image src="/images/logo/logo-black.png" alt="Elite Restorations" width={132} height={60} className="h-auto w-[116px]" priority />
-        <a href={site.phone.href} className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
+        <Image
+          src="/images/logo/logo-black.png"
+          alt="Elite Restorations"
+          width={132}
+          height={60}
+          className="h-auto w-[116px]"
+          priority
+        />
+        <a
+          href={site.phone.href}
+          className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground"
+        >
           <Phone className="size-4" aria-hidden />
           <span className="hidden sm:inline">{site.phone.display}</span>
           <span className="sm:hidden">Call</span>
@@ -31,17 +45,27 @@ function ContactFooter() {
     <footer className="mx-auto max-w-3xl px-4 pt-4 pb-12 sm:px-6">
       <div className="rounded-[12px] border border-border bg-white p-5 text-sm">
         <p className="font-medium">Questions about a selection?</p>
-        <p className="mt-1 text-muted-foreground">Call or text us, or send an email. We&apos;re happy to help you decide.</p>
+        <p className="mt-1 text-muted-foreground">
+          Call or text us, or send an email. We&apos;re happy to help you
+          decide.
+        </p>
         <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
-          <a href={site.phone.href} className="inline-flex items-center gap-2 font-medium hover:underline">
+          <a
+            href={site.phone.href}
+            className="inline-flex items-center gap-2 font-medium hover:underline"
+          >
             <Phone className="size-4" aria-hidden /> {site.phone.display}
           </a>
-          <a href={`mailto:${site.email}`} className="inline-flex items-center gap-2 font-medium hover:underline">
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-flex items-center gap-2 font-medium hover:underline"
+          >
             <Mail className="size-4" aria-hidden /> {site.email}
           </a>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">
-          Your choices help us order the right materials. They don&apos;t change your quote, contract, or price. If a selection affects cost,
+          Your choices help us order the right materials. They don&apos;t change
+          your quote, contract, or price. If a selection affects cost,
           we&apos;ll talk with you first.
         </p>
       </div>
@@ -53,18 +77,29 @@ function Unavailable({ expired }: { expired: boolean }) {
   return (
     <>
       <PortalHeader />
-      <main id="main" className="mx-auto max-w-xl px-4 py-16 text-center sm:px-6">
-        <h1 className="text-2xl font-semibold tracking-tight">{expired ? 'This link has expired' : 'This link isn’t available'}</h1>
+      <main
+        id="main"
+        className="mx-auto max-w-xl px-4 py-16 text-center sm:px-6"
+      >
+        <h1 className="text-2xl font-semibold tracking-tight">
+          {expired ? 'This link has expired' : 'This link isn’t available'}
+        </h1>
         <p className="mt-3 text-muted-foreground">
           {expired
             ? 'Contact us and we’ll send you a new link to finish your material selections.'
             : 'The link may have been mistyped, replaced with a new one, or closed. Contact us and we’ll help.'}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm">
-          <a href={site.phone.href} className="inline-flex h-10 items-center gap-2 rounded-[8px] bg-foreground px-4 font-medium text-white">
+          <a
+            href={site.phone.href}
+            className="inline-flex h-10 items-center gap-2 rounded-[8px] bg-foreground px-4 font-medium text-white"
+          >
             <Phone className="size-4" aria-hidden /> {site.phone.display}
           </a>
-          <a href={`mailto:${site.email}`} className="inline-flex h-10 items-center gap-2 rounded-[8px] border border-input bg-white px-4 font-medium">
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-flex h-10 items-center gap-2 rounded-[8px] border border-input bg-white px-4 font-medium"
+          >
             <Mail className="size-4" aria-hidden /> Email us
           </a>
         </div>
@@ -73,10 +108,15 @@ function Unavailable({ expired }: { expired: boolean }) {
   );
 }
 
-export default async function CustomerPortalPage({ params }: { params: Promise<{ token: string }> }) {
+export default async function CustomerPortalPage({
+  params,
+}: {
+  params: Promise<{ token: string }>;
+}) {
   const { token } = await params;
   const resolved = await resolvePortal(token);
-  if (resolved.access !== 'open') return <Unavailable expired={resolved.access === 'expired'} />;
+  if (resolved.access !== 'open')
+    return <Unavailable expired={resolved.access === 'expired'} />;
 
   const view = await getCustomerPortal(resolved.portal.id);
   if (!view) return <Unavailable expired={false} />;
@@ -87,9 +127,17 @@ export default async function CustomerPortalPage({ params }: { params: Promise<{
     <>
       <PortalHeader />
       <main id="main" className="mx-auto max-w-3xl px-4 pt-8 sm:px-6">
-        <h1 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{view.title}</h1>
-        {view.propertyAddress ? <p className="mt-1 text-sm text-muted-foreground">{view.propertyAddress}</p> : null}
-        <p className="mt-4 leading-relaxed whitespace-pre-line text-foreground/85">{view.welcomeMessage}</p>
+        <h1 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
+          {view.title}
+        </h1>
+        {view.propertyAddress ? (
+          <p className="mt-1 text-sm text-muted-foreground">
+            {view.propertyAddress}
+          </p>
+        ) : null}
+        <p className="mt-4 leading-relaxed whitespace-pre-line text-foreground/85">
+          {view.welcomeMessage}
+        </p>
         <ResourceCards
           resources={view.resources}
           heading="Where to shop"
@@ -98,7 +146,13 @@ export default async function CustomerPortalPage({ params }: { params: Promise<{
         <PortalSelections
           token={token}
           items={view.items}
-          uploads={mode === 'blob' ? { mode: 'blob', portalId: resolved.portal.id } : mode === 'local' ? { mode: 'server' } : { mode: 'none' }}
+          uploads={
+            mode === 'blob'
+              ? { mode: 'blob', portalId: resolved.portal.id }
+              : mode === 'local'
+                ? { mode: 'server' }
+                : { mode: 'none' }
+          }
         />
       </main>
       <ContactFooter />
