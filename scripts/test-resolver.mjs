@@ -18,6 +18,10 @@ export async function resolve(specifier, context, nextResolve) {
   if (specifier === "server-only") {
     return nextResolve(pathToFileURL(path.join(root, "scripts/server-only-stub.mjs")).href, context);
   }
+  // Next's subpath entry points (next/headers, next/cache) are plain .js files without an exports map.
+  if (/^next\/[a-z-]+$/.test(specifier)) {
+    return nextResolve(`${specifier}.js`, context);
+  }
   const base = localFile(specifier, context.parentURL);
   if (base) {
     const files = [base, `${base}.ts`, `${base}.tsx`, `${base}.mjs`, path.join(base, "index.ts")];

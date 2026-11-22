@@ -16,7 +16,7 @@ import {
   type JobberIngestLead,
 } from "@/server/jobber/map";
 import { clientSearchTerms, matchesLead } from "@/server/jobber/match";
-import { JOBBER_TOKEN_STORE_MISSING } from "@/server/jobber/tokens";
+import { isJobberTokenStoreError, JOBBER_TOKEN_STORE_MISSING } from "@/server/jobber/tokens";
 import { PRIVATE_BLOB_MISSING } from "@/server/private-blob-token";
 import { safeLog } from "@/server/safe-log";
 
@@ -155,7 +155,9 @@ function fromJobberError(error: unknown): JobberSyncResult {
     message === "Jobber is not connected." ||
     message === JOBBER_TOKEN_STORE_MISSING ||
     message === PRIVATE_BLOB_MISSING ||
-    message === "Jobber credentials are not configured."
+    message === "Jobber credentials are not configured." ||
+    message.startsWith("Jobber needs to be reconnected") ||
+    isJobberTokenStoreError(error)
   ) {
     console.info("[jobber]", message);
     return { status: "not-configured" };
