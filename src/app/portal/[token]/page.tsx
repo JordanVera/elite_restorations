@@ -2,6 +2,7 @@ import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { after } from 'next/server';
 
+import { ResourceCards } from '@/components/portal/resource-cards';
 import { PortalSelections } from '@/components/portal/portal-selections';
 import { site } from '@/lib/site';
 import { getCustomerPortal, recordPortalView, resolvePortal } from '@/server/portal/customer';
@@ -89,6 +90,11 @@ export default async function CustomerPortalPage({ params }: { params: Promise<{
         <h1 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">{view.title}</h1>
         {view.propertyAddress ? <p className="mt-1 text-sm text-muted-foreground">{view.propertyAddress}</p> : null}
         <p className="mt-4 leading-relaxed whitespace-pre-line text-foreground/85">{view.welcomeMessage}</p>
+        <ResourceCards
+          resources={view.resources}
+          heading="Where to shop"
+          description="These are the stores and yards we recommend for the materials on this project. Open a site, pick the product, then add the link or a photo of the label on the selection below."
+        />
         <PortalSelections
           token={token}
           items={view.items}

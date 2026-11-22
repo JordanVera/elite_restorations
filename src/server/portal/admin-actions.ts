@@ -7,10 +7,14 @@ import { logActivity } from "@/server/activity";
 import { can } from "@/server/auth/policy";
 import { assertAdmin, type AdminIdentity } from "@/server/auth/session";
 import { db, type Db, type Prisma } from "@/server/db/client";
+import { sanitizeResourceSlugs } from "@/lib/selections/resources";
+import { listPortalResources } from "@/server/portal/resources";
 import {
   firstIssue,
+  portalResourcesInput,
   portalSettingsInput,
   requirementInput,
+  type PortalResourcesInput,
   type PortalSettingsInput,
   type RequirementData,
   type RequirementInput,
@@ -157,6 +161,30 @@ export async function updatePortalSettingsAction(portalId: string, input: Portal
   });
   refresh(portalId, found.portal.quoteId);
   return { ok: true, message: "Portal settings saved." };
+}
+
+export async function updatePortalResourcesAction(portalId: string, input: PortalResourcesInput): Promise<PortalActionResult> {
+  const admin = await assertAdmin("manage_portals");
+  const parsed = portalResourcesInput.safeParse(input);
+  if (!parsed.success) return { ok: false, message: firstIssue(parsed.error) };
+  const found = await editablePortal(db(), portalId);
+  if (found.error !== null) return { ok: false, message: found.error };
+  const catalog = await listPortalResources();
+  const slugs = sanitizeResourceSlugs(catalog, parsed.data.slugs);
+  await db().$transaction(async (tx) => {
+    await tx.customerPortal.update({
+      where: { id: portalId },
+      data: parsed.data.useSuggested
+        ? { resourcesCustomized: false, resourceSlugs: [] }
+        : { resourcesCustomized: true, resourceSlugs: slugs },
+    });
+    await logActivity(
+      { ...actor(admin), action: "portal.resources_updated", entityType: "CustomerPortal", entityId: portalId, portalId, metadata: { slugs } },
+      tx,
+    );
+  });
+  refresh(portalId);
+  return { ok: true, message: parsed.data.useSuggested ? "Resources follow the materials on this portal again." : "Shopping resources saved." };
 }
 
 export async function saveRequirementAction(portalId: string, input: RequirementInput): Promise<PortalActionResult> {

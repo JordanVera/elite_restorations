@@ -3,11 +3,15 @@ import Link from 'next/link';
 
 import { ListToolbar } from '@/components/admin/list-toolbar';
 import { Pagination, SourceBadge } from '@/components/admin/records';
-import { Badge, ButtonLink, Card, EmptyState, PageHeader, Table, Td, Th } from '@/components/admin/ui';
+import { Badge, ButtonLink, Card, CardHeader, EmptyState, PageHeader, Table, Td, Th } from '@/components/admin/ui';
+import { ResourceCards } from '@/components/portal/resource-cards';
+import { SupplierMark } from '@/components/portal/supplier-mark';
 import { formatDate, relativeTime } from '@/lib/activity-labels';
 import { listHref } from '@/lib/admin/list-params';
+import { can } from '@/server/auth/policy';
 import { requireAdmin } from '@/server/auth/session';
 import { listPortals, PORTAL_STATUS_FILTERS } from '@/server/portal/admin';
+import { listPortalResources } from '@/server/portal/resources';
 
 export const metadata = { title: 'Customer Portals' };
 
@@ -16,13 +20,13 @@ function one(value: string | string[] | undefined) {
 }
 
 export default async function PortalsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  await requireAdmin('view_customers');
+  const admin = await requireAdmin('view_customers');
   const raw = await searchParams;
   const q = one(raw.q).slice(0, 100);
   const statusRaw = one(raw.status);
   const status = (PORTAL_STATUS_FILTERS as readonly string[]).includes(statusRaw) ? statusRaw : '';
   const page = Math.max(1, Number.parseInt(one(raw.page), 10) || 1);
-  const { total, rows } = await listPortals({ q, status, page });
+  const [{ total, rows }, catalog] = await Promise.all([listPortals({ q, status, page }), listPortalResources({ activeOnly: true })]);
 
   return (
     <>
@@ -35,6 +39,27 @@ export default async function PortalsPage({ searchParams }: { searchParams: Prom
           </ButtonLink>
         }
       />
+      <Card className="mb-6">
+        <CardHeader
+          title="Where we send customers"
+          description="Logos and links the customer sees on their portal, based on the materials on that job. Open a portal to add or hide a supplier."
+          action={
+            can(admin.role, 'manage_categories') ? (
+              <ButtonLink href="/admin/settings/resources" variant="secondary" size="sm">
+                Manage resources
+              </ButtonLink>
+            ) : null
+          }
+        />
+        <div className="px-5 pb-5">
+          {catalog.length ? (
+            <ResourceCards resources={catalog} />
+          ) : (
+            <p className="text-sm text-muted-foreground">No shopping resources yet. Add them under Settings.</p>
+          )}
+        </div>
+      </Card>
+
       <Card>
         <ListToolbar
           placeholder="Search portal, customer, or quote number"
@@ -73,6 +98,7 @@ export default async function PortalsPage({ searchParams }: { searchParams: Prom
                   <Th className="hidden md:table-cell">Customer</Th>
                   <Th>Status</Th>
                   <Th>Progress</Th>
+                  <Th className="hidden xl:table-cell">Resources</Th>
                   <Th className="hidden lg:table-cell">Updated</Th>
                 </tr>
               </thead>
@@ -124,6 +150,20 @@ export default async function PortalsPage({ searchParams }: { searchParams: Prom
                         {row.submitted ? <Badge tone="warning">{row.submitted} to review</Badge> : null}
                         {row.changes ? <Badge tone="info">{row.changes} changes requested</Badge> : null}
                       </div>
+                    </Td>
+                    <Td className="hidden xl:table-cell">
+                      {row.resources.length ? (
+                        <div className="flex flex-wrap gap-1">
+                          {row.resources.map((resource) => (
+                            <span key={resource.slug} title={resource.name}>
+                              <SupplierMark resource={resource} className="size-7 rounded-[6px]" />
+                              <span className="sr-only">{resource.name}</span>
+                            </span>
+                          ))}
+                        </div>
+                      ) : (
+                        <span className="text-[0.8rem] text-muted-foreground">—</span>
+                      )}
                     </Td>
                     <Td className="hidden text-[0.8rem] whitespace-nowrap text-muted-foreground lg:table-cell">
                       {relativeTime(row.updatedAt)}

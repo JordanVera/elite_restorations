@@ -7,6 +7,7 @@ import { useEffect, useId, useState } from 'react';
 import { ConfirmDialog } from '@/components/admin/confirm-dialog';
 import { Badge, Button, Field, Notice, TextArea, TextInput } from '@/components/admin/ui';
 import { AttachmentField, type UploadConfig } from '@/components/portal/attachment-field';
+import { ResourceChips } from '@/components/portal/resource-cards';
 import { formatMoney } from '@/lib/activity-labels';
 import { MAX_NOTES, MAX_PRODUCT_URLS, SELECTION_FIELDS, TEXT_FIELD_KEYS, type TextFieldKey } from '@/lib/selections/fields';
 import { customerCanEdit, statusLabel, statusTone, type SelectionStatus } from '@/lib/selections/status';
@@ -197,6 +198,8 @@ export function SelectionCard({
             </ul>
           </div>
         ) : null}
+
+        {item.resources.length ? <ResourceChips resources={item.resources} /> : null}
 
         {message ? (
           <Notice tone={sel.status === 'APPROVED' ? 'success' : 'info'} className="mt-4">

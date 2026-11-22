@@ -30,7 +30,7 @@ The password is read from `ADMIN_PASSWORD` or prompted without echo. It must be 
 | Quote totals, line item prices, allowances | Yes | Hidden |
 | Build, publish, revoke portals | Yes | Yes |
 | Review selections | Yes | Yes |
-| Selection categories | Yes | No |
+| Selection categories and shopping resources | Yes | No |
 | Jobber connection, sync, demo data | Yes | No |
 
 Sessions are stored in the database (only a hash of the cookie value). They end after 12 hours idle or 7 days total. Five failed sign-ins for an email or an IP address within 15 minutes block further attempts until the window passes. Permission checks run on the server for every page, server action, and file request. Hiding a button is never the only control.
@@ -45,6 +45,7 @@ Sessions are stored in the database (only a hash of the cookie value). They end 
 | `/admin/portals`, `/admin/portals/new?quoteId=…`, `/admin/portals/[id]` | Portal list, builder, and portal management. |
 | `/admin/selections`, `/admin/selections/[id]` | Review queue and review page. |
 | `/admin/settings/categories` | Selection category templates (admin only). |
+| `/admin/settings/resources` | Shopping resources: stores, logos, links, and which materials they are suggested for (admin only). |
 | `/admin/settings/integrations` | Jobber connection, sync, schema check, demo data (admin only). |
 
 ## Building a portal
@@ -53,8 +54,9 @@ Sessions are stored in the database (only a hash of the cookie value). They end 
 2. The builder suggests selections from the quote's line items by matching them against category keywords (for example "LVP" or "luxury vinyl" suggests Flooring; "labor" and "demolition" are skipped). Each suggestion shows why it matched and a confidence level. **Nothing is added until you accept it.** You can also add custom selections with no line item.
 3. Edit each selection: title, area, instructions, the fields the customer fills in, whether it's required, quantity, allowance (admin only), preferred options, and due date.
 4. Set the portal title, welcome message, and optional expiry. "Show allowances to customer" is off by default and only admins can turn it on.
-5. Save. The portal starts as a **draft** and the link doesn't work yet.
-6. Click **Publish portal** to make the link live, then **Copy link** and send it to the customer yourself. The site doesn't email it.
+5. Shopping resources are suggested from the materials on the portal. The default set (Sherwin-Williams, Floor & Decor, Builders FirstSource, Home Depot, Lowe's, Expo Stones, Earth Stone Colours) is stored in the database. Admins add, edit, or hide suppliers under **Settings → Shopping resources**, including a copied company logo. On the portal builder you can still add or hide any of them for that job.
+6. Save. The portal starts as a **draft** and the link doesn't work yet.
+7. Click **Publish portal** to make the link live, then **Copy link** and send it to the customer yourself. The site doesn't email it.
 
 Other actions on the portal page:
 
@@ -63,13 +65,14 @@ Other actions on the portal page:
 - **Revoke portal** permanently closes the portal. Its selections and history stay visible to staff. Only one active portal per quote is allowed; revoke the old one to start over.
 - **Delete draft** is available only for a draft that was never published.
 
-Selection categories (`/admin/settings/categories`) control the fields each kind of selection asks for, default instructions, and the keywords used for suggestions. A default set is created on first use.
+Selection categories (`/admin/settings/categories`) control the fields each kind of selection asks for, default instructions, and the keywords used for suggestions. Shopping resources (`/admin/settings/resources`) are the stores and yards shown to customers. A default set of both is created on first use.
 
 ## The customer's view
 
 The customer opens the link on a phone or computer. There is no login; the link is the key, so treat it like a password.
 
-- Each selection is a card showing what's needed, any instructions, and the due date.
+- A **Where to shop** section lists the stores and yards for this job, with a logo, a short “we recommend them for…” line, and a link to their website.
+- Each selection is a card showing what's needed, any instructions, the due date, and the matching supplier links for that material.
 - The customer fills in what applies, adds product links and photos or PDFs, and clicks **Save draft** or **Submit**.
 - After submitting, the card is locked until staff approve it or ask for changes.
 - A progress bar shows how many selections are complete.
@@ -120,7 +123,7 @@ With `JOBBER_MODE=mock` (the default outside production when Jobber credentials 
 ```bash
 npx prisma dev                # local Postgres; copy the printed DATABASE_URL into .env.local
 npx prisma migrate deploy
-npm run db:seed               # categories, fictitious Jobber data, a draft demo portal
+npm run db:seed               # categories, shopping resources, fictitious Jobber data, a draft demo portal
 npm run admin:create -- --email demo@example.com --name "Demo Admin" --role ADMIN
 npm run dev
 ```

@@ -3,8 +3,16 @@ import "server-only";
 import { portalAccess, type PortalAccess } from "@/lib/selections/access";
 import type { SelectionFieldKey } from "@/lib/selections/fields";
 import { sanitizeFieldKeys } from "@/lib/selections/fields";
+import {
+  categorySlugForRequirement,
+  resolveResourceSlugs,
+  resourcesForCategory,
+  resourcesFromSlugs,
+  type PortalResource,
+} from "@/lib/selections/resources";
 import type { SelectionStatus } from "@/lib/selections/status";
 import { db } from "@/server/db/client";
+import { listPortalResources } from "@/server/portal/resources";
 import { hashPortalToken, isPortalTokenShape } from "@/server/portal/tokens";
 
 /**
@@ -50,6 +58,7 @@ export type CustomerItem = {
   preferredOptions: string[];
   enabledFields: SelectionFieldKey[];
   dueDate: string | null;
+  resources: PortalResource[];
   selection: CustomerSelection;
 };
 
@@ -57,6 +66,7 @@ export type CustomerPortalView = {
   title: string;
   welcomeMessage: string;
   propertyAddress: string | null;
+  resources: PortalResource[];
   items: CustomerItem[];
 };
 
@@ -102,6 +112,8 @@ export async function getCustomerPortal(portalId: string): Promise<CustomerPorta
       title: true,
       welcomeMessage: true,
       showAllowances: true,
+      resourcesCustomized: true,
+      resourceSlugs: true,
       quote: { select: { propertyAddress: true } },
       requirements: {
         orderBy: [{ sortOrder: "asc" }, { createdAt: "asc" }],
@@ -109,6 +121,7 @@ export async function getCustomerPortal(portalId: string): Promise<CustomerPorta
           id: true,
           title: true,
           categoryName: true,
+          category: { select: { slug: true } },
           area: true,
           instructions: true,
           customerGuidance: true,
@@ -150,12 +163,24 @@ export async function getCustomerPortal(portalId: string): Promise<CustomerPorta
   });
   if (!portal) return null;
 
+  const catalog = await listPortalResources();
+  const categorySlugs = portal.requirements
+    .map((req) => categorySlugForRequirement(req.category?.slug, req.categoryName))
+    .filter((slug): slug is string => Boolean(slug));
+  const resourceSlugs = resolveResourceSlugs(catalog, {
+    customized: portal.resourcesCustomized,
+    saved: portal.resourceSlugs,
+    categorySlugs,
+  });
+
   return {
     title: portal.title,
     welcomeMessage: portal.welcomeMessage,
     propertyAddress: portal.quote.propertyAddress,
+    resources: resourcesFromSlugs(catalog, resourceSlugs),
     items: portal.requirements.map((req) => {
       const sel = req.selection;
+      const categorySlug = categorySlugForRequirement(req.category?.slug, req.categoryName);
       return {
         id: req.id,
         title: req.title,
@@ -170,6 +195,7 @@ export async function getCustomerPortal(portalId: string): Promise<CustomerPorta
         preferredOptions: req.preferredOptions,
         enabledFields: sanitizeFieldKeys(req.enabledFields),
         dueDate: req.dueDate ? req.dueDate.toISOString().slice(0, 10) : null,
+        resources: resourcesForCategory(catalog, categorySlug, resourceSlugs),
         selection: sel
           ? {
               status: sel.status,

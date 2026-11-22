@@ -1,4 +1,4 @@
-import { ChevronRight, Layers, PlugZap, UserRound } from 'lucide-react';
+import { ChevronRight, Layers, PlugZap, Store, UserRound } from 'lucide-react';
 import Link from 'next/link';
 
 import { Card, PageHeader } from '@/components/admin/ui';
@@ -22,6 +22,13 @@ export default async function SettingsPage() {
       title: 'Selection categories',
       description: 'Templates for flooring, countertops, tile, fixtures, and other materials.',
       icon: Layers,
+      allowed: can(admin.role, 'manage_categories'),
+    },
+    {
+      href: '/admin/settings/resources',
+      title: 'Shopping resources',
+      description: 'Stores and yards customers can shop, with logos, links, and what we recommend them for.',
+      icon: Store,
       allowed: can(admin.role, 'manage_categories'),
     },
   ];

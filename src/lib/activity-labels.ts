@@ -11,6 +11,7 @@ const LABELS: Record<string, string> = {
   "jobber.webhook": "received a Jobber webhook",
   "portal.created": "created a portal",
   "portal.updated": "updated portal settings",
+  "portal.resources_updated": "updated shopping resources",
   "portal.published": "published a portal",
   "portal.unpublished": "moved a portal back to draft",
   "portal.revoked": "revoked a portal link",
@@ -30,6 +31,8 @@ const LABELS: Record<string, string> = {
   "attachment.uploaded": "uploaded a file",
   "attachment.removed": "removed a file",
   "category.saved": "saved a category template",
+  "resource.saved": "saved a shopping resource",
+  "resource.deleted": "removed a shopping resource",
 };
 
 export function activityLabel(action: string): string {

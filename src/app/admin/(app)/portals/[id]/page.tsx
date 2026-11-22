@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { PortalLinkCard, PortalSettingsCard } from '@/components/admin/portal/portal-controls';
+import { ResourcePicker } from '@/components/admin/portal/resource-picker';
 import { RequirementList } from '@/components/admin/portal/requirement-list';
 import { SourceBadge } from '@/components/admin/records';
 import { Badge, Card, CardHeader, Notice, PageHeader } from '@/components/admin/ui';
 import { activityLabel, actorLabel, formatDate, relativeTime } from '@/lib/activity-labels';
+import { categorySlugForRequirement } from '@/lib/selections/resources';
 import { isComplete, type SelectionStatus } from '@/lib/selections/status';
 import { can } from '@/server/auth/policy';
 import { requireAdmin } from '@/server/auth/session';
@@ -100,6 +102,16 @@ export default async function PortalPage({ params }: { params: Promise<{ id: str
                   }
                 : null,
             }))}
+          />
+          <ResourcePicker
+            portalId={portal.id}
+            editable={editable}
+            customized={portal.resourcesCustomized}
+            savedSlugs={portal.resourceSlugs}
+            categorySlugs={portal.requirements
+              .map((r) => categorySlugForRequirement(r.category?.slug, r.categoryName))
+              .filter((slug): slug is string => Boolean(slug))}
+            catalog={portal.catalog}
           />
           <Card>
             <CardHeader title="Activity" description="Everything that happened on this portal." />

@@ -3,7 +3,7 @@
  *
  *   npm run db:seed
  *
- * 1. Creates the default selection categories (existing ones are left alone).
+ * 1. Creates the default selection categories and shopping resources (existing ones are left alone).
  * 2. Imports the fictitious Jobber fixtures (src/server/jobber/fixtures.ts),
  *    marked source=MOCK so "Remove demo data" can delete them later.
  * 3. Builds a DRAFT demo portal from the suggestions for one mock quote.
@@ -24,6 +24,7 @@ async function main() {
 
   const { db } = await import("../src/server/db/client");
   const { ensureDefaultCategories } = await import("../src/server/portal/categories");
+  const { ensureDefaultResources } = await import("../src/server/portal/resources");
   const { runJobberSync } = await import("../src/server/jobber/import");
   const { mockReader } = await import("../src/server/jobber/reader");
   const { quoteForNewPortal } = await import("../src/server/portal/admin");
@@ -32,6 +33,8 @@ async function main() {
 
   const created = await ensureDefaultCategories();
   console.log(`Categories: ${created} created.`);
+  const resourcesCreated = await ensureDefaultResources();
+  console.log(`Shopping resources: ${resourcesCreated} created.`);
 
   for (let attempt = 0; attempt < 10; attempt++) {
     const outcome = await runJobberSync({ reader: mockReader() });

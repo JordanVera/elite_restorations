@@ -1,10 +1,12 @@
 import "server-only";
 
 import { PAGE_SIZE } from "@/lib/admin/list-params";
+import { categorySlugForRequirement, resolveResourceSlugs, resourcesFromSlugs } from "@/lib/selections/resources";
 import { isComplete, type SelectionStatus } from "@/lib/selections/status";
 import { suggestSelections } from "@/lib/selections/suggest";
 import { db, type Prisma } from "@/server/db/client";
 import { listCategories } from "@/server/portal/categories";
+import { listPortalResources } from "@/server/portal/resources";
 
 export const PORTAL_STATUS_FILTERS = ["", "DRAFT", "PUBLISHED", "REVOKED"] as const;
 
@@ -23,7 +25,7 @@ export async function listPortals({ q, status, page }: { q: string; status: stri
         : {},
     ],
   };
-  const [total, rows] = await Promise.all([
+  const [total, rows, catalog] = await Promise.all([
     db().customerPortal.count({ where }),
     db().customerPortal.findMany({
       where,
@@ -37,16 +39,22 @@ export async function listPortals({ q, status, page }: { q: string; status: stri
         expiresAt: true,
         publishedAt: true,
         updatedAt: true,
+        resourcesCustomized: true,
+        resourceSlugs: true,
         quote: { select: { id: true, quoteNumber: true, source: true, client: { select: { id: true, name: true } } } },
-        requirements: { select: { dueDate: true, selection: { select: { status: true } } } },
+        requirements: { select: { dueDate: true, categoryName: true, category: { select: { slug: true } }, selection: { select: { status: true } } } },
       },
     }),
+    listPortalResources(),
   ]);
   const now = new Date();
   return {
     total,
     rows: rows.map((row) => {
       const statuses = row.requirements.map((r) => (r.selection?.status ?? "NOT_STARTED") as SelectionStatus);
+      const categorySlugs = row.requirements
+        .map((r) => categorySlugForRequirement(r.category?.slug, r.categoryName))
+        .filter((slug): slug is string => Boolean(slug));
       return {
         ...row,
         expired: Boolean(row.expiresAt && row.expiresAt < now),
@@ -54,6 +62,10 @@ export async function listPortals({ q, status, page }: { q: string; status: stri
         submitted: statuses.filter((s) => s === "SUBMITTED").length,
         changes: statuses.filter((s) => s === "CHANGES_REQUESTED").length,
         total: statuses.length,
+        resources: resourcesFromSlugs(
+          catalog,
+          resolveResourceSlugs(catalog, { customized: row.resourcesCustomized, saved: row.resourceSlugs, categorySlugs }),
+        ),
       };
     }),
   };
@@ -113,7 +125,7 @@ export async function getPortalForAdmin(id: string) {
       requirements: {
         orderBy: { sortOrder: "asc" },
         include: {
-          category: { select: { id: true, name: true } },
+          category: { select: { id: true, name: true, slug: true } },
           lineItem: { select: { id: true, name: true } },
           selection: { select: { id: true, status: true, updatedAt: true, _count: { select: { revisions: true, attachments: true } } } },
         },
@@ -121,12 +133,14 @@ export async function getPortalForAdmin(id: string) {
     },
   });
   if (!portal) return null;
-  const categories = await listCategories();
+  const [categories, catalog] = await Promise.all([listCategories(), listPortalResources()]);
   return {
     ...portal,
+    catalog,
     requirements: portal.requirements.map((r) => ({ ...r, quantity: r.quantity?.toNumber() ?? null })),
     categories: categories.map((c) => ({
       id: c.id,
+      slug: c.slug,
       name: c.name,
       active: c.active,
       enabledFields: c.enabledFields,

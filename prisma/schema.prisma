@@ -198,6 +198,24 @@ model SelectionCategory {
   requirements SelectionRequirement[]
 }
 
+/// Retailers and yards shown on customer portals. Seeded defaults; admins can add more.
+model PortalResource {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  name           String
+  url            String
+  recommendedFor String
+  location       String?
+  /// Public path (/images/suppliers/…) or a full https URL for an uploaded logo.
+  logoPath       String?
+  /// SelectionCategory.slug values this supplier is suggested for.
+  categorySlugs  String[]
+  active         Boolean  @default(true)
+  sortOrder      Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
 enum PortalStatus {
   DRAFT
   PUBLISHED
@@ -215,8 +233,12 @@ model CustomerPortal {
   status         PortalStatus @default(DRAFT)
   title          String
   welcomeMessage String
-  showAllowances Boolean      @default(false)
-  expiresAt      DateTime?
+  showAllowances        Boolean      @default(false)
+  /// When false, customer-facing supplier links follow the selection categories.
+  resourcesCustomized   Boolean      @default(false)
+  /// Explicit PortalResource.slug values. Ignored until customized.
+  resourceSlugs         String[]     @default([])
+  expiresAt             DateTime?
   publishedAt    DateTime?
   revokedAt      DateTime?
   createdById    String?
