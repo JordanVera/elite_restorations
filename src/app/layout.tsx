@@ -3,6 +3,7 @@ import path from 'node:path';
 import type { Metadata, Viewport } from 'next';
 import { Geist, Instrument_Serif } from 'next/font/google';
 import ReactDOM from 'react-dom';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { CallTextBar } from '@/components/call-text-bar';
 import { HtmlDocument } from '@/components/html-document';
@@ -182,6 +183,7 @@ export default function RootLayout({
           </SiteChrome>
         </Providers>
         <JsonLd data={siteSchemaGraph()} />
+        <SpeedInsights />
       </body>
     </HtmlDocument>
   );

@@ -34,6 +34,7 @@
     "@trpc/client": "^11.19.0",
     "@trpc/server": "^11.19.0",
     "@vercel/blob": "^2.8.0",
+    "@vercel/speed-insights": "^2.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.49.0",
