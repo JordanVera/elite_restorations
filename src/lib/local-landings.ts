@@ -7,6 +7,7 @@ import { placeFacts } from '@/lib/local/place';
 import { mentionsArea } from '@/lib/local/prose';
 import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
 import { localLandingSlug } from '@/lib/local-paths';
+import { isHoustonNeighborhoodSlug, postalPlaceLabel } from '@/lib/place-labels';
 import { documentTitle, fitDescription, servicePageTitle, titleFits } from '@/lib/seo';
 import { getService, isCityIndexedService, services, type Service } from '@/lib/services';
 import { getServiceArea, serviceAreas, type ServiceArea } from '@/lib/service-areas';
@@ -511,12 +512,23 @@ function rotate<T>(items: readonly T[], amount: number) {
 
 function pageTitle(service: Service, area: ServiceArea) {
   const names = shortNames[service.slug] ?? [service.metaTitle ?? service.name];
-  const candidates = names.flatMap((name) => [
-    `${name} in ${area.name}, TX`,
-    `${name} in ${area.name}`,
-    `${name}, ${area.name} TX`,
-    `${name}, ${area.name}`,
-  ]);
+  const place = postalPlaceLabel(area.name, area.slug);
+  const neighborhood = isHoustonNeighborhoodSlug(area.slug);
+  const candidates = names.flatMap((name) =>
+    neighborhood
+      ? [
+          `${name} in ${place}`,
+          `${name} in ${area.name}, Houston`,
+          `${name} in ${area.name}`,
+          `${name}, ${area.name}`,
+        ]
+      : [
+          `${name} in ${area.name}, TX`,
+          `${name} in ${area.name}`,
+          `${name}, ${area.name} TX`,
+          `${name}, ${area.name}`,
+        ],
+  );
   const fit = candidates.find((candidate) => titleFits(candidate));
   if (!fit) {
     throw new Error(`No title fits for ${service.slug} in ${area.name}`);
@@ -526,14 +538,15 @@ function pageTitle(service: Service, area: ServiceArea) {
 
 function pageDescription(service: Service, area: ServiceArea, blurb: string, n: number) {
   const tail = ` Call ${site.phone.display}.`;
+  const place = postalPlaceLabel(area.name, area.slug);
   const options = [
-    `${service.name} in ${area.name}, TX. ${blurb}${tail}`,
-    `${blurb} For houses in ${area.name}, TX.${tail}`,
-    `${service.name} for a house in ${area.name}, TX. ${blurb}${tail}`,
+    `${service.name} in ${place}. ${blurb}${tail}`,
+    `${blurb} For houses in ${place}.${tail}`,
+    `${service.name} for a house in ${place}. ${blurb}${tail}`,
   ];
   const ordered = rotate(options, n);
   const fit = ordered.find((item) => item.replace(/\s+/g, ' ').trim().length <= 155);
-  const text = (fit ?? `${service.name} in ${area.name}, TX.${tail}`).replace(/\s+/g, ' ').trim();
+  const text = (fit ?? `${service.name} in ${place}.${tail}`).replace(/\s+/g, ' ').trim();
   return text.length <= 155 ? text : fitDescription(text);
 }
 

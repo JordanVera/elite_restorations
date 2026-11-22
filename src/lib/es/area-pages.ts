@@ -20,9 +20,9 @@ export const esAreaPages: readonly AreaPage[] = [
     slug: 'westchase-tx',
     path: '/es/westchase-tx',
     name: 'Westchase',
-    title: 'Westchase, TX',
+    title: 'Westchase, Houston, TX',
     description:
-      'Westchase, TX, a un corto camino de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
+      'Westchase, Houston, TX, a un corto camino de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
     lede: 'Las visitas se agendan desde nuestra oficina en el oeste de Houston (77082), en Crestwater, cerca de George Bush Park, un corto camino al oeste del distrito de Westchase. La remodelación, los techos y la restauración de Westchase salen de esa dirección.',
     paragraphs: [
       'Westchase es el distrito de oficinas, townhomes y casas unifamiliares a lo largo de Westheimer, Richmond y el Sam Houston Tollway. No es un solo plano. Un townhome con pared compartida y una casa de finales de los setenta pueden estar a unas cuadras, y el trabajo sigue el edificio.',
@@ -62,9 +62,9 @@ export const esAreaPages: readonly AreaPage[] = [
     slug: 'alief-tx',
     path: '/es/alief-tx',
     name: 'Alief',
-    title: 'Alief, TX',
+    title: 'Alief, Houston, TX',
     description:
-      'Alief, TX, justo al sur de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
+      'Alief, Houston, TX, justo al sur de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
     lede: 'Alief es la comunidad del suroeste de Houston, justo al sur de la oficina en 77082. Agendamos el trabajo desde nuestra oficina en el oeste de Houston (77082).',
     paragraphs: [
       'Alief corre a lo largo de Bellaire Boulevard, al sur de la oficina: ranchos y casas de dos pisos, no un distrito de torres. La mayoría de las casas data de los setenta a los noventa y está sobre losa. Las cocinas y los baños a menudo se actualizaron por partes, así que un cuarto puede mezclar décadas. Vemos lo que usted quiere cambiar.',
@@ -104,9 +104,9 @@ export const esAreaPages: readonly AreaPage[] = [
     slug: 'energy-corridor-tx',
     path: '/es/energy-corridor-tx',
     name: 'Energy Corridor',
-    title: 'Energy Corridor, TX',
+    title: 'Energy Corridor, Houston, TX',
     description:
-      'Energy Corridor, TX, sobre la Interestatal 10, cerca de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
+      'Energy Corridor, Houston, TX, sobre la Interestatal 10, cerca de nuestra oficina en el oeste de Houston (77082). Remodelación, techos y restauración.',
     lede: 'El Energy Corridor es el distrito del oeste de Houston a lo largo de la Interestatal 10, al norte de la oficina en 77082. Agendamos el trabajo desde nuestra oficina en el oeste de Houston (77082).',
     paragraphs: [
       'El Energy Corridor es el distrito de la Interestatal 10, de los parques de oficinas cerca de Eldridge hacia la Highway 6, con casas, townhomes y apartamentos entre las torres. Un townhome con pared compartida y una casa sola en la cuadra de al lado son trabajos distintos. El nombre del distrito no elige el trabajo.',

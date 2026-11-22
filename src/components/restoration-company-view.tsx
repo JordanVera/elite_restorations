@@ -3,7 +3,6 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 
 import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
-import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { bleedPhotoSizes, Photo } from '@/components/photo';
@@ -11,7 +10,6 @@ import { esGroupNames, serviceHref } from '@/lib/i18n';
 import { img } from '@/lib/images';
 import { cityPageLinks, serviceAreaPageLinks } from '@/lib/restoration-company-links';
 import type { RestorationCompanyCopy } from '@/lib/restoration-company-types';
-import { absoluteUrl, localBusinessSchema } from '@/lib/seo';
 import { serviceGroups } from '@/lib/service-nav';
 import { servicePath, services } from '@/lib/services';
 import { site } from '@/lib/site';
@@ -41,23 +39,6 @@ export function RestorationCompanyView({ copy }: { copy: RestorationCompanyCopy 
     label: copy.serviceLabels?.[service.slug] ?? service.name,
     blurb: copy.serviceBlurbs[service.slug],
   }));
-  const business = localBusinessSchema({
-    description: copy.description,
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: copy.catalogName,
-      itemListElement: offered.map((item, index) => ({
-        '@type': 'Offer',
-        position: index + 1,
-        itemOffered: {
-          '@type': 'Service',
-          name: item.label,
-          url: absoluteUrl(item.href),
-        },
-      })),
-    },
-  });
-
   return (
     <>
       <PageHero
@@ -274,13 +255,6 @@ export function RestorationCompanyView({ copy }: { copy: RestorationCompanyCopy 
         href={copy.ctaHref}
         buttonLabel={copy.ctaButton}
         textLabel={copy.textLabel}
-      />
-
-      <JsonLd
-        data={{
-          ...business,
-          '@type': ['LocalBusiness', 'HomeAndConstructionBusiness', 'RoofingContractor', 'GeneralContractor'],
-        }}
       />
     </>
   );

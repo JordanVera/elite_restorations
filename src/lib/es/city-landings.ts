@@ -8,6 +8,7 @@ import { areaMiles, getAreaProfile } from '@/lib/local/areas';
 import { hashString } from '@/lib/local/speak';
 import type { LocalLanding } from '@/lib/local-landings';
 import { localLandingSlug } from '@/lib/local-paths';
+import { postalPlaceLabel } from '@/lib/place-labels';
 import { titleFits } from '@/lib/seo';
 import { isCityIndexedService, services } from '@/lib/services';
 import { wordCount } from '@/lib/words';
@@ -687,9 +688,10 @@ function fill(text: string, name: string, kind: string, service: string) {
     .replaceAll('{claim}', claimSentence);
 }
 
-function pageTitle(trade: Trade, areaName: string) {
+function pageTitle(trade: Trade, areaName: string, areaSlug: string) {
+  const place = postalPlaceLabel(areaName, areaSlug);
   const candidates = [
-    `${trade.short} en ${areaName}, TX`,
+    `${trade.short} en ${place}`,
     `${trade.short} en ${areaName}`,
     `${esServiceNames[trade.slug]} en ${areaName}`,
     `${trade.short}, ${areaName}`,
@@ -699,10 +701,11 @@ function pageTitle(trade: Trade, areaName: string) {
   return fit;
 }
 
-function pageDescription(trade: Trade, areaName: string) {
+function pageDescription(trade: Trade, areaName: string, areaSlug: string) {
   const tail = ' Llame al (713) 909-0034.';
+  const place = postalPlaceLabel(areaName, areaSlug);
   const options = [
-    `${trade.short} en ${areaName}, TX. ${trade.blurb}${tail}`,
+    `${trade.short} en ${place}. ${trade.blurb}${tail}`,
     `${trade.blurb} Para una casa en ${areaName}.${tail}`,
     `${trade.short} en ${areaName}. ${trade.blurb}${tail}`,
   ];
@@ -733,7 +736,7 @@ function nearbyFor(trade: Trade, areaSlug: string) {
   });
 }
 
-const olderAreaSlugs = new Set([
+export const olderEsAreaSlugs = new Set([
   'houston',
   'westchase',
   'alief',
@@ -787,7 +790,7 @@ function buildOne(trade: Trade, areaSlug: string): LocalLanding {
   ];
   // Older areas have shorter place notes. This visit sentence keeps each page
   // at the same depth as the cities that already had Spanish copy.
-  if (olderAreaSlugs.has(areaSlug)) {
+  if (olderEsAreaSlugs.has(areaSlug)) {
     paragraphs.push(
       `En ${name} el orden se escribe en la casa: la cimentación, el acceso desde la calle y el cuarto que se va a tocar. ${area.housesNote} El nombre del lugar no elige el material ni el oficio que va primero. Eso sale de la visita. El trabajo empieza cuando ese plan ya está escrito, con el detalle que una foto del anuncio no enseña.`,
     );
@@ -805,9 +808,9 @@ function buildOne(trade: Trade, areaSlug: string): LocalLanding {
     serviceSlug: trade.slug,
     areaSlug,
     areaName: name,
-    title: pageTitle(trade, name),
-    description: pageDescription(trade, name),
-    lede: `${service} en ${name}, TX. ${area.housesNote} ${trade.blurb}`,
+    title: pageTitle(trade, name, areaSlug),
+    description: pageDescription(trade, name, areaSlug),
+    lede: `${service} en ${postalPlaceLabel(name, areaSlug)}. ${area.housesNote} ${trade.blurb}`,
     paragraphs,
     notes: [
       { title: 'Las casas', body: area.housesNote },

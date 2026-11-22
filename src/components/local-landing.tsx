@@ -18,6 +18,7 @@ import {
   relatedCityLandings,
   type LocalLanding,
 } from '@/lib/local-landings';
+import { postalPlaceLabel, servedPlace } from '@/lib/place-labels';
 import { absoluteUrl } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
 import { emergencyHref, site } from '@/lib/site';
@@ -76,6 +77,7 @@ export function LocalLandingView({
 
   const es = locale === 'es';
   const path = landing.path;
+  const placeLabel = postalPlaceLabel(area.name, area.slug);
   const serviceHref = es ? `/es/${service.slug}` : servicePath(service.slug);
   const serviceName =
     es && service.slug in esServiceNames
@@ -175,7 +177,7 @@ export function LocalLandingView({
     <>
       <PageHero
         eyebrow={groupName}
-        title={es ? [serviceName, `en ${area.name}, TX`] : [service.name, `in ${area.name}, TX`]}
+        title={es ? [serviceName, `en ${placeLabel}`] : [service.name, `in ${placeLabel}`]}
         lede={landing.lede}
         crumbs={[
           { name: es ? 'Servicios' : 'Services', path: es ? '/es' : '/services' },
@@ -612,15 +614,12 @@ export function LocalLandingView({
         data={{
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: es ? `${serviceName} en ${area.name}, TX` : `${service.name} in ${area.name}, TX`,
+          name: es ? `${serviceName} en ${placeLabel}` : `${service.name} in ${placeLabel}`,
           serviceType: service.name,
           description: landing.description,
           url: absoluteUrl(path),
           ...(hero ? { image: absoluteUrl(hero.src) } : {}),
-          areaServed: {
-            '@type': 'Place',
-            name: `${area.name}, Texas`,
-          },
+          areaServed: servedPlace(area.name, area.slug),
           provider: { '@id': `${site.url}/#business` },
         }}
       />

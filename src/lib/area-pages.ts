@@ -1,5 +1,6 @@
 import { getArticle } from '@/lib/articles';
 import { localLandingSlug, parseLocalLandingSlug } from '@/lib/local-paths';
+import { postalPlaceLabel } from '@/lib/place-labels';
 import { titleFits } from '@/lib/seo';
 import { getServiceArea } from '@/lib/service-areas';
 import { getService, isCityIndexedService, servicePath, services } from '@/lib/services';
@@ -33,7 +34,7 @@ const notes: Record<
     lede:
       'Visits are scheduled from our office in west Houston (77082), in the Crestwater neighborhood near George Bush Park, a short drive west of the Westchase district. Remodeling, roofing, and restoration for Westchase are scheduled from that address.',
     description:
-      'Westchase, TX, a short drive from our office in west Houston (77082). Remodeling, roofing, and restoration.',
+      'Westchase, Houston, TX, a short drive from our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'Westchase is the district of offices, townhomes, and single-family houses along Westheimer, Richmond, and the Sam Houston Tollway. It is not one floor plan. A townhome with a shared wall and a single-family house from the late 1970s can sit a few blocks apart, and the work follows the building.',
       'Most of that housing went up from the 1970s through the 1990s. On this side of Houston that usually means a concrete slab rather than a crawlspace. Kitchens and baths have often been updated once already. We look at what is there before we assume the drains, the floor, or the roof match the year on the outside.',
@@ -66,7 +67,7 @@ const notes: Record<
     lede:
       'Alief is the southwest Houston community just south of our 77082 office. We schedule the work from our office in west Houston (77082).',
     description:
-      'Alief, TX, just south of our office in west Houston (77082). Remodeling, roofing, and restoration.',
+      'Alief, Houston, TX, just south of our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'Alief runs along Bellaire Boulevard south of the office: ranch houses and two-story homes, not a high-rise district. Most of the houses date from the 1970s through the 1990s and sit on slabs. Kitchens and baths have often been updated one piece at a time, so one room can mix decades. We look at what you want replaced.',
       'Bellaire Boulevard at Dairy Ashford is about 4 miles south of our office in west Houston (77082) in a straight line. Beechnut and Bellaire are the usual drives. There is no Alief office. The visit is at the property.',
@@ -99,7 +100,7 @@ const notes: Record<
     lede:
       'The Energy Corridor is the west Houston district along Interstate 10, north of the office in 77082. We schedule work here from our office in west Houston (77082).',
     description:
-      'Energy Corridor, TX, along Interstate 10 near our office in west Houston (77082). Remodeling, roofing, and restoration.',
+      'Energy Corridor, Houston, TX, along Interstate 10 near our office in west Houston (77082). Remodeling, roofing, and restoration.',
     paragraphs: [
       'The Energy Corridor is the I-10 district from the office parks near Eldridge toward Highway 6, with houses, townhomes, and apartments between the towers. A townhome with a shared wall and a single-family house on the next block are different jobs. The district name does not choose the work.',
       'Residential stock mixes 1960s and 1970s houses, later townhomes, and newer houses on older lots. Slabs are the normal foundation. Moving a shower or a sink means cutting concrete unless the fixture stays on its drain. Newer slabs are often post-tension, with cables that have to be located before anyone cuts. The corridor mixes decades, and we treat each house on its own.',
@@ -134,7 +135,7 @@ function buildAreaPage(areaSlug: (typeof nearOfficeSlugs)[number]): AreaPage {
   const area = getServiceArea(areaSlug);
   const note = notes[areaSlug];
   if (!area) throw new Error(`Missing service area for ${areaSlug}`);
-  const title = `${area.name}, TX`;
+  const title = postalPlaceLabel(area.name, area.slug);
   if (!titleFits(title)) throw new Error(`Area title does not fit: ${title}`);
   return {
     slug: `${area.slug}-tx`,

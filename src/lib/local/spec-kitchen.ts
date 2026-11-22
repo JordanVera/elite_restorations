@@ -1,5 +1,6 @@
 import type { TradeSpec } from '@/lib/local/engine';
 import { miles } from '@/lib/local/engine';
+import { postalPlaceLabel } from '@/lib/place-labels';
 import { site } from '@/lib/site';
 
 const phone = site.phone.display;
@@ -10,7 +11,7 @@ export const kitchenTrade: TradeSpec = {
   exterior: false,
   ledes: [
     (a) =>
-      `Kitchen remodeling in ${a.name}, TX, is the room you cook in: layout, cabinets, and the path from the sink to the range, settled before demolition.`,
+      `Kitchen remodeling in ${postalPlaceLabel(a.name, a.slug)}, is the room you cook in: layout, cabinets, and the path from the sink to the range, settled before demolition.`,
     (a) =>
       `A ${a.name} kitchen is measured before anyone promises a wall can move. ${a.housingShort} is the context, not a package with the city name on it.`,
     (a) =>

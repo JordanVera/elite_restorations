@@ -49,7 +49,7 @@ export default function SpanishHomePage() {
             Remodelación y restauración · Houston
           </p>
           <h1 id="hero-heading">
-            Remodelación en Houston. <br />
+            Remodelación y restauración en Houston. <br />
             <em>Para vivir en ella.</em>
           </h1>
           <p className="kitchen-description">
