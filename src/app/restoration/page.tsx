@@ -8,12 +8,11 @@ import { CtaBand } from '@/components/cta-band';
 import { Faq } from '@/components/faq';
 import { homeownerEn } from '@/lib/faqs/homeowner';
 import { restorationFaqs as extraRestorationFaqs } from '@/lib/faqs/pages';
-import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { bleedPhotoSizes, Photo } from '@/components/photo';
 import { landingsForService } from '@/lib/local-landings';
-import { absoluteUrl, languageAlternates, localBusinessSchema, pageMetadata } from '@/lib/seo';
+import { languageAlternates, pageMetadata } from '@/lib/seo';
 import { getService } from '@/lib/services';
 import { site } from '@/lib/site';
 
@@ -547,25 +546,6 @@ export default function RestorationPage() {
         title="Water coming in, or a roof open?"
         body={`Call ${site.phone.display}. If you cannot call, the emergency form reaches the same team. For a planned remodel, request an estimate and tell us about the room.`}
         emergency
-      />
-
-      <JsonLd
-        data={localBusinessSchema({
-          description,
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'Houston restoration services',
-            itemListElement: services.map((item, index) => ({
-              '@type': 'Offer',
-              position: index + 1,
-              itemOffered: {
-                '@type': 'Service',
-                name: item.label,
-                url: absoluteUrl(item.href),
-              },
-            })),
-          },
-        })}
       />
     </>
   );

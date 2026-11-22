@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/json-ld';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import type { NeighborhoodPage } from '@/lib/neighborhood-types';
+import { isHoustonNeighborhoodSlug, servedPlace } from '@/lib/place-labels';
 import { absoluteUrl } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -21,7 +22,6 @@ export function NeighborhoodPageView({
 }) {
   const es = locale === 'es';
   const cities = new Set([
-    'kingwood-tx',
     'cypress-tx',
     'spring-tx',
     'humble-tx',
@@ -31,6 +31,7 @@ export function NeighborhoodPageView({
     'jersey-village-tx',
   ]);
   const communities = new Set(['towne-lake-tx', 'bridgeland-tx', 'sienna-tx']);
+  const houstonNeighborhood = isHoustonNeighborhoodSlug(page.slug);
   const place =
     cities.has(page.slug) || communities.has(page.slug) ? page.name : `${page.name}, Houston`;
   const serviceName = es
@@ -41,17 +42,21 @@ export function NeighborhoodPageView({
     <>
       <PageHero
         eyebrow={
-          cities.has(page.slug)
+          houstonNeighborhood
             ? es
-              ? 'Ciudad'
-              : 'City'
-            : communities.has(page.slug)
+              ? 'Vecindario de Houston'
+              : 'Houston neighborhood'
+            : cities.has(page.slug)
               ? es
-                ? 'Comunidad'
-                : 'Community'
-              : es
-                ? 'Vecindario de Houston'
-                : 'Houston neighborhood'
+                ? 'Ciudad'
+                : 'City'
+              : communities.has(page.slug)
+                ? es
+                  ? 'Comunidad'
+                  : 'Community'
+                : es
+                  ? 'Vecindario de Houston'
+                  : 'Houston neighborhood'
         }
         title={
           es
@@ -241,7 +246,7 @@ export function NeighborhoodPageView({
           '@graph': [
             {
               '@type': 'WebPage',
-              name: `${page.name}, Texas`,
+              name: houstonNeighborhood ? `${page.name}, Houston, TX` : `${page.name}, Texas`,
               description: page.description,
               url: absoluteUrl(page.path),
               inLanguage: es ? 'es-US' : 'en-US',
@@ -254,25 +259,8 @@ export function NeighborhoodPageView({
               serviceType: es ? 'Restauración y remodelación' : 'Home restoration and remodeling',
               description: page.description,
               url: absoluteUrl(page.path),
-              areaServed: {
-                '@type': 'Place',
-                name: `${page.name}, Texas`,
-              },
-              provider: {
-                '@type': 'LocalBusiness',
-                '@id': `${site.url}/#business`,
-                name: site.name,
-                telephone: site.phone.e164,
-                url: site.url,
-                address: {
-                  '@type': 'PostalAddress',
-                  streetAddress: site.address.streetAddress,
-                  addressLocality: site.address.addressLocality,
-                  addressRegion: site.address.addressRegion,
-                  postalCode: site.address.postalCode,
-                  addressCountry: site.address.addressCountry,
-                },
-              },
+              areaServed: servedPlace(page.name, page.slug),
+              provider: { '@id': `${site.url}/#business` },
             },
           ],
         }}

@@ -1,6 +1,7 @@
 import type { AreaProfile } from '@/lib/local/areas';
 import type { Sentence, TradeSpec } from '@/lib/local/engine';
 import { miles } from '@/lib/local/engine';
+import { postalPlaceLabel } from '@/lib/place-labels';
 import { site } from '@/lib/site';
 
 export type Brief = {
@@ -34,6 +35,7 @@ export type Brief = {
 
 function fill(area: AreaProfile, template: string) {
   return template
+    .replaceAll('{name}, TX', postalPlaceLabel(area.name, area.slug))
     .replaceAll('{name}', area.name)
     .replaceAll('{housing}', area.housingShort)
     .replaceAll('{landmark}', area.landmark)

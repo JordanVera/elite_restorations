@@ -68,16 +68,8 @@ export function ArticleView({
           inLanguage: es ? 'es-US' : 'en-US',
           mainEntityOfPage: absoluteUrl(path),
           image: article.image ? absoluteUrl(article.image) : undefined,
-          author: {
-            '@type': 'Organization',
-            name: site.name,
-            url: site.url,
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: site.name,
-            url: site.url,
-          },
+          author: { '@id': `${site.url}/#business` },
+          publisher: { '@id': `${site.url}/#business` },
         }}
       />
       <PageHero

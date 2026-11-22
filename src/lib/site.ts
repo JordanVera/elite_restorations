@@ -1,9 +1,8 @@
-/**
- * Live Facebook page. The slug is spelled eliterestorartions on purpose.
- * Do not swap it for a numeric page id.
- */
+import { googleReviews } from '@/lib/google-listing';
+
+/** Facebook page for Elite Restorations. */
 export const facebookUrl =
-  'https://www.facebook.com/eliterestorartions' as const;
+  'https://www.facebook.com/eliterestorations' as const;
 
 export const site = {
   name: 'Elite Restorations',
@@ -42,6 +41,8 @@ export const site = {
     'https://www.youtube.com/@eliterestorationstx',
     'https://www.pinterest.com/eliterestorationstx/',
     'https://nextdoor.com/page/elite-restorations-houston-tx/',
+    'https://www.bbb.org/us/tx/houston/profile/general-contractor/elite-restorations-0915-58002706',
+    googleReviews.href,
   ],
   social: [
     {

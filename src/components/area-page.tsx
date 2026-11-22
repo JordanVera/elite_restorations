@@ -71,7 +71,7 @@ export function AreaPageView({
     <>
       <PageHero
         eyebrow={copy.eyebrow}
-        title={[`${page.name},`, 'TX']}
+        title={[`${page.name},`, 'Houston, TX']}
         lede={page.lede}
         homeCrumb={copy.home}
         crumbs={[
@@ -235,12 +235,12 @@ export function AreaPageView({
         data={{
           '@context': 'https://schema.org',
           '@type': 'WebPage',
-          name: `${page.name}, Texas`,
+          name: `${page.name}, Houston, TX`,
           description: page.description,
           url: absoluteUrl(page.path),
           about: {
-            '@type': 'Place',
-            name: `${page.name}, Texas`,
+            '@type': 'AdministrativeArea',
+            name: `${page.name}, Houston, TX`,
           },
           mainEntity: { '@id': `${site.url}/#business` },
         }}

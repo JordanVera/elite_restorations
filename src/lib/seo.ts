@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { areaSlug } from "@/lib/local-paths";
+import { businessAreaServed } from "@/lib/place-labels";
 import { site } from "@/lib/site";
 import { employeeRefs, personSchemaNodes } from "@/lib/team";
 
@@ -198,7 +200,7 @@ export function localBusinessSchema(extra?: Record<string, unknown>) {
       latitude: site.geo.latitude,
       longitude: site.geo.longitude,
     },
-    areaServed: site.serviceArea.map((name) => ({ "@type": "Place", name })),
+    areaServed: site.serviceArea.map((name) => businessAreaServed(name, areaSlug(name))),
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

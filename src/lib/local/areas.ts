@@ -1,4 +1,5 @@
 import { areaSlug } from '@/lib/local-paths';
+import { HOUSTON_NEIGHBORHOOD_SLUGS } from '@/lib/place-labels';
 import { site } from '@/lib/site';
 
 export type Foundation = 'pier' | 'slab' | 'mixed' | 'post-tension' | 'raised';
@@ -1255,4 +1256,22 @@ for (const area of areaProfiles) {
 }
 if (profileErrors.length > 0) {
   throw new Error(profileErrors.join('\n'));
+}
+
+const profileNeighborhoods = new Set(
+  areaProfiles
+    .filter((area) => area.authority === 'houston' && area.slug !== 'houston')
+    .map((area) => area.slug),
+);
+const neighborhoodExtras = new Set(['garden-oaks', 'oak-forest']);
+for (const slug of profileNeighborhoods) {
+  if (!HOUSTON_NEIGHBORHOOD_SLUGS.has(slug)) {
+    throw new Error(`Houston neighborhood ${slug} is missing from place labels`);
+  }
+}
+for (const slug of HOUSTON_NEIGHBORHOOD_SLUGS) {
+  if (neighborhoodExtras.has(slug)) continue;
+  if (!profileNeighborhoods.has(slug)) {
+    throw new Error(`${slug} is labeled as a Houston neighborhood but has no Houston profile`);
+  }
 }
