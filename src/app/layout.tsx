@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import { CallTextBar } from '@/components/call-text-bar';
 import { HtmlDocument } from '@/components/html-document';
 import { Providers } from '@/components/providers';
+import { SiteChrome } from '@/components/site-chrome';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { SkipLink } from '@/components/skip-link';
@@ -176,12 +177,9 @@ export default function RootLayout({
       <body className="min-h-dvh antialiased">
         <Providers>
           <SkipLink />
-          <SiteHeader />
-          <main id="main" tabIndex={-1} className="outline-none">
+          <SiteChrome header={<SiteHeader />} footer={<SiteFooter />} callBar={<CallTextBar />}>
             {children}
-          </main>
-          <SiteFooter />
-          <CallTextBar />
+          </SiteChrome>
         </Providers>
         <JsonLd data={siteSchemaGraph()} />
       </body>

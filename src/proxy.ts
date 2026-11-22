@@ -16,8 +16,41 @@ function isWordPressJunk(pathname: string) {
   return false;
 }
 
+const ADMIN_COOKIES = ['__Host-er_admin', 'er_admin'];
+
+function isUnder(pathname: string, prefix: string) {
+  return pathname === prefix || pathname.startsWith(`${prefix}/`);
+}
+
+/** Private areas are never indexed, cached, or leaked through the Referer header. */
+function privateResponse(response: NextResponse) {
+  response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+  response.headers.set('Cache-Control', 'private, no-store');
+  response.headers.set('Referrer-Policy', 'no-referrer');
+  response.headers.set('X-Frame-Options', 'DENY');
+  return response;
+}
+
 export function proxy(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
+
+  // Cookie presence only. Every admin page, action, and route still checks the
+  // session and role in the database.
+  if (isUnder(pathname, '/admin')) {
+    const signedIn = ADMIN_COOKIES.some((name) => request.cookies.get(name)?.value);
+    if (!signedIn && !isUnder(pathname, '/admin/login')) {
+      const login = request.nextUrl.clone();
+      login.pathname = '/admin/login';
+      login.search = '';
+      login.searchParams.set('next', `${pathname}${request.nextUrl.search}`);
+      return privateResponse(NextResponse.redirect(login));
+    }
+    return privateResponse(NextResponse.next());
+  }
+
+  if (isUnder(pathname, '/portal') || isUnder(pathname, '/api/portal') || isUnder(pathname, '/api/admin')) {
+    return privateResponse(NextResponse.next());
+  }
 
   if (isWordPressJunk(pathname)) {
     return new NextResponse('Gone', {

@@ -1,0 +1,383 @@
+// Admin dashboard and customer material-selection portal.
+// Relationships are documented in docs/admin-portal.md.
+// The connection URL lives in prisma.config.ts (Prisma 7).
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/server/db/generated"
+  moduleFormat = "esm"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------------------------------------------------------------------------
+// Staff accounts and sessions
+// ---------------------------------------------------------------------------
+
+enum AdminRole {
+  ADMIN
+  STAFF
+}
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String
+  passwordHash String
+  role         AdminRole @default(STAFF)
+  active       Boolean   @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  sessions        AdminSession[]
+  portalsCreated  CustomerPortal[]  @relation("PortalCreatedBy")
+  reviews         SelectionReview[]
+  syncRuns        JobberSyncRun[]
+}
+
+model AdminSession {
+  id         String    @id @default(cuid())
+  tokenHash  String    @unique
+  userId     String
+  user       AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt  DateTime  @default(now())
+  lastSeenAt DateTime  @default(now())
+  expiresAt  DateTime
+  ip         String?
+  userAgent  String?
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model LoginAttempt {
+  id        String   @id @default(cuid())
+  key       String
+  success   Boolean
+  createdAt DateTime @default(now())
+
+  @@index([key, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Jobber connection and synced references (Jobber is the source of truth)
+// ---------------------------------------------------------------------------
+
+enum JobberConnectionStatus {
+  CONNECTED
+  NEEDS_RECONNECT
+  DISCONNECTED
+}
+
+/// Singleton row (id = "jobber"). Tokens are AES-256-GCM ciphertext.
+model JobberConnection {
+  id                    String                 @id @default("jobber")
+  accessTokenEncrypted  String
+  refreshTokenEncrypted String
+  accessTokenExpiresAt  DateTime
+  scopes                String?
+  accountId             String?
+  accountName           String?
+  status                JobberConnectionStatus @default(CONNECTED)
+  lastError             String?
+  version               Int                    @default(0)
+  connectedAt           DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+}
+
+enum RecordSource {
+  JOBBER
+  MOCK
+}
+
+enum SyncStatus {
+  RUNNING
+  PARTIAL
+  SUCCEEDED
+  FAILED
+}
+
+model JobberSyncRun {
+  id            String     @id @default(cuid())
+  kind          String
+  status        SyncStatus @default(RUNNING)
+  source        RecordSource
+  cursor        String?
+  phase         String?
+  clientsSynced Int        @default(0)
+  quotesSynced  Int        @default(0)
+  error         String?
+  startedAt     DateTime   @default(now())
+  finishedAt    DateTime?
+  startedById   String?
+  startedBy     AdminUser? @relation(fields: [startedById], references: [id], onDelete: SetNull)
+
+  @@index([startedAt])
+}
+
+model JobberClient {
+  id           String       @id @default(cuid())
+  jobberId     String       @unique
+  name         String
+  companyName  String?
+  email        String?
+  phone        String?
+  address      String?
+  jobberWebUri String?
+  source       RecordSource @default(JOBBER)
+  syncedAt     DateTime     @default(now())
+  createdAt    DateTime     @default(now())
+
+  quotes JobberQuote[]
+
+  @@index([name])
+}
+
+model JobberQuote {
+  id              String       @id @default(cuid())
+  jobberId        String       @unique
+  clientId        String
+  client          JobberClient @relation(fields: [clientId], references: [id], onDelete: Restrict)
+  quoteNumber     String
+  title           String?
+  status          String
+  quoteDate       DateTime?
+  total           Decimal?     @db.Decimal(12, 2)
+  propertyAddress String?
+  jobberWebUri    String?
+  source          RecordSource @default(JOBBER)
+  syncedAt        DateTime     @default(now())
+  createdAt       DateTime     @default(now())
+
+  lineItems JobberQuoteLineItem[]
+  portals   CustomerPortal[]
+
+  @@index([clientId])
+  @@index([status])
+}
+
+model JobberQuoteLineItem {
+  id          String      @id @default(cuid())
+  jobberId    String      @unique
+  quoteId     String
+  quote       JobberQuote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  name        String
+  description String?
+  quantity    Decimal?    @db.Decimal(12, 2)
+  unitPrice   Decimal?    @db.Decimal(12, 2)
+  totalPrice  Decimal?    @db.Decimal(12, 2)
+  sortOrder   Int         @default(0)
+
+  requirements SelectionRequirement[]
+
+  @@index([quoteId])
+}
+
+// ---------------------------------------------------------------------------
+// Material selection portals
+// ---------------------------------------------------------------------------
+
+model SelectionCategory {
+  id                  String   @id @default(cuid())
+  slug                String   @unique
+  name                String
+  description         String?
+  defaultInstructions String?
+  /// Field keys the customer form shows for this category (see src/lib/selections/fields.ts).
+  enabledFields       String[]
+  /// Words and phrases that suggest this category for a quote line item.
+  keywords            String[]
+  active              Boolean  @default(true)
+  sortOrder           Int      @default(0)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  requirements SelectionRequirement[]
+}
+
+enum PortalStatus {
+  DRAFT
+  PUBLISHED
+  REVOKED
+}
+
+model CustomerPortal {
+  id             String       @id @default(cuid())
+  quoteId        String
+  quote          JobberQuote  @relation(fields: [quoteId], references: [id], onDelete: Restrict)
+  /// SHA-256 of the URL token. The token itself is never stored in plaintext.
+  tokenHash      String       @unique
+  /// AES-256-GCM copy of the token so an admin can copy the link again.
+  tokenEncrypted String
+  status         PortalStatus @default(DRAFT)
+  title          String
+  welcomeMessage String
+  showAllowances Boolean      @default(false)
+  expiresAt      DateTime?
+  publishedAt    DateTime?
+  revokedAt      DateTime?
+  createdById    String?
+  createdBy      AdminUser?   @relation("PortalCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  requirements SelectionRequirement[]
+  activity     ActivityLog[]
+
+  @@index([quoteId])
+  @@index([status])
+}
+
+model SelectionRequirement {
+  id               String               @id @default(cuid())
+  portalId         String
+  portal           CustomerPortal       @relation(fields: [portalId], references: [id], onDelete: Cascade)
+  categoryId       String?
+  category         SelectionCategory?   @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  lineItemId       String?
+  lineItem         JobberQuoteLineItem? @relation(fields: [lineItemId], references: [id], onDelete: SetNull)
+  categoryName     String
+  area             String?
+  title            String
+  instructions     String?
+  customerGuidance String?
+  required         Boolean              @default(true)
+  quantity         Decimal?             @db.Decimal(12, 2)
+  unit             String?
+  /// Internal allowance in cents. Shown to the customer only when the portal allows it.
+  allowanceCents   Int?
+  preferredOptions String[]
+  enabledFields    String[]
+  dueDate          DateTime?
+  sortOrder        Int                  @default(0)
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+
+  selection MaterialSelection?
+
+  @@index([portalId, sortOrder])
+}
+
+enum SelectionStatus {
+  NOT_STARTED
+  DRAFT
+  SUBMITTED
+  CHANGES_REQUESTED
+  APPROVED
+}
+
+model MaterialSelection {
+  id            String               @id @default(cuid())
+  requirementId String               @unique
+  requirement   SelectionRequirement @relation(fields: [requirementId], references: [id], onDelete: Cascade)
+  status        SelectionStatus      @default(NOT_STARTED)
+  productName   String?
+  manufacturer  String?
+  modelSku      String?
+  color         String?
+  finish        String?
+  dimensions    String?
+  productUrls   String[]
+  notes         String?
+  version       Int                  @default(0)
+  submittedAt   DateTime?
+  approvedAt    DateTime?
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+
+  revisions   SelectionRevision[]
+  attachments Attachment[]
+  reviews     SelectionReview[]
+
+  @@index([status])
+}
+
+model SelectionRevision {
+  id             String            @id @default(cuid())
+  selectionId    String
+  selection      MaterialSelection @relation(fields: [selectionId], references: [id], onDelete: Cascade)
+  revisionNumber Int
+  /// Frozen copy of the submitted fields and attachment ids.
+  snapshot       Json
+  submittedAt    DateTime          @default(now())
+
+  reviews     SelectionReview[]
+  attachments Attachment[]
+
+  @@unique([selectionId, revisionNumber])
+}
+
+enum UploadedBy {
+  CUSTOMER
+  ADMIN
+}
+
+model Attachment {
+  id           String             @id @default(cuid())
+  selectionId  String
+  selection    MaterialSelection  @relation(fields: [selectionId], references: [id], onDelete: Cascade)
+  revisionId   String?
+  revision     SelectionRevision? @relation(fields: [revisionId], references: [id], onDelete: SetNull)
+  blobPathname String             @unique
+  contentType  String
+  size         Int
+  originalName String
+  uploadedBy   UploadedBy         @default(CUSTOMER)
+  createdAt    DateTime           @default(now())
+
+  @@index([selectionId])
+}
+
+enum ReviewDecision {
+  APPROVED
+  CHANGES_REQUESTED
+  REOPENED
+  NOTE
+}
+
+model SelectionReview {
+  id               String             @id @default(cuid())
+  selectionId      String
+  selection        MaterialSelection  @relation(fields: [selectionId], references: [id], onDelete: Cascade)
+  revisionId       String?
+  revision         SelectionRevision? @relation(fields: [revisionId], references: [id], onDelete: SetNull)
+  decision         ReviewDecision
+  internalNote     String?
+  customerFeedback String?
+  reviewerId       String?
+  reviewer         AdminUser?         @relation(fields: [reviewerId], references: [id], onDelete: SetNull)
+  createdAt        DateTime           @default(now())
+
+  @@index([selectionId, createdAt])
+}
+
+// ---------------------------------------------------------------------------
+// Audit trail
+// ---------------------------------------------------------------------------
+
+enum ActorType {
+  ADMIN
+  CUSTOMER
+  SYSTEM
+}
+
+model ActivityLog {
+  id         String          @id @default(cuid())
+  actorType  ActorType
+  actorId    String?
+  actorName  String?
+  action     String
+  entityType String
+  entityId   String
+  portalId   String?
+  portal     CustomerPortal? @relation(fields: [portalId], references: [id], onDelete: SetNull)
+  metadata   Json?
+  createdAt  DateTime        @default(now())
+
+  @@index([createdAt])
+  @@index([portalId, createdAt])
+  @@index([entityType, entityId])
+}

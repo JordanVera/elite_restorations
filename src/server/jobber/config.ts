@@ -7,7 +7,17 @@ export const JOBBER_AUTHORIZE_URL = "https://api.getjobber.com/api/oauth/authori
 export const JOBBER_TOKEN_URL = "https://api.getjobber.com/api/oauth/token";
 export const JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql";
 export const JOBBER_REDIRECT_URI = "https://eliterestorations.com/api/jobber/callback";
+/** Legacy Blob location of the tokens. Read once to import into the database, then deleted. */
 export const TOKEN_PATH = "jobber/oauth.json";
+
+/** Must exactly match a callback URL registered on the app in the Jobber Developer Center. */
+export function jobberRedirectUri(): string {
+  return process.env.JOBBER_REDIRECT_URI?.trim() || JOBBER_REDIRECT_URI;
+}
+
+export function jobberWebhooksEnabled(): boolean {
+  return process.env.JOBBER_WEBHOOK_ENABLED?.trim() === "true";
+}
 
 export function jobberClientId(): string | null {
   return process.env.JOBBER_CLIENT_ID?.trim() || null;

@@ -27,3 +27,7 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# prisma client for this site (generated on install)
+/src/server/db/generated/
+/.data/
