@@ -4,11 +4,11 @@ export const houstonPostsB: Article[] = [
   {
     slug: 'houston-bathroom-remodel-guide',
     title: 'A practical bathroom remodel in Houston',
-    metaTitle: 'Houston Bathroom Remodel Guide',
+    metaTitle: 'Shower Conversion Near Me, Houston',
     crumb: 'Bathroom remodels',
     lines: ['The bath you use', 'every morning.'],
     description:
-      'Houston bathroom remodels: waterproofing, small hall baths, larger primary baths, and what the plumbing will allow.',
+      'Shower conversion near me: a Houston tub becomes a shower when the drain and curb allow it. Family-owned since 1993. Call (713) 909-0034.',
     lede: 'A bathroom remodel in Houston is a small room with a lot of water. The tile is what you see. The waterproofing is what keeps the wall from rotting.',
     image: '/images/projects/bathrooms/shower-niche-large-format.jpg',
     service: 'bathroom-remodeling',

@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/json-ld';
 import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { areaPages, type AreaPage } from '@/lib/area-pages';
+import { restorationCompanyLink } from '@/lib/restoration-anchor';
 import { absoluteUrl } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -20,6 +21,7 @@ export function AreaPageView({
   others?: readonly AreaPage[];
 }) {
   const es = locale === 'es';
+  const company = restorationCompanyLink(page.slug, locale);
   const nearby = (others ?? areaPages).filter((item) => item.slug !== page.slug);
   const copy = es
     ? {
@@ -35,9 +37,7 @@ export function AreaPageView({
         questions: 'Preguntas',
         about: `Sobre ${page.name}.`,
         also: 'También junto a la oficina',
-        company: 'La empresa de restauración en Houston',
         companyBody: 'lista cada servicio y las páginas de ciudad fuera de este distrito.',
-        companyHref: '/es/restoration-company-houston',
         ctaTitle: `¿Planea un trabajo en ${page.name}?`,
         ctaBody: `Llame al ${site.phone.display} para pedir un estimado. Trabajamos desde nuestra oficina en el oeste de Houston (77082).`,
         servicesPath: '/es',
@@ -57,9 +57,7 @@ export function AreaPageView({
         questions: 'Questions',
         about: `About ${page.name}.`,
         also: 'Also beside the office',
-        company: 'Restoration company in Houston',
         companyBody: 'lists every service and the city pages outside this district.',
-        companyHref: '/restoration-company-houston',
         ctaTitle: `Planning work in ${page.name}?`,
         ctaBody: `Call ${site.phone.display} to schedule an estimate. We work from our office in west Houston (77082).`,
         servicesPath: '/services',
@@ -211,10 +209,10 @@ export function AreaPageView({
             </ul>
             <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
               <Link
-                href={copy.companyHref}
+                href={company.href}
                 className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
               >
-                {copy.company}
+                {company.label}
               </Link>{' '}
               {copy.companyBody}
             </p>

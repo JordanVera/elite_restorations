@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { IconArrowRight, IconArrowUpRight } from "@/components/icons";
 
 import { CtaBand } from "@/components/cta-band";
+import { Faq } from "@/components/faq";
 import { ImageReveal, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/page-hero";
 import { bleedPhotoSizes, Photo } from "@/components/photo";
@@ -166,6 +167,22 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
           </div>
         </section>
       </ProjectGallery>
+
+      {project.faqs && project.faqs.length > 0 ? (
+        <section aria-labelledby="project-faq-heading" className="border-t border-border py-20 md:py-28">
+          <div className="gutter mx-auto grid max-w-[120rem] gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow text-accent-ink">Questions</p>
+              <h2 id="project-faq-heading" className="font-display t-lg mt-4">
+                Good to know.
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <Faq items={[...project.faqs]} />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section aria-label="Next project" className="border-t border-border">
         <Link

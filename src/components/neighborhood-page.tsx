@@ -8,6 +8,7 @@ import { Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import type { NeighborhoodPage } from '@/lib/neighborhood-types';
 import { isHoustonNeighborhoodSlug, servedPlace } from '@/lib/place-labels';
+import { restorationCompanyLink } from '@/lib/restoration-anchor';
 import { absoluteUrl } from '@/lib/seo';
 import { site } from '@/lib/site';
 
@@ -21,6 +22,7 @@ export function NeighborhoodPageView({
   locale: 'en' | 'es';
 }) {
   const es = locale === 'es';
+  const company = restorationCompanyLink(page.slug, locale);
   const cities = new Set([
     'cypress-tx',
     'spring-tx',
@@ -210,21 +212,12 @@ export function NeighborhoodPageView({
             </ul>
           ) : null}
           <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-            {es ? (
-              <Link
-                href="/es/restoration-company-houston"
-                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
-              >
-                Empresa de restauración en Houston
-              </Link>
-            ) : (
-              <Link
-                href="/restoration-company-houston"
-                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
-              >
-                Restoration company in Houston
-              </Link>
-            )}
+            <Link
+              href={company.href}
+              className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+            >
+              {company.label}
+            </Link>
             {es
               ? ' reúne los servicios y el resto de las zonas.'
               : ' lists every service and the rest of the areas.'}

@@ -32,6 +32,8 @@ export type Project = {
   story?: boolean;
   /** Guides and city pages that sit beside the service links. */
   reading?: { href: string; label: string }[];
+  /** Visible questions. The same items are emitted as FAQPage JSON-LD. */
+  faqs?: readonly { q: string; a: string }[];
 };
 
 export const projectCategories: ProjectCategory[] = [
@@ -129,7 +131,7 @@ const projectSeoNames: Record<string, string> = {
   'timber-and-lantern-light': 'Timber Kitchen Remodel',
   'vaulted-rooms-waterfall-islands': 'Vaulted Kitchen Remodel',
   'hoods-ranges-and-cooking-walls': 'Cooking Wall Remodel',
-  'marble-showers-and-patterned-floors': 'Marble Shower Remodel',
+  'marble-showers-and-patterned-floors': 'Shower Renovation',
   'vanities-gold-and-glass': 'Gold and Glass Vanities',
   'charcoal-cream-and-wallpaper-baths': 'Wallpaper Bath Remodel',
   'floors-that-hold-the-room': 'Flooring Project',
@@ -455,6 +457,26 @@ export const projects: Project[] = [
     cover: showers[0],
     gallery: showers,
     featured: true,
+    description:
+      'Shower renovation in Houston: marble, pebble, and patterned tile showers, waterproofed before the finish. Family-owned since 1993. Call (713) 909-0034.',
+    faqs: [
+      {
+        q: 'What does a shower renovation include?',
+        a: 'The enclosure you see: tile, glass, and valve trim, plus the waterproof layer behind them. A conversion is the separate job of taking a tub out and building a shower. These photographs are finished shower renovations. The layout of your house is decided on a visit.',
+      },
+      {
+        q: 'Can you renovate a shower without moving the drain?',
+        a: 'Often, yes. On a Houston slab, keeping the drain is a smaller job than cutting concrete. We look at the pan and the valve before we say the drain can stay. Family-owned since 1993.',
+      },
+      {
+        q: 'What belongs behind the new tile?',
+        a: 'A waterproof layer on the shower walls and the pan, before the finish tile. Tile and glass are not the waterproofing. Niches and the curb are built into that layer, not cut in afterward.',
+      },
+      {
+        q: 'Where do you schedule a shower renovation?',
+        a: 'From our office in west Houston (77082). Call (713) 909-0034. We serve Houston, including the neighborhoods around that office.',
+      },
+    ],
   },
   {
     slug: 'vanities-gold-and-glass',
@@ -844,9 +866,11 @@ for (const project of projects) {
     [
       project.title,
       project.tagline,
+      project.description ?? '',
       project.cta ?? '',
       ...project.summary,
       ...project.notes,
+      ...(project.faqs ?? []).flatMap((faq) => [faq.q, faq.a]),
       ...(project.reading ?? []).map((link) => link.label),
       ...project.gallery.map((image) => image.alt),
     ].join('\n'),

@@ -255,9 +255,9 @@ const stoneEn = {
   path: "/expo-stone-countertops-houston",
   enPath: "/expo-stone-countertops-houston",
   esPath: "/es/expo-stone-countertops-houston",
-  metaTitle: "Expo Stone Countertops Houston",
+  metaTitle: "Expo Stones Houston Countertops",
   description:
-    "Expo Stone countertops in Houston: granite, quartz, quartzite, and marble, cut to your cabinets. Call (713) 909-0034 to schedule an estimate.",
+    "Expo Stones Houston: Elite installs granite, quartz, quartzite, and marble, cut to your cabinets. Family-owned since 1993. Call (713) 909-0034.",
   eyebrow: "Expo Stone",
   title: ["Expo Stone countertops", "in Houston."],
   lede: `Want new countertops in Houston? Elite Restorations installs quartz, granite, quartzite, and marble countertops from Expo Stone for kitchens and bathrooms, cut to fit the cabinets you already have. We've been a family-owned Houston company since 1993. Call ${phone} to schedule an estimate.`,

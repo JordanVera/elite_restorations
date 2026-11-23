@@ -2,7 +2,8 @@ import 'server-only';
 
 import { getArticle } from '@/lib/articles';
 import { assertCopyAllowed } from '@/lib/copy-guards';
-import { getAreaProfile } from '@/lib/local/areas';
+import { areaProfiles, getAreaProfile } from '@/lib/local/areas';
+import { spanishCityPath } from '@/lib/city-landing-locales';
 import { placeFacts } from '@/lib/local/place';
 import { mentionsArea } from '@/lib/local/prose';
 import { buildLocalCopy, costGuideForService } from '@/lib/local/copy';
@@ -570,7 +571,7 @@ function buildLanding(service: Service, area: ServiceArea): LocalLanding {
       areaName: neighbor.name,
     };
   });
-  return {
+  const built = {
     slug,
     path: `/${slug}`,
     serviceSlug: service.slug,
@@ -588,7 +589,34 @@ function buildLanding(service: Service, area: ServiceArea): LocalLanding {
     layout: (n % 4) as 0 | 1 | 2 | 3,
     facts: placeFacts(profile),
   };
+  const override = metaOverrides[slug];
+  return override
+    ? { ...built, title: override.title, description: override.description }
+    : built;
 }
+
+/**
+ * Click-through titles for pages that already rank on a specific phrase.
+ * The lead stays inside the 60-character document title. Descriptions stay
+ * under 155 characters and name the phone or the family-owned line.
+ */
+const metaOverrides: Record<string, { title: string; description: string }> = {
+  'water-damage-restoration-texas-city-tx': {
+    title: 'Water Damage Restoration Texas City',
+    description:
+      'Water damage restoration Texas City: dry the house after a leak, flood, or storm, then repair. Family-owned since 1993. Call (713) 909-0034.',
+  },
+  'patios-decks-galveston-tx': {
+    title: 'Patios Decks Galveston TX',
+    description:
+      'Patios decks Galveston: decks, patios, and covers for raised island houses in salt air. Family-owned since 1993. Call (713) 909-0034.',
+  },
+  'carpentry-galveston-tx': {
+    title: 'Carpenters Galveston TX',
+    description:
+      'Carpenters Galveston TX: trim, stairs, and built-ins for raised island houses. Family-owned since 1993. Call (713) 909-0034.',
+  },
+};
 
 const banned = [
   /jobs in/i,
@@ -768,6 +796,94 @@ export function relatedCityLandings(page: LocalLanding) {
     .map((slug) => bySlug.get(localLandingSlug(slug, page.areaSlug)))
     .filter((item): item is LocalLanding => Boolean(item))
     .slice(0, 4);
+}
+
+export type DiscoveryLink = {
+  href: string;
+  label: string;
+  areaName: string;
+  serviceSlug: string;
+};
+
+function milesBetween(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  const toRad = Math.PI / 180;
+  const dLat = (b.lat - a.lat) * toRad;
+  const dLon = (b.lng - a.lng) * toRad;
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(a.lat * toRad) * Math.cos(b.lat * toRad) * Math.sin(dLon / 2) ** 2;
+  return 2 * 3958.8 * Math.asin(Math.sqrt(h));
+}
+
+/** Six real city pages for the same service: named neighbors first, then the closest areas. */
+export function nearbyAreaLinks(page: LocalLanding): DiscoveryLink[] {
+  const profile = getAreaProfile(page.areaSlug);
+  const service = getService(page.serviceSlug);
+  if (!profile || !service) return [];
+  const ranked = areaProfiles
+    .filter((area) => area.slug !== page.areaSlug)
+    .map((area) => ({
+      area,
+      neighbor: profile.neighbors.indexOf(area.slug),
+      miles: milesBetween(profile, area),
+    }))
+    .sort((a, b) => {
+      const aRank = a.neighbor === -1 ? 99 : a.neighbor;
+      const bRank = b.neighbor === -1 ? 99 : b.neighbor;
+      if (aRank !== bRank) return aRank - bRank;
+      if (a.miles !== b.miles) return a.miles - b.miles;
+      return a.area.name.localeCompare(b.area.name);
+    });
+  return ranked.slice(0, 6).map((item) => ({
+    href: `/${localLandingSlug(page.serviceSlug, item.area.slug)}`,
+    label: `${service.name} in ${item.area.name}`,
+    areaName: item.area.name,
+    serviceSlug: page.serviceSlug,
+  }));
+}
+
+/** Six real city pages in the same area: related services first, then the same trade. */
+export function relatedServiceLinks(page: LocalLanding): DiscoveryLink[] {
+  const service = getService(page.serviceSlug);
+  if (!service) return [];
+  const ordered = [
+    ...service.related,
+    ...services.filter((item) => item.group === service.group).map((item) => item.slug),
+    ...services.map((item) => item.slug),
+  ];
+  const seen = new Set<string>([page.serviceSlug]);
+  const links: DiscoveryLink[] = [];
+  for (const slug of ordered) {
+    if (seen.has(slug) || !isCityIndexedService(slug)) continue;
+    seen.add(slug);
+    const landing = bySlug.get(localLandingSlug(slug, page.areaSlug));
+    const related = getService(slug);
+    if (!landing || !related) continue;
+    links.push({
+      href: landing.path,
+      label: `${related.name} in ${page.areaName}`,
+      areaName: page.areaName,
+      serviceSlug: slug,
+    });
+    if (links.length === 6) break;
+  }
+  return links;
+}
+
+for (const page of localLandings) {
+  for (const group of [nearbyAreaLinks(page), relatedServiceLinks(page)]) {
+    if (group.length < 4 || group.length > 8) {
+      throw new Error(`${page.path} has ${group.length} discovery links`);
+    }
+    for (const link of group) {
+      if (!bySlug.has(link.href.replace(/^\//, ''))) {
+        throw new Error(`${page.path} links a missing page ${link.href}`);
+      }
+      if (!spanishCityPath(link.href)) {
+        throw new Error(`${page.path} has no Spanish page for ${link.href}`);
+      }
+    }
+  }
 }
 
 export function getArea(slug: string) {

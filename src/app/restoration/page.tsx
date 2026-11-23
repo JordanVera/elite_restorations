@@ -215,6 +215,13 @@ export default function RestorationPage() {
             <p>
               Visits are scheduled from our office in west Houston (77082). We come to the house for the visit.
             </p>
+            <p>
+              The services and the city pages are listed on our{' '}
+              <Link href="/restoration-company-houston">
+                family-owned restoration company in Houston
+              </Link>{' '}
+              page.
+            </p>
           </div>
         </div>
       </section>
