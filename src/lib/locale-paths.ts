@@ -42,6 +42,7 @@ export const houstonPostSlugs = [
   'gutter-size-for-houston-rain',
   'kitchen-backsplash-cinco-ranch-katy',
   'woodlands-spring-first-freeze-prep',
+  'sugar-land-tub-to-shower-conversion',
 ] as const;
 
 export type NeighborhoodSlug = (typeof neighborhoodSlugs)[number];

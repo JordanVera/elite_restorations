@@ -16,7 +16,11 @@ export const esPostsB: Article[] = [
     service: 'bathroom-remodeling',
     ctaTitle: '¿Está planeando un baño?',
     ctaBody: `Llame al ${phone} para pedir un estimado. Medimos el cuarto antes de prometer un plano. Empresa familiar en Houston desde 1993.`,
-    related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
+    related: [
+      'houston-kitchen-remodel-ideas',
+      'houston-flooring-for-humidity',
+      'sugar-land-tub-to-shower-conversion',
+    ],
     faqs: [
       {
         q: '¿Una tina puede volverse regadera?',
