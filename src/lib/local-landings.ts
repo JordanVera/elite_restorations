@@ -607,9 +607,9 @@ const metaOverrides: Record<string, { title: string; description: string }> = {
       'Water damage restoration Texas City: dry the house after a leak, flood, or storm, then repair. Family-owned since 1993. Call (713) 909-0034.',
   },
   'patios-decks-galveston-tx': {
-    title: 'Patios Decks Galveston TX',
+    title: 'Patios & Decks in Galveston, TX',
     description:
-      'Patios decks Galveston: decks, patios, and covers for raised island houses in salt air. Family-owned since 1993. Call (713) 909-0034.',
+      'Patios & decks in Galveston: decks, patios, and covers for raised island houses in salt air. Family-owned since 1993. Call (713) 909-0034.',
   },
   'carpentry-galveston-tx': {
     title: 'Carpenters Galveston TX',

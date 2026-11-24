@@ -162,9 +162,9 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
     tagline: 'A quieter room, finished with the tile and fixtures you want.',
     summary:
       'Showers, vanities, tile and lighting, planned as one bathroom, with waterproofing done before the tile.',
-    metaTitle: 'Shower Remodel Near Me, Houston',
+    metaTitle: 'Houston Bathroom & Shower Remodeling',
     metaDescription:
-      'Shower remodel near me in Houston: tile, glass, and waterproofing before the finish. Family-owned since 1993. Call (713) 909-0034.',
+      'Bathroom remodeling in Houston, including showers, vanities, and tile. Family-owned since 1993. Call (713) 909-0034.',
     intro: [
       'A bathroom remodel is a small room with a lot of decisions: the shower, the vanity, the tile and the light. We plan those with you and build them as one project.',
       'Waterproofing goes in before the finish tile, so the marble or porcelain you chose has a solid wall behind it. What you live with is the shower, the vanity and a room that finally works.',
