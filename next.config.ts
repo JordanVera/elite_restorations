@@ -81,11 +81,11 @@ const nextConfig: NextConfig = {
   // Own the slash redirect so legacy paths can jump straight to the new address.
   skipTrailingSlashRedirect: true,
   async redirects() {
-    // http:// and www. are not redirected here. Vercel already sends
-    // http://eliterestorations.com and https://www.eliterestorations.com to
-    // https://eliterestorations.com in one hop. http://www still takes two
-    // hops, because the platform upgrades TLS on the same host before the
-    // www rule. That cannot be collapsed in this file.
+    // Host rule: https://www.eliterestorations.com/* → https://eliterestorations.com/*
+    // with the path kept. Next.js sends this as a permanent redirect (308).
+    // Vercel domain settings can also redirect www before this file runs, so
+    // the dashboard should be checked. http:// still upgrades to https on the
+    // same host first; that TLS hop cannot be collapsed here.
     //
     // Each legacy URL, with and without a trailing slash, points at the final
     // page. The slash form is listed here so it does not stop at the
@@ -101,6 +101,18 @@ const nextConfig: NextConfig = {
     ];
 
     return [
+      {
+        source: '/',
+        has: [{ type: 'host', value: 'www.eliterestorations.com' }],
+        destination: 'https://eliterestorations.com',
+        permanent: true,
+      },
+      {
+        source: '/:path+',
+        has: [{ type: 'host', value: 'www.eliterestorations.com' }],
+        destination: 'https://eliterestorations.com/:path+',
+        permanent: true,
+      },
       ...both('/portfolio', '/projects'),
       ...both('/water-restoration', '/water-damage-restoration'),
       ...both('/countertop', '/countertops'),

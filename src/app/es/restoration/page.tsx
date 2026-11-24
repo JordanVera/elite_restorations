@@ -49,6 +49,13 @@ export default function SpanishRestorationPage() {
         <p className="measure text-lg leading-relaxed text-muted-foreground">
           Restaurar es dejar el edificio seco y listo para usarse otra vez. Un tubo de agua, un techo que dejó pasar la tormenta, granizo, humo, o el agua que usaron para apagar un fuego. Remodelar es otra decisión, y puede esperar a que la casa esté seca. Trabajamos desde nuestra oficina en el oeste de Houston (77082). La visita es en la propiedad.
         </p>
+        <p className="measure mt-6 text-lg leading-relaxed text-muted-foreground">
+          Los servicios y las zonas están en la página de la{' '}
+          <Link href="/es/restoration-company-houston" className="underline underline-offset-4">
+            empresa familiar de restauración en Houston
+          </Link>
+          .
+        </p>
         <ul className="mt-10 flex flex-wrap gap-6">
           {esNeighborhoods.map((area) => (
             <li key={area.path}>

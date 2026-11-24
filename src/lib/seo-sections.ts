@@ -11,7 +11,7 @@ export const homeRestorationEn = {
     'A house in Crosby had water damage found in January 2025. The kitchen floor came out down to a stained subfloor, and dehumidifiers and air movers dried the kitchen and bathroom. Drying and repairs ran from February to March 2025, and the kitchen and bath were rebuilt by April 2025.',
   ],
   links: [
-    { href: '/restoration-company-houston', label: 'Restoration company in Houston' },
+    { href: '/restoration-company-houston', label: 'Houston restoration company' },
     { href: '/restoration', label: 'Houston restoration services' },
     { href: '/houston-storm-damage', label: 'Houston storm damage' },
     { href: '/water-damage-restoration', label: 'Water damage restoration' },
@@ -50,7 +50,7 @@ export const homeRestorationEs = {
     'En una casa de Crosby se encontró daño de agua en enero de 2025. El piso de la cocina salió hasta un contrapiso manchado, y deshumidificadores y ventiladores de secado secaron la cocina y el baño. El secado y la reparación fueron de febrero a marzo de 2025, y la cocina y el baño quedaron listos en abril de 2025.',
   ],
   links: [
-    { href: '/es/restoration-company-houston', label: 'Empresa de restauración en Houston' },
+    { href: '/es/restoration-company-houston', label: 'Restauración de casas en Houston' },
     { href: '/es/houston-storm-damage', label: 'Daño por tormenta en Houston' },
     { href: '/es/water-damage-restoration', label: 'Restauración por daño de agua' },
     { href: '/es/burst-frozen-pipe-water-damage-houston', label: 'Tubos congelados y reventados' },

@@ -8,6 +8,7 @@ import { JsonLd } from '@/components/json-ld';
 import { ImageReveal, Reveal } from '@/components/motion';
 import { PageHero } from '@/components/page-hero';
 import { bleedPhotoSizes, Photo } from '@/components/photo';
+import { spanishCityPath } from '@/lib/city-landing-locales';
 import { editedPhotoSet, usesEditedCityPhotos, type EditedShot } from '@/lib/edited-photos';
 import { esGroupNames, esServiceNames } from '@/lib/i18n';
 import { neighborhoodSlugs } from '@/lib/locale-paths';
@@ -15,9 +16,12 @@ import { imagesForService, type ServiceGalleryItem } from '@/lib/projects';
 import { cityHeroPools, pickFromPool } from '@/lib/topic-photos';
 import {
   getArea,
-  relatedCityLandings,
+  nearbyAreaLinks,
+  relatedServiceLinks,
+  type DiscoveryLink,
   type LocalLanding,
 } from '@/lib/local-landings';
+import { isRestorationService, restorationSentence } from '@/lib/restoration-anchor';
 import { postalPlaceLabel, servedPlace } from '@/lib/place-labels';
 import { absoluteUrl } from '@/lib/seo';
 import { getService, servicePath } from '@/lib/services';
@@ -85,10 +89,14 @@ export function LocalLandingView({
       : service.name;
   const groupName = es ? (esGroupNames[service.group] ?? service.group) : service.group;
   const placeHref = overviewHref(landing.areaSlug, locale);
-  const companyHref = es ? '/es/restoration-company-houston' : '/restoration-company-houston';
-  const companyLabel = es
-    ? 'Empresa de restauración en Houston'
-    : 'Restoration company in Houston';
+  const companyLine = restorationSentence(
+    `${landing.serviceSlug}:${landing.areaSlug}`,
+    locale,
+    area.name,
+    isRestorationService(landing.serviceSlug),
+  );
+  const nearby = nearbyAreaLinks(landing).map((item) => localizeDiscovery(item, es));
+  const related = relatedServiceLinks(landing).map((item) => localizeDiscovery(item, es));
   const useEdited = es || usesEditedCityPhotos(landing.areaSlug);
   const edited = useEdited ? editedPhotoSet(service.slug) : null;
   const galleryPool =
@@ -117,10 +125,6 @@ export function LocalLandingView({
         image: item.image,
         href: `/projects/${item.project.slug}`,
       }));
-  const nearby = landing.nearby;
-  const related = relatedCityLandings(landing).map((item) =>
-    es ? { ...item, path: `/es${item.path}` } : item,
-  );
   const estimateHref = es
     ? service.emergency
       ? '/es/emergency'
@@ -202,13 +206,6 @@ export function LocalLandingView({
               <IconArrowUpRight className="size-4" />
             </Link>
           ) : null}
-          <Link
-            href={companyHref}
-            className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
-          >
-            {companyLabel}
-            <IconArrowUpRight className="size-4" />
-          </Link>
           <Link
             href={estimateHref}
             className="inline-flex items-center gap-2 text-sm underline decoration-foreground/30 underline-offset-[0.5em] transition-colors hover:decoration-accent-ink"
@@ -302,6 +299,16 @@ export function LocalLandingView({
                 </Reveal>
               ))}
             </div>
+            <p className="measure mt-7 text-lg leading-relaxed text-muted-foreground">
+              {companyLine.before}
+              <Link
+                href={companyLine.href}
+                className="underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+              >
+                {companyLine.label}
+              </Link>
+              {companyLine.after}
+            </p>
           </div>
           {layout !== 1 && (
           <Reveal className="lg:col-span-5" delay={0.12}>
@@ -512,32 +519,19 @@ export function LocalLandingView({
         >
           <div className="gutter mx-auto max-w-[120rem]">
             <h2 id="local-related-heading" className="eyebrow text-muted-foreground">
-              {es
-                ? layout % 2 === 0
-                  ? `Trabajo relacionado en ${area.name}`
-                  : `Otros servicios en ${area.name}`
-                : layout % 2 === 0
-                  ? `Related work in ${area.name}`
-                  : `Other services in ${area.name}`}
+              {es ? 'Servicios relacionados' : 'Related services'}
             </h2>
-            <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
-              {related.map((item) => {
-                const relatedService = getService(item.serviceSlug);
-                if (!relatedService) return null;
-                return (
-                  <li key={item.slug}>
-                    <Link
-                      href={item.path}
-                      className="group inline-flex items-center gap-2 font-display text-3xl transition-colors hover:text-accent-ink"
-                    >
-                      {es && relatedService.slug in esServiceNames
-                        ? esServiceNames[relatedService.slug as keyof typeof esServiceNames]
-                        : relatedService.name}
-                      <IconArrowUpRight className="size-5 text-accent-ink transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                    </Link>
-                  </li>
-                );
-              })}
+            <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+              {related.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
@@ -549,16 +543,10 @@ export function LocalLandingView({
           className="border-t border-border py-16 md:py-20"
         >
           <div className="gutter mx-auto max-w-[120rem]">
-            <h2 id="nearby-heading" className="font-display text-3xl md:text-4xl">
-              {es
-                ? layout === 3
-                  ? `El mismo trabajo cerca de ${area.name}`
-                  : `${serviceName} cerca`
-                : layout === 3
-                  ? `The same trade near ${area.name}`
-                  : `${service.name} nearby`}
+            <h2 id="nearby-heading" className="eyebrow text-muted-foreground">
+              {es ? 'Zonas cercanas' : 'Nearby areas'}
             </h2>
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+            <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
               {nearby.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -569,14 +557,6 @@ export function LocalLandingView({
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href={es ? '/es/restoration' : `${serviceHref}#areas`}
-                  className="text-sm underline decoration-foreground/30 underline-offset-[0.45em] transition-colors hover:decoration-accent-ink"
-                >
-                  {es ? 'Todas las zonas' : 'All areas'}
-                </Link>
-              </li>
             </ul>
           </div>
         </section>
@@ -625,6 +605,19 @@ export function LocalLandingView({
       />
     </>
   );
+}
+
+function localizeDiscovery(link: DiscoveryLink, es: boolean): DiscoveryLink {
+  if (!es) return link;
+  const name =
+    link.serviceSlug in esServiceNames
+      ? esServiceNames[link.serviceSlug as keyof typeof esServiceNames]
+      : link.label;
+  return {
+    ...link,
+    href: spanishCityPath(link.href) ?? link.href,
+    label: `${name} en ${link.areaName}`,
+  };
 }
 
 function FactList({ facts }: { facts: readonly { label: string; value: string }[] }) {
