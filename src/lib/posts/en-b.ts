@@ -15,7 +15,11 @@ export const houstonPostsB: Article[] = [
     ctaTitle: 'Planning a bath?',
     ctaBody:
       'Call (713) 909-0034 to schedule an estimate. We measure the room before we promise a layout. We\'ve been family-owned in Houston since 1993.',
-    related: ['houston-kitchen-remodel-ideas', 'houston-flooring-for-humidity'],
+    related: [
+      'houston-kitchen-remodel-ideas',
+      'houston-flooring-for-humidity',
+      'sugar-land-tub-to-shower-conversion',
+    ],
     faqs: [
       {
         q: 'Can a tub become a shower?',

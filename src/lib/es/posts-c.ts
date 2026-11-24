@@ -1034,4 +1034,143 @@ export const esPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'sugar-land-tub-to-shower-conversion',
+    title: 'De tina a regadera en una casa de Sugar Land',
+    metaTitle: 'Tina a regadera en Sugar Land',
+    crumb: 'Tina a regadera',
+    lines: ['La tina de jardín,', 'o una regadera.'],
+    description:
+      'Cuándo conviene cambiar una tina de Sugar Land por una regadera, qué piden el drenaje y el plato, y cómo planear las visitas.',
+    lede: 'El 24 de noviembre de 2026, muchas casas de Sugar Land todavía tienen una tina de jardín, o una tina y una regadera en el mismo hueco. First Colony, New Territory, Telfair y Riverstone se levantaron como vecindarios planeados desde los ochenta hasta los dos mil, en casas de dos pisos sobre losa. El drenaje, el plato y el muro detrás de la loseta vieja deciden si ese hueco puede volverse una regadera.',
+    image: '/images/projects/bathrooms/marble-shower-frameless-door.jpg',
+    service: 'bathroom-remodeling',
+    ctaTitle: '¿Quiere una regadera para entrar caminando?',
+    ctaBody: `Llame al ${phone}. Vemos el drenaje, la losa y el muro detrás de la loseta antes de dibujar el plano. Empresa familiar en Houston desde 1993.`,
+    related: ['houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
+    faqs: [
+      {
+        q: '¿Cuándo conviene quitar la tina?',
+        a: 'Cuando se pasa por encima y nadie la llena, y alguien necesita un piso al que pueda entrar caminando. Pasa en baños principales de First Colony y de New Territory, y en cuartos de Telfair y de Riverstone que todavía guardan una tina para remojarse. Deje una tina si un niño se baña ahí, o si es la única y alguien la usa.',
+      },
+      {
+        q: '¿La regadera nueva puede quedarse en el drenaje viejo?',
+        a: 'Muchas veces, sí. En una losa de Sugar Land el drenaje está en el concreto, y las casas más nuevas a menudo son postensadas, con cables adentro. Armar la regadera sobre el drenaje de la tina evita el corte. Si hay que moverlo, localizamos los cables antes de hablar de cortar.',
+      },
+      {
+        q: '¿El trabajo puede esperar a que se vayan las visitas?',
+        a: 'Sí. Si hay gente en la casa esta semana, espere. Esta nota es del 24 de noviembre de 2026, y Acción de Gracias cae el jueves. Empiece cuando se vayan, o termine para que el cuarto ya esté en uso cuando lleguen. Un segundo baño puede seguir abierto. Navidad y Año Nuevo piden el mismo hueco.',
+      },
+      {
+        q: '¿Qué le pide la humedad a la regadera nueva?',
+        a: 'El extractor tiene que sacar el vapor fuera de la casa. La junta de cemento de una regadera diaria pide sellador, y hay que renovarlo. Una loseta más grande deja menos juntas. La guía de baños de Houston cubre la impermeabilización, el extractor y la diferencia entre un baño de pasillo y uno principal. Esta página es la conversión en Sugar Land.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Cuándo sí conviene el cambio',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Sugar Land es una ciudad de Fort Bend de vecindarios planeados, desde First Colony, con un núcleo más viejo junto al sitio de Imperial Sugar y a Town Square. La casa común es de dos pisos, de los ochenta a los dos mil diez, sobre losa, y los baños principales se hicieron grandes. En muchos todavía está la tina de jardín en una esquina, a veces con otra regadera al lado. El baño de pasillo es el cuarto justo: tina y regadera de una sola pieza, una cortina, y una puerta que tiene que librar el inodoro.',
+          },
+          {
+            type: 'p',
+            text: 'El cambio conviene cuando la tina guarda frascos y el borde alto es lo difícil de la mañana, cuando el revestimiento está manchado, cuando la cortina deja salir el agua, o cuando un padre necesita pararse con una mano en una barra. Si alguien todavía se remoja, la tina se queda. Medimos el giro de la puerta, la ventana y el drenaje antes de decir que la tina puede salir.',
+          },
+        ],
+      },
+      {
+        heading: 'Lo que aparece al demoler',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Salen la tina, el revestimiento o la loseta vieja, y el respaldo que hay que quitar para ver el muro. Alrededor del drenaje, y detrás de la loseta que lleva ahí desde la construcción, buscamos madera blanda, un poste manchado y un piso que se quedó húmedo. El revestimiento puede verse bien desde el cuarto y esconder una fuga lenta en la válvula, o donde la tina se junta con el muro.',
+          },
+          {
+            type: 'p',
+            text: 'La estructura podrida se reemplaza, y lo mojado se seca antes del plato nuevo. Una regadera nueva no va sobre un muro blando ni sobre un hueco húmedo. En un baño de arriba, una mancha en el cielo de abajo entra en la misma revisión. En la losa, el problema se ve en el drenaje y en la parte baja de los postes. Si falló el plato viejo, el trabajo es esa reparación y después la regadera. Si hay seguro de por medio, Elite trabaja con su aseguradora como su contratista y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. Su aseguradora decide la cobertura.',
+          },
+        ],
+      },
+      {
+        heading: 'El drenaje, el plato y la losa',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La loseta es el acabado. El plato y la impermeabilización de abajo dejan el agua fuera del muro. Impermeabilizamos el plato, los muros, las esquinas, el bordillo y el nicho, y después asentamos la loseta. La válvula entra con el muro abierto, a la profundidad que pide la pieza que se ve. Compramos válvulas de regadera y la plomería que las acompaña en Ferguson, y las instalamos.',
+          },
+          {
+            type: 'p',
+            text: 'Mover un drenaje en estas losas es cortar concreto. Las casas más nuevas de Sugar Land a menudo son postensadas, y los cables se localizan antes de hablar de un corte. Armar el plato hacia el drenaje de la tina deja la losa sin corte, y lo decimos cuando ese es el trabajo más limpio. Sugar Land da sus permisos, y Missouri City los suyos. Hay partes de Riverstone en Missouri City, y Sienna está en Missouri City. Leemos la ciudad en la dirección antes de mover la plomería. Las asociaciones suelen revisar el color del techo, la pintura y el patio. Una regadera adentro suele quedar fuera de esa revisión.',
+          },
+        ],
+      },
+      {
+        heading: 'Bordillo, piso a nivel, nichos y una barra',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El bordillo es la conversión habitual en estas losas. Guarda el agua en el plato, y el piso de afuera puede quedarse a la altura que ya tiene, así que el drenaje existente muchas veces se queda. Una regadera sin bordillo pide que ese piso caiga hacia el drenaje, lo que suele pedir un drenaje más bajo y un corte. Si los cables impiden el corte, la regadera se queda con bordillo. El piso sin bordillo es la meta cuando la losa permite la caída y alguien necesita entrar con silla de ruedas.',
+          },
+          {
+            type: 'p',
+            text: 'Los nichos se arman con la capa impermeable, a una altura que se alcance sin pararse bajo el chorro. Las barras de apoyo necesitan refuerzo en el muro antes de la loseta, donde la persona que se agarra sí llegue. Un asiento y una regadera de mano en un riel entran en el mismo plan cuando la casa tiene que seguir sirviendo. Ponemos ese refuerzo con el muro abierto.',
+          },
+        ],
+      },
+      {
+        heading: 'Humedad, junta y vidrio',
+        blocks: [
+          {
+            type: 'p',
+            text: 'El vidrio se pide cuando el bordillo y los muros ya existen. Un baño principal de aquí a menudo da para un cancel. El de pasillo puede quedarse corto, porque la puerta tiene que librar el inodoro. Plantillamos desde la abertura terminada. La humedad de Houston no seca la regadera sola, así que el extractor tiene que ventilar hacia afuera de la casa. Uno que tira el vapor al ático deja esa humedad arriba del cielo.',
+          },
+          {
+            type: 'p',
+            text: 'La junta de cemento de una regadera diaria pide sellador, y volver a ponerlo es mantenimiento. El porcelanato grande deja menos juntas que un mosaico chico, y un piso de piedritas tiene muchas, que quieren un enjuague después del baño. Compramos la loseta en Floor & Decor, y usted puede comprarla ahí para que nosotros la instalemos. Revisamos el lote de color y la loseta de sobra para los cortes de la válvula antes de fijar el día.',
+          },
+        ],
+      },
+      {
+        heading: 'Los días, y una casa con visitas',
+        blocks: [
+          {
+            type: 'p',
+            text: 'No fijamos los días hasta ver el baño. El orden se mantiene: proteger la casa, quitar la tina, reparar lo que se ve al abrir, impermeabilizar, enlosetar y después medir el vidrio. Un trabajo que conserva el drenaje, usa bordillo y encuentra madera sana tarda menos que uno que mueve el drenaje, cambia postes podridos o rehace el piso para dejar la regadera al nivel del cuarto. La junta necesita tiempo antes del uso diario, y ese tiempo sale de los productos del trabajo.',
+          },
+          {
+            type: 'p',
+            text: 'Acción de Gracias es el jueves, y esta página está fechada el 24 de noviembre de 2026. Si la familia está aquí esta semana, deje el baño como está y planee la demolición para cuando se vayan. Un cuarto listo antes de Navidad o de Año Nuevo necesita tiempo para el plato, la loseta y el vidrio, y le decimos si esa ventana es real después de ver el baño. Un segundo baño deja una regadera en servicio. Si este es el único, nombramos los días sin agua antes de empezar. Llame al (713) 909-0034 con la dirección y una foto de la tina. Agendamos Sugar Land desde la oficina del oeste de Houston.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/es/bathroom-remodeling', label: 'Remodelación de baños' },
+              {
+                href: '/bathroom-remodeling-sugar-land-tx',
+                label: 'Remodelación de baños en Sugar Land',
+              },
+              {
+                href: '/es/blog/houston-bathroom-remodel-guide',
+                label: 'Guía de baños en Houston',
+              },
+              { href: '/es/tile-flooring', label: 'Loseta para cuartos mojados' },
+              {
+                href: '/es/floor-and-decor-flooring-installation-houston',
+                label: 'Loseta de Floor & Decor',
+              },
+              { href: '/es/missouri-city-tx', label: 'Missouri City' },
+              { href: '/es/sienna-tx', label: 'Sienna, junto a Sugar Land' },
+              { href: '/es/water-damage-restoration', label: 'Restauración por daño de agua' },
+              {
+                href: '/water-damage-restoration-sugar-land-tx',
+                label: 'Daño de agua en Sugar Land',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

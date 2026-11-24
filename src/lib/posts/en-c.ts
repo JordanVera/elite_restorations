@@ -1032,4 +1032,147 @@ export const houstonPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'sugar-land-tub-to-shower-conversion',
+    title: 'A tub-to-shower conversion for a Sugar Land house',
+    metaTitle: 'Sugar Land Tub-to-Shower Guide',
+    crumb: 'Tub to shower',
+    lines: ['A garden tub,', 'or a walk-in shower.'],
+    description:
+      'When a Sugar Land garden tub should become a walk-in shower, what the drain and pan involve, and how to plan around holiday guests.',
+    lede: 'On November 24, 2026, a lot of Sugar Land houses still have a garden tub, or a tub and shower in one bay. First Colony, New Territory, Telfair, and Riverstone were built as planned neighborhoods from the 1980s into the 2000s, mostly as two-story houses on slabs. Turning that bay into a walk-in shower is a common request. The drain, the pan, and the wall behind the old tile decide whether it is a straightforward swap.',
+    image: '/images/projects/bathrooms/marble-shower-frameless-door.jpg',
+    service: 'bathroom-remodeling',
+    ctaTitle: 'Planning a walk-in shower?',
+    ctaBody:
+      'Call (713) 909-0034. We look at the drain, the slab, and the wall behind the tile before we draw a layout. Family-owned, serving Houston since 1993.',
+    related: ['houston-bathroom-remodel-guide', 'houston-flooring-for-humidity'],
+    faqs: [
+      {
+        q: 'When should the garden tub come out?',
+        a: 'When you step over it and never fill it, and someone needs a floor they can walk onto. That shows up in primary baths in First Colony and New Territory, and in Telfair and Riverstone rooms that still keep a soaking tub. Leave a tub if a child still bathes in it, or if it is the only tub someone uses.',
+      },
+      {
+        q: 'Can the new shower keep the old drain?',
+        a: 'Often, yes. On a Sugar Land slab the drain is in the concrete, and newer houses are often post-tension, with cables in that slab. Building on the drain the tub used avoids a cut. Moving or resizing the drain is a separate scope, and we locate the cables before anyone talks about cutting.',
+      },
+      {
+        q: 'Can the work wait until after holiday guests?',
+        a: 'Yes. If people are staying this week, wait. This note is dated November 24, 2026, and Thanksgiving is Thursday. Start after guests leave, or finish so the room is back in use before they arrive. A second bath can stay open. Christmas and New Year need the same gap.',
+      },
+      {
+        q: 'What does the humidity ask of the new shower?',
+        a: 'The fan has to send steam outside the house. Cement grout in a daily shower needs a sealer you renew, and larger tile leaves fewer joints to wipe. The Houston bathroom remodel guide covers waterproofing, fans, and how a hall bath differs from a primary bath. This page is the Sugar Land conversion.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'When the swap fits these houses',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Sugar Land is a Fort Bend city of master-planned neighborhoods, from First Colony on, with an older core near the Imperial Sugar site and Town Square. The common house is a two-story plan from the 1980s through the 2010s on a slab, and the primary baths were built as large rooms. A garden tub in the corner, sometimes beside a separate shower, is still in a lot of those rooms. The hall bath is tighter: a fiberglass tub and shower in one bay, a curtain, and a door that has to clear the toilet.',
+          },
+          {
+            type: 'p',
+            text: 'The swap fits when the tub holds bottles and the step over the rim is the hard part of the morning, when the surround is stained, when the curtain lets water onto the floor, or when a parent needs to stand with a hand on a bar. Keep the tub when someone still soaks in it. We measure the door swing, the window, and the drain before we say the tub can come out. The Houston bathroom remodel guide is the citywide picture. This page stays with the Sugar Land tub.',
+          },
+        ],
+      },
+      {
+        heading: 'What demo uncovers',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Demo takes out the tub, the surround or the old tile, and the backer that has to come off to see the wall. Around the drain, and behind tile that has been there since the house was built, we look for soft wood, a stained stud, and a floor that has stayed damp. A surround can look fine from the room and still hide a slow leak at the valve or where the tub meets the wall.',
+          },
+          {
+            type: 'p',
+            text: 'Rotten framing is replaced, and wet material is dried before a new pan goes down. A new shower does not go over a soft wall or a wet cavity. On a second-floor bath, a stain on the ceiling below is part of the same look. On the slab, trouble shows at the drain and at the bottom of the studs. If the failure is an old pan, the job is that repair and then the shower.',
+          },
+        ],
+      },
+      {
+        heading: 'The drain, the pan, and the slab',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Tile is the finish. The pan and the waterproofing under it keep water out of the wall. We waterproof the pan, the walls, the corners, the curb, and any niche, then we set the tile. The valve goes in while the wall is open, at the depth the trim needs. We buy shower valves and the fixtures around them from Ferguson and install them. A trim piece bought after the wall is closed cannot straighten a valve that was set crooked.',
+          },
+          {
+            type: 'p',
+            text: 'Moving a drain on these slabs means cutting concrete. Newer Sugar Land houses are often post-tension, so the cables are located before a cut is discussed. Building the pan back to the drain the tub used leaves the slab uncut, and we say so when that is the cleaner job. Sugar Land issues its own permits, and Missouri City does too. Parts of Riverstone sit in Missouri City, and Sienna is in Missouri City. We read the city on the address before plumbing moves. Associations here usually review roof color, paint, and the yard. A shower inside the house is usually outside that review.',
+          },
+        ],
+      },
+      {
+        heading: 'A curb, a level floor, niches, and a bar',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A curb is the usual conversion on these slabs. It keeps shower water on the pan, and the floor outside it can stay at its current height, so the existing drain can often stay. A curbless opening needs that floor to slope to the drain, which usually means a lower drain and a cut. If the cables block the cut, the shower keeps a curb. A floor with no curb is the goal when the slab allows the slope and someone needs to roll in.',
+          },
+          {
+            type: 'p',
+            text: 'Niches are built with the waterproof layer, at a height you can reach without standing in the stream. Grab bars need solid blocking before the tile covers the wall, where the person who will hold them can reach. A seat and a handheld sprayer on a slide bar belong in that plan when the shower is meant to make the house easier to stay in. We set that blocking while the wall is open.',
+          },
+        ],
+      },
+      {
+        heading: 'Humidity, grout, and the glass',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Glass is ordered after the curb and the walls exist. A primary bath here is often large enough for a panel. A hall bath is often too tight, because the door has to clear the toilet. We template from the finished opening. Houston humidity does not dry a shower by itself, so the fan has to vent outside the house. A fan that dumps steam into the attic leaves that moisture above the ceiling.',
+          },
+          {
+            type: 'p',
+            text: 'Cement grout in a daily shower needs a sealer, and renewing it is maintenance. Large porcelain leaves fewer joints to wipe than a small mosaic, and a pebble floor has many joints that want a rinse after you shower. We buy tile at Floor & Decor, and you can buy it there for us to install. We check the dye lot, and the extra tile for the valve cuts, before the day is set.',
+          },
+        ],
+      },
+      {
+        heading: 'The days, and a house full of guests',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We do not lock a count of days until we see the bath. The order is steady: protect the house, remove the tub, repair what the opening shows, waterproof, tile, then measure the glass. A job that keeps the drain, uses a curb, and finds sound wood takes less time than one that moves the drain, replaces rotten studs, or rebuilds the floor for a level shower. The grout needs time before daily use, and we name that time from the products on the job.',
+          },
+          {
+            type: 'p',
+            text: 'Thanksgiving is Thursday, and this page is dated November 24, 2026. If family is here this week, leave the bath as it is and plan the demo for after they leave. A room finished before Christmas or New Year guests needs time for the pan, the tile, and the glass, and we say whether that window is real after we see the bath. A second bath lets one shower stay in service. If this is the only bath, we name the days the water is off before we start. Call (713) 909-0034 with the address and a photo of the tub. We schedule Sugar Land from our office in west Houston.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/bathroom-remodeling', label: 'Bathroom remodeling' },
+              {
+                href: '/bathroom-remodeling-sugar-land-tx',
+                label: 'Bathroom remodeling in Sugar Land',
+              },
+              {
+                href: '/houston-bathroom-remodel-guide',
+                label: 'Houston bathroom remodel guide',
+              },
+              { href: '/tile-flooring', label: 'Tile for wet rooms' },
+              {
+                href: '/floor-and-decor-flooring-installation-houston',
+                label: 'Tile from Floor & Decor',
+              },
+              {
+                href: '/bathroom-remodel-cost-houston',
+                label: 'What changes a bathroom remodel cost',
+              },
+              { href: '/missouri-city-tx', label: 'Missouri City' },
+              { href: '/sienna-tx', label: 'Sienna, next to Sugar Land' },
+              {
+                href: '/water-damage-restoration-sugar-land-tx',
+                label: 'Water damage in Sugar Land',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
