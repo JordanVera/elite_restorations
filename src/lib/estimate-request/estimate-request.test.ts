@@ -226,6 +226,14 @@ describe("estimate request guards", () => {
     );
     assert.equal(estimateRecipient({}), "george@eliterestorations.com");
     assert.equal(estimateRecipient({ ESTIMATE_REQUEST_EMAIL_TO: "owner@example.com" }), "owner@example.com");
+    assert.equal(
+      estimateRecipient({}, { firstName: "TEST - Sample", lastName: "Customer" }),
+      "michael@eliterestorations.com",
+    );
+    assert.equal(
+      estimateRecipient({ ESTIMATE_REQUEST_EMAIL_TO: "owner@example.com" }, { firstName: "Ada", lastName: "Lovelace" }),
+      "owner@example.com",
+    );
   });
 
   it("drops a filled honeypot and a too-fast submit", () => {

@@ -20,15 +20,23 @@ export const DEFAULT_ESTIMATE_EMAIL = "george@eliterestorations.com";
 
 export type EstimateSendResult = { status: "sent" } | { status: "unconfigured" } | { status: "failed" };
 
+export function isTestName(firstName: string, lastName: string): boolean {
+  return [firstName, lastName].some((part) => /^test/i.test(part.trim()));
+}
+
 /** A name that starts with TEST marks the subject so a trial request is easy to spot. */
 export function estimateSubject(firstName: string, lastName: string, reference: string): string {
   const name = `${firstName} ${lastName}`.trim();
-  const marked = [firstName, lastName].some((part) => /^test/i.test(part.trim()));
-  const prefix = marked ? "TEST - " : "";
+  const prefix = isTestName(firstName, lastName) ? "TEST - " : "";
   return `${prefix}[${site.name}] Project estimate · ${name} · ${reference}`;
 }
 
-export function estimateRecipient(env: Record<string, string | undefined> = process.env): string {
+export function estimateRecipient(
+  env: Record<string, string | undefined> = process.env,
+  names?: { firstName: string; lastName: string },
+): string {
+  // TEMP test routing - remove after test
+  if (names && isTestName(names.firstName, names.lastName)) return "michael@eliterestorations.com";
   const value = env.ESTIMATE_REQUEST_EMAIL_TO?.trim();
   if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
   return DEFAULT_ESTIMATE_EMAIL;
@@ -85,7 +93,7 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
     { filename: `${reference}.csv`, content: csv, contentType: "text/csv" },
   ];
   const subject = estimateSubject(submission.firstName, submission.lastName, reference);
-  const to = estimateRecipient();
+  const to = estimateRecipient(process.env, submission);
 
   try {
     if (plan === "gateway-then-smtp") {
