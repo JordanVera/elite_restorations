@@ -18,7 +18,7 @@ import { quantitiesToCsv, sectionsToCsv, sectionsToText, staffSections, summariz
 import { JOBBER_TEMPLATES, countertopSquareFeet, isHighCeiling, suggestedTemplates, wallSquareFeet } from "@/lib/estimate-request/templates";
 import { estimateTiming } from "@/lib/estimate-request/timing";
 import { isHoneypotWebsite } from "@/lib/estimate-request/spam";
-import { estimateRecipient } from "@/server/estimate-request/deliver";
+import { estimateRecipient, estimateSubject } from "@/server/estimate-request/deliver";
 
 function validDraft(): EstimateDraft {
   const draft = emptyEstimate();
@@ -181,10 +181,15 @@ describe("estimate request summary", () => {
     const customer = sectionsToText(summarize(submission), "EST-TEST");
     assert.doesNotMatch(customer, /High walls/);
     assert.doesNotMatch(customer, /UPDATED -/);
+    submission.rooms[0].measures.baseCabinetLf = "16";
     const staff = sectionsToText(staffSections(submission), "EST-TEST");
     assert.match(staff, /Jobber New Client/);
     assert.match(staff, /First name: Ada/);
     assert.match(staff, /High walls/);
+    assert.match(staff, /Length: 12 ft/);
+    assert.match(staff, /Ceiling height: 12 ft/);
+    assert.doesNotMatch(staff, /Length: 12 LF/);
+    assert.match(staff, /Base cabinets: 16 LF/);
     assert.match(staff, /UPDATED - Kitchen Remodel Template/);
     assert.equal(tradeSelection(["kitchen"], "yes").flooring, true);
     assert.equal(tradeSelection(["kitchen"], "").flooring, false);
@@ -194,7 +199,8 @@ describe("estimate request summary", () => {
     assert.equal(isHighCeiling("10"), false);
     const csv = quantitiesToCsv(submission);
     assert.match(csv, /^Room,Trade,Template,Line item,Quantity,Unit,Notes,Optional/);
-    assert.match(csv, /"LF"/);
+    assert.match(csv, /"Length","12","ft"/);
+    assert.match(csv, /"Base cabinets","16","LF"/);
   });
 });
 
@@ -205,6 +211,18 @@ describe("estimate request guards", () => {
     assert.equal(
       THANK_YOU,
       "Thanks! Elite Restorations will review your project and reach out. Questions? Call (713) 909-0034.",
+    );
+    assert.equal(
+      estimateSubject("TEST - Sample", "Customer", "EST-1"),
+      "TEST - [Elite Restorations] Project estimate · TEST - Sample Customer · EST-1",
+    );
+    assert.equal(
+      estimateSubject("Ada", "test", "EST-1"),
+      "TEST - [Elite Restorations] Project estimate · Ada test · EST-1",
+    );
+    assert.equal(
+      estimateSubject("Ada", "Lovelace", "EST-1"),
+      "[Elite Restorations] Project estimate · Ada Lovelace · EST-1",
     );
     assert.equal(estimateRecipient({}), "george@eliterestorations.com");
     assert.equal(estimateRecipient({ ESTIMATE_REQUEST_EMAIL_TO: "owner@example.com" }), "owner@example.com");

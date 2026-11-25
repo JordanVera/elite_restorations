@@ -13,7 +13,7 @@ export const JOBBER_TEMPLATES = {
   bathShower: "UPDATED - Shower/Tub-only",
 } as const;
 
-export type QuantityUnit = "SF" | "LF" | "EA" | "SQ";
+export type QuantityUnit = "SF" | "LF" | "EA" | "SQ" | "ft";
 
 export type QuantityLine = {
   room: string;
@@ -135,9 +135,9 @@ export function roomQuantities(
   };
   const number = (key: string) => measures[key]?.trim() ?? "";
 
-  add("Room", "Length", number("lengthFt"), "LF");
-  add("Room", "Width", number("widthFt"), "LF");
-  add("Room", "Ceiling height", number("ceilingFt"), "LF", isHighCeiling(number("ceilingFt")) ? "High walls" : "");
+  add("Room", "Length", number("lengthFt"), "ft");
+  add("Room", "Width", number("widthFt"), "ft");
+  add("Room", "Ceiling height", number("ceilingFt"), "ft", isHighCeiling(number("ceilingFt")) ? "High walls" : "");
 
   const floorArea = floorSquareFeet(number("floorSf"), number("lengthFt"), number("widthFt"));
   if ((trades.includes("flooring") || trades.includes("tile") || measures.flooringIncluded === "yes") && floorArea) {
@@ -180,11 +180,11 @@ export function roomQuantities(
     if (stories) add("Roofing", "Stories", stories, "EA", measures.roofSeparate === "yes" ? "Separate structure" : "From the property");
   }
 
-  add("Water", "Damaged wall height", number("wallHeight"), "LF");
+  add("Water", "Damaged wall height", number("wallHeight"), "ft");
   add("Fence", "Fence", number("fenceLf"), "LF");
   add("Fence", "Gates", number("gateCount"), "EA");
-  add("Fence", "Deck length", number("deckLengthFt"), "LF");
-  add("Fence", "Deck width", number("deckWidthFt"), "LF");
+  add("Fence", "Deck length", number("deckLengthFt"), "ft");
+  add("Fence", "Deck width", number("deckWidthFt"), "ft");
 
   return rows.filter((row) => relevantTrade(row.trade, trades, measures));
 }

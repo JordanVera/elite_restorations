@@ -20,6 +20,14 @@ export const DEFAULT_ESTIMATE_EMAIL = "george@eliterestorations.com";
 
 export type EstimateSendResult = { status: "sent" } | { status: "unconfigured" } | { status: "failed" };
 
+/** A name that starts with TEST marks the subject so a trial request is easy to spot. */
+export function estimateSubject(firstName: string, lastName: string, reference: string): string {
+  const name = `${firstName} ${lastName}`.trim();
+  const marked = [firstName, lastName].some((part) => /^test/i.test(part.trim()));
+  const prefix = marked ? "TEST - " : "";
+  return `${prefix}[${site.name}] Project estimate · ${name} · ${reference}`;
+}
+
 export function estimateRecipient(env: Record<string, string | undefined> = process.env): string {
   const value = env.ESTIMATE_REQUEST_EMAIL_TO?.trim();
   if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
@@ -76,7 +84,7 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
     { filename: `${reference}.json`, content: json, contentType: "application/json" },
     { filename: `${reference}.csv`, content: csv, contentType: "text/csv" },
   ];
-  const subject = `[${site.name}] Project estimate · ${name} · ${reference}`;
+  const subject = estimateSubject(submission.firstName, submission.lastName, reference);
   const to = estimateRecipient();
 
   try {
