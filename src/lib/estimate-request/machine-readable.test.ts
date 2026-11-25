@@ -86,7 +86,7 @@ function assertNoHoles(value: unknown, trail = "doc"): void {
     value.forEach((item, index) => assertNoHoles(item, `${trail}[${index}]`));
     return;
   }
-  if (typeof value === "object") {
+  if (typeof value === "object" && value !== null) {
     for (const [key, child] of Object.entries(value)) assertNoHoles(child, `${trail}.${key}`);
   }
 }
