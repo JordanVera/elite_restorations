@@ -6,7 +6,7 @@ import { FILE_LINK_TTL_DAYS } from "@/lib/file-link-ttl";
 import {
   buildEstimateDocument,
   chicagoTimestamp,
-  estimateRecipient,
+  estimateMailbox,
   leadSubject,
   machineJsonFilename,
 } from "@/lib/lead-machine";
@@ -18,7 +18,7 @@ import { site } from "@/lib/site";
 import { sendEmail } from "@/server/email";
 import { emailTransportPlan } from "@/server/mail-plan";
 
-export { DEFAULT_ESTIMATE_EMAIL, estimateRecipient, isTestName } from "@/lib/lead-machine";
+export { DEFAULT_ESTIMATE_EMAIL, estimateMailbox, estimateRecipient, isTestName } from "@/lib/lead-machine";
 
 export type EstimateSendResult = { status: "sent" } | { status: "unconfigured" } | { status: "failed" };
 
@@ -90,7 +90,9 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
     { filename: `${reference}.csv`, content: csv, contentType: "text/csv" },
   ];
   const subject = estimateSubject(submission.firstName, submission.lastName, reference);
-  const to = estimateRecipient(process.env, submission);
+  const mailbox = estimateMailbox(process.env, submission);
+  const to = mailbox.to;
+  const cc = mailbox.cc;
   const from = process.env.SMTP_USER?.trim() ? websiteFromHeader(process.env.SMTP_USER) : undefined;
 
   try {
@@ -98,6 +100,7 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
       try {
         const { messageId } = await sendEmail({
           to,
+          ...(cc ? { cc } : {}),
           replyTo: submission.email,
           subject,
           text,
@@ -127,6 +130,7 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
     await transport.sendMail({
       from: websiteFromHeader(config.user),
       to,
+      ...(cc ? { cc } : {}),
       replyTo: submission.email,
       subject,
       text,

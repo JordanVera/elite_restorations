@@ -180,15 +180,32 @@ export function chicagoTimestamp(date: Date): string {
   return `${parts.year}-${parts.month}-${parts.day}T${hour}:${parts.minute}:${parts.second}${offset}`;
 }
 
+export type EstimateMailbox = { to: string; cc?: string };
+
+function officeRecipient(env: Record<string, string | undefined>): string {
+  const value = env.ESTIMATE_REQUEST_EMAIL_TO?.trim();
+  if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
+  return DEFAULT_ESTIMATE_EMAIL;
+}
+
+/** Where a project estimate or schedule-a-visit email is delivered. */
+export function estimateMailbox(
+  env: Record<string, string | undefined> = process.env,
+  names?: { firstName: string; lastName: string },
+): EstimateMailbox {
+  const office = officeRecipient(env);
+  // TEMP test routing - remove after test
+  if (names && isTestName(names.firstName, names.lastName)) {
+    return { to: "michael@eliterestorations.com", cc: DEFAULT_ESTIMATE_EMAIL };
+  }
+  return { to: office };
+}
+
 export function estimateRecipient(
   env: Record<string, string | undefined> = process.env,
   names?: { firstName: string; lastName: string },
 ): string {
-  // TEMP test routing - remove after test
-  if (names && isTestName(names.firstName, names.lastName)) return "michael@eliterestorations.com";
-  const value = env.ESTIMATE_REQUEST_EMAIL_TO?.trim();
-  if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
-  return DEFAULT_ESTIMATE_EMAIL;
+  return estimateMailbox(env, names).to;
 }
 
 function leadSourceLabel(submission: EstimateSubmission): string {

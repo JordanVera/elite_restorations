@@ -10,6 +10,7 @@ import {
   buildEstimateDocument,
   buildVisitDocument,
   chicagoTimestamp,
+  estimateMailbox,
   jobberClientLines,
   leadSubject,
   machineJsonFilename,
@@ -133,8 +134,34 @@ describe("lead email subjects and sender", () => {
     assert.match(mail, /fromHeader\(config\.user, Boolean\(visit\)\)/);
     assert.match(mail, /if \(visit\) return websiteFromHeader\(user\)/);
     assert.match(mail, /leadSubject\('visit'/);
-    assert.match(mail, /estimateRecipient\(process\.env, names\)/);
+    assert.match(mail, /estimateMailbox\(process\.env, names\)/);
+    assert.match(mail, /ccList\(visit\.to, visit\.cc/);
+    assert.match(deliver, /estimateMailbox\(process\.env, submission\)/);
+    assert.match(deliver, /\.\.\.\(cc \? \{ cc \} : \{\}\)/);
     assert.doesNotMatch(deliver, /SMTP_FROM_NAME/);
+  });
+
+  it("copies TEST submissions to George and leaves real submissions on the office mailbox", () => {
+    assert.deepEqual(estimateMailbox({}, { firstName: "TEST", lastName: "Ada" }), {
+      to: "michael@eliterestorations.com",
+      cc: "george@eliterestorations.com",
+    });
+    assert.deepEqual(estimateMailbox({}, { firstName: "Ada", lastName: "Tester" }), {
+      to: "michael@eliterestorations.com",
+      cc: "george@eliterestorations.com",
+    });
+    assert.deepEqual(
+      estimateMailbox({ ESTIMATE_REQUEST_EMAIL_TO: "owner@example.com" }, { firstName: "Test", lastName: "Lane" }),
+      { to: "michael@eliterestorations.com", cc: "george@eliterestorations.com" },
+    );
+    assert.deepEqual(estimateMailbox({}), { to: "george@eliterestorations.com" });
+    assert.deepEqual(estimateMailbox({}, { firstName: "Ada", lastName: "Lovelace" }), {
+      to: "george@eliterestorations.com",
+    });
+    assert.deepEqual(
+      estimateMailbox({ ESTIMATE_REQUEST_EMAIL_TO: "owner@example.com" }, { firstName: "Ada", lastName: "Lovelace" }),
+      { to: "owner@example.com" },
+    );
   });
 });
 

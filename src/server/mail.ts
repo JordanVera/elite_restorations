@@ -7,7 +7,7 @@ import type Mail from 'nodemailer/lib/mailer';
 import {
   buildVisitDocument,
   chicagoTimestamp,
-  estimateRecipient,
+  estimateMailbox,
   jobberClientLines,
   leadSubject,
   machineJsonFilename,
@@ -136,7 +136,23 @@ type VisitPackage = {
   fileLinks: LeadMachineFile[];
   json: InquiryFile;
   to: string;
+  cc?: string;
 };
+
+function ccList(to: string | undefined, ...copies: Array<string | undefined>): string | undefined {
+  const seen = new Set<string>();
+  const list: string[] = [];
+  const toKey = to?.trim().toLowerCase();
+  for (const copy of copies) {
+    const value = copy?.trim();
+    if (!value) continue;
+    const key = value.toLowerCase();
+    if (key === toKey || seen.has(key)) continue;
+    seen.add(key);
+    list.push(value);
+  }
+  return list.length ? list.join(", ") : undefined;
+}
 
 function visitPackage(lead: DeliverableLead, reference: string): VisitPackage | null {
   if (lead.path !== 'estimate' || lead.formType !== 'visit') return null;
@@ -163,6 +179,7 @@ function visitPackage(lead: DeliverableLead, reference: string): VisitPackage | 
     photos,
     { id: reference, submittedAt: chicagoTimestamp(new Date()) },
   );
+  const mailbox = estimateMailbox(process.env, names);
   const jobberRows = jobberClientLines(document);
   const fileLinks = photos.filter((photo) => photo.url);
   const linkLines = fileLinks.map((photo) => `${photo.filename}\n${photo.url}`);
@@ -181,7 +198,8 @@ function visitPackage(lead: DeliverableLead, reference: string): VisitPackage | 
       content: Buffer.from(JSON.stringify(document, null, 2), 'utf8'),
       contentType: 'application/json',
     },
-    to: estimateRecipient(process.env, names),
+    to: mailbox.to,
+    cc: mailbox.cc,
   };
 }
 
@@ -228,7 +246,7 @@ async function sendViaSmtp(
   if (!config) return false;
 
   const message = renderInquiry(lead, files, reference, visit);
-  const cc = copyAddress('INQUIRY_EMAIL_CC', visit?.to);
+  const cc = visit ? ccList(visit.to, visit.cc, optionalAddress('INQUIRY_EMAIL_CC')) : copyAddress('INQUIRY_EMAIL_CC', undefined);
   const bcc = optionalAddress('INQUIRY_EMAIL_BCC');
   const transport = nodemailer.createTransport({
     host: config.host,
@@ -292,7 +310,7 @@ export async function sendInquiryEmail(lead: DeliverableLead): Promise<InquirySe
       try {
         const { messageId } = await sendEmail({
           to: visit?.to ?? inquiryRecipient(),
-          cc: copyAddress('INQUIRY_EMAIL_CC', visit?.to),
+          cc: visit ? ccList(visit.to, visit.cc, optionalAddress('INQUIRY_EMAIL_CC')) : copyAddress('INQUIRY_EMAIL_CC', undefined),
           bcc: optionalAddress('INQUIRY_EMAIL_BCC'),
           replyTo: lead.email || undefined,
           subject: message.subject,
