@@ -97,7 +97,10 @@ export const areaTypes = [
 
 export const trades = [
   { value: "kitchen", label: "Kitchen remodel" },
+  { value: "cabinetry", label: "Cabinetry" },
+  { value: "countertops", label: "Countertops and backsplash" },
   { value: "bathroom", label: "Bathroom remodel" },
+  { value: "tile", label: "Tile" },
   { value: "flooring", label: "Flooring" },
   { value: "paint", label: "Paint and drywall" },
   { value: "roofing", label: "Roofing" },
@@ -136,6 +139,12 @@ export const materialSources = [
   { value: "mine", label: "I will supply the materials" },
 ] as const;
 
+export const roomMaterialSources = [
+  { value: "elite", label: "Elite Restorations" },
+  { value: "mine", label: "Me" },
+  { value: "mixed", label: "Some of each" },
+] as const;
+
 export const contactMethods = [
   { value: "call", label: "Call" },
   { value: "text", label: "Text" },
@@ -161,10 +170,113 @@ export const lossCauses = [
 ] as const;
 
 export const wetAreas = [
-  { value: "tub", label: "Keep the tub" },
-  { value: "shower", label: "Keep the shower" },
-  { value: "tub-to-shower", label: "Tub to shower" },
+  { value: "tub", label: "Tub" },
+  { value: "shower", label: "Shower" },
+  { value: "tub-to-shower", label: "Tub-to-shower conversion" },
+  { value: "both", label: "Both" },
   { value: "other", label: "Other" },
+] as const;
+
+export const existingFloors = [
+  { value: "carpet-pad", label: "Carpet and pad" },
+  { value: "floating-vinyl", label: "Floating vinyl or laminate" },
+  { value: "glue-vinyl", label: "Glue-down vinyl" },
+  { value: "tile", label: "Tile" },
+  { value: "glue-wood", label: "Glue-down wood" },
+  { value: "none", label: "None" },
+] as const;
+
+export const newFloors = [
+  { value: "hardwood-floating", label: "Hardwood, engineered, floating" },
+  { value: "hardwood-glue", label: "Hardwood, engineered, glue-down" },
+  { value: "hardwood-solid", label: "Hardwood, solid" },
+  { value: "vinyl-laminate", label: "Vinyl, LVP, or laminate" },
+  { value: "tile-standard", label: "Tile, standard" },
+  { value: "tile-large", label: "Tile, large format" },
+  { value: "unsure", label: "Not sure" },
+] as const;
+
+export const floorLevels = [
+  { value: "no", label: "No" },
+  { value: "little", label: "A little" },
+  { value: "lot", label: "A lot" },
+  { value: "unsure", label: "Not sure" },
+] as const;
+
+export const counterThickness = [
+  { value: "2cm", label: "2 cm" },
+  { value: "3cm", label: "3 cm" },
+  { value: "unsure", label: "Not sure" },
+] as const;
+
+export const sinkTypes = [
+  { value: "undermount", label: "Undermount" },
+  { value: "farmhouse", label: "Farmhouse" },
+  { value: "drop-in", label: "Drop-in" },
+] as const;
+
+export const backsplashStyles = [
+  { value: "slab", label: "Full-height slab" },
+  { value: "tile", label: "Tile" },
+] as const;
+
+export const cabinetPlans = [
+  { value: "prefab", label: "New prefab" },
+  { value: "custom", label: "New custom" },
+  { value: "refinish", label: "Refinish, stain, or reface what is there" },
+] as const;
+
+export const cabinetLights = [
+  { value: "recessed", label: "Recessed lights" },
+  { value: "pendant", label: "Pendant lights" },
+  { value: "both", label: "Both" },
+  { value: "none", label: "Neither" },
+  { value: "unsure", label: "Not sure" },
+] as const;
+
+export const applianceResets = [
+  { value: "dishwasher", label: "Dishwasher" },
+  { value: "disposal", label: "Disposal" },
+  { value: "cooktop", label: "Cooktop" },
+  { value: "otr-microwave", label: "Over-the-range microwave" },
+  { value: "oven", label: "Built-in oven" },
+] as const;
+
+export const showerDoors = [
+  { value: "frameless", label: "Frameless glass" },
+  { value: "framed", label: "Standard framed" },
+  { value: "slider", label: "Tub slider" },
+  { value: "curtain", label: "Curtain" },
+] as const;
+
+export const showerCurbs = [
+  { value: "curb", label: "Curb" },
+  { value: "curbless", label: "Curbless" },
+  { value: "unsure", label: "Not sure" },
+] as const;
+
+export const toiletPlans = [
+  { value: "keep", label: "Keep it" },
+  { value: "reset", label: "Remove and reset" },
+  { value: "new", label: "New toilet" },
+] as const;
+
+export const bathScopes = [
+  { value: "full", label: "Full bathroom" },
+  { value: "shower-only", label: "Shower or tub area only" },
+] as const;
+
+export const paintExteriorItems = [
+  { value: "siding", label: "Siding" },
+  { value: "soffit", label: "Soffit" },
+  { value: "fascia", label: "Fascia" },
+  { value: "doors", label: "Doors" },
+] as const;
+
+export const agreementAnswers = [
+  { value: "yes", label: "Yes" },
+  { value: "no", label: "No" },
+  { value: "unsure", label: "Not sure" },
 ] as const;
 
 export const vanitySinks = [
@@ -190,59 +302,95 @@ export const MEASURE_LABELS = {
   ceilingFt: "Ceiling height (ft)",
   baseCabinetLf: "Base cabinets (LF)",
   upperCabinetLf: "Upper cabinets (LF)",
+  cabinetPlan: "Cabinets",
+  cabinetStyle: "Cabinet style and finish",
+  cabinetHardware: "Cabinet hardware",
+  cabinetLights: "Lights",
+  appliancesReset: "Appliances to disconnect and reset",
   countertopLf: "Countertop (LF)",
   countertopDepth: "Countertop depth",
+  countertopSf: "Countertop (SF)",
+  countertopThickness: "Countertop thickness",
+  countertopEdge: "Edge profile",
   countertopCurrent: "Current countertop",
   countertopDesired: "Desired countertop",
+  sinkType: "Sink type",
+  sinkCutouts: "Sink cutouts",
+  backsplashStyle: "Backsplash style",
+  backsplashSf: "Backsplash (SF)",
+  removeCounters: "Remove the counter and backsplash",
   island: "Island",
   islandSize: "Island size",
-  backsplashSf: "Backsplash (SF)",
   plumbingAppliances: "Sink, faucet, or appliances to install or move",
   flooringIncluded: "Flooring in this kitchen",
   wetArea: "Tub or shower",
+  wetAreaOther: "Other tub or shower note",
+  bathScope: "Bathroom scope",
+  showerDoor: "Shower door",
+  showerCurb: "Shower entry",
   showerSize: "Shower size",
+  showerNiche: "Shower niche",
+  showerBench: "Shower bench",
   tileHeight: "Tile height",
   tileToCeiling: "Tile to the ceiling",
   vanityWidth: "Vanity width",
   vanitySinks: "Vanity sinks",
+  medicineCabinet: "Medicine cabinet",
+  mirrorLight: "Mirror and light",
+  toiletPlan: "Toilet",
   toiletCount: "Toilets",
+  movePlumbing: "Move any plumbing",
   fixturesToReplace: "Fixtures to replace",
   floorTileSf: "Floor tile (SF)",
   exhaustFan: "Exhaust fan",
   floorSf: "Floor area (SF)",
-  floorLengthFt: "Floor length (ft)",
-  floorWidthFt: "Floor width (ft)",
-  floorCurrent: "Current flooring",
-  floorNew: "New flooring",
+  floorCurrent: "Floor that is there now",
+  floorNew: "New floor",
+  floorLevel: "Floor leveling",
   stairSteps: "Stair steps",
-  baseboardLf: "Baseboard or quarter round (LF)",
+  baseboardLf: "Baseboard (LF)",
+  quarterRoundLf: "Quarter round (LF)",
+  tMoldLf: "T-shaped transition strip (LF)",
+  reducerLf: "Reducer transition strip (LF)",
   furnitureMove: "Furniture to move",
   subfloorNotes: "Subfloor notes",
   ceilingsIncluded: "Ceilings included",
+  wallSf: "Wall area (SF)",
   doorCount: "Doors",
   windowTrimCount: "Windows and trim",
   patchCount: "Drywall patches",
   patchSizes: "Patch sizes",
   texture: "Texture",
   colorChange: "Color change",
+  crownLf: "Crown molding (LF)",
+  closetShelves: "Closet or pantry shelves",
+  fixturesReset: "Ceiling fans and lights to remove and reset",
+  stairSpindles: "Stair spindles and handrail",
+  paintFinish: "Sheen, color, or need help choosing",
+  paintExterior: "Exterior paint",
   squares: "Roof squares",
   footprint: "House footprint",
-  roofStories: "Stories for the roof",
+  roofSeparate: "Separate structure",
+  roofStories: "Stories for this roof",
   pitch: "Roof pitch",
   roofMaterial: "Current roof material",
   roofLayers: "Layers",
   leaks: "Leaks",
   leakWhere: "Where it leaks",
   guttersLf: "Gutters (LF)",
+  ridgeLf: "Ridge (LF)",
+  valleyLf: "Valleys (LF)",
   skylightCount: "Skylights",
   ventCount: "Roof vents",
   wallHeight: "Wet or damaged wall height (ft)",
   affectedFlooring: "Flooring affected",
   cabinetsAffected: "Cabinets affected",
-  lossDate: "Date of loss",
   sourceStopped: "Source stopped",
   packOut: "Pack-out or contents needed",
   boardUp: "Board-up or tarp needed now",
+  attic: "Attic involved",
+  standingWater: "Standing water now",
+  sootWhere: "Smoke or soot",
   fenceLf: "Fence (LF)",
   fenceHeight: "Fence height",
   fenceMaterial: "Fence material",
@@ -261,18 +409,42 @@ export function optionLabel(list: readonly { value: string; label: string }[], v
   return list.find((item) => item.value === value)?.label ?? value;
 }
 
-export function tradeSelection(selected: readonly string[]) {
+export function tradeSelection(selected: readonly string[], flooringIncluded = "") {
   const has = (value: string) => selected.includes(value);
+  const flooring = has("flooring") || has("tile") || flooringIncluded === "yes";
   return {
     kitchen: has("kitchen"),
     bathroom: has("bathroom"),
-    flooring: has("flooring"),
+    tile: has("tile"),
+    flooring,
+    counters: has("countertops") || has("kitchen"),
+    cabinets: has("cabinetry") || has("kitchen"),
     paint: has("paint"),
     roofing: has("roofing"),
     loss: has("water") || has("fire"),
+    fire: has("fire"),
     fence: has("fence"),
     other: has("other"),
-    interior: has("kitchen") || has("bathroom") || has("flooring") || has("paint") || has("water") || has("fire") || has("other"),
-    ceiling: has("kitchen") || has("bathroom") || has("paint"),
+    interior:
+      has("kitchen") ||
+      has("bathroom") ||
+      has("flooring") ||
+      has("tile") ||
+      has("paint") ||
+      has("water") ||
+      has("fire") ||
+      has("other") ||
+      has("countertops") ||
+      has("cabinetry") ||
+      flooringIncluded === "yes",
+    ceiling:
+      has("kitchen") ||
+      has("bathroom") ||
+      has("paint") ||
+      has("flooring") ||
+      has("tile") ||
+      has("water") ||
+      has("fire") ||
+      flooringIncluded === "yes",
   };
 }

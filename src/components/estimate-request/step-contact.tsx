@@ -121,7 +121,7 @@ export function StepContact({
         </div>
       </div>
 
-      <label className="flex items-start gap-3 text-sm leading-relaxed">
+      <label id="textOptIn" data-field="textOptIn" className="flex scroll-mt-28 items-start gap-3 text-sm leading-relaxed">
         <input
           type="checkbox"
           className="mt-1 size-4 accent-accent"

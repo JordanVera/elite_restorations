@@ -19,8 +19,18 @@ export function StepReview({
   onEdit: (step: number) => void;
 }) {
   const sections = summarize(submission);
+  const thinPhotos = submission.rooms.filter((room) => photoCount(room.files) < 4);
   return (
     <div className="grid gap-8">
+      {thinPhotos.length > 0 && (
+        <div className="border border-border bg-surface/70 px-4 py-3 text-sm leading-relaxed text-muted-foreground">
+          {thinPhotos.map((room) => (
+            <p key={room.id}>
+              {room.name || "A room"} has {photoCount(room.files)} photo{photoCount(room.files) === 1 ? "" : "s"}. Four or more wide shots and close-ups help. You can still send this.
+            </p>
+          ))}
+        </div>
+      )}
       {sections.map((section) => (
         <section key={section.title} className="border-t border-border pt-5">
           <div className="flex items-baseline justify-between gap-4">
@@ -72,6 +82,10 @@ export function StepReview({
       </div>
     </div>
   );
+}
+
+function photoCount(files: { name: string }[]) {
+  return files.filter((file) => !/\.(mp4|webm|mov|pdf)$/i.test(file.name)).length;
 }
 
 export function reviewSubmission(draft: EstimateDraft, extras: Pick<EstimateSubmission, "rooms" | "adjusterFiles" | "submissionId" | "accessKey" | "website" | "startedAt" | "pageUrl">): EstimateSubmission {

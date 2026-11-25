@@ -24,13 +24,10 @@ import {
   type MeasureKey,
   propertyTypes,
   roles,
-  roofPitches,
   startWindows,
   stories,
   trades,
   US_STATES,
-  vanitySinks,
-  wetAreas,
 } from "@/lib/estimate-request/options";
 
 const values = <T extends readonly { value: string }[]>(list: T) =>
@@ -55,8 +52,6 @@ const isEmail = (value: string) => z.email().safeParse(value).success;
 const requiredEmail = text(200).refine(isEmail, emailMessage);
 const optionalEmail = text(200).refine((value) => value.length === 0 || isEmail(value), emailMessage);
 
-const yn = z.enum(["", "yes", "no"]);
-
 export const addressSchema = z.object({
   street: text(120),
   unit: text(40),
@@ -67,79 +62,15 @@ export const addressSchema = z.object({
 
 export type AddressDraft = z.output<typeof addressSchema>;
 
-const measureText = text(120);
+const measureText = text(160);
 const measureLong = text(400);
+const LONG_MEASURES = new Set<MeasureKey>(["plumbingAppliances", "fixturesToReplace", "subfloorNotes", "appliancesReset", "paintExterior", "sootWhere", "closetShelves", "fixturesReset", "stairSpindles"]);
 
-export const measuresSchema = z.object({
-  lengthFt: measureText,
-  widthFt: measureText,
-  ceilingFt: measureText,
-  baseCabinetLf: measureText,
-  upperCabinetLf: measureText,
-  countertopLf: measureText,
-  countertopDepth: measureText,
-  countertopCurrent: measureText,
-  countertopDesired: measureText,
-  island: yn,
-  islandSize: measureText,
-  backsplashSf: measureText,
-  plumbingAppliances: measureLong,
-  flooringIncluded: yn,
-  wetArea: z.enum(["", ...values(wetAreas)]),
-  showerSize: measureText,
-  tileHeight: measureText,
-  tileToCeiling: yn,
-  vanityWidth: measureText,
-  vanitySinks: z.enum(["", ...values(vanitySinks)]),
-  toiletCount: measureText,
-  fixturesToReplace: measureLong,
-  floorTileSf: measureText,
-  exhaustFan: yn,
-  floorSf: measureText,
-  floorLengthFt: measureText,
-  floorWidthFt: measureText,
-  floorCurrent: measureText,
-  floorNew: measureText,
-  stairSteps: measureText,
-  baseboardLf: measureText,
-  furnitureMove: yn,
-  subfloorNotes: measureLong,
-  ceilingsIncluded: yn,
-  doorCount: measureText,
-  windowTrimCount: measureText,
-  patchCount: measureText,
-  patchSizes: measureText,
-  texture: measureText,
-  colorChange: measureText,
-  squares: measureText,
-  footprint: measureText,
-  roofStories: measureText,
-  pitch: z.enum(["", ...values(roofPitches)]),
-  roofMaterial: measureText,
-  roofLayers: measureText,
-  leaks: yn,
-  leakWhere: measureText,
-  guttersLf: measureText,
-  skylightCount: measureText,
-  ventCount: measureText,
-  wallHeight: measureText,
-  affectedFlooring: measureText,
-  cabinetsAffected: measureText,
-  lossDate: text(20),
-  sourceStopped: yn,
-  packOut: yn,
-  boardUp: yn,
-  fenceLf: measureText,
-  fenceHeight: measureText,
-  fenceMaterial: measureText,
-  gateCount: measureText,
-  deckLengthFt: measureText,
-  deckWidthFt: measureText,
-  deckHeight: measureText,
-  deckMaterial: measureText,
-  railings: measureText,
-  deckStairs: measureText,
-});
+export const measuresSchema = z.object(
+  Object.fromEntries(
+    (Object.keys(MEASURE_LABELS) as MeasureKey[]).map((key) => [key, LONG_MEASURES.has(key) ? measureLong : measureText]),
+  ) as unknown as Record<MeasureKey, z.ZodType<string>>,
+);
 
 export type Measures = z.output<typeof measuresSchema>;
 
@@ -161,6 +92,10 @@ const roomShape = {
   tradeOther: text(160),
   description: text(4000).refine((value) => value.length >= 8, "Describe the work in a few words."),
   measures: measuresSchema,
+  upgrades: text(800),
+  selections: text(800),
+  roomMaterials: z.enum(["", "elite", "mine", "mixed"]),
+  roomMaterialsNotes: text(300),
 };
 
 function isRealDate(value: string) {
@@ -180,7 +115,6 @@ type RoomLike = {
   areaType: string;
   trades: readonly string[];
   tradeOther: string;
-  measures: { lossDate: string };
 };
 
 function refineRoom(room: RoomLike, ctx: z.RefinementCtx) {
@@ -193,13 +127,6 @@ function refineRoom(room: RoomLike, ctx: z.RefinementCtx) {
   const unique = new Set(room.trades);
   if (unique.size !== room.trades.length) {
     ctx.addIssue({ code: "custom", path: ["trades"], message: "Each trade should be selected once." });
-  }
-  if (room.measures.lossDate && !isReasonableLossDate(room.measures.lossDate)) {
-    ctx.addIssue({
-      code: "custom",
-      path: ["measures", "lossDate"],
-      message: "Enter the date of loss, or leave it blank.",
-    });
   }
 }
 
@@ -368,16 +295,23 @@ const insuranceShape = {
   adjusterName: text(120),
   adjusterPhone: optionalPhone,
   adjusterEmail: optionalEmail,
+  adjusterLater: z.boolean(),
   adjusterInspected: z.enum(["", "yes", "no"]),
   deductible: text(40),
+  agreement: z.enum(["", "yes", "no", "unsure"]),
 };
 
 type InsuranceLike = {
   claim: string;
   carrier: string;
+  claimNumber: string;
   lossDate: string;
   cause: string;
   causeOther: string;
+  adjusterName: string;
+  adjusterPhone: string;
+  adjusterEmail: string;
+  adjusterLater: boolean;
   adjusterInspected: string;
 };
 
@@ -386,9 +320,15 @@ function refineInsurance(value: InsuranceLike, ctx: z.RefinementCtx) {
     ctx.addIssue({ code: "custom", path: ["claim"], message: "Tell us if this is an insurance claim." });
     return;
   }
+  if (value.lossDate && !isReasonableLossDate(value.lossDate)) {
+    ctx.addIssue({ code: "custom", path: ["lossDate"], message: "Enter the date of loss, or leave it blank." });
+  }
   if (value.claim !== "yes") return;
   if (value.carrier.trim().length < 2) {
     ctx.addIssue({ code: "custom", path: ["carrier"], message: "Enter the insurance carrier." });
+  }
+  if (value.claimNumber.trim().length < 1) {
+    ctx.addIssue({ code: "custom", path: ["claimNumber"], message: "Enter the claim number." });
   }
   if (!isReasonableLossDate(value.lossDate)) {
     ctx.addIssue({ code: "custom", path: ["lossDate"], message: "Enter the date of loss." });
@@ -398,6 +338,29 @@ function refineInsurance(value: InsuranceLike, ctx: z.RefinementCtx) {
   }
   if (value.cause === "other" && value.causeOther.trim().length < 2) {
     ctx.addIssue({ code: "custom", path: ["causeOther"], message: "Describe the cause." });
+  }
+  if (!value.adjusterLater) {
+    if (value.adjusterName.trim().length < 2) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["adjusterName"],
+        message: "Enter the adjuster's name, or check that you don't have it yet.",
+      });
+    }
+    if (!isUsablePhone(value.adjusterPhone)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["adjusterPhone"],
+        message: "Enter the adjuster's phone, or check that you don't have it yet.",
+      });
+    }
+    if (!isEmail(value.adjusterEmail)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["adjusterEmail"],
+        message: "Enter the adjuster's email, or check that you don't have it yet.",
+      });
+    }
   }
   if (value.adjusterInspected !== "yes" && value.adjusterInspected !== "no") {
     ctx.addIssue({
@@ -571,6 +534,10 @@ export function emptyRoom(): RoomDraft {
     tradeOther: "",
     description: "",
     measures: emptyMeasures(),
+    upgrades: "",
+    selections: "",
+    roomMaterials: "",
+    roomMaterialsNotes: "",
   };
 }
 
@@ -616,8 +583,10 @@ export function emptyEstimate(): EstimateDraft {
     adjusterName: "",
     adjusterPhone: "",
     adjusterEmail: "",
+    adjusterLater: false,
     adjusterInspected: "",
     deductible: "",
+    agreement: "",
     consent: false,
   };
 }
@@ -689,14 +658,16 @@ export function hydrateDraft(raw: unknown): EstimateDraft | null {
     claim: asYn(saved.claim),
     carrier: stringField(saved.carrier, 120),
     claimNumber: stringField(saved.claimNumber, 80),
-    lossDate: stringField(saved.lossDate, 20),
+    lossDate: stringField(saved.lossDate, 20) || roomLossDate(saved.rooms),
     cause: asChoice(saved.cause, CAUSE, ""),
     causeOther: stringField(saved.causeOther, 160),
     adjusterName: stringField(saved.adjusterName, 120),
     adjusterPhone: stringField(saved.adjusterPhone, 30),
     adjusterEmail: stringField(saved.adjusterEmail, 200),
+    adjusterLater: saved.adjusterLater === true,
     adjusterInspected: asYn(saved.adjusterInspected),
     deductible: stringField(saved.deductible, 40),
+    agreement: saved.agreement === "yes" || saved.agreement === "no" || saved.agreement === "unsure" ? saved.agreement : "",
     consent: false,
   };
 }
@@ -737,7 +708,21 @@ function hydrateRoom(value: unknown): RoomDraft | null {
     tradeOther: stringField(room.tradeOther, 160),
     description: stringField(room.description, 4000),
     measures,
+    upgrades: stringField(room.upgrades, 800),
+    selections: stringField(room.selections, 800),
+    roomMaterials: room.roomMaterials === "elite" || room.roomMaterials === "mine" || room.roomMaterials === "mixed" ? room.roomMaterials : "",
+    roomMaterialsNotes: stringField(room.roomMaterialsNotes, 300),
   };
+}
+
+function roomLossDate(rooms: unknown): string {
+  if (!Array.isArray(rooms)) return "";
+  for (const room of rooms) {
+    if (!room || typeof room !== "object") continue;
+    const measures = (room as { measures?: { lossDate?: unknown } }).measures;
+    if (typeof measures?.lossDate === "string" && measures.lossDate.trim()) return measures.lossDate.slice(0, 20);
+  }
+  return "";
 }
 
 export function stepForErrors(errors: FieldErrors): number {
@@ -746,7 +731,7 @@ export function stepForErrors(errors: FieldErrors): number {
   if (keys.some((key) => key.startsWith("rooms"))) return 1;
   const projectKeys = ["finish", "startWhen", "budget", "materials", "occupied", "pets", "petNotes", "accessNotes", "bestTime", "contactMethod"];
   if (keys.some((key) => projectKeys.includes(key))) return 2;
-  const insuranceKeys = ["claim", "carrier", "claimNumber", "lossDate", "cause", "causeOther", "adjusterName", "adjusterPhone", "adjusterEmail", "adjusterInspected", "deductible", "adjusterFiles"];
+  const insuranceKeys = ["claim", "carrier", "claimNumber", "lossDate", "cause", "causeOther", "adjusterName", "adjusterPhone", "adjusterEmail", "adjusterLater", "adjusterInspected", "deductible", "agreement", "adjusterFiles"];
   if (keys.some((key) => insuranceKeys.some((name) => key === name || key.startsWith(`${name}.`)))) return 3;
   return 0;
 }

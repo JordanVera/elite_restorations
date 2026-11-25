@@ -1,11 +1,12 @@
 "use client";
 
 import { AreaControl, CheckCards, SelectControl, TextControl } from "@/components/estimate-request/controls";
+import { ChoiceGroup } from "@/components/form-fields";
 import { FilePicker } from "@/components/estimate-request/file-picker";
 import type { RoomFiles } from "@/components/estimate-request/file-types";
 import { MeasureFields } from "@/components/estimate-request/measure-fields";
 import { MAX_ROOM_FILES, MAX_ROOMS } from "@/lib/estimate-request/files";
-import { MEASURE_TIPS, PHOTO_GUIDE, areaTypes, optionLabel, trades, type MeasureKey } from "@/lib/estimate-request/options";
+import { MEASURE_TIPS, PHOTO_GUIDE, areaTypes, optionLabel, roomMaterialSources, trades, type MeasureKey } from "@/lib/estimate-request/options";
 import type { EstimateDraft, FieldErrors, RoomDraft } from "@/lib/estimate-request/schema";
 
 const MEDIA_ACCEPT = "image/*,video/mp4,video/webm,video/quicktime,.pdf,.jpg,.jpeg,.png,.webp,.heic,.heif,.mp4,.webm,.mov";
@@ -140,13 +141,58 @@ export function StepRooms({
                 disabled={disabled}
               />
 
+              <ChoiceGroup
+                name={`room-${index}-materials`}
+                legend="Who is supplying materials for this room?"
+                options={roomMaterialSources}
+                value={room.roomMaterials}
+                onChange={(roomMaterials) => update(index, { roomMaterials: roomMaterials as RoomDraft["roomMaterials"] })}
+                disabled={disabled}
+              />
+              {room.roomMaterials === "mixed" && (
+                <TextControl
+                  id={`room-${index}-materials-notes`}
+                  field={`${prefix}.roomMaterialsNotes`}
+                  label="Which materials are you supplying?"
+                  value={room.roomMaterialsNotes}
+                  onChange={(roomMaterialsNotes) => update(index, { roomMaterialsNotes })}
+                  optional
+                  disabled={disabled}
+                />
+              )}
+
               <MeasureFields
                 roomIndex={index}
                 trades={room.trades}
                 measures={room.measures}
                 errors={errors}
                 disabled={disabled}
+                lossDate={values.lossDate}
+                propertyStories={values.stories}
                 onChange={(key: MeasureKey, value) => update(index, { measures: { ...room.measures, [key]: value } })}
+              />
+
+              <AreaControl
+                id={`room-${index}-upgrades`}
+                field={`${prefix}.upgrades`}
+                label="Optional upgrades you're interested in"
+                value={room.upgrades}
+                onChange={(upgrades) => update(index, { upgrades })}
+                hint="Separate from the main work. For example, a thicker countertop slab, frameless shower glass, fireplace tile, or island cabinets."
+                optional
+                disabled={disabled}
+                rows={3}
+              />
+              <AreaControl
+                id={`room-${index}-selections`}
+                field={`${prefix}.selections`}
+                label="Selections"
+                value={room.selections}
+                onChange={(selections) => update(index, { selections })}
+                hint="Brand, color, model, or size for tile, cabinets, counters, fixtures, or paint. Or write that you need help choosing."
+                optional
+                disabled={disabled}
+                rows={3}
               />
 
               <div>

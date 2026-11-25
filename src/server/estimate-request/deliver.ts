@@ -6,11 +6,11 @@ import { estimateFileUrl } from "@/lib/estimate-request/files";
 import type { EstimateSubmission } from "@/lib/estimate-request/schema";
 import {
   estimateReference,
-  sectionsToCsv,
+  quantitiesToCsv,
   sectionsToHtml,
   sectionsToText,
+  staffSections,
   submissionDocument,
-  summarize,
 } from "@/lib/estimate-request/summary";
 import { site } from "@/lib/site";
 import { sendEmail } from "@/server/email";
@@ -66,12 +66,12 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
 
   const reference = estimateReference(submission.submissionId);
   const links = fileLinkMap(submission, publicOrigin(request));
-  const sections = summarize(submission, links);
+  const sections = staffSections(submission, links);
   const name = `${submission.firstName} ${submission.lastName}`.trim();
   const text = sectionsToText(sections, reference);
   const html = sectionsToHtml(sections, reference, name);
   const json = Buffer.from(JSON.stringify(submissionDocument(submission, links, reference), null, 2), "utf8");
-  const csv = Buffer.from(sectionsToCsv(sections), "utf8");
+  const csv = Buffer.from(quantitiesToCsv(submission), "utf8");
   const attachments = [
     { filename: `${reference}.json`, content: json, contentType: "application/json" },
     { filename: `${reference}.csv`, content: csv, contentType: "text/csv" },

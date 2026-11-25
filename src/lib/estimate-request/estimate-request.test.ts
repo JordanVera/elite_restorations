@@ -5,7 +5,7 @@ import { describe, it } from "node:test";
 
 import { site } from "@/lib/site";
 import { buildEstimatePath, parseEstimatePath, sniffEstimateExt } from "@/lib/estimate-request/files";
-import { OFFICE_PHONE, THANK_YOU } from "@/lib/estimate-request/options";
+import { OFFICE_PHONE, THANK_YOU, tradeSelection } from "@/lib/estimate-request/options";
 import {
   emptyEstimate,
   hydrateDraft,
@@ -14,7 +14,8 @@ import {
   type EstimateDraft,
   type EstimateSubmission,
 } from "@/lib/estimate-request/schema";
-import { sectionsToCsv, sectionsToText, summarize } from "@/lib/estimate-request/summary";
+import { quantitiesToCsv, sectionsToCsv, sectionsToText, staffSections, summarize } from "@/lib/estimate-request/summary";
+import { JOBBER_TEMPLATES, countertopSquareFeet, isHighCeiling, suggestedTemplates, wallSquareFeet } from "@/lib/estimate-request/templates";
 import { estimateTiming } from "@/lib/estimate-request/timing";
 import { isHoneypotWebsite } from "@/lib/estimate-request/spam";
 import { estimateRecipient } from "@/server/estimate-request/deliver";
@@ -109,10 +110,15 @@ describe("estimate request schema", () => {
     assert.ok(errors.carrier);
     assert.ok(errors.lossDate);
     assert.ok(errors.cause);
+    assert.ok(errors.claimNumber);
+    assert.ok(errors.adjusterName);
     draft.carrier = "State Farm";
+    draft.claimNumber = "CLM-1001";
     draft.lossDate = "2026-05-01";
     draft.cause = "hail";
+    draft.adjusterLater = true;
     draft.adjusterInspected = "no";
+    draft.agreement = "";
     assert.equal(Object.keys(validateStep(3, draft)).length, 0);
   });
 
@@ -162,6 +168,33 @@ describe("estimate request summary", () => {
   it("escapes spreadsheet formulas in the CSV", () => {
     const csv = sectionsToCsv([{ title: "Room", step: 1, rows: [{ label: "Note", value: "=cmd" }] }]);
     assert.match(csv, /"'=cmd"/);
+  });
+
+  it("suggests templates and keeps high walls out of the customer summary", () => {
+    const submission = validSubmission();
+    submission.rooms[0].measures.ceilingFt = "12";
+    submission.rooms[0].measures.flooringIncluded = "yes";
+    submission.rooms[0].measures.floorNew = "vinyl-laminate";
+    const names = suggestedTemplates(submission.rooms[0].trades, submission.rooms[0].measures);
+    assert.ok(names.includes(JOBBER_TEMPLATES.kitchen));
+    assert.ok(names.includes(JOBBER_TEMPLATES.vinyl));
+    const customer = sectionsToText(summarize(submission), "EST-TEST");
+    assert.doesNotMatch(customer, /High walls/);
+    assert.doesNotMatch(customer, /UPDATED -/);
+    const staff = sectionsToText(staffSections(submission), "EST-TEST");
+    assert.match(staff, /Jobber New Client/);
+    assert.match(staff, /First name: Ada/);
+    assert.match(staff, /High walls/);
+    assert.match(staff, /UPDATED - Kitchen Remodel Template/);
+    assert.equal(tradeSelection(["kitchen"], "yes").flooring, true);
+    assert.equal(tradeSelection(["kitchen"], "").flooring, false);
+    assert.equal(countertopSquareFeet("10", "25 in"), 20.8);
+    assert.equal(wallSquareFeet("12", "10", "8"), 352);
+    assert.equal(isHighCeiling("12"), true);
+    assert.equal(isHighCeiling("10"), false);
+    const csv = quantitiesToCsv(submission);
+    assert.match(csv, /^Room,Trade,Template,Line item,Quantity,Unit,Notes,Optional/);
+    assert.match(csv, /"LF"/);
   });
 });
 

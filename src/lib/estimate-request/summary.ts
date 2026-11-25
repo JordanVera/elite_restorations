@@ -1,26 +1,43 @@
 import {
+  agreementAnswers,
+  applianceResets,
   areaTypes,
+  backsplashStyles,
+  bathScopes,
   budgetRanges,
+  cabinetLights,
+  cabinetPlans,
   contactMethods,
   contactTimes,
+  counterThickness,
+  existingFloors,
   finishLevels,
+  floorLevels,
   hearAbout,
   lossCauses,
   materialSources,
   MEASURE_LABELS,
   type MeasureKey,
+  newFloors,
   optionLabel,
+  paintExteriorItems,
   propertyTypes,
   roles,
   roofPitches,
+  roomMaterialSources,
+  showerCurbs,
+  showerDoors,
+  sinkTypes,
   startWindows,
   STATE_NAMES,
   stories,
+  toiletPlans,
   trades,
   vanitySinks,
   wetAreas,
   yesNo,
 } from "@/lib/estimate-request/options";
+import { isHighCeiling, roomQuantities, suggestedTemplates } from "@/lib/estimate-request/templates";
 import type { AddressDraft, EstimateSubmission, Measures } from "@/lib/estimate-request/schema";
 
 export type SummaryRow = { label: string; value: string; href?: string };
@@ -37,7 +54,38 @@ const YN_KEYS = new Set<MeasureKey>([
   "sourceStopped",
   "packOut",
   "boardUp",
+  "removeCounters",
+  "showerNiche",
+  "showerBench",
+  "medicineCabinet",
+  "movePlumbing",
+  "attic",
+  "standingWater",
+  "roofSeparate",
 ]);
+
+const CHOICE_LISTS: Partial<Record<MeasureKey, readonly { value: string; label: string }[]>> = {
+  wetArea: wetAreas,
+  vanitySinks,
+  pitch: roofPitches,
+  floorCurrent: existingFloors,
+  floorNew: newFloors,
+  floorLevel: floorLevels,
+  countertopThickness: counterThickness,
+  sinkType: sinkTypes,
+  backsplashStyle: backsplashStyles,
+  cabinetPlan: cabinetPlans,
+  cabinetLights,
+  showerDoor: showerDoors,
+  showerCurb: showerCurbs,
+  toiletPlan: toiletPlans,
+  bathScope: bathScopes,
+};
+
+const TOKEN_LISTS: Partial<Record<MeasureKey, readonly { value: string; label: string }[]>> = {
+  appliancesReset: applianceResets,
+  paintExterior: paintExteriorItems,
+};
 
 export function estimateReference(submissionId: string): string {
   return `EST-${submissionId.slice(0, 8).toUpperCase()}`;
@@ -84,10 +132,18 @@ export function summarize(submission: EstimateSubmission, links: Record<string, 
     ];
     if (room.tradeOther) rows.push({ label: "Other trade", value: room.tradeOther });
     rows.push({ label: "Work", value: room.description });
+    if (room.roomMaterials) {
+      rows.push({
+        label: "Materials for this room",
+        value: [optionLabel(roomMaterialSources, room.roomMaterials), room.roomMaterialsNotes].filter(Boolean).join(" · "),
+      });
+    }
     for (const key of Object.keys(MEASURE_LABELS) as MeasureKey[]) {
       const value = displayMeasure(key, room.measures[key]);
       if (value) rows.push({ label: MEASURE_LABELS[key], value });
     }
+    if (room.upgrades) rows.push({ label: "Optional upgrades", value: room.upgrades });
+    if (room.selections) rows.push({ label: "Selections", value: room.selections });
     room.files.forEach((file, fileIndex) => {
       rows.push(fileRow(room.files.length > 1 ? `File ${fileIndex + 1}` : "File", file, links));
     });
@@ -149,10 +205,10 @@ function displayMeasure(key: MeasureKey, value: string) {
   const trimmed = value.trim();
   if (!trimmed) return "";
   if (YN_KEYS.has(key)) return yesNoLabel(trimmed);
-  if (key === "wetArea") return optionLabel(wetAreas, trimmed);
-  if (key === "vanitySinks") return optionLabel(vanitySinks, trimmed);
-  if (key === "pitch") return optionLabel(roofPitches, trimmed);
-  if (key === "lossDate") return formatDate(trimmed);
+  const choices = CHOICE_LISTS[key];
+  if (choices) return optionLabel(choices, trimmed);
+  const tokens = TOKEN_LISTS[key];
+  if (tokens) return trimmed.split(",").filter(Boolean).map((item) => optionLabel(tokens, item)).join(", ");
   return trimmed;
 }
 
@@ -190,6 +246,26 @@ export function sectionsToText(sections: readonly SummarySection[], reference: s
 }
 
 export function sectionsToCsv(sections: readonly SummarySection[]): string {
+  return quantitiesToCsvFromSections(sections);
+}
+
+export function quantitiesToCsv(submission: EstimateSubmission): string {
+  const lines = ["Room,Trade,Template,Line item,Quantity,Unit,Notes,Optional"];
+  for (const room of submission.rooms) {
+    const templates = suggestedTemplates(room.trades, room.measures).join("; ");
+    for (const row of roomQuantities(room.name || "Room", room.trades, room.measures, submission.stories)) {
+      lines.push(
+        [row.room, row.trade, row.template || templates, row.item, row.quantity, row.unit, row.notes, row.optional ? "Y" : "N"].map(csvCell).join(","),
+      );
+    }
+    if (room.upgrades) {
+      lines.push([room.name || "Room", "Upgrades", templates, "Optional upgrades", "", "", room.upgrades, "Y"].map(csvCell).join(","));
+    }
+  }
+  return lines.join("\r\n");
+}
+
+function quantitiesToCsvFromSections(sections: readonly SummarySection[]): string {
   const lines = ["Section,Field,Value"];
   for (const section of sections) {
     for (const row of section.rows) {
@@ -210,6 +286,35 @@ export function submissionDocument(submission: EstimateSubmission, links: Record
     reference,
     company: "Elite Restorations",
     kind: "Project estimate request",
+    jobberClient: {
+      firstName: submission.firstName,
+      lastName: submission.lastName,
+      company: submission.company,
+      mobile: submission.mobilePhone,
+      phone2: submission.secondPhone,
+      email: submission.email,
+      okToText: submission.textOptIn,
+      serviceStreet: submission.serviceAddress.street,
+      unit: submission.serviceAddress.unit,
+      city: submission.serviceAddress.city,
+      state: submission.serviceAddress.state,
+      zip: submission.serviceAddress.zip,
+      billingSame: submission.billingSame,
+      billingStreet: submission.billingSame === "no" ? submission.billingAddress.street : "",
+      billingUnit: submission.billingSame === "no" ? submission.billingAddress.unit : "",
+      billingCity: submission.billingSame === "no" ? submission.billingAddress.city : "",
+      billingState: submission.billingSame === "no" ? submission.billingAddress.state : "",
+      billingZip: submission.billingSame === "no" ? submission.billingAddress.zip : "",
+      leadSource: submission.heard,
+      referredBy: submission.referredBy,
+      propertyType: submission.propertyType,
+      role: submission.role,
+      ownerName: submission.role === "owner" ? "" : submission.ownerName,
+      ownerPhone: submission.role === "owner" ? "" : submission.ownerPhone,
+      ownerEmail: submission.role === "owner" ? "" : submission.ownerEmail,
+      yearBuilt: submission.yearBuilt,
+      stories: submission.stories,
+    },
     submissionId: submission.submissionId,
     pageUrl: submission.pageUrl || undefined,
     contact: {
@@ -238,11 +343,19 @@ export function submissionDocument(submission: EstimateSubmission, links: Record
     },
     rooms: submission.rooms.map((room) => ({
       name: room.name,
-      area: optionLabel(areaTypes, room.areaType),
-      trades: room.trades.map((trade) => optionLabel(trades, trade)),
+      area: { value: room.areaType, label: optionLabel(areaTypes, room.areaType) },
+      trades: room.trades.map((trade) => ({ value: trade, label: optionLabel(trades, trade) })),
+      suggestedTemplates: suggestedTemplates(room.trades, room.measures),
+      highWalls: isHighCeiling(room.measures.ceilingFt),
       otherTrade: room.tradeOther || undefined,
       description: room.description,
+      materials: room.roomMaterials
+        ? { value: room.roomMaterials, label: optionLabel(roomMaterialSources, room.roomMaterials), notes: room.roomMaterialsNotes }
+        : undefined,
       measurements: filledMeasures(room.measures),
+      quantities: roomQuantities(room.name || "Room", room.trades, room.measures, submission.stories),
+      upgrades: room.upgrades || undefined,
+      selections: room.selections || undefined,
       files: room.files.map((file) => ({ name: file.name, url: links[file.pathname] })),
       sketch: room.sketch ? { name: room.sketch.name, url: links[room.sketch.pathname] } : undefined,
     })),
@@ -257,28 +370,142 @@ export function submissionDocument(submission: EstimateSubmission, links: Record
       accessNotes: submission.accessNotes || undefined,
     },
     insurance: {
-      claim: yesNoLabel(submission.claim),
+      claim: { value: submission.claim, label: yesNoLabel(submission.claim) },
       carrier: submission.carrier || undefined,
       claimNumber: submission.claimNumber || undefined,
-      dateOfLoss: submission.lossDate ? formatDate(submission.lossDate) : undefined,
-      cause: submission.cause ? (submission.cause === "other" ? submission.causeOther : optionLabel(lossCauses, submission.cause)) : undefined,
-      adjuster: submission.adjusterName || undefined,
-      adjusterPhone: submission.adjusterPhone || undefined,
-      adjusterEmail: submission.adjusterEmail || undefined,
-      adjusterInspected: submission.adjusterInspected ? yesNoLabel(submission.adjusterInspected) : undefined,
+      dateOfLoss: submission.lossDate ? { value: submission.lossDate, label: formatDate(submission.lossDate) } : undefined,
+      cause: submission.cause
+        ? { value: submission.cause, label: submission.cause === "other" ? submission.causeOther : optionLabel(lossCauses, submission.cause) }
+        : undefined,
+      adjuster: {
+        name: submission.adjusterName,
+        phone: submission.adjusterPhone,
+        email: submission.adjusterEmail,
+        later: submission.adjusterLater,
+      },
+      adjusterInspected: submission.adjusterInspected ? { value: submission.adjusterInspected, label: yesNoLabel(submission.adjusterInspected) } : undefined,
       deductible: submission.deductible || undefined,
+      agreement: submission.agreement ? { value: submission.agreement, label: optionLabel(agreementAnswers, submission.agreement) } : undefined,
       files: submission.adjusterFiles.map((file) => ({ name: file.name, url: links[file.pathname] })),
     },
   };
 }
 
 function filledMeasures(measures: Measures) {
-  const out: Record<string, string> = {};
+  const out: Record<string, { value: string; label: string; display: string }> = {};
   for (const key of Object.keys(MEASURE_LABELS) as MeasureKey[]) {
-    const value = displayMeasure(key, measures[key]);
-    if (value) out[MEASURE_LABELS[key]] = value;
+    const display = displayMeasure(key, measures[key]);
+    if (!display) continue;
+    out[key] = { value: measures[key], label: MEASURE_LABELS[key], display };
   }
   return out;
+}
+
+export function staffSections(submission: EstimateSubmission, links: Record<string, string> = {}): SummarySection[] {
+  const blank = (value: string) => value.trim() || "—";
+  const jobber: SummaryRow[] = [
+    { label: "First name", value: submission.firstName },
+    { label: "Last name", value: submission.lastName },
+    { label: "Company", value: blank(submission.company) },
+    { label: "Mobile", value: submission.mobilePhone },
+    { label: "Phone 2", value: blank(submission.secondPhone) },
+    { label: "Email", value: submission.email },
+    { label: "OK to text", value: submission.textOptIn ? "Yes" : "No" },
+    { label: "Service street", value: submission.serviceAddress.street },
+    { label: "Unit", value: blank(submission.serviceAddress.unit) },
+    { label: "City", value: submission.serviceAddress.city },
+    { label: "State", value: submission.serviceAddress.state },
+    { label: "ZIP", value: submission.serviceAddress.zip },
+    { label: "Billing same?", value: submission.billingSame === "yes" ? "Yes" : "No" },
+  ];
+  if (submission.billingSame !== "yes") {
+    jobber.push(
+      { label: "Billing street", value: submission.billingAddress.street },
+      { label: "Billing unit", value: blank(submission.billingAddress.unit) },
+      { label: "Billing city", value: submission.billingAddress.city },
+      { label: "Billing state", value: submission.billingAddress.state },
+      { label: "Billing ZIP", value: submission.billingAddress.zip },
+    );
+  }
+  jobber.push(
+    { label: "Lead source", value: heardLine(submission) },
+    { label: "Property type", value: optionLabel(propertyTypes, submission.propertyType) },
+    { label: "Role", value: optionLabel(roles, submission.role) },
+  );
+  if (submission.role !== "owner") {
+    jobber.push(
+      { label: "Owner", value: submission.ownerName },
+      { label: "Owner phone", value: submission.ownerPhone },
+      { label: "Owner email", value: submission.ownerEmail },
+    );
+  }
+  jobber.push(
+    { label: "Year built", value: blank(submission.yearBuilt) },
+    { label: "Stories", value: optionLabel(stories, submission.stories) },
+  );
+
+  const header: SummaryRow[] = [
+    { label: "Finish level", value: optionLabel(finishLevels, submission.finish) },
+    { label: "Materials supplier", value: materialsSummary(submission) },
+    { label: "Insurance", value: yesNoLabel(submission.claim) },
+  ];
+
+  const rooms = submission.rooms.map((room, index) => {
+    const templates = suggestedTemplates(room.trades, room.measures);
+    const rows: SummaryRow[] = [
+      { label: "Suggested templates", value: templates.length ? templates.join("\n") : "None suggested" },
+    ];
+    if (isHighCeiling(room.measures.ceilingFt)) {
+      rows.push({ label: "High walls", value: `Ceiling is ${room.measures.ceilingFt} ft` });
+    }
+    for (const item of roomQuantities(room.name || `Room ${index + 1}`, room.trades, room.measures, submission.stories)) {
+      rows.push({ label: item.item, value: `${item.quantity} ${item.unit}${item.notes ? ` · ${item.notes}` : ""}` });
+    }
+    if (room.upgrades) rows.push({ label: "Optional upgrades", value: room.upgrades });
+    if (room.selections) rows.push({ label: "Selections", value: room.selections });
+    if (room.description) rows.push({ label: "Work", value: room.description });
+    room.files.forEach((file, fileIndex) => rows.push(fileRow(room.files.length > 1 ? `File ${fileIndex + 1}` : "File", file, links)));
+    if (room.sketch) rows.push(fileRow("Sketch", room.sketch, links));
+    return { title: room.name ? `Room ${index + 1} · ${room.name}` : `Room ${index + 1}`, step: 1, rows };
+  });
+
+  const insurance: SummaryRow[] = [{ label: "Insurance claim", value: yesNoLabel(submission.claim) }];
+  if (submission.claim === "yes" || submission.lossDate || submission.agreement) {
+    if (submission.claim === "yes") {
+      insurance.push(
+        { label: "Carrier", value: submission.carrier },
+        { label: "Claim number", value: submission.claimNumber },
+        { label: "Date of loss", value: formatDate(submission.lossDate) },
+        { label: "Cause", value: submission.cause === "other" ? submission.causeOther : optionLabel(lossCauses, submission.cause) },
+        { label: "Adjuster", value: submission.adjusterLater ? "Not available yet" : submission.adjusterName },
+        { label: "Adjuster phone", value: submission.adjusterLater ? "—" : submission.adjusterPhone },
+        { label: "Adjuster email", value: submission.adjusterLater ? "—" : submission.adjusterEmail },
+        { label: "Adjuster inspected", value: yesNoLabel(submission.adjusterInspected) },
+        { label: "Deductible", value: blank(submission.deductible) },
+      );
+    } else if (submission.lossDate) {
+      insurance.push({ label: "Date of loss", value: formatDate(submission.lossDate) });
+    }
+    if (submission.agreement) insurance.push({ label: "Work agreement", value: optionLabel(agreementAnswers, submission.agreement) });
+    submission.adjusterFiles.forEach((file, index) => {
+      insurance.push(fileRow(submission.adjusterFiles.length > 1 ? `Adjuster file ${index + 1}` : "Adjuster file", file, links));
+    });
+  }
+
+  return [
+    { title: "Jobber New Client", step: 0, rows: jobber },
+    { title: "Project", step: 2, rows: header },
+    ...rooms,
+    { title: "Insurance", step: 3, rows: insurance },
+  ];
+}
+
+function materialsSummary(submission: EstimateSubmission) {
+  const project = optionLabel(materialSources, submission.materials);
+  const rooms = submission.rooms
+    .filter((room) => room.roomMaterials)
+    .map((room) => `${room.name || "Room"}: ${optionLabel(roomMaterialSources, room.roomMaterials)}${room.roomMaterialsNotes ? ` (${room.roomMaterialsNotes})` : ""}`);
+  return rooms.length ? `${project}\n${rooms.join("\n")}` : project;
 }
 
 function escapeHtml(value: string) {

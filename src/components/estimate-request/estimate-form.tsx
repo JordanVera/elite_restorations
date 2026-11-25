@@ -54,7 +54,7 @@ function focusField(errors: FieldErrors) {
   window.setTimeout(() => {
     const node = document.querySelector(`[data-field="${CSS.escape(key)}"]`);
     if (!(node instanceof HTMLElement)) return;
-    node.scrollIntoView({ behavior: "smooth", block: "center" });
+    node.scrollIntoView({ behavior: "smooth", block: "start" });
     const target = node.matches("input,select,textarea,button") ? node : node.querySelector("input,select,textarea,button");
     if (target instanceof HTMLElement) target.focus();
   }, 40);
@@ -409,7 +409,7 @@ export function EstimateForm({ uploadMode }: { uploadMode: UploadMode }) {
   const reviewPayload = previewSubmission(values, rooms, adjuster, meta);
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative mt-8 border border-border bg-surface/40 p-4 sm:p-8 md:p-10">
+    <form noValidate onSubmit={onSubmit} className="relative mt-8 border border-border bg-surface/40 p-4 sm:p-8 md:p-10 [&_[data-field]]:scroll-mt-28">
       <div>
         <div className="flex items-center justify-between gap-4 text-sm">
           <p>
