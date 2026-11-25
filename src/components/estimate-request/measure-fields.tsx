@@ -134,7 +134,6 @@ function Tokens({
   disabled,
   onChange,
 }: {
-  roomIndex: number;
   measureKey: MeasureKey;
   legend: string;
   options: readonly { value: string; label: string }[];
