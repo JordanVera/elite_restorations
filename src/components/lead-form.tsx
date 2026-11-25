@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { TRPCClientError } from '@trpc/client';
 import { ArrowUpRight, ChevronDown, Loader2, Mail, Phone } from 'lucide-react';
 
@@ -21,6 +22,7 @@ import {
   emergencyCallback,
   emergencyCallbackEs,
   isUrgentService,
+  isVisitContactPath,
   leadServiceLabelsEs,
   leadServices,
   optionLabel,
@@ -44,6 +46,9 @@ type Values = {
   email: string;
   phone: string;
   address: string;
+  serviceStreet: string;
+  serviceCity: string;
+  serviceZip: string;
   service: string;
   claim: string;
   carrier: string;
@@ -123,6 +128,12 @@ const schemaErrorsEs: Record<string, string> = {
   'Choose how we should reach you.': 'Elija cómo debemos comunicarnos.',
   'That address is too long.': 'Esa dirección es demasiado larga.',
   'Enter a street address or a 5-digit ZIP.': 'Escriba una dirección o un código postal de 5 dígitos.',
+  'Enter the street.': 'Escriba la calle.',
+  'Enter the city.': 'Escriba la ciudad.',
+  'Enter a 5-digit ZIP.': 'Escriba un código postal de 5 dígitos.',
+  'That street is too long.': 'Esa calle es demasiado larga.',
+  'That city is too long.': 'Esa ciudad es demasiado larga.',
+  'That ZIP is too long.': 'Ese código postal es demasiado largo.',
   'Choose the kind of work.': 'Elija el tipo de trabajo.',
   'Tell us if this is an insurance claim.': 'Díganos si es un reclamo de seguro.',
   'That carrier name is too long.': 'Ese nombre de aseguradora es demasiado largo.',
@@ -179,6 +190,7 @@ function buildCandidate(
   photos: string[],
   startedAt: number,
   trap: string,
+  visit: boolean,
 ): LeadInput {
   const shared = {
     name: values.name,
@@ -198,14 +210,19 @@ function buildCandidate(
       contactMethod: values.contactMethod,
     } as LeadInput;
   }
+  const serviceAddress = [values.serviceStreet, values.serviceCity, values.serviceZip].filter(Boolean).join(', ');
   return {
     ...shared,
     path: 'estimate',
-    address: values.address,
+    address: visit ? serviceAddress : values.address,
     service: values.service,
     claim: values.claim,
     carrier: values.claim === 'no' ? '' : values.carrier,
     contactMethod: values.contactMethod,
+    formType: visit ? 'visit' : 'inquiry',
+    serviceStreet: visit ? values.serviceStreet : '',
+    serviceCity: visit ? values.serviceCity : '',
+    serviceZip: visit ? values.serviceZip : '',
   } as LeadInput;
 }
 
@@ -228,6 +245,8 @@ export function LeadForm({
 }: LeadFormProps) {
   const photosEnabled = showPhotos ?? intent === 'estimate';
   const partner = intent === 'partner';
+  const pathname = usePathname();
+  const visit = !partner && isVisitContactPath(pathname);
   const es = locale === 'es';
   const copy = contactIdentityCopy[locale];
   const claimOptions = es ? claimAnswersEs : claimAnswers;
@@ -256,6 +275,9 @@ export function LeadForm({
         company: 'Empresa o inmobiliaria',
         address: 'Dirección o código postal',
         addressPlaceholder: 'Dirección o código postal',
+        street: 'Calle',
+        city: 'Ciudad',
+        zip: 'Código postal',
         service: 'Servicio',
         chooseService: 'Elija un servicio',
         urgent:
@@ -277,6 +299,7 @@ export function LeadForm({
         partnerSend: 'Unirse al programa para agentes',
         preferCall: '¿Prefiere llamar?',
         estimateRequest: 'Solicitud de estimado',
+        visitRequest: 'Programar una visita',
         partnerRequest: 'Solicitud del programa para agentes',
         uploading: (index: number, total: number) => `Subiendo foto ${index} de ${total}`,
       }
@@ -295,6 +318,9 @@ export function LeadForm({
         company: 'Company or brokerage',
         address: 'Address or ZIP',
         addressPlaceholder: 'Street address or ZIP',
+        street: 'Street',
+        city: 'City',
+        zip: 'ZIP',
         service: 'Service',
         chooseService: 'Choose a service',
         urgent: 'If water is still coming in, or the roof is open, call',
@@ -314,6 +340,7 @@ export function LeadForm({
         partnerSend: 'Join the Realtor program',
         preferCall: 'Prefer to call?',
         estimateRequest: 'Estimate request',
+        visitRequest: 'Schedule a visit',
         partnerRequest: 'Realtor program request',
         uploading: (index: number, total: number) => `Uploading photo ${index} of ${total}`,
       };
@@ -323,6 +350,9 @@ export function LeadForm({
     email: '',
     phone: '',
     address: defaultAddress ?? '',
+    serviceStreet: '',
+    serviceCity: '',
+    serviceZip: '',
     service: serviceForSlug(defaultService),
     claim: asClaim(defaultClaim),
     carrier: defaultCarrier ?? '',
@@ -381,7 +411,7 @@ export function LeadForm({
     const trap = (honeypotRef.current?.value || values.website).trim();
     const identity = contactFieldErrors(values.name, values.phone, locale);
     const check = leadSchema.safeParse(
-      buildCandidate(intent, values, [], startedAt.current, trap),
+      buildCandidate(intent, values, [], startedAt.current, trap, visit),
     );
     if (!check.success || identity.name || identity.phone) {
       const next: FieldErrors = {};
@@ -395,6 +425,19 @@ export function LeadForm({
       }
       if (identity.name) next.name = identity.name;
       if (identity.phone) next.phone = identity.phone;
+      if (visit) {
+        if (values.serviceStreet.trim().length < 3) {
+          next.serviceStreet = es ? schemaErrorsEs['Enter the street.'] : 'Enter the street.';
+        }
+        if (values.serviceCity.trim().length < 2) {
+          next.serviceCity = es ? schemaErrorsEs['Enter the city.'] : 'Enter the city.';
+        }
+        if (!/^\d{5}(?:-\d{4})?$/.test(values.serviceZip.trim())) {
+          next.serviceZip = es ? schemaErrorsEs['Enter a 5-digit ZIP.'] : 'Enter a 5-digit ZIP.';
+        }
+        if (next.address && !next.serviceStreet) next.serviceStreet = next.address;
+        delete next.address;
+      }
       if (
         intent === 'estimate' &&
         values.contactMethod === 'email' &&
@@ -443,7 +486,7 @@ export function LeadForm({
         ? []
         : photos.flatMap((photo) => uploaded.current.get(photo.id) ?? []);
       const parsed = leadSchema.parse(
-        buildCandidate(intent, values, pathnames, startedAt.current, trap),
+        buildCandidate(intent, values, pathnames, startedAt.current, trap, visit),
       );
       const response = await trpc.contact.submit.mutate(parsed);
       if (!trap) {
@@ -492,13 +535,16 @@ export function LeadForm({
   }
 
   const mailto = React.useMemo(() => {
+    const scheduleVisit = !partner && isVisitContactPath(pathname);
     const lines = partner
       ? [`Company: ${values.company}`, `Preferred contact: ${optionLabel(contactMethods, values.contactMethod)}`]
       : [
           `Service: ${optionLabel(leadServices, values.service)}`,
           `Insurance claim: ${optionLabel(claimAnswers, values.claim)}`,
           values.carrier ? `Insurance company: ${values.carrier}` : '',
-          `Address or ZIP: ${values.address}`,
+          scheduleVisit ? `Street: ${values.serviceStreet}` : `Address or ZIP: ${values.address}`,
+          scheduleVisit ? `City: ${values.serviceCity}` : '',
+          scheduleVisit ? `ZIP: ${values.serviceZip}` : '',
           `Preferred contact: ${optionLabel(contactMethods, values.contactMethod)}`,
         ];
     const body = [
@@ -514,9 +560,11 @@ export function LeadForm({
       .slice(0, 1500);
     const subject = partner
       ? 'Partner referral'
-      : `Estimate request: ${optionLabel(leadServices, values.service) || 'new lead'}`;
+      : scheduleVisit
+        ? 'Schedule a visit'
+        : `Estimate request: ${optionLabel(leadServices, values.service) || 'new lead'}`;
     return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [partner, values]);
+  }, [partner, pathname, values]);
 
   if (status.kind === 'sent') {
     const { photosTotal, photosSaved, service, claim } = status;
@@ -575,7 +623,7 @@ export function LeadForm({
       ref={formRef}
       onSubmit={onSubmit}
       noValidate
-      aria-label={partner ? ui.partnerRequest : ui.estimateRequest}
+      aria-label={partner ? ui.partnerRequest : visit ? ui.visitRequest : ui.estimateRequest}
       aria-busy={submitting}
       className={cn('relative', stack)}
     >
@@ -667,6 +715,26 @@ export function LeadForm({
               {...described(fid('company'), Boolean(errors.company), true)}
             />
           </Field>
+        ) : visit ? (
+          <Field
+            id={fid('street')}
+            field="serviceStreet"
+            label={ui.street}
+            error={errors.serviceStreet}
+            required
+            requiredLabel={copy.required}
+          >
+            <Input
+              id={fid('street')}
+              name="street-address"
+              autoComplete="street-address"
+              required
+              disabled={submitting}
+              value={values.serviceStreet}
+              onChange={onText('serviceStreet')}
+              {...described(fid('street'), Boolean(errors.serviceStreet), true)}
+            />
+          </Field>
         ) : (
           <Field
             id={fid('address')}
@@ -690,6 +758,50 @@ export function LeadForm({
           </Field>
         )}
       </div>
+
+      {visit && (
+        <div className="grid gap-6 sm:grid-cols-2">
+          <Field
+            id={fid('city')}
+            field="serviceCity"
+            label={ui.city}
+            error={errors.serviceCity}
+            required
+            requiredLabel={copy.required}
+          >
+            <Input
+              id={fid('city')}
+              name="address-level2"
+              autoComplete="address-level2"
+              required
+              disabled={submitting}
+              value={values.serviceCity}
+              onChange={onText('serviceCity')}
+              {...described(fid('city'), Boolean(errors.serviceCity), true)}
+            />
+          </Field>
+          <Field
+            id={fid('zip')}
+            field="serviceZip"
+            label={ui.zip}
+            error={errors.serviceZip}
+            required
+            requiredLabel={copy.required}
+          >
+            <Input
+              id={fid('zip')}
+              name="postal-code"
+              autoComplete="postal-code"
+              inputMode="numeric"
+              required
+              disabled={submitting}
+              value={values.serviceZip}
+              onChange={onText('serviceZip')}
+              {...described(fid('zip'), Boolean(errors.serviceZip), true)}
+            />
+          </Field>
+        </div>
+      )}
 
       {!partner && (
         <Field

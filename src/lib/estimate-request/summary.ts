@@ -1,3 +1,4 @@
+import { FILE_LINK_TTL_DAYS } from "@/lib/file-link-ttl";
 import {
   agreementAnswers,
   applianceResets,
@@ -569,7 +570,7 @@ export function sectionsToHtml(sections: readonly SummarySection[], reference: s
           </tr>
           <tr>
             <td bgcolor="${C.inset}" style="background:${C.inset};padding:16px 28px 20px;border-top:1px solid ${C.line};">
-              <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:${C.muted};">Reply to reach ${escapeHtml(name)}. JSON and CSV copies are attached. File links stay on this message.</p>
+              <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:${C.muted};">Reply to reach ${escapeHtml(name)}. JSON and CSV copies are attached. File links in this message last ${FILE_LINK_TTL_DAYS} days.</p>
             </td>
           </tr>
         </table>

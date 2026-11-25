@@ -20,10 +20,12 @@ export function describeLead(lead: DeliverableLead, options?: DescribeOptions): 
       `Insurance claim: ${label(claimAnswers, lead.claim)}`,
     );
     if (lead.carrier) lines.push(`Insurance carrier: ${lead.carrier}`);
-    lines.push(
-      `Address or ZIP: ${lead.address}`,
-      `Preferred contact: ${label(contactMethods, lead.contactMethod)}`,
-    );
+    if (lead.formType === "visit") {
+      lines.push(`Street: ${lead.serviceStreet}`, `City: ${lead.serviceCity}`, `ZIP: ${lead.serviceZip}`);
+    } else {
+      lines.push(`Address or ZIP: ${lead.address}`);
+    }
+    lines.push(`Preferred contact: ${label(contactMethods, lead.contactMethod)}`);
   } else {
     lines.push(
       `Company: ${lead.company}`,

@@ -2,6 +2,7 @@ import "server-only";
 
 import { randomUUID } from "node:crypto";
 
+import { FILE_LINK_TTL_DAYS } from "@/lib/file-link-ttl";
 import { claimAnswers, contactMethods, leadServices, optionLabel } from "@/lib/inquiry";
 import { site } from "@/lib/site";
 import type { DeliverableLead } from "@/server/leads/types";
@@ -26,6 +27,10 @@ export function inquiryMessageId(reference: string): string {
 
 type DetailRow = { label: string; value: string };
 
+function isVisit(lead: DeliverableLead): boolean {
+  return lead.path === "estimate" && lead.formType === "visit";
+}
+
 function detailRows(lead: DeliverableLead): DetailRow[] {
   const rows: DetailRow[] = [
     { label: "Name", value: lead.name },
@@ -34,8 +39,16 @@ function detailRows(lead: DeliverableLead): DetailRow[] {
   ];
 
   if (lead.path === "estimate") {
+    if (isVisit(lead)) {
+      rows.push(
+        { label: "Street", value: lead.serviceStreet },
+        { label: "City", value: lead.serviceCity },
+        { label: "ZIP", value: lead.serviceZip },
+      );
+    } else {
+      rows.push({ label: "Address or ZIP", value: lead.address });
+    }
     rows.push(
-      { label: "Address or ZIP", value: lead.address },
       { label: "Service", value: label(leadServices, lead.service) },
       { label: "Insurance claim", value: label(claimAnswers, lead.claim) },
     );
@@ -89,10 +102,17 @@ function logoUrl(): string {
 export function buildInquiryHtml(
   lead: DeliverableLead,
   reference: string,
-  options: { photosAttached: number; photoFilenames: string[] },
+  options: {
+    photosAttached: number;
+    photoFilenames: string[];
+    jobberRows?: { label: string; value: string }[];
+    fileLinks?: { url: string; filename: string }[];
+  },
 ): string {
-  const pathTitle = lead.path === "partner" ? "Partner referral" : label(leadServices, lead.service);
+  const pathTitle = lead.path === "partner" ? "Partner referral" : isVisit(lead) ? "Schedule a visit" : label(leadServices, lead.service);
   const rows = detailRows(lead);
+  const jobberRows = options.jobberRows ?? [];
+  const fileLinks = options.fileLinks ?? [];
 
   const details = rows
     .map(
@@ -119,6 +139,43 @@ export function buildInquiryHtml(
         </td>
       </tr>`
     : "";
+
+  const jobberBlock =
+    jobberRows.length > 0
+      ? `
+      <tr>
+        <td colspan="2" style="padding:8px 0 0;">
+          <p style="margin:0 0 8px;font-family:Georgia,'Times New Roman',serif;font-size:22px;font-weight:400;color:${C.ink};">Jobber New Client</p>
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+            ${jobberRows
+              .map(
+                (row, index) => `
+            <tr>
+              <td style="padding:12px 0;border-top:${index === 0 ? "0" : "1px"} solid ${C.line};font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:${C.muted};width:148px;vertical-align:top;">${escapeHtml(row.label)}</td>
+              <td style="padding:12px 0 12px 12px;border-top:${index === 0 ? "0" : "1px"} solid ${C.line};font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.45;color:${C.ink};vertical-align:top;">${escapeHtml(row.value)}</td>
+            </tr>`,
+              )
+              .join("")}
+          </table>
+        </td>
+      </tr>`
+      : "";
+
+  const linkBlock =
+    fileLinks.length > 0
+      ? `
+      <tr>
+        <td colspan="2" style="padding:18px 0 0;">
+          <p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:${C.accent};">Photo links</p>
+          ${fileLinks
+            .map(
+              (file) =>
+                `<p style="margin:0 0 8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;"><a href="${escapeHtml(file.url)}" style="color:${C.accent};text-decoration:underline;">${escapeHtml(file.filename)}</a></p>`,
+            )
+            .join("")}
+        </td>
+      </tr>`
+      : "";
 
   const photosBlock =
     options.photosAttached > 0
@@ -178,9 +235,11 @@ export function buildInquiryHtml(
           <tr>
             <td bgcolor="${C.panel}" style="background:${C.panel};padding:18px 32px 28px;">
               <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                ${jobberBlock}
                 ${details}
                 ${messageBlock}
                 ${photosBlock}
+                ${linkBlock}
               </table>
             </td>
           </tr>
@@ -194,6 +253,11 @@ export function buildInquiryHtml(
                     : `at ${escapeHtml(lead.phone)}`
                 }.
               </p>
+              ${
+                jobberRows.length > 0
+                  ? `<p style="margin:10px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:${C.muted};">A JSON copy is attached. Photo links in this message last ${FILE_LINK_TTL_DAYS} days.</p>`
+                  : ""
+              }
               <p style="margin:10px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:${C.muted};">${escapeHtml(site.name)} &nbsp;·&nbsp; ${escapeHtml(site.phone.display)}</p>
             </td>
           </tr>

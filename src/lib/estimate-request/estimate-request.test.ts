@@ -277,6 +277,8 @@ describe("estimate request guards", () => {
       "src/app/estimate-request",
       "src/app/api/estimate-request",
       "src/app/api/estimate-files",
+      "src/app/api/estimate-file",
+      "src/app/api/visit-file",
       "src/server/estimate-request",
     ];
     const files: string[] = [];
