@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Clock, Mail, MapPin } from 'lucide-react';
 
+import { ContactPathCards } from '@/components/contact-path-cards';
 import { FaqSection } from '@/components/faq-section';
 import { LeadForm } from '@/components/lead-form';
 import { Reveal } from '@/components/motion';
@@ -42,6 +43,7 @@ export default async function ContactPage({
         lede="Call, email, or send a note. If water is coming in, or the roof is open to the weather, call first. Then tell us what happened."
         crumbs={[{ name: 'Contact', path: '/contact' }]}
       />
+      <ContactPathCards />
 
       <section
         aria-label="Contact details and request form"
@@ -127,7 +129,7 @@ export default async function ContactPage({
             <h2 className="font-display t-md mt-4 max-w-[20ch]">
               Tell us about the property.
             </h2>
-            <div className="relative mt-10">
+            <div id="request" className="relative mt-10 scroll-mt-28">
               <LeadForm
                 key={`${service ?? ''}|${note ?? ''}`}
                 defaultService={service}
