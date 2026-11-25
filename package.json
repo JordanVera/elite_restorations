@@ -14,7 +14,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --import ./scripts/register-test-hooks.mjs --test src/lib/lead-checks.test.ts src/lib/contact-identity.test.ts src/lib/es-contact-form.test.ts src/server/trpc/contact-submit.test.ts \"src/server/jobber/*.test.ts\" \"src/server/leads/*.test.ts\" \"src/lib/selections/*.test.ts\" \"src/lib/admin/*.test.ts\" \"src/server/security/*.test.ts\" \"src/server/auth/*.test.ts\" \"src/server/portal/*.test.ts\" \"src/server/admin/*.test.ts\"",
+    "test": "node --experimental-strip-types --import ./scripts/register-test-hooks.mjs --test src/lib/lead-checks.test.ts src/lib/contact-identity.test.ts src/lib/es-contact-form.test.ts src/server/trpc/contact-submit.test.ts \"src/server/jobber/*.test.ts\" \"src/server/leads/*.test.ts\" \"src/lib/selections/*.test.ts\" \"src/lib/admin/*.test.ts\" \"src/server/security/*.test.ts\" \"src/server/auth/*.test.ts\" \"src/server/portal/*.test.ts\" \"src/server/admin/*.test.ts\" \"src/lib/estimate-request/*.test.ts\"",
     "images:manifest": "node scripts/build-image-manifest.mjs",
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
