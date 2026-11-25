@@ -31,12 +31,7 @@ export function estimateSubject(firstName: string, lastName: string, reference: 
   return `${prefix}[${site.name}] Project estimate · ${name} · ${reference}`;
 }
 
-export function estimateRecipient(
-  env: Record<string, string | undefined> = process.env,
-  names?: { firstName: string; lastName: string },
-): string {
-  // TEMP test routing - remove after test
-  if (names && isTestName(names.firstName, names.lastName)) return "michael@eliterestorations.com";
+export function estimateRecipient(env: Record<string, string | undefined> = process.env): string {
   const value = env.ESTIMATE_REQUEST_EMAIL_TO?.trim();
   if (value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return value;
   return DEFAULT_ESTIMATE_EMAIL;
@@ -93,7 +88,7 @@ export async function deliverEstimateRequest(submission: EstimateSubmission, req
     { filename: `${reference}.csv`, content: csv, contentType: "text/csv" },
   ];
   const subject = estimateSubject(submission.firstName, submission.lastName, reference);
-  const to = estimateRecipient(process.env, submission);
+  const to = estimateRecipient();
 
   try {
     if (plan === "gateway-then-smtp") {
