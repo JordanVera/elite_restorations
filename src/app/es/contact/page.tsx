@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MapPin } from "lucide-react";
 
+import { ContactPathCards } from "@/components/contact-path-cards";
 import { FaqSection } from "@/components/faq-section";
 import { LeadForm } from "@/components/lead-form";
 import { Reveal } from "@/components/motion";
@@ -28,6 +29,7 @@ export default function SpanishContactPage() {
         crumbs={[{ name: "Contacto", path: "/es/contact" }]}
         homeCrumb={{ name: "Inicio", path: "/es" }}
       />
+      <ContactPathCards locale="es" />
       <section className="py-16 md:py-24">
         <div className="gutter mx-auto grid max-w-[120rem] gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
@@ -69,7 +71,7 @@ export default function SpanishContactPage() {
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
               El formulario está en inglés, el mismo de la página de contacto en inglés, y su solicitud llega al mismo lugar.
             </p>
-            <div className="relative mt-8">
+            <div id="request" className="relative mt-8 scroll-mt-28">
               <LeadForm locale="es" />
             </div>
           </Reveal>
