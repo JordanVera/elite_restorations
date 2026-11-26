@@ -17,7 +17,7 @@ export function toJobberIntake(lead: DeliverableLead): JobberIntake {
   const [firstName = "", ...rest] = lead.name.split(/\s+/);
   return {
     client: { firstName, lastName: rest.join(" "), email: lead.email, phone: lead.phone },
-    property: lead.path === "estimate" ? { street: lead.address } : null,
+    property: lead.path === "estimate" ? { street: lead.serviceStreet || lead.address } : null,
     request: {
       title:
         lead.path === "partner"

@@ -84,6 +84,11 @@ export const estimateSchema = z.object({
   carrier: z.string().trim().max(120, "That carrier name is too long.").optional().default(""),
   contactMethod,
   message: z.string().trim().max(2000, "Please keep this under 2,000 characters.").optional().default(""),
+  /** Set on /contact and /es/contact. Other short forms stay on the existing subject. */
+  formType: z.enum(["visit", "inquiry"]).optional().default("inquiry"),
+  serviceStreet: z.string().trim().max(120, "That street is too long.").optional().default(""),
+  serviceCity: z.string().trim().max(80, "That city is too long.").optional().default(""),
+  serviceZip: z.string().trim().max(10, "That ZIP is too long.").optional().default(""),
 });
 
 export const partnerSchema = z.object({
@@ -110,6 +115,17 @@ export const leadSchema = z.discriminatedUnion("path", [estimateSchema, partnerS
       path: ["email"],
       message: "Enter an email address, or choose phone or text.",
     });
+  }
+  if (value.path === "estimate" && value.formType === "visit") {
+    if (value.serviceStreet.trim().length < 3) {
+      ctx.addIssue({ code: "custom", path: ["serviceStreet"], message: "Enter the street." });
+    }
+    if (value.serviceCity.trim().length < 2) {
+      ctx.addIssue({ code: "custom", path: ["serviceCity"], message: "Enter the city." });
+    }
+    if (!/^\d{5}(?:-\d{4})?$/.test(value.serviceZip.trim())) {
+      ctx.addIssue({ code: "custom", path: ["serviceZip"], message: "Enter a 5-digit ZIP." });
+    }
   }
 });
 

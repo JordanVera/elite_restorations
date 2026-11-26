@@ -4,7 +4,20 @@ import { get } from '@vercel/blob';
 import nodemailer from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 
+import {
+  buildVisitDocument,
+  chicagoTimestamp,
+  estimateMailbox,
+  jobberClientLines,
+  leadSubject,
+  machineJsonFilename,
+  splitPersonName,
+  visitReference,
+  type LeadMachineFile,
+} from '@/lib/lead-machine';
+import { signedFileUrl } from '@/lib/signed-file-link';
 import { site } from '@/lib/site';
+import { websiteFromHeader } from '@/lib/website-from';
 import { sendEmail } from '@/server/email';
 import {
   buildInquiryHtml,
@@ -64,6 +77,16 @@ function optionalAddress(
   return value || undefined;
 }
 
+/** Skip a copy that is already the To address, so a visit is not delivered twice. */
+function copyAddress(
+  name: 'INQUIRY_EMAIL_CC' | 'INQUIRY_EMAIL_BCC',
+  to: string | undefined,
+): string | undefined {
+  const value = optionalAddress(name);
+  if (!value || (to && value.toLowerCase() === to.toLowerCase())) return undefined;
+  return value;
+}
+
 function errorText(error: unknown): string {
   return error instanceof Error ? error.message : 'unknown error';
 }
@@ -106,20 +129,102 @@ async function loadPhotoAttachments(lead: DeliverableLead): Promise<InquiryFile[
   return downloaded.filter((file): file is InquiryFile => file !== null);
 }
 
-function renderInquiry(lead: DeliverableLead, files: InquiryFile[], reference: string) {
+type VisitPackage = {
+  subject: string;
+  textExtra: string;
+  jobberRows: { label: string; value: string }[];
+  fileLinks: LeadMachineFile[];
+  json: InquiryFile;
+  to: string;
+  cc?: string;
+};
+
+function ccList(to: string | undefined, ...copies: Array<string | undefined>): string | undefined {
+  const seen = new Set<string>();
+  const list: string[] = [];
+  const toKey = to?.trim().toLowerCase();
+  for (const copy of copies) {
+    const value = copy?.trim();
+    if (!value) continue;
+    const key = value.toLowerCase();
+    if (key === toKey || seen.has(key)) continue;
+    seen.add(key);
+    list.push(value);
+  }
+  return list.length ? list.join(", ") : undefined;
+}
+
+function visitPackage(lead: DeliverableLead, reference: string): VisitPackage | null {
+  if (lead.path !== 'estimate' || lead.formType !== 'visit') return null;
+  const names = splitPersonName(lead.name);
+  const photos: LeadMachineFile[] = lead.photos.map((photo, index) => ({
+    url: signedFileUrl(site.url, photo.pathname) ?? '',
+    filename: `visit-photo-${String(index + 1).padStart(2, '0')}.jpg`,
+  }));
+  const document = buildVisitDocument(
+    {
+      name: lead.name,
+      phone: lead.phone,
+      email: lead.email,
+      service: lead.service,
+      claim: lead.claim,
+      carrier: lead.carrier,
+      contactMethod: lead.contactMethod,
+      message: lead.message,
+      serviceStreet: lead.serviceStreet,
+      serviceCity: lead.serviceCity,
+      serviceZip: lead.serviceZip,
+      utmSource: lead.utmSource,
+    },
+    photos,
+    { id: reference, submittedAt: chicagoTimestamp(new Date()) },
+  );
+  const mailbox = estimateMailbox(process.env, names);
+  const jobberRows = jobberClientLines(document);
+  const fileLinks = photos.filter((photo) => photo.url);
+  const linkLines = fileLinks.map((photo) => `${photo.filename}\n${photo.url}`);
+  return {
+    subject: leadSubject('visit', names.firstName, names.lastName, reference),
+    textExtra: [
+      '',
+      'Jobber New Client',
+      ...jobberRows.map((row) => `${row.label}: ${row.value}`),
+      ...(linkLines.length > 0 ? ['', 'Photo links:', ...linkLines] : []),
+    ].join('\n'),
+    jobberRows,
+    fileLinks,
+    json: {
+      filename: machineJsonFilename('visit', reference),
+      content: Buffer.from(JSON.stringify(document, null, 2), 'utf8'),
+      contentType: 'application/json',
+    },
+    to: mailbox.to,
+    cc: mailbox.cc,
+  };
+}
+
+function renderInquiry(lead: DeliverableLead, files: InquiryFile[], reference: string, visit: VisitPackage | null) {
   const filenames = files.map((file) => file.filename);
   const summary = describeLead(lead, {
     photosAttached: files.length || undefined,
   });
   const contact = [lead.name, lead.phone, lead.email || 'No email provided'].join('\n');
   return {
-    subject: inquirySubject(lead, reference),
+    subject: visit?.subject ?? inquirySubject(lead, reference),
     html: buildInquiryHtml(lead, reference, {
       photosAttached: files.length,
       photoFilenames: filenames,
+      jobberRows: visit?.jobberRows,
+      fileLinks: visit?.fileLinks,
     }),
-    text: `${summary}\n\nReference: ${reference}\n\n—\n${contact}`,
+    text: `${summary}${visit?.textExtra ?? ''}\n\nReference: ${reference}\n\n—\n${contact}`,
   };
+}
+
+function fromHeader(user: string, visit: boolean): string {
+  if (visit) return websiteFromHeader(user);
+  const fromName = (process.env.SMTP_FROM_NAME?.trim() || site.name).replace(/["\r\n]/g, '');
+  return `"${fromName}" <${user}>`;
 }
 
 function asSmtpAttachment(file: InquiryFile): Mail.Attachment {
@@ -135,13 +240,13 @@ async function sendViaSmtp(
   lead: DeliverableLead,
   files: InquiryFile[],
   reference: string,
+  visit: VisitPackage | null,
 ): Promise<boolean> {
   const config = smtpConfig();
   if (!config) return false;
 
-  const message = renderInquiry(lead, files, reference);
-  const fromName = (process.env.SMTP_FROM_NAME?.trim() || site.name).replace(/["\r\n]/g, '');
-  const cc = optionalAddress('INQUIRY_EMAIL_CC');
+  const message = renderInquiry(lead, files, reference, visit);
+  const cc = visit ? ccList(visit.to, visit.cc, optionalAddress('INQUIRY_EMAIL_CC')) : copyAddress('INQUIRY_EMAIL_CC', undefined);
   const bcc = optionalAddress('INQUIRY_EMAIL_BCC');
   const transport = nodemailer.createTransport({
     host: config.host,
@@ -157,8 +262,8 @@ async function sendViaSmtp(
   });
 
   await transport.sendMail({
-    from: `"${fromName}" <${config.user}>`,
-    to: inquiryRecipient(),
+    from: fromHeader(config.user, Boolean(visit)),
+    to: visit?.to ?? inquiryRecipient(),
     ...(cc ? { cc } : {}),
     ...(bcc ? { bcc } : {}),
     ...(lead.email ? { replyTo: lead.email } : {}),
@@ -169,7 +274,7 @@ async function sendViaSmtp(
     },
     text: message.text,
     html: message.html,
-    attachments: files.map(asSmtpAttachment),
+    attachments: [...files, ...(visit ? [visit.json] : [])].map(asSmtpAttachment),
   });
 
   return true;
@@ -184,31 +289,35 @@ export async function sendInquiryEmail(lead: DeliverableLead): Promise<InquirySe
     return { status: 'unconfigured' };
   }
 
-  const reference = inquiryReference();
+  const visitLead = lead.path === 'estimate' && lead.formType === 'visit';
+  const reference = visitLead ? visitReference() : inquiryReference();
 
   try {
     const files = await loadPhotoAttachments(lead);
+    const visit = visitPackage(lead, reference);
 
     if (plan === 'gateway-then-smtp') {
       const gatewayFiles = files.filter((file) => file.content.byteLength <= GATEWAY_ATTACHMENT_LIMIT);
-      const message = renderInquiry(lead, gatewayFiles, reference);
+      const message = renderInquiry(lead, gatewayFiles, reference, visit);
       let text = message.text;
       if (gatewayFiles.length < files.length) {
-        const links = lead.photos.map((photo) => photo.url).filter(Boolean);
+        const links = (visit?.fileLinks ?? lead.photos).map((photo) => photo.url).filter(Boolean);
         text += `\n\n${files.length - gatewayFiles.length} photo(s) were too large to attach.`;
         if (links.length > 0) text += `\n${links.join('\n')}`;
       }
+      const user = process.env.SMTP_USER?.trim();
 
       try {
         const { messageId } = await sendEmail({
-          to: inquiryRecipient(),
-          cc: optionalAddress('INQUIRY_EMAIL_CC'),
+          to: visit?.to ?? inquiryRecipient(),
+          cc: visit ? ccList(visit.to, visit.cc, optionalAddress('INQUIRY_EMAIL_CC')) : copyAddress('INQUIRY_EMAIL_CC', undefined),
           bcc: optionalAddress('INQUIRY_EMAIL_BCC'),
           replyTo: lead.email || undefined,
           subject: message.subject,
           text,
           html: message.html,
-          attachments: gatewayFiles,
+          attachments: visit ? [...gatewayFiles, visit.json] : gatewayFiles,
+          ...(visit && user ? { from: websiteFromHeader(user) } : {}),
         });
         console.info('[mail] inquiry sent via platform gateway', messageId);
         return { status: 'sent' };
@@ -218,7 +327,7 @@ export async function sendInquiryEmail(lead: DeliverableLead): Promise<InquirySe
       }
     }
 
-    await sendViaSmtp(lead, files, reference);
+    await sendViaSmtp(lead, files, reference, visit);
     return { status: 'sent' };
   } catch (error) {
     console.error('[mail] inquiry send failed', errorText(error));

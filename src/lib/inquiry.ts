@@ -94,6 +94,11 @@ export function serviceForSlug(value: string | undefined): LeadService | "" {
   return slugToService[value] ?? "";
 }
 
+/** The short form on these pages is the Schedule a visit email. Choice cards on the page are separate. */
+export function isVisitContactPath(pathname: string | null | undefined): boolean {
+  return pathname === "/contact" || pathname === "/es/contact";
+}
+
 export function optionLabel(
   list: readonly { value: string; label: string }[],
   value: string,
