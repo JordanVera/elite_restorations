@@ -1,8 +1,11 @@
 import { googleReviews } from '@/lib/google-listing';
 
-/** Facebook page for Elite Restorations. */
+/**
+ * Live Facebook page. The slug is spelled eliterestorartions on purpose.
+ * Do not swap it for a numeric page id.
+ */
 export const facebookUrl =
-  'https://www.facebook.com/eliterestorations' as const;
+  'https://www.facebook.com/eliterestorartions' as const;
 
 export const site = {
   name: 'Elite Restorations',
