@@ -1175,4 +1175,162 @@ export const houstonPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'pearland-roof-repair-or-replacement',
+    title: 'Repair or replacement for a Pearland roof',
+    metaTitle: 'Pearland Roof Repair or Replace',
+    crumb: 'Pearland roofs',
+    lines: ['An aging Pearland roof,', 'repair or replacement.'],
+    description:
+      'How a Pearland owner can tell if a 15- to 25-year roof in Silverlake or Shadow Creek Ranch needs repair or replacement.',
+    lede: 'On November 27, 2026, many Pearland houses still have the roof that went on when the subdivision was built. Silverlake and Shadow Creek Ranch are full of them. This note is how to tell a repair from a full replacement on those roofs, and when a storm belongs in the story.',
+    image: '/images/projects/roofing/two-story-stone-home.jpg',
+    service: 'roof-replacement',
+    ctaTitle: 'Want this Pearland roof looked at?',
+    ctaBody:
+      'Call (713) 909-0034. We walk the slopes and say whether a repair will hold. Family-owned, serving Houston since 1993.',
+    related: ['houston-roof-replacement-guide', 'houston-hail-storm-roof-claims'],
+    faqs: [
+      {
+        q: 'When is a repair enough on these roofs?',
+        a: 'When the trouble is a boot, a short run of flashing, one slope, or a ridge, and the rest of the shingles still have granules and still bend. We say that from the roof.',
+      },
+      {
+        q: 'Does a 20-year Silverlake roof have to come off?',
+        a: 'No. Bare, brittle shingles on the south and west slopes usually mean replacement. A sound field with one failed boot is a repair. A Shadow Creek Ranch roof of the same age gets the same look.',
+      },
+      {
+        q: 'What if wind left the roof open?',
+        a: 'Photograph the opening if you can do it safely, keep people out from under a sagging ceiling, and call (713) 909-0034. Stay off a wet roof.',
+      },
+      {
+        q: 'Will a claim replace an old Pearland roof?',
+        a: 'Only your insurer can decide that. A dated storm that lifted or bruised the roof can be a claim. Years of heat and lost granules, with no storm, are wear. We are not public adjusters.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Where these roofs are in their life',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Pearland is the large city south of Houston, mostly in Brazoria County, with parts in Harris County and Fort Bend County. The older streets near Broadway are one generation. Silverlake, along FM 518 toward Cullen Parkway, and Shadow Creek Ranch, west of Highway 288 along Shadow Creek Parkway, are the next. The houses there are two-story brick, and a shingle roof from that building wave is often 15 to 25 years old now.',
+          },
+          {
+            type: 'p',
+            text: 'South and west slopes have sat in Gulf Coast sun for a long time, while the front can still look even from the driveway. We do not choose repair or replacement from that view. The Houston roof replacement guide is the citywide tear-off. The hail note covers the day a storm hits. This page stays with a Pearland roof in this age window.',
+          },
+        ],
+      },
+      {
+        heading: 'What you can check before anyone climbs',
+        blocks: [
+          {
+            type: 'p',
+            text: 'After a dry week, look in the gutters for granules and along the side fence for a tab the wind dropped. A new soffit stain, or a ceiling stain that was not there last spring, means water got in. None of those, alone, is a new roof. Together they are a reason to walk the slopes.',
+          },
+          {
+            type: 'p',
+            text: 'If you can go into the attic in daylight, stay on the joists. A dark board around a pipe, a streak under a valley, or a pinpoint of daylight is worth a photo with the date. Do not climb a wet roof. On these two-story plans the tired slope is often the rear, over the family room.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Note the subdivision and the year the roof went on, if you know it.',
+              'Check the south and west sides, not only the front.',
+              'Photograph granules, a fallen tab, or an attic stain with the date.',
+              'If water is coming inside, catch it and stay off the roof.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Heat, wind, and what they do to the roof',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Pearland sits closer to the Gulf than Cypress or Tomball, so heat and coastal wind do more everyday damage than a northwest hailstorm. Shingles lose granules, crack, and curl, and the south and west slopes go first. The shaded side can still look fine. Wind from a spring squall or a tropical system lifts edges, the ridge, and the starter. A lifted edge is not a hail bruise. Hail falls south of Beltway 8, and it does not explain every tired roof.',
+          },
+          {
+            type: 'p',
+            text: 'Decking is usually plywood or OSB on trusses. A leak at a boot or a valley softens that board, and it shows as a dark spot from the attic. We replace the soft wood. We do not cover it.',
+          },
+          {
+            type: 'p',
+            text: 'Many leaks start at the flashing: brick sidewalls, step metal, valleys, the drip edge, and the boot on a vent. Heat and humid air crack the boot and open the seal at a sidewall. A new boot can be the whole repair when the field around it is still sound. Flashing opened along a wall, with soft deck beside it, is a larger job. Hurricane season runs from June 1 through November 30. This page is dated November 27, 2026, and these Silverlake and Shadow Creek Ranch roofs have already been through many seasons.',
+          },
+        ],
+      },
+      {
+        heading: 'Repair, replacement, and the color',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A repair is the right job when the trouble is limited and the rest of the roof still sheds water. That can be one slope, a cracked boot, a piece of sidewall flashing, or a ridge the last wind lifted, if the field still has granules and the mat still bends. Replacement is the right job when the wear or the openings run across the slopes, when the mat is brittle, or when a patch will not blend because that color is no longer made.',
+          },
+          {
+            type: 'p',
+            text: 'Age is a clue, not the verdict. A 16-year Shadow Creek Ranch roof with one lifted ridge can be a repair. A 22-year Silverlake roof with bare south and west slopes is usually a replacement. Repeated small patches leave a seam that can leak. We say which job it is after we are on the roof.',
+          },
+          {
+            type: 'p',
+            text: 'If a repair shingle cannot be matched, we say so before a bundle is ordered. On a replacement we buy the shingles, underlayment, starter, hip and ridge, and flashing metal from ABC Supply, and we install CertainTeed architectural shingles. Associations in Silverlake and Shadow Creek Ranch usually review the color, so we ask before we order.',
+          },
+        ],
+      },
+      {
+        heading: 'What the replacement looks like',
+        blocks: [
+          {
+            type: 'p',
+            text: 'We walk every slope, and we look in the attic when that is safe. Ordinary wear is photographed apart from anything a storm did. The City of Pearland issues the permit. The city crosses Brazoria, Harris, and Fort Bend, so we confirm the county on the address. An association letter, when the section requires one, should be in hand before the shingles are delivered.',
+          },
+          {
+            type: 'p',
+            text: 'Tear-off goes to the deck. We replace soft or delaminated boards and show you that wood before we cover it. Underlayment, starter, field shingles, hips, ridge, flashing, drip edge, and attic vents go on with the new roof. A two-story hip with several valleys takes longer than a simple one-story, and we do not name the days until we have seen this roof.',
+          },
+          {
+            type: 'p',
+            text: 'Cars leave the driveway, and we protect plants you name. We do not open the roof if a storm is building, and we cover an open deck if rain is coming. A stained ceiling is checked again afterward, because new shingles do not dry wet insulation. We schedule Pearland from our office in west Houston, 77082. Call (713) 909-0034 with the address and the subdivision.',
+          },
+        ],
+      },
+      {
+        heading: 'When a storm claim might apply',
+        blocks: [
+          {
+            type: 'p',
+            text: 'A storm claim might apply when a dated storm lifted, bruised, or opened this roof. Tabs taken off a Shadow Creek Ranch ridge on a named storm day are a different fact from granules that washed into the gutter through twenty summers. That kind of wear is a replacement you pay for. It is not, by itself, a storm claim. Both can be on one house, and we write them as two facts.',
+          },
+          {
+            type: 'p',
+            text: 'If water is coming in, photograph the opening when that is safe, then cover it. A tarp is temporary. This page is the decision after the house is closed, or when the roof never opened and you are separating wear from storm damage. Water that rose out of a street near Clear Creek is a different event from a roof leak. Tell us which one you saw.',
+          },
+          {
+            type: 'p',
+            text: 'If insurance is part of the plan, Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. We are not public adjusters. The estimate we write is the price of the construction. Your insurer decides coverage, the deductible, and the amount. You can also replace the roof with no claim open. Friendswood, the next city toward the bay, takes this same coastal wind when the address is there. Missouri City is the city on the west side. A house in Shadow Creek Ranch is still a Pearland address, and the permit follows that city.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/roof-replacement', label: 'Roof replacement' },
+              { href: '/roofing', label: 'Roofing and repairs' },
+              { href: '/hail-damage-roof-repair', label: 'Hail and storm roof repair' },
+              { href: '/roof-replacement-pearland-tx', label: 'Roof replacement in Pearland' },
+              { href: '/roofing-pearland-tx', label: 'Roofing in Pearland' },
+              { href: '/houston-roof-replacement-guide', label: 'Houston roof replacement guide' },
+              { href: '/houston-hail-storm-roof-claims', label: 'Hail, storm roofs, and claims' },
+              { href: '/emergency-tarp-and-board-up-houston', label: 'Emergency tarp and board-up' },
+              { href: '/contact', label: 'Contact' },
+              { href: '/friendswood-tx', label: 'Friendswood' },
+              { href: '/missouri-city-tx', label: 'Missouri City' },
+              { href: '/roof-replacement-cost-houston', label: 'What changes a roof replacement cost' },
+              { href: '/insurance-claims', label: 'Insurance claim help' },
+              { href: '/houston-storm-damage', label: 'Houston storm damage help' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

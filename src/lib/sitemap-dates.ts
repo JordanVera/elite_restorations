@@ -52,6 +52,7 @@ const esPostFiles: Record<string, string> = {
   'kitchen-backsplash-cinco-ranch-katy': 'src/lib/es/posts-c.ts',
   'woodlands-spring-first-freeze-prep': 'src/lib/es/posts-c.ts',
   'sugar-land-tub-to-shower-conversion': 'src/lib/es/posts-c.ts',
+  'pearland-roof-repair-or-replacement': 'src/lib/es/posts-c.ts',
 };
 
 let fileDates: Map<string, Date> | undefined;

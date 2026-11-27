@@ -316,7 +316,11 @@ export const houstonPostsB: Article[] = [
     ctaTitle: 'Is the roof ready to be replaced?',
     ctaBody:
       'Call (713) 909-0034. We walk the slopes and say whether a repair will hold. We\'ve been family-owned in Houston since 1993.',
-    related: ['houston-hail-storm-roof-claims', 'emergency-tarp-and-board-up-houston'],
+    related: [
+      'houston-hail-storm-roof-claims',
+      'emergency-tarp-and-board-up-houston',
+      'pearland-roof-repair-or-replacement',
+    ],
     faqs: [
       {
         q: 'Do you replace a roof that could be repaired?',
