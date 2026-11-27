@@ -77,7 +77,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Casas sobre losa, techos con granizo y edificios de muchas unidades.",
         paragraphs: [
           "La mayoría de las casas que secamos están sobre concreto. Un asegurado de State Farm en Memorial, con una fuga de ático, y otro en Katy, con una línea de suministro bajo la losa, necesitan el mapa de la humedad. No se adivina desde la mancha del plafón. Los administradores de apartamentos y los dueños de comercios asegurados por State Farm usan el mismo teléfono. Listamos las unidades mojadas. Un solo plafón manchado no es razón para secar todo el complejo, ni para abrir puertas que siguen secas.",
-          "Llame o envíe un texto al (713) 909-0034 a cualquier hora si hay una emergencia activa. El horario de oficina para una visita programada es de lunes a sábado, de 8:00 AM a 6:00 PM. State Farm es la aseguradora. Nosotros somos la empresa de restauración. El trabajo se programa desde nuestra oficina en el oeste de Houston (77082). El nombre que aparece en la póliza no cambia el orden: fotos, protección cuando es segura, secado y después la reparación que usted contrata.",
+          "Llame o envíe un texto al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., si hay una emergencia activa. El horario de oficina para una visita programada es de lunes a sábado, de 8:00 AM a 6:00 PM. State Farm es la aseguradora. Nosotros somos la empresa de restauración. El trabajo se programa desde nuestra oficina en el oeste de Houston (77082). El nombre que aparece en la póliza no cambia el orden: fotos, protección cuando es segura, secado y después la reparación que usted contrata.",
         ],
       },
       {
@@ -132,7 +132,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿También trabajan en apartamentos y en edificios comerciales?",
-        a: "Sí. Trabajamos en casas, apartamentos y edificios comerciales en el área de Houston. Llame al (713) 909-0034 a cualquier hora si hay una emergencia activa de tormenta o de agua. Traiga los números de unidad si el edificio tiene varias.",
+        a: "Sí. Trabajamos en casas, apartamentos y edificios comerciales en el área de Houston. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., si hay una emergencia activa de tormenta o de agua. Traiga los números de unidad si el edificio tiene varias.",
       },
     ],
   ),
@@ -173,7 +173,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "De la oficina en 77082 a la costa y a los suburbios.",
         paragraphs: [
           "Programamos desde nuestra oficina en el oeste de Houston (77082). Las llamadas de granizo y de viento llegan de Katy, Cypress y The Woodlands. Las llamadas de viento de la costa llegan de Clear Lake y de Galveston. Las fugas de losa y las fallas de aparatos aparecen en Westchase, Alief, Bellaire y Memorial igual que en cualquier otro lado. Las pólizas de apartamento y de comercio de Allstate, cuando eso es lo que carga el dueño, reciben los mismos hábitos de documentación y una lista de unidades.",
-          "Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Las emergencias activas de tormenta y de agua se atienden a cualquier hora. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Allstate. Una página con su nombre en nuestro sitio es una guía para quien nos contrata, no un letrero de ellos.",
+          "Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Las emergencias activas de tormenta y de agua se atienden lunes a sábado, de 8 a.m. a 6 p.m. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Allstate. Una página con su nombre en nuestro sitio es una guía para quien nos contrata, no un letrero de ellos.",
         ],
       },
       {
@@ -181,7 +181,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "El trabajo, separado del pago de Allstate.",
         paragraphs: [
           "Una lona, el cierre con madera, sacar el agua y secar limitan más daño. El techo, la tablaroca y los pisos son la reparación. Los escribimos como trabajos separados, con los cuartos nombrados. Un pago de Allstate, si llega, es otro documento. Mantenemos nuestra factura aparte. Usted nos contrata. Allstate decide lo que debe según la póliza que usted tiene. El estimado es el precio de la construcción.",
-          "Las losas de Houston guardan agua en el concreto después de que un lavavajillas, un inodoro o una línea de suministro ya se ven limpios. Eso lo medimos. Los techos con granizo se miran en cada pendiente, no desde la entrada de autos. Si usted está comparando nuestro estimado con una cifra de Allstate, explicamos la construcción. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Allstate decide lo que la póliza paga. Llame o envíe un texto al (713) 909-0034 por una fuga activa o un techo abierto. El nombre de la póliza no cambia cómo se seca una losa. Las pérdidas de apartamento y de comercio reciben las mismas fotos, con una lista de unidades o de suites en lugar de un solo pasillo. Contestamos el (713) 909-0034 a cualquier hora cuando el agua sigue entrando. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM.",
+          "Las losas de Houston guardan agua en el concreto después de que un lavavajillas, un inodoro o una línea de suministro ya se ven limpios. Eso lo medimos. Los techos con granizo se miran en cada pendiente, no desde la entrada de autos. Si usted está comparando nuestro estimado con una cifra de Allstate, explicamos la construcción. Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. Allstate decide lo que la póliza paga. Llame o envíe un texto al (713) 909-0034 por una fuga activa o un techo abierto. El nombre de la póliza no cambia cómo se seca una losa. Las pérdidas de apartamento y de comercio reciben las mismas fotos, con una lista de unidades o de suites en lugar de un solo pasillo. Contestamos el (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., cuando el agua sigue entrando. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM.",
         ],
       },
     ],
@@ -228,7 +228,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿También apartamentos y comercios?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de tormenta o de agua en una casa, un apartamento o un edificio comercial. Lleve la lista de unidades si hay más de una mojada.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de tormenta o de agua en una casa, un apartamento o un edificio comercial. Lleve la lista de unidades si hay más de una mojada.",
       },
     ],
   ),
@@ -268,7 +268,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         eyebrow: "Houston",
         heading: "La casa en Houston mientras el miembro no está.",
         paragraphs: [
-          "Trabajamos en el área de Houston desde nuestra oficina en el oeste de Houston (77082), incluidos Katy, Spring, Clear Lake y los vecindarios más cerca de la oficina, en Westchase y Alief. Las comunidades de apartamentos y las casas son llamadas comunes. Llame al (713) 909-0034 a cualquier hora por una fuga activa o un techo abierto. Díganos quién puede aprobar el trabajo si el miembro no está en la ciudad. Un código de portón y un número de unidad van en el primer mensaje si la pérdida es un apartamento.",
+          "Trabajamos en el área de Houston desde nuestra oficina en el oeste de Houston (77082), incluidos Katy, Spring, Clear Lake y los vecindarios más cerca de la oficina, en Westchase y Alief. Las comunidades de apartamentos y las casas son llamadas comunes. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una fuga activa o un techo abierto. Díganos quién puede aprobar el trabajo si el miembro no está en la ciudad. Un código de portón y un número de unidad van en el primer mensaje si la pérdida es un apartamento.",
           "Somos una empresa familiar y servimos a Houston desde 1993. Envíe un texto al mismo número. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM, para una visita que no es emergencia. No somos USAA. No hace falta un número de membresía para que salgamos. Hace falta una dirección, una persona que pueda abrir, y saber si el agua sigue moviéndose.",
         ],
       },
@@ -277,7 +277,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Un registro que el miembro pueda leer desde otro lugar.",
         paragraphs: [
           "Cuando el miembro no está en la casa, el valor de la visita es un registro llano: fotos antes de que la lona suba, nombres de unidad o de cuarto, notas de humedad, y un estimado de reparación que diga qué se va a reconstruir. Podemos enviar ese conjunto por texto o por correo a la persona que tiene la póliza de USAA. No lo entregamos nosotros a USAA, salvo que usted esté ahí y lo entregue. El registro de fotos es una herramienta que la persona en el lugar puede llenar el mismo día, cuarto por cuarto, sin esperar el vuelo.",
-          "El secado no espera un vuelo de regreso. La tablaroca mojada sobre una losa de Houston empeora con la humedad. Empezamos los pasos que limitan más daño cuando alguien con autoridad nos contrata, y dejamos el nombre de la aseguradora del miembro fuera del nombre de nuestra empresa. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de agua o de tormenta. Nuestra oficina en el oeste de Houston (77082) abre de lunes a sábado, de 8:00 AM a 6:00 PM, cuando la visita puede esperar. Envíe un texto al mismo número si una llamada es difícil desde donde usted está. La humedad del Golfo no se detiene porque el titular esté en otro huso horario.",
+          "El secado no espera un vuelo de regreso. La tablaroca mojada sobre una losa de Houston empeora con la humedad. Empezamos los pasos que limitan más daño cuando alguien con autoridad nos contrata, y dejamos el nombre de la aseguradora del miembro fuera del nombre de nuestra empresa. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de agua o de tormenta. Nuestra oficina en el oeste de Houston (77082) abre de lunes a sábado, de 8:00 AM a 6:00 PM, cuando la visita puede esperar. Envíe un texto al mismo número si una llamada es difícil desde donde usted está. La humedad del Golfo no se detiene porque el titular esté en otro huso horario.",
         ],
       },
     ],
@@ -324,7 +324,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Apartamentos y comercios también, con un código de portón?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de tormenta o de agua. Si es un apartamento, mande el código y el número de unidad en el primer mensaje. Una casa vacía en Katy o en Spring se atiende igual: dirección, acceso y quién aprueba.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de tormenta o de agua. Si es un apartamento, mande el código y el número de unidad en el primer mensaje. Una casa vacía en Katy o en Spring se atiende igual: dirección, acceso y quién aprueba.",
       },
     ],
   ),
@@ -365,7 +365,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Las mismas losas, las mismas tormentas, otra aseguradora.",
         paragraphs: [
           "Las casas sobre concreto en Westchase, Alief, Sugar Land, Bellaire y Memorial necesitan el mismo mapa de humedad, diga la póliza Farmers o diga otro nombre. Los administradores de apartamentos con una póliza de Farmers sobre el edificio deben traer los números de unidad. Un plafón manchado no es razón para secar cada unidad. En un comercio chico importa qué hay debajo de la fuga: mercancía, un clóset de servidores o una suite vacía. Esos detalles cambian el orden del trabajo. No cambian quién decide el reclamo.",
-          "Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034 a cualquier hora por una emergencia activa. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Farmers. El formulario de emergencia nos pide devolverle la llamada. Le devolvemos la llamada en cuanto podamos. Una tormenta en toda la ciudad puede retrasar eso.",
+          "Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Farmers. El formulario de emergencia nos pide devolverle la llamada. Le devolvemos la llamada en cuanto podamos. Una tormenta en toda la ciudad puede retrasar eso.",
         ],
       },
       {
@@ -428,7 +428,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Apartamentos y comercios con Farmers?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa. Traiga los números de unidad y, en un comercio, diga si debajo de la fuga hay mercancía, servidores o una suite vacía. Una tormenta en toda la ciudad puede retrasar la llamada de regreso.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa. Traiga los números de unidad y, en un comercio, diga si debajo de la fuga hay mercancía, servidores o una suite vacía. Una tormenta en toda la ciudad puede retrasar la llamada de regreso.",
       },
     ],
   ),
@@ -469,7 +469,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "El calor, las losas y el deducible que no adivinamos.",
         paragraphs: [
           "La gente nos pide rebajar el deducible, o decir si Liberty Mutual usa un porcentaje para el viento. Ese número está en su página de declaraciones. Lo que sí decimos es si el techo que tenemos enfrente se puede reparar o hay que quitarlo, y hasta dónde llegó el agua en la losa. Un porcentaje de viento, si la póliza lo usa, se lo señala Liberty Mutual en su propio texto. Dejamos esa frase como ellos la escribieron.",
-          "Trabajamos desde nuestra oficina en el oeste de Houston (77082). Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Emergencias a cualquier hora. Visitas de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Liberty Mutual. La humedad de Houston no espera el calendario de una inspección.",
+          "Trabajamos desde nuestra oficina en el oeste de Houston (77082). Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. El horario es lunes a sábado, de 8 a.m. a 6 p.m. Visitas de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Liberty Mutual. La humedad de Houston no espera el calendario de una inspección.",
         ],
       },
       {
@@ -485,7 +485,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Una casa con Liberty Mutual sigue siendo un trabajo normal de Houston.",
         paragraphs: [
           "Lo que tenemos es el edificio, no un manual de Liberty Mutual. Usted puede contratarnos antes de que Liberty Mutual haya fijado un número, y también puede decidir no hacerlo. Los pasos que limitan más daño son a menudo lo que una póliza espera. Eso no es un recibo que Liberty Mutual haya prometido pagar. Le cobramos a la persona que firma el trabajo. El estimado de Liberty Mutual, si escriben uno, se puede comparar con el nuestro como dos descripciones de la construcción. Explicamos el nuestro. Una disputa, si usted la tiene, la maneja usted.",
-          "Llame o envíe un texto al (713) 909-0034. Nuestra oficina en el oeste de Houston (77082) abre de lunes a sábado, de 8:00 AM a 6:00 PM, para una visita tranquila. El agua activa y los techos abiertos se contestan a cualquier hora, también para administradores de apartamentos y dueños de comercios que resultan estar asegurados por Liberty Mutual. Secamos un muro mojado el día que nos contratan, porque la humedad no espera un calendario. El seguro no está pintado en el camión. La losa se mide igual.",
+          "Llame o envíe un texto al (713) 909-0034. Nuestra oficina en el oeste de Houston (77082) abre de lunes a sábado, de 8:00 AM a 6:00 PM, para una visita tranquila. El agua activa y los techos abiertos se contestan lunes a sábado, de 8 a.m. a 6 p.m., también para administradores de apartamentos y dueños de comercios que resultan estar asegurados por Liberty Mutual. Secamos un muro mojado el día que nos contratan, porque la humedad no espera un calendario. El seguro no está pintado en el camión. La losa se mide igual.",
         ],
       },
     ],
@@ -532,7 +532,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Casas, apartamentos y comercios?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de tormenta o de agua. Un local en Richmond, una losa en Katy y un techo en Cypress se documentan como el edificio que son, no como un guion nacional.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de tormenta o de agua. Un local en Richmond, una losa en Katy y un techo en Cypress se documentan como el edificio que son, no como un guion nacional.",
       },
     ],
   ),
@@ -573,7 +573,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "El área de Houston, una oficina, sin cambiar de logotipo.",
         paragraphs: [
           "Trabajamos desde nuestra oficina en el oeste de Houston (77082) en Houston, el Energy Corridor, Katy, Sugar Land, Clear Lake y The Woodlands. Somos una empresa familiar y servimos a Houston desde 1993. Una casa asegurada por Travelers y un local asegurado por Travelers pueden llamar ambos al (713) 909-0034. El trabajo no se va a ver igual, y no lo forzamos a verse igual. Una abertura de viento en Clear Lake y un techo de granizo en Katy se escriben como los techos que son.",
-          "Envíe un texto al mismo número. Emergencias activas a cualquier hora. Horario de oficina de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Travelers. Si alguien le dijo que estábamos en una lista de proveedores de Travelers, estaba equivocado. Usted puede contratarnos de todos modos. Travelers sigue decidiendo el reclamo.",
+          "Envíe un texto al mismo número. Emergencias activas, lunes a sábado, de 8 a.m. a 6 p.m. Horario de oficina de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Travelers. Si alguien le dijo que estábamos en una lista de proveedores de Travelers, estaba equivocado. Usted puede contratarnos de todos modos. Travelers sigue decidiendo el reclamo.",
         ],
       },
       {
@@ -636,7 +636,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Casas, apartamentos y comercios?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de tormenta o de agua. Diga si es la casa en la que vive o un edificio que administra. El acceso y la lista de unidades cambian la visita.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de tormenta o de agua. Diga si es la casa en la que vive o un edificio que administra. El acceso y la lista de unidades cambian la visita.",
       },
     ],
   ),
@@ -676,7 +676,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         eyebrow: "Houston",
         heading: "Empresa familiar, con la aseguradora fuera del camión.",
         paragraphs: [
-          "Elite Restorations es una empresa familiar. Trabajamos desde nuestra oficina en el oeste de Houston (77082) y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Contestamos emergencias activas de tormenta y de agua a cualquier hora, en casas, apartamentos y edificios comerciales. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Una visita tranquila de entre semana cabe en ese horario.",
+          "Elite Restorations es una empresa familiar. Trabajamos desde nuestra oficina en el oeste de Houston (77082) y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Contestamos emergencias activas de tormenta y de agua, lunes a sábado, de 8 a.m. a 6 p.m., en casas, apartamentos y edificios comerciales. Las visitas programadas son de lunes a sábado, de 8:00 AM a 6:00 PM. Una visita tranquila de entre semana cabe en ese horario.",
           "No somos Nationwide. Una página con su nombre en nuestro sitio es una guía para nuestros clientes, no una insignia. El vecindario no elige la cobertura, y nosotros tampoco la elegimos. Describimos el agua. Ellos deciden la póliza. Llame al (713) 909-0034 si el plafón sigue goteando. Un administrador con una póliza de edificio de Nationwide usa ese mismo número y debe tener la lista de unidades lista antes de que lleguemos, incluidas las que ya tienen el plafón mojado.",
         ],
       },
@@ -740,7 +740,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Apartamentos y comercios?",
-        a: "Sí. Llame al (713) 909-0034 a cualquier hora por una emergencia activa. Un administrador debe tener la lista de unidades antes de que lleguemos, con los plafones que ya están mojados. No secamos el edificio entero por una sola mancha.",
+        a: "Sí. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa. Un administrador debe tener la lista de unidades antes de que lleguemos, con los plafones que ya están mojados. No secamos el edificio entero por una sola mancha.",
       },
     ],
   ),
@@ -781,7 +781,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Casas y edificios, desde 77082.",
         paragraphs: [
           "Somos una empresa familiar. Trabajamos desde nuestra oficina en el oeste de Houston (77082) y servimos a Houston desde 1993. Secamos y reconstruimos casas, apartamentos y edificios comerciales en Houston, Katy, Sugar Land, The Woodlands, Clear Lake y los vecindarios junto a la oficina. Una póliza de casa de Progressive no cambia la losa ni la humedad. Las casas de losa en Alief y Westchase guardan el agua en el concreto. Las casas de dos pisos en Katy y The Woodlands dejan caer una fuga de arriba a un plafón de abajo.",
-          "Llame o envíe un texto al (713) 909-0034 a cualquier hora por una emergencia activa de agua o de tormenta. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Progressive, y esta no es una página de reparación de autos. El viento de la costa hacia Clear Lake abre tapajuntas. El granizo marca la pendiente oeste. Una helada, cuando llega, es la línea del ático. Escribimos la que ocurrió.",
+          "Llame o envíe un texto al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de agua o de tormenta. El horario de oficina es de lunes a sábado, de 8:00 AM a 6:00 PM. No somos Progressive, y esta no es una página de reparación de autos. El viento de la costa hacia Clear Lake abre tapajuntas. El granizo marca la pendiente oeste. Una helada, cuando llega, es la línea del ático. Escribimos la que ocurrió.",
         ],
       },
       {
@@ -797,7 +797,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
         heading: "Solo el edificio, aunque Progressive sea el nombre en las dos tarjetas.",
         paragraphs: [
           "Esa separación mantiene legible el archivo de propiedad de Progressive. Una casa en Houston y un carro en la entrada no son una sola reparación, aunque haya sido la misma tormenta. Traiga las preguntas del deducible a Progressive. Traiga el plafón abierto, la losa mojada y la ventana rota a nosotros. Podemos poner lona, cerrar con madera, secar y reconstruir. Una pérdida de propiedad se queda como pérdida de propiedad.",
-          "Trabajamos desde nuestra oficina en el oeste de Houston (77082). Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. Emergencias a cualquier hora. No somos Progressive, y nada en esta página es una oferta de ellos. Si solo tiene el número que usa para el carro, pida el camino de la propiedad antes de mezclar los archivos. El menú del teléfono es de ellos. El techo, si se puede pisar, es el nuestro el día de la visita. Las fotos de la casa se toman el mismo día, antes de que una limpieza borre la fuente.",
+          "Trabajamos desde nuestra oficina en el oeste de Houston (77082). Somos una empresa familiar y servimos a Houston desde 1993. Llame o envíe un texto al (713) 909-0034. El horario es lunes a sábado, de 8 a.m. a 6 p.m. No somos Progressive, y nada en esta página es una oferta de ellos. Si solo tiene el número que usa para el carro, pida el camino de la propiedad antes de mezclar los archivos. El menú del teléfono es de ellos. El techo, si se puede pisar, es el nuestro el día de la visita. Las fotos de la casa se toman el mismo día, antes de que una limpieza borre la fuente.",
         ],
       },
     ],
@@ -844,7 +844,7 @@ export const esInsurers: readonly EsInsurerPage[] = [
       },
       {
         q: "¿Casas, apartamentos y comercios, no talleres?",
-        a: "Sí para la propiedad. Llame al (713) 909-0034 a cualquier hora por una emergencia activa de tormenta o de agua. Diga la dirección y si alguien está en agua cerca de la electricidad. No pregunte por el carro.",
+        a: "Sí para la propiedad. Llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., por una emergencia activa de tormenta o de agua. Diga la dirección y si alguien está en agua cerca de la electricidad. No pregunte por el carro.",
       },
     ],
   ),

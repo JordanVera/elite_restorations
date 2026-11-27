@@ -477,7 +477,7 @@ export const houstonPostsC: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Wood is an honest deck board if someone will clean it and refinish it. In this humidity, a shaded board needs that care more often than a brochure from a dry climate suggests. Skip the care and the surface grays, checks, and holds mildew. Composite does not ask for the same stain. It still moves with heat, it still needs a frame that is sound, and a cheap edge will look tired where the chairs drag. We talk through the upkeep before anything is ordered, including which side of the house the deck faces.',
+            text: 'Wood is an honest deck board if someone will clean it and refinish it. In this humidity, a shaded board needs that care more often than a brochure from a dry climate suggests. Skip the care and the surface grays, checks, and stays stained. Composite does not ask for the same stain. It still moves with heat, it still needs a frame that is sound, and a cheap edge will look tired where the chairs drag. We talk through the upkeep before anything is ordered, including which side of the house the deck faces.',
           },
           {
             type: 'p',

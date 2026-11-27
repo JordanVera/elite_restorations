@@ -278,7 +278,7 @@ export const recoveryFaqs: Record<string, Faq[]> = {
   "commercial-storm-restoration": [
     {
       q: "How fast can you get to an apartment community?",
-      a: `Call ${phone} any time for an active leak, an open roof, or broken glass. We tell you the next safe step. We do not promise a drive time. After a hurricane, we triage open buildings and active water. A unit list is faster than a voicemail that says everything is wet.`,
+      a: `Call ${phone}, Monday through Saturday, 8:00 AM to 6:00 PM, for an active leak, an open roof, or broken glass. We tell you the next safe step. We do not promise a drive time. After a hurricane, we triage open buildings and active water. A unit list is faster than a voicemail that says everything is wet.`,
     },
     {
       q: "What should a manager have ready?",
@@ -340,7 +340,7 @@ export const recoveryFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How do I reach you if the house is still open?",
-      a: "Call " + phone + " any time and say the fire department has released the building, or that you are still waiting on that. If you cannot call, the emergency form on this site reaches the same team. We will tell you the next safe step. Office hours for a visit that is not an emergency are Monday through Saturday, 8:00 AM to 6:00 PM.",
+      a: "Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, and say the fire department has released the building, or that you are still waiting on that. If you cannot call, the emergency form on this site reaches the same team. We will tell you the next safe step. Office hours for a visit that is not an emergency are Monday through Saturday, 8:00 AM to 6:00 PM.",
     },
   ],
 };

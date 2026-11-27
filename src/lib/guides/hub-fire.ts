@@ -55,7 +55,7 @@ export const fireDamageGuide: ServiceGuide = {
       heading: "Board-up, soot, odor, firefighting water, and the rebuild.",
       paragraphs: [
         "We secure what is open, clean soot from surfaces that can be saved, and remove finishes that cannot. Odor lives in drywall paper, insulation, and the inside of cabinets. If the air handler pulled smoke through the ducts, we say so. Hose water is extracted and dried like any other sudden water in a Houston house.",
-        "Drywall, paint, flooring, and cabinets go back when the readings support closing the walls. A different kitchen layout is a separate scope from replacing what burned. Call (713) 909-0034. For an open building we answer any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM.",
+        "Drywall, paint, flooring, and cabinets go back when the readings support closing the walls. A different kitchen layout is a separate scope from replacing what burned. Call (713) 909-0034. For an open building we answer Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM.",
       ],
       points: [
         {

@@ -474,7 +474,7 @@ export const esPostsC: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'La madera es una tabla honesta si alguien la va a limpiar y a volver a acabar. Con esta humedad, una tabla a la sombra pide ese cuidado más seguido de lo que sugiere un folleto de un clima seco. Si se salta el cuidado, la superficie se pone gris, se raja y guarda moho. El composite no pide el mismo tinte. Igual se mueve con el calor, igual necesita una estructura sana, y un canto barato se ve cansado donde arrastran las sillas. Hablamos del mantenimiento antes de pedir nada, incluido de qué lado de la casa da el deck.',
+            text: 'La madera es una tabla honesta si alguien la va a limpiar y a volver a acabar. Con esta humedad, una tabla a la sombra pide ese cuidado más seguido de lo que sugiere un folleto de un clima seco. Si se salta el cuidado, la superficie se pone gris, se raja y se mancha. El composite no pide el mismo tinte. Igual se mueve con el calor, igual necesita una estructura sana, y un canto barato se ve cansado donde arrastran las sillas. Hablamos del mantenimiento antes de pedir nada, incluido de qué lado de la casa da el deck.',
           },
           {
             type: 'p',

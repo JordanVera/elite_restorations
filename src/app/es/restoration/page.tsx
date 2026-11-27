@@ -83,7 +83,7 @@ export default function SpanishRestorationPage() {
               },
               {
                 q: "¿Atienden apartamentos y comercios?",
-                a: "Sí. Administradores, la asociación de propietarios y los dueños pueden llamar al (713) 909-0034 a cualquier hora si la emergencia de agua o tormenta sigue.",
+                a: "Sí. Administradores, la asociación de propietarios y los dueños pueden llamar al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m., si la emergencia de agua o tormenta sigue.",
               },
               {
                 q: "¿Hablan por la aseguradora?",

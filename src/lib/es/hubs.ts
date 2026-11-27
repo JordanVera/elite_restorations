@@ -380,7 +380,7 @@ const esHubInputs: readonly EsHub[] = [
     "Tormenta comercial en Houston",
     "Restauración comercial por tormenta",
     "Emergencia",
-    "Administradores, asociaciones y dueños de edificios pueden llamar a cualquier hora si la tormenta o el agua siguen en un apartamento o un comercio.",
+    "Administradores, asociaciones y dueños de edificios pueden llamar, lunes a sábado, de 8 a.m. a 6 p.m., si la tormenta o el agua siguen en un apartamento o un comercio.",
     "Ponemos lona cuando el techo es seguro, tablas en el vidrio roto, sacamos el agua, secamos lo que se mojó y reparamos lo que usted contrata. Enviamos el estimado a su aseguradora y lo trabajamos con el ajustador. No somos ajustadores públicos. Somos independientes de cada aseguradora.",
     [
       { q: "¿Para quién es esta página?", a: "Para administradores, mesas directivas y dueños de comunidades de apartamentos y edificios comerciales en el área de Houston. Las casas usan las otras páginas, con los mismos oficios." },

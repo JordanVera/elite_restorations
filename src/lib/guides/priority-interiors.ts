@@ -257,7 +257,7 @@ export const bathroomRemodeling: ServiceGuide = {
       heading: 'Slab drains, older baths, and humidity.',
       paragraphs: [
         'On a pier-and-beam house, common in older Heights and in many pre-1960 Houston neighborhoods, the shower drain is often reachable from the crawl space. Rerouting it is still real plumbing. It does not take a concrete saw. On a slab, which is how most newer Katy, Memorial, Sugar Land, and Woodlands houses are built, the drain is in the slab. A new shower location means cutting, patching, and then building a pan on top of that repair. We draw a no-curb shower on a slab only after we know the floor can slope to a drain the structure allows.',
-        'Houston humidity is why the fan, the paint, and the shower wall matter as much as the faucet. A bath that stays damp grows mildew on grout and on the ceiling even when the tile job was pretty. The fan has to move air outside, and the paint has to be a finish that belongs in a wet room. Older plaster walls in West University and Bellaire are blended into the wall around them. A thick coat that shows the patch is not the goal.',
+        'Houston humidity is why the fan, the paint, and the shower wall matter as much as the faucet. A bath that stays damp stains grout and the ceiling even when the tile job was pretty. The fan has to move air outside, and the paint has to be a finish that belongs in a wet room. Older plaster walls in West University and Bellaire are blended into the wall around them. A thick coat that shows the patch is not the goal.',
       ],
       points: [
         {
@@ -318,8 +318,8 @@ export const bathroomRemodeling: ServiceGuide = {
       a: 'Often when the plumbing moves. A refresh that keeps the drains and the electrical in place may not. The permit office depends on the address, including independent cities like Bellaire and West University Place.',
     },
     {
-      q: 'Will a new bathroom fix mildew by itself?',
-      a: 'New tile does not fix a fan that does not exhaust, or a leak that is still running. We deal with the moisture path as part of the project. If the room stays wet, mildew can still grow.',
+      q: 'Will a new bathroom fix a damp room by itself?',
+      a: 'New tile does not fix a fan that does not exhaust, or a leak that is still running. We deal with the moisture path as part of the project. If the room stays wet, the damp comes back.',
     },
   ],
 };

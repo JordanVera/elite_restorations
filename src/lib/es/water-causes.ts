@@ -141,7 +141,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         heading: 'Por qué una helada aquí sorprende a la plomería.',
         paragraphs: [
           'Las casas en Houston, Katy, Sugar Land, The Woodlands y Clear Lake están hechas para el calor. Las líneas del ático y de las paredes exteriores a menudo van sin aislamiento, porque una helada fuerte no es la semana normal. Cuando llega, esas son las líneas que se parten, muchas veces mientras la gente duerme o está fuera de la ciudad. Los complejos de apartamentos con líneas expuestas en los pasillos abiertos, y los locales con líneas en la azotea o por fuera, fallan la misma noche. El deshielo de la mañana es cuando se abre el plafón.',
-          `En el ${phone} contestamos a cualquier hora si hay una emergencia de agua activa en una casa, un conjunto de apartamentos o un local comercial. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m., para una visita agendada. Puede enviar un texto a ese número. Elite Restorations es una empresa familiar aquí desde 1993. Secamos y reparamos el edificio para usted, no para su aseguradora. No dependemos de ninguna aseguradora.`,
+          `En el ${phone} contestamos, lunes a sábado, de 8 a.m. a 6 p.m., si hay una emergencia de agua activa en una casa, un conjunto de apartamentos o un local comercial. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m., para una visita agendada. Puede enviar un texto a ese número. Elite Restorations es una empresa familiar aquí desde 1993. Secamos y reparamos el edificio para usted, no para su aseguradora. No dependemos de ninguna aseguradora.`,
         ],
         points: [
           {
@@ -197,8 +197,8 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         a: 'Una fuga contenida y un plafón que se abrió en toda la casa no son el mismo número. Como un rango para planear, no una cotización, secar un cuarto mojado suele quedar en los miles bajos, y una fuga amplia cuesta más. El precio sale de lo que medimos.',
       },
       {
-        q: '¿Atienden fuera de horario?',
-        a: `Para emergencias de agua activas, llame al ${phone} a cualquier hora. El horario de oficina para visitas agendadas es de lunes a sábado, de 8:00 a. m. a 6:00 p. m. Puede enviar un texto al mismo número.`,
+        q: '¿En qué horario atienden?',
+        a: `Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m. Las visitas agendadas usan ese mismo horario. Puede enviar un texto al mismo número.`,
       },
       {
         q: '¿Dónde están?',
@@ -210,7 +210,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Qué tan pronto pueden llegar después de que se parte un tubo?',
-        a: `Llame al ${phone} a cualquier hora si el agua sigue corriendo. Cierre la principal si puede hacerlo con seguridad. Le decimos el siguiente paso. No prometemos un tiempo de camino. La mañana después de una helada fuerte, mucha gente en Houston llama a la vez. Llamar igual lo pone en la lista.`,
+        a: `Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., si el agua sigue corriendo. Cierre la principal si puede hacerlo con seguridad. Le decimos el siguiente paso. No prometemos un tiempo de camino. La mañana después de una helada fuerte, mucha gente en Houston llama a la vez. Llamar igual lo pone en la lista.`,
       },
       {
         q: '¿Qué le hizo a los tubos de Houston la helada de febrero de 2021?',
@@ -296,7 +296,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         heading: 'Seque el edificio. Después se habla de un tanque nuevo.',
         paragraphs: [
           'Sacamos lo que está estancado, medimos el clóset y los cuartos a los que llegó, y ponemos ventiladores de secado y deshumidificadores. La humedad de Houston hace que un ventilador en la puerta sea una forma lenta de secar un muro. Una charola que se desbordó no es el mismo trabajo que un tanque que se abrió. El calentador mismo puede necesitar cambio. Ese cambio es plomería. La tablaroca y el piso son la reparación del edificio. Podemos coordinar las dos cosas, y separamos los precios para que un tanque nuevo y una reparación de plafón sigan marcados como dos trabajos.',
-          `Un plomero con licencia debe volver a encender un calentador de gas cuando usted quiera agua caliente otra vez. El gas se lo dejamos a ellos. Nuestro trabajo es el agua que salió del calentador y los acabados que echó a perder. Atendemos casas, apartamentos y clósets chicos de locales comerciales. Llame al ${phone} a cualquier hora si el agua sigue corriendo. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
+          `Un plomero con licencia debe volver a encender un calentador de gas cuando usted quiera agua caliente otra vez. El gas se lo dejamos a ellos. Nuestro trabajo es el agua que salió del calentador y los acabados que echó a perder. Atendemos casas, apartamentos y clósets chicos de locales comerciales. Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., si el agua sigue corriendo. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
         ],
         points: [
           {
@@ -397,7 +397,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Trabajan en locales comerciales?',
-        a: `Sí. Clósets de cuartos de descanso y de máquinas, además de apartamentos y casas. Llame al ${phone} a cualquier hora si el agua sigue corriendo.`,
+        a: `Sí. Clósets de cuartos de descanso y de máquinas, además de apartamentos y casas. Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., si el agua sigue corriendo.`,
       },
       {
         q: '¿Dónde está la oficina?',
@@ -409,7 +409,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Qué tan pronto pueden venir por un calentador que se vació?',
-        a: `Llame al ${phone} si el agua se está extendiendo. Contestamos a cualquier hora en una emergencia de agua activa y le decimos el siguiente paso seguro. Un calentador de garaje que ya se vació al patio es urgente si también corrió hacia la casa. No prometemos en cuántos minutos llegamos.`,
+        a: `Llame al ${phone} si el agua se está extendiendo. Contestamos, lunes a sábado, de 8 a.m. a 6 p.m., en una emergencia de agua activa y le decimos el siguiente paso seguro. Un calentador de garaje que ya se vació al patio es urgente si también corrió hacia la casa. No prometemos en cuántos minutos llegamos.`,
       },
       {
         q: '¿En Houston es distinto un calentador de ático y uno de garaje?',
@@ -495,7 +495,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         heading: 'Seque el hueco y después vea qué gabinetes se salvan.',
         paragraphs: [
           'Sacamos el agua estancada, quitamos los fondos de gabinete mojados que ya perdieron la forma, y secamos la losa y el muro detrás del lavavajillas con ventiladores de secado y deshumidificadores. El aire de Houston está tan húmedo que un ventilador de caja no termina un gabinete cerrado. Las lecturas de humedad deciden cuándo puede entrar tabla nueva y un fondo nuevo. El lavavajillas mismo puede necesitar un plomero o un técnico de electrodomésticos. Reconstruir la máquina es trabajo de ellos, no nuestro. Un goteo lento y una línea de suministro que se zafó son reparaciones distintas.',
-          `La reparación del edificio, los gabinetes, la tablaroca y el piso, puede quedarse con Elite Restorations, empresa familiar en Houston desde 1993. Trabajamos en casas, cocinas de apartamento y cuartos de descanso chicos. Llame o envíe un texto al ${phone}. Las fugas activas se contestan a cualquier hora. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
+          `La reparación del edificio, los gabinetes, la tablaroca y el piso, puede quedarse con Elite Restorations, empresa familiar en Houston desde 1993. Trabajamos en casas, cocinas de apartamento y cuartos de descanso chicos. Llame o envíe un texto al ${phone}. Las fugas activas se contestan lunes a sábado, de 8 a.m. a 6 p.m. En ${office} el horario es de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
         ],
         points: [
           {
@@ -592,7 +592,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Atienden casas y apartamentos?',
-        a: `Sí, y cuartos de descanso chicos. Llame al ${phone} a cualquier hora si el agua sigue extendiéndose.`,
+        a: `Sí, y cuartos de descanso chicos. Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., si el agua sigue extendiéndose.`,
       },
       {
         q: '¿Dónde leo sobre la losa?',
@@ -608,7 +608,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Qué tan pronto pueden salir?',
-        a: `Si el agua se está extendiendo por la cocina, llame al ${phone} a cualquier hora. Pare el ciclo. Cierre la llave de bajo el fregadero si puede hacerlo con seguridad. Le decimos el siguiente paso. Una mancha seca del mes pasado es una visita agendada, de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
+        a: `Si el agua se está extendiendo por la cocina, llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m. Pare el ciclo. Cierre la llave de bajo el fregadero si puede hacerlo con seguridad. Le decimos el siguiente paso. Una mancha seca del mes pasado es una visita agendada, de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
       },
       {
         q: '¿Una línea de suministro reventada es distinta de un empaque malo?',
@@ -623,8 +623,8 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         a: `No podemos prometerlo. En muchas pólizas, una rotura súbita no se lee igual que una filtración lenta. Revise la suya o pregúntele a su aseguradora. Fotografiamos la fuga y los gabinetes mojados y ayudamos a documentar el daño. ${notAdjusters} ${claimWork}`,
       },
       {
-        q: '¿Puede empezar moho bajo el gabinete del fregadero?',
-        a: 'El aglomerado mojado en una cocina de Houston es un mal lugar para esperar. No ponemos un plazo, y no somos un laboratorio de moho. Secamos lo que podemos alcanzar y quitamos el material que no se puede secar en su lugar. No prometemos una cocina sin moho. Si ve moho, díganos.',
+        q: '¿Qué pasa si el aglomerado bajo el fregadero se queda mojado?',
+        a: 'El aglomerado mojado en una cocina de Houston es un mal lugar para esperar. No ponemos un plazo. Secamos lo que podemos alcanzar y quitamos el material que no se puede secar en su lugar. Si ve daño bajo el gabinete, díganos.',
       },
       {
         q: '¿Puedo seguir usando el resto de la cocina?',
@@ -694,7 +694,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
         heading: 'Limpie según qué agua era, y después seque la losa.',
         paragraphs: [
           'El agua limpia de un suministro y un desborde de aguas negras no se secan igual. Quitamos los materiales contaminados que no se pueden limpiar, sacamos el resto del agua y secamos la estructura con ventiladores de secado y deshumidificadores. La humedad de Houston es la razón de que el equipo se quede hasta que los medidores coincidan. El piso que se levantó en las orillas, o que se manchó en las uniones, muchas veces tiene que salir para que la losa seque. Le enseñamos esa línea antes de quitar un baño completo. Un desborde con aguas negras necesita una limpieza más cuidadosa que una rotura limpia de la línea de suministro.',
-          `La tablaroca, el zoclo, el piso y volver a sentar el inodoro, cuando eso es parte del trabajo, vienen después de las lecturas de humedad. Elite Restorations es una empresa familiar en Houston desde 1993. Trabajamos en casas, baños de apartamento y baños comerciales. Las visitas se agendan desde ${office}. Llame o envíe un texto al ${phone} a cualquier hora cuando el agua sigue extendiéndose. Las recorridas agendadas son de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
+          `La tablaroca, el zoclo, el piso y volver a sentar el inodoro, cuando eso es parte del trabajo, vienen después de las lecturas de humedad. Elite Restorations es una empresa familiar en Houston desde 1993. Trabajamos en casas, baños de apartamento y baños comerciales. Las visitas se agendan desde ${office}. Llame o envíe un texto al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., cuando el agua sigue extendiéndose. Las recorridas agendadas son de lunes a sábado, de 8:00 a. m. a 6:00 p. m.`,
         ],
         points: [
           {
@@ -791,7 +791,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Secan baños comerciales?',
-        a: `Sí, junto con casas y apartamentos. Llame al ${phone} a cualquier hora si el agua sigue extendiéndose.`,
+        a: `Sí, junto con casas y apartamentos. Llame al ${phone}, lunes a sábado, de 8 a.m. a 6 p.m., si el agua sigue extendiéndose.`,
       },
       {
         q: '¿En qué se diferencia esto de una fuga de losa?',
@@ -807,7 +807,7 @@ export const esWaterCauses: readonly EsWaterCause[] = [
       },
       {
         q: '¿Qué tan pronto pueden venir por un desborde de inodoro?',
-        a: `Llame al ${phone} si el agua sigue extendiéndose o huele a aguas negras. Contestamos a cualquier hora cuando el agua está activa y le decimos el siguiente paso seguro. Un desborde chico que usted ya paró igual vale una mirada si llegó al zoclo o a la unidad de abajo.`,
+        a: `Llame al ${phone} si el agua sigue extendiéndose o huele a aguas negras. Contestamos, lunes a sábado, de 8 a.m. a 6 p.m., cuando el agua está activa y le decimos el siguiente paso seguro. Un desborde chico que usted ya paró igual vale una mirada si llegó al zoclo o a la unidad de abajo.`,
       },
       {
         q: '¿Un inodoro tapado es lo mismo que una línea de suministro partida?',

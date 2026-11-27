@@ -52,7 +52,7 @@ export default function HoustonStormDamagePage() {
         { href: "/burst-frozen-pipe-water-damage-houston", label: "Frozen or burst pipes" },
       ]}
       ctaTitle="Is the roof open, or is there water inside?"
-      ctaBody={`Call ${site.phone.display} any time. Text the same number if you cannot talk. We can tarp the roof, board up broken windows and doors, and dry houses, apartments, and commercial buildings. Your insurer decides the claim.`}
+      ctaBody={`Call ${site.phone.display}, Monday through Saturday, 8:00 AM to 6:00 PM. Text the same number if you cannot talk. We can tarp the roof, board up broken windows and doors, and dry houses, apartments, and commercial buildings. Your insurer decides the claim.`}
       serviceName="Houston storm damage help"
       description={stormPage.description}
       emergency

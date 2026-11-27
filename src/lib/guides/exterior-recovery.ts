@@ -57,7 +57,7 @@ export const siding: ServiceGuide = {
       eyebrow: 'Houston',
       heading: 'Sun, splash, and the permit on the address.',
       paragraphs: [
-        'West and south walls here take the sun and the weather. North walls grow mildew in the shade. A plan that treats all four sides as the same age will look wrong in a year. Sprinklers that hit the wall, and soil piled on the lowest row, keep the wall wet no matter how good the siding is. We point that out. A new board will not fix a sprinkler that soaks the wall.',
+        'West and south walls here take the sun and the weather. North walls stay damp in the shade. A plan that treats all four sides as the same age will look wrong in a year. Sprinklers that hit the wall, and soil piled on the lowest row, keep the wall wet no matter how good the siding is. We point that out. A new board will not fix a sprinkler that soaks the wall.',
         'New siding on a whole house in the City of Houston can require a permit. A small repair often does not. Bellaire, West University Place, Sugar Land, Pearland, and the counties that cover much of Katy and The Woodlands are different counters. We check the address. If wind or hail opened the wall, we photograph it before we cover it. Hurricane season is June 1 through November 30. Many of these calls come then, and sun and irrigation still rot the lowest row the rest of the year.',
       ],
       points: [
@@ -237,7 +237,7 @@ export const emergencyTarp: ServiceGuide = {
       heading: 'Houses, apartments, and low commercial roofs.',
       paragraphs: [
         'The same storm that opens a house in Katy can open a stairwell roof on an apartment building in the Energy Corridor or a low commercial roof in Westchase. The sequence does not change because the building is bigger: stay off it until it is safe, photograph the opening, cover what we can reach, and note which ceilings are wet. A property manager usually needs those photos the same day.',
-        'Board-up is the wall and the glass. A tarp is the roof. A limb can make both true. We say which openings we can secure on that visit. Flat roofs pond, so a loose cover is worse than none. Call (713) 909-0034 any time for an active storm or water emergency. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit.',
+        'Board-up is the wall and the glass. A tarp is the roof. A limb can make both true. We say which openings we can secure on that visit. Flat roofs pond, so a loose cover is worse than none. Call (713) 909-0034, Monday through Saturday, 8:00 AM to 6:00 PM, for an active storm or water emergency. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit.',
       ],
       points: [
         { title: 'Many units', body: 'Water in a top-floor ceiling can be one unit or a stack. We ask which ceilings are wet before we treat the building as a single room.' },
@@ -273,7 +273,7 @@ export const emergencyTarp: ServiceGuide = {
     },
     {
       q: 'Can a manager reach you after office hours?',
-      a: 'For an active storm or water emergency, call (713) 909-0034 any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. You can also text that number.',
+      a: 'For an active storm or water emergency, call (713) 909-0034, Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits. You can also text that number.',
     },
   ],
 };

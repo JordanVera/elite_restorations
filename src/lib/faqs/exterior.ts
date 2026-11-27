@@ -14,7 +14,7 @@ export const exteriorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you come look at a leaking roof?",
-      a: `Call ${phone}. If water is coming in, we answer any time and tell you the next safe step. We do not climb during lightning or unsafe wind. After a storm that hits the whole city, the line is longer. Calling puts you on it. The website form asks for a callback. It does not hold a truck.`,
+      a: `Call ${phone}. If water is coming in, we answer Monday through Saturday, 8:00 AM to 6:00 PM, and tell you the next safe step. We do not climb during lightning or unsafe wind. After a storm that hits the whole city, the line is longer. Calling puts you on it. The website form asks for a callback. It does not hold a truck.`,
     },
     {
       q: "Will insurance pay for a repair instead of a whole new roof?",

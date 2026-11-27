@@ -49,23 +49,23 @@ const sherwinEn = {
       heading: "Duration, Emerald, SuperPaint, and ProClassic.",
       paragraphs: [
         "Duration, Emerald, SuperPaint, and ProClassic are the Sherwin-Williams lines we put on Houston houses. Duration is the exterior acrylic people ask for when siding, stucco, and trim take full sun and Gulf humidity. Emerald is the higher interior paint, and Sherwin-Williams also makes an Emerald exterior for a wall you want smoother and easier to wash. SuperPaint is the practical interior and exterior when a whole house needs a solid coat. ProClassic is the enamel for doors, trim, and cabinets, where brush marks show and the film has to be harder than a wall paint.",
-        "We look at the surface before we name a line. A chalking south wall, a mildewed north wall, new fiber cement, and a patched living room are not the same paint job. Color is chosen outside, in daylight, against the brick or the siding, because a chip under a kitchen light will lie to you. Sherwin-Williams and Floor & Decor are trademarks of their owners, and we are an independent contractor. We use these paints on your house.",
+        "We look at the surface before we name a line. A chalking south wall, a shaded north wall, new fiber cement, and a patched living room are not the same paint job. Color is chosen outside, in daylight, against the brick or the siding, because a chip under a kitchen light will lie to you. Sherwin-Williams and Floor & Decor are trademarks of their owners, and we are an independent contractor. We use these paints on your house.",
       ],
     },
     {
       eyebrow: "Prep",
       heading: "What has to happen before the first coat.",
       paragraphs: [
-        "Paint fails in Houston when it goes on a dirty, chalky, or damp surface. We wash the outside, including the mildew on shaded stucco and under trees, and we scrape what is loose. Chalk on an old south or west wall has to come off, or the new coat peels in sheets. Bare wood, rusted nail heads, and water stains get a primer that matches the problem. Caulk goes at windows, doors, and gaps that have opened in the heat, and then the paint.",
+        "Paint fails in Houston when it goes on a dirty, chalky, or damp surface. We wash the outside, including shaded stucco and the wall under trees, and we scrape what is loose. Chalk on an old south or west wall has to come off, or the new coat peels in sheets. Bare wood, rusted nail heads, and water stains get a primer that matches the problem. Caulk goes at windows, doors, and gaps that have opened in the heat, and then the paint.",
         "Inside, patches are floated so the repair disappears, and the texture is blended on walls that already have it. A stain from an old leak needs a stain-blocking primer or it bleeds through the finish coat. Glossy trim is sanded so the next coat has something to hold. We mask floors, stone, and hardware. The sheen is part of the decision: a flatter wall hides a patch, and a satin or enamel on trim, baths, and kitchens can be wiped down.",
       ],
     },
     {
       eyebrow: "Weather",
-      heading: "Humidity, heat, and mildew.",
+      heading: "Humidity and heat.",
       paragraphs: [
         "Houston air is often wet enough that a wall is still sweating in the morning, especially on the north side and under a deep porch. Paint applied over that moisture loses its bond. We wait until the surface is dry, and we follow the temperature window printed on the can. The other failure is a dark color on a west wall in the July afternoon, when the film skins over before it can level and leaves lap marks. We start those walls earlier, or we come back when the sun has moved.",
-        "Mildew is a living stain, common on shaded stucco, under live oaks, and on the back of a house that never dries. Painting over it traps it in the film. We clean it first. Inside, a bathroom or a kitchen that stays humid wants a washable sheen, and the fan has to work, because paint is not a substitute for ventilation. After a closed-up summer house, we look for condensation on the walls before we schedule the interior.",
+        "Shaded stucco, the wall under live oaks, and the back of a house that never dries collect a film that paint should not cover. Painting over that film traps it. We wash it first. Inside, a bathroom or a kitchen that stays humid wants a washable sheen, and the fan has to work, because paint is not a substitute for ventilation. After a closed-up summer house, we look for condensation on the walls before we schedule the interior.",
       ],
     },
     {
@@ -108,7 +108,7 @@ const sherwinEn = {
     },
     {
       q: "When should exterior paint wait for the weather?",
-      a: "When the wall is still damp in the morning, or when a west wall is in full afternoon sun. We follow the temperature window on the can. Mildew is washed off before any coat goes on.",
+      a: "When the wall is still damp in the morning, or when a west wall is in full afternoon sun. We follow the temperature window on the can. The wall is washed before any coat goes on.",
     },
     {
       q: "Do you repaint after water damage or a remodel?",
@@ -390,23 +390,23 @@ const sherwinEs = {
       heading: "Duration, Emerald, SuperPaint y ProClassic.",
       paragraphs: [
         "Duration, Emerald, SuperPaint y ProClassic son las líneas Sherwin-Williams que ponemos en las casas de Houston. Duration es el acrílico de exterior que piden cuando el siding, el estuco y la moldura reciben sol pleno y la humedad del Golfo. Emerald es la pintura interior más alta, y Sherwin-Williams también hace un Emerald de exterior para un muro que quiere más lavable. SuperPaint es el interior y el exterior práctico cuando toda la casa necesita una mano pareja. ProClassic es el esmalte para puertas, moldura y gabinetes, donde se ven los brochazos y la película tiene que ser más dura que una pintura de pared.",
-        "Vemos la superficie antes de nombrar una línea. Un muro sur que suelta polvo, un muro norte con moho, fibrocemento nuevo y una sala parchada no son el mismo trabajo. El color se elige afuera, de día, contra el ladrillo o el siding, porque una muestra bajo la luz de la cocina miente. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente. Usamos estas pinturas en su casa.",
+        "Vemos la superficie antes de nombrar una línea. Un muro sur que suelta polvo, un muro norte a la sombra, fibrocemento nuevo y una sala parchada no son el mismo trabajo. El color se elige afuera, de día, contra el ladrillo o el siding, porque una muestra bajo la luz de la cocina miente. Floor & Decor y Sherwin-Williams son marcas de sus dueños, y somos un contratista independiente. Usamos estas pinturas en su casa.",
       ],
     },
     {
       eyebrow: "Preparación",
       heading: "Lo que tiene que pasar antes de la primera mano.",
       paragraphs: [
-        "La pintura falla en Houston cuando va sobre una superficie sucia, polvosa o húmeda. Lavamos el exterior, incluido el moho del estuco a la sombra y debajo de los árboles, y raspamos lo que está suelto. El polvo de una pared sur u oeste vieja tiene que salir, o la mano nueva se despega en hojas. La madera cruda, los clavos oxidados y las manchas de agua reciben un primario acorde al problema. El silicón va en ventanas, puertas y juntas que el calor abrió, y después la pintura.",
+        "La pintura falla en Houston cuando va sobre una superficie sucia, polvosa o húmeda. Lavamos el exterior, incluido el estuco a la sombra y debajo de los árboles, y raspamos lo que está suelto. El polvo de una pared sur u oeste vieja tiene que salir, o la mano nueva se despega en hojas. La madera cruda, los clavos oxidados y las manchas de agua reciben un primario acorde al problema. El silicón va en ventanas, puertas y juntas que el calor abrió, y después la pintura.",
         "Adentro, los parches se emparejan para que la reparación desaparezca, y la textura se mezcla en las paredes que ya la tienen. Una mancha de una fuga vieja necesita un primario que bloquee la mancha, o sangra por la mano final. La moldura brillante se lija para que la siguiente mano tenga de dónde agarrarse. Cubrimos pisos, piedra y herrajes. El brillo es parte de la decisión: una pared más mate esconde un parche, y un satinado o un esmalte en la moldura, los baños y la cocina se puede limpiar.",
       ],
     },
     {
       eyebrow: "El clima",
-      heading: "Humedad, calor y moho.",
+      heading: "Humedad y calor.",
       paragraphs: [
         "El aire de Houston muchas veces está tan húmedo que la pared sigue sudando en la mañana, sobre todo al norte y bajo un porche hondo. La pintura sobre esa humedad pierde el agarre. Esperamos a que la superficie esté seca, y seguimos la ventana de temperatura que trae la lata. La otra falla es un color oscuro en el muro oeste en una tarde de julio, cuando la película se cierra antes de nivelarse y deja marcas de empalme. Esos muros los empezamos más temprano, o volvemos cuando el sol ya se movió.",
-        "El moho es una mancha viva, común en el estuco sombreado, bajo los encinos y en la parte de atrás de una casa que nunca seca. Pintar encima lo encierra en la película. Lo lavamos primero. Adentro, un baño o una cocina que se queda húmedo quiere un brillo lavable, y el extractor tiene que funcionar, porque la pintura no sustituye la ventilación. Después de una casa cerrada todo el verano, buscamos condensación en las paredes antes de agendar el interior.",
+        "El estuco sombreado, el muro bajo los encinos y la parte de atrás de una casa que nunca seca juntan una película que la pintura no debe cubrir. Pintar encima la encierra. Lo lavamos primero. Adentro, un baño o una cocina que se queda húmedo quiere un brillo lavable, y el extractor tiene que funcionar, porque la pintura no sustituye la ventilación. Después de una casa cerrada todo el verano, buscamos condensación en las paredes antes de agendar el interior.",
       ],
     },
     {
@@ -449,7 +449,7 @@ const sherwinEs = {
     },
     {
       q: "¿Cuándo hay que esperar al clima para pintar afuera?",
-      a: "Cuando el muro sigue húmedo en la mañana, o cuando el muro oeste está a pleno sol de la tarde. Seguimos la ventana de temperatura de la lata. El moho se lava antes de cualquier mano.",
+      a: "Cuando el muro sigue húmedo en la mañana, o cuando el muro oeste está a pleno sol de la tarde. Seguimos la ventana de temperatura de la lata. El muro se lava antes de cualquier mano.",
     },
     {
       q: "¿Repintan después de daño de agua o de una remodelación?",

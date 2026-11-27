@@ -73,11 +73,11 @@ export const restorationGuides: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'A mold countdown would not help. What we see here is simpler. Houston humidity does not give wet materials much help. A room can feel drier to the hand and still be wet inside the wall, the insulation, or the carpet pad. Those are the places a musty smell starts, usually out of sight. Waiting through a weekend because the surface looks better is how a small release becomes a tear-out.',
+            text: 'A countdown would not help. What we see here is simpler. Houston humidity does not give wet materials much help. A room can feel drier to the hand and still be wet inside the wall, the insulation, or the carpet pad. Those are the places a musty smell starts, usually out of sight. Waiting through a weekend because the surface looks better is how a small release becomes a tear-out.',
           },
           {
             type: 'p',
-            text: 'A smell in a closed room, a stain that moves above the original water line, or a floor that stays soft are reasons to open the assembly and measure it. They are not reasons to paint. Bleach on a baseboard does not dry the insulation behind it. Primer over a damp stain hides the clue and leaves the moisture in place. Find the wet materials, dry what can be saved, and remove what cannot. If someone in the house is sensitive to mold, say so when you call. The work is the same. It should not be closed up and left.',
+            text: 'A smell in a closed room, a stain that moves above the original water line, or a floor that stays soft are reasons to open the assembly and measure it. They are not reasons to paint. Bleach on a baseboard does not dry the insulation behind it. Primer over a damp stain hides the clue and leaves the moisture in place. Find the wet materials, dry what can be saved, and remove what cannot. The work is the same. It should not be closed up and left.',
           },
         ],
       },

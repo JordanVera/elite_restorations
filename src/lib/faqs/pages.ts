@@ -115,7 +115,7 @@ export const waterFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you get there after a pipe breaks?",
-      a: `Call ${phone} any time if water is still moving. Shut the main if you can do it safely. We tell you the next step. We do not promise a drive time. The morning after a hard freeze, a lot of Houston calls at once. Calling still puts you in line.`,
+      a: `Call ${phone}, Monday through Saturday, 8:00 AM to 6:00 PM, if water is still moving. Shut the main if you can do it safely. We tell you the next step. We do not promise a drive time. The morning after a hard freeze, a lot of Houston calls at once. Calling still puts you in line.`,
     },
     {
       q: "What did the February 2021 freeze do to Houston pipes?",
@@ -149,7 +149,7 @@ export const waterFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you come for a water heater flood?",
-      a: `Call ${phone} if water is spreading. We answer any time for an active water emergency and tell you the next safe step. A garage heater that has already emptied into the yard is urgent if it also ran into the house. We do not promise a minute count.`,
+      a: `Call ${phone} if water is spreading. We answer Monday through Saturday, 8:00 AM to 6:00 PM for an active water emergency, and tell you the next safe step. A garage heater that has already emptied into the yard is urgent if it also ran into the house. We do not promise a minute count.`,
     },
     {
       q: "Are attic and garage water heaters different in Houston?",
@@ -183,7 +183,7 @@ export const waterFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you come out?",
-      a: `If water is spreading across the kitchen, call ${phone} any time. Stop the cycle. Shut the valve under the sink if you can do it safely. We tell you the next step. A dried stain from last month is a scheduled visit, Monday through Saturday, 8:00 AM to 6:00 PM.`,
+      a: `If water is spreading across the kitchen, call ${phone}, Monday through Saturday, 8:00 AM to 6:00 PM. Stop the cycle. Shut the valve under the sink if you can do it safely. We tell you the next step. A dried stain from last month is a scheduled visit, Monday through Saturday, 8:00 AM to 6:00 PM.`,
     },
     {
       q: "Is a burst supply line different from a bad door gasket?",
@@ -198,8 +198,8 @@ export const waterFaqs: Record<string, Faq[]> = {
       a: "We cannot promise that. Many policies treat a sudden break differently from a slow seep. Check yours or ask your insurer. We photograph the leak and the wet cabinets and help document the damage. We are not public adjusters. We work with your adjuster if you want us there.",
     },
     {
-      q: "Can mold start under the sink cabinet?",
-      a: "Wet particle board in a Houston kitchen is a poor place to wait. We do not name a deadline, and we are not a mold lab. We dry what we can reach and we remove material that cannot dry in place. We do not promise a mold-free kitchen. If you see growth, tell us.",
+      q: "What if the cabinet under the sink stays wet?",
+      a: "Wet particle board in a Houston kitchen is a poor place to wait. We do not name a deadline. We dry what we can reach and we remove material that cannot dry in place. If you see damage under the cabinet, tell us.",
     },
     {
       q: "Can I keep using the rest of the kitchen?",
@@ -217,7 +217,7 @@ export const waterFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you come for a toilet overflow?",
-      a: `Call ${phone} if water is still spreading or it smells like sewage. We answer any time for active water and tell you the next safe step. A small overflow you already stopped is still worth a look if it reached the baseboard or the unit below.`,
+      a: `Call ${phone} if water is still spreading or it smells like sewage. We answer Monday through Saturday, 8:00 AM to 6:00 PM for active water, and tell you the next safe step. A small overflow you already stopped is still worth a look if it reached the baseboard or the unit below.`,
     },
     {
       q: "Is a clogged toilet the same as a supply line that split?",
@@ -295,10 +295,6 @@ export const restorationFaqs: Faq[] = [
     a: "It depends on what got wet and how long it sat. Houston humidity slows drying. We do not pull equipment because a fixed number of days passed. We use moisture readings. A room that looks dry can still be wet in the wall or the slab.",
   },
   {
-    q: "Do you remove mold?",
-    a: "We dry buildings and remove wet material that cannot dry in place. We are not a mold testing lab, and we do not promise a mold-free house. If you see growth, tell us. We will say what we can open and dry, and what should go to someone whose work is mold. Your policy may treat a sudden leak differently from growth that went on for months.",
-  },
-  {
     q: "Will insurance cover the restoration?",
     a: "We cannot say, and we do not promise approval or a payout. We help document the damage and work with your adjuster. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. A burst pipe, hail, a hurricane, a tornado, and rising floodwater are different events. Check the policy that matches the one you had.",
   },
@@ -312,7 +308,7 @@ export const restorationFaqs: Faq[] = [
   },
   {
     q: "Do you restore apartments and commercial buildings too?",
-    a: "Yes. Managers and owners can call any time if the emergency is still going. Have the address, the access, and which units are wet. Houses use the same trades. We are a family company in Houston since 1993. We are independent of every insurer.",
+    a: "Yes. Managers and owners can call, Monday through Saturday, 8:00 AM to 6:00 PM, if the emergency is still going. Have the address, the access, and which units are wet. Houses use the same trades. We are a family company in Houston since 1993. We are independent of every insurer.",
   },
 ];
 

@@ -124,7 +124,7 @@ const waterCauseInputs: readonly WaterCause[] = [
           "Houses in Houston, Katy, Sugar Land, The Woodlands, and Clear Lake are built for heat. Supplies in attics and on exterior walls are often uninsulated because a hard freeze is not the normal week. When one arrives, those lines are the ones that split, often while people are asleep or out of town. Apartment complexes with exposed lines in breezeways and commercial buildings with rooftop or exterior water lines fail the same night. The morning thaw is when the ceiling opens.",
           "We answer " +
             phone +
-            " any time for an active water emergency at a house, an apartment community, or a commercial building. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. You can text that number. Elite Restorations has been family-owned here since 1993. We dry and repair the building for you, not for your insurer. We are independent of every insurer.",
+            ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active water emergency at a house, an apartment community, or a commercial building. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. You can text that number. Elite Restorations has been family-owned here since 1993. We dry and repair the building for you, not for your insurer. We are independent of every insurer.",
         ],
         points: [
           { title: "Check after the ice melts", body: "A frozen pipe can stay closed until the ice melts, then let go. If the freeze just broke, walk the house and look at the ceilings before you leave." },
@@ -143,7 +143,7 @@ const waterCauseInputs: readonly WaterCause[] = [
       { q: "Will you meet the adjuster?", a: "Yes, if you want us on site. We walk through the wet areas and the repairs. Your insurer handles the settlement. We do not give legal advice." },
       { q: "Can you rebuild the drywall and floors?", a: "Yes, after the readings say the structure is dry. Drying and the rebuild can stay with one company." },
       { q: "What does this usually cost?", a: "A small contained release and a whole-house ceiling failure are not the same number. As a planning range, not a quote, drying one wet room often plans in the low thousands, and a wide release costs more. We price what we measure." },
-      { q: "Are you available after hours?", a: "For active water emergencies, call " + phone + " any time. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
+      { q: "When are you open?", a: "Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM. Scheduled visits use those same office hours. Text us at the same number." },
       { q: "Where are you located?", a: "Our office in west Houston (77082). Family-owned since 1993. We schedule Greater Houston from that office, including Westchase, Katy, Sugar Land, and The Woodlands." },
     ],
   }),

@@ -48,7 +48,7 @@ export default function SpanishContactPage() {
               <div className="flex gap-3">
                 <Clock className="size-4 text-accent-ink" aria-hidden />
                 <dd>
-                  De lunes a sábado, de 8:00 AM a 6:00 PM. El domingo la oficina está cerrada. Si es una emergencia de agua o de tormenta, llame a cualquier hora.
+                  De lunes a sábado, de 8:00 AM a 6:00 PM. El domingo la oficina está cerrada. Si es una emergencia de agua o de tormenta, llame, lunes a sábado, de 8 a.m. a 6 p.m.
                 </dd>
               </div>
               <div className="flex gap-3">

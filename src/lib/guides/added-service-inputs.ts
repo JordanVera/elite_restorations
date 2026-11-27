@@ -315,7 +315,7 @@ export const addedServiceInputs = [
       body: [
         "Live oaks in Memorial, Bellaire, and The Woodlands keep a deck damp. A west-facing deck in Katy or Sugar Land splits and fades. The frame still has to stay dry at the house wall either way.",
         "Clay footings move between drought and a tropical rain. Hurricane season, June 1 through November 30, tests a loose rail. We build from our office in west Houston (77082), family-owned since 1993.",
-        "If a storm opened the wall where the deck meets the house, call " + phone + " any time. A planned deck is a visit Monday through Saturday, 8:00 AM to 6:00 PM. You can text the same number. We serve houses across Greater Houston and we will say when a patio on the ground makes more sense than a raised deck. Stairs, rails, and the board that ties the deck to the house are priced on the first walk, not added after the boards are ordered. Composite and wood are priced as different walking surfaces on the same frame. If a side gate is too narrow for the lumber, we ask about that before we schedule the build.",
+        "If a storm opened the wall where the deck meets the house, call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM. A planned deck is a visit Monday through Saturday, 8:00 AM to 6:00 PM. You can text the same number. We serve houses across Greater Houston and we will say when a patio on the ground makes more sense than a raised deck. Stairs, rails, and the board that ties the deck to the house are priced on the first walk, not added after the boards are ordered. Composite and wood are priced as different walking surfaces on the same frame. If a side gate is too narrow for the lumber, we ask about that before we schedule the build.",
       ],
       conditions: [
         { title: "Ledger", body: "The connection to the house is where decks leak and where they pull away. We look there first." },
@@ -330,12 +330,12 @@ export const addedServiceInputs = [
     name: "Commercial & Multifamily Storm Restoration",
     group: "Recovery" as const,
     tagline: "Emergency storm and water work for the building, not only the house.",
-    summary: "24-hour storm and water response for Houston apartments, HOAs, and commercial buildings: tarp, board-up, drying, and repair.",
+    summary: "Storm and water response for Houston apartments, HOAs, and commercial buildings, Monday through Saturday, 8:00 AM to 6:00 PM: tarp, board-up, drying, and repair.",
     metaTitle: "Houston Commercial Storm Help",
     metaDescription: "Commercial and apartment storm and water restoration in Houston. Tarp, board-up, drying, claim help. Call (713) 909-0034.",
     emergency: true,
     intro: [
-      "Property managers, HOAs, and building owners can call " + phone + " any time for an active storm or water emergency at an apartment community or a commercial building.",
+      "Property managers, HOAs, and building owners can call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active storm or water emergency at an apartment community or a commercial building.",
       "We tarp roofs when it is safe, board broken glass, extract water, dry what got wet, and repair what you hire. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. We are independent of every insurer.",
     ],
     includes: [
@@ -348,7 +348,7 @@ export const addedServiceInputs = [
     ],
     faqs: [
       { q: "Who is this for?", a: "Property managers, HOA boards, and owners of apartment communities and commercial buildings in Greater Houston. Homeowners can use the house pages for the same trades." },
-      { q: "Do you answer after hours?", a: "Yes for an active storm or water emergency. Call " + phone + " any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for scheduled visits." },
+      { q: "When can I call?", a: "Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open those hours for scheduled visits." },
       { q: "Can you work while units are occupied?", a: "Yes, with the access you arrange. We do not enter a unit on our own, and we do not dry a whole building because one ceiling is stained." },
       { q: "Will you promise the claim is covered?", a: "We document the damage, limit more damage, estimate, and repair. Flood and a homeowners policy may differ. Check your policy." },
       { q: "Can the same company rebuild?", a: "Yes. Drywall, roofing, and related finishes can stay here after the structure is dry." },

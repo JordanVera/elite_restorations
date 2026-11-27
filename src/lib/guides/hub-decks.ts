@@ -14,7 +14,7 @@ export const deckGuide: ServiceGuide = {
       eyebrow: "Signs",
       heading: "Soft boards, a shaky rail, and the board you cannot see.",
       paragraphs: [
-        "Spongy boards, a rail that moves, nails popping, mold on the supports, or a stair that dips are reasons to get under the deck, not only to stain it. In Houston the failure is often moisture at the house and at the bottoms of the posts. Shade keeps wood wet. Sun splits it. Hurricane-season wind tests a rail that was already loose. A hard freeze is not the usual deck story here.",
+        "Spongy boards, a rail that moves, nails popping, soft supports, or a stair that dips are reasons to get under the deck, not only to stain it. In Houston the failure is often moisture at the house and at the bottoms of the posts. Shade keeps wood wet. Sun splits it. Hurricane-season wind tests a rail that was already loose. A hard freeze is not the usual deck story here.",
         "This page is the framed deck. Ground-level patios have their own page. Gazebos have theirs. If your project is a low concrete pad, we will point you to the patio page instead of calling a slab a deck. The older patios-and-decks page still introduces both.",
       ],
       points: [
@@ -54,7 +54,7 @@ export const deckGuide: ServiceGuide = {
       heading: "Humidity, clay footings, and wind.",
       paragraphs: [
         "The air stays humid enough that a deck without airflow grows a film, especially on the north side and under live oaks in The Woodlands, Memorial, and Bellaire. Footings in clay need to be thought about because the soil moves when it swings from drought to a tropical rain. Hurricane season, June 1 through November 30, is when a loose rail or a poorly tied board gets tested. Afternoon storms the rest of the year keep the underside damp.",
-        "We build and rebuild decks from our office in west Houston (77082), across Greater Houston including Katy, Sugar Land, Westchase, Alief, and the Energy Corridor. Family-owned since 1993. Call or text (713) 909-0034. A deck estimate is usually scheduled Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has made the deck the way inside the house, that is an emergency call any time, and the tarp or board-up may come first.",
+        "We build and rebuild decks from our office in west Houston (77082), across Greater Houston including Katy, Sugar Land, Westchase, Alief, and the Energy Corridor. Family-owned since 1993. Call or text (713) 909-0034. A deck estimate is usually scheduled Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has made the deck the way inside the house, that is an emergency call, Monday through Saturday, 8:00 AM to 6:00 PM, and the tarp or board-up may come first.",
       ],
       points: [
         { title: "Siding and slab", body: "The deck should not pour water into the wall or hold it at the foundation. Flashing and slope are part of the design." },

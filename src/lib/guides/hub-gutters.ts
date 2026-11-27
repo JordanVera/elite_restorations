@@ -14,7 +14,7 @@ export const gutterGuide: ServiceGuide = {
       eyebrow: "Signs",
       heading: "Overflow, rotted boards, and the groove in the mulch.",
       paragraphs: [
-        "Paint peeling on the board behind the gutter, a dark streak down the brick, mildew at a corner, or a trench in the bedding where water falls off the roof are the ordinary Houston signs. During a storm you can stand inside and hear the overflow. Afterward you see the mulch washed onto the walk. Those clues matter more than a gutter that looks shiny from the street.",
+        "Paint peeling on the board behind the gutter, a dark streak down the brick, a stain at a corner, or a trench in the bedding where water falls off the roof are the ordinary Houston signs. During a storm you can stand inside and hear the overflow. Afterward you see the mulch washed onto the walk. Those clues matter more than a gutter that looks shiny from the street.",
         "Hail and wind bend runs and pop them off the eave. A hurricane-season rain then has nowhere to go except through the soffit or down the wall. A hard freeze is uncommon here, and when it happens an ice-filled gutter is less common than a burst pipe. We do not describe a Houston gutter job as an ice-dam project. If a storm also opened the roof, the tarp and the roof come before a new gutter on a deck that is not ready.",
       ],
       points: [
@@ -54,7 +54,7 @@ export const gutterGuide: ServiceGuide = {
       heading: "Hard rain, flat lots, and trees that never stop.",
       paragraphs: [
         "Houston rain often arrives as a heavy burst. A gutter that is a little low or a little clogged overflows in minutes, and the water hits the slab. On flat lots in Alief, Westchase, and parts of Katy, that splash stays against the brick. Houses in Memorial and The Woodlands add live oak and pine debris, so a gutter that was clear in March is full by June. Hurricane season, June 1 through November 30, is when a damaged eave meets the rain that actually tests it.",
-        "We work from our office in west Houston (77082). Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer any time. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are independent of every insurer.",
+        "We work from our office in west Houston (77082). Elite Restorations is family-owned here since 1993. Call (713) 909-0034 or text that number. For an active roof leak we answer Monday through Saturday, 8:00 AM to 6:00 PM. A gutter estimate is usually a scheduled visit during Monday through Saturday, 8:00 AM to 6:00 PM. We serve houses across Greater Houston and we also look at apartment and low commercial eaves when a manager calls. We are independent of every insurer.",
       ],
       points: [
         { title: "Slab splash", body: "Downspouts should discharge away from the foundation. A pretty stretch that dumps at the corner still wets the slab." },

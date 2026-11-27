@@ -54,7 +54,7 @@ export const gazeboGuide: ServiceGuide = {
       heading: "Wind, sun, and clay under the posts.",
       paragraphs: [
         "A gazebo is a small building in hurricane country. Wind from a tropical storm or a spring squall is the design load that matters, along with the sun that fades any finish by the second summer. Clay soils around Houston, from our office in 77082 out through Alief, Westchase, the Energy Corridor, and Katy, move between dry spells and heavy rain. Footings have to respect that. We do not set a roofed structure on surface blocks and call it permanent.",
-        "Hail can bruise a shingle roof on a gazebo the same way it bruises the house. Flooding can stand around the posts even when the roof is fine. Those are different repairs. Call or text (713) 909-0034. Scheduled design visits are Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has just torn the structure loose, call any time and we will tell you whether anyone should be near it. Family-owned since 1993.",
+        "Hail can bruise a shingle roof on a gazebo the same way it bruises the house. Flooding can stand around the posts even when the roof is fine. Those are different repairs. Call or text (713) 909-0034. Scheduled design visits are Monday through Saturday, 8:00 AM to 6:00 PM. If a storm has just torn the structure loose, call, Monday through Saturday, 8:00 AM to 6:00 PM, and we will tell you whether anyone should be near it. Family-owned since 1993.",
       ],
       points: [
         { title: "Neighbors", body: "Height and placement near a property line are part of the first conversation, especially on small lots inside the Loop." },

@@ -60,7 +60,7 @@ export const hoaTips: Article[] = [
           },
           {
             type: 'p',
-            text: 'Drywall, insulation, and flooring that stay wet for 24 to 48 hours can start growing mold. If water soaked into walls, ceilings, or carpet, a water-damage crew can measure the moisture behind the surface and dry it out properly, which helps keep a burst pipe from turning into a mold problem. The page on frozen and burst pipes is the closer read for that first hour. If insurance is involved, Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster. We are not public adjusters.',
+            text: 'Drywall, insulation, and flooring that stay wet for 24 to 48 hours can take on more damage. If water soaked into walls, ceilings, or carpet, a water-damage crew can measure the moisture behind the surface and dry it out properly, which helps keep a burst pipe from spreading further. The page on frozen and burst pipes is the closer read for that first hour. If insurance is involved, Elite works with your insurance company as your contractor and negotiates the claim scope with the adjuster. We are not public adjusters.',
           },
           {
             type: 'p',

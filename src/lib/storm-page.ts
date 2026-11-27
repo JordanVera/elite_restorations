@@ -74,7 +74,7 @@ export const stormPage = {
         "Elite Restorations does this work for homes, apartment complexes, and commercial buildings. A house in Bellaire and a garden complex in the Energy Corridor need the same order: safety, photos, a cover, drying, then a repair estimate. The access is what changes. Gate codes, roof hatches, and who can authorize drywall belong on the first call. We do not enter an occupied unit without the access you arrange.",
         "For an active storm or water emergency, call " +
           phone +
-          " any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. Family-owned since 1993. You can text the office number. We are not public adjusters. The commercial page is written for managers and owners. The house pages for tarp, board-up, roofing, and water damage are the trade-by-trade versions.",
+          ", Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM for a scheduled visit. Family-owned since 1993. You can text the office number. We are not public adjusters. The commercial page is written for managers and owners. The house pages for tarp, board-up, roofing, and water damage are the trade-by-trade versions.",
       ],
       points: [
         { title: "Top floors", body: "Apartment water shows in the highest ceilings first. We list units. We do not dry a whole building from one stain." },
@@ -117,11 +117,11 @@ export const stormPage = {
     { q: "Will you come during the storm?", a: "Not onto a roof during lightning or unsafe wind. Call and we will tell you the next safe step. The online form asks us to call you back. We'll call you back as soon as we can." },
     { q: "Do you help after hurricanes, hail, wind, and freezes?", a: "Yes. They damage buildings differently. We document the one you have, dry what got wet, and estimate the repair. Your insurer decides the claim." },
     { q: "Is flood the same as storm damage?", a: "No. Rising water is often a different policy from wind or hail. Check your policies. We write bayou water down as flooding, not as a plumbing break." },
-    { q: "Can property managers call?", a: "Yes, any time for an active emergency. Have the address, the access, and which units are wet. The commercial page is written for that call." },
+    { q: "Can property managers call?", a: "Yes, Monday through Saturday, 8:00 AM to 6:00 PM for an active emergency. Have the address, the access, and which units are wet. The commercial page is written for that call." },
     { q: "How do I make a photo log?", a: "Wide shots, close shots, the source, and the belongings, before cleanup. The guide on this site walks through a room-by-room log. It does not create coverage." },
     { q: "What does emergency tarping usually cost?", a: "Many single openings on a walkable roof plan around a few hundred dollars to about $2,000. Steeper or larger openings cost more. That is a range, not a quote, and it is not a new roof." },
     { q: "Do you handle my insurance claim?", a: "We help with photos, the steps that limit more damage, an on-site meeting, and a repair estimate. We send our estimate to your insurance company for approval and work through it with the adjuster. We are not public adjusters. Your insurer decides coverage and payment." },
-    { q: "Where are you, and when do you answer?", a: "Our office in west Houston (77082). Family-owned since 1993. Call " + phone + " any time for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
+    { q: "Where are you, and when do you answer?", a: "Our office in west Houston (77082). Family-owned since 1993. Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active storm or water emergency. Office hours for scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM. Text us at the same number." },
     { q: "Which neighborhoods do you cover?", a: "Greater Houston, including Houston, Westchase, Alief, the Energy Corridor, Katy, Sugar Land, Bellaire, Memorial, The Woodlands, Pearland, Clear Lake, and Galveston. The visit is at the property." },
     ...extraStormFaqs,
   ],

@@ -31,6 +31,8 @@ export function NeighborhoodPageView({
     'tomball-tx',
     'rosenberg-tx',
     'jersey-village-tx',
+    'fulshear-tx',
+    'missouri-city-tx',
   ]);
   const communities = new Set(['towne-lake-tx', 'bridgeland-tx', 'sienna-tx']);
   const houstonNeighborhood = isHoustonNeighborhoodSlug(page.slug);

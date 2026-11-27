@@ -92,7 +92,7 @@ type LeadFormProps = {
   defaultCarrier?: string;
   defaultContact?: string;
   initialPhotos?: LeadPhotoSeed[];
-  /** Emergency pages use the after-hours water line instead of the office-hours note. */
+  /** Emergency pages use the water-emergency line instead of the office-hours note. */
   timing?: 'office' | 'emergency';
 };
 
