@@ -185,7 +185,7 @@ export function NeighborhoodPageView({
       <section aria-labelledby="neighborhood-also-heading" className="border-t border-border py-16 md:py-20">
         <div className="gutter mx-auto max-w-[120rem]">
           <h2 id="neighborhood-also-heading" className="eyebrow text-muted-foreground">
-            {es ? 'Otras zonas de Houston' : 'Other Houston neighborhoods'}
+            {es ? 'Otras áreas que atendemos' : 'Other areas we serve'}
           </h2>
           <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
             {others.map((item) => (
