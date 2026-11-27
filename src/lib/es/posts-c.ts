@@ -1173,4 +1173,169 @@ export const esPostsC: Article[] = [
       },
     ],
   },
+  {
+    slug: 'pearland-roof-repair-or-replacement',
+    title: 'Reparar o cambiar un techo en Pearland',
+    metaTitle: 'Techo en Pearland, reparar o no',
+    crumb: 'Techos en Pearland',
+    lines: ['Un techo con años,', 'reparar o cambiar.'],
+    description:
+      'Cómo saber si un techo de 15 a 25 años en Silverlake o Shadow Creek Ranch se repara o se cambia.',
+    lede: 'El 27 de noviembre de 2026, muchas casas de Pearland siguen con el techo que se puso cuando se construyó el vecindario. Silverlake y Shadow Creek Ranch están llenos de esas casas. Aquí va cómo distinguir una reparación de un cambio completo, y cuándo una tormenta entra en esa historia.',
+    image: '/images/projects/roofing/two-story-stone-home.jpg',
+    service: 'roof-replacement',
+    ctaTitle: '¿Quiere que veamos el techo?',
+    ctaBody: `Llame al ${phone}. Caminamos las pendientes y le decimos si una reparación aguanta. Empresa familiar en Houston desde 1993.`,
+    related: ['houston-roof-replacement-guide', 'houston-hail-storm-roof-claims'],
+    faqs: [
+      {
+        q: '¿Cuándo basta una reparación?',
+        a: 'Cuando el problema es una bota, un tramo corto de metal, una pendiente o un caballete, y el resto de la teja todavía tiene gránulo y se dobla. Lo decimos desde el techo.',
+      },
+      {
+        q: '¿Un techo de 20 años en Silverlake tiene que salir?',
+        a: 'No. La teja sin gránulo y quebradiza, en el sur y en el oeste, suele pedir el cambio. Un campo sano con una sola bota fallada es una reparación. Un techo de Shadow Creek Ranch, de la misma edad, se mira igual.',
+      },
+      {
+        q: '¿Y si el viento dejó el techo abierto?',
+        a: 'Fotografíe la abertura si puede hacerlo con seguridad, no deje a nadie bajo un cielo que cede, y llame al (713) 909-0034. No se suba a un techo mojado.',
+      },
+      {
+        q: '¿Un reclamo cambia un techo viejo de Pearland?',
+        a: 'Solo su aseguradora puede decidirlo. Una tormenta con fecha, que levantó o magulló el techo, puede ser un reclamo. Años de calor y de gránulo perdido, sin tormenta, son desgaste. No somos ajustadores públicos.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'La edad de estos techos',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Pearland es la ciudad grande al sur de Houston, sobre todo en el condado de Brazoria, con partes en Harris y en Fort Bend. Las calles viejas cerca de Broadway son de otra época. Silverlake queda al este, por la FM 518 hacia Cullen Parkway. Shadow Creek Ranch queda al oeste de la Highway 288, sobre Shadow Creek Parkway. Las casas ahí son de dos pisos y de ladrillo, y el techo de teja de esa época suele tener hoy entre 15 y 25 años.',
+          },
+          {
+            type: 'p',
+            text: 'Las caídas del sur y del oeste llevan muchos veranos del Golfo, y el frente puede verse parejo desde la entrada. No decidimos desde esa vista. La guía de Houston es el desmonte en toda la ciudad. La nota del granizo cubre el día de la tormenta. Esta página se queda con el techo de Pearland en estos años.',
+          },
+        ],
+      },
+      {
+        heading: 'Lo que se puede ver sin subirse',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Después de una semana seca, mire las canaletas por gránulo y, junto a la cerca, si el viento dejó una pestaña. Una mancha nueva bajo el alero, o en el cielo, que en la primavera pasada no estaba, quiere decir que entró agua. Ninguna de esas, sola, es un techo nuevo. Juntas, sí piden caminar las pendientes.',
+          },
+          {
+            type: 'p',
+            text: 'Si puede entrar al ático de día, pise los travesaños. Una tabla oscura alrededor de un tubo, una raya bajo un valle o un punto de luz merecen una foto con la fecha. No suba a un techo mojado. En estas casas de dos pisos, la caída cansada suele ser la de atrás, sobre el cuarto de la familia.',
+          },
+          {
+            type: 'list',
+            items: [
+              'Anote el vecindario y el año del techo, si lo sabe.',
+              'Revise el sur y el oeste, no solo la fachada.',
+              'Fotografíe el gránulo, una pestaña caída o una mancha del ático, con la fecha.',
+              'Si entra agua, recójala y no se suba al techo.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Calor, viento y temporada de tormentas',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Pearland queda más cerca del Golfo que Cypress o Tomball, así que el calor y el viento de la costa hacen más daño de todos los días que una granizada del noroeste. La teja pierde gránulo, se cuartea y se enrosca, y el sur y el oeste van primero. El viento de una turbonada de primavera, o de un sistema tropical, levanta orillas, el caballete y el arranque. Una orilla levantada no es un golpe de granizo. Al sur del Beltway 8 también cae granizo, y no explica cada techo cansado.',
+          },
+          {
+            type: 'p',
+            text: 'La madera suele ser triplay u OSB sobre armaduras. Una filtración en una bota o en un valle ablanda esa tabla, y desde el ático se ve una mancha oscura. Cambiamos la madera blanda. No la tapamos.',
+          },
+          {
+            type: 'p',
+            text: 'Muchas filtraciones empiezan en el flashing: muros de ladrillo, el metal escalonado, los valles, el borde y la bota de un tubo. El calor y el aire húmedo cuartean la bota y abren el sello del muro. Una bota nueva puede ser toda la reparación si el campo de alrededor sigue sano. El metal abierto a lo largo de un muro, con la madera blanda al lado, ya es un trabajo mayor. La temporada de huracanes va del 1 de junio al 30 de noviembre. Esta página está fechada el 27 de noviembre de 2026.',
+          },
+        ],
+      },
+      {
+        heading: 'Cuándo se repara y cuándo se cambia',
+        blocks: [
+          {
+            type: 'p',
+            text: 'La reparación cabe si el problema es limitado y el resto del techo saca el agua: una pendiente, una bota, un tramo de metal o un caballete, con gránulo y teja que todavía se dobla. El cambio cabe si el desgaste cruza las pendientes, la teja está quebradiza, o el color del parche ya no se fabrica.',
+          },
+          {
+            type: 'p',
+            text: 'La edad es una pista, no la sentencia. Un techo de 16 años en Shadow Creek Ranch, con un solo caballete levantado, puede ser una reparación. Un techo de 22 años en Silverlake, sin gránulo en el sur y en el oeste, suele ser un cambio. Los parches chicos, una y otra vez, dejan una junta que puede filtrar. Decimos cuál trabajo es después de estar en el techo.',
+          },
+          {
+            type: 'p',
+            text: 'Si la teja de una reparación no se puede igualar, lo decimos antes de pedir un bulto. En un cambio compramos la teja, la base, el arranque, la cumbrera y el metal en ABC Supply, e instalamos teja arquitectónica CertainTeed. Las asociaciones de Silverlake y de Shadow Creek Ranch suelen revisar el color, así que preguntamos antes de ordenar.',
+          },
+        ],
+      },
+      {
+        heading: 'Cómo se ve el cambio con Elite',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Caminamos cada pendiente y vemos el ático cuando es seguro. El desgaste de todos los días se fotografía aparte de lo que hizo una tormenta. La ciudad de Pearland da el permiso. Cruza Brazoria, Harris y Fort Bend, así que confirmamos el condado en la dirección. Una carta de la asociación, cuando la sección la pide, tiene que estar en la mano antes de que llegue la teja.',
+          },
+          {
+            type: 'p',
+            text: 'El desmonte baja hasta la madera. Cambiamos las tablas blandas o separadas y se las enseñamos antes de cubrirlas. Con el techo nuevo van la base, el arranque, la teja del campo, las limatesas, el caballete, el metal, el borde y las ventilas del ático. Un techo de dos pisos, con varios valles, tarda más que uno sencillo de un piso, y no nombramos los días hasta ver este techo.',
+          },
+          {
+            type: 'p',
+            text: 'Los carros salen de la entrada, y protegemos las plantas que usted nombre. No abrimos el techo si se está armando una tormenta, y cubrimos la madera abierta si viene lluvia. Un cielo manchado se revisa después, porque la teja nueva no seca un aislamiento mojado. Agendamos Pearland desde la oficina del oeste de Houston, 77082. Llame al (713) 909-0034 con la dirección y el vecindario.',
+          },
+        ],
+      },
+      {
+        heading: 'Cuándo puede aplicar un reclamo por tormenta',
+        blocks: [
+          {
+            type: 'p',
+            text: 'Un reclamo por tormenta puede aplicar cuando una tormenta con fecha levantó, magulló o abrió este techo. Las pestañas que salieron del caballete en Shadow Creek Ranch, en un día de tormenta que se puede nombrar, son un hecho distinto del gránulo que llevó veinte veranos a la canaleta. El desgaste por calor es un techo que se contrata. No es, por sí solo, un reclamo de tormenta. Las dos cosas pueden estar en la misma casa, y las escribimos como dos hechos.',
+          },
+          {
+            type: 'p',
+            text: 'Si entra agua, fotografíe la abertura y luego cúbrala. La lona es temporal. Esta página decide entre reparar y cambiar, también en un techo cerrado. El agua de una calle cerca de Clear Creek no es una filtración del techo. Díganos cuál vio.',
+          },
+          {
+            type: 'p',
+            text: 'Si el seguro entra en el plan, Elite trabaja con su aseguradora como su contratista y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos. El estimado es el precio de la construcción. Su aseguradora decide la cobertura, el deducible y el monto. El techo también se puede cambiar sin reclamo. Friendswood, la siguiente ciudad hacia la bahía, recibe el mismo viento de costa. Missouri City es la ciudad del oeste. Una casa de Shadow Creek Ranch sigue en Pearland, y el permiso es de esa ciudad.',
+          },
+          {
+            type: 'links',
+            items: [
+              { href: '/es/roof-replacement', label: 'Reemplazo de techo' },
+              { href: '/es/roofing', label: 'Techos y reparaciones' },
+              { href: '/es/hail-damage-roof-repair', label: 'Reparación de techos por granizo' },
+              { href: '/roof-replacement-pearland-tx', label: 'Reemplazo de techo en Pearland' },
+              { href: '/roofing-pearland-tx', label: 'Techos en Pearland' },
+              {
+                href: '/es/blog/houston-roof-replacement-guide',
+                label: 'Guía para cambiar el techo en Houston',
+              },
+              {
+                href: '/es/blog/houston-hail-storm-roof-claims',
+                label: 'Granizo y reclamos de techo',
+              },
+              {
+                href: '/es/blog/emergency-tarp-and-board-up-houston',
+                label: 'Lona de emergencia en Houston',
+              },
+              { href: '/es/contact', label: 'Contacto' },
+              { href: '/es/friendswood-tx', label: 'Friendswood' },
+              { href: '/es/missouri-city-tx', label: 'Missouri City' },
+              { href: '/es/insurance-claims', label: 'Ayuda con reclamos de seguro' },
+              { href: '/es/houston-storm-damage', label: 'Daño por tormenta en Houston' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];

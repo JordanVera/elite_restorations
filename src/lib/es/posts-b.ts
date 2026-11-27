@@ -315,7 +315,11 @@ export const esPostsB: Article[] = [
     service: 'roof-replacement',
     ctaTitle: '¿El techo ya se tiene que cambiar?',
     ctaBody: `Llame al ${phone}. Caminamos las pendientes y le decimos si una reparación aguanta. Somos una empresa familiar en Houston desde 1993.`,
-    related: ['houston-hail-storm-roof-claims', 'emergency-tarp-and-board-up-houston'],
+    related: [
+      'houston-hail-storm-roof-claims',
+      'emergency-tarp-and-board-up-houston',
+      'pearland-roof-repair-or-replacement',
+    ],
     faqs: [
       {
         q: '¿Cambian un techo que se podría reparar?',
