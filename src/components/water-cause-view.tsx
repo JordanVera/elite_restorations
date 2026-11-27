@@ -74,8 +74,8 @@ export function WaterCauseView({ slug, locale = "en" }: { slug: string; locale?:
       ctaTitle={es ? "¿Sigue corriendo el agua?" : "Water still moving?"}
       ctaBody={
         es
-          ? `Llame al ${site.phone.display} a cualquier hora si hay una fuga activa en una casa, un apartamento o un comercio. Envíe un texto al mismo número si no puede hablar. Secamos y reparamos. No decidimos el reclamo.`
-          : `Call ${site.phone.display} any time for an active leak in a house, apartment, or commercial building. Text the same number if you cannot talk. We dry and repair. We do not decide the claim.`
+          ? `Llame al ${site.phone.display}, lunes a sábado, de 8 a.m. a 6 p.m., si hay una fuga activa en una casa, un apartamento o un comercio. Envíe un texto al mismo número si no puede hablar. Secamos y reparamos. No decidimos el reclamo.`
+          : `Call ${site.phone.display}, Monday through Saturday, 8:00 AM to 6:00 PM, for an active leak in a house, apartment, or commercial building. Text the same number if you cannot talk. We dry and repair. We do not decide the claim.`
       }
       serviceName={page.metaTitle}
       description={page.description}

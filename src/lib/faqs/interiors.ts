@@ -59,8 +59,8 @@ export const interiorFaqs: Record<string, Faq[]> = {
       a: "Yes. The window has to be built into the waterproofing, or it comes out. Older Houston baths often have that window. We price it as part of the shower, not as a surprise after the tile is up.",
     },
     {
-      q: "Will a new fan stop ceiling mildew by itself?",
-      a: "Only if it actually exhausts outside and someone runs it. A fan that dumps into the attic recycles the steam. Paint over mildew without drying the source comes back. We look at the fan, the vent, and the wet wall together.",
+      q: "Will a new fan dry a damp ceiling by itself?",
+      a: "Only if it actually exhausts outside and someone runs it. A fan that dumps into the attic recycles the steam. Paint over a damp ceiling without drying the source comes back. We look at the fan, the vent, and the wet wall together.",
     },
     {
       q: "Does an HOA approve a bathroom remodel?",
@@ -68,7 +68,7 @@ export const interiorFaqs: Record<string, Faq[]> = {
     },
     {
       q: "How fast can you look at a leaking shower?",
-      a: `If water is spreading, call ${phone} any time. We will tell you the next safe step. A planned bath remodel is a scheduled visit, Monday through Saturday, 8:00 AM to 6:00 PM. Stop using that shower if the ceiling below is staining.`,
+      a: `If water is spreading, call ${phone}, Monday through Saturday, 8:00 AM to 6:00 PM. We will tell you the next safe step. A planned bath remodel is a scheduled visit, Monday through Saturday, 8:00 AM to 6:00 PM. Stop using that shower if the ceiling below is staining.`,
     },
   ],
   backsplash: [

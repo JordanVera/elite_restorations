@@ -124,7 +124,7 @@ export const callbackPromise = `Requests that reach us during office hours (${of
 export const callbackPromiseEs = `Las solicitudes que llegan en horario de oficina (lunes a sábado, 8:00 a. m. a 6:00 p. m.) reciben una llamada el mismo día. Fuera de horario, llamamos a la mañana siguiente que abrimos.`;
 
 export const emergencyCallback =
-  "For water coming in now, call (713) 909-0034. We answer any time. Online requests sent after hours are returned the next morning.";
+  "For water coming in now, call (713) 909-0034, Monday through Saturday, 8:00 AM to 6:00 PM. Online requests sent after hours are returned the next morning.";
 
 export const emergencyCallbackEs =
-  "Si el agua está entrando ahora, llame al (713) 909-0034. Contestamos a cualquier hora. Las solicitudes en línea enviadas fuera de horario se responden a la mañana siguiente.";
+  "Si el agua está entrando ahora, llame al (713) 909-0034, lunes a sábado, de 8 a.m. a 6 p.m. Las solicitudes en línea enviadas fuera de horario se responden a la mañana siguiente.";

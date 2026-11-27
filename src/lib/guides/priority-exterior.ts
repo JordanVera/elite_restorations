@@ -356,7 +356,7 @@ export const waterDamage: ServiceGuide = {
       points: [
         {
           title: 'Time wet',
-          body: 'A leak found the same day is a smaller repair than one that ran through a weekend. In warm, humid air, wet drywall can start to grow mold within a day or two. That is why we start drying right away.',
+          body: 'A leak found the same day is a smaller repair than one that ran through a weekend. In warm, humid air, wet drywall gets worse within a day or two. That is why we start drying right away.',
         },
         {
           title: 'Materials that come out',
@@ -419,8 +419,8 @@ export const waterDamage: ServiceGuide = {
       a: 'Usually, no. Houston air is often humid enough that an open window adds moisture. Drying here means fans and a dehumidifier, run until the moisture readings support it.',
     },
     {
-      q: 'How fast can wet drywall become a mold problem?',
-      a: 'In warm conditions, mold can start on wet materials within a day or two. That is why we map moisture and start drying quickly. If something stays wet, mold can still grow.',
+      q: 'How fast should wet drywall be dried?',
+      a: 'In warm conditions, wet materials get worse within a day or two. That is why we map moisture and start drying quickly. If something stays wet, the damage can still spread.',
     },
     {
       q: 'What is a planning range for water damage?',

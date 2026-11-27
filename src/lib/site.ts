@@ -39,6 +39,7 @@ export const site = {
   ],
   sameAs: [
     facebookUrl,
+    'https://www.linkedin.com/company/eliterestorations',
     'https://www.instagram.com/elite_restorations_/',
     'https://www.tiktok.com/@eliterestorationstx',
     'https://www.youtube.com/@eliterestorationstx',
@@ -51,6 +52,10 @@ export const site = {
     {
       label: 'Facebook',
       href: facebookUrl,
+    },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/eliterestorations',
     },
     {
       label: 'Instagram',

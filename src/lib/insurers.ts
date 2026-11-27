@@ -47,7 +47,7 @@ function faqs(name: string, extra: { q: string; a: string }[]): { q: string; a: 
     },
     {
       q: "Do you work on apartments and commercial buildings too?",
-      a: `Yes. We work on homes, apartments, and commercial buildings in Greater Houston. Call ${phone} any time for an active storm or water emergency.`,
+      a: `Yes. We work on homes, apartments, and commercial buildings in Greater Houston. Call ${phone}, Monday through Saturday, 8:00 AM to 6:00 PM, for an active storm or water emergency.`,
     },
   ];
 }
@@ -88,7 +88,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "Slab houses, hail roofs, and buildings with many units.",
         paragraphs: [
           "Most of the houses we dry sit on concrete. A State Farm policyholder in Memorial with an attic leak and one in Katy with a supply line under the slab both need the moisture mapped, not guessed from the stain. Apartment managers and commercial owners insured by State Farm use the same phone number. We list the wet units. One ceiling is not a reason to dry the whole complex.",
-          "Call or text " + phone + " any time for an active emergency. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM. State Farm is the insurer. We are the restoration company, working from our office in west Houston (77082).",
+          "Call or text " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active emergency. Office hours for a scheduled visit are Monday through Saturday, 8:00 AM to 6:00 PM. State Farm is the insurer. We are the restoration company, working from our office in west Houston (77082).",
         ],
       },
       {
@@ -142,7 +142,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "From the office in 77082 to the coast and the suburbs.",
         paragraphs: [
           "We schedule from our office in west Houston (77082). Hail and wind calls come from Katy, Cypress, and The Woodlands. Coastal wind calls come from Clear Lake and Galveston. Slab leaks and appliance failures show up in Westchase, Alief, Bellaire, and Memorial the same as anywhere else. Apartment and commercial Allstate policies, when that is what the owner carries, get the same documentation habits and a unit list.",
-          "Family-owned since 1993. Call or text " + phone + ". Active storm and water emergencies any time. Office hours Monday through Saturday, 8:00 AM to 6:00 PM. We are not Allstate.",
+          "Family-owned since 1993. Call or text " + phone + ". Active storm and water emergencies are taken Monday through Saturday, 8:00 AM to 6:00 PM. Office hours Monday through Saturday, 8:00 AM to 6:00 PM. We are not Allstate.",
         ],
       },
       {
@@ -150,7 +150,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "The work, labeled separately from the Allstate payment.",
         paragraphs: [
           "A tarp, board-up, water removal, and drying limit more damage. Roofing, drywall, and floors are the repair. We write them as separate jobs, with the rooms named. An Allstate payment, if one comes, is a different document. We keep our bill separate, and we do not collect the claim in our name. You hire us. Allstate decides what it owes under the policy you have.",
-          "Houston slabs keep water in the concrete after a dishwasher, a toilet, or a supply line looks cleaned up. We meter that. Hail roofs get looked at on every slope, not from the driveway. If you are comparing our estimate to an Allstate figure, we explain the construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Allstate decides what the policy pays. Call or text " + phone + " for an active leak or an open roof. Family-owned since 1993. We work from our office in west Houston (77082). The name on the policy does not change how a slab dries. Apartment and commercial losses get the same photos, with a unit or suite list instead of a single hallway. We answer " + phone + " any time when water is still coming in. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM.",
+          "Houston slabs keep water in the concrete after a dishwasher, a toilet, or a supply line looks cleaned up. We meter that. Hail roofs get looked at on every slope, not from the driveway. If you are comparing our estimate to an Allstate figure, we explain the construction. Elite works with your insurance company as your contractor, documents the damage, and negotiates the claim scope with the adjuster. Allstate decides what the policy pays. Call or text " + phone + " for an active leak or an open roof. Family-owned since 1993. We work from our office in west Houston (77082). The name on the policy does not change how a slab dries. Apartment and commercial losses get the same photos, with a unit or suite list instead of a single hallway. We answer " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, when water is still coming in. Scheduled visits are Monday through Saturday, 8:00 AM to 6:00 PM.",
         ],
       },
     ],
@@ -195,7 +195,7 @@ export const insurers: readonly InsurerPage[] = [
         eyebrow: "Houston",
         heading: "The house in Houston while the member is not.",
         paragraphs: [
-          "We work across Greater Houston from our office in west Houston (77082), including Katy, Spring, Clear Lake, and the neighborhoods closer to the office in Westchase and Alief. Apartment communities and houses are both common. Call " + phone + " any time for an active leak or an open roof. Tell us who can approve the work if the member is not local.",
+          "We work across Greater Houston from our office in west Houston (77082), including Katy, Spring, Clear Lake, and the neighborhoods closer to the office in Westchase and Alief. Apartment communities and houses are both common. Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active leak or an open roof. Tell us who can approve the work if the member is not local.",
           "Family-owned since 1993. Text the same number. Office hours Monday through Saturday, 8:00 AM to 6:00 PM for a visit that is not an emergency. We are not USAA.",
         ],
       },
@@ -204,7 +204,7 @@ export const insurers: readonly InsurerPage[] = [
         heading: "A record the member can read from somewhere else.",
         paragraphs: [
           "When the member is not in the house, the value of the visit is a plain record: photos before a tarp goes on, unit or room names, moisture notes, and a repair estimate that says what will be rebuilt. We can text or email that set to the person who holds the USAA policy. We still do not submit it to USAA ourselves unless you are standing there and you hand it over. The photo log is a tool the person on site can fill out the same day.",
-          "Drying does not wait on a flight home. Wet drywall on a Houston slab gets worse in the humidity. We start the steps that limit more damage when someone with authority hires us, and we keep the member's insurer out of our company name. Call " + phone + " any time for an active water or storm emergency. We are not USAA. You do not need a membership number for us to come out. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM when the visit can wait. Family-owned since 1993. Text the same number if a call is hard from where you are. A gate code and a unit number belong in the first message if the loss is an apartment.",
+          "Drying does not wait on a flight home. Wet drywall on a Houston slab gets worse in the humidity. We start the steps that limit more damage when someone with authority hires us, and we keep the member's insurer out of our company name. Call " + phone + ", Monday through Saturday, 8:00 AM to 6:00 PM, for an active water or storm emergency. We are not USAA. You do not need a membership number for us to come out. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM when the visit can wait. Family-owned since 1993. Text the same number if a call is hard from where you are. A gate code and a unit number belong in the first message if the loss is an apartment.",
         ],
       },
     ],

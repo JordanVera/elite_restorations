@@ -276,7 +276,7 @@ export const fieldNotes: Article[] = [
           },
           {
             type: 'p',
-            text: 'The first steps pull out standing water, move air, and pull moisture from the air, with meters on the materials that actually got wet. A slab does not show you open beams. The readings are on the floor covering, the layer under it where there is one, and the wall. We will not name a mold deadline. Wet paper, wet pad, and wet particle board do not improve while the house stays closed up and humid. A musty smell in a room that “looks dry” is a reason to find the material, not a reason to cover it.',
+            text: 'The first steps pull out standing water, move air, and pull moisture from the air, with meters on the materials that actually got wet. A slab does not show you open beams. The readings are on the floor covering, the layer under it where there is one, and the wall. We will not name a deadline for how long wet materials can sit. Wet paper, wet pad, and wet particle board do not improve while the house stays closed up and humid. A musty smell in a room that “looks dry” is a reason to find the material, not a reason to cover it.',
           },
           {
             type: 'p',

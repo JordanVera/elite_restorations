@@ -82,6 +82,6 @@ export const fenceGuide: ServiceGuide = {
     { q: "Can you match an existing wood fence?", a: "Often, if the style is still sold. Sun-faded boards will not match a new board perfectly. We will say that before we start." },
     { q: "Do you build fences at apartments or only houses?", a: "Houses are the usual fence. Apartment and commercial properties more often need gates, dumpster enclosures, or a stretch the wind took down. Call (713) 909-0034 and describe the property." },
     { q: "Will insurance pay for a fallen fence?", a: "The answer about payment is in your policy, not in our estimate. We photograph the failure and estimate the rebuild. Wind, flood, and rot are different stories. Check your policy." },
-    { q: "How do I reach you?", a: "Call (713) 909-0034. For an active storm emergency we answer any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. You can also text that number." },
+    { q: "How do I reach you?", a: "Call (713) 909-0034. For an active storm emergency we answer Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. You can also text that number." },
   ],
 };

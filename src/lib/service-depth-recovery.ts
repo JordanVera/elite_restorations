@@ -29,10 +29,6 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
         body: 'On a slab, water runs under the floor and wicks into the drywall a few inches up, or a few feet up if it sat. You see paint. The paper on the back of the drywall is what stays wet. In a pier-and-beam bungalow we also look below the floor. Missing the crawl space and drying only the room is how the smell comes back.',
       },
       {
-        title: 'Time and mold',
-        body: 'Damp drywall, carpet pad, and insulation do not get a long grace period in this climate. Mold can start on wet materials within a day or two. That is a property of a warm, wet house, not a scare line. We dry and we remove what will not dry. We do not promise a mold-free house. Moisture readings decide what stays.',
-      },
-      {
         title: 'Storm water and plumbing water',
         body: 'A burst supply line, a roof opening, and water that came in at grade are different losses. Floodwater from rising water is often a different policy from a sudden pipe break, and it is dirtier. We treat the cleaning to the water that was actually there. Your insurer decides which coverage, if any, applies. Hurricane season, June through November, is when the roof openings cluster. Supply lines fail all year.',
       },
@@ -149,10 +145,6 @@ export const recoveryDepth: Record<string, ServiceDepth> = {
       {
         q: 'How is a slab leak different from a leak in a Heights bungalow?',
         a: 'On a slab the water runs under the floor and up the wall, and the drain or the supply line may be in the concrete. In many older Heights houses the floor is over a crawl space, so water can drop below and still wet the wood floor. We look at the structure you have. We do not dry only the stain.',
-      },
-      {
-        q: 'Will mold be gone when the equipment leaves?',
-        a: 'We dry the structure and remove materials that will not dry, which is how you stop giving mold a wet place to grow. We do not promise that a house is mold-free, and we do not substitute a logo on a shirt for moisture readings. If the visible growth is a larger scope than the wet drywall, we say so at the visit.',
       },
       {
         q: 'Should I throw the carpet out before you arrive?',

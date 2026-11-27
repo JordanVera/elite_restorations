@@ -698,11 +698,11 @@ const legacyArticles: Article[] = [
         blocks: [
           {
             type: 'p',
-            text: 'Un conteo de moho no ayudaría. Lo que vemos aquí es más simple. La humedad de Houston no le da mucha ayuda a los materiales mojados. Un cuarto puede sentirse más seco al tacto y seguir mojado dentro del muro, el aislamiento o el acolchonado de la alfombra. Ahí es donde empieza un olor a humedad, casi siempre fuera de la vista. Esperar el fin de semana porque la superficie se ve mejor es la forma en que un escape chico se vuelve un desmonte.',
+            text: 'Un conteo no ayudaría. Lo que vemos aquí es más simple. La humedad de Houston no le da mucha ayuda a los materiales mojados. Un cuarto puede sentirse más seco al tacto y seguir mojado dentro del muro, el aislamiento o el acolchonado de la alfombra. Ahí es donde empieza un olor a humedad, casi siempre fuera de la vista. Esperar el fin de semana porque la superficie se ve mejor es la forma en que un escape chico se vuelve un desmonte.',
           },
           {
             type: 'p',
-            text: 'Un olor en un cuarto cerrado, una mancha que sube de la línea original del agua, o un piso que sigue blando son razones para abrir el conjunto y medirlo. No son razones para pintar. El cloro en un zoclo no seca el aislamiento de atrás. El primer sobre una mancha húmeda esconde la pista y deja la humedad en su lugar. Encuentre los materiales mojados, seque lo que se pueda salvar y quite lo que no. Si alguien en la casa es sensible al moho, dígalo cuando llame. El trabajo es el mismo. No debe cerrarse y dejarse así.',
+            text: 'Un olor en un cuarto cerrado, una mancha que sube de la línea original del agua, o un piso que sigue blando son razones para abrir el conjunto y medirlo. No son razones para pintar. El cloro en un zoclo no seca el aislamiento de atrás. El primer sobre una mancha húmeda esconde la pista y deja la humedad en su lugar. Encuentre los materiales mojados, seque lo que se pueda salvar y quite lo que no. El trabajo es el mismo. No debe cerrarse y dejarse así.',
           },
         ],
       },
@@ -1490,7 +1490,7 @@ const legacyArticles: Article[] = [
           },
           {
             type: 'p',
-            text: 'Los primeros pasos sacan el agua estancada, mueven el aire y jalan la humedad del aire, con medidores en los materiales que de verdad se mojaron. Una losa no le enseña vigas abiertas. Las lecturas están en el recubrimiento del piso, en la capa de abajo donde la hay, y en el muro. No vamos a nombrar un plazo de moho. El papel mojado, el acolchonado mojado y el aglomerado mojado no mejoran mientras la casa se queda cerrada y húmeda. Un olor a humedad en un cuarto que “se ve seco” es razón para encontrar el material, no para cubrirlo.',
+            text: 'Los primeros pasos sacan el agua estancada, mueven el aire y jalan la humedad del aire, con medidores en los materiales que de verdad se mojaron. Una losa no le enseña vigas abiertas. Las lecturas están en el recubrimiento del piso, en la capa de abajo donde la hay, y en el muro. No vamos a nombrar un plazo para cuánto puede quedarse mojado el material. El papel mojado, el acolchonado mojado y el aglomerado mojado no mejoran mientras la casa se queda cerrada y húmeda. Un olor a humedad en un cuarto que “se ve seco” es razón para encontrar el material, no para cubrirlo.',
           },
           {
             type: 'p',
@@ -1941,7 +1941,7 @@ const legacyArticles: Article[] = [
           },
           {
             type: 'p',
-            text: 'La tablaroca, el aislamiento y el piso que se quedan mojados de 24 a 48 horas pueden empezar a criar moho. Si el agua empapó muros, cielos o alfombra, una cuadrilla de daño de agua puede medir la humedad detrás de la superficie y secarla bien, y eso ayuda a que un tubo reventado no se vuelva un problema de moho. La página de tubos congelados y reventados es la lectura más cercana para esa primera hora. Si hay seguro de por medio, Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos.',
+            text: 'La tablaroca, el aislamiento y el piso que se quedan mojados de 24 a 48 horas pueden sufrir más daño. Si el agua empapó muros, cielos o alfombra, una cuadrilla de daño de agua puede medir la humedad detrás de la superficie y secarla bien, y eso ayuda a que un tubo reventado no se extienda. La página de tubos congelados y reventados es la lectura más cercana para esa primera hora. Si hay seguro de por medio, Elite trabaja con su aseguradora como su contratista, documenta el daño y negocia el alcance del reclamo con el ajustador. No somos ajustadores públicos.',
           },
           {
             type: 'p',

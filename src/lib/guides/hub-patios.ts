@@ -32,7 +32,7 @@ export const patioGuide: ServiceGuide = {
       ],
       points: [
         { title: "Joints", body: "Concrete cracks. Joints tell it where. Pavers need joint sand that will not wash out in the first storm." },
-        { title: "Shade and sun", body: "A north patio stays damp and grows mildew. A west patio cooks. The surface can be the same product and still want a different conversation." },
+        { title: "Shade and sun", body: "A north patio stays damp. A west patio cooks. The surface can be the same product and still want a different conversation." },
         { title: "Pool decks", body: "We will build a patio beside a pool. We are not the city inspector for the pool barrier or the equipment." },
       ],
     },

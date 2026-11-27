@@ -55,7 +55,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
       heading: "What temporary protection includes.",
       paragraphs: [
         "We measure the opening, photograph it, and fasten a rigid cover to framing that can hold it. Windows, doors, and broken wall sections get a cover that sheds water away from the interior. On a house the board may sit until the glass is available. On an apartment or a storefront we note the unit so the photos match the opening.",
-        "If we cannot reach the building safely, we wait. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer any time. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. Use the form, and we'll call you back as soon as we can.",
+        "If we cannot reach the building safely, we wait. Night, standing water, or a live electrical hazard can mean waiting for daylight. Call (713) 909-0034 anyway. For an active storm or water emergency we answer Monday through Saturday, 8:00 AM to 6:00 PM. Our office in west Houston (77082) is open Monday through Saturday, 8:00 AM to 6:00 PM. Use the form, and we'll call you back as soon as we can.",
       ],
       points: [
         {
@@ -162,7 +162,7 @@ export const emergencyBoardUpGuide: ServiceGuide = {
     },
     {
       q: "Will you come during the storm?",
-      a: "If lightning is close, or the wind makes the wall unsafe, we wait and tell you the next safe step. Call (713) 909-0034 any time and we will talk through that step with you. If you use the form on this site, we'll call you back as soon as we can.",
+      a: "If lightning is close, or the wind makes the wall unsafe, we wait and tell you the next safe step. Call (713) 909-0034, Monday through Saturday, 8:00 AM to 6:00 PM, and we will talk through that step with you. If you use the form on this site, we'll call you back as soon as we can.",
     },
   ],
 };

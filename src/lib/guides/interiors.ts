@@ -8,7 +8,7 @@ export const backsplash: ServiceGuide = {
   process: steps([
     ['Look at the wall', 'We check the counter, the outlets, the window, and whether the wall behind the old tile is sound. A short Heights stretch and a long Katy wall are laid out differently.'],
     ['Center the pattern', 'Chevron, herringbone, and geometric tile are dry-fit in the plan so the repeat lands on the range, the hood, or the window, not on an awkward cut at the end.'],
-    ['Protect the stone', 'Counters and cabinets stay covered. Old tile comes off carefully. If the drywall behind it is soft or moldy, we stop and show you before new tile goes up.'],
+    ['Protect the stone', 'Counters and cabinets stay covered. Old tile comes off carefully. If the drywall behind it is soft or wet, we stop and show you before new tile goes up.'],
     ['Set and finish', 'Mortar, cuts, edges, and outlets are set so the main wall reads as one piece. Grout and a sealer suited to a working kitchen come last.'],
     ['Wipe and walk', 'We clean the haze, check the lines, and walk the wall with you, including the places tile meets the hood and the counter.'],
     ['Note the wet wall', 'If the backsplash was opened because of a leak, the wall is dry before tile. A planned backsplash is not an insurance claim.'],

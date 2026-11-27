@@ -1511,7 +1511,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
       'Water and storm damage restoration in Houston: drying, then the rebuild, with insurance claims help. Call (713) 909-0034.',
     emergency: true,
     intro: [
-      'Water damage in Houston gets worse by the hour. Humidity slows drying, and standing water in a slab home invites mold and swells anything it touches.',
+      'Water damage in Houston gets worse by the hour. Humidity slows drying, and standing water in a slab home swells anything it touches.',
       'We find where the water went, remove it, dry the structure, clean and disinfect, and then rebuild. Recovery and the repairs stay with one team. We also handle fire and storm-related repairs.',
     ],
     includes: [
@@ -1558,7 +1558,7 @@ const serviceInputs: Omit<Service, 'guide'>[] = [
         a: 'Yes. We repair drywall, flooring, cabinetry and finishes once the structure is dry, so you are not hiring a second contractor to finish the job.',
       },
       {
-        q: 'How quickly can mold become a concern here?',
+        q: 'How quickly should drying start here?',
         a: 'In Houston humidity, damp materials need drying right away. We track the moisture and keep air movers and dehumidifiers running until the readings say the structure is dry.',
       },
       {
